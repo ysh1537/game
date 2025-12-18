@@ -52,21 +52,56 @@ export default class ExpeditionView extends BaseView {
                 <button class="cyber-btn small btn-start-exp" data-id="${exp.id}">탐사 보내기</button>
             `;
 
-            card.querySelector('.btn-start-exp').addEventListener('click', () => {
-                const selectedId = this.game.creatureManager.selectedId;
-                if (!selectedId) {
-                    alert("파견할 크리처를 선택해주세요.");
-                    this.uiManager.switchTab('home'); // 홈으로 이동하여 선택 유도
-                    return;
-                }
-                const res = this.game.expeditionManager.startExpedition(selectedId, exp.id);
-                if (!res) {
-                    // 에러 처리는 매니저에서 alert/log로 하기도 함
-                }
+            card.querySelector('.cyber-btn').addEventListener('click', () => {
+                this._openExpeditionModal(exp);
             });
 
             this.ui.expeditionList.appendChild(card);
         });
+    }
+
+    /**
+     * @private
+     * @description 탐사 보낼 크리처를 선택하는 모달을 엽니다.
+     */
+    _openExpeditionModal(exp) {
+        const modal = document.getElementById('expedition-select-modal');
+        const list = document.getElementById('exp-creature-list');
+        const btnClose = document.getElementById('btn-close-exp-modal');
+        if (!modal || !list) return;
+
+        list.innerHTML = '';
+
+        // 현재 탐사 중이 아닌 크리처만 필터링
+        const activeExpeditionCreatureIds = this.game.expeditionManager.getActiveExpeditions().map(ae => ae.creatureId);
+        const availableCreatures = this.game.creatureManager.owned.filter(c => !activeExpeditionCreatureIds.includes(c.instanceId));
+
+        if (availableCreatures.length === 0) {
+            list.innerHTML = '<p style="grid-column:1/-1; text-align:center; color:#888; padding:20px;">파견 가능한 크리처가 없습니다.</p>';
+        } else {
+            availableCreatures.forEach(c => {
+                const div = document.createElement('div');
+                div.className = `creature-card-mini rarity-${c.def.rarity}`;
+                div.style.cursor = 'pointer';
+                div.innerHTML = `
+                    <img src="${c.def.image}" alt="${c.def.name}">
+                    <div class="card-overlay">
+                        <div class="card-name" style="font-size:0.6rem;">${c.def.name}</div>
+                    </div>
+                `;
+                div.onclick = () => {
+                    const success = this.game.expeditionManager.startExpedition(c.instanceId, exp.id);
+                    if (success) {
+                        modal.style.display = 'none';
+                    }
+                };
+                list.appendChild(div);
+            });
+        }
+
+        modal.style.display = 'flex';
+        btnClose.onclick = () => modal.style.display = 'none';
+        modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
     }
 
     renderActiveExpeditions() {

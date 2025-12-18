@@ -590,7 +590,84 @@ h6 {
     flex: 1;
 }
 
-/* 탐사대 관리 - 보유 크리처 영역 확장 (3-4줄) */
+/* --- Modals --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 30000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content.glass-panel {
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid var(--border-tech);
+    padding: 30px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    transform: translateY(20px);
+    animation: slideUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.detail-modal-content {
+    background: linear-gradient(180deg, rgba(26, 21, 53, 0.95) 0%, rgba(13, 21, 32, 0.98) 100%);
+}
+
+.creature-portrait-large {
+    width: 100%;
+    aspect-ratio: 1;
+    margin: 20px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.creature-portrait-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 연구소 그리드 */
+#facility-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.facility-card.can-upgrade {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.2);
+}
+
+.facility-card.can-upgrade .btn-upgrade {
+    background: var(--accent-gold);
+    color: black;
+    box-shadow: 0 0 10px var(--accent-gold);
+}
+
 #deck-pool {
     display: grid !important;
     grid-template-columns: repeat(6, 1fr) !important;
@@ -774,6 +851,89 @@ h6 {
 /* =========================================
    탐사/연구소/미션/보급소 카드 스타일
    ========================================= */
+
+/* --- Creature Card Rarity Styles --- */
+.creature-card-mini {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #1e1e2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.creature-card-mini:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Rarity Borders */
+.rarity-Normal {
+    border-color: #9e9e9e;
+}
+
+.rarity-Unique {
+    border-color: #66bb6a;
+}
+
+.rarity-Rare {
+    border-color: #42a5f5;
+}
+
+.rarity-Special {
+    border-color: #ab47bc;
+    border-width: 2px;
+}
+
+/* SR+: Gradients and Glows */
+.rarity-SR {
+    border: 2px solid #ff7043;
+    box-shadow: 0 0 10px rgba(255, 112, 67, 0.3);
+}
+
+.rarity-SSR {
+    border: 2px solid #ef5350;
+    box-shadow: 0 0 15px rgba(239, 83, 80, 0.4);
+    background: linear-gradient(135deg, #1e1e2e 0%, #2d1b2e 100%);
+}
+
+.rarity-UR {
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    background: linear-gradient(135deg, #1e1e2e 0%, #3d3500 100%);
+    animation: pulse-gold 2s infinite;
+}
+
+@keyframes pulse-gold {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    }
+}
+
+/* Element Icon Overlay */
+.element-badge {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
 /* 공통 기능 카드 */
 .feature-card {
@@ -979,11 +1139,10 @@ h6 {
     padding: 20px;
 }
 
-/* 탐사/연구 리스트 */
-#expedition-list,
-#facility-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+/* 탐사 리스트 */
+#expedition-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
     padding: 16px;
 }

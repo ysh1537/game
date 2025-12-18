@@ -37,18 +37,19 @@ export default class ResearchView extends BaseView {
             if (def.effectType === "gold_bonus_percent") effectStr += "%";
 
             const card = document.createElement('div');
-            card.className = 'facility-card feature-card';
+            const canUpgrade = !isMax && this.game.resourceManager.gold >= cost;
+            card.className = `facility-card feature-card ${canUpgrade ? 'can-upgrade' : ''}`;
             card.innerHTML = `
                 <div class="facility-icon">🧪</div>
                 <div class="facility-info">
-                    <h4>${def.name}</h4>
+                    <h4 style="margin:0;">${def.name}</h4>
                     <span class="facility-level">Lv.${level} / ${def.maxLevel}</span>
-                    <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:4px;">${def.description}</p>
+                    <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:4px;">${def.description}</p>
                 </div>
                 <div style="text-align:right;">
-                    <p style="color: var(--accent-tertiary); font-weight:600; font-size:0.9rem;">${effectStr}</p>
+                    <p style="color: var(--accent-tertiary); font-weight:600; font-size:0.85rem; margin-bottom:5px;">${effectStr}</p>
                     <button class="cyber-btn small btn-upgrade" data-id="${def.id}" ${isMax ? 'disabled' : ''}>
-                        ${isMax ? '최대 레벨' : `업그레이드 (${cost}G)`}
+                        ${isMax ? 'MAX' : `강화 (${cost}G)`}
                     </button>
                 </div>
             `;

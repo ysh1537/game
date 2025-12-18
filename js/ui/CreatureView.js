@@ -60,6 +60,10 @@ export default class CreatureView extends BaseView {
             div.className = `creature-card-mini rarity-${c.def.rarity}`;
             div.dataset.instanceId = c.instanceId;
 
+            // 속성 아이콘 맵
+            const elementIcons = { 'fire': '🔥', 'water': '💧', 'earth': '🌿', 'light': '✨', 'dark': '🌙' };
+            const elementIcon = elementIcons[c.def.element] || '❓';
+
             if (isDeckMode && currentDeckIds.includes(c.instanceId)) {
                 div.classList.add('equipped');
                 div.style.opacity = '0.5';
@@ -69,6 +73,7 @@ export default class CreatureView extends BaseView {
             const lockIcon = c.isLocked ? '<span style="position:absolute; top:5px; right:5px; font-size:12px; z-index:20;">🔒</span>' : '';
 
             div.innerHTML = `
+                <div class="element-badge">${elementIcon}</div>
                 <img src="${c.def.image}" alt="${c.def.name}">
                 ${lockIcon}
                 <div class="card-overlay">
@@ -89,13 +94,15 @@ export default class CreatureView extends BaseView {
     }
 
     /**
-     * @description 크리처 상세 패널을 렌더링합니다.
+     * @description 크리처 상세 정보를 모달로 렌더링하고 표시합니다.
      */
     renderDetailPanel(c) {
-        if (!this.ui.detailPanel) return;
+        const modal = document.getElementById('creature-detail-modal');
+        const body = document.getElementById('modal-detail-body');
+        if (!modal || !body) return;
 
         if (!c) {
-            this.ui.detailPanel.innerHTML = '<p class="placeholder-text">선택된 데이터가 없습니다</p>';
+            modal.style.display = 'none';
             return;
         }
 
@@ -107,51 +114,60 @@ export default class CreatureView extends BaseView {
             ${c.isLocked ? '🔒 잠금됨' : '🔓 잠금해제'}
         </button>`;
 
-        this.ui.detailPanel.innerHTML = `
-            <div class="detail-header">
-                <h3>${c.def.name} <span style="color:#f1c40f;">${'★'.repeat(c.star)}</span></h3>
-                <div style="display:flex; gap:8px;">
-                    ${lockBtnHtml}
-                    <button id="btn-close-detail" class="cyber-btn small">×</button>
-                </div>
+        body.innerHTML = `
+            <div class="detail-header" style="display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="margin:0;">${c.def.name} <span style="color:#f1c40f;">${'★'.repeat(c.star)}</span></h3>
+                <button id="btn-close-detail" class="cyber-btn small" style="font-size:1.5rem;">×</button>
             </div>
             
             <div class="detail-body fade-in">
-                <p>등급: <span class="rarity-${c.def.rarity}" style="font-weight:bold">${c.def.rarity}</span> | 속성: ${c.def.elements ? c.def.elements.join(' / ') : c.def.element}</p>
+                <p style="margin:10px 0; color:var(--text-secondary);">등급: <span class="rarity-${c.def.rarity}" style="font-weight:bold">${c.def.rarity}</span> | 속성: ${c.def.elements ? c.def.elements.join(' / ') : c.def.element}</p>
                 
-                <div class="stat-group">
-                    <div><strong>Lv.${c.level}</strong> ${isMaxLevel ? "(MAX)" : `(Exp: ${c.exp} / ${nextExp})`}</div>
-                    <div class="exp-bar">
-                        <div class="exp-fill" style="width: ${isMaxLevel ? 100 : expPercent}%"></div>
-                    </div>
-                </div>
-
                 <div class="creature-portrait-large">
                     <img src="${c.def.image}" alt="${c.def.name}">
                 </div>
 
-                <div class="action-group" style="margin-top:20px; display:flex; flex-wrap:wrap; gap:10px;">
+                <div class="stat-group" style="margin:15px 0;">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+                        <strong>Lv.${c.level}</strong>
+                        <span>${isMaxLevel ? "MAX" : `Exp: ${c.exp} / ${nextExp}`}</span>
+                    </div>
+                    <div class="exp-bar" style="height:10px; background:rgba(255,255,255,0.1); border-radius:5px; overflow:hidden;">
+                        <div class="exp-fill" style="width: ${isMaxLevel ? 100 : expPercent}%; height:100%; background:var(--accent-primary); transition:width 0.3s ease;"></div>
+                    </div>
+                </div>
+
+                <div class="action-group" style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:20px;">
                     <button id="btn-train-basic" class="cyber-btn action">기초 훈련</button>
                     <button id="btn-train-intensive" class="cyber-btn action premium">집중 강화</button>
-                    <button id="btn-compose-creature" class="cyber-btn">합성</button>
+                    <button id="btn-compose-creature" class="cyber-btn" style="grid-column: span 2;">진급 / 합성</button>
+                    <div style="grid-column: span 2; display:flex; justify-content:center; margin-top:10px;">
+                        ${lockBtnHtml}
+                    </div>
                 </div>
             </div>
         `;
 
+        modal.style.display = 'flex';
+
         // 상세 패널 이벤트 바인딩
         document.getElementById('btn-close-detail').onclick = () => {
-            this.ui.detailPanel.innerHTML = '<p class="placeholder-text">SELECT DATA</p>';
-            Array.from(this.ui.creatureList.children).forEach(card => card.classList.remove('selected'));
+            modal.style.display = 'none';
+        };
+
+        modal.onclick = (e) => {
+            if (e.target === modal) modal.style.display = 'none';
         };
 
         document.getElementById('btn-toggle-lock').onclick = () => {
             this.game.creatureManager.toggleLock(c.instanceId);
             this.renderDetailPanel(this.game.creatureManager.getCreatureById(c.instanceId));
+            this.renderCreatureList(); // 리스트의 잠금 아이콘 갱신
         };
 
-        // 훈련 및 합성 (기존 main.js 로직 축약)
         document.getElementById('btn-train-basic').onclick = () => this._handleTraining('basic', c.instanceId);
         document.getElementById('btn-train-intensive').onclick = () => this._handleTraining('intensive', c.instanceId);
+        document.getElementById('btn-compose-creature').onclick = () => alert("진급 시스템 준비 중입니다.");
     }
 
     // --- 내부 헬퍼 메서드 ---
