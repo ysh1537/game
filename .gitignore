@@ -42,3 +42,6 @@ coverage/
 # 캐시
 .cache/
 *.cache
+
+# Sub-projects
+ysh1537-pages/

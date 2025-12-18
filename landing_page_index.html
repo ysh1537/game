@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YSH1537 - 프로젝트 허브</title>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5874227298630347"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0a0f1a 0%, #1a1535 50%, #0d1520 100%);
+            min-height: 100vh;
+            color: #f0f4ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(90deg, #00e5ff, #e040fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            color: #b8c5e8;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: rgba(30, 25, 55, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 40px rgba(0, 229, 255, 0.3);
+            border-color: #00e5ff;
+        }
+
+        .project-card h2 {
+            color: #00e5ff;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #8b949e;
+            font-size: 0.95rem;
+        }
+
+        .project-card .emoji {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            margin-top: 60px;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* AdSense 영역 */
+        .ad-container {
+            width: 100%;
+            max-width: 728px;
+            min-height: 90px;
+            margin: 30px auto;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>YSH1537</h1>
+        <p class="subtitle">프로젝트 허브 & 포트폴리오</p>
+
+        <!-- AdSense 광고 영역 -->
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874227298630347" data-ad-slot="auto"
+                data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <div class="projects">
+            <a href="/game/" class="project-card">
+                <div class="emoji">🧬</div>
+                <h2>Multiverse Creature Lab</h2>
+                <p>수집형 크리처 게임 - 소환, 탐사, 연구, 전투!</p>
+            </a>
+            <a href="#" class="project-card">
+                <div class="emoji">🚀</div>
+                <h2>Coming Soon</h2>
+                <p>새로운 프로젝트가 곧 공개됩니다.</p>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 YSH1537. All rights reserved.
+    </footer>
+</body>
+
+</html>
