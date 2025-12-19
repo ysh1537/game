@@ -90,9 +90,9 @@ export default class UIManager {
         // 개발자 치트 버튼
         if (this.ui.devFill) {
             this.ui.devFill.addEventListener('click', () => {
-                this.game.resourceManager.addResource('gold', 10000);
-                this.game.resourceManager.addResource('gem', 100);
-                this.game.resourceManager.addResource('energy', 100);
+                this.game.resourceManager.addGold(10000);
+                this.game.resourceManager.addGem(100);
+                this.game.resourceManager.addEnergy(100);
                 this.addLog("치트 사용: 자원 충전 완료");
             });
         }

@@ -1,5 +1,6 @@
 
 import EventEmitter from '../utils/EventEmitter.js';
+import { WORLDS } from '../data/CreatureData.js'; // [NEW] Import World Data
 
 export default class BattleManager extends EventEmitter {
     constructor(game, events, resourceManager, userCreatures) {
@@ -14,6 +15,7 @@ export default class BattleManager extends EventEmitter {
         this.turnCount = 0;
         this.heroTeam = [];
         this.enemyTeam = [];
+        this.activeSynergies = {}; // [NEW] Track active synergies
     }
 
     startBattle(dungeonId) {
@@ -116,6 +118,11 @@ export default class BattleManager extends EventEmitter {
             isPvP: this.isPvP,
             enemyName: this.enemyName
         });
+
+        // [NEW] Calculate and Apply Synergies
+        this.calculateSynergies();
+        this.applySynergyEffects();
+
         this.nextTurn();
     }
 
@@ -154,7 +161,9 @@ export default class BattleManager extends EventEmitter {
             def: creature.stats.def,
             image: creature.def.image,
             level: creature.level,
-            rarity: creature.def.rarity
+            rarity: creature.def.rarity,
+            world: creature.def.world || 'WILD', // [NEW] Default to WILD
+            elements: creature.def.elements || [] // [NEW]
         };
     }
 
@@ -217,17 +226,118 @@ export default class BattleManager extends EventEmitter {
     attack(attacker, defender) {
         if (attacker.hp <= 0 || defender.hp <= 0) return;
 
-        const damage = Math.max(1, attacker.atk - (defender.def * 0.5));
+        let damage = Math.max(1, attacker.atk - (defender.def * 0.5));
+
+        // [NEW] Elemental Logic
+        const advantage = this.checkElementalAdvantage(attacker.elements, defender.elements);
+        let isCrit = false;
+        let isGlancing = false;
+
+        if (advantage === 1) { // Advantage
+            damage *= 1.5;
+            // CC Logic could go here
+        } else if (advantage === -1) { // Disadvantage
+            damage *= 0.7;
+            isGlancing = Math.random() < 0.3; // 30% Miss chance
+        }
+
+        // [NEW] Synergy Logic (Olympus Crit)
+        if (attacker.isHero && this.activeSynergies[WORLDS.OLYMPUS] >= 2) {
+            const critRate = 0.15 + (this.activeSynergies[WORLDS.OLYMPUS] >= 4 ? 0.0 : 0); // 15% base
+            if (Math.random() < critRate) {
+                isCrit = true;
+                const critDmg = 1.5 + (this.activeSynergies[WORLDS.OLYMPUS] >= 4 ? 0.6 : 0); // +60% at 4set
+                damage *= critDmg;
+            }
+        }
+        // [NEW] Olympus God Tier (6 set)
+        if (attacker.isHero && this.activeSynergies[WORLDS.OLYMPUS] >= 6) {
+            isCrit = true;
+            damage *= 2.5; // Massive boost
+            // Penetrate def
+            damage += (defender.def * 0.5);
+        }
+
+        if (isGlancing) {
+            damage = 0; // Miss
+        }
+
         defender.hp -= damage;
+
+        // [NEW] Synergy Logic (Abyss Terror - DoT or Debuff?) 
+        // For simplicity, Abyss just does extra damage on hit if set 4
+        if (attacker.isHero && this.activeSynergies[WORLDS.ABYSS] >= 4) {
+            defender.hp -= (attacker.atk * 0.2); // Procs extra damage
+        }
 
         this.events.emit('battle:action', {
             type: 'attack',
             attackerId: attacker.id,
             defenderId: defender.id,
             damage: Math.floor(damage),
+            isCrit: isCrit,
+            isGlancing: isGlancing,
             currentHp: defender.hp,
             maxHp: defender.maxHp
         });
+    }
+
+    calculateSynergies() {
+        this.activeSynergies = {};
+        this.heroTeam.forEach(unit => {
+            if (unit.world) {
+                this.activeSynergies[unit.world] = (this.activeSynergies[unit.world] || 0) + 1;
+            }
+        });
+        console.log("[BattleManager] Active Synergies:", this.activeSynergies);
+    }
+
+    applySynergyEffects() {
+        // 1. Asgard (Tenacity) -> HP Boost
+        if (this.activeSynergies[WORLDS.ASGARD] >= 2) {
+            this.heroTeam.forEach(hero => {
+                hero.maxHp *= 1.2; // +20% HP
+                hero.hp *= 1.2;
+            });
+            console.log("Applied Asgard(2) Buff: HP +20%");
+        }
+
+        // 2. Abyss (Terror) -> Enemy Def Down (Global)
+        if (this.activeSynergies[WORLDS.ABYSS] >= 2) {
+            this.enemyTeam.forEach(enemy => {
+                enemy.def *= 0.8; // -20% Def
+            });
+            console.log("Applied Abyss(2) Debuff: Enemy Def -20%");
+        }
+
+        // 6-Set God Effects (Start of Battle)
+        // Abyss God: Instant Kill 1 enemy
+        if (this.activeSynergies[WORLDS.ABYSS] >= 6) {
+            if (this.enemyTeam.length > 0) {
+                const luckyTarget = this.enemyTeam[Math.floor(Math.random() * this.enemyTeam.length)];
+                luckyTarget.hp = 0;
+                console.log(`[Abyss God] Instant Killed ${luckyTarget.name}`);
+            }
+        }
+    }
+
+    checkElementalAdvantage(atkElems, defElems) {
+        if (!atkElems || !defElems) return 0;
+        // Simple 1-first match for now
+        const A = atkElems[0];
+        const D = defElems[0]; // Logic could be more complex
+
+        const WIN = {
+            'Fire': 'Nature', 'Nature': 'Water', 'Water': 'Fire',
+            'Light': 'Dark', 'Dark': 'Light' // Mutual destruction?
+        };
+        const LOSE = {
+            'Nature': 'Fire', 'Water': 'Nature', 'Fire': 'Water'
+        };
+
+        if (WIN[A] === D) return 1;
+        if (LOSE[A] === D) return -1;
+        return 0;
     }
 
     checkWinCondition() {
@@ -291,7 +401,20 @@ export default class BattleManager extends EventEmitter {
                 if (this.currentStageId === this.game.stageManager.getMaxStage()) {
                     this.game.stageManager.unlockNextStage();
                 }
+
+                // [NEW] 자동 연속 전투
+                if (this.isAutoBattle) {
+                    const nextStage = this.currentStageId + 1;
+                    if (nextStage <= this.game.stageManager.getMaxStage() + 1) { // 열린 스테이지까지
+                        setTimeout(() => {
+                            if (this.isAutoBattle) this.startStageBattle(nextStage);
+                        }, 3000); // 3초 대기 후 다음 전투
+                    }
+                }
             }
+        } else {
+            // 패배 시 자동 전투 중단
+            this.isAutoBattle = false;
         }
 
         // [NEW] Holistic Event for QuestManager
@@ -308,7 +431,13 @@ export default class BattleManager extends EventEmitter {
         this.events.emit('battle:end', {
             isWin,
             reason,
-            rewards: { gold: earnedGold, exp: earnedExp }
+            rewards: { gold: earnedGold, exp: earnedExp },
+            isAutoBattle: this.isAutoBattle
         });
+    }
+
+    setAutoBattle(enabled) {
+        this.isAutoBattle = enabled;
+        console.log(`[BattleManager] Auto Battle: ${enabled}`);
     }
 }

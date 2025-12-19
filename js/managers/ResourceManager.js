@@ -112,4 +112,9 @@ export default class ResourceManager extends EventEmitter {
         this.resources = { ...state };
         this.emitChange();
     }
+
+    resetForRebirth() {
+        this.resources = { ...INITIAL_RESOURCES };
+        this.emitChange();
+    }
 }

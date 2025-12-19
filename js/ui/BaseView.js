@@ -8,7 +8,7 @@ export default class BaseView {
         this.uiManager = uiManager;
         this.ui = uiManager.ui; // 편의를 위해 UI 요소 참조 보관
 
-        this.init();
+
     }
 
     /**

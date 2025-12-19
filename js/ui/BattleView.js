@@ -26,6 +26,15 @@ export default class BattleView extends BaseView {
             };
         }
 
+        // 자동 전투 토글 연결
+        const checkAutoBattle = document.getElementById('check-auto-battle');
+        if (checkAutoBattle) {
+            checkAutoBattle.checked = this.game.battleManager.isAutoBattle;
+            checkAutoBattle.onchange = (e) => {
+                this.game.battleManager.setAutoBattle(e.target.checked);
+            };
+        }
+
         // PvP 검색
         const btnPvpSearch = document.getElementById('btn-pvp-search');
         if (btnPvpSearch) {
@@ -81,12 +90,19 @@ export default class BattleView extends BaseView {
         }
         if (this.ui.stageRewards) this.ui.stageRewards.innerText = `💰 지급: ${stageData.rewardGold}G, ⭐ ${stageData.rewardExp}EXP`;
 
-        this.ui.btnPrevStage.disabled = (stageId <= 1);
-        this.ui.btnNextStage.disabled = (stageId >= maxStage);
-        this.ui.btnStartStage.innerText = `⚔️ ${stageData.name} 진입`;
+        if (this.ui.btnPrevStage) {
+            this.ui.btnPrevStage.disabled = (stageId <= 1);
+            this.ui.btnPrevStage.style.opacity = this.ui.btnPrevStage.disabled ? 0.3 : 1;
+        }
 
-        this.ui.btnPrevStage.style.opacity = this.ui.btnPrevStage.disabled ? 0.3 : 1;
-        this.ui.btnNextStage.style.opacity = this.ui.btnNextStage.disabled ? 0.3 : 1;
+        if (this.ui.btnNextStage) {
+            this.ui.btnNextStage.disabled = (stageId >= maxStage);
+            this.ui.btnNextStage.style.opacity = this.ui.btnNextStage.disabled ? 0.3 : 1;
+        }
+
+        if (this.ui.btnStartStage) {
+            this.ui.btnStartStage.innerText = `⚔️ ${stageData.name} 진입`;
+        }
     }
 
     renderPvPLobby(query = '') {

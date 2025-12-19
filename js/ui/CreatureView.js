@@ -19,7 +19,7 @@ export default class CreatureView extends BaseView {
 
         // 데이터 갱신 감지
         this.game.creatureManager.on('creatures:updated', () => this.renderCreatureList());
-        this.game.creatureManager.on('creatures:selected', (c) => this.handleCreatureSelected(c));
+        this.game.creatureManager.on('creatures:selected', (c) => this._handleCreatureSelected(c));
         this.game.creatureManager.on('creature:leveledUp', (data) => this.handleLevelUp(data));
 
         // 탭 전환 감지
@@ -62,7 +62,16 @@ export default class CreatureView extends BaseView {
 
             // 속성 아이콘 맵
             const elementIcons = { 'fire': '🔥', 'water': '💧', 'earth': '🌿', 'light': '✨', 'dark': '🌙' };
-            const elementIcon = elementIcons[c.def.element] || '❓';
+            const elementIcon = elementIcons[c.def.element] || '';
+
+            // 등급 배지 (유저 요청: 물음표 아이콘 -> 랭크 등급)
+            const rarityBadge = c.def.rarity === 'Normal' ? 'N' :
+                c.def.rarity === 'Unique' ? 'U' :
+                    c.def.rarity === 'Rare' ? 'R' :
+                        c.def.rarity === 'Special' ? 'S' :
+                            c.def.rarity === 'SR' ? 'SR' :
+                                c.def.rarity === 'SSR' ? 'SSR' :
+                                    c.def.rarity === 'UR' ? 'UR' : '?';
 
             if (isDeckMode && currentDeckIds.includes(c.instanceId)) {
                 div.classList.add('equipped');
@@ -73,11 +82,11 @@ export default class CreatureView extends BaseView {
             const lockIcon = c.isLocked ? '<span style="position:absolute; top:5px; right:5px; font-size:12px; z-index:20;">🔒</span>' : '';
 
             div.innerHTML = `
-                <div class="element-badge">${elementIcon}</div>
+                <div class="element-badge" style="font-weight:900; font-size:0.9em;">${rarityBadge}</div>
                 <img src="${c.def.image}" alt="${c.def.name}">
                 ${lockIcon}
                 <div class="card-overlay">
-                    <div class="card-name">${c.def.name}</div>
+                    <div class="card-name">${elementIcon} ${c.def.name}</div>
                     <div class="card-stats">Lv.${c.level} | ${'★'.repeat(c.star)}</div>
                 </div>
             `;
@@ -173,7 +182,7 @@ export default class CreatureView extends BaseView {
     // --- 내부 헬퍼 메서드 ---
 
     _getFilteredAndSortedCreatures() {
-        let list = [...this.game.creatureManager.owned];
+        let list = [...(this.game.creatureManager.owned || [])];
 
         const rFilter = this.ui.filterRarity ? this.ui.filterRarity.value : 'all';
         const eFilter = this.ui.filterElement ? this.ui.filterElement.value : 'all';

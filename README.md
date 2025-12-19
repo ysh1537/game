@@ -1,182 +1,74 @@
-# 🌌 멀티버스 크리처 연구소 (Multiverse Creature Lab)
+# 🌌 멀티버스 크리처 랩: 신화의 충돌 (Clash of Myths)
 
-**장르**: 수집형 RPG · 방치형 게임  
-**테마**: Neo-Laboratory (다크 사이언스 판타지)  
-**플랫폼**: 웹 (모바일 대응)
+> **"신화는 다시 쓰여진다. 나의 손끝에서."**
 
----
+**장르**: 서브컬처 비주얼 노벨풍 수집형 RPG  
+**타겟**: 성인 남성향 (High-End Visual)  
+**테마**: Neo-Laboratory X Mythology Crossover
 
-## 🎮 게임 소개
-
-멀티버스의 다양한 차원에서 크리처를 소환하고, 성장시키고, 탐사를 보내며 연구하는 수집형 성장 게임입니다.
-
-### 주요 기능
-
-- ✨ **소환 시스템**: 일반/프리미엄 소환으로 다양한 등급의 크리처 획득
-- 🌟 **7등급 희귀도**: Normal → Unique → Rare → Special → SR → SSR → UR
-- 📈 **성장 시스템**: 레벨업, 훈련, 합성을 통한 크리처 강화
-- 🗺️ **탐사**: 크리처를 파견하여 자원 획득
-- 🔬 **연구소**: 시설 업그레이드로 보너스 효과 획득
-- ⚔️ **전투**: PvE 스테이지 및 PvP 시스템
-- 🏆 **미션 & 업적**: 일일 퀘스트 및 장기 목표 달성
+![Main Visual](images/creature_valkyrie.png)
 
 ---
 
-## 🎨 디자인 특징
+## 📖 세계관 (Worldview)
 
-### Neo-Laboratory 테마
+**[대융합 (The Great Convergence)]**으로 인해 차원의 벽이 붕괴되었습니다.  
+제우스의 번개가 발할라를 때리고, 드래곤의 화염이 심연을 비추는 혼란의 시대.  
+당신은 이 모든 신화적 존재를 제어할 수 있는 유일한 **총괄 디렉터 (Director)**가 되어 연구소(방주)를 이끌어야 합니다.
 
-- **글래스모피즘**: 반투명 UI 요소와 블러 효과
-- **네온 액센트**: 사이버펑크 느낌의 컬러 팔레트
-- **다크 모드**: 눈의 피로를 줄이는 어두운 배경
-- **반응형 레이아웃**: PC/모바일 모두 최적화
-
-### 컬러 시스템
-
-```css
---primary: #00d4ff       /* 시안 네온 */
---secondary: #ff00ff     /* 마젠타 네온 */
---accent-cyan: #58a6ff   /* 부드러운 시안 */
---accent-magenta: #d946ef /* 부드러운 마젠타 */
-```
+[👉 자세한 세계관 설정 보기 (worldview.md)](docs/worldview.md)
 
 ---
 
-## 🛠️ 기술 스택
+## 💎 핵심 특징 (Key Features)
 
-- **Frontend**: Vanilla JavaScript (ES6+)
-- **Styling**: CSS3 (Grid, Flexbox, Glassmorphism)
-- **Architecture**:
-  - Event-Driven (Custom EventEmitter)
-  - Manager Pattern (Resource, Creature, Expedition 등)
-  - Singleton Game Core
+### 1. 매혹적인 비주얼 (Sensual Visuals)
 
----
+* **Adult-Oriented Art**: 성인 타겟의 고퀄리티 2D 일러스트.
+* **Live2D Physics**: 숨쉬는 듯한 바스트 모핑과 터치 반응.
+* **Cinematic Summon**: UR/SSR 등급 소환 시 제공되는 전용 등장 컷신.
 
-## 📁 프로젝트 구조
+### 2. 신화의 충돌 & 시너지 (Myth Synergy)
 
-```
-multiverse-creature-lab/
-├── index.html              # 메인 HTML
-├── css/
-│   └── style_v3.css       # Neo-Laboratory 테마
-├── js/
-│   ├── core/
-│   │   ├── Game.js        # 게임 코어 (싱글톤)
-│   │   └── EventEmitter.js
-│   ├── managers/
-│   │   ├── ResourceManager.js
-│   │   ├── CreatureManager.js
-│   │   ├── ExpeditionManager.js
-│   │   ├── FacilityManager.js
-│   │   ├── QuestManager.js
-│   │   ├── ShopManager.js
-│   │   └── ...
-│   ├── data/
-│   │   ├── CreatureData.js
-│   │   ├── ExpeditionData.js
-│   │   └── ...
-│   └── main.js            # UI 통합 및 이벤트 바인딩
-└── images/
-    └── creatures/         # 크리처 이미지
+서로 다른 신화(Origin)를 조합하여 강력한 **[공명 효과]**를 발동하세요.
 
-```
+* **🏛️ 올림푸스 (Olympus)**: 치명타 확률/피해 대폭 증가.
+* **🌲 아스가르드 (Asgard)**: 체력이 낮을수록 강해지는 불굴의 전사들.
+* **...그리고 더 많은 신화들**: [디자인 바이블 확인하기](docs/game_design_bible.md)
+
+### 3. 심도 있는 연구 & 교감 (Research & Bond)
+
+* **상호작용**: 크리처와의 교감(터치)을 통해 호감도를 올리세요.
+* **시크릿 모드**: 호감도 MAX 달성 시 해금되는 침실 배경의 전용 연출.
 
 ---
 
-## 🚀 빠른 시작
+## 🛠️ 기술 스택 (Tech Stack)
 
-### 1. 저장소 클론
+* **Core**: Vanilla JavaScript (ES6+), Event-Driven Architecture
+* **Rendering**: HTML5 Canvas + CSS3 Animation (Glassmorphism)
+* **Data**: JSON-based Creature & Synergy Data System
+
+---
+
+## 🚀 설치 및 실행
 
 ```bash
+# 저장소 클론
 git clone https://github.com/ysh1537/game.git
-cd game
-```
 
-### 2. 로컬 서버 실행
-
-```bash
-# http-server 사용 (권장)
+# 로컬 서버 실행 (필수: CORS 정책 우회)
 npx http-server . -p 8080 -c-1
-
-# 또는 Python
-python -m http.server 8080
-```
-
-### 3. 브라우저에서 실행
-
-```
-http://localhost:8080
 ```
 
 ---
 
-## 🎯 개발 로드맵
+## 🤝 Contribution
 
-### ✅ 완료
-
-- [x] 기본 게임 시스템 (소환, 성장, 탐사)
-- [x] Neo-Laboratory UI 테마
-- [x] 크리처 필터/정렬 시스템
-- [x] 상점 및 IAP 훅
-- [x] 미션 & 업적
-- [x] 전투 시스템 (PvE/PvP)
-
-### 🚧 진행 중
-
-- [ ] UI/FX 고도화 (Nikke/Blue Archive 스타일)
-- [ ] 소환 애니메이션 강화
-- [ ] 파티클 이펙트
-- [ ] 사운드 시스템
-
-### 📝 예정
-
-- [ ] 크리처 스토리 시스템
-- [ ] 길드 시스템
-- [ ] 랭킹 시스템
-- [ ] 이벤트 던전
+이 프로젝트는 **철저한 세계관 및 아트 가이드라인**을 준수합니다.
+PR 제출 전 반드시 `docs/game_design_bible.md`를 숙지해주세요.
 
 ---
 
-## 📸 스크린샷
-
-### 메인 허브
-
-![메인 허브](file:///C:/Users/CTS_Sol/.gemini/antigravity/brain/4f9fdcf3-d05b-4ef3-9c24-399cb2cf0bd7/main_hub_after_summon_1765873063402.png)
-
-### 소환 시스템
-
-![소환 완료](file:///C:/Users/CTS_Sol/.gemini/antigravity/brain/4f9fdcf3-d05b-4ef3-9c24-399cb2cf0bd7/summon_complete_1765873041404.png)
-
----
-
-## 🤝 기여
-
-이 프로젝트는 개인 포트폴리오 프로젝트입니다.  
-버그 리포트나 제안은 Issues 탭에 남겨주세요!
-
----
-
-## 📄 라이선스
-
-MIT License - 자유롭게 사용 가능합니다.
-
----
-
-## 👤 개발자
-
-**허예솔 (Yesol Heo)**  
-
-- GitHub: [@ysh1537](https://github.com/ysh1537)
-- Portfolio: [heoyesol.kr](https://heoyesol.kr)
-
----
-
-## 🙏 감사의 말
-
-- 디자인 영감: Blue Archive, Nikke
-- 게임 시스템: 수집형 RPG 장르 전반
-
----
-
-**Made with ❤️ by Yesol Heo**
+**Managed by Director**  
+*Multiverse Creature Lab*

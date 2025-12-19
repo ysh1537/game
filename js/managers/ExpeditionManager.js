@@ -107,6 +107,18 @@ export default class ExpeditionManager extends EventEmitter {
         // 3. 완료 이벤트
         this.emit('expedition:completed', expedition);
         this.eventBus.emit('expedition:completed', expedition); // [Global]
+
+        // [NEW] 자동 반복 로직
+        if (this.isAutoRepeat) {
+            setTimeout(() => {
+                this.startExpedition(expedition.creatureInstanceId, expedition.expeditionId);
+            }, 2000); // 2초 뒤 자동 재파견
+        }
+    }
+
+    setAutoRepeat(enabled) {
+        this.isAutoRepeat = enabled;
+        console.log(`[ExpeditionManager] Auto Repeat: ${enabled}`);
     }
 
     getActiveExpeditions() {
@@ -116,32 +128,28 @@ export default class ExpeditionManager extends EventEmitter {
     // [저장/로드 시스템]
     getSerializableState() {
         return {
-            activeExpeditions: this.activeExpeditions
+            activeExpeditions: this.activeExpeditions,
+            isAutoRepeat: this.isAutoRepeat
         };
     }
 
     loadFromState(state) {
-        if (!state || !state.activeExpeditions) return;
+        if (!state) return;
+        if (state.activeExpeditions) {
+            const now = Date.now();
+            const loadedExpeditions = state.activeExpeditions;
 
-        const now = Date.now();
-        const loadedExpeditions = state.activeExpeditions;
-
-        loadedExpeditions.forEach(exp => {
-            if (exp.endTime <= now) {
-                // 이미 완료된 탐사 -> 즉시 보상 지급 및 로그 처리
-                // (load 시점에서는 이벤트가 main.js에 연결되기 전일 수 있으므로
-                //  completeExpedition 호출 시 emit이 발생해도 UI가 못 잡을 수 있음.
-                //  Game.js에서 load 후 UI 초기화 로직을 고려해야 함.)
-                this.completeExpedition(exp);
-                // 로그를 어떻게 남길지는 이벤트 리스너가 등록된 시점에 따라 다름
-            } else {
-                // 아직 진행 중인 탐사 -> 다시 리스트에 추가
-                this.activeExpeditions.push(exp);
-                this.emit('expedition:started', exp); // 재시작 알림 (선택 사항)
-            }
-        });
-
-        // 중요: completeExpedition 내부에서 emit을 하는데, 
-        // Game.init() 순서상 UI 이벤트 리스너가 먼저 걸려있어야 로그가 보임.
+            loadedExpeditions.forEach(exp => {
+                if (exp.endTime <= now) {
+                    this.completeExpedition(exp);
+                } else {
+                    this.activeExpeditions.push(exp);
+                    this.emit('expedition:started', exp);
+                }
+            });
+        }
+        if (state.isAutoRepeat !== undefined) {
+            this.isAutoRepeat = state.isAutoRepeat;
+        }
     }
 }

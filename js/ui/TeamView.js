@@ -66,9 +66,16 @@ export default class TeamView extends BaseView {
         const slotsContainer = document.getElementById('deck-slots');
         if (slotsContainer) {
             slotsContainer.innerHTML = '';
-            deckData.forEach((creatureId, idx) => {
-                slotsContainer.appendChild(this._createSlotElement(creatureId, idx, currentDeckId));
-            });
+            if (Array.isArray(deckData)) {
+                deckData.forEach((creatureId, idx) => {
+                    slotsContainer.appendChild(this._createSlotElement(creatureId, idx, currentDeckId));
+                });
+            } else {
+                // 덱 데이터가 꼬였거나 로드되지 않았을 경우 초기화 (5슬롯)
+                for (let i = 0; i < 5; i++) {
+                    slotsContainer.appendChild(this._createSlotElement(null, i, currentDeckId));
+                }
+            }
         }
     }
 

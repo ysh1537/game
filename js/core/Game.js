@@ -11,6 +11,7 @@ import AuthManager from '../managers/AuthManager.js'; // [NEW]
 import DeckManager from '../managers/DeckManager.js'; // [NEW]
 import StageManager from '../managers/StageManager.js'; // [NEW]
 import BattleManager from '../managers/BattleManager.js';
+import PrestigeManager from '../managers/PrestigeManager.js'; // [NEW]
 import TutorialManager from '../managers/TutorialManager.js';
 import SaveManager from '../utils/SaveManager.js';
 import BattleScene from '../scenes/BattleScene.js';
@@ -26,17 +27,15 @@ export default class Game {
         this.events = new EventEmitter();
         this.resourceManager = new ResourceManager();
         this.facilityManager = new FacilityManager(this.events, this.resourceManager);
-        this.creatureManager = new CreatureManager(this.events, this.resourceManager);
+        this.creatureManager = new CreatureManager(this, this.events, this.resourceManager); // [MOD] Pass 'this'
         this.expeditionManager = new ExpeditionManager(this.events, this.resourceManager, this.creatureManager, this.facilityManager);
         this.questManager = new QuestManager(this.events, this.resourceManager);
         this.shopManager = new ShopManager(this.events, this.resourceManager, this.creatureManager);
         this.authManager = new AuthManager();
         this.deckManager = new DeckManager(this);
-        this.stageManager = new StageManager(this); // [NEW]
-        this.authManager = new AuthManager();
-        this.deckManager = new DeckManager(this);
         this.stageManager = new StageManager(this);
-        this.battleManager = new BattleManager(this, this.events, this.resourceManager, this.creatureManager.owned);
+        this.battleManager = new BattleManager(this, this.events, this.resourceManager, this.creatureManager);
+        this.prestigeManager = new PrestigeManager(this, this.events, this.resourceManager); // [NEW]
         this.tutorialManager = new TutorialManager(this);
 
         // [Scenes]
@@ -123,10 +122,6 @@ export default class Game {
         if (user) SaveManager.clearGame(user.username);
     }
 
-    clearSave() {
-        SaveManager.clearGame();
-    }
-
     // [Director Passive System]
     getDirectorEffect(type) {
         const user = this.authManager.currentUser;
@@ -150,29 +145,78 @@ export default class Game {
     buildSaveState() {
         return {
             version: 1,
-            savedAt: Date.now(),
+            saveTime: Date.now(), // [NEW] 오프라인 보상 계산용
             resources: this.resourceManager.getSerializableState(),
             creatures: this.creatureManager.getSerializableState(),
             expeditions: this.expeditionManager.getSerializableState(),
             facilities: this.facilityManager.getSerializableState(),
             quests: this.questManager.getSerializableState(),
             shop: this.shopManager.getSerializableState(),
-            tutorial: this.tutorialManager.getSerializableState() // [NEW]
+            decks: this.deckManager.getSerializableState(),
+            stages: this.stageManager.getSerializableState(),
+            prestige: this.prestigeManager.getSerializableState()
         };
     }
 
     applyLoadedState(data) {
+        if (!data) return;
+
+        // 1. 순차 로드 (의존성 고려)
         if (data.resources) this.resourceManager.loadFromState(data.resources);
-        if (data.facilities) this.facilityManager.loadFromState(data.facilities);
         if (data.creatures) this.creatureManager.loadFromState(data.creatures);
         if (data.expeditions) this.expeditionManager.loadFromState(data.expeditions);
+        if (data.facilities) this.facilityManager.loadFromState(data.facilities);
         if (data.quests) this.questManager.loadFromState(data.quests);
         if (data.shop) this.shopManager.loadFromState(data.shop);
-        if (data.tutorial) this.tutorialManager.loadFromState(data.tutorial); // [NEW]
+        if (data.decks) this.deckManager.loadFromState(data.decks);
+        if (data.stages) this.stageManager.loadFromState(data.stages);
+        if (data.prestige) this.prestigeManager.loadFromState(data.prestige);
+        if (data.tutorial) this.tutorialManager.loadFromState(data.tutorial);
+
+        // 2. 오프라인 보상 계산 [NEW]
+        if (data.saveTime) {
+            this.handleOfflineRewards(data.saveTime);
+        }
 
         // MaxEnergy 초기 동기화
         const maxE = 100 + this.facilityManager.getEffectValue('max_energy');
         this.resourceManager.setMaxEnergy(maxE);
+
+        // 초기 리소스 렌더링
+        this.renderResources(this.resourceManager.getResources());
+    }
+
+    handleOfflineRewards(lastSaveTime) {
+        const now = Date.now();
+        const diffMs = now - lastSaveTime;
+        const diffSec = Math.floor(diffMs / 1000);
+
+        if (diffSec < 60) return; // 1분 미만은 무시
+
+        // 초당 골드 생산량 (GPS) 계산 (Facility 효과)
+        const gps = this.facilityManager.getEffectValue('gold_per_sec');
+        const maxOfflineSec = 8 * 3600; // 최대 8시간 제한
+        const rewardSec = Math.min(diffSec, maxOfflineSec);
+
+        const offlineGold = Math.floor(gps * rewardSec);
+
+        if (offlineGold > 0) {
+            this.resourceManager.addGold(offlineGold);
+
+            // UI 알림 (UIManager가 초기화된 후 실행되도록 지연)
+            setTimeout(() => {
+                if (window.uiManager) {
+                    const hours = Math.floor(rewardSec / 3600);
+                    const mins = Math.floor((rewardSec % 3600) / 60);
+                    const timeStr = hours > 0 ? `${hours}시간 ${mins}분` : `${mins}분`;
+
+                    window.uiManager.showConfirm(
+                        `[오프라인 보상]\n\n연구소장님! ${timeStr} 동안 부재중이셨군요.\n크리처들이 ${offlineGold.toLocaleString()} 골드를 모았습니다.`,
+                        () => { } // 전송 확인만 함
+                    );
+                }
+            }, 1000);
+        }
     }
 
     start() {
@@ -183,19 +227,34 @@ export default class Game {
     update(deltaTime) {
         // 메인 게임 로직 업데이트 (Main Game Logic Update)
         this.expeditionManager.update(deltaTime);
-        this.resourceManager.update(deltaTime); // [NEW] 에너지 회복
+        this.resourceManager.update(deltaTime); // 에너지 회복
 
-        // 디버그: 1초마다 리소스 로그 출력
+        // 1. 패시브 골드 수급 (1초마다)
+        this.passiveTimer = (this.passiveTimer || 0) + deltaTime;
+        if (this.passiveTimer >= 1.0) {
+            const gps = this.facilityManager.getEffectValue('gold_per_sec');
+            if (gps > 0) {
+                this.resourceManager.addGold(gps);
+            }
+            this.passiveTimer -= 1.0;
+        }
+
+        // 2. 자동 저장 (30초마다)
+        this.autosaveTimer = (this.autosaveTimer || 0) + deltaTime;
+        if (this.autosaveTimer >= 30.0) {
+            this.save();
+            this.autosaveTimer = 0;
+        }
     }
 
     renderResources(res) {
-        // UI 업데이트
+        // UI 업데이트 (천 단위 콤마 추가)
         const elGold = document.getElementById('gold-display');
         const elGem = document.getElementById('gem-display');
         const elEnergy = document.getElementById('energy-display');
 
-        if (elGold) elGold.innerText = res.gold;
-        if (elGem) elGem.innerText = res.gem;
-        if (elEnergy) elEnergy.innerText = res.energy + " / " + res.maxEnergy; // max 표시 추가
+        if (elGold) elGold.innerText = res.gold.toLocaleString();
+        if (elGem) elGem.innerText = res.gem.toLocaleString();
+        if (elEnergy) elEnergy.innerText = `${res.energy} / ${res.maxEnergy}`;
     }
 }

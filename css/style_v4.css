@@ -555,6 +555,8 @@ h6 {
     height: 100%;
     display: flex;
     flex-direction: column;
+    min-height: 0;
+    /* Flexbox 스크롤 이슈 방지 */
 }
 
 /* 중앙 패널(#center-panel): 숨김 (모달로 대체) */
@@ -573,21 +575,27 @@ h6 {
     height: 100%;
     display: flex;
     flex-direction: column;
+    min-height: 0;
 }
 
 .full-height>*:last-child {
     flex: 1;
     overflow-y: auto;
+    min-height: 0;
 }
 
 /* 크리처 리스트 그리드 - 여러 줄 표시 */
 #creature-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    grid-auto-rows: max-content;
+    /* 행 높이 명시 */
     gap: 12px;
     padding: 15px;
     overflow-y: auto;
     flex: 1;
+    min-height: 0;
+    /* 중요: Flex 자식 스크롤 */
 }
 
 /* --- Modals --- */
@@ -1145,4 +1153,316 @@ h6 {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 15px;
     padding: 16px;
+}
+
+/* =========================================
+   [NEW] 시네마틱 연출 (Cinematics) 
+   ========================================= */
+#cinematic-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 999999;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#cinematic-overlay.active {
+    display: flex;
+    animation: cinematic-fade-in 0.5s ease-out;
+}
+
+#cinematic-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#cinematic-image {
+    height: 130%;
+    /* Ken Burns Effect zoom start */
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* UR Effect: Gold Aura & Scale */
+.cinematic-ur #cinematic-image {
+    animation: ken-burns 6s ease-out forwards;
+    filter: drop-shadow(0 0 50px rgba(255, 215, 0, 0.6));
+}
+
+/* SSR Effect: Red Glitch */
+.cinematic-ssr #cinematic-image {
+    animation: ken-burns 4s ease-out forwards;
+    filter: drop-shadow(0 0 30px rgba(255, 50, 50, 0.6));
+}
+
+#cinematic-dialogue {
+    position: absolute;
+    bottom: 15%;
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translateY(20px);
+    z-index: 10;
+}
+
+.show-dialogue {
+    animation: slide-up-fade 0.8s ease-out forwards;
+}
+
+#cinematic-flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.do-flash {
+    animation: flash-bang 0.2s ease-out;
+}
+
+/* Animations */
+@keyframes cinematic-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes ken-burns {
+    from {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up-fade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flash-bang {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes shake-hard {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(5px, 5px) rotate(5deg);
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(-5px, 5px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+
+/* =========================================
+   [NEW] 로비 캐릭터 (Lobby Character)
+   ========================================= */
+.lobby-character-layer {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    /* Right aligned */
+    width: 60vh;
+    /* Aspect ratio based on height */
+    height: 95vh;
+    z-index: 10;
+    /* Behind some UI, but visible */
+    pointer-events: none;
+    /* Let clicks pass through if needed, but hitboxes need events */
+}
+
+#lobby-character-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+    /* Enable interaction on character */
+}
+
+#lobby-character-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Hitboxes for Touch Interaction */
+.hitbox {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    cursor: pointer;
+    /* border: 1px solid rgba(255,0,0,0.3); Debug */
+}
+
+#lobby-hitbox-head {
+    top: 5%;
+    height: 20%;
+    z-index: 20;
+}
+
+#lobby-hitbox-chest {
+    top: 25%;
+    height: 25%;
+    z-index: 19;
+}
+
+#lobby-hitbox-legs {
+    top: 50%;
+    height: 40%;
+    z-index: 18;
+}
+
+/* Animations */
+.touch-react-head {
+    animation: shake-head 0.4s ease-in-out;
+}
+
+.touch-react-chest {
+    animation: bounce-chest 0.4s ease-in-out;
+}
+
+.touch-react-legs {
+    animation: tremble 0.4s ease-in-out;
+}
+
+@keyframes shake-head {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5px);
+    }
+}
+
+@keyframes bounce-chest {
+
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    40% {
+        transform: scale(1.05, 0.95);
+    }
+
+    60% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+@keyframes tremble {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(2px, 0);
+    }
+
+    50% {
+        transform: translate(-2px, 0);
+    }
+
+    75% {
+        transform: translate(2px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Speech Bubble */
+.speech-bubble {
+    position: absolute;
+    top: 10%;
+    left: -180px;
+    width: 220px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 100;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 30px;
+    border-width: 10px 0 10px 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.95);
+}
+
+.speech-bubble.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }

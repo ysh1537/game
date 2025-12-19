@@ -24,8 +24,9 @@ const COMPOSE_SUCCESS_RATES = {
 };
 
 export default class CreatureManager extends EventEmitter {
-    constructor(eventBus, resourceManager) {
+    constructor(game, eventBus, resourceManager) {
         super();
+        this.game = game; // [Fix] game 인스턴스 저장
         this.eventBus = eventBus;
         this.resourceManager = resourceManager;
 
@@ -67,19 +68,22 @@ export default class CreatureManager extends EventEmitter {
         const cost = costs[type];
         if (!cost) return { success: false, reason: "Invalid Type" };
 
-        // Check Resources
+        // Check Resources & Spend
         if (type === 'normal') {
-            if (this.game.resourceManager.gold < cost.amount) {
+            if (!this.resourceManager.spendGold(cost.amount)) {
+                // emit('summon:failed') is handled by ResourceManager spendGold internal check? 
+                // Wait, ResourceManager emits 'resources:error', not 'summon:failed'.
+                // So we should catch the failure.
+                // But wait, spendGold emits 'resources:error' if failed.
+                // We also want 'summon:failed'.
                 this.emit('summon:failed', { reason: '골드 부족' });
                 return { success: false, reason: 'Gold' };
             }
-            this.game.resourceManager.useGold(cost.amount);
         } else {
-            if (this.game.resourceManager.gem < cost.amount) {
+            if (!this.resourceManager.spendGem(cost.amount)) {
                 this.emit('summon:failed', { reason: '젬 부족' });
                 return { success: false, reason: 'Gem' };
             }
-            this.game.resourceManager.useGem(cost.amount);
         }
 
         // Execute 11 Summons (10 + 1 Bonus)
@@ -97,7 +101,7 @@ export default class CreatureManager extends EventEmitter {
         // Emit Batch Event (for UI Scene)
         this.emit('summon:batch_result', results);
         this.emit('creatures:updated', this.owned);
-        this.game.save();
+        if (this.game) this.game.save(); // [Fix] Safety check
 
         return { success: true, results: results };
     }
@@ -423,6 +427,17 @@ export default class CreatureManager extends EventEmitter {
 
             return c;
         });
+
+        this.emit('creatures:updated', this.owned);
+    }
+
+    resetForRebirth() {
+        this.owned = [];
+        this.nextInstanceId = 1;
+
+        // 기본 크리처 1마리 지급 (예: id가 'c001'인 슬라임)
+        const baseRarity = pickRarityFromTable(NORMAL_SUMMON_TABLE);
+        this.summonOneByRarity(baseRarity);
 
         this.emit('creatures:updated', this.owned);
     }

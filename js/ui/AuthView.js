@@ -9,6 +9,14 @@ export default class AuthView extends BaseView {
     }
 
     init() {
+        // [Fix] UI 요소 캐싱 (Error: Cannot read properties of undefined (reading 'authMessage'))
+        this.uiElements = {
+            usernameInput: document.getElementById('auth-username'),
+            passwordInput: document.getElementById('auth-password'),
+            confirmInput: document.getElementById('auth-confirm-password'),
+            authMessage: document.getElementById('auth-message')
+        };
+
         // 1. 탭 전환 (로그인 / 회원가입)
         const tabLogin = document.getElementById('tab-login-mode');
         const tabSignup = document.getElementById('tab-signup-mode');
@@ -61,12 +69,19 @@ export default class AuthView extends BaseView {
             if (this.ui.loginOverlay) this.ui.loginOverlay.style.display = 'none';
         });
 
+        // 세션 복구 시 처리
+        this.game.authManager.events.on('auth:restored', (user) => {
+            console.log(`[AuthView] Session restored for ${user.username}`);
+            if (this.ui.loginOverlay) this.ui.loginOverlay.style.display = 'none';
+            this.game.startMainGame(); // 게임 시작 로직 트리거
+        });
+
         // 초기화 시 UI 업데이트
         this._updatePersonaInfo();
         this._updateAuthFormUI();
     }
 
-    handleAuthSubmit() {
+    async handleAuthSubmit() {
         const usernameInput = document.getElementById('auth-username');
         const passwordInput = document.getElementById('auth-password');
         const confirmInput = document.getElementById('auth-confirm-password');
@@ -76,36 +91,56 @@ export default class AuthView extends BaseView {
         const confirmPassword = confirmInput?.value.trim();
 
         if (!username || !password) {
-            alert(this.langManager.t('auth.msg_missing'));
+            this._setAuthMessage(this.langManager.t('auth.msg_missing'));
             return;
         }
 
-        if (this.isLoginMode) {
-            // 로그인 처리
-            const res = this.game.authManager.login(username, password);
-            if (res.success) {
-                this.game.startMainGame();
-            } else {
-                this._setAuthMessage(res.message);
-            }
+        // [New] 옵션 저장 (Fix: ReferenceError)
+        const checkRememberMe = document.getElementById('check-remember-me');
+        const checkAutoLogin = document.getElementById('check-auto-login');
+
+        const rememberMe = checkRememberMe?.checked || false;
+        const autoLogin = checkAutoLogin?.checked || false;
+
+        this.game.authManager.saveLoginOptions(username, rememberMe, autoLogin);
+
+        const result = await this.game.authManager.login(username, password);
+        if (result.success) {
+            // this._setAuthMessage('접속 성공! 시스템 초기화 중...', 'success'); // Message not needed as game starts
+            this.game.startMainGame(); // This will be handled by the 'auth:login' event listener
         } else {
-            // 회원가입 처리
-            if (password !== confirmPassword) {
-                alert(this.langManager.t('auth.msg_mismatch'));
-                return;
-            }
-            const res = this.game.authManager.signup(username, password, this.selectedPersona);
-            if (res.success) {
-                alert(this.langManager.t('auth.welcome', { name: username }));
-                this.game.startMainGame();
-            } else {
-                this._setAuthMessage(res.message);
-            }
+            this._setAuthMessage(result.message);
+        }
+    }
+
+    async _handleSignup() {
+        const { usernameInput, passwordInput, confirmInput } = this.uiElements;
+
+        const username = usernameInput?.value.trim();
+        const password = passwordInput?.value.trim();
+        const confirmPassword = confirmInput?.value.trim();
+
+        if (!username || !password || !confirmPassword) {
+            this._setAuthMessage(this.langManager.t('auth.msg_missing'));
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            this._setAuthMessage(this.langManager.t('auth.msg_mismatch'));
+            return;
+        }
+
+        const res = await this.game.authManager.signup(username, password, this.selectedPersona);
+        if (res.success) {
+            alert(this.langManager.t('auth.welcome', { name: username }));
+            this.game.startMainGame();
+        } else {
+            this._setAuthMessage(res.message);
         }
     }
 
     _setAuthMessage(msg) {
-        const msgEl = document.getElementById('auth-message');
+        const msgEl = this.uiElements.authMessage;
         if (msgEl) msgEl.innerText = msg;
     }
 

@@ -14,29 +14,43 @@ export default class DeckManager extends EventEmitter {
     }
 
     init() {
-        this.load();
+        // Game.js에서 통합 로드 시 호출됨
     }
 
+    getSerializableState() {
+        return {
+            decks: this.decks,
+            mainDeck: this.mainDeck,
+            currentEditingDeck: this.currentEditingDeck
+        };
+    }
+
+    loadFromState(state) {
+        if (!state) return;
+        this.decks = state.decks || this.decks;
+        this.mainDeck = state.mainDeck !== undefined ? state.mainDeck : 0;
+        this.currentEditingDeck = state.currentEditingDeck !== undefined ? state.currentEditingDeck : 0;
+        this.emit('decks:updated', this.decks);
+    }
+
+    // Legacy Support (Optional, can be removed if full integration is done)
     load() {
         const data = localStorage.getItem('mcl_decks');
         if (data) {
             try {
                 const parsed = JSON.parse(data);
-                this.decks = parsed.decks || this.decks;
-                this.mainDeck = parsed.mainDeck !== undefined ? parsed.mainDeck : 0;
-                this.currentEditingDeck = parsed.currentEditingDeck !== undefined ? parsed.currentEditingDeck : 0;
+                this.loadFromState(parsed);
             } catch (e) {
                 console.error("Failed to load decks", e);
             }
         }
     }
 
+    // Triggered internally on changes
     save() {
-        const data = {
-            decks: this.decks,
-            mainDeck: this.mainDeck,
-            currentEditingDeck: this.currentEditingDeck
-        };
+        // Individual save is redundant if Game.js saves everything, 
+        // but keeping it for safety in case of crash before auto-save
+        const data = this.getSerializableState();
         localStorage.setItem('mcl_decks', JSON.stringify(data));
         this.emit('decks:updated', this.decks);
     }

@@ -57,7 +57,25 @@ export default class StageManager {
     nextStage() {
         if (this.currentViewingStage < this.currentMaxStage) {
             this.currentViewingStage++;
-            this.save();
         }
+    }
+
+    // [저장/로드 시스템]
+    getSerializableState() {
+        return {
+            maxStage: this.currentMaxStage,
+            viewingStage: this.currentViewingStage
+        };
+    }
+
+    loadFromState(state) {
+        if (!state) return;
+        this.currentMaxStage = state.maxStage || 1;
+        this.currentViewingStage = state.viewingStage || 1;
+    }
+
+    resetForRebirth() {
+        this.currentMaxStage = 1;
+        this.currentViewingStage = 1;
     }
 }

@@ -13,12 +13,14 @@ export default class ExpeditionView extends BaseView {
             this.renderActiveExpeditions();
         });
 
-        // 1초마다 타이머 갱신
-        setInterval(() => {
-            if (this.ui.contentExpedition && this.ui.contentExpedition.classList.contains('active')) {
-                this.renderActiveExpeditions();
-            }
-        }, 1000);
+        // 자동 반복 토글 연결
+        const checkAutoRepeat = document.getElementById('check-auto-repeat');
+        if (checkAutoRepeat) {
+            checkAutoRepeat.checked = this.game.expeditionManager.isAutoRepeat;
+            checkAutoRepeat.onchange = (e) => {
+                this.game.expeditionManager.setAutoRepeat(e.target.checked);
+            };
+        }
 
         this.game.events.on('ui:tabSwitched', (tabId) => {
             if (tabId === 'expedition') {
