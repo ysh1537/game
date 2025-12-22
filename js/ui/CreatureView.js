@@ -21,6 +21,7 @@ export default class CreatureView extends BaseView {
         this.game.creatureManager.on('creatures:updated', () => this.renderCreatureList());
         this.game.creatureManager.on('creatures:selected', (c) => this._handleCreatureSelected(c));
         this.game.creatureManager.on('creature:leveledUp', (data) => this._handleLevelUp(data));
+        this.game.creatureManager.on('evolve:success', (data) => this._handleEvolveSuccess(data));
 
         // 탭 전환 감지
         this.game.events.on('ui:tabSwitched', (tabId) => {
@@ -202,7 +203,9 @@ export default class CreatureView extends BaseView {
                 <div class="action-group" style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:20px;">
                     <button id="btn-train-basic" class="cyber-btn action">기초 훈련</button>
                     <button id="btn-train-intensive" class="cyber-btn action premium">집중 강화</button>
-                    <button id="btn-compose-creature" class="cyber-btn" style="grid-column: span 2;">진급 / 합성</button>
+                    <button id="btn-compose-creature" class="cyber-btn">강화 / 합성</button>
+                    <button id="btn-evolve-creature" class="cyber-btn ${this._canEvolveUI(c).canEvolve ? 'premium' : ''}" ${this._canEvolveUI(c).canEvolve ? '' : 'disabled'} style="${this._canEvolveUI(c).canEvolve ? 'background:linear-gradient(135deg,#ff9800,#ff5722);' : ''}">${this._canEvolveUI(c).canEvolve ? '🦋 진화 가능!' : '🔒 진화'}</button>
+                    ${this._canEvolveUI(c).evolvesTo ? `<div style="grid-column:span 2; font-size:0.8rem; color:#aaa; text-align:center;">진화 조건: ${this._canEvolveUI(c).reason || '조건 충족!'}</div>` : ''}
                     <div style="grid-column: span 2; display:flex; justify-content:center; margin-top:10px;">
                         ${lockBtnHtml}
                     </div>
@@ -229,7 +232,89 @@ export default class CreatureView extends BaseView {
 
         document.getElementById('btn-train-basic').onclick = () => this._handleTraining('basic', c.instanceId);
         document.getElementById('btn-train-intensive').onclick = () => this._handleTraining('intensive', c.instanceId);
-        document.getElementById('btn-compose-creature').onclick = () => alert("진급 시스템 준비 중입니다.");
+        document.getElementById('btn-compose-creature').onclick = () => this._handleCompose(c.instanceId);
+
+        // 진화 버튼 이벤트
+        const evolveBtn = document.getElementById('btn-evolve-creature');
+        if (evolveBtn && !evolveBtn.disabled) {
+            evolveBtn.onclick = () => this._handleEvolve(c.instanceId);
+        }
+    }
+
+    /**
+     * 진화 가능 여부 확인 (UI용)
+     */
+    _canEvolveUI(c) {
+        if (!c) return { canEvolve: false };
+        return this.game.creatureManager.canEvolve(c.instanceId);
+    }
+
+    /**
+     * 진화 실행 핸들러
+     */
+    _handleEvolve(instanceId) {
+        const check = this.game.creatureManager.canEvolve(instanceId);
+        if (!check.canEvolve) {
+            alert(`진화 불가: ${check.reason}`);
+            return;
+        }
+
+        const targetName = check.evolvesTo.name;
+        this.uiManager.showConfirm(
+            `${targetName}(으)로 진화하시겠습니까?\n\n⚠️ 진화 시 레벨과 별이 초기화됩니다!`,
+            () => {
+                const result = this.game.creatureManager.tryEvolve(instanceId);
+                if (result.success) {
+                    alert(`🎉 진화 성공!\n${result.newCreature.def.name}(이)가 되었습니다!`);
+                    this.addLog(`[진화] ${result.newCreature.def.name}(으)로 진화 성공!`, 'success');
+                    this.renderDetailPanel(result.newCreature);
+                    this.renderCreatureList();
+                } else {
+                    alert(`진화 실패: ${result.reason}`);
+                }
+            }
+        );
+    }
+
+    /**
+     * 합성(강화) 핸들러
+     */
+    _handleCompose(instanceId) {
+        const creature = this.game.creatureManager.getCreature(instanceId);
+        if (!creature) return;
+
+        if (creature.star >= 5) {
+            alert("이미 최대 강화 상태입니다! (5성)");
+            return;
+        }
+
+        // 같은 종류, 같은 별의 재료 찾기
+        const materials = this.game.creatureManager.owned.filter(c =>
+            c.instanceId !== instanceId &&
+            c.dataId === creature.dataId &&
+            c.star === creature.star &&
+            !c.isLocked
+        );
+
+        if (materials.length === 0) {
+            alert(`합성 재료가 없습니다!\n\n필요: ${creature.def.name} (${creature.star}성, 잠금해제)`);
+            return;
+        }
+
+        this.uiManager.showConfirm(
+            `${creature.def.name}을(를) 합성하시겠습니까?\n\n재료: ${creature.def.name} (${creature.star}성) x1\n결과: ${creature.star + 1}성으로 강화`,
+            () => {
+                const result = this.game.creatureManager.tryCompose(instanceId, materials[0].instanceId);
+                if (result.success) {
+                    alert(`🎉 합성 성공! ${creature.star}성이 되었습니다!`);
+                    this.addLog(`[합성] ${creature.def.name} ${creature.star}성 강화 성공!`, 'success');
+                    this.renderDetailPanel(this.game.creatureManager.getCreature(instanceId));
+                    this.renderCreatureList();
+                } else {
+                    alert(`합성 실패: ${result.reason}`);
+                }
+            }
+        );
     }
 
     // --- 내부 헬퍼 메서드 ---
@@ -283,6 +368,15 @@ export default class CreatureView extends BaseView {
     _handleLevelUp(data) {
         const { creature, oldLevel, newLevel } = data;
         this.addLog(`[성장] ${creature.def.name} 레벨업! Lv.${oldLevel} -> Lv.${newLevel}`);
+        if (this.game.creatureManager.selectedId === creature.instanceId) {
+            this.renderDetailPanel(creature);
+        }
+    }
+
+    _handleEvolveSuccess(data) {
+        const { creature, oldName, newName } = data;
+        this.addLog(`🦋 [진화] ${oldName} → ${newName} 진화 성공!`, 'success');
+        this.renderCreatureList();
         if (this.game.creatureManager.selectedId === creature.instanceId) {
             this.renderDetailPanel(creature);
         }
