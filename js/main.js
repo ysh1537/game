@@ -549,11 +549,11 @@ function initCouponSystem() {
             let baby = cm.owned.find(c => c.dataId === 'fox_baby');
             if (baby) {
                 baby.star = 5;
-                baby.level = 1; // 리셋
+                baby.level = 1;
                 cm.recalculateStats(baby);
-                msg.push(`기존 '아기여우'를 5성으로 진급시켰습니다.`);
+                msg.push(`기존 '아기여우'(보유중)를 5성 진화 가능 상태로 만들었습니다.`);
             } else {
-                const babyDef = module.CREATURE_DEF_MAP['fox_baby'];
+                const babyDef = module.CREATURE_DEFS.find(c => c.id === 'fox_baby');
                 if (babyDef) {
                     baby = {
                         instanceId: cm.nextInstanceId++,
@@ -570,7 +570,10 @@ function initCouponSystem() {
                     };
                     cm.recalculateStats(baby);
                     cm.owned.push(baby);
-                    msg.push(`'아기여우'(5성)를 지급했습니다.`);
+                    msg.push(`'아기여우'(5성) 신규 지급 완료!`);
+                } else {
+                    console.error("fox_baby definition not found!");
+                    msg.push(`[오류] 아기여우 데이터를 찾을 수 없습니다.`);
                 }
             }
 
@@ -581,9 +584,9 @@ function initCouponSystem() {
                 nine.level = 50;
                 nine.affection = 3;
                 cm.recalculateStats(nine);
-                msg.push(`기존 '여우요괴 미호'를 만렙/5성/호감도MAX로 설정했습니다.`);
+                msg.push(`기존 '여우요괴 미호'(보유중)를 UR 진화 가능 상태로 만들었습니다.`);
             } else {
-                const nineDef = module.CREATURE_DEF_MAP['fox_nine'];
+                const nineDef = module.CREATURE_DEFS.find(c => c.id === 'fox_nine');
                 if (nineDef) {
                     nine = {
                         instanceId: cm.nextInstanceId++,
@@ -600,7 +603,10 @@ function initCouponSystem() {
                     };
                     cm.recalculateStats(nine);
                     cm.owned.push(nine);
-                    msg.push(`'여우요괴 미호'(5성/만렙)를 지급했습니다.`);
+                    msg.push(`'여우요괴 미호'(5성/만렙) 신규 지급 완료!`);
+                } else {
+                    console.error("fox_nine definition not found!");
+                    msg.push(`[오류] 여우요괴 데이터를 찾을 수 없습니다.`);
                 }
             }
 
