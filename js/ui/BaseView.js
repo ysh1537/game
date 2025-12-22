@@ -5,8 +5,8 @@
 export default class BaseView {
     constructor(game, uiManager) {
         this.game = game;
-        this.uiManager = uiManager;
-        this.ui = uiManager.ui; // 편의를 위해 UI 요소 참조 보관
+        this.uiManager = uiManager || game.uiManager; // Fallback to game.uiManager
+        this.ui = this.uiManager ? this.uiManager.ui : {}; // Safe access
 
 
     }

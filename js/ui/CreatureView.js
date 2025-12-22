@@ -20,7 +20,7 @@ export default class CreatureView extends BaseView {
         // 데이터 갱신 감지
         this.game.creatureManager.on('creatures:updated', () => this.renderCreatureList());
         this.game.creatureManager.on('creatures:selected', (c) => this._handleCreatureSelected(c));
-        this.game.creatureManager.on('creature:leveledUp', (data) => this.handleLevelUp(data));
+        this.game.creatureManager.on('creature:leveledUp', (data) => this._handleLevelUp(data));
 
         // 탭 전환 감지
         this.game.events.on('ui:tabSwitched', (tabId) => {
@@ -96,6 +96,19 @@ export default class CreatureView extends BaseView {
                     this._handleDeckSelect(c, currentDeckIds);
                 } else {
                     this.game.creatureManager.selectCreature(c.instanceId);
+                    // 로비 캐릭터 변경
+                    const lobbyImg = document.getElementById('lobby-character-img');
+                    if (lobbyImg && c.def) {
+                        lobbyImg.src = c.def.image;
+                        lobbyImg.alt = c.def.name;
+                        // localStorage에 저장
+                        localStorage.setItem('lobbyCharacter', JSON.stringify({
+                            image: c.def.image,
+                            name: c.def.name,
+                            instanceId: c.instanceId
+                        }));
+                        this.uiManager.addLog(`로비 캐릭터를 ${c.def.name}(으)로 변경했습니다.`, 'success');
+                    }
                 }
             };
             this.ui.creatureList.appendChild(div);
@@ -125,24 +138,64 @@ export default class CreatureView extends BaseView {
 
         body.innerHTML = `
             <div class="detail-header" style="display:flex; justify-content:space-between; align-items:center;">
-                <h3 style="margin:0;">${c.def.name} <span style="color:#f1c40f;">${'★'.repeat(c.star)}</span></h3>
-                <button id="btn-close-detail" class="cyber-btn small" style="font-size:1.5rem;">×</button>
+                <h3 style="margin:0; font-size:1.3rem;">
+                    <span class="rarity-badge rarity-${c.def.rarity}" style="font-size:0.7em; padding:2px 8px; border-radius:4px; margin-right:5px; border:1px solid currentColor;">${c.def.rarity}</span>
+                    ${c.def.name} 
+                    <span style="color:#f1c40f; font-size:0.8em; margin-left:5px;">${'★'.repeat(c.star)}</span>
+                    <div style="font-size:0.8rem; color:#ff4081; margin-top:4px; font-weight:normal;">
+                        <span style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px; margin-right:5px; border:1px solid rgba(255,255,255,0.2); font-size:0.75rem;">
+                            🧠 ${c.def.ego || 'Normal'}
+                        </span>
+                        ❤️ Resonance: ${this.game.creatureManager.getResonanceScore(c).toLocaleString()}
+                    </div>
+                </h3>
+                <button id="btn-close-detail" class="cyber-btn small icon-only" style="font-size:1.2rem; padding:5px 10px;">×</button>
             </div>
             
-            <div class="detail-body fade-in">
-                <p style="margin:10px 0; color:var(--text-secondary);">등급: <span class="rarity-${c.def.rarity}" style="font-weight:bold">${c.def.rarity}</span> | 속성: ${c.def.elements ? c.def.elements.join(' / ') : c.def.element}</p>
+            <div class="detail-body fade-in" style="position:relative;">
+                <div class="creature-info-row" style="display:flex; justify-content:space-between; margin:10px 0; font-size:0.9rem; color:#ccc;">
+                    <div>
+                        <span style="opacity:0.6;">World:</span> <span style="color:var(--accent-primary); font-weight:bold;">${c.def.world || 'Unknown'}</span>
+                    </div>
+                    <div>
+                         <span style="opacity:0.6;">Elements:</span> ${this._renderElementIcons(c.def.elements || [c.def.element])}
+                    </div>
+                </div>
                 
-                <div class="creature-portrait-large">
+                <div class="creature-portrait-large" style="position:relative;">
                     <img src="${c.def.image}" alt="${c.def.name}">
+                    <div class="speech-bubble-modal" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); width:90%; background:rgba(0,0,0,0.8); border:1px solid var(--accent-primary); border-radius:8px; padding:10px; font-size:0.9rem; text-align:center; color:#fff; box-shadow:0 0 10px rgba(0,0,0,0.5);">
+                        "${c.def.lines?.normal || '...'}"
+                    </div>
                 </div>
 
-                <div class="stat-group" style="margin:15px 0;">
+                <div class="stat-group" style="margin:15px 0; background:rgba(255,255,255,0.03); padding:10px; border-radius:8px;">
                     <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
-                        <strong>Lv.${c.level}</strong>
-                        <span>${isMaxLevel ? "MAX" : `Exp: ${c.exp} / ${nextExp}`}</span>
+                        <strong style="color:var(--text-primary);">Lv.${c.level}</strong>
+                        <span style="font-size:0.85em; color:var(--text-secondary);">${isMaxLevel ? "MAX LEVEL" : `EXP ${Math.floor(expPercent)}%`}</span>
                     </div>
-                    <div class="exp-bar" style="height:10px; background:rgba(255,255,255,0.1); border-radius:5px; overflow:hidden;">
-                        <div class="exp-fill" style="width: ${isMaxLevel ? 100 : expPercent}%; height:100%; background:var(--accent-primary); transition:width 0.3s ease;"></div>
+                    <div class="exp-bar" style="height:6px; background:rgba(0,0,0,0.5); border-radius:3px; overflow:hidden; margin-bottom:15px;">
+                        <div class="exp-fill" style="width: ${isMaxLevel ? 100 : expPercent}%; height:100%; background:linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); box-shadow:0 0 5px var(--accent-primary);"></div>
+                    </div>
+
+                    <!-- 상세 능력치 표시 영역 -->
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; font-size:0.9rem;">
+                        <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:5px;">
+                            <span style="color:#aaa;">전투력</span>
+                            <span style="color:var(--accent-cyan); font-weight:bold;">${Number(c.stats.explorePower || 0).toLocaleString()}</span>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:5px;">
+                            <span style="color:#aaa;">체력 (HP)</span>
+                            <span style="color:#ef5350; font-weight:bold;">${Number(c.stats.hp || 0).toLocaleString()}</span>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:5px;">
+                            <span style="color:#aaa;">공격력</span>
+                            <span style="color:#ffa726; font-weight:bold;">${Number(c.stats.atk || 0).toLocaleString()}</span>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:5px;">
+                            <span style="color:#aaa;">방어력</span>
+                            <span style="color:#42a5f5; font-weight:bold;">${Number(c.stats.def || 0).toLocaleString()}</span>
+                        </div>
                     </div>
                 </div>
 
@@ -253,9 +306,20 @@ export default class CreatureView extends BaseView {
     }
 
     _handleTraining(type, instanceId) {
-        // 기존 handleTraining 로직 (생략된 경우 CreatureManager에서 처리하도록 유도 가능)
-        // 여기서는 간단히 Manager 호출 예시만 작성
-        this.game.creatureManager.tryTrain(instanceId, type);
+        const result = this.game.creatureManager.tryTrain(instanceId, type);
+        if (result.success) {
+            const label = type === 'basic' ? '기초 훈련' : '집중 강화';
+            this.addLog(`[${label}] 경험치 +${result.expGained} 획득!`, 'success');
+            if (result.leveledUp) {
+                this.addLog(`[성장] 레벨업! Lv.${result.newLevel}`, 'success');
+            }
+            // 상세 패널 및 리스트 갱신
+            const c = this.game.creatureManager.getCreatureById(instanceId);
+            if (c) this.renderDetailPanel(c);
+            this.renderCreatureList();
+        } else {
+            this.addLog(`[훈련 실패] ${result.reason}`, 'error');
+        }
     }
 
     handleAutoCompose() {
@@ -268,5 +332,16 @@ export default class CreatureView extends BaseView {
                 alert("합성 가능한 대상이 없습니다.");
             }
         });
+    }
+
+    _renderElementIcons(elements) {
+        if (!elements) return '';
+        const iconMap = {
+            'Fire': '🔥', 'Water': '💧', 'Earth': '🌿', 'Wind': '🌪️', 'Light': '✨', 'Dark': '🌙',
+            'Metal': '⚙️', 'Ice': '❄️', 'Nature': '🍀', 'Lightning': '⚡', 'Time': '⏳',
+            'Void': '⚫', 'Chaos': '🌀', 'Life': '🌱'
+        };
+
+        return elements.map(e => `<span title="${e}" style="cursor:help;">${iconMap[e] || e}</span>`).join(' ');
     }
 }

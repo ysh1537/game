@@ -16,6 +16,7 @@ export default class BattleManager extends EventEmitter {
         this.heroTeam = [];
         this.enemyTeam = [];
         this.activeSynergies = {}; // [NEW] Track active synergies
+        this.battleSpeed = 1; // [NEW] Default Speed
     }
 
     startBattle(dungeonId) {
@@ -195,6 +196,9 @@ export default class BattleManager extends EventEmitter {
             return;
         }
 
+        // Base delay (1500ms / speed)
+        const delay = 1500 / (this.battleSpeed || 1);
+
         // Simulate One Round of Attacks
         setTimeout(() => {
             if (!this.inBattle) return;
@@ -208,8 +212,8 @@ export default class BattleManager extends EventEmitter {
 
                 if (this.checkWinCondition()) return;
                 this.nextTurn();
-            }, 1500); // Slower pacing
-        }, 1500); // Slower pacing
+            }, delay);
+        }, delay);
     }
 
     processTeamAttack(attackers, defenders) {
@@ -392,6 +396,12 @@ export default class BattleManager extends EventEmitter {
                 this.heroTeam.forEach(hero => {
                     if (hero.uid) {
                         this.game.creatureManager.addExp(hero.uid, earnedExp);
+
+                        // [NEW] Battle Count for Resonance
+                        const creature = this.game.creatureManager.getCreatureById(hero.uid);
+                        if (creature) {
+                            creature.battleCount = (creature.battleCount || 0) + 1;
+                        }
                     }
                 });
             }
@@ -406,9 +416,10 @@ export default class BattleManager extends EventEmitter {
                 if (this.isAutoBattle) {
                     const nextStage = this.currentStageId + 1;
                     if (nextStage <= this.game.stageManager.getMaxStage() + 1) { // 열린 스테이지까지
+                        const waitTime = 3000 / (this.battleSpeed || 1);
                         setTimeout(() => {
                             if (this.isAutoBattle) this.startStageBattle(nextStage);
-                        }, 3000); // 3초 대기 후 다음 전투
+                        }, waitTime);
                     }
                 }
             }
@@ -439,5 +450,10 @@ export default class BattleManager extends EventEmitter {
     setAutoBattle(enabled) {
         this.isAutoBattle = enabled;
         console.log(`[BattleManager] Auto Battle: ${enabled}`);
+    }
+
+    setBattleSpeed(speed) {
+        this.battleSpeed = speed;
+        console.log(`[BattleManager] Speed set to x${speed}`);
     }
 }

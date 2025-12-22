@@ -27,7 +27,7 @@ export default class UIManager {
             tabBattle: document.getElementById('tab-battle'),
 
             // 메인 컨텐츠 영역
-            layoutContainer: document.getElementById('layout-container'),
+            contentHome: document.getElementById('content-home'), // [Mod] Renamed from layout-container
             contentSummon: document.getElementById('content-summon'),
             contentExpedition: document.getElementById('content-expedition'),
             contentResearch: document.getElementById('content-research'),
@@ -46,6 +46,9 @@ export default class UIManager {
             filterRarity: document.getElementById('filter-rarity'),
             filterElement: document.getElementById('filter-element'),
             btnAutoCompose: document.getElementById('btn-auto-compose'),
+
+            // 로비 캐릭터
+            lobbyCharacterImg: document.getElementById('lobby-character-img'),
 
             // 상태바 리소스
             goldDisplay: document.getElementById('gold-display'),
@@ -83,7 +86,12 @@ export default class UIManager {
 
         tabPairs.forEach(pair => {
             if (pair.btn) {
-                pair.btn.addEventListener('click', () => this.switchTab(pair.id));
+                pair.btn.addEventListener('click', () => {
+                    console.log(`[UIManager] Tab clicked: ${pair.id}`);
+                    this.switchTab(pair.id);
+                });
+            } else {
+                console.warn(`[UIManager] Tab button missing for id: ${pair.id}`);
             }
         });
 
@@ -103,35 +111,50 @@ export default class UIManager {
      * @param {string} tabId 
      */
     switchTab(tabId) {
-        // 1. 모든 컨텐츠 숨김
-        const contents = [
-            this.ui.layoutContainer, this.ui.contentSummon, this.ui.contentExpedition,
-            this.ui.contentResearch, this.ui.contentMission, this.ui.contentShop,
-            this.ui.contentTeam, this.ui.contentBattle
+        // 1. 모든 컨텐츠 숨김 (동적 조회)
+        const contentIds = [
+            'content-home', 'content-summon', 'content-expedition',
+            'content-research', 'content-mission', 'content-shop',
+            'content-team', 'content-battle', 'content-prestige'
         ];
-        contents.forEach(el => {
+        contentIds.forEach(id => {
+            const el = document.getElementById(id);
             if (el) {
                 el.classList.remove('active');
                 el.style.display = 'none';
             }
         });
 
-        // 2. 모든 탭 버튼 비활성화
-        const tabs = [
-            this.ui.tabHome, this.ui.tabSummon, this.ui.tabExpedition,
-            this.ui.tabResearch, this.ui.tabMission, this.ui.tabShop,
-            this.ui.tabTeam, this.ui.tabBattle
+        // 2. 모든 탭 버튼 비활성화 (동적 조회)
+        const tabIds = [
+            'tab-home', 'tab-summon', 'tab-expedition',
+            'tab-research', 'tab-mission', 'tab-shop',
+            'tab-team', 'tab-battle'
         ];
-        tabs.forEach(el => el && el.classList.remove('active'));
+        tabIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.classList.remove('active');
+        });
 
         // 3. 대상 활성화
-        const targetBtn = this.ui[`tab${tabId.charAt(0).toUpperCase() + tabId.slice(1)}`];
-        const targetContent = (tabId === 'home') ? this.ui.layoutContainer : this.ui[`content${tabId.charAt(0).toUpperCase() + tabId.slice(1)}`];
+        const targetBtn = document.getElementById(`tab-${tabId}`);
+        // [Mod] Standardized content ID
+        const targetContentId = `content-${tabId}`;
+        const targetContent = document.getElementById(targetContentId);
 
         if (targetBtn) targetBtn.classList.add('active');
         if (targetContent) {
             targetContent.classList.add('active');
-            targetContent.style.display = (tabId === 'home') ? 'grid' : 'block';
+            targetContent.style.display = (tabId === 'home') ? 'grid' : 'block'; // Home uses Grid
+            console.log(`[UIManager] Activated tab content: ${targetContentId}`);
+        } else {
+            console.error(`[UIManager] Failed to find target content for tab: ${tabId} (ID: ${targetContentId})`);
+        }
+
+        // [Fix] 로비 캐릭터는 홈 화면에서만 표시
+        const lobbyVisual = document.getElementById('lobby-visual-container');
+        if (lobbyVisual) {
+            lobbyVisual.style.display = (tabId === 'home') ? 'block' : 'none';
         }
 
         // [Mode Cleanup] 덱 설정 모드 해제 로직 등
@@ -148,22 +171,32 @@ export default class UIManager {
      * @param {string} msg 
      * @param {string} type 
      */
-    addLog(msg, type = "normal") {
+    addLog(message, type = 'info') {
         if (!this.ui.logContent) return;
 
-        const time = new Date().toLocaleTimeString();
-        let prefix = "";
-        switch (type) {
-            case "expedition": prefix = "[탐사] "; break;
-            case "facility": prefix = "[연구] "; break;
-            case "mission": prefix = "[미션] "; break;
-            case "shop": prefix = "[보급] "; break;
-        }
+        const entry = document.createElement('div');
+        entry.className = `log-entry log-${type}`;
+        entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+        this.ui.logContent.prepend(entry);
 
-        const div = document.createElement('div');
-        div.style.marginBottom = "4px";
-        div.innerHTML = `<span style="color:#888">[${time}]</span> ${prefix}${msg}`;
-        this.ui.logContent.prepend(div);
+        // 로그 개수 제한 (최대 50개)
+        while (this.ui.logContent.children.length > 50) {
+            this.ui.logContent.removeChild(this.ui.logContent.lastChild);
+        }
+    }
+
+    /**
+     * @description 로비 캐릭터를 변경합니다.
+     * @param {Object} creature - 표시할 크리처 인스턴스
+     */
+    setLobbyCharacter(creature) {
+        if (!this.ui.lobbyCharacterImg) return;
+
+        if (creature && creature.def) {
+            this.ui.lobbyCharacterImg.src = creature.def.image;
+            this.ui.lobbyCharacterImg.alt = creature.def.name;
+            this.addLog(`로비 캐릭터를 ${creature.def.name}(으)로 변경했습니다.`, 'success');
+        }
     }
 
     /**
@@ -190,9 +223,64 @@ export default class UIManager {
     }
 
     /**
-     * @description 특정 요소를 하이라이트합니다 (튜토리얼 등에서 사용).
-     * @param {string} elementId 
+     * @description 로비 캐릭터 터치 상호작용 초기화
      */
+    initLobbyInteraction() {
+        const zones = ['head', 'body', 'legs'];
+        const reactions = {
+            head: [
+                "머리를 쓰다듬어 주시는 건가요? 기분 좋네요.",
+                "지휘관님, 머리가 헝클어지잖아요...",
+                "후훗, 칭찬해 주시는 건가요?"
+            ],
+            body: [
+                "어머, 어딜 만지시는 거죠?",
+                "가슴이 두근거려요...",
+                "지휘관님, 너무 가까워요!"
+            ],
+            legs: [
+                "꺄악! 다리는 안 돼요!",
+                "그런 취향이 있으신가요...?",
+                "간지러워요!"
+            ]
+        };
+
+        zones.forEach(zone => {
+            const el = document.getElementById(`touch-${zone}`);
+            if (el) {
+                el.addEventListener('click', (e) => {
+                    e.stopPropagation(); // 이벤트 전파 방지
+                    const texts = reactions[zone];
+                    const randomText = texts[Math.floor(Math.random() * texts.length)];
+                    this.showLobbySpeech(randomText);
+
+                    // 애니메이션 효과 (작게 흔들림)
+                    const img = document.getElementById('lobby-character-img');
+                    if (img) {
+                        img.style.transform = 'scale(1.02)';
+                        setTimeout(() => img.style.transform = 'scale(1)', 150);
+                    }
+                });
+            }
+        });
+    }
+
+    showLobbySpeech(text) {
+        const bubble = document.getElementById('lobby-speech-bubble');
+        const textSpan = document.getElementById('lobby-speech-text');
+
+        if (bubble && textSpan) {
+            textSpan.innerText = text;
+            bubble.classList.add('active');
+
+            // 기존 타이머 제거 후 재설정
+            if (this._speechTimer) clearTimeout(this._speechTimer);
+            this._speechTimer = setTimeout(() => {
+                bubble.classList.remove('active');
+            }, 3000);
+        }
+    }
+
     highlightElement(elementId) {
         if (this.currentHighlight) {
             this.currentHighlight.classList.remove('highlight');

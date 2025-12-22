@@ -35,100 +35,168 @@ export default class ExpeditionView extends BaseView {
     }
 
     renderExpeditionList() {
-        if (!this.ui.expeditionList) return;
-        this.ui.expeditionList.innerHTML = '';
+        const listEl = document.getElementById('expedition-list');
+        if (!listEl) return;
+        listEl.innerHTML = '';
 
         EXPEDITIONS.forEach(exp => {
             const card = document.createElement('div');
             card.className = 'expedition-card feature-card';
+            // 배경 이미지가 없으므로 CSS 그라디언트로 분위기 연출
+            let bgGradient = 'linear-gradient(135deg, rgba(30,30,40,0.8), rgba(10,10,20,0.95))';
+            let accentColor = '#888';
+            if (exp.elementBonus === 'Wind' || exp.elementBonus === 'Nature') {
+                bgGradient = 'linear-gradient(135deg, rgba(46, 204, 113, 0.2), rgba(10,10,20,0.9))';
+                accentColor = '#2ecc71';
+            } else if (exp.elementBonus === 'Earth') {
+                bgGradient = 'linear-gradient(135deg, rgba(230, 126, 34, 0.2), rgba(10,10,20,0.9))';
+                accentColor = '#e67e22';
+            } else if (exp.elementBonus === 'Fire') {
+                bgGradient = 'linear-gradient(135deg, rgba(231, 76, 60, 0.2), rgba(10,10,20,0.9))';
+                accentColor = '#e74c3c';
+            }
+
+            card.style.background = bgGradient;
+            card.style.border = `1px solid ${accentColor}44`;
+            card.style.position = 'relative';
+            card.style.overflow = 'hidden';
+
             card.innerHTML = `
-                <div class="exp-icon">🚀</div>
-                <div class="exp-info">
-                    <h4>${exp.name}</h4>
-                    <p>소요 시간: ${exp.durationSec}초 | 에너지: ${exp.energyCost}</p>
+                <div class="exp-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
+                    <div class="exp-icon" style="font-size:2rem; background:rgba(0,0,0,0.3); width:50px; height:50px; display:flex; justify-content:center; align-items:center; border-radius:12px; border:1px solid ${accentColor}; color:${accentColor};">
+                        ${exp.icon || '🚀'}
+                    </div>
+                    <div class="exp-element-bonus" style="font-size:0.8rem; color:${accentColor}; border:1px solid ${accentColor}; padding:2px 8px; border-radius:12px;">
+                        ${exp.elementBonus ? exp.elementBonus + ' 우대' : '속성 무관'}
+                    </div>
                 </div>
-                <div class="exp-rewards">
-                    <span>💰 ${exp.baseGoldReward}G</span>
-                    <span>⭐ EXP</span>
+                
+                <div class="exp-info" style="margin-bottom:15px;">
+                    <h4 style="margin:0 0 5px 0; font-size:1.1rem;">${exp.name}</h4>
+                    <p style="font-size:0.85rem; color:#aaa; margin:0;">${exp.description}</p>
                 </div>
-                <button class="cyber-btn small btn-start-exp" data-id="${exp.id}">탐사 보내기</button>
+
+                <div class="exp-details" style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:0.85rem; color:#ccc; margin-bottom:15px; background:rgba(0,0,0,0.2); padding:10px; border-radius:8px;">
+                    <div>⏱️ 소요: <span style="color:#fff;">${exp.durationSec}초</span></div>
+                    <div>⚡ 피로도: <span style="color:#f1c40f;">-${exp.energyCost}</span></div>
+                    <div>💰 보상: <span style="color:#f1c40f;">${exp.baseGoldReward}G</span></div>
+                    <div>⭐ 경험치: <span style="color:#3498db;">${exp.baseExpReward}</span></div>
+                </div>
+
+                <div class="exp-action">
+                    <button class="cyber-btn small btn-start-exp" data-id="${exp.id}" style="width:100%; border-color:${accentColor}; color:${accentColor};">
+                        탐사대 파견
+                    </button>
+                </div>
             `;
 
             card.querySelector('.cyber-btn').addEventListener('click', () => {
                 this._openExpeditionModal(exp);
             });
 
-            this.ui.expeditionList.appendChild(card);
+            listEl.appendChild(card);
         });
     }
 
-    /**
-     * @private
-     * @description 탐사 보낼 크리처를 선택하는 모달을 엽니다.
-     */
-    _openExpeditionModal(exp) {
-        const modal = document.getElementById('expedition-select-modal');
-        const list = document.getElementById('exp-creature-list');
-        const btnClose = document.getElementById('btn-close-exp-modal');
-        if (!modal || !list) return;
-
-        list.innerHTML = '';
-
-        // 현재 탐사 중이 아닌 크리처만 필터링
-        const activeExpeditionCreatureIds = this.game.expeditionManager.getActiveExpeditions().map(ae => ae.creatureId);
-        const availableCreatures = this.game.creatureManager.owned.filter(c => !activeExpeditionCreatureIds.includes(c.instanceId));
-
-        if (availableCreatures.length === 0) {
-            list.innerHTML = '<p style="grid-column:1/-1; text-align:center; color:#888; padding:20px;">파견 가능한 크리처가 없습니다.</p>';
-        } else {
-            availableCreatures.forEach(c => {
-                const div = document.createElement('div');
-                div.className = `creature-card-mini rarity-${c.def.rarity}`;
-                div.style.cursor = 'pointer';
-                div.innerHTML = `
-                    <img src="${c.def.image}" alt="${c.def.name}">
-                    <div class="card-overlay">
-                        <div class="card-name" style="font-size:0.6rem;">${c.def.name}</div>
-                    </div>
-                `;
-                div.onclick = () => {
-                    const success = this.game.expeditionManager.startExpedition(c.instanceId, exp.id);
-                    if (success) {
-                        modal.style.display = 'none';
-                    }
-                };
-                list.appendChild(div);
-            });
-        }
-
-        modal.style.display = 'flex';
-        btnClose.onclick = () => modal.style.display = 'none';
-        modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
-    }
-
     renderActiveExpeditions() {
-        if (!this.ui.activeExpeditionList) return;
+        const listEl = document.getElementById('active-expedition-list');
+        if (!listEl) return;
 
         const list = this.game.expeditionManager.getActiveExpeditions();
-        this.ui.activeExpeditionList.innerHTML = '';
+        listEl.innerHTML = '';
 
         if (list.length === 0) {
-            this.ui.activeExpeditionList.innerHTML = '<p class="placeholder-text" style="padding:10px;">현재 진행 중인 탐사가 없습니다.</p>';
+            listEl.innerHTML = '<p class="placeholder-text" style="padding:20px; text-align:center; color:#666;">현재 진행 중인 탐사가 없습니다.</p>';
             return;
         }
 
         list.forEach(exp => {
             const now = Date.now();
+            const totalDuration = exp.endTime - exp.startTime;
+            const elapsed = now - exp.startTime;
+            const percent = Math.min(100, Math.max(0, (elapsed / totalDuration) * 100));
             const remainSec = Math.max(0, Math.ceil((exp.endTime - now) / 1000));
+
             const div = document.createElement('div');
-            div.className = 'active-expedition-item';
-            div.style.cssText = "display:flex; justify-content:space-between; padding:10px; background:rgba(0,0,0,0.2); margin-bottom:5px; border-radius:4px;";
+            div.className = 'active-expedition-item glass-panel';
+            div.style.padding = '15px';
+            div.style.marginBottom = '10px';
+
+            // 크리처 이미지 가져오기
+            const creature = this.game.creatureManager.getCreatureById(exp.creatureId);
+            const creatureImg = creature ? creature.def.image : 'images/creature_slime_green.png';
 
             div.innerHTML = `
-                <span>${exp.creatureName} - ${exp.expeditionName}</span>
-                <span class="timer" style="color:var(--accent-primary);">남은 시간: ${Math.floor(remainSec / 60)}:${String(remainSec % 60).padStart(2, '0')}</span>
+                <div style="display:flex; gap:15px; align-items:center;">
+                    <div style="width:50px; height:50px; border-radius:50%; overflow:hidden; border:2px solid var(--accent-primary);">
+                        <img src="${creatureImg}" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div style="flex:1;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+                            <span style="font-weight:bold; color:var(--text-primary);">${exp.expeditionName}</span>
+                            <span style="color:var(--accent-primary); font-family:monospace;">${Math.floor(remainSec / 60)}:${String(remainSec % 60).padStart(2, '0')}</span>
+                        </div>
+                        <div style="background:rgba(255,255,255,0.1); height:6px; border-radius:3px; overflow:hidden;">
+                            <div style="width:${percent}%; height:100%; background:var(--accent-primary); transition:width 1s linear;"></div>
+                        </div>
+                        <div style="font-size:0.8rem; color:#888; margin-top:5px;">
+                            파견 중: ${exp.creatureName}
+                        </div>
+                    </div>
+                </div>
             `;
-            this.ui.activeExpeditionList.appendChild(div);
+            listEl.appendChild(div);
         });
+    }
+
+    _openExpeditionModal(expedition) {
+        // 크리처 선택 모달 표시
+        const owned = this.game.creatureManager.owned || [];
+        const available = owned.filter(c => !c.isOnExpedition);
+
+        if (available.length === 0) {
+            this.game.uiManager.showConfirm('탐사에 파견할 수 있는 크리처가 없습니다.', () => { });
+            return;
+        }
+
+        // 간단한 선택 UI (첫 번째 크리처 자동 선택 or 모달)
+        let html = `<div style="max-height:300px; overflow-y:auto;">`;
+        available.forEach(c => {
+            html += `
+                <div class="creature-select-item" data-id="${c.instanceId}" 
+                     style="display:flex; align-items:center; gap:10px; padding:10px; margin:5px 0; 
+                            background:rgba(255,255,255,0.05); border-radius:8px; cursor:pointer;
+                            border:1px solid transparent; transition:all 0.2s;">
+                    <img src="${c.def.image}" style="width:40px; height:40px; border-radius:50%;">
+                    <div>
+                        <div style="font-weight:bold;">${c.def.name}</div>
+                        <div style="font-size:0.8rem; color:#888;">Lv.${c.level} | ${c.def.rarity}</div>
+                    </div>
+                </div>
+            `;
+        });
+        html += `</div>`;
+
+        this.game.uiManager.showConfirm(
+            `<div style="margin-bottom:10px;"><strong>${expedition.name}</strong>에 파견할 크리처를 선택하세요.</div>${html}`,
+            () => { },
+            true
+        );
+
+        // 모달 내 클릭 이벤트
+        setTimeout(() => {
+            document.querySelectorAll('.creature-select-item').forEach(item => {
+                item.onclick = () => {
+                    const creatureId = parseInt(item.dataset.id);
+                    const result = this.game.expeditionManager.startExpedition(creatureId, expedition.id);
+                    if (result) {
+                        this.game.uiManager.hideModal();
+                        this.addLog(`${expedition.name} 탐사 시작!`, 'expedition');
+                    }
+                };
+                item.onmouseenter = () => item.style.border = '1px solid var(--accent-primary)';
+                item.onmouseleave = () => item.style.border = '1px solid transparent';
+            });
+        }, 100);
     }
 }

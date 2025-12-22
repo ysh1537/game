@@ -51,7 +51,8 @@ export default class PrestigeView extends BaseView {
 
         // 1초마다 보상 예측치 갱신
         setInterval(() => {
-            if (this.ui.contentPrestige && this.ui.contentPrestige.classList.contains('active')) {
+            const contentPrestige = document.getElementById('content-prestige');
+            if (contentPrestige && contentPrestige.classList.contains('active')) {
                 this.renderPendingShards();
             }
         }, 1000);

@@ -5,24 +5,20 @@ export default class BattleView extends BaseView {
         // 스테이지 네비게이션
         if (this.ui.btnPrevStage) {
             this.ui.btnPrevStage.onclick = () => {
-                if (this.game.viewingStageId > 1) {
-                    this.game.viewingStageId--;
-                    this.renderStageUI();
-                }
+                this.game.stageManager.prevStage();
+                this.renderStageUI();
             };
         }
         if (this.ui.btnNextStage) {
             this.ui.btnNextStage.onclick = () => {
-                const max = this.game.stageManager.getMaxStage();
-                if (this.game.viewingStageId < max) {
-                    this.game.viewingStageId++;
-                    this.renderStageUI();
-                }
+                this.game.stageManager.nextStage();
+                this.renderStageUI();
             };
         }
         if (this.ui.btnStartStage) {
             this.ui.btnStartStage.onclick = () => {
-                this.game.battleManager.startStageBattle(this.game.viewingStageId);
+                // 현재 보고 있는 스테이지로 시작
+                this.game.battleManager.startStageBattle(this.game.stageManager.currentViewingStage);
             };
         }
 
@@ -33,6 +29,39 @@ export default class BattleView extends BaseView {
             checkAutoBattle.onchange = (e) => {
                 this.game.battleManager.setAutoBattle(e.target.checked);
             };
+        }
+
+        // [NEW] 배속 버튼 연결
+        const btnSpeed1 = document.getElementById('btn-speed-1');
+        const btnSpeed2 = document.getElementById('btn-speed-2');
+        if (btnSpeed1 && btnSpeed2) {
+            const updateSpeedUI = (speed) => {
+                // Reset styles
+                btnSpeed1.classList.remove('active');
+                btnSpeed2.classList.remove('active');
+                btnSpeed1.style.background = 'transparent';
+                btnSpeed2.style.background = 'transparent';
+
+                if (speed > 1) {
+                    btnSpeed2.classList.add('active');
+                    btnSpeed2.style.background = 'var(--accent-orange)';
+                } else {
+                    btnSpeed1.classList.add('active');
+                    btnSpeed1.style.background = 'var(--accent-cyan)';
+                }
+            };
+
+            btnSpeed1.onclick = () => {
+                this.game.battleManager.setBattleSpeed(1);
+                updateSpeedUI(1);
+            };
+            btnSpeed2.onclick = () => {
+                this.game.battleManager.setBattleSpeed(3); // 3배속으로 상향 (사용자 만족도 UP)
+                updateSpeedUI(3);
+            };
+
+            // 초기 상태 설정
+            updateSpeedUI(this.game.battleManager.battleSpeed || 1);
         }
 
         // PvP 검색
@@ -47,11 +76,15 @@ export default class BattleView extends BaseView {
         this.game.events.on('battle:completed', (data) => {
             if (data.isWin && data.stageId) {
                 const max = this.game.stageManager.getMaxStage();
-                if (data.stageId === this.game.viewingStageId && this.game.viewingStageId < max) {
-                    this.game.viewingStageId++;
-                    this.addLog(`[스테이지] 다음 단계(${this.game.viewingStageId}) 잠금 해제!`);
+                // StageManager already auto-unlocks next stage on win via BattleManager -> unlockNextStage
+                // Just sync viewing stage if user was watching the latest stage
+                if (this.game.stageManager.currentViewingStage < max) {
+                    // If we just unlocked a new stage and were at the previous max, move to new one could be optional
+                    // But StageManager logic handles unlocks. 
+                    // Let's just create a visual log.
+                    this.addLog(`[스테이지] 작전 구역 ${max} 개방!`);
                 }
-                this.renderStageUI();
+                this.renderStageUI(); // Refresh UI to show unlock status/next button
             }
         });
 
@@ -60,6 +93,9 @@ export default class BattleView extends BaseView {
                 this.render();
             }
         });
+
+        // 초기 렌더링
+        this.render();
     }
 
     render() {
@@ -71,11 +107,8 @@ export default class BattleView extends BaseView {
         const stageMgr = this.game.stageManager;
         if (!stageMgr) return;
 
-        if (typeof this.game.viewingStageId === 'undefined') {
-            this.game.viewingStageId = stageMgr.getMaxStage();
-        }
-
-        const stageId = this.game.viewingStageId;
+        // Use logic from StageManager
+        const stageId = stageMgr.currentViewingStage || 1;
         const maxStage = stageMgr.getMaxStage();
         const stageData = stageMgr.getStageInfo(stageId);
 

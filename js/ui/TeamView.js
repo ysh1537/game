@@ -77,6 +77,80 @@ export default class TeamView extends BaseView {
                 }
             }
         }
+
+        // 4. 보유 크리처 풀 렌더링
+        this.renderPool();
+    }
+
+    renderPool() {
+        const poolContainer = document.getElementById('deck-pool');
+        if (!poolContainer) return;
+
+        poolContainer.innerHTML = '';
+        const allCreatures = this.game.creatureManager.owned;
+        if (!allCreatures || allCreatures.length === 0) {
+            poolContainer.innerHTML = '<div style="grid-column:1/-1; text-align:center; color:#666; padding:20px;">보유한 크리처가 없습니다. 소환을 진행해주세요.</div>';
+            return;
+        }
+
+        // 정렬: 레벨 내림차순 -> 등급 내림차순
+        const sorted = [...allCreatures].sort((a, b) => {
+            if (b.def.rarity !== a.def.rarity) {
+                const rarityScore = { 'UR': 6, 'SSR': 5, 'SR': 4, 'Special': 3, 'Rare': 2, 'Unique': 1, 'Normal': 0 };
+                return (rarityScore[b.def.rarity] || 0) - (rarityScore[a.def.rarity] || 0);
+            }
+            return b.level - a.level;
+        });
+
+        const deckManager = this.game.deckManager;
+        const currentDeckId = deckManager.currentEditingDeck || 'main';
+        const currentDeck = deckManager.decks[currentDeckId] || [];
+
+        sorted.forEach(c => {
+            const isEquipped = currentDeck.includes(c.instanceId);
+            const card = document.createElement('div');
+            card.style.cssText = `
+                position: relative;
+                aspect-ratio: 1;
+                background: #222;
+                border: 1px solid #444;
+                border-radius: 6px;
+                cursor: pointer;
+                overflow: hidden;
+                opacity: ${isEquipped ? 0.5 : 1};
+            `;
+
+            // 등급별 테두리 색상
+            const rarityColors = {
+                'UR': '#FFD700', 'SSR': '#EF5350', 'SR': '#FF7043',
+                'Special': '#AB47BC', 'Rare': '#42A5F5', 'Unique': '#66BB6A', 'Normal': '#9E9E9E'
+            };
+            const borderColor = rarityColors[c.def.rarity] || '#444';
+            card.style.border = `1px solid ${borderColor}`;
+
+            card.innerHTML = `
+                <img src="${c.def.image}" style="width:100%; height:100%; object-fit:cover;">
+                <div style="position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.7); color:white; font-size:0.7em; text-align:center; padding:2px 0;">
+                    Lv.${c.level}
+                </div>
+                ${isEquipped ? '<div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); display:flex; justify-content:center; align-items:center; font-weight:bold; color:#fff; font-size:0.8em;">장착중</div>' : ''}
+            `;
+
+            if (!isEquipped) {
+                card.onclick = () => {
+                    // 빈 슬롯 찾기
+                    const emptyIdx = currentDeck.findIndex(slot => slot === null);
+                    if (emptyIdx !== -1) {
+                        deckManager.addToDeck(currentDeckId, c.instanceId);
+                        this.game.events.emit('ui:deckUpdated'); // Trigger update
+                    } else {
+                        alert("덱 슬롯이 가득 찼습니다! 슬롯을 비우고 선택해주세요.");
+                    }
+                };
+            }
+
+            poolContainer.appendChild(card);
+        });
     }
 
     _createSlotElement(creatureId, idx, deckId) {

@@ -24,7 +24,8 @@ export const GEM_PACKS = [
         description: "젬 50개를 획득합니다.",
         gemAmount: 50,
         priceType: "real",
-        priceLabel: "₩1,100"
+        priceLabel: "₩1,100",
+        price: 1100
     },
     {
         id: "gem_pack_large",
@@ -32,7 +33,17 @@ export const GEM_PACKS = [
         description: "젬 300개를 획득합니다.",
         gemAmount: 300,
         priceType: "real",
-        priceLabel: "₩5,500"
+        priceLabel: "₩5,500",
+        price: 5500
+    },
+    {
+        id: "gem_pack_huge",
+        name: "젬 초대형 묶음",
+        description: "젬 1,000개를 획득합니다.",
+        gemAmount: 1000,
+        priceType: "real",
+        priceLabel: "₩16,500",
+        price: 16500
     }
 ];
 
@@ -43,6 +54,7 @@ export const BUNDLES = [
         description: "젬 50 + 골드 3,000 + 희귀(Rare) 크리처 1마리",
         priceType: "real",
         priceLabel: "₩4,400",
+        price: 4400,
         oneTime: true,
         rewards: {
             gold: 3000,
@@ -59,6 +71,36 @@ export const SPECIALS = [
         description: "배너/영상 광고가 영구적으로 제거됩니다.",
         priceType: "real",
         priceLabel: "₩3,300",
+        price: 3300,
         oneTime: true
+    }
+];
+
+export const GIFT_ITEMS = [
+    {
+        id: "gift_cake",
+        name: "달콤한 케이크",
+        description: "맛있는 케이크입니다. (Resonance +50)",
+        effect: { resonance: 50 },
+        priceType: "gold",
+        priceValue: 500
+    },
+    {
+        id: "gift_necklace",
+        name: "보석 목걸이",
+        description: "반짝이는 목걸이입니다. (Resonance +300)",
+        effect: { resonance: 300 },
+        priceType: "gem",
+        priceValue: 50
+    },
+    {
+        id: "gift_ring_promise",
+        name: "서약의 반지",
+        description: "영원한 사랑을 맹세합니다. (즉시 Lv.3 서약 달성)",
+        effect: { resonance: 3000, type: 'oath' },
+        priceType: "real",
+        priceLabel: "₩33,000",
+        price: 33000,
+        type: "ring"
     }
 ];

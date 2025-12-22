@@ -7,15 +7,23 @@ import FacilityManager from '../managers/FacilityManager.js';
 
 import QuestManager from '../managers/QuestManager.js';
 import ShopManager from '../managers/ShopManager.js';
-import AuthManager from '../managers/AuthManager.js'; // [NEW]
-import DeckManager from '../managers/DeckManager.js'; // [NEW]
-import StageManager from '../managers/StageManager.js'; // [NEW]
+import AuthManager from '../managers/AuthManager.js';
+import DeckManager from '../managers/DeckManager.js';
+import StageManager from '../managers/StageManager.js';
 import BattleManager from '../managers/BattleManager.js';
-import PrestigeManager from '../managers/PrestigeManager.js'; // [NEW]
+import PrestigeManager from '../managers/PrestigeManager.js';
 import TutorialManager from '../managers/TutorialManager.js';
+import LanguageManager from '../managers/LanguageManager.js'; // [Mod] Import
+
+// [New] Monetization Managers
+import PaymentManager from '../managers/PaymentManager.js';
+import DateManager from '../managers/DateManager.js';
+
 import SaveManager from '../utils/SaveManager.js';
 import BattleScene from '../scenes/BattleScene.js';
 import SummonScene from '../scenes/SummonScene.js';
+
+import UIManager from '../managers/UIManager.js'; // [Mod] Import moved to top
 
 export default class Game {
     static instance = null;
@@ -24,18 +32,30 @@ export default class Game {
         if (Game.instance) return Game.instance;
         Game.instance = this;
 
+        // ...
+
         this.events = new EventEmitter();
+        this.langManager = new LanguageManager();
+        this.uiManager = new UIManager(this); // [Mod] Init UIManager
+        this.authManager = new AuthManager();
+
+        // 1. Core Managers (Dependencies)
         this.resourceManager = new ResourceManager();
+        this.paymentManager = new PaymentManager(this); // Init Payment early
+        this.paymentManager.init();
+        this.dateManager = new DateManager(this);
+
         this.facilityManager = new FacilityManager(this.events, this.resourceManager);
-        this.creatureManager = new CreatureManager(this, this.events, this.resourceManager); // [MOD] Pass 'this'
+
+        // 2. Feature Managers
+        this.creatureManager = new CreatureManager(this, this.events, this.resourceManager);
         this.expeditionManager = new ExpeditionManager(this.events, this.resourceManager, this.creatureManager, this.facilityManager);
         this.questManager = new QuestManager(this.events, this.resourceManager);
-        this.shopManager = new ShopManager(this.events, this.resourceManager, this.creatureManager);
-        this.authManager = new AuthManager();
+        this.shopManager = new ShopManager(this); // Now safe to use Payment
         this.deckManager = new DeckManager(this);
         this.stageManager = new StageManager(this);
         this.battleManager = new BattleManager(this, this.events, this.resourceManager, this.creatureManager);
-        this.prestigeManager = new PrestigeManager(this, this.events, this.resourceManager); // [NEW]
+        this.prestigeManager = new PrestigeManager(this, this.events, this.resourceManager);
         this.tutorialManager = new TutorialManager(this);
 
         // [Scenes]
@@ -60,20 +80,42 @@ export default class Game {
         return Game.instance;
     }
 
-    // 주의: init()은 UI 이벤트 리스너 등록 '후'에 호출하는 것이 좋습니다 (로그 출력을 위해)
+    // 주의: init()은 순수 초기화만 수행. 앱 시작은 main.js에서 제어.
     init() {
-        console.log("Game initialized");
-
-        // [NEW] Auth Check
+        console.log("[Game] Initializing...");
         this.authManager.init();
-        if (!this.authManager.isLoggedIn()) {
-            console.log("Not logged in. Waiting for auth.");
-            // Login Overlay is visible by default in HTML
+        console.log("[Game] Initialization complete.");
+        // 로그인 체크 및 앱 시작은 main.js에서 처리
+    }
+
+    // 사용자 데이터 로드 (로그인 후 main.js에서 호출)
+    loadUserData() {
+        const user = this.authManager.currentUser;
+        if (!user) {
+            console.error("[Game] loadUserData called without user.");
             return;
         }
 
-        // 로그인 상태라면 게임 시작
-        this.startMainGame();
+        console.log(`[Game] Loading data for ${user.username}...`);
+        const saveKey = user.username;
+
+        const saveData = SaveManager.loadGame(saveKey);
+        if (saveData) {
+            console.log("[Game] Save data found, applying...");
+            this.applyLoadedState(saveData);
+        } else {
+            console.log("[Game] No save data, using defaults.");
+            this.renderResources(this.resourceManager.getResources());
+        }
+
+        // 리소스 변경 구독
+        this.resourceManager.on('resources:changed', (res) => {
+            this.renderResources(res);
+        });
+
+        // 튜토리얼 시작
+        this.tutorialManager.start();
+        console.log("[Game] User data loaded.");
     }
 
     startMainGame() {

@@ -14,6 +14,26 @@ const RARITY_MULTIPLIER = {
     [RANKS.UR]: 3.0
 };
 
+// [Resonance V2] 호감도(교감) 가중치 테이블
+const RESONANCE_WEIGHTS = {
+    base: { level: 10, day: 5, battle: 2, expedition: 3, touch: 1 }, // 기준 점수
+    ego: {
+        'Warlord': { battle: 2.0, level: 1.2 },    // 전투광
+        'Devotion': { day: 2.5, touch: 1.5 },      // 순애
+        'Star': { expedition: 2.0, touch: 1.2 },   // 관종
+        'Seeker': { level: 2.0, day: 1.2 },        // 탐구
+        'Normal': {}
+    }
+};
+
+// [Resonance V3] 호감도 레벨 정의
+export const AFFECTION_LEVELS = {
+    0: { min: 0, label: '경계', color: '#9e9e9e' },
+    1: { min: 100, label: '관심', color: '#66bb6a' },
+    2: { min: 300, label: '신뢰', color: '#f48fb1' },
+    3: { min: 1000, label: '서약', color: '#ad1457' }
+};
+
 // 합성 성공 확률 (현재 등급 -> 다음 등급)
 const COMPOSE_SUCCESS_RATES = {
     0: 1.0, // 0성(기본) -> 1성: 100%
@@ -90,7 +110,7 @@ export default class CreatureManager extends EventEmitter {
         const results = [];
         // [10+1 Logic] 10회 비용으로 11회 소환
         for (let i = 0; i < 11; i++) {
-            const rarity = (type === 'normal') ? this._pickRarityNormal() : this._pickRarityPremium();
+            const rarity = (type === 'normal') ? pickRarityFromTable(NORMAL_SUMMON_TABLE) : pickRarityFromTable(PREMIUM_SUMMON_TABLE);
             const creature = this._createCreatureByRarity(rarity);
             if (creature) {
                 this.owned.push(creature);
@@ -119,6 +139,10 @@ export default class CreatureManager extends EventEmitter {
             level: 1,
             exp: 0,
             star: 0,
+            star: 0,
+            affection: 0, // = Touch Count
+            battleCount: 0,    // [NEW] 전투 횟수
+            expeditionCount: 0,// [NEW] 탐사 횟수
             acquiredAt: new Date(),
             stats: {}
         };
@@ -127,20 +151,11 @@ export default class CreatureManager extends EventEmitter {
     }
 
     _pickRarityNormal() {
-        // Standard Weights
-        const r = Math.random();
-        if (r < 0.05) return RANKS.SSR;
-        if (r < 0.30) return RANKS.SR;
-        return RANKS.RARE;
+        return pickRarityFromTable(NORMAL_SUMMON_TABLE);
     }
 
     _pickRarityPremium() {
-        // Premium Weights
-        const r = Math.random();
-        if (r < 0.01) return RANKS.UR;
-        if (r < 0.10) return RANKS.SSR;
-        if (r < 0.50) return RANKS.SR;
-        return RANKS.RARE; // No Normal in Premium? Or just R as base.
+        return pickRarityFromTable(PREMIUM_SUMMON_TABLE);
     }
 
     summonOneByRarity(rarity) {
@@ -164,6 +179,121 @@ export default class CreatureManager extends EventEmitter {
                 this.emit('creatures:selected', c);
             }
         }
+    }
+
+    // [Resonance V2] 교감도 점수 계산 (알고리즘)
+    getResonanceScore(creature) {
+        if (!creature) return 0;
+
+        // 1. 기본 팩터 계산
+        const level = creature.level || 1;
+        const touch = creature.affection || 0;
+        const battle = creature.battleCount || 0;
+        const expedition = creature.expeditionCount || 0;
+
+        const now = new Date();
+        const acquired = new Date(creature.acquiredAt || now);
+        const daysOwned = Math.max(0, Math.floor((now - acquired) / (1000 * 60 * 60 * 24)));
+
+        // 2. Ego 확인
+        const ego = creature.def.ego || 'Normal';
+        const wBase = RESONANCE_WEIGHTS.base;
+        const wEgo = RESONANCE_WEIGHTS.ego[ego] || {};
+
+        // 3. 가중치 적용 (Multiplier) -> (Factor * BaseWeight * EgoMultiplier)
+        const sLevel = level * wBase.level * (wEgo.level || 1.0);
+        const sTouch = touch * wBase.touch * (wEgo.touch || 1.0);
+        const sBattle = battle * wBase.battle * (wEgo.battle || 1.0);
+        const sExpedition = expedition * wBase.expedition * (wEgo.expedition || 1.0);
+        const sDays = daysOwned * wBase.day * (wEgo.day || 1.0);
+
+        return Math.floor(sLevel + sTouch + sBattle + sExpedition + sDays);
+    }
+
+    // [Resonance V3] 호감도 레벨 조회
+    getAffectionLevel(creature) {
+        const score = this.getResonanceScore(creature);
+        if (score >= AFFECTION_LEVELS[3].min) return 3;
+        if (score >= AFFECTION_LEVELS[2].min) return 2;
+        if (score >= AFFECTION_LEVELS[1].min) return 1;
+        return 0;
+    }
+
+    // [호감도 시스템] (구: increaseAffection -> 현: 터치 카운트 증가)
+    increaseAffection(instanceId, amount = 1) {
+        const c = this.getCreatureById(instanceId);
+        if (!c) return { success: false };
+
+        // 초기화 (구버전 호환)
+        if (typeof c.affection !== 'number') c.affection = 0;
+
+        c.affection += amount;
+        // 최대치 제한? 일단 1000? 제한 없음?
+        // if (c.affection > 1000) c.affection = 1000;
+
+        this.emit('creature:affectionChanged', { creature: c, newAffection: c.affection });
+        if (this.game) this.game.save();
+        return { success: true, newAffection: c.affection };
+    }
+
+    // [훈련 시스템] 기초 훈련 / 집중 강화
+    tryTrain(instanceId, type = 'basic') {
+        const creature = this.getCreatureById(instanceId);
+        if (!creature) {
+            this.emit('train:failed', { reason: '크리처를 찾을 수 없습니다.' });
+            return { success: false, reason: '크리처를 찾을 수 없습니다.' };
+        }
+
+        if (creature.level >= 30) {
+            this.emit('train:failed', { reason: '이미 최대 레벨입니다.' });
+            return { success: false, reason: '이미 최대 레벨입니다.' };
+        }
+
+        // 훈련 타입별 비용 및 경험치 설정
+        const trainConfig = {
+            basic: { resource: 'gold', cost: 100, exp: 50, label: '기초 훈련' },
+            intensive: { resource: 'gem', cost: 1, exp: 200, label: '집중 강화' }
+        };
+
+        const config = trainConfig[type];
+        if (!config) {
+            this.emit('train:failed', { reason: '알 수 없는 훈련 타입' });
+            return { success: false, reason: '알 수 없는 훈련 타입' };
+        }
+
+        // 자원 소비
+        let canAfford = false;
+        if (config.resource === 'gold') {
+            canAfford = this.resourceManager.spendGold(config.cost);
+        } else if (config.resource === 'gem') {
+            canAfford = this.resourceManager.spendGem(config.cost);
+        }
+
+        if (!canAfford) {
+            this.emit('train:failed', { reason: `${config.resource === 'gold' ? '골드' : '젬'}이 부족합니다.` });
+            return { success: false, reason: `${config.resource === 'gold' ? '골드' : '젬'} 부족` };
+        }
+
+        // 경험치 획득
+        const oldLevel = creature.level;
+        this.addExp(instanceId, config.exp);
+
+        this.emit('train:success', {
+            creature,
+            type,
+            expGained: config.exp,
+            leveledUp: creature.level > oldLevel
+        });
+
+        // 게임 저장
+        if (this.game) this.game.save();
+
+        return {
+            success: true,
+            expGained: config.exp,
+            newLevel: creature.level,
+            leveledUp: creature.level > oldLevel
+        };
     }
 
     // [일괄 합성]

@@ -1,0 +1,383 @@
+/**
+ * @file main.js
+ * @description 게임의 엔트리 포인트. 모든 View 및 Manager를 초기화하고 연결합니다.
+ */
+import './debug_overlay.js'; // [DEBUG] 디버깅 오버레이 추가
+import Game from './core/Game.js';
+import { LangManager } from './managers/LanguageManager.js';
+import UIManager from './managers/UIManager.js';
+
+// 각 화면별 View 임포트
+import AuthView from './ui/AuthView.js';
+import CreatureView from './ui/CreatureView.js';
+import SummonView from './ui/SummonView.js';
+import ExpeditionView from './ui/ExpeditionView.js';
+import ResearchView from './ui/ResearchView.js';
+import TeamView from './ui/TeamView.js';
+import MissionView from './ui/MissionView.js';
+import ShopView from './ui/ShopView.js';
+import BattleView from './ui/BattleView.js';
+import PrestigeView from './ui/PrestigeView.js'; // [NEW]
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Multiverse Creature Lab - Phase 4 Refactored");
+
+    // 1. 핵심 인스턴스 초기화
+    const game = new Game();
+    const langManager = new LangManager();
+    const uiManager = new UIManager(game);
+
+    // 2. 언어 설정 연동 (생성자에서 초기화됨)
+    // langManager.init();
+
+    // 3. 화면별 View 인스턴스 생성 및 초기화
+    // (AuthView는 LangManager가 필요하므로 별도 전달)
+    const views = {
+        auth: new AuthView(game, uiManager, langManager),
+        creature: new CreatureView(game, uiManager),
+        summon: new SummonView(game, uiManager),
+        expedition: new ExpeditionView(game, uiManager),
+        research: new ResearchView(game, uiManager),
+        team: new TeamView(game, uiManager),
+        mission: new MissionView(game, uiManager),
+        shop: new ShopView(game, uiManager),
+        battle: new BattleView(game, uiManager),
+        prestige: new PrestigeView(game, uiManager) // [NEW]
+    };
+
+    // 모든 뷰 초기화
+    Object.values(views).forEach(view => {
+        if (typeof view.init === 'function') {
+            view.init();
+        }
+    });
+
+    // 저장된 로비 캐릭터 복원
+    const savedLobbyCharacter = localStorage.getItem('lobbyCharacter');
+    if (savedLobbyCharacter) {
+        try {
+            const { image, name } = JSON.parse(savedLobbyCharacter);
+            const lobbyImg = document.getElementById('lobby-character-img');
+            if (lobbyImg && image) {
+                lobbyImg.src = image;
+                lobbyImg.alt = name;
+            }
+        } catch (e) {
+            console.error('로비 캐릭터 복원 실패:', e);
+        }
+    }
+
+    // 로비 터치 상호작용 초기화
+    uiManager.initLobbyInteraction();
+
+    // 4. 전역 접근성 확보 (디버그 및 상위 로직용)
+    window.uiManager = uiManager;
+    window.views = views;
+    window.game = game; // [Debug] 게임 인스턴스 노출
+
+    // [Dev Mode Toggle] Numpad 0
+    document.addEventListener('keydown', (e) => {
+        if (e.code === 'Numpad0') {
+            const devControls = document.getElementById('dev-controls');
+            if (devControls) {
+                devControls.style.display = devControls.style.display === 'none' ? 'block' : 'none';
+                console.log(`[DevMode] Controls ${devControls.style.display}`);
+            }
+        }
+    });
+
+    // 5. 게임 엔진 초기화
+    // (주의: UI가 준비된 후 game.init을 호출하여 초기 렌더링이 정상 작동하게 함)
+    game.init();
+
+    // 6. 리소스바 실시간 동기화 (전역 리스너)
+    game.resourceManager.on('resources:changed', (res) => {
+        if (uiManager.ui.goldDisplay) uiManager.ui.goldDisplay.innerText = res.gold.toLocaleString();
+        if (uiManager.ui.gemDisplay) uiManager.ui.gemDisplay.innerText = res.gem.toLocaleString();
+        if (uiManager.ui.energyDisplay) {
+            uiManager.ui.energyDisplay.innerText = `${res.energy} / ${res.maxEnergy}`;
+        }
+    });
+
+    // 7. 시스템 설정 모달 등 기타 전역 UI 제어
+    initSystemOverlay();
+
+    // [NEW] 8. 로비 캐릭터 인터랙션 초기화
+    initLobbyInteraction(game);
+
+    // [NEW] 9. 다국어 토글 버튼
+    const btnLangToggle = document.getElementById('btn-lang-toggle');
+    if (btnLangToggle) {
+        btnLangToggle.addEventListener('click', () => {
+            const newLang = langManager.currentLang === 'ko' ? 'en' : 'ko';
+            langManager.setLang(newLang);
+            btnLangToggle.innerText = `🌐 ${newLang.toUpperCase()}`;
+            alert(`언어가 ${newLang === 'ko' ? '한국어' : 'English'}로 변경되었습니다.`);
+        });
+    }
+});
+
+/**
+ * 로비 캐릭터 인터랙션 및 표시 제어
+ */
+function initLobbyInteraction(game) {
+    const wrapper = document.getElementById('lobby-character-wrapper');
+    const img = document.getElementById('lobby-character-img');
+    const speechBubble = document.getElementById('lobby-speech-bubble');
+    const speechText = document.getElementById('lobby-speech-text');
+
+    if (!wrapper || !img) return;
+
+    // 1. 대표 크리처 로드 (없으면 기본값 or 덱 1번)
+    function updateLobbyCharacter() {
+        // [수정] 0순위: 사용자가 직접 선택한 로비 캐릭터 (localStorage)
+        try {
+            const saved = localStorage.getItem('lobbyCharacter');
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                if (parsed.instanceId) {
+                    const c = game.creatureManager.getCreatureById(parsed.instanceId);
+                    if (c) {
+                        img.src = c.def.image;
+                        img.style.animation = 'none';
+                        speechText.innerText = c.def.lines?.normal || "...";
+                        return;
+                    }
+                }
+            }
+        } catch (e) { console.warn("Lobby restore error", e); }
+
+        // [수정] 1순위: 메인 덱의 리더
+        const mainDeck = game.deckManager.getMainDeck();
+        let leaderId = mainDeck ? mainDeck[0] : null;
+
+        // [수정] 2순위: 덱도 없고 선택도 안 했으면 -> 보유 중인 '가장 높은 등급' 크리처 자동 선택 (Anti-Grot)
+        if (!leaderId && game.creatureManager.owned && game.creatureManager.owned.length > 0) {
+            const rarityRank = { 'UR': 7, 'SSR': 6, 'SR': 5, 'Special': 4, 'Rare': 3, 'Unique': 2, 'Normal': 1 };
+            const bestCreature = [...game.creatureManager.owned].sort((a, b) => {
+                const ra = rarityRank[a.def.rarity] || 0;
+                const rb = rarityRank[b.def.rarity] || 0;
+                return rb - ra; // 내림차순 (높은 등급 먼저)
+            })[0];
+            leaderId = bestCreature.instanceId;
+
+            // 자동 선택된 좋은 캐릭터를 localStorage에도 저장해둠 (다음에 바로 뜨게)
+            localStorage.setItem('lobbyCharacter', JSON.stringify({
+                image: bestCreature.def.image,
+                name: bestCreature.def.name,
+                instanceId: bestCreature.instanceId
+            }));
+        }
+
+        if (!leaderId) return;
+
+        const creature = game.creatureManager.getCreatureById(leaderId);
+        if (creature) {
+            img.src = creature.def.image;
+            img.style.animation = 'none';
+        }
+    }
+
+    // 초기 로드 및 변경 감지 (간단히 3초마다 체크 or 이벤트 리스너)
+    updateLobbyCharacter();
+    game.events.on('deck:updated', updateLobbyCharacter);
+
+    // 2. 터치 핸들러 (HTML ID 수정: touch-head, touch-body, touch-legs)
+    const touchZones = [
+        { id: 'touch-head', part: 'head' },
+        { id: 'touch-body', part: 'chest' },
+        { id: 'touch-legs', part: 'legs' }
+    ];
+
+    touchZones.forEach(({ id, part }) => {
+        const zone = document.getElementById(id);
+        if (zone) {
+            zone.onclick = (e) => {
+                // 현재 리더 다시 조회
+                // [수정] 대사 출력 대상 설정 (선택된 로비 캐릭터 우선)
+                let creature = null;
+
+                // 1. 사용자가 클릭해서 선택한 로비 캐릭터 확인
+                try {
+                    const saved = localStorage.getItem('lobbyCharacter');
+                    if (saved) {
+                        const parsed = JSON.parse(saved);
+                        if (parsed.instanceId) {
+                            creature = game.creatureManager.getCreatureById(parsed.instanceId);
+                        }
+                    }
+                } catch (e) { console.warn("Lobby char parse error", e); }
+
+                // 2. 없으면 덱 리더 사용 (기존 로직)
+                if (!creature) {
+                    const mainDeck = game.deckManager.getMainDeck();
+                    let leaderId = mainDeck ? mainDeck[0] : null;
+
+                    // 덱이 비어있으면 첫 번째 소유 크리처 사용
+                    if (!leaderId && game.creatureManager.owned && game.creatureManager.owned.length > 0) {
+                        leaderId = game.creatureManager.owned[0].instanceId;
+                    }
+                    creature = leaderId ? game.creatureManager.getCreatureById(leaderId) : null;
+                }
+
+                if (!creature) {
+                    speechText.innerText = "크리처를 소환해주세요.";
+                    speechBubble.classList.add('active');
+                    if (window.speechTimer) clearTimeout(window.speechTimer);
+                    window.speechTimer = setTimeout(() => {
+                        speechBubble.classList.remove('active');
+                    }, 2000);
+                    return;
+                }
+
+                // [호감도] 쿨타임 및 상승 (1초)
+                const now = Date.now();
+                if (!creature._lastTouchTime || now - creature._lastTouchTime > 1000) {
+                    creature._lastTouchTime = now;
+                    game.creatureManager.increaseAffection(creature.instanceId, 1);
+
+                    // 하트 이펙트
+                    createHeartEffect(e.clientX, e.clientY);
+                    console.log(`[Affection] ${creature.def.name} +1 (Total: ${creature.affection})`);
+                }
+
+                // 1. 애니메이션 트리거
+                img.className = '';
+                void img.offsetWidth;
+                img.className = `touch-react-${part}`;
+                setTimeout(() => img.className = '', 500);
+
+                // 2. 대사 출력
+                const lines = creature.def.lines || {};
+                let text = lines.normal || "...";
+
+                if (part === 'head') {
+                    text = lines.touch_head || text;
+                } else if (part === 'chest') {
+                    // [NEW] 가슴 대사 우선, 없으면 special, 그것도 없으면 normal
+                    text = lines.touch_chest || lines.touch_special || lines.normal;
+                } else if (part === 'legs') {
+                    // [NEW] 다리 대사 우선, 없으면 special
+                    text = lines.touch_legs || lines.touch_special || lines.normal;
+                }
+
+                // 호감도 시스템 연동 가능 (나중에)
+
+                // 말풍선 표시
+                speechText.innerText = text;
+                speechBubble.classList.add('active');
+
+                // 3초 후 숨김
+                if (window.speechTimer) clearTimeout(window.speechTimer);
+                window.speechTimer = setTimeout(() => {
+                    speechBubble.classList.remove('active');
+                }, 3000);
+            };
+        }
+    });
+}
+
+/**
+ * 시스템 설정 및 공지사항 오버레이 제어
+ */
+function initSystemOverlay() {
+    // ... (Existing code)
+    const btnOpenSystem = document.getElementById('btn-system-settings');
+    const btnCloseSystem = document.getElementById('btn-close-system');
+    const overlay = document.getElementById('system-modal-overlay');
+
+    if (btnOpenSystem && overlay) {
+        btnOpenSystem.addEventListener('click', () => {
+            overlay.style.display = 'flex';
+        });
+    }
+
+    if (btnCloseSystem && overlay) {
+        btnCloseSystem.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+    }
+
+    // 시스템 탭 전환
+    const tabs = document.querySelectorAll('.system-tab');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => {
+                t.classList.remove('active');
+                t.style.color = '#888';
+                t.style.borderBottomColor = 'transparent';
+            });
+            tab.classList.add('active');
+            tab.style.color = 'white';
+            tab.style.borderBottomColor = 'var(--accent-cyan)';
+
+            const target = tab.dataset.tab;
+            document.getElementById('view-notice').style.display = target === 'notice' ? 'block' : 'none';
+            document.getElementById('view-contact').style.display = target === 'contact' ? 'block' : 'none';
+        });
+    });
+}
+
+/**
+ * ��Ʈ ����Ʈ ���� �Լ� (ȣ������)
+ */
+function createHeartEffect(x, y) {
+    const heart = document.createElement('div');
+    heart.className = 'floating-heart';
+    heart.innerText = '';
+    heart.style.left = x + 'px';
+    heart.style.top = y + 'px';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 1500);
+}
+
+
+/**
+ * Update Resonance Bar UI
+ */
+function updateResonanceUI(creature) {
+    if (!creature) {
+        const bar = document.getElementById('lobby-resonance-bar');
+        if (bar) bar.style.display = 'none';
+        return;
+    }
+
+    let bar = document.getElementById('lobby-resonance-bar');
+    if (!bar) {
+        bar = document.createElement('div');
+        bar.id = 'lobby-resonance-bar';
+        bar.innerHTML = \<div class='resonance-heart'></div>
+            <div style='font-size:0.8rem; color:white; font-weight:bold; margin-bottom:2px; text-shadow:0 0 4px black;' id='resonance-text'></div>
+            <div class='resonance-container'>
+                <div class='resonance-fill' id='resonance-fill'></div>
+            </div>
+            <div style='font-size:0.7rem; color:#ccc; margin-top:2px; text-shadow:0 0 4px black;' id='resonance-ego'></div>\;
+        const wrapper = document.getElementById('lobby-character-wrapper');
+        if (wrapper) wrapper.appendChild(bar);
+    }
+    bar.style.display = 'flex';
+
+    // Calculate Percent
+    const score = game.creatureManager.getResonanceScore(creature);
+    const level = game.creatureManager.getAffectionLevel(creature);
+    const levels = { 0: 100, 1: 300, 2: 1000, 3: 2000 };
+    const max = levels[level] || 2000;
+    const prevMax = level > 0 ? (levels[level-1] || 0) : 0;
+    
+    // Percent based on current level progress
+    let percent = 0;
+    if (level === 3) {
+        percent = 100;
+    } else {
+        percent = Math.max(0, Math.min(100, ((score - prevMax) / (max - prevMax)) * 100));
+    }
+
+    const labels = ['���', '����', '�ŷ�', '����'];
+    const colors = ['#9e9e9e', '#66bb6a', '#f48fb1', '#ad1457'];
+    
+    bar.querySelector('#resonance-text').innerText = \\ (Lv.\)\;
+    bar.querySelector('#resonance-text').style.color = colors[level];
+    bar.querySelector('#resonance-fill').style.width = \\%\;
+    bar.querySelector('#resonance-ego').innerText = \ Ego: \\;
+}
+

@@ -1,6 +1,6 @@
-export class LangManager {
+export default class LanguageManager {
     constructor() {
-        console.log("LangManager Initialized (v2.0 Fixed)"); // [Cache Busting]
+        console.log("LanguageManager Initialized (v2.1 Export Fixed)"); // [Cache Busting]
         this.currentLang = 'kr'; // Default
         this.dictionaries = {
             kr: {

@@ -3,9 +3,13 @@ import BaseView from './BaseView.js';
 export default class AuthView extends BaseView {
     constructor(game, uiManager, langManager) {
         super(game, uiManager);
-        this.langManager = langManager;
+        this.langManager = langManager || game.langManager;
         this.selectedPersona = 'director_vesper';
         this.isLoginMode = true;
+    }
+
+    checkLogin() {
+        return !!(this.game.authManager && this.game.authManager.currentUser);
     }
 
     init() {
@@ -53,14 +57,12 @@ export default class AuthView extends BaseView {
             btnAction.addEventListener('click', () => this.handleAuthSubmit());
         }
 
-        // 4. 로그아웃 버튼 (있을 경우)
+        // 4. 로그아웃 버튼 (있을 경우) - 커스텀 모달 사용
         const btnLogout = document.getElementById('btn-logout');
         if (btnLogout) {
             btnLogout.addEventListener('click', () => {
-                if (confirm(this.langManager.t('alert.logout'))) {
-                    this.game.authManager.logout();
-                    location.reload();
-                }
+                // 커스텀 확인 모달 사용 (브라우저 팝업 차단 이슈 방지)
+                this._showLogoutConfirmModal();
             });
         }
 
@@ -82,13 +84,16 @@ export default class AuthView extends BaseView {
     }
 
     async handleAuthSubmit() {
+        if (!this.isLoginMode) {
+            await this._handleSignup();
+            return;
+        }
+
         const usernameInput = document.getElementById('auth-username');
         const passwordInput = document.getElementById('auth-password');
-        const confirmInput = document.getElementById('auth-confirm-password');
 
         const username = usernameInput?.value.trim();
         const password = passwordInput?.value.trim();
-        const confirmPassword = confirmInput?.value.trim();
 
         if (!username || !password) {
             this._setAuthMessage(this.langManager.t('auth.msg_missing'));
@@ -106,7 +111,7 @@ export default class AuthView extends BaseView {
 
         const result = await this.game.authManager.login(username, password);
         if (result.success) {
-            // this._setAuthMessage('접속 성공! 시스템 초기화 중...', 'success'); // Message not needed as game starts
+            // this._setAuthMessage('접속 성공! 시스템 초기화 중...', 'success');
             this.game.startMainGame(); // This will be handled by the 'auth:login' event listener
         } else {
             this._setAuthMessage(result.message);
@@ -183,5 +188,44 @@ export default class AuthView extends BaseView {
         }
 
         this._setAuthMessage('');
+    }
+
+    // [New] 커스텀 로그아웃 확인 모달
+    _showLogoutConfirmModal() {
+        const modal = document.getElementById('custom-modal-overlay');
+        const msgEl = document.getElementById('custom-modal-msg');
+        const btnYes = document.getElementById('btn-modal-yes');
+        const btnNo = document.getElementById('btn-modal-no');
+
+        if (!modal || !msgEl || !btnYes || !btnNo) {
+            // 모달이 없으면 일반 confirm 사용 (폴백)
+            if (confirm(this.langManager.t('alert.logout'))) {
+                this.game.authManager.logout();
+                location.reload();
+            }
+            return;
+        }
+
+        // 메시지 설정 및 모달 표시
+        msgEl.innerText = this.langManager.t('alert.logout');
+        modal.style.display = 'flex';
+
+        // 기존 이벤트 제거 후 새로 추가
+        const newBtnYes = btnYes.cloneNode(true);
+        const newBtnNo = btnNo.cloneNode(true);
+        btnYes.parentNode.replaceChild(newBtnYes, btnYes);
+        btnNo.parentNode.replaceChild(newBtnNo, btnNo);
+
+        // 확인 버튼
+        newBtnYes.onclick = () => {
+            modal.style.display = 'none';
+            this.game.authManager.logout();
+            location.reload();
+        };
+
+        // 취소 버튼
+        newBtnNo.onclick = () => {
+            modal.style.display = 'none';
+        };
     }
 }

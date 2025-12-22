@@ -99,6 +99,12 @@ export default class ExpeditionManager extends EventEmitter {
         // 2. 경험치 지급 [NEW]
         if (expedition.rewards.exp > 0) {
             this.creatureManager.addExp(expedition.creatureInstanceId, expedition.rewards.exp);
+
+            // [NEW] Expedition Count for Resonance
+            const creature = this.creatureManager.getCreatureById(expedition.creatureInstanceId);
+            if (creature) {
+                creature.expeditionCount = (creature.expeditionCount || 0) + 1;
+            }
         }
 
         // 3. 크리처 상태 복구

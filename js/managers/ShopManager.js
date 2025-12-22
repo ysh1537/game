@@ -1,15 +1,12 @@
 import EventEmitter from '../utils/EventEmitter.js';
-import { GOLD_PACKS, GEM_PACKS, BUNDLES, SPECIALS } from '../data/ShopData.js';
+import { GOLD_PACKS, GEM_PACKS, BUNDLES, SPECIALS, GIFT_ITEMS } from '../data/ShopData.js';
 
 export default class ShopManager extends EventEmitter {
-    constructor(eventBus, resourceManager, creatureManager) {
+    constructor(game) {
         super();
-        this.eventBus = eventBus;
-        this.resourceManager = resourceManager;
-        this.creatureManager = creatureManager;
-
+        this.game = game;
         // 저장될 상태
-        this.purchasedBundles = []; // oneTime 상품 ID 목록
+        this.purchasedBundles = [];
         this.removeAdsPurchased = false;
     }
 
@@ -18,7 +15,8 @@ export default class ShopManager extends EventEmitter {
             goldPacks: GOLD_PACKS,
             gemPacks: GEM_PACKS,
             bundles: BUNDLES,
-            specials: SPECIALS
+            specials: SPECIALS,
+            gifts: GIFT_ITEMS
         };
     }
 
@@ -28,15 +26,14 @@ export default class ShopManager extends EventEmitter {
     }
 
     // 아이템 구매 시도
-    buyItem(itemId) {
+    buyItem(itemId, targetCreatureId = null) {
         // 1. 아이템 찾기
         let item = null;
-        let category = '';
-
-        if (GOLD_PACKS.find(i => i.id === itemId)) { item = GOLD_PACKS.find(i => i.id === itemId); category = 'gold'; }
-        else if (GEM_PACKS.find(i => i.id === itemId)) { item = GEM_PACKS.find(i => i.id === itemId); category = 'gem'; }
-        else if (BUNDLES.find(i => i.id === itemId)) { item = BUNDLES.find(i => i.id === itemId); category = 'bundle'; }
-        else if (SPECIALS.find(i => i.id === itemId)) { item = SPECIALS.find(i => i.id === itemId); category = 'special'; }
+        if (GOLD_PACKS.find(i => i.id === itemId)) item = GOLD_PACKS.find(i => i.id === itemId);
+        else if (GEM_PACKS.find(i => i.id === itemId)) item = GEM_PACKS.find(i => i.id === itemId);
+        else if (BUNDLES.find(i => i.id === itemId)) item = BUNDLES.find(i => i.id === itemId);
+        else if (SPECIALS.find(i => i.id === itemId)) item = SPECIALS.find(i => i.id === itemId);
+        else if (GIFT_ITEMS.find(i => i.id === itemId)) item = GIFT_ITEMS.find(i => i.id === itemId);
 
         if (!item) {
             this.emit('shop:purchaseFailed', { reason: "상품을 찾을 수 없습니다." });
@@ -50,61 +47,77 @@ export default class ShopManager extends EventEmitter {
         }
 
         // 3. 결제 타입 분기
-        if (item.priceType === 'gem') {
-            this._processGemPurchase(item);
-        } else if (item.priceType === 'real') {
-            this._processRealPurchase(item);
-        }
-    }
-
-    _processGemPurchase(item) {
-        if (this.resourceManager.resources.gem < item.priceValue) {
-            this.emit('shop:purchaseFailed', { reason: "젬이 부족합니다." });
+        if (item.priceType === 'real' || item.priceType === 'cash') {
+            this._processRealPurchase(item, targetCreatureId);
             return;
         }
 
-        this.resourceManager.spendGem(item.priceValue);
-        this._giveRewards(item);
-        this.emit('shop:purchaseSuccess', { item, message: `${item.name} 구매 완료` });
-    }
+        // 4. 인게임 자원 결제
+        let success = false;
+        if (item.priceType === 'gold') {
+            success = this.game.resourceManager.spendGold(item.priceValue || item.price);
+        } else if (item.priceType === 'gem') {
+            success = this.game.resourceManager.spendGem(item.priceValue || item.price);
+        }
 
-    _processRealPurchase(item) {
-        // TODO: 실제 인앱 결제(IAP) SDK 연동 지점
-        // 예: IAP.requestPurchase(item.id).then(...)
-
-        // [테스트용 가상 구매 로직]
-        if (confirm(`[테스트 구매] ${item.name} (${item.priceLabel})을 구매하시겠습니까?`)) {
-            // 결제 성공 가정
-            this._giveRewards(item);
-
-            // 상태 업데이트
+        if (success) {
+            // 5. 구매 상태 기록
             if (item.oneTime) {
                 if (item.id === 'remove_ads') this.removeAdsPurchased = true;
                 else this.purchasedBundles.push(item.id);
             }
 
-            this.emit('shop:purchaseSuccess', { item, message: `${item.name} 결제 완료 (테스트)` });
-            this.emit('shop:updated'); // UI 갱신 (버튼 비활성화 등)
+            // 6. 보상 지급
+            this._giveRewards(item, targetCreatureId);
+
+            this.emit('shop:purchaseSuccess', { item, message: `${item.name} 구매 완료` });
+            this.emit('shop:updated');
         } else {
-            this.emit('shop:purchaseFailed', { reason: "결제가 취소되었습니다." });
+            this.emit('shop:purchaseFailed', { reason: `자원(${item.priceType})이 부족합니다.` });
         }
     }
 
-    _giveRewards(item) {
-        // 1. 단순 정의된 수량
-        if (item.goldAmount) this.resourceManager.addGold(item.goldAmount);
-        if (item.gemAmount) this.resourceManager.addGem(item.gemAmount);
+    async _processRealPurchase(item, targetCreatureId) {
+        // PaymentManager에 결제 위임
+        const success = await this.game.paymentManager.requestPayment(item);
 
-        // 2. rewards 객체 (번들 등)
+        if (success) {
+            // 구매 상태 기록
+            if (item.oneTime) {
+                if (item.id === 'remove_ads') this.removeAdsPurchased = true;
+                else this.purchasedBundles.push(item.id);
+            }
+
+            // 선물(Ring)의 경우 타겟에게 보상 적용
+            if (item.type === 'ring' && targetCreatureId) {
+                this._giveRewards(item, targetCreatureId);
+            }
+
+            this.emit('shop:updated');
+        }
+    }
+
+    _giveRewards(item, targetId) {
+        // 1. 골드/젬 직접 지급
+        if (item.goldAmount) this.game.resourceManager.addGold(item.goldAmount);
+        if (item.gemAmount) this.game.resourceManager.addGem(item.gemAmount);
+
+        // 2. 복합 보상 (번들 등)
         if (item.rewards) {
-            if (item.rewards.gold) this.resourceManager.addGold(item.rewards.gold);
-            if (item.rewards.gem) this.resourceManager.addGem(item.rewards.gem);
-
+            if (item.rewards.gold) this.game.resourceManager.addGold(item.rewards.gold);
+            if (item.rewards.gem) this.game.resourceManager.addGem(item.rewards.gem);
             if (item.rewards.creature) {
-                // 특정 희귀도 크리처 지급
-                const rarity = item.rewards.creature.rarity;
-                // CreatureManager를 통해 소환 (비용 없이)
-                this.creatureManager.summonOneByRarity(rarity);
+                this.game.creatureManager.summonOneByRarity(item.rewards.creature.rarity);
+            }
+        }
+
+        // 3. 선물 효과 (호감도 증가)
+        if (item.effect && item.effect.resonance) {
+            if (targetId) {
+                this.game.creatureManager.increaseAffection(targetId, item.effect.resonance);
+                console.log(`[Gift] Sent to ${targetId}, Resonance +${item.effect.resonance}`);
+            } else {
+                console.warn("[Shop] Gift purchased but no target specified.");
             }
         }
     }

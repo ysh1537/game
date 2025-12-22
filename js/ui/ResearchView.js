@@ -38,18 +38,41 @@ export default class ResearchView extends BaseView {
 
             const card = document.createElement('div');
             const canUpgrade = !isMax && this.game.resourceManager.gold >= cost;
-            card.className = `facility-card feature-card ${canUpgrade ? 'can-upgrade' : ''}`;
+            const progressPercent = (level / def.maxLevel) * 100;
+
+            card.className = `facility-card glass-panel ${canUpgrade ? 'can-upgrade' : ''}`;
+            card.style.padding = '15px';
+            card.style.marginBottom = '10px';
+            card.style.position = 'relative';
+            card.style.borderLeft = isMax ? '4px solid var(--accent-secondary)' : '4px solid var(--accent-primary)';
+
             card.innerHTML = `
-                <div class="facility-icon">🧪</div>
-                <div class="facility-info">
-                    <h4 style="margin:0;">${def.name}</h4>
-                    <span class="facility-level">Lv.${level} / ${def.maxLevel}</span>
-                    <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:4px;">${def.description}</p>
+                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                    <div style="display:flex; gap:15px; align-items:center;">
+                        <div class="facility-icon" style="font-size:2rem; width:50px; height:50px; background:rgba(0,0,0,0.3); border-radius:8px; display:flex; justify-content:center; align-items:center;">🧪</div>
+                        <div>
+                            <h4 style="margin:0; font-size:1.1rem; color:var(--text-highlight);">${def.name}</h4>
+                            <div style="font-size:0.8rem; color:#888; margin:2px 0;">${def.description}</div>
+                        </div>
+                    </div>
+                    <div style="text-align:right;">
+                         <div style="font-size:1.2rem; font-weight:bold; color:var(--accent-secondary);">${isMax ? 'MAX' : 'Lv.' + level}</div>
+                         <div style="font-size:0.75em; color:#666;">Max: Lv.${def.maxLevel}</div>
+                    </div>
                 </div>
-                <div style="text-align:right;">
-                    <p style="color: var(--accent-tertiary); font-weight:600; font-size:0.85rem; margin-bottom:5px;">${effectStr}</p>
-                    <button class="cyber-btn small btn-upgrade" data-id="${def.id}" ${isMax ? 'disabled' : ''}>
-                        ${isMax ? 'MAX' : `강화 (${cost}G)`}
+
+                <div style="margin:15px 0; background:rgba(0,0,0,0.5); height:6px; border-radius:3px; overflow:hidden;">
+                     <div style="width:${progressPercent}%; height:100%; background:linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));"></div>
+                </div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.03); padding:10px; border-radius:6px;">
+                    <div style="font-size:0.9rem;">
+                        <span style="color:#aaa;">효과:</span> 
+                        <span style="color:var(--accent-tertiary); font-weight:bold;">+${currentEffect}${def.effectType.includes('percent') ? '%' : ''}</span>
+                        ${!isMax ? `<span style="color:#666; font-size:0.8em;"> → +${nextEffect}</span>` : ''}
+                    </div>
+                    <button class="cyber-btn small btn-upgrade" data-id="${def.id}" ${isMax ? 'disabled' : ''} style="min-width:100px;">
+                        ${isMax ? '완료' : `강화 ${cost} G`}
                     </button>
                 </div>
             `;

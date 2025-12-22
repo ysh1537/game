@@ -3,12 +3,14 @@ import BaseView from './BaseView.js';
 export default class MissionView extends BaseView {
     init() {
         this.game.questManager.on('quests:updated', () => {
-            if (this.ui.contentMission && this.ui.contentMission.classList.contains('active')) {
+            const contentMission = document.getElementById('content-mission');
+            if (contentMission && contentMission.classList.contains('active')) {
                 this.render();
             }
         });
 
         this.game.questManager.on('quest:completed', (data) => {
+            // ... 생략 ...
             this.addLog(`[${data.type === 'daily' ? '미션' : '업적'}] ${data.def.title} 완료!`, "mission");
         });
 
@@ -26,16 +28,19 @@ export default class MissionView extends BaseView {
 
     render() {
         const data = this.game.questManager.getViewModel();
-        if (!this.ui.dailyQuestList || !this.ui.achievementList) return;
+        const dailyListEl = document.getElementById('daily-quest-list');
+        const achieveListEl = document.getElementById('achievement-list');
 
-        this.ui.dailyQuestList.innerHTML = '';
+        if (!dailyListEl || !achieveListEl) return;
+
+        dailyListEl.innerHTML = '';
         data.dailies.forEach(q => {
-            this.ui.dailyQuestList.appendChild(this._createQuestCard(q, true));
+            dailyListEl.appendChild(this._createQuestCard(q, true));
         });
 
-        this.ui.achievementList.innerHTML = '';
+        achieveListEl.innerHTML = '';
         data.achievements.forEach(q => {
-            this.ui.achievementList.appendChild(this._createQuestCard(q, false));
+            achieveListEl.appendChild(this._createQuestCard(q, false));
         });
     }
 
