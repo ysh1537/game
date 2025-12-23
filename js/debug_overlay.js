@@ -118,6 +118,57 @@
 
     // Expose to window for console access
     console.log("[Debug] Cheat function available: grantHighRarityCreatures()");
+    console.log("[Debug] Cheat function available: grantAllCreatures()");
+
+    // [Cheat] Grant ALL Creatures (테스트용)
+    window.grantAllCreatures = function () {
+        if (!window.game || !window.game.creatureManager) {
+            console.error("[Cheat] Game not initialized");
+            return;
+        }
+
+        const cm = window.game.creatureManager;
+        let added = 0;
+
+        import('./data/CreatureData.js').then(module => {
+            const allDefs = module.CREATURE_DEFS;
+
+            allDefs.forEach(def => {
+                // 히든 크리처 제외 (옵션)
+                if (def.isHidden) return;
+
+                // 이미 보유 중인지 체크
+                const alreadyOwned = cm.owned.some(c => c.def.id === def.id);
+                if (alreadyOwned) {
+                    console.log(`[Cheat] Already have ${def.name}`);
+                    return;
+                }
+
+                const newCreature = {
+                    instanceId: cm.nextInstanceId++,
+                    dataId: def.id,
+                    def: def,
+                    level: 1,
+                    exp: 0,
+                    star: 0,
+                    affection: 0,
+                    battleCount: 0,
+                    expeditionCount: 0,
+                    acquiredAt: new Date(),
+                    stats: {}
+                };
+                cm.recalculateStats(newCreature);
+                cm.owned.push(newCreature);
+                added++;
+                console.log(`[Cheat] Added ${def.name} (${def.rarity})`);
+            });
+
+            cm.emit('creatures:updated', cm.owned);
+            window.game.save();
+            log(`[Cheat] Added ${added} creatures (ALL)!`, 'gold');
+            alert(`모든 크리처 ${added}마리 지급 완료!`);
+        });
+    };
 
     // 1. 전역 에러 캡처
     window.addEventListener('error', (e) => {

@@ -1,35 +1,38 @@
 export const EXPEDITIONS = [
     {
-        id: "forest_short",
-        name: "숲 정찰",
-        durationSec: 5,           // 테스트용 5초
+        id: "yggdrasil_root",
+        name: "위그드라실의 뿌리",
+        durationSec: 5,
         energyCost: 5,
-        baseGoldReward: 300,
-        baseExpReward: 10,
+        baseGoldReward: 350,
+        baseExpReward: 15,
         recommendedMinLevel: 1,
-        elementBonus: "Wind",     // 자연/바람 속성 우대 (예시)
-        description: "안전한 숲 주변을 5초간 정찰합니다."
+        elementBonus: "Wind",
+        description: "세계수 위그드라실의 뿌리 근처에서 신비한 이슬을 채집합니다. 니드호그가 잠든 틈을 타야 합니다.",
+        story: "북유럽 신화의 근원, 세계수의 생명력이 흐르는 곳."
     },
     {
-        id: "mine_mining",
-        name: "광산 채굴",
-        durationSec: 10,          // 테스트용 10초
+        id: "hephaestus_forge",
+        name: "헤파이스토스의 대장간",
+        durationSec: 10,
         energyCost: 10,
-        baseGoldReward: 600,
-        baseExpReward: 20,
+        baseGoldReward: 700,
+        baseExpReward: 30,
         recommendedMinLevel: 3,
-        elementBonus: "Earth",    // 땅 속성 우대
-        description: "폐광에서 광물을 채굴합니다. (10초)"
+        elementBonus: "Fire",
+        description: "올림푸스 깊은 곳, 대장장이 신의 열기가 남아있는 곳에서 희귀한 금속 파편을 수집합니다.",
+        story: "신들의 무기가 탄생한 전설적인 장소."
     },
     {
-        id: "ruins_investigation",
-        name: "폐허 조사",
-        durationSec: 10,          // 테스트용 10초
-        energyCost: 15,
-        baseGoldReward: 1000,
-        baseExpReward: 50,
+        id: "peach_garden_hidden",
+        name: "선계의 복숭아 밭",
+        durationSec: 15,
+        energyCost: 20,
+        baseGoldReward: 1500,
+        baseExpReward: 60,
         recommendedMinLevel: 5,
-        elementBonus: "Fire",
-        description: "위험한 고대 폐허를 조사합니다. (10초)"
+        elementBonus: "Nature",
+        description: "무릉도원의 안개 속에 숨겨진 천 년 묵은 복숭아 나무숲입니다. 신선들이 남긴 비급을 찾을지도 모릅니다.",
+        story: "시간이 멈춘 동양의 낙원."
     }
 ];

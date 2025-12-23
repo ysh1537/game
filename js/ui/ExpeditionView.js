@@ -11,6 +11,11 @@ export default class ExpeditionView extends BaseView {
         this.game.expeditionManager.on('expedition:completed', (exp) => {
             this.addLog(`${exp.expeditionName} 완료! 골드 +${exp.rewards.gold}`, "expedition");
             this.renderActiveExpeditions();
+
+            // 자동 반복이 아닐 때만 결과창 표시
+            if (!this.game.expeditionManager.isAutoRepeat) {
+                this.showResultModal(exp);
+            }
         });
 
         // 자동 반복 토글 연결
@@ -27,6 +32,14 @@ export default class ExpeditionView extends BaseView {
                 this.render();
             }
         });
+
+        // [Mod] 전용 탐사 모달 닫기 버튼 연결
+        const btnCloseExpModal = document.getElementById('btn-close-exp-modal');
+        if (btnCloseExpModal) {
+            btnCloseExpModal.onclick = () => {
+                document.getElementById('expedition-select-modal').style.display = 'none';
+            };
+        }
     }
 
     render() {
@@ -133,6 +146,28 @@ export default class ExpeditionView extends BaseView {
             const creature = this.game.creatureManager.getCreatureById(exp.creatureInstanceId);
             const creatureImg = creature ? creature.def.image : 'images/creature_slime_green.png';
 
+            // [Phased System]
+            let statusText = "진행 중";
+            let statusColor = "var(--text-secondary)";
+            const phase = exp.phase || "EXPLORE"; // Fallback
+
+            if (phase === 'TRAVEL') {
+                statusText = "🚀 이동 중";
+                statusColor = "#aaaaaa";
+            } else if (phase === 'EXPLORE') {
+                statusText = "🔭 탐사 중";
+                statusColor = "var(--accent-primary)";
+            } else if (phase === 'RETURN') {
+                statusText = "🏠 복귀 중";
+                statusColor = "#4caf50";
+            }
+
+            // Report Button Logic
+            let actionHtml = `<span style="color:var(--accent-primary); font-family:monospace;">${Math.floor(remainSec / 60)}:${String(remainSec % 60).padStart(2, '0')}</span>`;
+            if (exp.isReportReady) {
+                actionHtml = `<button class="btn-view-report cyber-btn small" style="padding:2px 8px; font-size:0.7rem; border-color:#ffd700; color:#ffd700;">📡 보고서 수신</button>`;
+            }
+
             div.innerHTML = `
                 <div style="display:flex; gap:15px; align-items:center;">
                     <div style="width:50px; height:50px; border-radius:50%; overflow:hidden; border:2px solid var(--accent-primary);">
@@ -141,18 +176,28 @@ export default class ExpeditionView extends BaseView {
                     <div style="flex:1;">
                         <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
                             <span style="font-weight:bold; color:var(--text-primary);">${exp.expeditionName}</span>
-                            <span style="color:var(--accent-primary); font-family:monospace;">${Math.floor(remainSec / 60)}:${String(remainSec % 60).padStart(2, '0')}</span>
+                            ${actionHtml}
                         </div>
                         <div style="background:rgba(255,255,255,0.1); height:6px; border-radius:3px; overflow:hidden;">
-                            <div style="width:${percent}%; height:100%; background:var(--accent-primary); transition:width 1s linear;"></div>
+                            <div style="width:${percent}%; height:100%; background:${phase === 'RETURN' ? '#4caf50' : 'var(--accent-primary)'}; transition:width 1s linear;"></div>
                         </div>
-                        <div style="font-size:0.8rem; color:#888; margin-top:5px;">
-                            파견 중: ${exp.creatureName}
+                        <div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-top:5px;">
+                            <span style="color:#aaa;">${exp.creatureName}</span>
+                            <span style="color:${statusColor}; font-weight:bold;">${statusText}</span>
                         </div>
                     </div>
                 </div>
             `;
             listEl.appendChild(div);
+
+            // Bind Report Button Event
+            const btnReport = div.querySelector('.btn-view-report');
+            if (btnReport) {
+                btnReport.onclick = (e) => {
+                    e.stopPropagation();
+                    this.showResultModal(exp);
+                };
+            }
 
             // 2. Map Marker Render
             if (mapContainer) {
@@ -173,13 +218,36 @@ export default class ExpeditionView extends BaseView {
 
         // 고정적이지만 탐사별로 다른 경로 시뮬레이션
         const seed = parseInt(exp.id.split('_')[1]) || 0;
-        const startX = 10 + (seed % 20);
-        const endX = 80 + (seed % 15);
-        const startY = 10 + (seed % 70);
-        const endY = 80 - (seed % 10);
+        const startX = 5;  // 기지 위치 (왼쪽)
+        const startY = 50;
 
-        const currentX = startX + (endX - startX) * (percent / 100);
-        const currentY = startY + (endY - startY) * (percent / 100);
+        // 목표 지점 (랜덤)
+        const targetX = 70 + (seed % 20);
+        const targetY = 20 + (seed % 60);
+
+        let currentX, currentY;
+        let p;
+
+        // [Phased Movement Logic]
+        if (percent < 20) {
+            // 1. Travel (0 -> 20%) : Base -> Target
+            p = percent / 20; // 0.0 ~ 1.0
+            currentX = startX + (targetX - startX) * p;
+            currentY = startY + (targetY - startY) * p;
+        } else if (percent < 80) {
+            // 2. Explore (20 -> 80%) : Hover around Target
+            // Jitter effect based on time
+            const timeParam = Date.now() / 500;
+            const jitterX = Math.sin(timeParam + seed) * 3;
+            const jitterY = Math.cos(timeParam * 1.5 + seed) * 3;
+            currentX = targetX + jitterX;
+            currentY = targetY + jitterY;
+        } else {
+            // 3. Return (80 -> 100%) : Target -> Base
+            p = (percent - 80) / 20; // 0.0 ~ 1.0
+            currentX = targetX + (startX - targetX) * p;
+            currentY = targetY + (startY - targetY) * p;
+        }
 
         const unit = document.createElement('div');
         unit.className = 'map-unit';
@@ -241,11 +309,14 @@ export default class ExpeditionView extends BaseView {
             if (activeTab && activeTab.id === 'content-expedition') {
                 this.renderActiveExpeditions();
             }
-        }, 3000); // 3초마다 갱신
+        }, 1000); // 1초마다 갱신 (실시간 느낌)
     }
 
     _openExpeditionModal(expedition) {
-        // 크리처 선택 모달 표시
+        const modal = document.getElementById('expedition-select-modal');
+        const listEl = document.getElementById('exp-creature-list');
+        if (!modal || !listEl) return;
+
         const owned = this.game.creatureManager.owned || [];
         const available = owned.filter(c => !c.isOnExpedition);
 
@@ -254,44 +325,132 @@ export default class ExpeditionView extends BaseView {
             return;
         }
 
-        // 간단한 선택 UI (첫 번째 크리처 자동 선택 or 모달)
-        let html = `<div style="max-height:300px; overflow-y:auto;">`;
+        listEl.innerHTML = '';
         available.forEach(c => {
-            html += `
-                <div class="creature-select-item" data-id="${c.instanceId}" 
-                     style="display:flex; align-items:center; gap:10px; padding:10px; margin:5px 0; 
-                            background:rgba(255,255,255,0.05); border-radius:8px; cursor:pointer;
-                            border:1px solid transparent; transition:all 0.2s;">
-                    <img src="${c.def.image}" style="width:40px; height:40px; border-radius:50%;">
-                    <div>
-                        <div style="font-weight:bold;">${c.def.name}</div>
-                        <div style="font-size:0.8rem; color:#888;">Lv.${c.level} | ${c.def.rarity}</div>
-                    </div>
+            const item = document.createElement('div');
+            item.className = 'feature-card'; // Reuse card style
+            item.style.padding = '10px';
+            item.style.cursor = 'pointer';
+            item.style.display = 'flex';
+            item.style.flexDirection = 'column';
+            item.style.alignItems = 'center';
+            item.style.gap = '5px';
+            item.style.background = 'rgba(255,255,255,0.05)';
+            item.style.transition = 'all 0.2s';
+
+            // Rarity Color
+            let borderColor = '#888';
+            if (['SR', 'SSR', 'UR'].includes(c.def.rarity)) borderColor = 'var(--accent-gold)';
+            else if (['Rare', 'Special'].includes(c.def.rarity)) borderColor = 'var(--accent-cyan)';
+
+            item.style.border = `1px solid ${borderColor}`;
+
+            item.innerHTML = `
+                <div style="width:50px; height:50px; border-radius:50%; overflow:hidden; border:2px solid ${borderColor};">
+                    <img src="${c.def.image}" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='images/creature_slime.png'">
                 </div>
+                <div style="font-size:0.8rem; font-weight:bold; color:white; text-align:center;">${c.def.name}</div>
+                <div style="font-size:0.7rem; color:#aaa;">Lv.${c.level}</div>
             `;
+
+            item.onclick = () => {
+                const result = this.game.expeditionManager.startExpedition(c.instanceId, expedition.id);
+                if (result) {
+                    modal.style.display = 'none';
+                    // [UX] 즉시 리스트 갱신하여 반응성 향상
+                    this.renderActiveExpeditions();
+                }
+            };
+
+            // Hover effect
+            item.onmouseenter = () => { item.style.background = 'rgba(255,255,255,0.15)'; item.style.transform = 'translateY(-2px)'; };
+            item.onmouseleave = () => { item.style.background = 'rgba(255,255,255,0.05)'; item.style.transform = 'translateY(0)'; };
+
+            listEl.appendChild(item);
         });
-        html += `</div>`;
 
-        this.game.uiManager.showConfirm(
-            `<div style="margin-bottom:10px;"><strong>${expedition.name}</strong>에 파견할 크리처를 선택하세요.</div>${html}`,
-            () => { },
-            true
-        );
+        modal.style.display = 'flex';
+    }
 
-        // 모달 내 클릭 이벤트
-        setTimeout(() => {
-            document.querySelectorAll('.creature-select-item').forEach(item => {
-                item.onclick = () => {
-                    const creatureId = parseInt(item.dataset.id);
-                    const result = this.game.expeditionManager.startExpedition(creatureId, expedition.id);
-                    if (result) {
-                        this.game.uiManager.hideModal();
-                        this.addLog(`${expedition.name} 탐사 시작!`, 'expedition');
-                    }
-                };
-                item.onmouseenter = () => item.style.border = '1px solid var(--accent-primary)';
-                item.onmouseleave = () => item.style.border = '1px solid transparent';
-            });
-        }, 100);
+    // [New] 결과 모달 표시
+    showResultModal(exp) {
+        // 이미 띄워진 모달이 있으면 제거 (중복 방지)
+        const oldModal = document.getElementById('exp-result-modal');
+        if (oldModal) oldModal.remove();
+
+        const modal = document.createElement('div');
+        modal.id = 'exp-result-modal';
+        modal.style.position = 'fixed';
+        modal.style.inset = '0';
+        modal.style.background = 'rgba(0,0,0,0.85)';
+        modal.style.zIndex = '100000';
+        modal.style.display = 'flex';
+        modal.style.flexDirection = 'column';
+        modal.style.justifyContent = 'center';
+        modal.style.alignItems = 'center';
+        modal.style.backdropFilter = 'blur(5px)';
+        modal.style.animation = 'fadeIn 0.3s ease-out';
+
+        // Result Styling (다양한 이벤트 타입)
+        let titleColor = '#aaa';
+        let resultIcon = '🏁';
+        let resultTitle = '탐사 완료';
+        let bgGradient = 'linear-gradient(135deg, #1e1e2e, #2d1b2e)';
+        const eventType = exp.eventResult?.type || 'NORMAL';
+
+        switch (eventType) {
+            case 'LEGENDARY': titleColor = '#da77f2'; resultIcon = '🌟'; resultTitle = '전설 발견!'; bgGradient = 'linear-gradient(135deg, #2d1b4e, #4a1a7a)'; break;
+            case 'GREAT_SUCCESS': titleColor = '#FFD700'; resultIcon = '✨'; resultTitle = '대성공!'; bgGradient = 'linear-gradient(135deg, #2e2a1b, #4a3d10)'; break;
+            case 'BATTLE_WIN': titleColor = '#ff6b6b'; resultIcon = '⚔️'; resultTitle = '토벌 성공!'; bgGradient = 'linear-gradient(135deg, #2e1b1b, #4a1a1a)'; break;
+            case 'DISCOVERY': titleColor = '#4fc3f7'; resultIcon = '📜'; resultTitle = '유물 발견!'; bgGradient = 'linear-gradient(135deg, #1b2e3e, #1a3a4a)'; break;
+            case 'TRAP': titleColor = '#ffa726'; resultIcon = '⚠️'; resultTitle = '함정 발동'; break;
+            case 'DISASTER': titleColor = '#ef5350'; resultIcon = '🌪️'; resultTitle = '재난 발생'; break;
+        }
+
+        // 젬/로그 표시 준비
+        const hasGem = exp.rewards.gem && exp.rewards.gem > 0;
+        const rewardCols = hasGem ? 'repeat(3, 1fr)' : 'repeat(2, 1fr)';
+        let logsHtml = '';
+        if (exp.logs && exp.logs.length > 0) {
+            const logItems = exp.logs.map(log => {
+                const t = new Date(log.time).toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit' });
+                return `<div style="font-size:0.7rem; padding:3px 0; border-bottom:1px solid #333; color:#bbb;"><span style="color:#666;">[${t}]</span> ${log.message}</div>`;
+            }).join('');
+            logsHtml = `<div style="text-align:left; margin-top:12px;"><div style="color:#888; font-size:0.75rem; margin-bottom:4px;">📋 탐사 기록</div><div style="background:rgba(0,0,0,0.5); border-radius:6px; padding:6px; max-height:100px; overflow-y:auto; border:1px solid #444;">${logItems}</div></div>`;
+        }
+
+        modal.innerHTML = `
+            <div style="background:${bgGradient}; border:2px solid ${titleColor}; border-radius:12px; padding:25px; width:92%; max-width:450px; text-align:center; box-shadow:0 0 30px ${titleColor}66;">
+                <div style="font-size:3rem; margin-bottom:10px;">${resultIcon}</div>
+                <h2 style="color:${titleColor}; margin:0 0 20px 0; font-family:'Orbitron';">${resultTitle}</h2>
+                
+                <h3 style="color:#ddd; margin-bottom:5px;">${exp.expeditionName}</h3>
+                <p style="color:#888; font-size:0.9rem; margin-bottom:20px;">담당: ${exp.creatureName}</p>
+
+                ${exp.eventResult && exp.eventResult.message ?
+                `<div style="background:rgba(0,0,0,0.3); padding:10px; border-radius:8px; margin-bottom:20px; color:${titleColor}; font-size:0.95rem;">
+                      ${exp.eventResult.message}
+                   </div>` : ''
+            }
+
+                <div style="display:grid; grid-template-columns:${rewardCols}; gap:8px; background:rgba(255,255,255,0.05); padding:12px; border-radius:8px;">
+                    <div style="color:#ffd700; text-align:center;">💰<br><span style="font-size:1.1rem; font-weight:bold;">+${exp.rewards.gold}</span></div>
+                    <div style="color:#4fc3f7; text-align:center;">✨<br><span style="font-size:1.1rem; font-weight:bold;">+${exp.rewards.exp}</span></div>
+                    ${hasGem ? `<div style="color:#da77f2; text-align:center;">💎<br><span style="font-size:1.1rem; font-weight:bold;">+${exp.rewards.gem}</span></div>` : ''}
+                </div>
+
+                ${logsHtml}
+
+                <button id="btn-close-result" class="cyber-btn" style="width:100%; margin-top:15px; border-color:${titleColor}; color:${titleColor}; padding:12px;">확인</button>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        const closeBtn = modal.querySelector('#btn-close-result');
+        closeBtn.onclick = () => {
+            modal.style.opacity = '0';
+            setTimeout(() => modal.remove(), 300);
+        };
     }
 }

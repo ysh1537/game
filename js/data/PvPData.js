@@ -10,7 +10,7 @@ export const MOCK_PLAYERS = [
     { id: 'rival_08', name: 'CuteSlime', level: 5, power: 800, avatar: 'images/creature_pebble.png', rank: 'Bronze', record: '2W 3L', tag: '귀요미', team: ['pebble', 'slime'] },
     { id: 'rival_09', name: 'Titan', level: 30, power: 7500, avatar: 'images/creature_golem_mud.png', rank: 'Platinum', record: '95W 30L', tag: '철벽방어', team: ['golem_mud', 'iron_guardian', 'stone_shield'] },
     { id: 'rival_10', name: 'FrostBite', level: 25, power: 6100, avatar: 'images/creature_wolf_dire.png', rank: 'Gold', record: '62W 28L', tag: '빙결속성', team: ['wolf_dire', 'ice_queen', 'frost_giant'] },
-    { id: 'rival_11', name: 'MechLord', level: 40, power: 12000, avatar: 'images/creature_golem_ancient.png', rank: 'Master', record: '320W 80L', tag: '기계생명', team: ['golem_ancient', 'laser_bot', 'repair_drone'] },
+    { id: 'rival_11', name: 'MechLord', level: 40, power: 12000, avatar: 'images/creature_golem_mud.png', rank: 'Master', record: '320W 80L', tag: '기계생명', team: ['golem_mud', 'laser_bot', 'repair_drone'] },
     { id: 'rival_12', name: 'StarGazer', level: 18, power: 3900, avatar: 'images/creature_flower_fairy.png', rank: 'Silver', record: '28W 14L', tag: '빛속성', team: ['flower_fairy', 'light_angel', 'holy_knight'] },
 ];
 

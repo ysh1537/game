@@ -115,6 +115,23 @@ export const CREATURE_DEFS = [
         lines: { normal: "이 정도 바위는 깃털처럼 가볍지! 운동 좀 할래?" }
     },
 
+    // --- SSR (신화급) ---
+    {
+        id: "wolf_fenrir",
+        name: "사슬의 늑대 펜리르",
+        rarity: RANKS.SSR,
+        world: WORLDS.ASGARD,
+        elements: ["Dark", "Ice"],
+        ego: "Berserker",
+        baseStr: 55, baseInt: 30,
+        image: "images/creature_wolf_fenrir.png",
+        lines: {
+            normal: "...사슬이 풀리는 날, 이 세계는 끝난다.",
+            touch_happy: "...만져도 괜찮아. 아직은... 자제할 수 있어.",
+            touch_angry: "거기가 어딘데 만지는 거야?! 진정해... 진정...!"
+        }
+    },
+
     // --- Special ---
     {
         id: "mage_flame",
@@ -169,7 +186,7 @@ export const CREATURE_DEFS = [
         world: WORLDS.OLYMPUS,
         elements: ["Wind", "Water"],
         baseStr: 2, baseInt: 4,
-        image: "images/placeholder.png", // TODO: GENERATE IMAGE
+        image: "images/placeholder.png",
         lines: { normal: "둥실둥실..." }
     },
 
@@ -207,8 +224,7 @@ export const CREATURE_DEFS = [
         elements: ["Dark", "Ice", "Beast"],
         ego: "Warlord",
         baseStr: 70, baseInt: 25,
-        image: "images/creature_wolf_dire.png", // [Temporary] using wolf_dire
-        // TODO: GENERATE IMAGE (Original Fenrir design)
+        image: "images/creature_fenrir.jpg", // [Fix] Found existing asset
         lines: {
             normal: "이 사슬... 끊어버리겠어!",
             touch_head: "크르릉... 쓰다듬는 건... 딱 한 번만 허락하지.",
@@ -286,7 +302,7 @@ export const CREATURE_DEFS = [
         world: WORLDS.ASGARD,
         elements: ["Ice"],
         baseStr: 2, baseInt: 3,
-        image: "images/placeholder.png", // TODO: GENERATE IMAGE
+        image: "images/creature_wisp_faint.png", // [Temp] Reuse wisp better than placeholder
         lines: { normal: "사르르... 녹지 않아요." }
     },
 
@@ -427,7 +443,7 @@ export const CREATURE_DEFS = [
         world: WORLDS.SHANGRILA,
         elements: ["Water", "Dark"],
         baseStr: 1, baseInt: 5,
-        image: "images/creature_ink.png?v=1",
+        image: "images/placeholder.png", // [Temp] Fixed 404
         lines: { normal: "찰랑... 그림을 그려요." }
     },
 
@@ -682,7 +698,7 @@ export const CREATURE_DEFS = [
         world: WORLDS.WILD,
         elements: ["Nature", "Earth"],
         baseStr: 25, baseInt: 10,
-        image: "images/creature_ent.png?v=1",
+        image: "images/placeholder.png", // [Temp] Fixed 404
         lines: { normal: "숲을... 지킨다..." }
     },
     {

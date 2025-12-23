@@ -45,3 +45,6 @@ coverage/
 
 # Sub-projects
 ysh1537-pages/
+
+# Secrets (API Keys)
+js/secrets.js

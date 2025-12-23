@@ -82,6 +82,9 @@ window.onload = () => {
         const loginOverlay = document.getElementById('login-overlay');
         if (loginOverlay) loginOverlay.style.display = 'none';
 
+        // [Fix] Start the Game Loop!
+        game.start();
+
         console.log("[Main] Application Started.");
     };
 

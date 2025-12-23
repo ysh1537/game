@@ -18,6 +18,7 @@ import LanguageManager from '../managers/LanguageManager.js'; // [Mod] Import
 // [New] Monetization Managers
 import PaymentManager from '../managers/PaymentManager.js';
 import DateManager from '../managers/DateManager.js';
+import { AIManager } from '../managers/AIManager.js'; // [Mod] Import AI Manager
 
 import SaveManager from '../utils/SaveManager.js';
 import BattleScene from '../scenes/BattleScene.js';
@@ -41,6 +42,7 @@ export default class Game {
 
         // 1. Core Managers (Dependencies)
         this.resourceManager = new ResourceManager();
+        this.aiManager = new AIManager(); // [Mod] Init AI Manager
         this.paymentManager = new PaymentManager(this); // Init Payment early
         this.paymentManager.init();
         this.dateManager = new DateManager(this);

@@ -13,6 +13,81 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5874227298630347"
         crossorigin="anonymous"></script>
+    <style>
+        /* [Critical Fix] Force Expedition Card Layout */
+        .expedition-card {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            justify-content: space-between !important;
+            gap: 8px !important;
+            padding: 15px !important;
+            min-height: 160px !important;
+            /* [Mod] Compact Size */
+            background: linear-gradient(135deg, rgba(0, 229, 255, 0.15), rgba(0, 0, 0, 0.4)) !important;
+            border-radius: 8px !important;
+            margin-bottom: 0 !important;
+        }
+
+        .expedition-card .exp-icon {
+            align-self: flex-start !important;
+            /* [Mod] Left align */
+            font-size: 2rem !important;
+            /* [Mod] Smaller icon */
+            margin-bottom: 10px !important;
+        }
+
+        /* Grid Layout Fix */
+        .grid-expedition {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+            gap: 20px !important;
+            padding-bottom: 40px !important;
+        }
+
+        /* [Visual Upgrade] Tactical Map Effects */
+        .tactical-grid {
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+            animation: gridPulse 4s infinite alternate;
+        }
+
+        @keyframes gridPulse {
+            0% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        .radar-scan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150%;
+            height: 150%;
+            background: conic-gradient(from 0deg, transparent 60%, rgba(0, 255, 255, 0.1));
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            animation: radarSpin 4s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes radarSpin {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -295,18 +370,79 @@
                 </div>
 
                 <!-- 4. Expedition View -->
-                <div id="content-expedition" class="feature-view tab-content">
-                    <div class="glass-panel full-height">
-                        <div class="panel-header">
+                <div id="content-expedition" class="feature-view tab-content"
+                    style="height:100%; display:none; flex-direction:column;">
+                    <div class="glass-panel full-height" style="display:flex; flex-direction:column; overflow:hidden;">
+                        <div class="panel-header" style="flex:0 0 auto;">
                             <h2>탐사 본부 (EXPEDITION)</h2>
                         </div>
-                        <div style="padding:15px; overflow-y:auto; height:calc(100% - 60px);">
-                            <h3 style="border-bottom: 1px solid #444; padding-bottom: 8px;">진행 중인 탐사</h3>
-                            <div id="active-expedition-list" style="min-height: 50px; margin-bottom:20px;"></div>
-                            <h3 style="border-bottom: 1px solid #444; padding-bottom: 8px;">탐사 구역</h3>
-                            <div id="expedition-list" class="grid-expedition" style="margin-top:15px;"></div>
-                            <label style="margin-top:10px; display:block;"><input type="checkbox"
-                                    id="check-auto-repeat"> 탐사 자동 반복</label>
+                        <div style="flex:1; display:flex; flex-direction:column; min-height:0; overflow:hidden;">
+                            <!-- Top: Tactical Map & Log -->
+                            <div style="flex:0 0 25%; display:flex; border-bottom:1px solid #444; min-height: 180px;">
+                                <!-- Map Area -->
+                                <div
+                                    style="flex:1.5; position:relative; overflow:hidden; border-right:1px solid #444; background:#0f0f15;">
+                                    <div id="map-background" class="tactical-grid" style="width:100%; height:100%;">
+                                    </div>
+                                    <div class="radar-scan"></div>
+
+                                    <div id="map-units-container"
+                                        style="position:absolute; top:0; left:0; width:100%; height:100%;"></div>
+                                    <div
+                                        style="position:absolute; top:10px; left:10px; font-size:0.8rem; color:#00e5ff; font-family:'Orbitron'; text-shadow:0 0 5px #00e5ff;">
+                                        TACTICAL MAP VIEW
+                                    </div>
+                                </div>
+
+                                <!-- Log Area -->
+                                <div style="flex:1; display:flex; flex-direction:column; background:rgba(0,0,0,0.5);">
+                                    <div
+                                        style="padding:10px; border-bottom:1px solid #333; font-size:0.9rem; color:var(--accent-cyan);">
+                                        📡 실시간 통신 로그
+                                    </div>
+                                    <div id="expedition-log-display" class="scroll-custom"
+                                        style="flex:1; padding:10px; overflow-y:auto; font-size:0.8rem; color:#aaa; font-family:'Courier New', monospace;">
+                                        <div style="opacity:0.5;">No signal...</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bottom: Active List & Zones -->
+                            <!-- Bottom: Active List & Zones (Horizontal Split) -->
+                            <div
+                                style="flex:1; display:flex; flex-direction:row; padding:0; overflow:hidden; min-height:0;">
+                                <!-- Left: Active Expeditions (30%) -->
+                                <div
+                                    style="flex:0 0 30%; display:flex; flex-direction:column; padding:15px; border-right:1px solid #444; background:rgba(0,0,0,0.1); overflow-y:auto;">
+                                    <div
+                                        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-shrink:0;">
+                                        <h3 style="margin:0; font-size:1rem; color:var(--text-primary);">진행 중인 탐사</h3>
+                                        <label style="font-size:0.85rem; color:#aaa; cursor:pointer;">
+                                            <input type="checkbox" id="check-auto-repeat"
+                                                style="vertical-align:middle;"> 자동 반복
+                                        </label>
+                                    </div>
+                                    <div id="active-expedition-list"
+                                        style="display:flex; flex-direction:column; gap:10px;">
+                                        <!-- Active items will go here -->
+                                        <div style="text-align:center; padding:20px; color:#666; font-size:0.9rem;">
+                                            진행 중인 탐사가 없습니다.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right: Zone Selection (70%) -->
+                                <div
+                                    style="flex:1; display:flex; flex-direction:column; padding:15px; overflow-y:auto;">
+                                    <h3
+                                        style="margin:0 0 15px 0; font-size:1rem; color:var(--text-primary); flex-shrink:0;">
+                                        탐사 구역 선택
+                                    </h3>
+                                    <div id="expedition-list" class="grid-expedition"
+                                        style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:15px; padding-bottom:20px;">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -691,6 +827,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Config & Secrets (Local Development Only) -->
+    <script src="js/secrets.js" onerror="console.warn('secrets.js not found. AI features disabled.')"></script>
 
     <script src="js/debug_overlay.js"></script>
     <script type="module" src="js/main.js?v=resonance_v3_final"></script>
