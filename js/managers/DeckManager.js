@@ -72,26 +72,45 @@ export default class DeckManager extends EventEmitter {
         this.emit('decks:updated', this.decks);
     }
 
-    // Legacy Support (Optional, can be removed if full integration is done)
+    // Legacy Support - 직접 localStorage에서 로드
     load() {
         const data = localStorage.getItem('mcl_decks');
+        console.log('[DeckManager] 레거시 로드 시도, 데이터 존재:', !!data);
         if (data) {
             try {
                 const parsed = JSON.parse(data);
-                this.loadFromState(parsed);
+                console.log('[DeckManager] 레거시 파싱 결과:', parsed);
+
+                // 직접 속성 설정 (loadFromState 호출 시 재귀 방지)
+                if (parsed.decks && Array.isArray(parsed.decks)) {
+                    this.decks = parsed.decks;
+                    this.mainDeck = parsed.mainDeck !== undefined ? parsed.mainDeck : 0;
+                    this.currentEditingDeck = parsed.currentEditingDeck || 'main';
+                    console.log('[DeckManager] 레거시 덱 로드 성공:', this.decks);
+                } else {
+                    console.warn('[DeckManager] 레거시 데이터 형식 오류');
+                }
             } catch (e) {
-                console.error("Failed to load decks", e);
+                console.error("[DeckManager] 레거시 로드 실패:", e);
             }
         }
     }
 
-    // Triggered internally on changes
+    // Triggered internally on changes - 덱 변경 시 저장
     save() {
-        // Individual save is redundant if Game.js saves everything, 
-        // but keeping it for safety in case of crash before auto-save
         const data = this.getSerializableState();
+        console.log('[DeckManager] 저장 중:', data);
+
+        // 레거시 키와 Game.save() 통합 저장 모두 트리거
         localStorage.setItem('mcl_decks', JSON.stringify(data));
+
+        // Game.js의 전체 저장도 트리거
+        if (this.game && typeof this.game.save === 'function') {
+            this.game.save();
+        }
+
         this.emit('decks:updated', this.decks);
+        console.log('[DeckManager] 저장 완료');
     }
 
     setCreature(deckIndex, slotIndex, creatureId) {
