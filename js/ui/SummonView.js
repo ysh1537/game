@@ -92,6 +92,10 @@ export default class SummonView extends BaseView {
 
     // 단일 소환 처리
     handleSummonResult(creature) {
+        // [BugFix] 이전 결과 초기화
+        const resultBox = this.ui.resultBox;
+        if (resultBox) resultBox.innerHTML = '';
+
         this.currentSummon = creature;
         this.currentBatch = null;
         this.game.save();
@@ -102,6 +106,13 @@ export default class SummonView extends BaseView {
 
     // 일괄 소환 처리
     handleBatchSummonResult(results) {
+        // [BugFix] 이전 결과 초기화
+        const resultBox = this.ui.resultBox;
+        if (resultBox) resultBox.innerHTML = '';
+
+        const cinGrid = document.getElementById('cinematic-batch-grid');
+        if (cinGrid) cinGrid.innerHTML = '';
+
         this.currentBatch = results;
         this.currentSummon = null;
         this.game.save();
@@ -377,6 +388,11 @@ export default class SummonView extends BaseView {
             this.addLog("메인 소환 메뉴로 복귀했습니다.");
         };
         resultBox.appendChild(btnOk);
+
+        // [UX] 결과 화면으로 자동 스크롤
+        setTimeout(() => {
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
     }
 
     // [NEW] 배치 결과 렌더링 (Grid)
@@ -431,5 +447,10 @@ export default class SummonView extends BaseView {
             this.addLog("일괄 소환 결과 확인 완료.");
         };
         resultBox.appendChild(btnOk);
+
+        // [UX] 결과 화면으로 자동 스크롤
+        setTimeout(() => {
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
     }
 }
