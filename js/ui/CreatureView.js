@@ -283,6 +283,9 @@ export default class CreatureView extends BaseView {
                     </div>
                 </div>
 
+                <!-- [NEW] 호감도 게이지 UI -->
+                ${this._renderAffectionGauge(c)}
+
                 <div class="stat-group" style="margin:15px 0; background:rgba(255,255,255,0.03); padding:10px; border-radius:8px;">
                     <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
                         <strong style="color:var(--text-primary);">Lv.${c.level}</strong>
@@ -322,8 +325,9 @@ export default class CreatureView extends BaseView {
                     <button id="btn-set-representative" class="cyber-btn" style="grid-column: span 2; background: linear-gradient(135deg, #e91e63, #ad1457);">⭐ 대표 크리처로 설정</button>
                     <button id="btn-set-lobby" class="cyber-btn" style="grid-column: span 2; background: linear-gradient(135deg, #00bcd4, #0097a7);">🏠 로비 캐릭터로 설정</button>
                     ${c.def.lore ? `<button id="btn-show-story" class="cyber-btn" style="grid-column: span 2; background: linear-gradient(135deg, #9c27b0, #673ab7);">📖 스토리 보기</button>` : ''}
-                    <div style="grid-column: span 2; display:flex; justify-content:center; margin-top:10px;">
+                    <div style="grid-column: span 2; display:flex; justify-content:space-between; gap:10px; margin-top:10px;">
                         ${lockBtnHtml}
+                        ${c.def.gallery ? `<button id="btn-view-gallery" class="cyber-btn small" style="background:linear-gradient(135deg, #ff9800, #ff5722);">🖼️ 갤러리</button>` : ''}
                     </div>
                 </div>
             </div>
@@ -391,6 +395,12 @@ export default class CreatureView extends BaseView {
         const storyBtn = document.getElementById('btn-show-story');
         if (storyBtn && c.def.lore) {
             storyBtn.onclick = () => this._showStoryModal(c);
+        }
+
+        // [NEW] 갤러리 버튼 이벤트 바인딩
+        const galleryBtn = document.getElementById('btn-view-gallery');
+        if (galleryBtn && c.def.gallery) {
+            galleryBtn.onclick = () => this._showGalleryModal(c);
         }
     }
 
@@ -864,5 +874,107 @@ export default class CreatureView extends BaseView {
         };
 
         return elements.map(e => `<span title="${e}" style="cursor:help;">${iconMap[e] || e}</span>`).join(' ');
+    }
+
+    /**
+     * 호감도 게이지 UI 렌더링
+     */
+    _renderAffectionGauge(c) {
+        const score = this.game.creatureManager.getResonanceScore(c);
+        const level = this.game.creatureManager.getAffectionLevel(c);
+        const levels = { 0: 100, 1: 300, 2: 1000, 3: 2000 };
+        const labels = ['경계', '관심', '신뢰', '서약'];
+        const colors = ['#9e9e9e', '#66bb6a', '#f48fb1', '#ad1457'];
+        const max = levels[level] || 2000;
+        const prevMax = level > 0 ? (levels[level - 1] || 0) : 0;
+
+        let percent = 0;
+        if (level >= 3) {
+            percent = 100;
+        } else {
+            percent = Math.max(0, Math.min(100, ((score - prevMax) / (max - prevMax)) * 100));
+        }
+
+        // 갤러리 언락 정보
+        let galleryInfo = '';
+        if (c.def.gallery && c.def.gallery.length > 0) {
+            const unlocked = c.def.gallery.filter(g => g.level <= level).length;
+            const total = c.def.gallery.length;
+            galleryInfo = `<span style="font-size:0.8em; color:#ff9800;">🖼️ ${unlocked}/${total} 해금</span>`;
+        }
+
+        return `
+            <div style="margin:15px 0; padding:12px; background:linear-gradient(135deg, rgba(233,30,99,0.1), rgba(255,152,0,0.1)); border-radius:10px; border:1px solid ${colors[level]};">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <span style="font-size:1.5em;">❤️</span>
+                        <span style="color:${colors[level]}; font-weight:bold; font-size:1.1em;">${labels[level]}</span>
+                        <span style="color:#888; font-size:0.9em;">Lv.${level}</span>
+                    </div>
+                    ${galleryInfo}
+                </div>
+                <div style="background:rgba(0,0,0,0.3); border-radius:5px; height:10px; overflow:hidden;">
+                    <div style="width:${percent}%; height:100%; background:linear-gradient(90deg, ${colors[level]}, #ff9800); transition:width 0.5s; box-shadow:0 0 8px ${colors[level]};"></div>
+                </div>
+                <div style="display:flex; justify-content:space-between; margin-top:5px; font-size:0.8em; color:#aaa;">
+                    <span>${score.toLocaleString()} / ${max.toLocaleString()}</span>
+                    <span>${level < 3 ? `다음: ${labels[level + 1]}` : '서약 완료 ♥'}</span>
+                </div>
+            </div>
+        `;
+    }
+
+    /**
+     * 갤러리 모달 표시
+     */
+    _showGalleryModal(c) {
+        if (!c || !c.def.gallery) return;
+
+        const level = this.game.creatureManager.getAffectionLevel(c);
+        const gallery = c.def.gallery;
+
+        const imagesHtml = gallery.map(g => {
+            const unlocked = g.level <= level;
+            return `
+                <div style="text-align:center; padding:10px; background:rgba(0,0,0,0.3); border-radius:10px; border:1px solid ${unlocked ? '#ff9800' : '#444'};">
+                    <img src="${unlocked ? g.image : 'images/locked_placeholder.png'}" 
+                         alt="${g.title}" 
+                         style="width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:8px; filter:${unlocked ? 'none' : 'grayscale(100%) blur(5px)'};">
+                    <div style="margin-top:8px; font-weight:bold; color:${unlocked ? '#fff' : '#666'};">${unlocked ? g.title : '🔒 Lv.' + g.level + ' 필요'}</div>
+                    <div style="font-size:0.8em; color:#aaa;">${unlocked ? g.desc : '호감도를 올려주세요'}</div>
+                </div>
+            `;
+        }).join('');
+
+        // 모달 생성
+        const existingModal = document.getElementById('gallery-modal');
+        if (existingModal) existingModal.remove();
+
+        const modal = document.createElement('div');
+        modal.id = 'gallery-modal';
+        modal.style.cssText = `
+            position:fixed; top:0; left:0; right:0; bottom:0;
+            background:rgba(0,0,0,0.9); z-index:3000;
+            display:flex; justify-content:center; align-items:center;
+            backdrop-filter:blur(5px);
+        `;
+
+        modal.innerHTML = `
+            <div style="max-width:600px; max-height:85vh; overflow-y:auto; background:linear-gradient(135deg, #1a1a2e, #16213e); 
+                        border-radius:16px; padding:25px; border:2px solid #ff9800; box-shadow:0 0 30px rgba(255,152,0,0.3);">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; padding-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.2);">
+                    <h2 style="color:#ff9800; margin:0;">🖼️ ${c.def.name} 갤러리</h2>
+                    <button id="btn-close-gallery" class="cyber-btn small">×</button>
+                </div>
+                <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:15px;">
+                    ${imagesHtml}
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        document.getElementById('btn-close-gallery').onclick = () => modal.remove();
+        modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
     }
 }
