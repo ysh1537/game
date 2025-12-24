@@ -1,6 +1,7 @@
 
 import EventEmitter from '../utils/EventEmitter.js';
-import { WORLDS } from '../data/CreatureData.js'; // [NEW] Import World Data
+import { WORLDS } from '../data/CreatureData.js';
+import { SKILLS, TARGET_TYPES, SKILL_TYPES, STATUS_EFFECTS, getSkillData } from '../data/SkillData.js';
 
 export default class BattleManager extends EventEmitter {
     constructor(game, events, resourceManager, userCreatures) {
@@ -60,7 +61,12 @@ export default class BattleManager extends EventEmitter {
                     def: res.def,
                     image: res.image,
                     level: res.level,
-                    rarity: stageInfo.isBoss ? 'SSR' : 'Normal' // [NEW] Bosses get SSR glow
+                    rarity: stageInfo.isBoss ? 'SSR' : 'Normal', // [NEW] Bosses get SSR glow
+                    sp: 0,
+                    maxSp: 100,
+                    statusEffects: [],  // [FIX] Missing init caused crash
+                    elements: res.elements || [], // Ensure elements exist
+                    skillId: res.skillId || 'default_attack'
                 };
             });
             this.enemyName = stageInfo.name;
@@ -146,104 +152,157 @@ export default class BattleManager extends EventEmitter {
             atk: type.apk,
             def: 10,
             image: type.img,
-            level: 5
+            level: 5,
+            sp: 0,
+            maxSp: 100,
+            statusEffects: [], // [FIX] Required to avoid crash
+            elements: [],
+            skillId: 'default_attack'
         };
     }
 
-    async startBattleProcess(isPvP = false) {
-        this.isPvP = isPvP;
-        // Use global events for Scene communication
-        this.events.emit('battle:start', {
-            heroTeam: this.heroTeam,
-            enemyTeam: this.enemyTeam,
-            isPvP: this.isPvP,
-            enemyName: this.enemyName
-        });
-
-        // [NEW] Calculate and Apply Synergies
-        this.calculateSynergies();
-        this.applySynergyEffects();
-
-        while (this.inBattle) {
-            this.turnCount++;
-            this.events.emit('battle:turn', this.turnCount);
-            console.log(`[BattleManager] TURN ${this.turnCount}`);
-
-            await this.nextTurn();
-
-            if (!this.inBattle) break;
-            await new Promise(resolve => setTimeout(resolve, 1000 / this.battleSpeed));
-        }
-    }
-
-    spawnMockFriend(id) {
-        return {
-            isHero: false,
-            uid: Math.random().toString(36).substr(2, 9),
-            id: id,
-            name: "Rival " + id,
-            maxHp: 150, hp: 150,
-            atk: 15, def: 8,
-            level: 10, rarity: 'SR',
-            image: `images/creature_bear_ice.png`,
-            sp: 0, maxSp: 100
-        };
-    }
 
     createBattleEntity(creature, isHero) {
+        // [NEW] Affection-based Skin Override
+        let finalImage = creature.def.image;
+        let finalSprites = creature.def.sprites ? { ...creature.def.sprites } : null;
+
+        if (isHero && creature.affectionLv && creature.def.gallery) {
+            // Find highest unlocked gallery image
+            const unlocked = creature.def.gallery
+                .filter(g => g.level <= creature.affectionLv)
+                .sort((a, b) => b.level - a.level)[0];
+
+            if (unlocked) {
+                finalImage = unlocked.image;
+                if (finalSprites) {
+                    finalSprites.idle = unlocked.image;
+                } else {
+                    // Create minimal sprite set if not exists
+                    finalSprites = { idle: unlocked.image };
+                }
+            }
+        }
+
         return {
             isHero: isHero,
             uid: creature.instanceId, // [FIX] Use instanceId for logic 
             id: creature.instanceId, // Keep for compatibility if needed, but ensure it receives instanceId
             name: creature.def.name,
             maxHp: creature.stats.hp,
-            hp: creature.currentHp,
+            hp: creature.stats.hp, // [FIX] Always start battle with full HP
             atk: Math.floor(creature.stats.atk * (1 + (isHero ? this.game.getDirectorEffect('battle_atk') : 0))),
             def: creature.stats.def,
-            image: creature.def.image,
+            image: finalImage,
             level: creature.level,
             rarity: creature.def.rarity,
-            world: creature.def.world || 'WILD', // [NEW] Default to WILD
-            elements: creature.def.elements || [], // [NEW]
-            // [NEW] 스킬 게이지 시스템
+            world: creature.def.world || 'WILD',
+            elements: creature.def.elements || [],
+            skillId: creature.def.skillId || 'default_attack',
             sp: 0,
-            maxSp: 100
+            maxSp: 100,
+            statusEffects: [],
+            sprites: finalSprites
         };
     }
 
     spawnEnemy(type) {
+        // [Fix] 랜덤 요소 강화 및 기본 데이터 보장
+        const elementsPool = [['Fire'], ['Water'], ['Wind'], ['Earth'], ['Light'], ['Dark']];
+        const randomElement = elementsPool[Math.floor(Math.random() * elementsPool.length)];
+
+        // Basic scaling
+        const level = 5;
+        const baseHp = 100 + (level * 20);
+        const baseAtk = 15 + (level * 3);
+
         return {
             isHero: false,
             uid: Math.random().toString(36).substr(2, 9),
-            id: 'enemy_' + Date.now(),
-            name: "Wild Slime",
-            maxHp: 80, hp: 80,
-            atk: 10, def: 5,
-            level: 5, rarity: 'Normal',
-            image: `images/creature_slime_fire.png`,
-            sp: 0, maxSp: 100
+            id: 'enemy_' + Date.now() + Math.random().toString(36).substr(2, 5),
+            name: "Wild Monster",
+            maxHp: baseHp, hp: baseHp,
+            atk: baseAtk, def: 5 + level,
+            level: level, rarity: 'Normal',
+            image: `images/creature_slime_fire.png`, // Placeholder
+            elements: randomElement,
+            skillId: 'default_attack',
+            sp: 0, maxSp: 100,
+            statusEffects: []
         };
     }
 
     async nextTurn() {
-        // [Hero Team Attack]
-        await this.processTeamAttack(this.heroTeam, this.enemyTeam);
+        try {
+            if (!this.inBattle) return;
 
-        // Check if all enemies dead
-        if (this.enemyTeam.every(e => e.hp <= 0)) {
-            this.endBattle(true, "적군을 모두 물리쳤습니다!");
-            return;
+            // Safety check for battleSpeed
+            if (!this.battleSpeed || this.battleSpeed <= 0) this.battleSpeed = 1;
+
+            // 1. Process Status Effects (Hero Team)
+            await this.processTeamStatusEffects(this.heroTeam);
+
+            // 2. [Hero Team Attack]
+            await this.processTeamAttack(this.heroTeam, this.enemyTeam);
+
+            // Check if all enemies dead
+            if (this.enemyTeam.every(e => e.hp <= 0)) {
+                this.endBattle(true, "적군을 모두 물리쳤습니다!");
+                return;
+            }
+
+            await new Promise(resolve => setTimeout(resolve, 500 / this.battleSpeed));
+
+            // 3. Process Status Effects (Enemy Team)
+            await this.processTeamStatusEffects(this.enemyTeam);
+
+            // 4. [Enemy Team Attack]
+            await this.processTeamAttack(this.enemyTeam, this.heroTeam);
+
+            // Check if all heroes dead
+            if (this.heroTeam.every(h => h.hp <= 0)) {
+                this.endBattle(false, "아군이 전멸했습니다...");
+                return;
+            }
+
+            // [FIX] Loop Back for Next Turn
+            this.turnCount++;
+            setTimeout(() => this.nextTurn(), 100);
+
+        } catch (error) {
+            console.error("[BattleManager] Error in nextTurn:", error);
+            this.endBattle(false, "심각한 오류로 전투가 중단되었습니다.");
         }
+    }
 
-        await new Promise(resolve => setTimeout(resolve, 500 / this.battleSpeed));
+    async processTeamStatusEffects(team) {
+        for (let unit of team) {
+            if (unit.hp <= 0) continue;
 
-        // [Enemy Team Attack]
-        await this.processTeamAttack(this.enemyTeam, this.heroTeam);
+            // Filter out expired effects
+            unit.statusEffects = unit.statusEffects.filter(eff => eff.duration > 0);
 
-        // Check if all heroes dead
-        if (this.heroTeam.every(h => h.hp <= 0)) {
-            this.endBattle(false, "아군이 전멸했습니다...");
-            return;
+            for (let eff of unit.statusEffects) {
+                const data = STATUS_EFFECTS[eff.id.toUpperCase()] || { type: 'none' };
+
+                if (data.type === 'dot') {
+                    // DoT Dmg: 5% (Burn/Poison) or 10% (Bleed)
+                    const ratio = eff.id === 'bleed' ? 0.10 : 0.05;
+                    const dotDamage = Math.floor(unit.maxHp * ratio);
+                    unit.hp = Math.max(1, unit.hp - dotDamage); // Don't kill by dot to be fair, or allow kill?
+
+                    this.events.emit('battle:action', {
+                        type: 'status_dot',
+                        targetId: unit.id,
+                        damage: dotDamage,
+                        effectId: eff.id,
+                        currentHp: unit.hp
+                    });
+                    await new Promise(resolve => setTimeout(resolve, 300 / this.battleSpeed));
+                }
+
+                eff.duration--;
+            }
         }
     }
 
@@ -252,10 +311,31 @@ export default class BattleManager extends EventEmitter {
             if (!this.inBattle) break;
             if (attacker.hp <= 0) continue;
 
-            const target = targets.find(t => t.hp > 0);
-            if (!target) break;
+            // Check if Stunned
+            const isStunned = attacker.statusEffects.some(eff => {
+                const data = STATUS_EFFECTS[eff.id.toUpperCase()];
+                return data && data.type === 'stun';
+            });
+            if (isStunned) {
+                console.log(`[Battle] ${attacker.name} is stunned!`);
+                // Emit event for UI feedback?
+                continue;
+            }
 
-            await this.attack(attacker, target);
+            // [NEW] Silence Check
+            const isSilenced = attacker.statusEffects.some(eff => eff.id === 'silence');
+
+            // Decide Skill vs Normal Attack
+            if (attacker.sp >= attacker.maxSp && !isSilenced) {
+                await this.useSkill(attacker, attackers, targets);
+                attacker.sp = 0;
+            } else {
+                const target = this.getSkillTarget(attacker, targets, TARGET_TYPES.ENEMY_ADVANTAGE);
+                if (target) {
+                    await this.attack(attacker, target);
+                }
+            }
+
             await new Promise(resolve => setTimeout(resolve, 600 / this.battleSpeed));
         }
     }
@@ -263,71 +343,196 @@ export default class BattleManager extends EventEmitter {
     async attack(attacker, defender) {
         if (attacker.hp <= 0 || defender.hp <= 0) return;
 
-        // [NEW] 스킬 발동 체크
-        const isSkill = attacker.sp >= attacker.maxSp;
-        let skillName = "";
-
         // Base Damage calculation
-        let damage = Math.max(1, attacker.atk - (defender.def * 0.5));
+        // Balanced Damage Formula: Damage = Atk * (200 / (200 + Def))
+        // [Mod] 방어력 효율 감소 (분모 100 -> 200), 기본 데미지 배율 증가 (1.5 -> 2.0)
+        const defFactor = 200 / (200 + defender.def);
+        let damage = Math.max(1, attacker.atk * defFactor * 2.0);
         const advantage = this.checkElementalAdvantage(attacker.elements, defender.elements);
         let isCrit = false;
         let isGlancing = false;
 
-        if (isSkill) {
-            damage *= 2.5; // Skill is powerful
-            skillName = this.getSkillName(attacker);
-            attacker.sp = 0; // Reset
-        } else {
-            if (advantage === 1) { // Advantage
-                damage *= 1.2;
-            } else if (advantage === -1) { // Disadvantage
-                damage *= 0.8;
-                isGlancing = Math.random() < 0.2;
-            }
+        if (advantage === 1) { // Advantage
+            damage *= 1.3;
+        } else if (advantage === -1) { // Disadvantage
+            damage *= 0.7;
+            isGlancing = Math.random() < 0.25;
+        }
 
-            // Synergy Logic (Olympus Crit)
-            if (attacker.isHero && this.activeSynergies[WORLDS.OLYMPUS] >= 2) {
-                const critRate = 0.15;
-                if (Math.random() < critRate) {
-                    isCrit = true;
-                    damage *= 1.5;
-                }
-            }
+        // [NEW] Check Blind
+        const isBlind = attacker.statusEffects.some(eff => eff.id === 'blind');
+        if (isBlind && Math.random() < 0.5) { // 50% miss chance if blind
+            damage = 0;
+            isGlancing = true;
+        }
 
-            // [NEW] SP 충전 (일반 공격 시 25 충전)
-            attacker.sp = Math.min(attacker.maxSp, attacker.sp + 25);
+        // [NEW] Stat Mods
+        const atkUp = attacker.statusEffects.some(eff => eff.id === 'atk_up');
+        if (atkUp) damage *= 1.4;
+
+        const defUp = defender.statusEffects.some(eff => eff.id === 'def_up');
+        if (defUp) damage *= 0.7; // Damage reduced
+
+        const shock = defender.statusEffects.some(eff => eff.id === 'shock');
+        if (shock) damage *= 1.2;
+
+        // Synergy Logic (Olympus Crit)
+        if (attacker.isHero && this.activeSynergies[WORLDS.OLYMPUS] >= 2) {
+            const critRate = 0.20;
+            if (Math.random() < critRate) {
+                isCrit = true;
+                damage *= 1.5;
+            }
         }
 
         if (isGlancing) damage = 0;
 
-        defender.hp -= Math.floor(damage);
+
+
+        const finalDamage = Math.floor(damage);
+        defender.hp -= finalDamage;
+
+        // [NEW] SP 충전 (공격자 +25, 피격자 +15)
+        attacker.sp = Math.min(attacker.maxSp, attacker.sp + 25);
+        if (defender.hp > 0) {
+            defender.sp = Math.min(defender.maxSp, defender.sp + 15);
+        }
 
         this.events.emit('battle:action', {
             type: 'attack',
             attackerId: attacker.id,
             defenderId: defender.id,
-            damage: Math.floor(damage),
+            damage: finalDamage,
             isCrit: isCrit,
             isMiss: isGlancing,
-            isSkill: isSkill,
-            skillName: skillName,
             attackerSp: attacker.sp,
-            attackerMaxSp: attacker.maxSp,
+            defenderSp: defender.sp,
             currentHp: defender.hp,
             maxHp: defender.maxHp
         });
     }
 
-    getSkillName(entity) {
-        // [NEW] 크리처별 전용 스킬명 매핑
-        const skills = {
-            'god_odin': '궁니르의 심판',
-            'fenrir': '라그나로크 하울',
-            'miho': '유혹의 구슬',
-            'zeus': '천둥의 심판',
-            'chronos': '시간의 균열'
-        };
-        return skills[entity.id] || '강격';
+    async useSkill(attacker, allies, enemies) {
+        // [FIX] Safety check for Skill Data
+        let skill = null;
+        try {
+            // Priority: Import helper
+            if (typeof getSkillData === 'function') {
+                skill = getSkillData(attacker.skillId);
+            }
+            // Fallback: Game instance helper
+            else if (this.game.skillData && this.game.skillData.getSkill) {
+                skill = this.game.skillData.getSkill(attacker.skillId);
+            }
+
+            if (!skill) {
+                // Final Fallback: Use 'Power Strike' instead of Normal Attack
+                skill = {
+                    id: 'power_strike',
+                    name: '강력한 일격',
+                    type: 'SINGLE_ATTACK',
+                    target: 'ENEMY_ADVANTAGE',
+                    power: 1.5
+                };
+            }
+        } catch (e) {
+            console.warn(`[Battle] Failed to load skill ${attacker.skillId}, using default.`, e);
+            skill = { id: 'power_strike', name: '강력한 일격', type: 'SINGLE_ATTACK', target: 'ENEMY_ADVANTAGE', power: 1.5 };
+        }
+
+        let targets = [];
+
+        // Determine Targets
+        switch (skill.target) {
+            case TARGET_TYPES.ENEMY_ALL: targets = enemies.filter(e => e.hp > 0); break;
+            case TARGET_TYPES.ENEMY_RANDOM:
+                const aliveEnemies = enemies.filter(e => e.hp > 0);
+                if (aliveEnemies.length > 0) {
+                    const count = skill.hitCount || 1;
+                    for (let i = 0; i < count; i++) {
+                        targets.push(aliveEnemies[Math.floor(Math.random() * aliveEnemies.length)]);
+                    }
+                }
+                break;
+            case TARGET_TYPES.ALLY_ALL: targets = allies.filter(a => a.hp > 0); break;
+            case TARGET_TYPES.ALLY_LOWEST_HP:
+                const lowest = allies.filter(a => a.hp > 0).sort((a, b) => (a.hp / a.maxHp) - (b.hp / b.maxHp))[0];
+                if (lowest) targets = [lowest];
+                break;
+            default:
+                const t = this.getSkillTarget(attacker, enemies, skill.target);
+                if (t) targets = [t];
+        }
+
+        if (targets.length === 0) return;
+
+        if (targets.length === 0) return;
+
+        // [NEW] Skill Cut-In Logic
+        // Emit 'skill_start' to trigger cut-in, then wait.
+        // This ensures the cut-in plays BEFORE damage/effects are applied.
+        if (attacker.isHero) {
+            this.events.emit('battle:skill_start', {
+                attackerId: attacker.id,
+                skillName: skill.name
+            });
+            // Wait for cut-in animation (approx 1.2s + buffer)
+            await new Promise(resolve => setTimeout(resolve, 1500 / this.battleSpeed));
+        }
+
+        // Execute Skill Effect
+        for (let target of targets) {
+            let value = 0;
+            switch (skill.type) {
+                case SKILL_TYPES.HEAL:
+                    value = Math.floor(attacker.atk * skill.power);
+                    target.hp = Math.min(target.maxHp, target.hp + value);
+                    break;
+                case SKILL_TYPES.SHIELD:
+                    // TODO: Implement Shield property in Battle Entity
+                    break;
+                default: // Attack
+                    const baseDmg = Math.max(1, (attacker.atk * skill.power) - (target.def * 0.5));
+                    value = Math.floor(baseDmg);
+                    target.hp -= value;
+                    // Apply Effects
+                    if (skill.effects) {
+                        skill.effects.forEach(eff => {
+                            if (Math.random() < eff.chance) {
+                                target.statusEffects.push({ id: eff.id, duration: eff.duration || 1 });
+                            }
+                        });
+                    }
+                    // Defense gains SP when hit by skill too
+                    if (target.hp > 0) target.sp = Math.min(target.maxSp, target.sp + 20);
+            }
+
+            this.events.emit('battle:action', {
+                type: 'skill',
+                skillName: skill.name,
+                attackerId: attacker.id,
+                defenderId: target.id,
+                damage: skill.type === SKILL_TYPES.HEAL ? -value : value,
+                isHeal: skill.type === SKILL_TYPES.HEAL,
+                currentHp: target.hp,
+                maxHp: target.maxHp,
+                attackerSp: 0,
+                statusEffects: target.statusEffects
+            });
+        }
+    }
+
+    getSkillTarget(attacker, potentialTargets, strategy) {
+        const alive = potentialTargets.filter(t => t.hp > 0);
+        if (alive.length === 0) return null;
+
+        if (strategy === TARGET_TYPES.ENEMY_ADVANTAGE) {
+            // Find targets with elemental advantage
+            const adv = alive.filter(t => this.checkElementalAdvantage(attacker.elements, t.elements) === 1);
+            if (adv.length > 0) return adv[Math.floor(Math.random() * adv.length)];
+        }
+
+        return alive[0]; // Default to first
     }
 
     calculateSynergies() {
@@ -519,5 +724,17 @@ export default class BattleManager extends EventEmitter {
     setBattleSpeed(speed) {
         this.battleSpeed = speed;
         console.log(`[BattleManager] Speed set to x${speed}`);
+    }
+
+    // [NEW] Helper for Scene to get sprite data
+    getEntitySprites(entityId) {
+        // Search in heroTeam
+        let entity = this.heroTeam.find(e => e.id === entityId);
+        if (!entity) entity = this.enemyTeam.find(e => e.id === entityId);
+
+        if (entity && entity.sprites) {
+            return entity.sprites;
+        }
+        return null;
     }
 }

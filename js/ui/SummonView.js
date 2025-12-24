@@ -78,7 +78,7 @@ export default class SummonView extends BaseView {
                 <img id="cinematic-image" src="" alt="">
                 <div id="cinematic-dialogue"></div>
             </div>
-            <div id="cinematic-batch-grid" style="display:none; grid-template-columns:repeat(5, 1fr); gap:15px; padding:20px; width:90%; max-width:800px; z-index:110;"></div>
+            <div id="cinematic-batch-grid" style="display:none; flex-direction:column; align-items:center; gap:20px; padding:20px; width:95%; max-width:1200px; z-index:110;"></div>
             <div id="cinematic-skip-hint">화면을 클릭하여 건너뛰기</div>
         `;
         document.body.appendChild(overlay);
@@ -277,35 +277,45 @@ export default class SummonView extends BaseView {
 
         if (!this.currentBatch) return;
 
-        // Show Grid
-        grid.style.display = 'grid';
-        grid.style.gridTemplateColumns = 'repeat(5, 1fr)';
+        // [New Layout] Featured (Top Center) + 5x2 Grid (Remaining)
+        grid.style.display = 'flex';
+        grid.style.flexDirection = 'column';
+        grid.style.alignItems = 'center';
+        grid.style.gap = '30px';
+        grid.innerHTML = '';
 
-        // 기존 Grid 아이템 생성 로직 (5열)
-        grid.innerHTML = ''; // 초기화
-        this.currentBatch.forEach((c, idx) => {
+        const rarityOrder = ['Normal', 'Unique', 'Rare', 'Special', 'SR', 'SSR', 'UR'];
+        const sorted = [...this.currentBatch].sort((a, b) => rarityOrder.indexOf(b.def.rarity) - rarityOrder.indexOf(a.def.rarity));
+        const best = sorted[0];
+
+        const bestIdx = this.currentBatch.indexOf(best);
+        const others = this.currentBatch.filter((c, i) => i !== bestIdx);
+
+        // 1. Featured Item (Top Center, Huge)
+        const featuredItem = document.createElement('div');
+        featuredItem.className = 'featured-item fade-in';
+        featuredItem.style.width = '450px';
+        featuredItem.style.maxWidth = '80%';
+        featuredItem.style.marginBottom = '20px';
+        this._renderCinematicGridItem(featuredItem, best, 0, true);
+        grid.appendChild(featuredItem);
+
+        // 2. Others Grid (5-column, Large items)
+        const othersGrid = document.createElement('div');
+        othersGrid.style.display = 'grid';
+        othersGrid.style.gridTemplateColumns = 'repeat(5, 1fr)';
+        othersGrid.style.gap = '20px';
+        othersGrid.style.width = '100%';
+        othersGrid.style.maxWidth = '1400px';
+
+        others.forEach((c, idx) => {
             const item = document.createElement('div');
             item.className = 'grid-item fade-in';
-            item.style.animationDelay = `${idx * 0.1}s`;
-            const imgPath = c.def.image || 'images/creature_slime.png';
-
-            // 색상 매핑
-            const rarityColorMap = {
-                'Normal': '#9e9e9e', 'Unique': '#66bb6a', 'Rare': '#42a5f5',
-                'Special': '#ab47bc', 'SR': '#ff7043', 'SSR': '#ef5350', 'UR': '#ffd700'
-            };
-            const color = rarityColorMap[c.def.rarity] || '#fff';
-
-            item.innerHTML = `
-                <div style="position:relative; border:1px solid rgba(255,255,255,0.2); border-radius:8px; overflow:hidden; background:rgba(0,0,0,0.5);">
-                    <img src="${imgPath}" onerror="this.src='images/creature_slime.png'" style="width:100%; height:80px; object-fit:cover; object-position:top;">
-                    <div style="position:absolute; bottom:0; padding:1px 5px; background:rgba(0,0,0,0.7); font-size:0.6rem; width:100%; text-align:center; color:${color}; border-top:1px solid ${color};">
-                        ${c.def.rarity}
-                    </div>
-                </div>
-            `;
-            grid.appendChild(item);
+            item.style.animationDelay = `${(idx + 1) * 0.1}s`;
+            this._renderCinematicGridItem(item, c, idx + 1, false);
+            othersGrid.appendChild(item);
         });
+        grid.appendChild(othersGrid);
 
         // 결과 화면 종료 타이머 (또는 클릭 대기)
         // 여기서는 자동으로 꺼지지 않고 사용자가 클릭해서 끄도록 유도 (Overlay onclick = endCinematic)
@@ -400,41 +410,37 @@ export default class SummonView extends BaseView {
         const resultBox = document.getElementById('summon-result');
         if (!resultBox) return;
 
-        resultBox.innerHTML = '';
+        resultBox.innerHTML = ''; // Clear previous results
 
-        // 그리드 컨테이너
+        // [New Layout] Featured (Top Center) + 5x2 Grid (Remaining)
+        resultBox.style.display = 'flex';
+        resultBox.style.flexDirection = 'column';
+        resultBox.style.alignItems = 'center';
+        resultBox.style.gap = '40px';
+        resultBox.style.padding = '20px';
+
+        const rarityOrder = ['Normal', 'Unique', 'Rare', 'Special', 'SR', 'SSR', 'UR'];
+        const sorted = [...results].sort((a, b) => rarityOrder.indexOf(b.def.rarity) - rarityOrder.indexOf(a.def.rarity));
+        const best = sorted[0];
+        const bestIdx = results.indexOf(best);
+        const others = results.filter((c, i) => i !== bestIdx);
+
+        // 1. Featured Card
+        const featuredCard = this._createResultCard(best, true);
+        resultBox.appendChild(featuredCard);
+
+        // 2. Others Grid
         const grid = document.createElement('div');
         grid.style.display = 'grid';
-        grid.style.gridTemplateColumns = 'repeat(5, 1fr)'; // [Fix] 11x1 배열 방지
-        grid.style.gap = '10px';
+        grid.style.gridTemplateColumns = 'repeat(5, 1fr)';
+        grid.style.gap = '20px';
         grid.style.width = '100%';
-        grid.style.padding = '10px';
+        grid.style.maxWidth = '1200px';
 
-        results.forEach((creature, index) => {
-            const rarityColorMap = {
-                'Normal': '#95a5a6', 'Unique': '#2ecc71', 'Rare': '#3498db',
-                'Special': '#9b59b6', 'SR': '#e67e22', 'SSR': '#e74c3c', 'UR': '#f1c40f'
-            };
-            const color = rarityColorMap[creature.def.rarity] || '#fff';
-
-            const card = document.createElement('div');
-            // 애니메이션 딜레이 효과 (순차 등장)
-            card.className = `creature-card mini rarity-${creature.def.rarity} fade-in`;
-            card.style.border = `1px solid ${color}`;
-            card.style.animationDelay = `${index * 0.1}s`;
-
-            const imgPath = creature.def.image || 'images/creature_slime.png';
-            card.innerHTML = `
-                <div class="card-inner">
-                    <div class="card-grade" style="font-size:0.7em; color:${color}">${creature.def.rarity}</div>
-                    <div class="card-img" style="height:60px;">
-                        <img src="${imgPath}" onerror="this.src='images/creature_slime.png'" alt="${creature.def.name}" style="object-fit:contain; width:100%; height:100%;">
-                    </div>
-                </div>
-            `;
+        others.forEach((c, index) => {
+            const card = this._createResultCard(c, false, index);
             grid.appendChild(card);
         });
-
         resultBox.appendChild(grid);
 
         const btnOk = document.createElement('button');
@@ -452,5 +458,68 @@ export default class SummonView extends BaseView {
         setTimeout(() => {
             resultBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
+    }
+
+    _renderCinematicGridItem(container, c, idx, isFeatured) {
+        const imgPath = c.def.image || 'images/creature_slime.png';
+        const rarityColorMap = {
+            'Normal': '#9e9e9e', 'Unique': '#66bb6a', 'Rare': '#42a5f5',
+            'Special': '#ab47bc', 'SR': '#ff7043', 'SSR': '#ef5350', 'UR': '#ffd700'
+        };
+        const color = rarityColorMap[c.def.rarity] || '#fff';
+        const fontSize = isFeatured ? '1.5rem' : '1rem';
+
+        container.style.aspectRatio = '2/3'; // Taller ratio for full body
+        container.innerHTML = `
+            <div style="position:relative; width:100%; height:100%; border:3px solid ${isFeatured ? color : 'rgba(255,255,255,0.2)'}; border-radius:16px; overflow:hidden; background:radial-gradient(circle, #2c3e50 0%, #000 100%); ${isFeatured ? `box-shadow: 0 0 50px ${color}88; transform: scale(1.05);` : ''} transition: all 0.3s; display:flex; flex-direction:column;">
+                <div style="flex:1; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#000;">
+                    <img src="${imgPath}" onerror="this.src='images/creature_slime.png'" style="width:100%; height:100%; object-fit:contain;">
+                </div>
+                <div style="padding:10px 5px; background:rgba(0,0,0,0.9); font-size:${fontSize}; width:100%; text-align:center; color:${color}; border-top:2px solid ${color}; font-weight:900; font-family:'Orbitron'; letter-spacing:2px; text-shadow: 0 0 10px ${color};">
+                    ${c.def.rarity}
+                </div>
+            </div>
+        `;
+    }
+
+    _createResultCard(creature, isFeatured, index = 0) {
+        const rarityColorMap = {
+            'Normal': '#95a5a6', 'Unique': '#2ecc71', 'Rare': '#3498db',
+            'Special': '#9b59b6', 'SR': '#e67e22', 'SSR': '#e74c3c', 'UR': '#f1c40f'
+        };
+        const color = rarityColorMap[creature.def.rarity] || '#fff';
+        const imgPath = creature.def.image || 'images/creature_slime.png';
+
+        const card = document.createElement('div');
+        card.className = `creature-card ${isFeatured ? '' : 'mini'} rarity-${creature.def.rarity} fade-in`;
+        card.style.border = `2px solid ${color}`;
+        card.style.aspectRatio = '2/3';
+        card.style.height = 'auto'; // Let width control height via aspect-ratio
+
+        if (!isFeatured) {
+            card.style.animationDelay = `${(index + 1) * 0.1}s`;
+            card.style.width = '100%';
+            card.style.maxWidth = '200px';
+        } else {
+            card.style.width = '380px';
+            card.style.maxWidth = '90%';
+            card.style.marginBottom = '30px';
+            card.style.boxShadow = `0 0 40px ${color}77`;
+            card.style.transform = 'scale(1.1)';
+        }
+
+        card.innerHTML = `
+            <div class="card-inner" style="height:100%; display:flex; flex-direction:column; background:#000; border-radius:12px; overflow:hidden;">
+                <div class="card-grade" style="padding:5px; font-size:${isFeatured ? '1.4rem' : '1rem'}; color:${color}; font-weight:900; text-align:center; background:rgba(0,0,0,0.8); border-bottom:1px solid ${color}44;">${creature.def.rarity}</div>
+                <div class="card-img" style="flex:1; overflow:hidden; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle, #2c3e50 0%, #000 100%);">
+                    <img src="${imgPath}" onerror="this.src='images/creature_slime.png'" alt="${creature.def.name}" style="object-fit:contain; width:100%; height:100%;">
+                </div>
+                ${isFeatured ? `
+                <div class="card-name" style="text-align:center; padding:12px; font-weight:900; font-size:1.4rem; background:rgba(0,0,0,0.9); border-top:2px solid ${color}; color:#fff;">
+                    ${creature.def.name}
+                </div>` : ''}
+            </div>
+        `;
+        return card;
     }
 }

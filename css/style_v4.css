@@ -3115,3 +3115,263 @@ body.archive-mode #left-panel {
 body.archive-mode #center-panel {
     display: none !important;
 }
+
+/* =========================================
+   Battle System Overhaul Animations
+   ========================================= */
+
+/* Combat Movement */
+.anim-prepare-right { transform: translateX(-15px) scale(0.95); transition: transform 0.15s ease-in; }
+.anim-prepare-left { transform: translateX(15px) scale(0.95); transition: transform 0.15s ease-in; }
+
+.anim-attack-right { animation: attackRight 0.3s ease-out forwards; z-index: 50; }
+.anim-attack-left { animation: attackLeft 0.3s ease-out forwards; z-index: 50; }
+
+@keyframes attackRight {
+    0% { transform: translateX(-15px); }
+    30% { transform: translateX(50px) scale(1.1); }
+    100% { transform: translateX(0); }
+}
+@keyframes attackLeft {
+    0% { transform: translateX(15px); }
+    30% { transform: translateX(-50px) scale(1.1); }
+    100% { transform: translateX(0); }
+}
+
+.anim-knockback-right { animation: knockRight 0.4s ease-out forwards; }
+.anim-knockback-left { animation: knockLeft 0.4s ease-out forwards; }
+
+@keyframes knockRight {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(30px) rotate(5deg); filter: brightness(1.5); }
+    100% { transform: translateX(0); }
+}
+@keyframes knockLeft {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-30px) rotate(-5deg); filter: brightness(1.5); }
+    100% { transform: translateX(0); }
+}
+
+.anim-impact-shock { animation: impactShock 0.3s linear; }
+@keyframes impactShock {
+    0% { filter: contrast(2) brightness(2); }
+    100% { filter: contrast(1) brightness(1); }
+}
+
+.anim-miss { animation: missAnim 0.4s ease-out; }
+@keyframes missAnim {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(15px) skewX(5deg); opacity: 0.7; }
+    50% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+/* Damage Numbers */
+.damage-number {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 900;
+    font-size: 1.4rem;
+    font-family: "Orbitron", sans-serif;
+    pointer-events: none;
+    z-index: 100;
+    animation: damageFlow 1s ease-out forwards;
+}
+.damage-number.normal { color: #f1c40f; text-shadow: 0 0 5px rgba(0,0,0,0.8); }
+.damage-number.crit { color: #ff4500; font-size: 2rem; text-shadow: 0 0 10px #ff4500; }
+.damage-number.miss { color: #bdc3c7; font-size: 1rem; }
+.damage-number.heal { color: #2ecc71; text-shadow: 0 0 10px #2ecc71; }
+.damage-number.dot { color: #ff7675; font-size: 1.1rem; }
+
+@keyframes damageFlow {
+    0% { opacity: 0; transform: translate(-50%, 0) scale(0.5); }
+    20% { opacity: 1; transform: translate(-50%, -20px) scale(1.2); }
+    100% { opacity: 0; transform: translate(-50%, -60px) scale(0.8); }
+}
+
+/* VFX */
+.vfx-impact {
+    position: absolute;
+    width: 20px; height: 20px;
+    pointer-events: none;
+    z-index: 60;
+}
+.vfx-slash {
+    width: 60px; height: 4px;
+    background: #fff;
+    box-shadow: 0 0 15px #00f3ff;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: slashFade 0.3s ease-out forwards;
+}
+@keyframes slashFade {
+    0% { width: 0; opacity: 1; }
+    100% { width: 100px; opacity: 0; }
+}
+
+/* Screen Effects */
+.screen-shake { animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both; }
+.screen-shake-big { animation: shakeBig 0.4s cubic-bezier(.36,.07,.19,.97) both; }
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+@keyframes shakeBig {
+    10%, 90% { transform: translate3d(-4px, 0, 0); }
+    20%, 80% { transform: translate3d(8px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-12px, 0, 0); }
+    40%, 60% { transform: translate3d(12px, 0, 0); }
+}
+
+
+/* =========================================
+   [NEW] Battle UI Overhaul (Visual Feedback)
+   ========================================= */
+
+/* Battle Stage Backgrounds */
+#battle-stage.bg-Battle-Volcano { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../images/bg_volcano.jpg') no-repeat center/cover; }
+#battle-stage.bg-Battle-Ocean { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../images/bg_ocean.jpg') no-repeat center/cover; }
+#battle-stage.bg-Battle-Forest { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../images/bg_forest.jpg') no-repeat center/cover; }
+#battle-stage.bg-Battle-Sky { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('../images/bg_sky.jpg') no-repeat center/cover; }
+#battle-stage.bg-Battle-Cave { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('../images/bg_cave.jpg') no-repeat center/cover; }
+#battle-stage { transition: background 0.5s ease; }
+
+/* Battle Entity Size & Style */
+.battle-entity {
+    width: 140px !important;  /* Much bigger size */
+    height: 140px !important;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255,255,255,0.15);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-bottom: 25px; /* Spacing between units */
+}
+.battle-entity:hover {
+    transform: scale(1.1) translateY(-5px);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 20px var(--accent-primary);
+    z-index: 100 !important;
+}
+
+/* Entity Image */
+.battle-entity img {
+    border-radius: 10px;
+    object-fit: cover !important; /* Fill the frame */
+    object-position: top center; /* Focus on face/upper body */
+    filter: brightness(0.9);
+}
+.battle-entity:hover img { filter: brightness(1.1); }
+
+/* HP Bar Styling */
+.hp-bar-container {
+    top: -22px !important;
+    height: 10px !important;
+    background: #2c3e50 !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+.hp-bar-fill {
+    background: linear-gradient(90deg, #e74c3c, #c0392b) !important; /* More vivid red */
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+}
+/* SP Bar Styling */
+.sp-bar-container {
+    top: -8px !important;
+    height: 6px !important;
+    background: #2c3e50 !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+}
+.sp-bar-fill {
+    background: linear-gradient(90deg, #f1c40f, #f39c12) !important;
+    box-shadow: 0 0 8px #f1c40f;
+}
+
+/* Name Tag Styling */
+.name-tag {
+    bottom: -40px !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    color: #fff !important;
+    text-shadow: 0 2px 4px #000, 0 0 5px var(--accent-primary) !important;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    white-space: nowrap;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+/* Status Icons */
+.status-effect-container {
+    bottom: 5px !important;
+    left: 5px !important;
+    width: auto !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+.status-icon {
+    width: 20px; height: 20px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+
+/* [FIX] Fallback for backgrounds and positioning */
+#battle-stage {
+    background-color: #1a1a2e; /* Dark fallback color */
+}
+.battle-entity {
+    background-color: rgba(0,0,0,0.5); /* Entity background fallback */
+    position: relative; /* Ensure relative positioning context */
+}
+
+
+/* [URGENT FIX] Constrain Image Size to Container */
+.battle-entity img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 10px; /* Ensure border radius matches parent */
+}
+
+
+/* [URGENT FIX] Skill Cut-in Image Size Limit */
+.skill-cut-in-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;       /* 화면 너비의 80% 제한 */
+    max-height: 60vh;     /* 화면 높이의 60% 제한 */
+    object-fit: contain;  /* 비율 유지 */
+    z-index: 1002;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+    animation: cutInSlide 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes cutInSlide {
+    0% { transform: translate(-150%, -50%) skewX(-20deg); opacity: 0; }
+    100% { transform: translate(-50%, -50%) skewX(0); opacity: 1; }
+}
+
+/* Ensure background always covers */
+.battle-stage {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+

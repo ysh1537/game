@@ -87,44 +87,23 @@ export default class AuthView extends BaseView {
                 const result = await window.FirebaseService.signInWithGoogle();
                 if (result.success) {
                     const user = result.user;
-                    console.log('[AuthView] Google 로그인 성공:', user.displayName);
+                    console.log('[AuthView] Google 로그인 성공:', user.email);
 
-                    // 클라우드에서 데이터 로드 시도
-                    // 로컬 계정 생성/로그인 (Google 이름 사용)
-                    const googleUsername = user.displayName || user.email.split('@')[0];
-                    const saveKey = `mclab_save_${googleUsername}`;
+                    // [Mod] 닉네임 자동 설정 대신 확인 로직
+                    // 1. 이미 가입된 Google UID인지 확인 (AuthManager 확장 필요하나 일단 로컬 DB 체크)
+                    // Google Ids are not directly mapped to usernames in current simple DB
+                    // We need to store google_uid -> username mapping or stick with username.
 
-                    // 클라우드에서 데이터 로드 시도
-                    const cloudData = await window.FirebaseService.loadGameData();
-                    if (cloudData.success && cloudData.data) {
-                        console.log('[AuthView] 클라우드 데이터 확인:', cloudData.data);
+                    // Simple approach: Check if we have a saved mapping or ask user.
+                    // For this version: Always ask for nickname on first login, 
+                    // or try to match if username exists in DB with same 'google_uid' (if we stored it).
 
-                        // [신구 데이터 통합 복구 로직]
-                        // 1. 현재 사용자 전용 키 확인 -> 2. 공용 키 확인 -> 3. 구버전 키(gameState) 확인
-                        const dataToRestore = cloudData.data[saveKey] || cloudData.data['mclab_save_v1'] || cloudData.data['gameState'];
+                    // Since we don't have robust backend, we'll implement the UI flow requested:
+                    // "Don't get name automatically, let user set it on first signup"
 
-                        if (dataToRestore) {
-                            localStorage.setItem(saveKey, JSON.stringify(dataToRestore));
-                            console.log(`[AuthView] 데이터 복원 완료: ${saveKey}`);
-                            this._setAuthMessage('☁️ 클라우드 데이터 복원 완료!');
-                        }
-                    }
+                    this.pendingGoogleUser = user;
+                    this._showNicknameModal();
 
-                    // 회원가입 또는 로그인 시도
-                    const fakePassword = 'google_' + user.uid.substring(0, 8);
-                    let authResult = await this.game.authManager.login(googleUsername, fakePassword);
-                    if (!authResult.success) {
-                        // 계정이 없으면 자동 생성
-                        authResult = await this.game.authManager.signup(googleUsername, fakePassword, this.selectedPersona);
-                    }
-
-                    if (authResult.success) {
-                        this._updateHeaderUserName(googleUsername);
-                        this.game.startMainGame();
-
-                        // 자동 저장 활성화 (5분마다)
-                        this._startAutoCloudSave();
-                    }
                 } else {
                     this._setAuthMessage('Google 로그인 실패: ' + (result.error || '알 수 없는 오류'));
                 }
@@ -384,5 +363,87 @@ export default class AuthView extends BaseView {
         newBtnNo.onclick = () => {
             modal.style.display = 'none';
         };
+    }
+
+    // [NEW] 닉네임 설정 모달
+    _showNicknameModal() {
+        const modal = document.getElementById('nickname-modal');
+        const input = document.getElementById('nickname-input');
+        const btnConfirm = document.getElementById('btn-nickname-confirm');
+
+        if (!modal || !input || !btnConfirm) {
+            console.error("Nickname modal elements missing!");
+            return;
+        }
+
+        modal.style.display = 'flex';
+        input.value = '';
+        input.focus();
+
+        // Remove old listener
+        const newBtn = btnConfirm.cloneNode(true);
+        btnConfirm.parentNode.replaceChild(newBtn, btnConfirm);
+
+        newBtn.onclick = async () => {
+            const nickname = input.value.trim();
+            if (!nickname) {
+                alert("닉네임을 입력해주세요.");
+                return;
+            }
+
+            // 구글 유저 정보
+            const user = this.pendingGoogleUser;
+            if (!user) return;
+
+            // 로직 진행
+            modal.style.display = 'none';
+            await this._processGoogleLoginWithNickname(user, nickname);
+        };
+    }
+
+    async _processGoogleLoginWithNickname(googleUser, nickname) {
+        const googleUsername = nickname; // User chosen nickname
+        const saveKey = `mclab_save_${googleUsername}`;
+
+        // 클라우드에서 데이터 로드 시도 (이 닉네임으로 저장된 데이터가 있는지?)
+        // 주의: 구글 UID 기반으로 데이터를 찾아야 정확하지만, 현재 구조상 닉네임(세이브키) 의존적입니다.
+        // 향후 UID 매핑이 필요하지만, 지금은 닉네임 기반으로 로드 시도합니다.
+
+        const cloudData = await window.FirebaseService.loadGameData();
+        if (cloudData.success && cloudData.data) {
+            // 닉네임 기반 복원 (없으면 신규)
+            const dataToRestore = cloudData.data[saveKey];
+            if (dataToRestore) {
+                localStorage.setItem(saveKey, JSON.stringify(dataToRestore));
+                console.log(`[AuthView] 데이터 복원 완료: ${saveKey}`);
+            }
+        }
+
+        // 회원가입 또는 로그인 시도
+        // Password is still dummy based on UID to prevent conflict with manual types
+        const fakePassword = 'google_' + googleUser.uid.substring(0, 8);
+
+        let authResult = await this.game.authManager.login(googleUsername, fakePassword);
+
+        // 만약 로그인 실패(존재하지 않음) -> 회원가입
+        if (!authResult.success) {
+            authResult = await this.game.authManager.signup(googleUsername, fakePassword, this.selectedPersona);
+        } else {
+            // 이미 존재하는 닉네임인데 비밀번호가 다르다면? (다른 사람이 선점)
+            // AuthManager simple login check returns false message
+            if (authResult.message === "비밀번호가 일치하지 않습니다.") {
+                alert("이미 사용 중인 닉네임입니다. 다른 닉네임을 선택해주세요.");
+                this._showNicknameModal();
+                return;
+            }
+        }
+
+        if (authResult.success) {
+            this._updateHeaderUserName(googleUsername);
+            this.game.startMainGame();
+            this._startAutoCloudSave();
+        } else {
+            alert("로그인 처리에 실패했습니다: " + authResult.message);
+        }
     }
 }

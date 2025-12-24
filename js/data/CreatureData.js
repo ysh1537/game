@@ -52,6 +52,7 @@ export const CREATURE_DEFS = [
         elements: ["Lightning", "Wind", "Light"],
         ego: "Warlord",
         baseStr: 55, baseInt: 65,
+        skillId: "zeus_skill",
         image: "images/creature_god_zeus.jpg",
         lore: {
             title: "올림포스의 지배자",
@@ -72,7 +73,22 @@ export const CREATURE_DEFS = [
             touch_chest_love: "후후... 네 손길, 나쁘지 않구나. 계속해 보거라.",
             touch_legs: "내 발밑에 엎드려라. 그게 너에게 어울리는 위치다.",
             touch_special: "무릎 꿇어라! 이것이 신의 분노다!"
-        }
+        },
+        // [NEW] Dynamic Battle Sprites
+        sprites: {
+            idle: "images/creature_god_zeus.jpg",
+            attack: "images/creature_god_zeus_attack.jpg", // Placeholder
+            skill: "images/creature_god_zeus_skill.jpg",   // Placeholder
+            damage: "images/creature_god_zeus_damage.jpg", // Placeholder
+            win: "images/creature_god_zeus_win.jpg"        // Placeholder
+        },
+        // [NEW] Affection Gallery
+        gallery: [
+            { id: "zeus_basic", level: 1, image: "images/creature_god_zeus.jpg", title: "기본 일러스트", desc: "제우스의 기본 모습입니다." },
+            { id: "zeus_shy", level: 3, image: "images/creature_god_zeus_shy.jpg", title: "수줍은 제우스", desc: "이런 표정은 처음 보시나요?" },
+            { id: "zeus_angry", level: 5, image: "images/creature_god_zeus_angry.jpg", title: "분노한 제우스", desc: "진심으로 화가 난 모습입니다." },
+            { id: "zeus_love", level: 10, image: "images/creature_god_zeus_love.jpg", title: "사랑에 빠진 제우스", desc: "당신만을 바라보는 눈빛입니다." }
+        ]
     },
     {
         id: "time_lord_chronos",
@@ -82,6 +98,7 @@ export const CREATURE_DEFS = [
         elements: ["Time", "Void", "Ice"],
         ego: "Seeker",
         baseStr: 40, baseInt: 80,
+        skillId: "chronos_skill",
         image: "images/creature_time_lord_chronos.png?v=5",
         lore: {
             title: "시간을 삼키는 자",
@@ -112,6 +129,7 @@ export const CREATURE_DEFS = [
         elements: ["Light", "Fire", "Wind"],
         ego: "Star",
         baseStr: 45, baseInt: 55,
+        skillId: "angel_skill",
         image: "images/creature_angel_arch.png?v=5",
         lore: {
             title: "천상의 검",
@@ -290,6 +308,7 @@ export const CREATURE_DEFS = [
         elements: ["Light", "Wind", "Magic"],
         ego: "Seeker",
         baseStr: 45, baseInt: 75,
+        skillId: "odin_skill",
         image: "images/creature_god_odin.png",
         lore: {
             title: "지혜의 대가를 치른 자",
@@ -456,6 +475,7 @@ export const CREATURE_DEFS = [
         ego: "Star",
         baseStr: 55, baseInt: 75,
         isHidden: true, // 히든 플래그
+        skillId: "miho_skill",
         image: "images/creature_fox_nine_ur.png",
         lines: {
             normal: "천 년을 기다렸어... 드디어 너를 만났구나.",

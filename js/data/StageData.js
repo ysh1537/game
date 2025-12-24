@@ -2,22 +2,24 @@
 export const StageData = [];
 
 // Base Stats for Level 1
+// Base Stats for Level 1
 const BASE_HP = 100;
 const BASE_ATK = 10;
-const BASE_DEF = 2;
+const BASE_DEF = 1; // [Mod] 방어력 효율 과다 방지 (2 -> 1)
 
 // Biome Configurations
+// Biome Configurations - Dimension 1: Greek Mythology (Olympus)
 const BIOMES = [
-    { start: 1, end: 10, name: "Slime Forest", mobs: ["slime_green"], boss: "slime_red", bossName: "King Slime" },
-    { start: 11, end: 20, name: "Goblin Camp", mobs: ["goblin_scout"], boss: "goblin_scout", bossName: "Goblin Warlord" }, // reusing goblin image for boss
-    { start: 21, end: 30, name: "Deep Ocean", mobs: ["fish_flying", "kraken_baby"], boss: "kraken_baby", bossName: "Abyssal Kraken" },
-    { start: 31, end: 40, name: "Dark Cave", mobs: ["rat_brown", "bat_small"], boss: "bat_small", bossName: "Vampire Bat" },
-    { start: 41, end: 50, name: "Volcanic Lands", mobs: ["mage_flame"], boss: "dragon_drake", bossName: "Fire Drake" },
-    { start: 51, end: 60, name: "Frozen Wastes", mobs: ["bear_ice", "elemental_water"], boss: "titan_atlas", bossName: "Ice Titan" }, // visual proxy
-    { start: 61, end: 70, name: "Iron Fortress", mobs: ["eagle_iron", "knight_skeleton"], boss: "knight_skeleton", bossName: "Death Knight" },
-    { start: 71, end: 80, name: "Shadow Realm", mobs: ["ninja_shadow", "vampire_lord"], boss: "vampire_lord", bossName: "Vampire Lord" },
-    { start: 81, end: 90, name: "Celestial Sky", mobs: ["flower_fairy", "unicorn_young"], boss: "angel_arch", bossName: "Archangel Michael" },
-    { start: 91, end: 100, name: "Chaos Void", mobs: ["void_emperor"], boss: "dragon_ancient", bossName: "Void Emperor Dragon" }
+    { start: 1, end: 10, name: "Nemean Forest", mobs: ["wolf_dire", "rat_brown"], boss: "lion_nemean", bossName: "Nemean Lion" },
+    { start: 11, end: 20, name: "Lerna Swamp", mobs: ["slime_green", "snake_poison"], boss: "hydra_lernaean", bossName: "Lernaean Hydra" },
+    { start: 21, end: 30, name: "Ceryneian Highlands", mobs: ["deer_horn", "satyr_scout"], boss: "hind_golden", bossName: "Golden Hind" },
+    { start: 31, end: 40, name: "Erymanthian Wilds", mobs: ["boar_wild", "bear_brown"], boss: "boar_erymanthian", bossName: "Erymanthian Boar" },
+    { start: 41, end: 50, name: "Stymphalian Lake", mobs: ["bird_bronze", "harpy_wind"], boss: "bird_stymphalian", bossName: "Stymphalian Bird" },
+    { start: 51, end: 60, name: "Cretan Labyrinth", mobs: ["skeleton_warrior", "bull_mad"], boss: "minotaur_king", bossName: "Minotaur King" },
+    { start: 61, end: 70, name: "Garden of Hesperides", mobs: ["dragon_ladon_spawn", "nymph_dark"], boss: "dragon_ladon", bossName: "Ladon the Dragon" },
+    { start: 71, end: 80, name: "Underworld Entrance", mobs: ["hound_hell", "spirit_lost"], boss: "cerberus_guardian", bossName: "Cerberus" },
+    { start: 81, end: 90, name: "Tartarus Depths", mobs: ["giant_cyclops", "titan_spawn"], boss: "titan_kronos_shade", bossName: "Shade of Kronos" },
+    { start: 91, end: 100, name: "Mount Olympus", mobs: ["automaton_gold", "eagle_zeus"], boss: "god_zeus_phantom", bossName: "Phantom of Zeus" }
 ];
 
 // Helper to get biome for a raw stage index (1-100)
@@ -32,7 +34,6 @@ function getBiome(stageIndex) {
  */
 export function getStage(stageId) {
     // 1. Determine Multiverse Cycle (Loop)
-    // Cycle 1: 1-100, Cycle 2: 101-200 ...
     const cycle = Math.floor((stageId - 1) / 100) + 1;
     const effectiveId = ((stageId - 1) % 100) + 1;
 
@@ -40,26 +41,25 @@ export function getStage(stageId) {
     const isBoss = effectiveId % 10 === 0;
     const biome = getBiome(effectiveId);
 
-    // 3. Scaling Logic
-    // Exponential growth per stage, plus a massive multiplier per Multiverse Cycle.
-    // Cycle 1: 1x, Cycle 2: 10x, Cycle 3: 100x...
-    const cycleMult = Math.pow(10, cycle - 1);
-    const stageMult = Math.pow(1.15, effectiveId);
+    // 3. Scaling Logic (Balanced)
+    // Slower exponential start, steeper late game
+    const cycleMult = Math.pow(5, cycle - 1); // Reduced from 10x to 5x per cycle
+    const stageMult = Math.pow(1.06, effectiveId); // [Mod] 1.08 -> 1.06 (HP 인플레이션 완화)
 
     const hpMult = stageMult * cycleMult;
-    const atkMult = Math.pow(1.1, effectiveId) * cycleMult;
+    const atkMult = Math.pow(1.07, effectiveId) * cycleMult; // [Mod] 1.06 -> 1.07 (공격력 강화)
 
     // 4. Construct Stage Object
     let stageName = `${biome.name} - ${effectiveId}`;
-    if (cycle > 1) stageName = `[Multiverse ${cycle}] ${stageName}`;
+    if (cycle > 1) stageName = `[Dimension ${cycle}] ${stageName}`;
     if (isBoss) stageName += " (BOSS)";
 
     let stage = {
         id: stageId,
         name: stageName,
         isBoss: isBoss,
-        rewardGold: Math.floor(50 * Math.pow(1.1, effectiveId) * cycleMult),
-        rewardExp: Math.floor(20 * Math.pow(1.1, effectiveId) * cycleMult),
+        rewardGold: Math.floor(50 * Math.pow(1.05, effectiveId) * cycleMult),
+        rewardExp: Math.floor(20 * Math.pow(1.05, effectiveId) * cycleMult),
         enemies: [],
         recommendedPower: 0
     };
@@ -71,38 +71,36 @@ export function getStage(stageId) {
     for (let j = 0; j < enemyCount; j++) {
         let enemyName = "Minion";
         let img = "images/creature_slime.png";
+        let enemyId = "minion";
 
         if (isBoss && j === Math.floor(enemyCount / 2)) {
             // Main Boss (Center)
             enemyName = biome.bossName;
-            // Here we would lookup image from CreatureData if possible, but hardcoding for now or using ID mapping
-            // Simplify: use biome boss ID to find image if we had access to CREATURE_DEFS, 
-            // but here we just used pre-defined IDs in BIOMES.
-            // We'll rely on a simple fallback or correct logic if we imported creature data. 
-            // Since we can't easily import circular refs, we might map IDs to file paths manually if strictly needed,
-            // or just use generic logic. For now, let's map known IDs.
+            enemyId = biome.boss;
             img = getCreatureImage(biome.boss);
         } else {
             // Mob
             const mobId = biome.mobs[Math.floor(Math.random() * biome.mobs.length)];
             enemyName = getCreatureName(mobId);
+            enemyId = mobId;
             img = getCreatureImage(mobId);
         }
 
-        const hp = Math.floor(BASE_HP * hpMult * (isBoss ? 2.5 : 1));
+        const hp = Math.floor(BASE_HP * hpMult * (isBoss ? 3.0 : 1)); // Boss HP buffed
         const atk = Math.floor(BASE_ATK * atkMult);
         const def = Math.floor(BASE_DEF * atkMult);
 
         stage.enemies.push({
             name: enemyName,
-            level: stageId, // Actual stage level
+            level: stageId,
             image: img,
             hp: hp,
             atk: atk,
             def: def,
+            elements: [], // Can be enhanced to match biome theme
+            skillId: 'default_attack'
         });
 
-        // Rough Power Calculation: HP/10 + Atk + Def
         totalPower += (hp / 10) + atk + def;
     }
 
@@ -111,36 +109,63 @@ export function getStage(stageId) {
     return stage;
 }
 
-// Simple Helpers to map IDs to assets without importing full Data (to avoid circular dep issues if any)
+// Simple Helpers to map IDs to assets without importing full Data
 function getCreatureImage(id) {
     // Map manual overrides or default
     const map = {
-        "slime_green": "images/creature_slime.png",
-        "slime_red": "images/creature_slime.png",
-        "goblin_scout": "images/creature_goblin_scout.png",
-        "kraken_baby": "images/creature_kraken_baby.png",
-        "fish_flying": "images/creature_fish_flying.png",
+        // Nemean Forest
+        "wolf_dire": "images/creature_wolf_dire.png",
         "rat_brown": "images/creature_rat_brown.png",
-        "bat_small": "images/creature_bat_small.png",
-        "mage_flame": "images/creature_mage_flame.png",
-        "dragon_drake": "images/creature_dragon_drake.png",
-        "bear_ice": "images/creature_bear_ice.png",
-        "elemental_water": "images/creature_elemental_water.png",
-        "titan_atlas": "images/creature_golem_mud.png",
-        "eagle_iron": "images/creature_eagle_iron.png",
-        "knight_skeleton": "images/creature_knight_skeleton.png",
-        "ninja_shadow": "images/creature_ninja_shadow.png",
-        "vampire_lord": "images/creature_vampire_lord.png",
-        "flower_fairy": "images/creature_flower_fairy.png",
-        "unicorn_young": "images/creature_unicorn_young.png",
-        "angel_arch": "images/creature_angel_arch.png",
-        "void_emperor": "images/creature_void_emperor.png",
-        "dragon_ancient": "images/creature_dragon_ancient.png"
+        "lion_nemean": "images/creature_wolf_dire.png", // Proxy: Wolf
+
+        // Lerna Swamp
+        "slime_green": "images/creature_slime.png",
+        "snake_poison": "images/creature_dragon_chaos_final.png", // Proxy: Poison look
+        "hydra_lernaean": "images/creature_dragon_ancient_final.png", // Proxy: Dragon
+
+        // Ceryneian Highlands
+        "deer_horn": "images/creature_unicorn_young.png", // Proxy: Horse-like
+        "satyr_scout": "images/creature_goblin_scout.png", // Proxy: Goblin
+        "hind_golden": "images/creature_unicorn_young.png", // Proxy: Unicorn
+
+        // Erymanthian Wilds
+        "boar_wild": "images/creature_bear_ice.png", // Proxy: Beast
+        "bear_brown": "images/creature_bear_ice.png",
+        "boar_erymanthian": "images/creature_bear_ice.png", // Proxy: Big Beast
+
+        // Stymphalian Lake
+        "bird_bronze": "images/creature_eagle_iron.png",
+        "harpy_wind": "images/creature_bat_small.png",
+        "bird_stymphalian": "images/creature_eagle_iron.png",
+
+        // Cretan Labyrinth
+        "skeleton_warrior": "images/creature_knight_skeleton.png",
+        "bull_mad": "images/creature_golem_mud.png", // Proxy: Tough mob
+        "minotaur_king": "images/creature_demon_king_final_v3.png", // Proxy: Demon King as Boss
+
+        // Garden of Hesperides
+        "dragon_ladon_spawn": "images/creature_dragon_drake.png",
+        "nymph_dark": "images/creature_flower_fairy.png",
+        "dragon_ladon": "images/creature_dragon_ancient_final.png",
+
+        // Underworld Entrance
+        "hound_hell": "images/creature_wolf_dire.png", // Proxy: Dark Wolf
+        "spirit_lost": "images/creature_wisp_faint.png",
+        "cerberus_guardian": "images/creature_wolf_fenrir.png", // Proxy: Fenrir
+
+        // Tartarus Depths
+        "giant_cyclops": "images/creature_golem_mud.png",
+        "titan_spawn": "images/creature_demon_king.png",
+        "titan_kronos_shade": "images/creature_demon_king_final_v3.png",
+
+        // Mount Olympus
+        "automaton_gold": "images/creature_knight_skeleton.png", // Proxy: Golden Knight
+        "eagle_zeus": "images/creature_eagle_iron.png",
+        "god_zeus_phantom": "images/creature_god_zeus.jpg"
     };
     return map[id] || "images/creature_slime.png";
 }
 
 function getCreatureName(id) {
-    // Just for flavor
-    return id.replace("_", " ").toUpperCase();
+    return id.replace(/_/g, " ").toUpperCase();
 }
