@@ -147,6 +147,55 @@ export default class AuthView extends BaseView {
         // 초기화 시 UI 업데이트
         this._updatePersonaInfo();
         this._updateAuthFormUI();
+
+        // [Fix] 새로고침 시 Firebase 인증 상태 자동 확인
+        if (window.FirebaseService) {
+            window.FirebaseService.onAuthStateChanged(async (user) => {
+                if (user && !this.game.authManager.isLoggedIn()) {
+                    console.log('[AuthView] Firebase 세션 감지, 자동 접속 시도:', user.displayName);
+                    this._setAuthMessage('기존 세션 복구 중...');
+
+                    const googleUsername = user.displayName || user.email.split('@')[0];
+                    const fakePassword = 'google_' + user.uid.substring(0, 8);
+
+                    // 1. 필요한 경우 데이터 마이그레이션/복구 수행
+                    await this._syncGoogleUserData(user, googleUsername);
+
+                    // 2. AuthManager 로그인 처리 (세션 동기화)
+                    let authResult = await this.game.authManager.login(googleUsername, fakePassword);
+                    if (!authResult.success) {
+                        authResult = await this.game.authManager.signup(googleUsername, fakePassword, this.selectedPersona);
+                    }
+
+                    if (authResult.success) {
+                        this._updateHeaderUserName(googleUsername);
+                        this.game.startMainGame();
+                        this._startAutoCloudSave();
+                    }
+                }
+            });
+        }
+    }
+
+    /**
+     * Google 유저 데이터 동기화 및 마이그레이션 헬퍼
+     */
+    async _syncGoogleUserData(user, username) {
+        const saveKey = `mclab_save_${username}`;
+
+        // 로컬에 이미 데이터가 있다면 스킵 (불필요한 네트워크 호출 방지)
+        if (localStorage.getItem(saveKey)) return;
+
+        console.log('[AuthView] 로컬 데이터 없음, 클라우드 로드 시도...');
+        const cloudData = await window.FirebaseService.loadGameData();
+        if (cloudData.success && cloudData.data) {
+            const dataToRestore = cloudData.data[saveKey] || cloudData.data['mclab_save_v1'] || cloudData.data['gameState'];
+
+            if (dataToRestore) {
+                localStorage.setItem(saveKey, JSON.stringify(dataToRestore));
+                console.log(`[AuthView] 클라우드 데이터 복원 완료: ${saveKey}`);
+            }
+        }
     }
 
     // [NEW] 자동 클라우드 저장 (5분마다)

@@ -206,11 +206,16 @@ function updateLobbyCharacter() {
 
         // Only save to 'lobbyCharacter' (weak persistence) if it's not a fixed preference
         // Fixed preference 'preferredLobbyCharacter' is only set via UI [Set as Lobby]
-        localStorage.setItem('lobbyCharacter', JSON.stringify({
-            instanceId: creature.instanceId,
-            image: img.src,
-            name: creature.def.name
-        }));
+        // [Defensive] Don't save if it's the default eagle unless it's explicitly preferred
+        const preferred = localStorage.getItem('preferredLobbyCharacter');
+        if (!preferred) {
+            // If we reached here via fallback, we save but don't consider it permanent
+            localStorage.setItem('lobbyCharacter', JSON.stringify({
+                instanceId: creature.instanceId,
+                image: img.src,
+                name: creature.def.name
+            }));
+        }
 
         // Update UI
         setTimeout(() => updateResonanceUI(creature), 50);
