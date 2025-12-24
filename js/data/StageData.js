@@ -116,12 +116,12 @@ function getCreatureImage(id) {
         // Nemean Forest
         "wolf_dire": "images/creature_wolf_dire.png",
         "rat_brown": "images/creature_rat_brown.png",
-        "lion_nemean": "images/creature_wolf_dire.png", // Proxy: Wolf
+        "lion_nemean": "images/lion_nemean.png", // [NEW] 생성된 보스 이미지
 
         // Lerna Swamp
         "slime_green": "images/creature_slime.png",
-        "snake_poison": "images/creature_dragon_chaos_final.png", // Proxy: Poison look
-        "hydra_lernaean": "images/creature_dragon_ancient_final.png", // Proxy: Dragon
+        "snake_poison": "images/creature_dragon_chaos_final.png",
+        "hydra_lernaean": "images/hydra_lernaean.png", // [NEW] 생성된 보스 이미지
 
         // Ceryneian Highlands
         "deer_horn": "images/creature_unicorn_young.png", // Proxy: Horse-like
@@ -140,8 +140,8 @@ function getCreatureImage(id) {
 
         // Cretan Labyrinth
         "skeleton_warrior": "images/creature_knight_skeleton.png",
-        "bull_mad": "images/creature_golem_mud.png", // Proxy: Tough mob
-        "minotaur_king": "images/creature_demon_king_final_v3.png", // Proxy: Demon King as Boss
+        "bull_mad": "images/creature_golem_mud.png",
+        "minotaur_king": "images/minotaur_king.png", // [NEW] 생성된 보스 이미지
 
         // Garden of Hesperides
         "dragon_ladon_spawn": "images/creature_dragon_drake.png",
@@ -149,14 +149,14 @@ function getCreatureImage(id) {
         "dragon_ladon": "images/creature_dragon_ancient_final.png",
 
         // Underworld Entrance
-        "hound_hell": "images/creature_wolf_dire.png", // Proxy: Dark Wolf
+        "hound_hell": "images/creature_wolf_dire.png",
         "spirit_lost": "images/creature_wisp_faint.png",
-        "cerberus_guardian": "images/creature_wolf_fenrir.png", // Proxy: Fenrir
+        "cerberus_guardian": "images/cerberus_guardian.png", // [NEW] 생성된 보스 이미지
 
         // Tartarus Depths
         "giant_cyclops": "images/creature_golem_mud.png",
         "titan_spawn": "images/creature_demon_king.png",
-        "titan_kronos_shade": "images/creature_demon_king_final_v3.png",
+        "titan_kronos_shade": "images/titan_kronos_shade.png", // [NEW] 생성된 보스 이미지
 
         // Mount Olympus
         "automaton_gold": "images/creature_knight_skeleton.png", // Proxy: Golden Knight
