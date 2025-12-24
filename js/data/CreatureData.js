@@ -161,10 +161,10 @@ export const CREATURE_DEFS = [
     // --- SSR (신화급) ---
     {
         id: "wolf_fenrir",
-        name: "사슬의 늑대 펜리르",
+        name: "종말의 늑대 펜리르",
         rarity: RANKS.SSR,
         world: WORLDS.ASGARD,
-        elements: ["Dark", "Ice"],
+        elements: ["Dark", "Ice", "Beast"],
         ego: "Berserker",
         baseStr: 55, baseInt: 30,
         image: "images/creature_wolf_fenrir.png",
@@ -179,9 +179,13 @@ export const CREATURE_DEFS = [
             synergy: { ally: ["wolf_dire", "demon_king"], rival: ["god_odin", "valkyrie"] }
         },
         lines: {
-            normal: "...사슬이 풀리는 날, 이 세계는 끝난다.",
-            touch_happy: "...만져도 괜찮아. 아직은... 자제할 수 있어.",
-            touch_angry: "거기가 어딘데 만지는 거야?! 진정해... 진정...!"
+            normal: "이 사슬... 끊어버리겠어!",
+            touch_head: "크르릉... 쓰다듬는 건... 딱 한 번만 허락하지.",
+            touch_chest: "심장 소리가 거세지는 건... 굶주림 때문이야!",
+            touch_chest_reject: "크르르! 함부로 만지지 마!",
+            touch_chest_love: "흥... 너한테만 예외를 두는 거야.",
+            touch_legs: "발목 사슬은 이미 끊었어. 다음은 네 마음이야.",
+            touch_special: "라그나로크의 시작이다!"
         }
     },
 
@@ -276,27 +280,6 @@ export const CREATURE_DEFS = [
             touch_chest: "차가운 대지처럼 굳어있던 내 심장이... 뛰는군.",
             touch_legs: "서두르지 마라. 지혜는 천천히 얻는 법이다.",
             touch_special: "궁니르여, 적을 꿰뚫어라!"
-        }
-    },
-
-    // --- SSR (터치 상호작용 O) ---
-    {
-        id: "wolf_fenrir",
-        name: "종말의 늑대 펜리르",
-        rarity: RANKS.SSR,
-        world: WORLDS.ASGARD,
-        elements: ["Dark", "Ice", "Beast"],
-        ego: "Warlord",
-        baseStr: 70, baseInt: 25,
-        image: "images/creature_fenrir.jpg", // [Fix] Found existing asset
-        lines: {
-            normal: "이 사슬... 끊어버리겠어!",
-            touch_head: "크르릉... 쓰다듬는 건... 딱 한 번만 허락하지.",
-            touch_chest: "심장 소리가 거세지는 건... 굶주림 때문이야!",
-            touch_chest_reject: "크르르! 함부로 만지지 마!",
-            touch_chest_love: "흥... 너한테만 예외를 두는 거야.",
-            touch_legs: "발목 사슬은 이미 끊었어. 다음은 네 마음이야.",
-            touch_special: "라그나로크의 시작이다!"
         }
     },
 

@@ -3086,3 +3086,32 @@ h6 {
     padding: 1px 4px;
     border-radius: 4px;
 }
+/* =========================================
+   UI 개선 - 2024-12-24
+   ========================================= */
+
+/* lobby-buttons 클릭 가능하게 수정 */
+#lobby-buttons {
+    pointer-events: auto !important;
+    z-index: 100;
+}
+
+#lobby-buttons button {
+    pointer-events: auto !important;
+}
+
+/* 도감 모드에서 활동로그 숨김 */
+body.archive-mode #right-panel,
+body.archive-mode #log-panel {
+    display: none !important;
+}
+
+/* 도감 모드에서 좌우 패널 레이아웃 조정 */
+body.archive-mode #left-panel {
+    flex: 1 !important;
+    max-width: none !important;
+}
+
+body.archive-mode #center-panel {
+    display: none !important;
+}
