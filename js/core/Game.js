@@ -24,6 +24,7 @@ import SaveManager from '../utils/SaveManager.js';
 import BattleScene from '../scenes/BattleScene.js';
 import SummonScene from '../scenes/SummonScene.js';
 import AudioManager from '../managers/AudioManager.js'; // [NEW] Audio Manager
+import SettingsView from '../ui/SettingsView.js'; // [NEW] Settings View
 
 import UIManager from '../managers/UIManager.js'; // [Mod] Import moved to top
 
@@ -39,6 +40,7 @@ export default class Game {
         this.events = new EventEmitter();
         this.langManager = new LanguageManager();
         this.uiManager = new UIManager(this); // [Mod] Init UIManager
+        this.settingsView = new SettingsView(this); // [NEW] Init Settings View
         this.authManager = new AuthManager();
 
         // 1. Core Managers (Dependencies)
