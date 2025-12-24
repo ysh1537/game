@@ -177,8 +177,13 @@ function updateLobbyCharacter() {
     }
 
     // 4. Fallback: Highest Rarity Owned
-    if (!creature && game.creatureManager.owned.length > 0) {
-        // Sort by Rarity (Desc) -> ID (Asc) for consistency
+    if (!creature) {
+        // [Defensive] 데이터 로드 전이라면 초기화하지 않고 대기
+        if (game.creatureManager.owned.length === 0) {
+            console.log("[Lobby] Still loading creatures, skipping fallback update.");
+            return;
+        }
+        // Sort by Rarity (Desc) -> ID (Asc)
         const sorted = [...game.creatureManager.owned].sort((a, b) => {
             if (b.def.rarity !== a.def.rarity) return b.def.rarity - a.def.rarity;
             return a.def.id.localeCompare(b.def.id);
