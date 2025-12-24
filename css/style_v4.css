@@ -569,13 +569,22 @@ h6 {
 .creature-card-mini {
     position: relative;
     width: 100%;
-    aspect-ratio: 3/4;
+    aspect-ratio: 1/1;
+    /* 정사각형으로 변경하여 더 많은 카드 표시 */
     background: var(--bg-card);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     overflow: hidden;
     cursor: pointer;
     transition: var(--transition-smooth);
     border: 2px solid var(--border-subtle);
+}
+
+/* 도감 그리드 최적화 - 더 많은 크리처 표시 */
+#content-home .creature-card-mini,
+.archive-mode .creature-card-mini {
+    aspect-ratio: 1/1;
+    min-width: 70px;
+    max-width: 100px;
 }
 
 .creature-card-mini:hover {

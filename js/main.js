@@ -452,18 +452,24 @@ function updateResonanceUI(creature) {
 
 // =========================================
 // 쿠폰 코드 시스템
-// =========================================
 const COUPON_CODES = {
     'YESOL2025': {
         type: 'creatures',
-        description: 'UR/SSR/SR 크리처 전체 20마리',
+        description: 'UR/SSR/SR/Special/Rare 크리처 전체',
         creatures: [
             // UR (7개)
             'god_zeus', 'time_lord_chronos', 'god_odin', 'dragon_ancient', 'void_emperor', 'dragon_chaos', 'creator_gaia',
             // SSR (5개)
-            'angel_arch', 'wolf_fenrir', 'phoenix_eternal', 'demon_king', 'dragon_drake',
-            // SR (8개)
-            'titan_atlas', 'valkyrie', 'giant_hill', 'fox_nine', 'vampire_lord', 'kraken_baby', 'chimera_beast'
+            'angel_arch', 'wolf_fenrir', 'phoenix_eternal', 'demon_king', 'fox_nine_hidden',
+            // SR (10개)
+            'titan_atlas', 'valkyrie', 'giant_hill', 'fox_nine', 'vampire_lord', 'kraken_baby', 'chimera_beast',
+            'bear_ice', 'dwarf_smith', 'eagle_iron',
+            // Special (10개)
+            'mage_flame', 'unicorn_young', 'ninja_shadow', 'panda_monk', 'gargoyle_stone',
+            'ent_ancient', 'ink_spirit', 'snow_spirit', 'knight_skeleton', 'elemental_water',
+            // Rare (8개)
+            'centaur_scout', 'wolf_dire', 'dragon_drake', 'golem_mud', 'flower_fairy',
+            'fish_flying', 'mushroom_angry', 'goblin_scout'
         ]
     },
     'GOLDRICH': {
