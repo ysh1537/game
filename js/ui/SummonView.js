@@ -298,7 +298,7 @@ export default class SummonView extends BaseView {
 
             item.innerHTML = `
                 <div style="position:relative; border:1px solid rgba(255,255,255,0.2); border-radius:8px; overflow:hidden; background:rgba(0,0,0,0.5);">
-                    <img src="${imgPath}" onerror="this.src='images/creature_slime.png'" style="width:100%; height:80px; object-fit:cover;">
+                    <img src="${imgPath}" onerror="this.src='images/creature_slime.png'" style="width:100%; height:80px; object-fit:cover; object-position:top;">
                     <div style="position:absolute; bottom:0; padding:1px 5px; background:rgba(0,0,0,0.7); font-size:0.6rem; width:100%; text-align:center; color:${color}; border-top:1px solid ${color};">
                         ${c.def.rarity}
                     </div>

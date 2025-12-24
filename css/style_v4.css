@@ -3037,6 +3037,7 @@ h6 {
         filter: brightness(1.5) drop-shadow(0 0 8px #00d2ff);
     }
 }
+
 /* Expedition Map Units */
 .map-unit {
     position: absolute;
@@ -3047,6 +3048,7 @@ h6 {
     z-index: 10;
     transition: all 1s linear;
 }
+
 .map-unit-icon {
     width: 40px;
     height: 40px;
@@ -3057,18 +3059,21 @@ h6 {
     box-shadow: 0 0 10px var(--accent-cyan);
     position: relative;
 }
+
 .map-unit-icon img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
 }
+
 .map-unit-label {
     margin-top: 4px;
     font-size: 0.75rem;
     color: white;
     text-shadow: 0 1px 2px #000;
     white-space: nowrap;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     padding: 1px 4px;
     border-radius: 4px;
 }

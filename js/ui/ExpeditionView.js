@@ -171,7 +171,7 @@ export default class ExpeditionView extends BaseView {
             div.innerHTML = `
                 <div style="display:flex; gap:15px; align-items:center;">
                     <div style="width:50px; height:50px; border-radius:50%; overflow:hidden; border:2px solid var(--accent-primary);">
-                        <img src="${creatureImg}" style="width:100%; height:100%; object-fit:cover;">
+                        <img src="${creatureImg}" style="width:100%; height:100%; object-fit:cover; object-position:top;">
                     </div>
                     <div style="flex:1;">
                         <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
@@ -347,7 +347,7 @@ export default class ExpeditionView extends BaseView {
 
             item.innerHTML = `
                 <div style="width:50px; height:50px; border-radius:50%; overflow:hidden; border:2px solid ${borderColor};">
-                    <img src="${c.def.image}" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='images/creature_slime.png'">
+                    <img src="${c.def.image}" style="width:100%; height:100%; object-fit:cover; object-position:top;" onerror="this.src='images/creature_slime.png'">
                 </div>
                 <div style="font-size:0.8rem; font-weight:bold; color:white; text-align:center;">${c.def.name}</div>
                 <div style="font-size:0.7rem; color:#aaa;">Lv.${c.level}</div>

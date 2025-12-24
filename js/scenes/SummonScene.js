@@ -144,7 +144,7 @@ export default class SummonScene {
             const color = this.fx.getRarityColor(creature.def.rarity);
 
             card.innerHTML = `
-                <img src="${creature.def.image}" style="width:100%; height:100%; object-fit:cover;">
+                <img src="${creature.def.image}" style="width:100%; height:100%; object-fit:cover; object-position:top;">
                 <div class="info">
                     <div style="font-weight:bold; color:${color}">${creature.def.rarity}</div>
                     <div>${creature.def.name}</div>
