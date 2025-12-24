@@ -120,46 +120,46 @@ function getCreatureImage(id) {
 
         // Lerna Swamp
         "slime_green": "images/creature_slime.png",
-        "snake_poison": "images/creature_dragon_chaos_final.png",
-        "hydra_lernaean": "images/hydra_lernaean.png", // [NEW] 생성된 보스 이미지
+        "snake_poison": "images/snake_poison.png", // [NEW] 생성된 이미지
+        "hydra_lernaean": "images/hydra_lernaean.png",
 
         // Ceryneian Highlands
-        "deer_horn": "images/creature_unicorn_young.png", // Proxy: Horse-like
-        "satyr_scout": "images/creature_goblin_scout.png", // Proxy: Goblin
-        "hind_golden": "images/creature_unicorn_young.png", // Proxy: Unicorn
+        "deer_horn": "images/creature_unicorn_young.png",
+        "satyr_scout": "images/satyr_scout.png", // [NEW] 생성된 이미지
+        "hind_golden": "images/creature_unicorn_young.png",
 
         // Erymanthian Wilds
-        "boar_wild": "images/creature_bear_ice.png", // Proxy: Beast
+        "boar_wild": "images/creature_bear_ice.png",
         "bear_brown": "images/creature_bear_ice.png",
-        "boar_erymanthian": "images/creature_bear_ice.png", // Proxy: Big Beast
+        "boar_erymanthian": "images/creature_bear_ice.png",
 
         // Stymphalian Lake
         "bird_bronze": "images/creature_eagle_iron.png",
-        "harpy_wind": "images/creature_bat_small.png",
+        "harpy_wind": "images/harpy_wind.png", // [NEW] 생성된 이미지
         "bird_stymphalian": "images/creature_eagle_iron.png",
 
         // Cretan Labyrinth
         "skeleton_warrior": "images/creature_knight_skeleton.png",
         "bull_mad": "images/creature_golem_mud.png",
-        "minotaur_king": "images/minotaur_king.png", // [NEW] 생성된 보스 이미지
+        "minotaur_king": "images/minotaur_king.png",
 
         // Garden of Hesperides
         "dragon_ladon_spawn": "images/creature_dragon_drake.png",
-        "nymph_dark": "images/creature_flower_fairy.png",
+        "nymph_dark": "images/nymph_dark.png", // [NEW] 생성된 이미지
         "dragon_ladon": "images/creature_dragon_ancient_final.png",
 
         // Underworld Entrance
         "hound_hell": "images/creature_wolf_dire.png",
-        "spirit_lost": "images/creature_wisp_faint.png",
-        "cerberus_guardian": "images/cerberus_guardian.png", // [NEW] 생성된 보스 이미지
+        "spirit_lost": "images/spirit_lost.png", // [NEW] 생성된 이미지
+        "cerberus_guardian": "images/cerberus_guardian.png",
 
         // Tartarus Depths
-        "giant_cyclops": "images/creature_golem_mud.png",
+        "giant_cyclops": "images/giant_cyclops.png", // [NEW] 생성된 이미지
         "titan_spawn": "images/creature_demon_king.png",
-        "titan_kronos_shade": "images/titan_kronos_shade.png", // [NEW] 생성된 보스 이미지
+        "titan_kronos_shade": "images/titan_kronos_shade.png",
 
         // Mount Olympus
-        "automaton_gold": "images/creature_knight_skeleton.png", // Proxy: Golden Knight
+        "automaton_gold": "images/creature_knight_skeleton.png",
         "eagle_zeus": "images/creature_eagle_iron.png",
         "god_zeus_phantom": "images/creature_god_zeus.jpg"
     };
