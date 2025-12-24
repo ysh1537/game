@@ -216,18 +216,8 @@ export default class CreatureView extends BaseView {
                         this._handleDeckSelect(c, currentDeckIds);
                     } else {
                         this.game.creatureManager.selectCreature(c.instanceId);
-                        // 로비 캐릭터 변경 Logic
-                        const lobbyImg = document.getElementById('lobby-character-img');
-                        if (lobbyImg && c.def) {
-                            lobbyImg.src = c.def.image;
-                            lobbyImg.alt = c.def.name;
-                            localStorage.setItem('lobbyCharacter', JSON.stringify({
-                                image: c.def.image,
-                                name: c.def.name,
-                                instanceId: c.instanceId
-                            }));
-                            this.uiManager.addLog(`로비 캐릭터를 ${c.def.name}(으)로 변경했습니다.`, 'success');
-                        }
+                        // 상세 패널 표시 (로비 캐릭터 자동 변경 제거)
+                        this.renderDetailPanel(c);
                     }
                 };
             } else {
@@ -329,6 +319,8 @@ export default class CreatureView extends BaseView {
                     <button id="btn-compose-creature" class="cyber-btn">강화 / 합성</button>
                     <button id="btn-evolve-creature" class="cyber-btn ${this._canEvolveUI(c).canEvolve ? 'premium' : ''}" ${this._canEvolveUI(c).canEvolve ? '' : 'disabled'} style="${this._canEvolveUI(c).canEvolve ? 'background:linear-gradient(135deg,#ff9800,#ff5722);' : ''}">${this._canEvolveUI(c).canEvolve ? '🦋 진화 가능!' : '🔒 진화'}</button>
                     ${this._canEvolveUI(c).evolvesTo ? `<div style="grid-column:span 2; font-size:0.8rem; color:#aaa; text-align:center;">진화 조건: ${this._canEvolveUI(c).reason || '조건 충족!'}</div>` : ''}
+                    <button id="btn-set-representative" class="cyber-btn" style="grid-column: span 2; background: linear-gradient(135deg, #e91e63, #ad1457);">⭐ 대표 크리처로 설정</button>
+                    ${c.def.lore ? `<button id="btn-show-story" class="cyber-btn" style="grid-column: span 2; background: linear-gradient(135deg, #9c27b0, #673ab7);">📖 스토리 보기</button>` : ''}
                     <div style="grid-column: span 2; display:flex; justify-content:center; margin-top:10px;">
                         ${lockBtnHtml}
                     </div>
@@ -362,6 +354,25 @@ export default class CreatureView extends BaseView {
         if (evolveBtn && !evolveBtn.disabled) {
             evolveBtn.onclick = () => this._handleEvolve(c.instanceId);
         }
+
+        // 대표 크리처 설정 버튼
+        const repBtn = document.getElementById('btn-set-representative');
+        if (repBtn) {
+            repBtn.onclick = () => {
+                this.game.creatureManager.setRepresentative(c.instanceId);
+                // 로비 캐릭터 이미지 업데이트
+                const lobbyImg = document.getElementById('lobby-character-img');
+                if (lobbyImg) lobbyImg.src = c.def.image;
+                alert(`${c.def.name}을(를) 대표 크리처로 설정했습니다!`);
+                modal.style.display = 'none';
+            };
+        }
+
+        // 스토리 보기 버튼
+        const storyBtn = document.getElementById('btn-show-story');
+        if (storyBtn && c.def.lore) {
+            storyBtn.onclick = () => this._showStoryModal(c);
+        }
     }
 
     /**
@@ -371,6 +382,85 @@ export default class CreatureView extends BaseView {
         if (!c) return { canEvolve: false };
         return this.game.creatureManager.canEvolve(c.instanceId);
     }
+
+    /**
+     * 스토리 모달 표시 (전용 모달)
+     */
+    _showStoryModal(c) {
+        if (!c || !c.def.lore) return;
+
+        const lore = c.def.lore;
+        const allDefs = this.game.creatureManager.getAllCreatureDefs();
+
+        const relHtml = lore.relationships?.map(rel => {
+            const typeEmoji = rel.type === 'ally' ? '🤝' : rel.type === 'rival' ? '⚔️' : '👨‍👩‍👧';
+            const typeLabel = rel.type === 'ally' ? '동맹' : rel.type === 'rival' ? '라이벌' : '가족';
+            const typeColor = rel.type === 'ally' ? '#66bb6a' : rel.type === 'rival' ? '#ef5350' : '#f48fb1';
+
+            // 관련 크리처 이름 조회
+            const relCreature = allDefs.find(d => d.id === rel.id);
+            const relName = relCreature ? relCreature.name : rel.id;
+
+            return `
+                <div style="margin:8px 0; padding:12px; background:linear-gradient(135deg, rgba(0,0,0,0.4), rgba(30,30,50,0.4)); border-radius:10px; border-left:3px solid ${typeColor};">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                        <span style="color:${typeColor}; font-weight:bold; font-size:1rem;">${typeEmoji} ${typeLabel}</span>
+                        <span style="color:var(--accent-gold); font-size:0.9rem;">→ ${relName}</span>
+                    </div>
+                    <div style="color:#ccc; font-size:0.9rem; line-height:1.5;">${rel.desc}</div>
+                </div>`;
+        }).join('') || '<div style="color:#666; padding:10px;">관계 정보가 없습니다.</div>';
+
+        // 기존 스토리 모달 제거
+        const existingModal = document.getElementById('story-modal');
+        if (existingModal) existingModal.remove();
+
+        // 새 모달 생성
+        const modal = document.createElement('div');
+        modal.id = 'story-modal';
+        modal.style.cssText = `
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.85); z-index: 3000;
+            display: flex; justify-content: center; align-items: center;
+            backdrop-filter: blur(5px);
+        `;
+
+        modal.innerHTML = `
+            <div style="max-width:550px; max-height:80vh; overflow-y:auto; background:linear-gradient(135deg, #1a1a2e, #16213e); 
+                        border-radius:16px; padding:25px; border:2px solid var(--accent-gold); box-shadow: 0 0 30px rgba(241,196,15,0.3);">
+                <div style="display:flex; align-items:center; gap:15px; margin-bottom:20px; padding-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.2);">
+                    <img src="${c.def.image}" style="width:80px; height:80px; border-radius:12px; object-fit:cover; border:2px solid var(--accent-gold);">
+                    <div>
+                        <h2 style="color:var(--accent-gold); margin:0; font-size:1.4rem;">📖 ${lore.title || c.def.name}</h2>
+                        <div style="color:#888; font-size:0.9rem; margin-top:5px;">출신: ${lore.origin || '불명'}</div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom:25px;">
+                    <h3 style="color:var(--accent-cyan); margin-bottom:10px; font-size:1.1rem;">📜 이야기</h3>
+                    <p style="line-height:1.8; color:#ddd; font-size:0.95rem; background:rgba(0,0,0,0.2); padding:15px; border-radius:10px;">
+                        ${lore.story || '스토리 정보가 없습니다.'}
+                    </p>
+                </div>
+                
+                <div style="margin-bottom:20px;">
+                    <h3 style="color:var(--accent-cyan); margin-bottom:10px; font-size:1.1rem;">👥 관계</h3>
+                    ${relHtml}
+                </div>
+
+                <button id="btn-close-story" class="cyber-btn" style="width:100%; padding:15px; font-size:1rem; background:linear-gradient(135deg, #e91e63, #ad1457);">
+                    닫기
+                </button>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        // 닫기 버튼 이벤트
+        document.getElementById('btn-close-story').onclick = () => modal.remove();
+        modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+    }
+
 
     /**
      * 진화 실행 핸들러

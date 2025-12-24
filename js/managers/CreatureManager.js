@@ -53,6 +53,23 @@ export default class CreatureManager extends EventEmitter {
         this.owned = [];
         this.nextInstanceId = 1;
         this.selectedId = null;
+        this.representativeId = null; // 대표 크리처 ID
+    }
+
+    // 대표 크리처 설정
+    setRepresentative(instanceId) {
+        this.representativeId = instanceId;
+        const c = this.getCreatureById(instanceId);
+        if (c) {
+            this.emit('representative:changed', c);
+        }
+        if (this.game) this.game.save();
+    }
+
+    // 대표 크리처 조회
+    getRepresentative() {
+        if (!this.representativeId) return this.owned[0] || null;
+        return this.getCreatureById(this.representativeId) || this.owned[0] || null;
     }
 
     getAllCreatureDefs() {

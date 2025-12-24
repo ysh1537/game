@@ -454,23 +454,8 @@ function updateResonanceUI(creature) {
 // 쿠폰 코드 시스템
 const COUPON_CODES = {
     'YESOL2025': {
-        type: 'creatures',
-        description: 'UR/SSR/SR/Special/Rare 크리처 전체',
-        creatures: [
-            // UR (7개)
-            'god_zeus', 'time_lord_chronos', 'god_odin', 'dragon_ancient', 'void_emperor', 'dragon_chaos', 'creator_gaia',
-            // SSR (5개)
-            'angel_arch', 'wolf_fenrir', 'phoenix_eternal', 'demon_king', 'fox_nine_hidden',
-            // SR (10개)
-            'titan_atlas', 'valkyrie', 'giant_hill', 'fox_nine', 'vampire_lord', 'kraken_baby', 'chimera_beast',
-            'bear_ice', 'dwarf_smith', 'eagle_iron',
-            // Special (10개)
-            'mage_flame', 'unicorn_young', 'ninja_shadow', 'panda_monk', 'gargoyle_stone',
-            'ent_ancient', 'ink_spirit', 'snow_spirit', 'knight_skeleton', 'elemental_water',
-            // Rare (8개)
-            'centaur_scout', 'wolf_dire', 'dragon_drake', 'golem_mud', 'flower_fairy',
-            'fish_flying', 'mushroom_angry', 'goblin_scout'
-        ]
+        type: 'all_creatures',
+        description: '게임 내 모든 크리처 전체 지급'
     },
     'GOLDRICH': {
         type: 'gold',
@@ -523,8 +508,40 @@ function initCouponSystem() {
         } else if (coupon.type === 'gem') {
             game.resourceManager.addGem(coupon.amount);
             rewards.push(`💎 젬 +${coupon.amount}`);
+        } else if (coupon.type === 'all_creatures') {
+            // [NEW] 모든 크리처 동적 지급
+            const module = await import('./data/CreatureData.js');
+            const cm = game.creatureManager;
+            let addedCount = 0;
+
+            // CREATURE_DEFS에 있는 모든 크리처를 순회
+            module.CREATURE_DEFS.forEach(def => {
+                // 중복 체크 (이미 보유한 크리처는 스킵)
+                const alreadyOwned = cm.owned.some(c => c.def.id === def.id);
+                if (alreadyOwned) return;
+
+                const newCreature = {
+                    instanceId: cm.nextInstanceId++,
+                    dataId: def.id,
+                    def: def,
+                    level: 1,
+                    exp: 0,
+                    star: 0,
+                    affection: 0,
+                    battleCount: 0,
+                    expeditionCount: 0,
+                    acquiredAt: new Date(),
+                    stats: {}
+                };
+                cm.recalculateStats(newCreature);
+                cm.owned.push(newCreature);
+                addedCount++;
+            });
+
+            cm.emit('creatures:updated', cm.owned);
+            rewards.push(`🎴 전체 크리처 ${addedCount}마리 획득! (총 ${module.CREATURE_DEFS.length}종)`);
         } else if (coupon.type === 'creatures') {
-            // Dynamic import for creature definitions
+            // 기존 특정 크리처 지급 로직
             const module = await import('./data/CreatureData.js');
             const cm = game.creatureManager;
             let addedCount = 0;

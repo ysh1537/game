@@ -6,7 +6,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg?style=flat-square)](#)
-[![Play Now](https://img.shields.io/badge/🎮_PLAY_NOW-ysh1537.github.io/game-blueviolet?style=for-the-badge)](https://ysh1537.github.io/game/)
+[![Play Now](https://img.shields.io/badge/🎮_PLAY_NOW-Yesol--Pilot.github.io/game-blueviolet?style=for-the-badge)](https://Yesol-Pilot.github.io/game/)
 
 > *"신화는 다시 쓰여진다. 나의 손끝에서."*
 
@@ -69,7 +69,7 @@
 
 ```bash
 # Clone repository
-git clone https://github.com/ysh1537/game.git
+git clone https://github.com/Yesol-Pilot/game.git
 cd game
 
 # Run local server
@@ -103,7 +103,7 @@ npx http-server . -p 8080 -c-1
 
 <div align="center">
 
-### 🎮 [Play Now →](https://ysh1537.github.io/game/)
+### 🎮 [Play Now →](https://Yesol-Pilot.github.io/game/)
 
 <br>
 

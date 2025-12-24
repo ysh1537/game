@@ -72,7 +72,59 @@ export default class AuthView extends BaseView {
             });
         }
 
-        // 5. 로그인 성공 시 처리
+        // 5. [NEW] Google 로그인 버튼 (Firebase)
+        const btnGoogleLogin = document.getElementById('btn-google-login');
+        if (btnGoogleLogin) {
+            btnGoogleLogin.addEventListener('click', async () => {
+                this._setAuthMessage('Google 로그인 중...');
+
+                // Firebase 서비스가 로드될 때까지 대기
+                if (!window.FirebaseService) {
+                    this._setAuthMessage('Firebase 로딩 중... 잠시 후 다시 시도해주세요.');
+                    return;
+                }
+
+                const result = await window.FirebaseService.signInWithGoogle();
+                if (result.success) {
+                    const user = result.user;
+                    console.log('[AuthView] Google 로그인 성공:', user.displayName);
+
+                    // 클라우드에서 데이터 로드 시도
+                    const cloudData = await window.FirebaseService.loadGameData();
+                    if (cloudData.success && cloudData.data) {
+                        console.log('[AuthView] 클라우드 데이터 복원:', cloudData.data);
+                        // localStorage에 클라우드 데이터 적용
+                        if (cloudData.data.gameState) {
+                            localStorage.setItem('gameState', JSON.stringify(cloudData.data.gameState));
+                        }
+                        this._setAuthMessage('☁️ 클라우드 데이터 복원 완료!');
+                    }
+
+                    // 로컬 계정 생성/로그인 (Google 이름 사용)
+                    const googleUsername = user.displayName || user.email.split('@')[0];
+                    const fakePassword = 'google_' + user.uid.substring(0, 8);
+
+                    // 회원가입 또는 로그인 시도
+                    let authResult = await this.game.authManager.login(googleUsername, fakePassword);
+                    if (!authResult.success) {
+                        // 계정이 없으면 자동 생성
+                        authResult = await this.game.authManager.signup(googleUsername, fakePassword, this.selectedPersona);
+                    }
+
+                    if (authResult.success) {
+                        this._updateHeaderUserName(googleUsername);
+                        this.game.startMainGame();
+
+                        // 자동 저장 활성화 (5분마다)
+                        this._startAutoCloudSave();
+                    }
+                } else {
+                    this._setAuthMessage('Google 로그인 실패: ' + (result.error || '알 수 없는 오류'));
+                }
+            });
+        }
+
+        // 6. 로그인 성공 시 처리
         this.game.authManager.events.on('auth:login', () => {
             if (this.ui.loginOverlay) this.ui.loginOverlay.style.display = 'none';
         });
@@ -88,6 +140,23 @@ export default class AuthView extends BaseView {
         // 초기화 시 UI 업데이트
         this._updatePersonaInfo();
         this._updateAuthFormUI();
+    }
+
+    // [NEW] 자동 클라우드 저장 (5분마다)
+    _startAutoCloudSave() {
+        if (this._autoSaveInterval) clearInterval(this._autoSaveInterval);
+
+        this._autoSaveInterval = setInterval(async () => {
+            if (window.FirebaseService?.isLoggedIn()) {
+                const gameState = localStorage.getItem('gameState');
+                if (gameState) {
+                    await window.FirebaseService.saveGameData({ gameState: JSON.parse(gameState) });
+                    console.log('[AutoSave] 클라우드 저장 완료');
+                }
+            }
+        }, 5 * 60 * 1000); // 5분
+
+        console.log('[AuthView] 자동 클라우드 저장 활성화 (5분 간격)');
     }
 
     _updateHeaderUserName(name) {

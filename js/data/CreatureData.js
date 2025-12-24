@@ -198,7 +198,17 @@ export const CREATURE_DEFS = [
         elements: ["Fire", "Wind"],
         baseStr: 8, baseInt: 22,
         image: "images/creature_mage_flame.png?v=3",
-        lines: { normal: "타오르는 지식이여." }
+        lore: {
+            title: "불꽃의 현자",
+            story: "마법 아카데미 최연소 졸업생. 천재라 불리지만 본인은 '그냥 불이 좋을 뿐'이라고 말한다. 언제나 새로운 화염 마법을 연구하며, 가끔 실험이 폭발해서 연구실을 날려먹는다. 털털한 성격에 의외로 요리를 잘 한다(불 조절이 완벽하니까).",
+            origin: "올림푸스 마법 아카데미",
+            relationships: [
+                { id: "phoenix_eternal", type: "ally", desc: "불사조의 깃털로 만든 지팡이를 사용. 불꽃 시너지" },
+                { id: "elemental_water", type: "rival", desc: "물의 정령과는 견원지간. 만나면 증기 폭발" }
+            ],
+            synergy: { ally: ["phoenix_eternal", "demon_king"], rival: ["elemental_water", "bear_ice"] }
+        },
+        lines: { normal: "타오르는 지식이여! 오늘도 뭔가 태워볼까?" }
     },
     {
         id: "unicorn_young",
@@ -208,7 +218,17 @@ export const CREATURE_DEFS = [
         elements: ["Light", "Nature"],
         baseStr: 15, baseInt: 15,
         image: "images/creature_unicorn.png?v=2",
-        lines: { normal: "순수한 자만이..." }
+        lore: {
+            title: "순백의 희망",
+            story: "순수한 마음을 가진 자에게만 모습을 드러내는 신성한 존재. 아직 어리지만 치유의 힘이 강력하다. 딸기 맛 사탕을 좋아하고, 무지개를 보면 신나서 뛰어다닌다. 뿔에서 나오는 빛은 어둠의 저주를 정화한다.",
+            origin: "올림푸스 성스러운 숲",
+            relationships: [
+                { id: "flower_fairy", type: "ally", desc: "꽃의 요정과 단짝친구. 함께하면 힐량 증가" },
+                { id: "demon_king", type: "rival", desc: "어둠의 마왕을 두려워하지만 맞서려 노력" }
+            ],
+            synergy: { ally: ["flower_fairy", "angel_arch"], rival: ["demon_king", "vampire_lord"] }
+        },
+        lines: { normal: "순수한 자만이 내 빛을 볼 수 있어! 히힝~" }
     },
 
     // --- Rare ---
@@ -220,7 +240,17 @@ export const CREATURE_DEFS = [
         elements: ["Nature", "Wind"],
         baseStr: 12, baseInt: 5,
         image: "images/creature_centaur.png?v=2",
-        lines: { normal: "다그닥! 바람보다 빠르게!" }
+        lore: {
+            title: "초원의 질주자",
+            story: "올림푸스 평원을 누비는 반인반마. 활 솜씨가 뛰어나고 지형을 읽는 눈이 탁월하다. 동료들을 지키기 위해 항상 선두에서 정찰한다. 당근을 좋아하지만 '말이라서 좋아하는 게 아니야!'라고 부정한다.",
+            origin: "올림푸스 대초원",
+            relationships: [
+                { id: "unicorn_young", type: "ally", desc: "같은 마족(馬族). 어린 유니콘을 보호" },
+                { id: "wolf_dire", type: "rival", desc: "초원의 포식자 다이어울프와 영역 다툼" }
+            ],
+            synergy: { ally: ["unicorn_young", "eagle_iron"], rival: ["wolf_dire"] }
+        },
+        lines: { normal: "다그닥! 바람보다 빠르게! ...당근 있어?" }
     },
 
     // --- Unique ---
@@ -232,7 +262,16 @@ export const CREATURE_DEFS = [
         elements: ["Light"],
         baseStr: 1, baseInt: 8,
         image: "images/creature_wisp_faint.png?v=3",
-        lines: { normal: "반짝..." }
+        lore: {
+            title: "길잃은 빛",
+            story: "어둠 속에서 길을 잃은 영혼들을 인도하는 작은 빛. 말수가 적고 수줍음이 많지만, 위기의 순간에는 밝게 빛나 동료를 지킨다. 밤하늘의 별을 보며 혼자 반짝거리는 게 취미.",
+            origin: "올림푸스 황혼의 숲",
+            relationships: [
+                { id: "angel_arch", type: "ally", desc: "빛의 동료. 함께하면 시야 확보" }
+            ],
+            synergy: { ally: ["angel_arch"], rival: [] }
+        },
+        lines: { normal: "반짝... 저기요... 반짝..." }
     },
 
     // --- Normal ---
@@ -243,8 +282,17 @@ export const CREATURE_DEFS = [
         world: WORLDS.OLYMPUS,
         elements: ["Wind", "Water"],
         baseStr: 2, baseInt: 4,
-        image: "images/placeholder.png",
-        lines: { normal: "둥실둥실..." }
+        image: "images/creature_cloud_puff.png",
+        lore: {
+            title: "하늘의 조각",
+            story: "올림푸스 산 정상에서 태어난 구름 정령. 푹신푹신하고 포근해서 베개로 쓰면 꿀잠. 비가 오면 몸이 커지고, 햇볕을 받으면 몽글몽글해진다. 새들의 쉼터가 되어주는 게 보람.",
+            origin: "올림푸스 산 정상",
+            relationships: [
+                { id: "eagle_iron", type: "ally", desc: "강철 독수리의 휴식처. 함께하면 회피율 증가" }
+            ],
+            synergy: { ally: ["eagle_iron", "wisp_faint"], rival: [] }
+        },
+        lines: { normal: "둥실둥실... 오늘도 평화로워~" }
     },
 
     // ==========================================
@@ -336,7 +384,17 @@ export const CREATURE_DEFS = [
         elements: ["Metal", "Fire"],
         baseStr: 18, baseInt: 15,
         image: "images/creature_dwarf.png?v=4",
-        lines: { normal: "망치질 시작이다! 캉! 캉!" }
+        lore: {
+            title: "묠니르의 제작자",
+            story: "아스가르드 최고의 무기장인. 토르의 망치 묠니르를 만든 장인 가문의 후손. 술을 마시면 제작 속도가 빨라지지만 완성품이 이상해진다. '맥주 한 잔 없으면 손이 안 움직여!'가 입버릇.",
+            origin: "아스가르드 니다벨리르",
+            relationships: [
+                { id: "god_odin", type: "ally", desc: "오딘의 무기 공급자. 신뢰 관계" },
+                { id: "golem_mud", type: "ally", desc: "광물 제공 파트너" }
+            ],
+            synergy: { ally: ["god_odin", "golem_mud", "eagle_iron"], rival: [] }
+        },
+        lines: { normal: "망치질 시작이다! 캉! 캉! 맥주 가져와!" }
     },
 
     // --- Rare ---
@@ -348,7 +406,17 @@ export const CREATURE_DEFS = [
         elements: ["Metal", "Wind"],
         baseStr: 10, baseInt: 8,
         image: "images/creature_eagle_iron.png?v=3",
-        lines: { normal: "날개는 강철이지." }
+        lore: {
+            title: "하늘의 정찰자",
+            story: "강철로 된 날개를 가진 신비로운 독수리. 세상 끝에서 끝까지 날아다니며 오딘에게 정보를 보고한다. 날개 깃털 하나로도 검을 만들 수 있을 만큼 강하고 날카롭다. 높은 곳에서 내려다보는 걸 좋아한다.",
+            origin: "아스가르드 하늘",
+            relationships: [
+                { id: "valkyrie", type: "ally", desc: "발키리와 함께 전장을 정찰" },
+                { id: "cloud_puff", type: "ally", desc: "구름 솜사탕 위에서 휴식" }
+            ],
+            synergy: { ally: ["valkyrie", "cloud_puff", "centaur_scout"], rival: [] }
+        },
+        lines: { normal: "날개는 강철이지. 하늘에서 모든 걸 본다!" }
     },
     {
         id: "bear_ice",
@@ -358,7 +426,17 @@ export const CREATURE_DEFS = [
         elements: ["Ice", "Water"],
         baseStr: 15, baseInt: 3,
         image: "images/creature_bear_ice.png?v=3",
-        lines: { normal: "추위는 익숙해." }
+        lore: {
+            title: "얼어붙은 포효",
+            story: "북극의 만년설 속에서 태어난 전설의 곰. 하품 한 번에 눈보라가 일고, 포효 한 번에 빙하가 무너진다. 겉은 무섭지만 새끼 물개랑 노는 걸 좋아하는 츤데레. 연어를 매우 좋아한다.",
+            origin: "아스가르드 니플하임",
+            relationships: [
+                { id: "giant_hill", type: "ally", desc: "거인과 곰의 든든한 조합" },
+                { id: "mage_flame", type: "rival", desc: "불과 얼음은 상극!" }
+            ],
+            synergy: { ally: ["giant_hill", "snow_spirit"], rival: ["mage_flame", "phoenix_eternal"] }
+        },
+        lines: { normal: "추위는 익숙해. 연어 줄 거야? 아... 뭐, 안 줘도 돼..." }
     },
 
     // --- Normal ---
@@ -463,7 +541,17 @@ export const CREATURE_DEFS = [
         elements: ["Dark", "Wind"],
         baseStr: 18, baseInt: 12,
         image: "images/creature_ninja_shadow.png?v=3",
-        lines: { normal: "기척을 숨겨라." }
+        lore: {
+            title: "어둠의 첩자",
+            story: "달빛도 피해가는 그림자의 닌자. 존재 자체가 소문일 뿐, 실제로 본 사람은 살아돌아오지 못했다. 사실 수줍음이 많아서 사람 앞에 나서기가 힘든 것. 야식으로 라멘을 먹는 게 비밀.",
+            origin: "상그릴라 암영촌",
+            relationships: [
+                { id: "vampire_lord", type: "ally", desc: "어둠 속의 동맹. 암살 시너지" },
+                { id: "angel_arch", type: "rival", desc: "빛의 천사와는 상극" }
+            ],
+            synergy: { ally: ["vampire_lord", "demon_king"], rival: ["angel_arch", "unicorn_young"] }
+        },
+        lines: { normal: "기척을 숨겨라... 라멘 냄새도 숨겨야 하는데..." }
     },
 
     // --- Rare ---
@@ -475,7 +563,17 @@ export const CREATURE_DEFS = [
         elements: ["Nature", "Light"],
         baseStr: 4, baseInt: 14,
         image: "images/creature_flower_fairy.png?v=3",
-        lines: { normal: "향기롭죠?" }
+        lore: {
+            title: "정원의 수호자",
+            story: "아침 이슬처럼 맑고 순수한 꽃의 요정. 시든 꽃을 되살리고 병든 나무를 치유하는 힘을 가졌다. 수다 떠는 걸 좋아하고, 벌들과 친구. 꽃가루 알레르기가 있어서 가끔 재채기를 한다(아이러니).",
+            origin: "상그릴라 영원의 정원",
+            relationships: [
+                { id: "unicorn_young", type: "ally", desc: "순수한 존재들의 우정. 힐량 버프" },
+                { id: "ent_ancient", type: "ally", desc: "고대 나무의 보호를 받음" }
+            ],
+            synergy: { ally: ["unicorn_young", "ent_ancient"], rival: [] }
+        },
+        lines: { normal: "향기롭죠? 에취! 아, 미안..." }
     },
     {
         id: "panda_monk",
@@ -485,7 +583,17 @@ export const CREATURE_DEFS = [
         elements: ["Earth", "Nature"],
         baseStr: 14, baseInt: 8,
         image: "images/creature_panda.png?v=2",
-        lines: { normal: "허허, 대나무 차 한잔 하게." }
+        lore: {
+            title: "대나무 현자",
+            story: "천년 수련 끝에 깨달음을 얻은 판다. 느긋해 보이지만 주먹 한 방에 바위가 부서진다. '급할 것 없다'가 인생 모토지만, 대나무 간식 시간만큼은 절대 지킨다. 명상하다 자주 졸음.",
+            origin: "상그릴라 운무산 사원",
+            relationships: [
+                { id: "giant_hill", type: "ally", desc: "거인과 판다의 느긋한 콤비" },
+                { id: "golem_mud", type: "ally", desc: "대지의 친구들" }
+            ],
+            synergy: { ally: ["giant_hill", "golem_mud", "ent_ancient"], rival: [] }
+        },
+        lines: { normal: "허허, 대나무 차 한잔 하게. 쿨쿨... 앗, 잠깐 졸았네." }
     },
 
     // --- Normal (진화 체인 시작점) ---
@@ -498,6 +606,15 @@ export const CREATURE_DEFS = [
         ego: "Star",
         baseStr: 5, baseInt: 10,
         image: "images/creature_fox_baby_n.png",
+        lore: {
+            title: "여우구슬의 씨앗",
+            story: "귀엽고 천진난만한 아기 여우. 아직 꼬리는 하나뿐이지만, 언젠가 강력한 구미호가 될 잠재력을 품고 있다. 뭐든 물어뜯는 습관이 있고, 특히 주인의 신발을 좋아한다.",
+            origin: "상그릴라 요호산",
+            relationships: [
+                { id: "fox_nine", type: "family", desc: "미래의 자신. 진화하면 여우요괴로" }
+            ],
+            synergy: { ally: [], rival: [] }
+        },
         // [진화 시스템] 5성 달성 시 SR로 진화
         evolvesTo: "fox_nine",
         evolveConditions: { star: 5 },
@@ -510,7 +627,7 @@ export const CREATURE_DEFS = [
         world: WORLDS.SHANGRILA,
         elements: ["Water", "Dark"],
         baseStr: 1, baseInt: 5,
-        image: "images/placeholder.png", // [Temp] Fixed 404
+        image: "images/creature_ink_spirit.png",
         lines: { normal: "찰랑... 그림을 그려요." }
     },
 
@@ -587,7 +704,17 @@ export const CREATURE_DEFS = [
         ego: "Devotion",
         baseStr: 35, baseInt: 40,
         image: "images/creature_vampire_lord.png?v=3",
-        lines: { normal: "맛있어 보이는... 멋진 분이시네요." }
+        lore: {
+            title: "월야의 군주",
+            story: "천년을 산 고대 뱀파이어. 우아하고 고결하지만 피를 볼 때만은 광기어린 미소를 짓는다. 와인처럼 숙성된 피를 선호하며, 미남 미녀를 수집하는 취미가 있다. 햇볕만 없다면 의외로 상냥.",
+            origin: "심연 발라키아 성",
+            relationships: [
+                { id: "ninja_shadow", type: "ally", desc: "어둠 속의 사냥 파트너" },
+                { id: "angel_arch", type: "rival", desc: "성스러운 빛은 천적" }
+            ],
+            synergy: { ally: ["ninja_shadow", "demon_king"], rival: ["angel_arch", "phoenix_eternal"] }
+        },
+        lines: { normal: "맛있어 보이는... 멋진 분이시네요. 저녁 식사에 초대해도 될까요?" }
     },
     {
         id: "kraken_worldstar",
@@ -599,6 +726,15 @@ export const CREATURE_DEFS = [
         baseStr: 45, baseInt: 85,
         isHidden: true, // 히든 진화체
         image: "images/creature_kraken_worldstar.png",
+        lore: {
+            title: "심해의 디바",
+            story: "심연에서 올라온 전설의 아이돌. 그녀의 노래는 파도를 일으키고, 춤은 해류를 바꾼다. 세계 투어로 모든 대륙을 매료시켰으며, 팬클럽 '촉촉이'의 회원은 수백만 명. 연습생 시절부터 꿈꿔온 무대의 정점에 서 있다.",
+            origin: "심연 → 전세계 투어",
+            relationships: [
+                { id: "kraken_idol", type: "family", desc: "과거의 자신. 성장한 모습" }
+            ],
+            synergy: { ally: [], rival: [] }
+        },
         lines: {
             normal: "제 노래가... 전 우주에 닿기를!",
             touch_head: "머리 스타일 망가져요~ 헤헷, 농담이에요.",
@@ -618,6 +754,16 @@ export const CREATURE_DEFS = [
         ego: "Star",
         baseStr: 30, baseInt: 60,
         image: "images/creature_kraken_idol.png",
+        lore: {
+            title: "떠오르는 별",
+            story: "데뷔 1년 만에 차트 1위를 찍은 신예 아이돌. 촉수로 동시에 여러 악기를 연주할 수 있다는 특기로 유명. 팬 서비스가 좋아서 악수회에선 모든 팬과 동시에 악수한다. 월드스타를 향해 쉬지 않고 달려간다.",
+            origin: "심연 해저 연예기획사",
+            relationships: [
+                { id: "kraken_baby", type: "family", desc: "연습생 시절의 자신" },
+                { id: "kraken_worldstar", type: "family", desc: "미래의 모습. 진화하면 월드스타" }
+            ],
+            synergy: { ally: [], rival: [] }
+        },
         // [진화 시스템] 월드스타로 진화
         evolvesTo: "kraken_worldstar",
         evolveConditions: { star: 5, level: 50, affectionLevel: 3 },
@@ -634,10 +780,19 @@ export const CREATURE_DEFS = [
         ego: "Star",
         baseStr: 5, baseInt: 15,
         image: "images/creature_kraken_trainee.png",
+        lore: {
+            title: "꿈을 꾸는 문어",
+            story: "심해에서 올라온 소녀 크라켄. 무대에 서는 것이 꿈이지만 아직 노래도 춤도 서투르다. 하지만 열정만큼은 누구에게도 지지 않는다! 촉수가 자꾸 엉켜서 안무 연습이 어렵다.",
+            origin: "심연 해저",
+            relationships: [
+                { id: "kraken_idol", type: "family", desc: "미래의 자신. 진화하면 아이돌로" }
+            ],
+            synergy: { ally: [], rival: [] }
+        },
         // [진화 시스템] 아이돌로 진화
         evolvesTo: "kraken_idol",
         evolveConditions: { star: 5 },
-        lines: { normal: "언젠간 꼭... 무대에 설 거야!" }
+        lines: { normal: "언젠간 꼭... 무대에 설 거야! 기다려!" }
     },
 
     // --- Special ---
@@ -649,7 +804,16 @@ export const CREATURE_DEFS = [
         elements: ["Dark", "Metal"],
         baseStr: 20, baseInt: 10,
         image: "images/creature_knight_skeleton.png?v=3",
-        lines: { normal: "명령을..." }
+        lore: {
+            title: "잊혀진 맹세",
+            story: "죽어서도 맹세를 지키는 불멸의 기사. 생전에 섬기던 왕국은 멸망했지만, 여전히 의무를 다하고 있다. 말수가 적고 표정이 없지만(뼈니까), 가끔 해골 유머를 던진다. 뼈가 삐걱거려서 은밀 작전은 불가.",
+            origin: "심연 망각의 묘지",
+            relationships: [
+                { id: "vampire_lord", type: "ally", desc: "언데드 동맹. 함께하면 어둠 버프" }
+            ],
+            synergy: { ally: ["vampire_lord", "demon_king"], rival: ["angel_arch"] }
+        },
+        lines: { normal: "명령을... 기다린다. (삐걱)" }
     },
 
     // --- Rare ---
@@ -661,6 +825,15 @@ export const CREATURE_DEFS = [
         elements: ["Earth", "Dark"],
         baseStr: 15, baseInt: 5,
         image: "images/creature_gargoyle.png?v=2",
+        lore: {
+            title: "성벽의 수호자",
+            story: "낮에는 돌, 밤에는 악마. 고대 성당의 수호자로 만들어졌지만, 주인이 모두 죽고 혼자 남았다. 무뚝뚝해 보이지만 내심 외롭다. 비둘기가 자꾸 위에 앉아서 짜증나지만, 참는다.",
+            origin: "심연 잊혀진 성당",
+            relationships: [
+                { id: "golem_mud", type: "ally", desc: "같은 석상 계열. 둘이 있으면 방어력 버프" }
+            ],
+            synergy: { ally: ["golem_mud", "knight_skeleton"], rival: [] }
+        },
         lines: { normal: "침입자 발견. 굳어버려라." }
     },
 
@@ -672,8 +845,17 @@ export const CREATURE_DEFS = [
         world: WORLDS.ABYSS,
         elements: ["Earth"],
         baseStr: 7, baseInt: 3,
-        image: "images/creature_goblin_scout.png?v=3",
-        lines: { normal: "빈틈 발견." }
+        image: "images/creature_goblin_scout_new.png",
+        lore: {
+            title: "그림자 속의 눈",
+            story: "빈틈을 찾아내는 것이 특기인 고블린. 교활하고 약삭빠르지만, 의외로 정이 많다. 보물을 모으는 게 취미이고, 반짝이는 것이면 뭐든 좋아한다. '이거 내꺼!'가 입버릇.",
+            origin: "심연 어둠의 동굴",
+            relationships: [
+                { id: "rat_brown", type: "ally", desc: "같이 다니는 정찰 콤비" }
+            ],
+            synergy: { ally: ["rat_brown", "bat_small"], rival: [] }
+        },
+        lines: { normal: "빈틈 발견! 이건 내꺼다!" }
     },
 
     // --- Normal ---
@@ -684,8 +866,17 @@ export const CREATURE_DEFS = [
         world: WORLDS.ABYSS,
         elements: ["Earth"],
         baseStr: 4, baseInt: 1,
-        image: "images/creature_rat_brown.png?v=3",
-        lines: { normal: "찍!" }
+        image: "images/creature_rat_brown_new.png",
+        lore: {
+            title: "어둠의 방랑자",
+            story: "어디에나 있고, 무엇이든 먹는다. 생존력 하나는 최강. 치즈보다 땅콩버터를 더 좋아하는 의외의 취향. 작지만 무리지으면 무섭다.",
+            origin: "심연 하수도",
+            relationships: [
+                { id: "goblin_scout", type: "ally", desc: "고블린과 정찰 콤비" }
+            ],
+            synergy: { ally: ["goblin_scout", "bat_small"], rival: [] }
+        },
+        lines: { normal: "찍! 치즈 아니면 땅콩버터!" }
     },
     {
         id: "bat_small",
@@ -694,8 +885,17 @@ export const CREATURE_DEFS = [
         world: WORLDS.ABYSS,
         elements: ["Wind"],
         baseStr: 3, baseInt: 2,
-        image: "images/creature_bat_small.png?v=3",
-        lines: { normal: "키이익..." }
+        image: "images/creature_bat_small_new.png",
+        lore: {
+            title: "밤하늘의 나그네",
+            story: "어둠 속을 자유롭게 날아다니는 작은 박쥐. 초음파로 대화하고, 거꾸로 매달려 자는 게 편하다. 뱀파이어에게 동경심을 품고 있지만, 피는 무서워서 과일만 먹는다.",
+            origin: "심연 동굴 천장",
+            relationships: [
+                { id: "vampire_lord", type: "ally", desc: "뱀파이어를 동경함" }
+            ],
+            synergy: { ally: ["vampire_lord", "goblin_scout"], rival: [] }
+        },
+        lines: { normal: "키이익... 피는 무서워..." }
     },
 
     // ==========================================
@@ -765,7 +965,7 @@ export const CREATURE_DEFS = [
         world: WORLDS.WILD,
         elements: ["Nature", "Earth"],
         baseStr: 25, baseInt: 10,
-        image: "images/placeholder.png", // [Temp] Fixed 404
+        image: "images/creature_ent_ancient.png",
         lines: { normal: "숲을... 지킨다..." }
     },
     {
@@ -777,6 +977,23 @@ export const CREATURE_DEFS = [
         baseStr: 12, baseInt: 18,
         image: "images/creature_elemental_water.png?v=3",
         lines: { normal: "흐르는 대로..." }
+    },
+    {
+        id: "snow_spirit",
+        name: "눈송이 정령",
+        rarity: RANKS.SPECIAL,
+        world: WORLDS.WILD,
+        elements: ["Ice", "Light"],
+        baseStr: 15, baseInt: 20,
+        image: "images/creature_snow_spirit_new.png",
+        lore: {
+            title: "설원의 춤꾼",
+            story: "차가운 북풍이 불 때 태어나는 정령. 그녀가 춤을 추면 세상이 하얗게 물든다. 아름답지만 만지면 동상에 걸릴 수 있으니 주의. 따뜻한 코코아를 좋아하지만 마실 수는 없다.",
+            origin: "야생 설원",
+            relationships: [{ id: "elemental_water", type: "friend", desc: "얼면 만날 수 있는 친구" }],
+            synergy: { ally: ["elemental_water", "bear_ice"], rival: ["mage_flame"] }
+        },
+        lines: { normal: "차가워... 하지만 예쁘지?" }
     },
 
     // --- Rare ---
@@ -800,6 +1017,23 @@ export const CREATURE_DEFS = [
         image: "images/creature_golem_mud.png?v=3",
         lines: { normal: "단단하다." }
     },
+    {
+        id: "wisp_faint",
+        name: "희미한 위스프",
+        rarity: RANKS.RARE,
+        world: WORLDS.WILD,
+        elements: ["Light", "Spirit"],
+        baseStr: 8, baseInt: 12,
+        image: "images/creature_wisp_faint_new.png",
+        lore: {
+            title: "길 잃은 영혼의 등불",
+            story: "숲속을 떠도는 작은 빛. 길 잃은 여행자를 마을로 안내해주기도 하지만, 장난기가 발동하면 늪으로 유인하기도 한다. 본인은 그저 숨바꼭질이라고 생각한다.",
+            origin: "야생 깊은 숲",
+            relationships: [{ id: "ent_ancient", type: "guardian", desc: "숲의 주인님" }],
+            synergy: { ally: ["ent_ancient", "flower_fairy"], rival: [] }
+        },
+        lines: { normal: "반짝반짝... 어디로 갈까?" }
+    },
 
     // --- Unique ---
     {
@@ -809,7 +1043,7 @@ export const CREATURE_DEFS = [
         world: WORLDS.WILD,
         elements: ["Fire"],
         baseStr: 6, baseInt: 4,
-        image: "images/creature_slime.png?v=3",
+        image: "images/creature_magma_slime.png",
         lines: { normal: "보글보글..." }
     },
     {
@@ -819,7 +1053,7 @@ export const CREATURE_DEFS = [
         world: WORLDS.WILD,
         elements: ["Nature"],
         baseStr: 5, baseInt: 5,
-        image: "images/creature_mushroom_angry.png?v=3",
+        image: "images/creature_mushroom_angry_new.png",
         lines: { normal: "쉬익..." }
     },
     {
@@ -829,7 +1063,7 @@ export const CREATURE_DEFS = [
         world: WORLDS.WILD,
         elements: ["Water"],
         baseStr: 4, baseInt: 4,
-        image: "images/creature_fish_flying.png?v=3",
+        image: "images/creature_fish_flying_new.png",
         lines: { normal: "파닥파닥!" }
     },
 
@@ -841,7 +1075,7 @@ export const CREATURE_DEFS = [
         world: WORLDS.WILD,
         elements: ["Nature"],
         baseStr: 3, baseInt: 2,
-        image: "images/creature_slime.png?v=3",
+        image: "images/creature_slime_green_new.png",
         lines: { normal: "꿀렁..." }
     },
     {
@@ -851,7 +1085,7 @@ export const CREATURE_DEFS = [
         world: WORLDS.WILD,
         elements: ["Water"],
         baseStr: 2, baseInt: 3,
-        image: "images/creature_slime.png?v=3",
+        image: "images/creature_blue_slime.png",
         lines: { normal: "찰팍..." }
     },
     {
@@ -861,7 +1095,7 @@ export const CREATURE_DEFS = [
         world: WORLDS.WILD,
         elements: ["Earth"],
         baseStr: 5, baseInt: 0,
-        image: "images/creature_pebble.png?v=3",
+        image: "images/creature_pebble_new.png",
         lines: { normal: "..." }
     }
 ];
