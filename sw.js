@@ -1,4 +1,4 @@
-const CACHE_NAME = 'creature-lab-v1';
+const CACHE_NAME = 'creature-lab-v9999_final_fix';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
