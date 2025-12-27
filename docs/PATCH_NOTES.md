@@ -2,6 +2,38 @@
 
 ---
 
+## v0.4.0 (2024-12-26) - 크리처 이미지 대규모 생성
+
+### ✨ 신규 콘텐츠
+
+#### 🎨 신규 이미지 (50개 생성)
+
+**올림푸스 월드 (26개)** ✅ 완료
+- `god_hades`, `god_dionysus`, `hero_hercules`, `medusa_cursed`, `harpy_queen`
+- `siren_singer`, `pegasus_colt`, `satyr_young`, `dryad_seed`, `cyclops_worker`
+- `nymph_water`, `cerberus_pup`, `hellhound_scout`, `automaton_mini`, `griffin_chick`
+- `minotaur_calf`, `gorgon_sister_e`, `gorgon_sister_s`, `charybdis_baby`, `scylla_pup`
+- `talos_fragment`, `fury_hiss`, `muse_lyra`, `chimera_cub`, `sphinx_kitten`, `phoenix_chick_o`
+
+**아스가르드 월드 (26개)** ✅ 완료
+- `god_loki`, `god_freya`, `god_hel`, `giant_fire_surtr`, `snake_world_jormungandr`
+- `valkyrie_leader_gunnr`, `sleipnir_foal`, `huginn_crow`, `muninn_crow`, `wolf_pup_asgard`
+- `dwarf_apprentice`, `troll_baby`, `ice_spirit_small`, `viking_youth`, `valkyrie_recruit`
+- `einherjar_ghost`, `goat_lightning`, `ratatoskr_squirrel`, `nidhogg_spawn`, `elk_golden`
+- `yggdrasil_guardian`, `mimir_spirit`, `frost_giant_warrior`, `fire_giant_scout`
+- `shieldmaiden_iron`, `beserker_bear`, `ulfhednar_wolf`, `nordic_cat_freya`
+- `draugr_remnant`, `bifrost_wisp`, `heimdall_horn_spirit`
+
+**기타 월드**
+- 심연: `god_shub`
+- 상그릴라: `hero_wukong`
+
+### 📋 스타일 가이드
+- 블루아카이브 + 니케 스타일의 일본 애니메이션풍 2D 전신 일러스트
+- 등급별 디테일/이펙트 차등 적용
+
+---
+
 ## v0.3.0 (2024-12-24) - 크리처 스토리 & 이미지 대규모 업데이트
 
 ### ✨ 신규 콘텐츠

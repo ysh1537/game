@@ -10,16 +10,16 @@ const BASE_DEF = 1; // [Mod] 방어력 효율 과다 방지 (2 -> 1)
 // Biome Configurations
 // Biome Configurations - Dimension 1: Greek Mythology (Olympus)
 const BIOMES = [
-    { start: 1, end: 10, name: "Nemean Forest", mobs: ["wolf_dire", "rat_brown"], boss: "lion_nemean", bossName: "Nemean Lion" },
-    { start: 11, end: 20, name: "Lerna Swamp", mobs: ["slime_green", "snake_poison"], boss: "hydra_lernaean", bossName: "Lernaean Hydra" },
-    { start: 21, end: 30, name: "Ceryneian Highlands", mobs: ["deer_horn", "satyr_scout"], boss: "hind_golden", bossName: "Golden Hind" },
-    { start: 31, end: 40, name: "Erymanthian Wilds", mobs: ["boar_wild", "bear_brown"], boss: "boar_erymanthian", bossName: "Erymanthian Boar" },
-    { start: 41, end: 50, name: "Stymphalian Lake", mobs: ["bird_bronze", "harpy_wind"], boss: "bird_stymphalian", bossName: "Stymphalian Bird" },
-    { start: 51, end: 60, name: "Cretan Labyrinth", mobs: ["skeleton_warrior", "bull_mad"], boss: "minotaur_king", bossName: "Minotaur King" },
-    { start: 61, end: 70, name: "Garden of Hesperides", mobs: ["dragon_ladon_spawn", "nymph_dark"], boss: "dragon_ladon", bossName: "Ladon the Dragon" },
-    { start: 71, end: 80, name: "Underworld Entrance", mobs: ["hound_hell", "spirit_lost"], boss: "cerberus_guardian", bossName: "Cerberus" },
-    { start: 81, end: 90, name: "Tartarus Depths", mobs: ["giant_cyclops", "titan_spawn"], boss: "titan_kronos_shade", bossName: "Shade of Kronos" },
-    { start: 91, end: 100, name: "Mount Olympus", mobs: ["automaton_gold", "eagle_zeus"], boss: "god_zeus_phantom", bossName: "Phantom of Zeus" }
+    { start: 1, end: 10, name: "Nemean Forest", background: "bg_forest.jpg", mobs: ["wolf_dire", "rat_brown"], boss: "lion_nemean", bossName: "Nemean Lion" },
+    { start: 11, end: 20, name: "Lerna Swamp", background: "bg_cave.jpg", mobs: ["slime_green", "snake_poison"], boss: "hydra_lernaean", bossName: "Lernaean Hydra" },
+    { start: 21, end: 30, name: "Ceryneian Highlands", background: "bg_sky.jpg", mobs: ["deer_horn", "satyr_scout"], boss: "hind_golden", bossName: "Golden Hind" },
+    { start: 31, end: 40, name: "Erymanthian Wilds", background: "bg_forest.jpg", mobs: ["boar_wild", "bear_brown"], boss: "boar_erymanthian", bossName: "Erymanthian Boar" },
+    { start: 41, end: 50, name: "Stymphalian Lake", background: "bg_ocean.jpg", mobs: ["bird_bronze", "harpy_wind"], boss: "bird_stymphalian", bossName: "Stymphalian Bird" },
+    { start: 51, end: 60, name: "Cretan Labyrinth", background: "bg_cave.jpg", mobs: ["skeleton_warrior", "bull_mad"], boss: "minotaur_king", bossName: "Minotaur King" },
+    { start: 61, end: 70, name: "Garden of Hesperides", background: "bg_sky.jpg", mobs: ["dragon_ladon_spawn", "nymph_dark"], boss: "dragon_ladon", bossName: "Ladon the Dragon" },
+    { start: 71, end: 80, name: "Underworld Entrance", background: "bg_volcano.jpg", mobs: ["hound_hell", "spirit_lost"], boss: "cerberus_guardian", bossName: "Cerberus" },
+    { start: 81, end: 90, name: "Tartarus Depths", background: "bg_volcano.jpg", mobs: ["giant_cyclops", "titan_spawn"], boss: "titan_kronos_shade", bossName: "Shade of Kronos" },
+    { start: 91, end: 100, name: "Mount Olympus", background: "bg_sky.jpg", mobs: ["automaton_gold", "eagle_zeus"], boss: "god_zeus_phantom", bossName: "Phantom of Zeus" }
 ];
 
 // Helper to get biome for a raw stage index (1-100)
@@ -60,6 +60,7 @@ export function getStage(stageId) {
         isBoss: isBoss,
         rewardGold: Math.floor(50 * Math.pow(1.05, effectiveId) * cycleMult),
         rewardExp: Math.floor(20 * Math.pow(1.05, effectiveId) * cycleMult),
+        background: biome.background, // [NEW] Bind background
         enemies: [],
         recommendedPower: 0
     };

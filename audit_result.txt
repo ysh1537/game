@@ -1,0 +1,133 @@
+=== Audit Result ===
+JS Creatures: 198
+Docs Creatures: 92
+
+MISSING IN JS (10):
+ - (blue archive art style:1.4)
+ - (nikke art style:1.2)
+ - cel shading
+ - vibrant colors
+ - anime coloring
+ - moe
+ - realistic
+ - 3d render
+ - dark gritty
+ - western comic style
+
+MISSING IN MD (116):
+ - god_zeus
+ - time_lord_chronos
+ - angel_arch
+ - demon_king
+ - zeus_basic
+ - zeus_shy
+ - zeus_angry
+ - zeus_love
+ - creator_gaia
+ - void_emperor
+ - valkyrie
+ - titan_atlas
+ - giant_hill
+ - mage_flame
+ - phoenix_eternal
+ - elemental_water
+ - unicorn_young
+ - flower_fairy
+ - centaur_scout
+ - wolf_dire
+ - cloud_puff
+ - eagle_iron
+ - titan_kronos_shade
+ - minotaur_king
+ - cerberus_guardian
+ - hydra_lernaean
+ - lion_nemean
+ - god_poseidon
+ - wolf_fenrir
+ - god_odin
+ - golem_mud
+ - dwarf_smith
+ - bear_ice
+ - god_thor
+ - dragon_chaos
+ - vampire_lord
+ - ninja_shadow
+ - kraken_worldstar
+ - kraken_idol
+ - kraken_baby
+ - gargoyle_stone
+ - goblin_scout
+ - rat_brown
+ - bat_small
+ - god_cthulhu
+ - god_nyarlathotep
+ - god_hastur
+ - eye_bat
+ - void_tentacle
+ - sludge_blob
+ - bone_fragment_spirit
+ - whispering_skull
+ - shadow_lurker
+ - abyss_watcher_small
+ - ghost_lamp
+ - void_larva
+ - dark_puddles
+ - screaming_root
+ - ghoul_scavenger
+ - deep_one_soldier
+ - void_moth_small
+ - ink_squid_abyss
+ - dragon_ancient
+ - fox_nine_hidden
+ - fox_nine
+ - ent_ancient
+ - panda_monk
+ - fox_baby
+ - ink_spirit
+ - lucky_cat_kuro
+ - tea_leaf_fairy
+ - rice_grain_spirit
+ - bamboo_chopper
+ - lantern_ghost
+ - paper_charm_seal
+ - heavenly_maiden_small
+ - yin_yang_orb
+ - cherry_blossom_petal
+ - kumiho_servant
+ - magpie_messenger
+ - cloud_serpent
+ - bonsai_spirit
+ - scroll_dragon
+ - wind_chime_spirit
+ - statue_lion_dog
+ - firefly_night
+ - koi_ascending
+ - dragon_drake
+ - chimera_beast
+ - snow_spirit
+ - wisp_faint
+ - slime_red
+ - mushroom_angry
+ - fish_flying
+ - slime_green
+ - slime_blue
+ - pebble
+ - beast_behemoth
+ - beast_leviathan
+ - beast_ziz
+ - fairy_queen_titania
+ - electric_eel_king
+ - magma_slime_giant
+ - seedling_spirit
+ - caterpillar_fat
+ - tadpole_wiggle
+ - sand_prowler
+ - leaf_insect
+ - spark_mouse
+ - fossil_stone
+ - boulder_beetle
+ - willOWisp_green
+ - thorny_vine
+ - mist_crawler
+ - sun_flower_spirit
+ - moon_flower_spirit

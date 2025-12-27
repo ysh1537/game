@@ -11,19 +11,11 @@ export default class StageManager extends EventEmitter {
     }
 
     load() {
-        const saved = localStorage.getItem('mcl_stage_progress');
-        if (saved) {
-            const data = JSON.parse(saved);
-            this.currentMaxStage = data.maxStage || 1;
-            this.currentViewingStage = data.viewingStage || 1;
-        }
+        // [Refactor] No-op: Data managed by Game.js
     }
 
     save() {
-        localStorage.setItem('mcl_stage_progress', JSON.stringify({
-            maxStage: this.currentMaxStage,
-            viewingStage: this.currentViewingStage
-        }));
+        if (this.game) this.game.save();
     }
 
     unlockNextStage() {

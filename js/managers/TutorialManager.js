@@ -8,42 +8,44 @@ export default class TutorialManager {
         this.isCompleted = false;
 
         // 단계별 정의
+        // 단계별 정의 (V3: Summon -> Deck -> Battle -> Train)
         this.steps = {
             1: {
-                message: "일반 소환 버튼을 눌러 크리처를 소환해 주세요.",
+                message: "일반 소환 버튼을 눌러 동료를 영입하세요.",
                 targetId: "btn-normal-summon",
                 nextEvent: "summon:result"
             },
             2: {
                 message: "방금 소환한 크리처를 목록에서 선택해 주세요.",
-                targetId: "creature-list", // 혹은 첫 번째 카드
+                targetId: "creature-list",
                 nextEvent: "creatures:selected"
             },
             3: {
-                message: "탐사 탭으로 이동해 주세요.",
-                targetId: "tab-expedition",
+                message: "팀 편성 탭으로 이동하세요.",
+                targetId: "tab-deck", // Assuming Tab ID
                 nextEvent: "ui:tabSwitched",
-                condition: (tabId) => tabId === 'expedition'
+                condition: (tabId) => tabId === 'deck'
             },
             4: {
-                message: "숲 정찰(5초)을 선택해 탐사를 보내 주세요.",
-                targetId: "expedition-list", // 특정 버튼을 가리키긴 어렵지만 리스트 전체 강조
-                nextEvent: "expedition:started"
+                message: "자동 편성 버튼을 눌러 최강의 팀을 꾸리세요.",
+                targetId: "btn-auto-deck",
+                nextEvent: "deck:updated" // DeckManager needs to emit this
             },
             5: {
-                message: "탐사가 완료될 때까지 기다려 주세요.",
-                targetId: "active-expedition-list",
-                nextEvent: "expedition:completed"
+                message: "전투 탭으로 이동하여 모험을 시작합시다.",
+                targetId: "tab-battle",
+                nextEvent: "ui:tabSwitched",
+                condition: (tabId) => tabId === 'battle'
             },
             6: {
-                message: "크리처 상세 패널에서 훈련 버튼을 눌러 레벨을 올려 보세요.",
-                targetId: "detail-panel",
-                // 상세 패널 내 버튼은 동적이므로 패널 전체 혹은 로직에서 처리
-                nextEvent: "training:performed"
+                message: "전투 시작 버튼을 눌러 첫 스테이지에 도전하세요!",
+                targetId: "btn-start-battle",
+                nextEvent: "battle:start"
             },
             7: {
-                message: "튜토리얼이 완료되었습니다. 이제 자유롭게 연구소를 운영해 보세요.",
-                targetId: null,
+                message: "전투가 끝나면 크리처를 훈련시켜 더 강해지세요.",
+                targetId: "detail-panel",
+                // Wait for battle end? No, just end here.
                 isLast: true
             }
         };

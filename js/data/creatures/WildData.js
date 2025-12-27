@@ -3,415 +3,2457 @@ import { WORLDS } from '../WorldData.js';
 
 export const WILD_CREATURES = [
     {
-        id: "creator_gaia",
-        name: "창조주 가이아",
-        rarity: RANKS.UR,
-        world: WORLDS.WILD,
-        elements: ["Nature", "Earth", "Life"],
-        ego: "Devotion",
-        baseStr: 50, baseInt: 70,
-        image: "images/creature_creator_gaia.png?v=5",
-        lines: {
-            normal: "어머, 힘들었니? 이리 와, 엄마가 다 안아줄게.",
-            touch_head: "착한 아이네... 무럭무럭 자라렴.",
-            touch_chest: "그래... 엄마 품이 그립니? 마음껏 어리광 부려도 된단다.",
-            touch_chest_reject: "어머, 아가야? 아직은 이러면 안 된단다.",
-            touch_chest_love: "그래... 엄마 품이 그립니? 마음껏 안기렴.",
-            touch_legs: "무릎베개 해줄까? 푹 자렴, 아가야.",
-            touch_special: "자연의 섭리를... 거스르지 말렴."
-        }
-    },
-    {
-        id: "dragon_drake",
-        name: "폭염의 패왕 이그니스",
-        rarity: RANKS.SSR,
-        world: WORLDS.WILD,
-        elements: ["Fire", "Wind", "Earth"],
-        ego: "Warlord",
-        baseStr: 55, baseInt: 30,
-        image: "images/creature_dragon_drake.png?v=3",
-        lines: {
-            normal: "내 불꽃은 장난이 아니야. 화상 입고 싶어?",
-            touch_head: "머, 머리 만지지 마! ...딱히 싫은 건 아니지만!",
-            touch_chest: "심장 소리가 들려? 내 불꽃이 뜨거워지고 있어.",
-            touch_legs: "꼬리 밟으면 죽여버릴 줄 알아!",
-            touch_special: "이그니스 블레이드! 전부 태워주지!"
-        }
-    },
-    {
-        id: "chimera_beast",
-        name: "키메라",
-        rarity: RANKS.SR,
-        world: WORLDS.WILD,
-        elements: ["Fire", "Nature", "Beast"],
-        ego: "Warlord",
-        baseStr: 50, baseInt: 18,
-        image: "images/creature_chimera.png",
-        lines: { normal: "크아앙! 셋이서 덤비는 셈이지." }
-    },
-    {
-        id: "ent_ancient",
-        name: "고대 엔트",
-        rarity: RANKS.SPECIAL,
-        world: WORLDS.WILD,
-        elements: ["Nature", "Earth"],
-        baseStr: 25, baseInt: 10,
-        image: "images/creature_ent_ancient.png",
-        lines: { normal: "숲을... 지킨다..." }
-    },
-    {
-        id: "elemental_water",
-        name: "물의 정령",
-        rarity: RANKS.SPECIAL,
-        world: WORLDS.WILD,
-        elements: ["Water", "Ice"],
-        baseStr: 12, baseInt: 18,
-        image: "images/creature_elemental_water.png?v=3",
-        lines: { normal: "흐르는 대로..." }
-    },
-    {
-        id: "snow_spirit",
-        name: "눈송이 정령",
-        rarity: RANKS.SPECIAL,
-        world: WORLDS.WILD,
-        elements: ["Ice", "Light"],
-        baseStr: 15, baseInt: 20,
-        image: "images/creature_snow_spirit_new.png?v=3",
-        lore: {
-            title: "설원의 춤꾼",
-            story: "차가운 북풍이 불 때 태어나는 정령. 그녀가 춤을 추면 세상이 하얗게 물든다. 아름답지만 만지면 동상에 걸릴 수 있으니 주의. 따뜻한 코코아를 좋아하지만 마실 수는 없다.",
-            origin: "야생 설원",
-            relationships: [{ id: "elemental_water", type: "friend", desc: "얼면 만날 수 있는 친구" }],
-            synergy: { ally: ["elemental_water", "bear_ice"], rival: ["mage_flame"] }
-        },
-        lines: { normal: "차가워... 하지만 예쁘지?" }
-    },
-    {
-        id: "wolf_dire",
-        name: "다이어 울프",
-        rarity: RANKS.RARE,
-        world: WORLDS.WILD,
-        elements: ["Dark", "Earth"],
-        baseStr: 12, baseInt: 5,
-        image: "images/creature_wolf_dire.png?v=3",
-        lines: { normal: "크르릉..." }
-    },
-    {
-        id: "golem_mud",
-        name: "진흙 골렘",
-        rarity: RANKS.RARE,
-        world: WORLDS.WILD,
-        elements: ["Earth", "Water"],
-        baseStr: 16, baseInt: 2,
-        image: "images/creature_golem_mud.png?v=3",
-        lines: { normal: "단단하다." }
-    },
-    {
-        id: "wisp_faint",
-        name: "희미한 위스프",
-        rarity: RANKS.RARE,
-        world: WORLDS.WILD,
-        elements: ["Light", "Spirit"],
-        baseStr: 8, baseInt: 12,
-        image: "images/creature_wisp_faint_new.png?v=3",
-        lore: {
-            title: "길 잃은 영혼의 등불",
-            story: "숲속을 떠도는 작은 빛. 길 잃은 여행자를 마을로 안내해주기도 하지만, 장난기가 발동하면 늪으로 유인하기도 한다. 본인은 그저 숨바꼭질이라고 생각한다.",
-            origin: "야생 깊은 숲",
-            relationships: [{ id: "ent_ancient", type: "guardian", desc: "숲의 주인님" }],
-            synergy: { ally: ["ent_ancient", "flower_fairy"], rival: [] }
-        },
-        lines: { normal: "반짝반짝... 어디로 갈까?" }
-    },
-    {
-        id: "slime_red",
-        name: "마그마 슬라임",
-        rarity: RANKS.UNIQUE,
-        world: WORLDS.WILD,
-        elements: ["Fire"],
-        baseStr: 6, baseInt: 4,
-        image: "images/creature_magma_slime.png",
-        lines: { normal: "보글보글..." }
-    },
-    {
-        id: "mushroom_angry",
-        name: "화난 버섯",
-        rarity: RANKS.UNIQUE,
-        world: WORLDS.WILD,
-        elements: ["Nature"],
-        baseStr: 5, baseInt: 5,
-        image: "images/creature_mushroom_angry_new.png",
-        lines: { normal: "쉬익..." }
-    },
-    {
-        id: "fish_flying",
-        name: "날치",
-        rarity: RANKS.UNIQUE,
-        world: WORLDS.WILD,
-        elements: ["Water"],
-        baseStr: 4, baseInt: 4,
-        image: "images/creature_fish_flying_new.png",
-        lines: { normal: "파닥파닥!" }
-    },
-    {
-        id: "slime_green",
-        name: "초록 슬라임",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Nature"],
-        baseStr: 3, baseInt: 2,
-        image: "images/creature_slime_green_new.png",
-        lines: { normal: "꿀렁..." }
-    },
-    {
-        id: "slime_blue",
-        name: "파랑 슬라임",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Water"],
-        baseStr: 2, baseInt: 3,
-        image: "images/creature_blue_slime.png",
-        lines: { normal: "찰팍..." }
-    },
-    {
-        id: "pebble",
-        name: "조약돌",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Earth"],
-        baseStr: 5, baseInt: 0,
-        image: "images/creature_pebble_new.png",
-        lines: { normal: "..." }
-    },
-    // --- 신규 추가 (40종 확장을 위한 슬롯) ---
-    {
-        id: "beast_behemoth",
-        name: "대지의 짐승 베히모스",
-        rarity: RANKS.SSR,
-        world: WORLDS.WILD,
-        elements: ["Earth", "Fire"],
-        ego: "Warlord",
-        baseStr: 65, baseInt: 25,
-        image: "images/creature_beast_behemoth.png",
-        lore: { title: "대지를 뒤흔드는 발걸음", story: "산맥을 닮은 거대한 덩치를 가진 전설의 야수. 그가 움직이면 땅이 갈라지고 산이 무너진다." }
-    },
-    {
         id: "beast_leviathan",
         name: "심해의 재앙 레비아탄",
         rarity: RANKS.SSR,
         world: WORLDS.WILD,
-        elements: ["Water", "Ice", "Chaos"],
-        ego: "Seeker",
-        baseStr: 50, baseInt: 40,
-        image: "images/placeholder_wild.png",
-        lore: { title: "바다의 종말", story: "일곱 바다를 한 입에 삼킬 수 있는 거대한 수룡. 태초의 공포를 간직한 심해의 주인." }
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/beast_leviathan.png",
+        sprites: {
+            "idle": "images/beast_leviathan.png",
+            "joy": "images/beast_leviathan_joy.png",
+            "sad": "images/beast_leviathan_sad.png",
+            "angry": "images/beast_leviathan_angry.png",
+            "skill": "images/beast_leviathan_skill.png",
+            "victory": "images/beast_leviathan_victory.png",
+            "defeat": "images/beast_leviathan_defeat.png",
+            "gallery": {
+            "lv1": "images/beast_leviathan_gallery_lv1.png",
+            "lv2": "images/beast_leviathan_gallery_lv2.png",
+            "lv3": "images/beast_leviathan_gallery_lv3.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 심해의 재앙 레비아탄",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
+            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "gallery_lv1": "dating sim event, 심해의 재앙 레비아탄, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, 심해의 재앙 레비아탄, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, 심해의 재앙 레비아탄, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 심해의 재앙 레비아탄은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
     },
     {
         id: "beast_ziz",
         name: "천공의 날개 지즈",
         rarity: RANKS.SSR,
         world: WORLDS.WILD,
-        elements: ["Wind", "Light"],
-        ego: "Star",
-        baseStr: 30, baseInt: 60,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "griffin_gold",
-        name: "황금 그리폰",
-        rarity: RANKS.SR,
-        world: WORLDS.WILD,
-        elements: ["Light", "Wind", "Beast"],
-        baseStr: 45, baseInt: 35,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "turtle_ancient_wild",
-        name: "만년 고대 거북",
-        rarity: RANKS.SR,
-        world: WORLDS.WILD,
-        elements: ["Earth", "Water"],
-        baseStr: 35, baseInt: 45,
-        image: "images/placeholder_wild.png"
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/beast_ziz.png",
+        sprites: {
+            "idle": "images/beast_ziz.png",
+            "joy": "images/beast_ziz_joy.png",
+            "sad": "images/beast_ziz_sad.png",
+            "angry": "images/beast_ziz_angry.png",
+            "skill": "images/beast_ziz_skill.png",
+            "victory": "images/beast_ziz_victory.png",
+            "defeat": "images/beast_ziz_defeat.png",
+            "gallery": {
+            "lv1": "images/beast_ziz_gallery_lv1.png",
+            "lv2": "images/beast_ziz_gallery_lv2.png",
+            "lv3": "images/beast_ziz_gallery_lv3.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 천공의 날개 지즈",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
+            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "gallery_lv1": "dating sim event, 천공의 날개 지즈, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, 천공의 날개 지즈, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, 천공의 날개 지즈, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 천공의 날개 지즈은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
     },
     {
         id: "fairy_queen_titania",
         name: "요정 여왕 티타니아",
         rarity: RANKS.SSR,
         world: WORLDS.WILD,
-        elements: ["Nature", "Light", "Charm"],
-        baseStr: 25, baseInt: 65,
-        image: "images/placeholder_wild.png"
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/fairy_queen_titania.png",
+        sprites: {
+            "idle": "images/fairy_queen_titania.png",
+            "joy": "images/fairy_queen_titania_joy.png",
+            "sad": "images/fairy_queen_titania_sad.png",
+            "angry": "images/fairy_queen_titania_angry.png",
+            "skill": "images/fairy_queen_titania_skill.png",
+            "victory": "images/fairy_queen_titania_victory.png",
+            "defeat": "images/fairy_queen_titania_defeat.png",
+            "gallery": {
+            "lv1": "images/fairy_queen_titania_gallery_lv1.png",
+            "lv2": "images/fairy_queen_titania_gallery_lv2.png",
+            "lv3": "images/fairy_queen_titania_gallery_lv3.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 요정 여왕 티타니아",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
+            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "gallery_lv1": "dating sim event, 요정 여왕 티타니아, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, 요정 여왕 티타니아, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, 요정 여왕 티타니아, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 요정 여왕 티타니아은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "griffin_gold",
+        name: "황금 그리폰",
+        rarity: RANKS.SR,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/griffin_gold.png",
+        sprites: {
+            "idle": "images/griffin_gold.png",
+            "joy": "images/griffin_gold_joy.png",
+            "sad": "images/griffin_gold_sad.png",
+            "angry": "images/griffin_gold_angry.png",
+            "skill": "images/griffin_gold_skill.png",
+            "victory": "images/griffin_gold_victory.png",
+            "defeat": "images/griffin_gold_defeat.png",
+            "gallery": {
+            "lv1": "images/griffin_gold_gallery_lv1.png",
+            "lv2": "images/griffin_gold_gallery_lv2.png",
+            "lv3": "images/griffin_gold_gallery_lv3.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 황금 그리폰",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
+            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "gallery_lv1": "dating sim event, 황금 그리폰, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, 황금 그리폰, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, 황금 그리폰, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 황금 그리폰은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "turtle_ancient_wild",
+        name: "만년 고대 거북",
+        rarity: RANKS.SR,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/turtle_ancient_wild.png",
+        sprites: {
+            "idle": "images/turtle_ancient_wild.png",
+            "joy": "images/turtle_ancient_wild_joy.png",
+            "sad": "images/turtle_ancient_wild_sad.png",
+            "angry": "images/turtle_ancient_wild_angry.png",
+            "skill": "images/turtle_ancient_wild_skill.png",
+            "victory": "images/turtle_ancient_wild_victory.png",
+            "defeat": "images/turtle_ancient_wild_defeat.png",
+            "gallery": {
+            "lv1": "images/turtle_ancient_wild_gallery_lv1.png",
+            "lv2": "images/turtle_ancient_wild_gallery_lv2.png",
+            "lv3": "images/turtle_ancient_wild_gallery_lv3.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 만년 고대 거북",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
+            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "gallery_lv1": "dating sim event, 만년 고대 거북, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, 만년 고대 거북, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, 만년 고대 거북, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 만년 고대 거북은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
     },
     {
         id: "dryad_queen",
         name: "드라이어드 여왕",
         rarity: RANKS.SR,
         world: WORLDS.WILD,
-        elements: ["Nature", "Earth"],
-        baseStr: 20, baseInt: 55,
-        image: "images/placeholder_wild.png"
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/dryad_queen.png",
+        sprites: {
+            "idle": "images/dryad_queen.png",
+            "joy": "images/dryad_queen_joy.png",
+            "sad": "images/dryad_queen_sad.png",
+            "angry": "images/dryad_queen_angry.png",
+            "skill": "images/dryad_queen_skill.png",
+            "victory": "images/dryad_queen_victory.png",
+            "defeat": "images/dryad_queen_defeat.png",
+            "gallery": {
+            "lv1": "images/dryad_queen_gallery_lv1.png",
+            "lv2": "images/dryad_queen_gallery_lv2.png",
+            "lv3": "images/dryad_queen_gallery_lv3.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 드라이어드 여왕",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
+            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "gallery_lv1": "dating sim event, 드라이어드 여왕, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, 드라이어드 여왕, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, 드라이어드 여왕, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 드라이어드 여왕은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
     },
     {
         id: "mantis_warrior",
         name: "사마귀 무사",
         rarity: RANKS.SPECIAL,
         world: WORLDS.WILD,
-        elements: ["Nature", "Metal"],
-        baseStr: 35, baseInt: 15,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "electric_eel_king",
-        name: "번개 장어 왕",
-        rarity: RANKS.RARE,
-        world: WORLDS.WILD,
-        elements: ["Water", "Lightning"],
-        baseStr: 15, baseInt: 25,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "magma_slime_giant",
-        name: "대형 마그마 슬라임",
-        rarity: RANKS.RARE,
-        world: WORLDS.WILD,
-        elements: ["Fire", "Earth"],
-        baseStr: 25, baseInt: 15,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "seedling_spirit",
-        name: "새싹 정령",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Nature"],
-        baseStr: 2, baseInt: 12,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "caterpillar_fat",
-        name: "통통한 애벌레",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Nature"],
-        baseStr: 5, baseInt: 3,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "tadpole_wiggle",
-        name: "꼬물거리는 올챙이",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Water"],
-        baseStr: 2, baseInt: 8,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "sand_prowler",
-        name: "모래 잠복꾼",
-        rarity: RANKS.UNIQUE,
-        world: WORLDS.WILD,
-        elements: ["Earth"],
-        baseStr: 18, baseInt: 10,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "leaf_insect",
-        name: "나뭇잎 벌레",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Nature", "Wind"],
-        baseStr: 4, baseInt: 14,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "spark_mouse",
-        name: "번개 생쥐",
-        rarity: RANKS.UNIQUE,
-        world: WORLDS.WILD,
-        elements: ["Lightning"],
-        baseStr: 10, baseInt: 22,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "fossil_stone",
-        name: "움직이는 화석",
-        rarity: RANKS.RARE,
-        world: WORLDS.WILD,
-        elements: ["Earth", "Spirit"],
-        baseStr: 28, baseInt: 5,
-        image: "images/placeholder_wild.png"
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/mantis_warrior.png",
+        sprites: {
+            "idle": "images/mantis_warrior.png",
+            "joy": "images/mantis_warrior_joy.png",
+            "sad": "images/mantis_warrior_sad.png",
+            "angry": "images/mantis_warrior_angry.png",
+            "skill": "images/mantis_warrior_skill.png",
+            "victory": "images/mantis_warrior_victory.png",
+            "defeat": "images/mantis_warrior_defeat.png",
+            "gallery": {
+            "lv1": "images/mantis_warrior_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 사마귀 무사",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 사마귀 무사, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 사마귀 무사은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
     },
     {
         id: "orchid_mantis",
         name: "난초 사마귀",
         rarity: RANKS.SPECIAL,
         world: WORLDS.WILD,
-        elements: ["Nature", "Charm"],
-        baseStr: 15, baseInt: 35,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "boulder_beetle",
-        name: "바위 딱정벌레",
-        rarity: RANKS.UNIQUE,
-        world: WORLDS.WILD,
-        elements: ["Earth", "Metal"],
-        baseStr: 24, baseInt: 2,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "willOWisp_green",
-        name: "초록 도깨비불",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Fire", "Nature"],
-        baseStr: 2, baseInt: 18,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "thorny_vine",
-        name: "가시 덩굴",
-        rarity: RANKS.UNIQUE,
-        world: WORLDS.WILD,
-        elements: ["Nature", "Poison"],
-        baseStr: 15, baseInt: 15,
-        image: "images/placeholder_wild.png"
-    },
-    {
-        id: "mist_crawler",
-        name: "안개 속의 배회자",
-        rarity: RANKS.RARE,
-        world: WORLDS.WILD,
-        elements: ["Water", "Wind"],
-        baseStr: 12, baseInt: 28,
-        image: "images/placeholder_wild.png"
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/orchid_mantis.png",
+        sprites: {
+            "idle": "images/orchid_mantis.png",
+            "joy": "images/orchid_mantis_joy.png",
+            "sad": "images/orchid_mantis_sad.png",
+            "angry": "images/orchid_mantis_angry.png",
+            "skill": "images/orchid_mantis_skill.png",
+            "victory": "images/orchid_mantis_victory.png",
+            "defeat": "images/orchid_mantis_defeat.png",
+            "gallery": {
+            "lv1": "images/orchid_mantis_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 난초 사마귀",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 난초 사마귀, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 난초 사마귀은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
     },
     {
         id: "crystal_crab",
         name: "수정 게",
         rarity: RANKS.SPECIAL,
         world: WORLDS.WILD,
-        elements: ["Earth", "Water", "Metal"],
-        baseStr: 30, baseInt: 20,
-        image: "images/placeholder_wild.png"
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/crystal_crab.png",
+        sprites: {
+            "idle": "images/crystal_crab.png",
+            "joy": "images/crystal_crab_joy.png",
+            "sad": "images/crystal_crab_sad.png",
+            "angry": "images/crystal_crab_angry.png",
+            "skill": "images/crystal_crab_skill.png",
+            "victory": "images/crystal_crab_victory.png",
+            "defeat": "images/crystal_crab_defeat.png",
+            "gallery": {
+            "lv1": "images/crystal_crab_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 수정 게",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 수정 게, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 수정 게은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "electric_eel_king",
+        name: "번개 장어 왕",
+        rarity: RANKS.RARE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/electric_eel_king.png",
+        sprites: {
+            "idle": "images/electric_eel_king.png",
+            "joy": "images/electric_eel_king_joy.png",
+            "sad": "images/electric_eel_king_sad.png",
+            "angry": "images/electric_eel_king_angry.png",
+            "skill": "images/electric_eel_king_skill.png",
+            "victory": "images/electric_eel_king_victory.png",
+            "defeat": "images/electric_eel_king_defeat.png",
+            "gallery": {
+            "lv1": "images/electric_eel_king_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 번개 장어 왕",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 번개 장어 왕, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 번개 장어 왕은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "magma_slime_giant",
+        name: "대형 마그마 슬라임",
+        rarity: RANKS.RARE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/magma_slime_giant.png",
+        sprites: {
+            "idle": "images/magma_slime_giant.png",
+            "joy": "images/magma_slime_giant_joy.png",
+            "sad": "images/magma_slime_giant_sad.png",
+            "angry": "images/magma_slime_giant_angry.png",
+            "skill": "images/magma_slime_giant_skill.png",
+            "victory": "images/magma_slime_giant_victory.png",
+            "defeat": "images/magma_slime_giant_defeat.png",
+            "gallery": {
+            "lv1": "images/magma_slime_giant_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 대형 마그마 슬라임",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 대형 마그마 슬라임, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 대형 마그마 슬라임은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "fossil_stone",
+        name: "움직이는 화석",
+        rarity: RANKS.RARE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/fossil_stone.png",
+        sprites: {
+            "idle": "images/fossil_stone.png",
+            "joy": "images/fossil_stone_joy.png",
+            "sad": "images/fossil_stone_sad.png",
+            "angry": "images/fossil_stone_angry.png",
+            "skill": "images/fossil_stone_skill.png",
+            "victory": "images/fossil_stone_victory.png",
+            "defeat": "images/fossil_stone_defeat.png",
+            "gallery": {
+            "lv1": "images/fossil_stone_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 움직이는 화석",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 움직이는 화석, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 움직이는 화석은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "mist_crawler",
+        name: "안개 속의 배회자",
+        rarity: RANKS.RARE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/mist_crawler.png",
+        sprites: {
+            "idle": "images/mist_crawler.png",
+            "joy": "images/mist_crawler_joy.png",
+            "sad": "images/mist_crawler_sad.png",
+            "angry": "images/mist_crawler_angry.png",
+            "skill": "images/mist_crawler_skill.png",
+            "victory": "images/mist_crawler_victory.png",
+            "defeat": "images/mist_crawler_defeat.png",
+            "gallery": {
+            "lv1": "images/mist_crawler_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 안개 속의 배회자",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 안개 속의 배회자, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 안개 속의 배회자은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "forest_guardian",
+        name: "숲의 수호자",
+        rarity: RANKS.RARE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/forest_guardian.png",
+        sprites: {
+            "idle": "images/forest_guardian.png",
+            "joy": "images/forest_guardian_joy.png",
+            "sad": "images/forest_guardian_sad.png",
+            "angry": "images/forest_guardian_angry.png",
+            "skill": "images/forest_guardian_skill.png",
+            "victory": "images/forest_guardian_victory.png",
+            "defeat": "images/forest_guardian_defeat.png",
+            "gallery": {
+            "lv1": "images/forest_guardian_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 숲의 수호자",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 숲의 수호자, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 숲의 수호자은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "sand_prowler",
+        name: "모래 잠복꾼",
+        rarity: RANKS.UNIQUE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/sand_prowler.png",
+        sprites: {
+            "idle": "images/sand_prowler.png",
+            "joy": "images/sand_prowler_joy.png",
+            "sad": "images/sand_prowler_sad.png",
+            "angry": "images/sand_prowler_angry.png",
+            "skill": "images/sand_prowler_skill.png",
+            "victory": "images/sand_prowler_victory.png",
+            "defeat": "images/sand_prowler_defeat.png",
+            "gallery": {
+            "lv1": "images/sand_prowler_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 모래 잠복꾼",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 모래 잠복꾼, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 모래 잠복꾼은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "spark_mouse",
+        name: "번개 생쥐",
+        rarity: RANKS.UNIQUE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/spark_mouse.png",
+        sprites: {
+            "idle": "images/spark_mouse.png",
+            "joy": "images/spark_mouse_joy.png",
+            "sad": "images/spark_mouse_sad.png",
+            "angry": "images/spark_mouse_angry.png",
+            "skill": "images/spark_mouse_skill.png",
+            "victory": "images/spark_mouse_victory.png",
+            "defeat": "images/spark_mouse_defeat.png",
+            "gallery": {
+            "lv1": "images/spark_mouse_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 번개 생쥐",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 번개 생쥐, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 번개 생쥐은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "boulder_beetle",
+        name: "바위 딱정벌레",
+        rarity: RANKS.UNIQUE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/boulder_beetle.png",
+        sprites: {
+            "idle": "images/boulder_beetle.png",
+            "joy": "images/boulder_beetle_joy.png",
+            "sad": "images/boulder_beetle_sad.png",
+            "angry": "images/boulder_beetle_angry.png",
+            "skill": "images/boulder_beetle_skill.png",
+            "victory": "images/boulder_beetle_victory.png",
+            "defeat": "images/boulder_beetle_defeat.png",
+            "gallery": {
+            "lv1": "images/boulder_beetle_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 바위 딱정벌레",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 바위 딱정벌레, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 바위 딱정벌레은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "thorny_vine",
+        name: "가시 덩굴",
+        rarity: RANKS.UNIQUE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/thorny_vine.png",
+        sprites: {
+            "idle": "images/thorny_vine.png",
+            "joy": "images/thorny_vine_joy.png",
+            "sad": "images/thorny_vine_sad.png",
+            "angry": "images/thorny_vine_angry.png",
+            "skill": "images/thorny_vine_skill.png",
+            "victory": "images/thorny_vine_victory.png",
+            "defeat": "images/thorny_vine_defeat.png",
+            "gallery": {
+            "lv1": "images/thorny_vine_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 가시 덩굴",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 가시 덩굴, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 가시 덩굴은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "unicorn_young",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/unicorn_young.png",
+        sprites: {
+            "idle": "images/unicorn_young.png",
+            "joy": "images/unicorn_young_joy.png",
+            "sad": "images/unicorn_young_sad.png",
+            "angry": "images/unicorn_young_angry.png",
+            "skill": "images/unicorn_young_skill.png",
+            "victory": "images/unicorn_young_victory.png",
+            "defeat": "images/unicorn_young_defeat.png",
+            "gallery": {
+            "lv1": "images/unicorn_young_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "seedling_spirit",
+        name: "새싹 정령",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/seedling_spirit.png",
+        sprites: {
+            "idle": "images/seedling_spirit.png",
+            "joy": "images/seedling_spirit_joy.png",
+            "sad": "images/seedling_spirit_sad.png",
+            "angry": "images/seedling_spirit_angry.png",
+            "skill": "images/seedling_spirit_skill.png",
+            "victory": "images/seedling_spirit_victory.png",
+            "defeat": "images/seedling_spirit_defeat.png",
+            "gallery": {
+            "lv1": "images/seedling_spirit_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 새싹 정령",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 새싹 정령, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 새싹 정령은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "caterpillar_fat",
+        name: "통통한 애벌레",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/caterpillar_fat.png",
+        sprites: {
+            "idle": "images/caterpillar_fat.png",
+            "joy": "images/caterpillar_fat_joy.png",
+            "sad": "images/caterpillar_fat_sad.png",
+            "angry": "images/caterpillar_fat_angry.png",
+            "skill": "images/caterpillar_fat_skill.png",
+            "victory": "images/caterpillar_fat_victory.png",
+            "defeat": "images/caterpillar_fat_defeat.png",
+            "gallery": {
+            "lv1": "images/caterpillar_fat_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 통통한 애벌레",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 통통한 애벌레, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 통통한 애벌레은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "tadpole_wiggle",
+        name: "꼬물거리는 올챙이",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/tadpole_wiggle.png",
+        sprites: {
+            "idle": "images/tadpole_wiggle.png",
+            "joy": "images/tadpole_wiggle_joy.png",
+            "sad": "images/tadpole_wiggle_sad.png",
+            "angry": "images/tadpole_wiggle_angry.png",
+            "skill": "images/tadpole_wiggle_skill.png",
+            "victory": "images/tadpole_wiggle_victory.png",
+            "defeat": "images/tadpole_wiggle_defeat.png",
+            "gallery": {
+            "lv1": "images/tadpole_wiggle_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 꼬물거리는 올챙이",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 꼬물거리는 올챙이, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 꼬물거리는 올챙이은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "leaf_insect",
+        name: "나뭇잎 벌레",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/leaf_insect.png",
+        sprites: {
+            "idle": "images/leaf_insect.png",
+            "joy": "images/leaf_insect_joy.png",
+            "sad": "images/leaf_insect_sad.png",
+            "angry": "images/leaf_insect_angry.png",
+            "skill": "images/leaf_insect_skill.png",
+            "victory": "images/leaf_insect_victory.png",
+            "defeat": "images/leaf_insect_defeat.png",
+            "gallery": {
+            "lv1": "images/leaf_insect_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 나뭇잎 벌레",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 나뭇잎 벌레, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 나뭇잎 벌레은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "willOWisp_green",
+        name: "초록 도깨비불",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/willOWisp_green.png",
+        sprites: {
+            "idle": "images/willOWisp_green.png",
+            "joy": "images/willOWisp_green_joy.png",
+            "sad": "images/willOWisp_green_sad.png",
+            "angry": "images/willOWisp_green_angry.png",
+            "skill": "images/willOWisp_green_skill.png",
+            "victory": "images/willOWisp_green_victory.png",
+            "defeat": "images/willOWisp_green_defeat.png",
+            "gallery": {
+            "lv1": "images/willOWisp_green_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 초록 도깨비불",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 초록 도깨비불, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 초록 도깨비불은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
     },
     {
         id: "sun_flower_spirit",
         name: "해바라기 정령",
         rarity: RANKS.NORMAL,
         world: WORLDS.WILD,
-        elements: ["Nature", "Light"],
-        baseStr: 5, baseInt: 15,
-        image: "images/placeholder_wild.png"
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/sun_flower_spirit.png",
+        sprites: {
+            "idle": "images/sun_flower_spirit.png",
+            "joy": "images/sun_flower_spirit_joy.png",
+            "sad": "images/sun_flower_spirit_sad.png",
+            "angry": "images/sun_flower_spirit_angry.png",
+            "skill": "images/sun_flower_spirit_skill.png",
+            "victory": "images/sun_flower_spirit_victory.png",
+            "defeat": "images/sun_flower_spirit_defeat.png",
+            "gallery": {
+            "lv1": "images/sun_flower_spirit_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 해바라기 정령",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 해바라기 정령, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 해바라기 정령은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
     },
     {
         id: "moon_flower_spirit",
         name: "달맞이꽃 정령",
         rarity: RANKS.NORMAL,
         world: WORLDS.WILD,
-        elements: ["Nature", "Dark"],
-        baseStr: 2, baseInt: 18,
-        image: "images/placeholder_wild.png"
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/moon_flower_spirit.png",
+        sprites: {
+            "idle": "images/moon_flower_spirit.png",
+            "joy": "images/moon_flower_spirit_joy.png",
+            "sad": "images/moon_flower_spirit_sad.png",
+            "angry": "images/moon_flower_spirit_angry.png",
+            "skill": "images/moon_flower_spirit_skill.png",
+            "victory": "images/moon_flower_spirit_victory.png",
+            "defeat": "images/moon_flower_spirit_defeat.png",
+            "gallery": {
+            "lv1": "images/moon_flower_spirit_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 달맞이꽃 정령",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 달맞이꽃 정령, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 달맞이꽃 정령은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "desert_scorpion",
+        name: "사막 전갈",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/desert_scorpion.png",
+        sprites: {
+            "idle": "images/desert_scorpion.png",
+            "joy": "images/desert_scorpion_joy.png",
+            "sad": "images/desert_scorpion_sad.png",
+            "angry": "images/desert_scorpion_angry.png",
+            "skill": "images/desert_scorpion_skill.png",
+            "victory": "images/desert_scorpion_victory.png",
+            "defeat": "images/desert_scorpion_defeat.png",
+            "gallery": {
+            "lv1": "images/desert_scorpion_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 사막 전갈",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 사막 전갈, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 사막 전갈은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "panda_warrior",
+        name: "판다 전사",
+        rarity: RANKS.UNIQUE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/panda_warrior.png",
+        sprites: {
+            "idle": "images/panda_warrior.png",
+            "joy": "images/panda_warrior_joy.png",
+            "sad": "images/panda_warrior_sad.png",
+            "angry": "images/panda_warrior_angry.png",
+            "skill": "images/panda_warrior_skill.png",
+            "victory": "images/panda_warrior_victory.png",
+            "defeat": "images/panda_warrior_defeat.png",
+            "gallery": {
+            "lv1": "images/panda_warrior_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 판다 전사",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 판다 전사, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 판다 전사은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "creator_gaia",
+        name: "창조주 가이아",
+        rarity: RANKS.UR,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_creator_gaia.png",
+        sprites: {
+            "idle": "images/creature_creator_gaia.png",
+            "joy": "images/creature_creator_gaia_joy.png",
+            "sad": "images/creature_creator_gaia_sad.png",
+            "angry": "images/creature_creator_gaia_angry.png",
+            "skill": "images/creature_creator_gaia_skill.png",
+            "victory": "images/creature_creator_gaia_victory.png",
+            "defeat": "images/creature_creator_gaia_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_creator_gaia_gallery_lv1.png",
+            "lv2": "images/creature_creator_gaia_gallery_lv2.png",
+            "lv3": "images/creature_creator_gaia_gallery_lv3.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 창조주 가이아",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
+            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "gallery_lv1": "dating sim event, 창조주 가이아, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, 창조주 가이아, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, 창조주 가이아, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 창조주 가이아은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "dragon_drake",
+        name: "폭염의 패왕 이그니스",
+        rarity: RANKS.SSR,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_dragon_drake.png",
+        sprites: {
+            "idle": "images/creature_dragon_drake.png",
+            "joy": "images/creature_dragon_drake_joy.png",
+            "sad": "images/creature_dragon_drake_sad.png",
+            "angry": "images/creature_dragon_drake_angry.png",
+            "skill": "images/creature_dragon_drake_skill.png",
+            "victory": "images/creature_dragon_drake_victory.png",
+            "defeat": "images/creature_dragon_drake_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_dragon_drake_gallery_lv1.png",
+            "lv2": "images/creature_dragon_drake_gallery_lv2.png",
+            "lv3": "images/creature_dragon_drake_gallery_lv3.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 폭염의 패왕 이그니스",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
+            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "gallery_lv1": "dating sim event, 폭염의 패왕 이그니스, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, 폭염의 패왕 이그니스, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, 폭염의 패왕 이그니스, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 폭염의 패왕 이그니스은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "beast_behemoth",
+        name: "대지의 짐승 베히모스",
+        rarity: RANKS.SSR,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_beast_behemoth.png",
+        sprites: {
+            "idle": "images/creature_beast_behemoth.png",
+            "joy": "images/creature_beast_behemoth_joy.png",
+            "sad": "images/creature_beast_behemoth_sad.png",
+            "angry": "images/creature_beast_behemoth_angry.png",
+            "skill": "images/creature_beast_behemoth_skill.png",
+            "victory": "images/creature_beast_behemoth_victory.png",
+            "defeat": "images/creature_beast_behemoth_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_beast_behemoth_gallery_lv1.png",
+            "lv2": "images/creature_beast_behemoth_gallery_lv2.png",
+            "lv3": "images/creature_beast_behemoth_gallery_lv3.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 대지의 짐승 베히모스",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
+            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "gallery_lv1": "dating sim event, 대지의 짐승 베히모스, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, 대지의 짐승 베히모스, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, 대지의 짐승 베히모스, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 대지의 짐승 베히모스은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "chimera",
+        name: "키메라",
+        rarity: RANKS.SR,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_chimera.png",
+        sprites: {
+            "idle": "images/creature_chimera.png",
+            "joy": "images/creature_chimera_joy.png",
+            "sad": "images/creature_chimera_sad.png",
+            "angry": "images/creature_chimera_angry.png",
+            "skill": "images/creature_chimera_skill.png",
+            "victory": "images/creature_chimera_victory.png",
+            "defeat": "images/creature_chimera_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_chimera_gallery_lv1.png",
+            "lv2": "images/creature_chimera_gallery_lv2.png",
+            "lv3": "images/creature_chimera_gallery_lv3.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 키메라",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
+            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "gallery_lv1": "dating sim event, 키메라, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, 키메라, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, 키메라, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 키메라은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "ent_ancient",
+        name: "고대 엔트",
+        rarity: RANKS.SPECIAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_ent_ancient.png",
+        sprites: {
+            "idle": "images/creature_ent_ancient.png",
+            "joy": "images/creature_ent_ancient_joy.png",
+            "sad": "images/creature_ent_ancient_sad.png",
+            "angry": "images/creature_ent_ancient_angry.png",
+            "skill": "images/creature_ent_ancient_skill.png",
+            "victory": "images/creature_ent_ancient_victory.png",
+            "defeat": "images/creature_ent_ancient_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_ent_ancient_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 고대 엔트",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 고대 엔트, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 고대 엔트은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "elemental_water",
+        name: "물의 정령",
+        rarity: RANKS.SPECIAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_elemental_water.png",
+        sprites: {
+            "idle": "images/creature_elemental_water.png",
+            "joy": "images/creature_elemental_water_joy.png",
+            "sad": "images/creature_elemental_water_sad.png",
+            "angry": "images/creature_elemental_water_angry.png",
+            "skill": "images/creature_elemental_water_skill.png",
+            "victory": "images/creature_elemental_water_victory.png",
+            "defeat": "images/creature_elemental_water_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_elemental_water_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 물의 정령",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 물의 정령, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 물의 정령은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "wolf_dire",
+        name: "다이어 울프",
+        rarity: RANKS.RARE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_wolf_dire.png",
+        sprites: {
+            "idle": "images/creature_wolf_dire.png",
+            "joy": "images/creature_wolf_dire_joy.png",
+            "sad": "images/creature_wolf_dire_sad.png",
+            "angry": "images/creature_wolf_dire_angry.png",
+            "skill": "images/creature_wolf_dire_skill.png",
+            "victory": "images/creature_wolf_dire_victory.png",
+            "defeat": "images/creature_wolf_dire_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_wolf_dire_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 다이어 울프",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 다이어 울프, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 다이어 울프은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "golem_mud",
+        name: "진흙 골렘",
+        rarity: RANKS.RARE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_golem_mud.png",
+        sprites: {
+            "idle": "images/creature_golem_mud.png",
+            "joy": "images/creature_golem_mud_joy.png",
+            "sad": "images/creature_golem_mud_sad.png",
+            "angry": "images/creature_golem_mud_angry.png",
+            "skill": "images/creature_golem_mud_skill.png",
+            "victory": "images/creature_golem_mud_victory.png",
+            "defeat": "images/creature_golem_mud_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_golem_mud_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 진흙 골렘",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 진흙 골렘, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 진흙 골렘은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "magma_slime",
+        name: "마그마 슬라임",
+        rarity: RANKS.UNIQUE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_magma_slime.png",
+        sprites: {
+            "idle": "images/creature_magma_slime.png",
+            "joy": "images/creature_magma_slime_joy.png",
+            "sad": "images/creature_magma_slime_sad.png",
+            "angry": "images/creature_magma_slime_angry.png",
+            "skill": "images/creature_magma_slime_skill.png",
+            "victory": "images/creature_magma_slime_victory.png",
+            "defeat": "images/creature_magma_slime_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_magma_slime_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 마그마 슬라임",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 마그마 슬라임, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 마그마 슬라임은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "mushroom_angry_new",
+        name: "화난 버섯",
+        rarity: RANKS.UNIQUE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_mushroom_angry_new.png",
+        sprites: {
+            "idle": "images/creature_mushroom_angry_new.png",
+            "joy": "images/creature_mushroom_angry_new_joy.png",
+            "sad": "images/creature_mushroom_angry_new_sad.png",
+            "angry": "images/creature_mushroom_angry_new_angry.png",
+            "skill": "images/creature_mushroom_angry_new_skill.png",
+            "victory": "images/creature_mushroom_angry_new_victory.png",
+            "defeat": "images/creature_mushroom_angry_new_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_mushroom_angry_new_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 화난 버섯",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 화난 버섯, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 화난 버섯은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "fish_flying_new",
+        name: "날치",
+        rarity: RANKS.UNIQUE,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_fish_flying_new.png",
+        sprites: {
+            "idle": "images/creature_fish_flying_new.png",
+            "joy": "images/creature_fish_flying_new_joy.png",
+            "sad": "images/creature_fish_flying_new_sad.png",
+            "angry": "images/creature_fish_flying_new_angry.png",
+            "skill": "images/creature_fish_flying_new_skill.png",
+            "victory": "images/creature_fish_flying_new_victory.png",
+            "defeat": "images/creature_fish_flying_new_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_fish_flying_new_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 날치",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 날치, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 날치은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "god_odin",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_god_odin.png",
+        sprites: {
+            "idle": "images/creature_god_odin.png",
+            "joy": "images/creature_god_odin_joy.png",
+            "sad": "images/creature_god_odin_sad.png",
+            "angry": "images/creature_god_odin_angry.png",
+            "skill": "images/creature_god_odin_skill.png",
+            "victory": "images/creature_god_odin_victory.png",
+            "defeat": "images/creature_god_odin_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_god_odin_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "valkyrie",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_valkyrie.png",
+        sprites: {
+            "idle": "images/creature_valkyrie.png",
+            "joy": "images/creature_valkyrie_joy.png",
+            "sad": "images/creature_valkyrie_sad.png",
+            "angry": "images/creature_valkyrie_angry.png",
+            "skill": "images/creature_valkyrie_skill.png",
+            "victory": "images/creature_valkyrie_victory.png",
+            "defeat": "images/creature_valkyrie_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_valkyrie_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "god_zeus",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_god_zeus.jpg",
+        sprites: {
+            "idle": "images/creature_god_zeus.jpg",
+            "joy": "images/creature_god_zeus.jpg",
+            "sad": "images/creature_god_zeus.jpg",
+            "angry": "images/creature_god_zeus.jpg",
+            "skill": "images/creature_god_zeus.jpg",
+            "victory": "images/creature_god_zeus.jpg",
+            "defeat": "images/creature_god_zeus.jpg",
+            "gallery": {
+            "lv1": "images/creature_god_zeus.jpg"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "angel_arch",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_angel_arch.png",
+        sprites: {
+            "idle": "images/creature_angel_arch.png",
+            "joy": "images/creature_angel_arch_joy.png",
+            "sad": "images/creature_angel_arch_sad.png",
+            "angry": "images/creature_angel_arch_angry.png",
+            "skill": "images/creature_angel_arch_skill.png",
+            "victory": "images/creature_angel_arch_victory.png",
+            "defeat": "images/creature_angel_arch_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_angel_arch_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "titan_atlas",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_titan_atlas.png",
+        sprites: {
+            "idle": "images/creature_titan_atlas.png",
+            "joy": "images/creature_titan_atlas_joy.png",
+            "sad": "images/creature_titan_atlas_sad.png",
+            "angry": "images/creature_titan_atlas_angry.png",
+            "skill": "images/creature_titan_atlas_skill.png",
+            "victory": "images/creature_titan_atlas_victory.png",
+            "defeat": "images/creature_titan_atlas_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_titan_atlas_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "cloud_puff",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_cloud_puff.png",
+        sprites: {
+            "idle": "images/creature_cloud_puff.png",
+            "joy": "images/creature_cloud_puff_joy.png",
+            "sad": "images/creature_cloud_puff_sad.png",
+            "angry": "images/creature_cloud_puff_angry.png",
+            "skill": "images/creature_cloud_puff_skill.png",
+            "victory": "images/creature_cloud_puff_victory.png",
+            "defeat": "images/creature_cloud_puff_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_cloud_puff_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "mage_flame",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_mage_flame.png",
+        sprites: {
+            "idle": "images/creature_mage_flame.png",
+            "joy": "images/creature_mage_flame_joy.png",
+            "sad": "images/creature_mage_flame_sad.png",
+            "angry": "images/creature_mage_flame_angry.png",
+            "skill": "images/creature_mage_flame_skill.png",
+            "victory": "images/creature_mage_flame_victory.png",
+            "defeat": "images/creature_mage_flame_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_mage_flame_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "time_lord_chronos",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_time_lord_chronos.png",
+        sprites: {
+            "idle": "images/creature_time_lord_chronos.png",
+            "joy": "images/creature_time_lord_chronos_joy.png",
+            "sad": "images/creature_time_lord_chronos_sad.png",
+            "angry": "images/creature_time_lord_chronos_angry.png",
+            "skill": "images/creature_time_lord_chronos_skill.png",
+            "victory": "images/creature_time_lord_chronos_victory.png",
+            "defeat": "images/creature_time_lord_chronos_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_time_lord_chronos_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "demon_king",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_demon_king.png",
+        sprites: {
+            "idle": "images/creature_demon_king.png",
+            "joy": "images/creature_demon_king_joy.png",
+            "sad": "images/creature_demon_king_sad.png",
+            "angry": "images/creature_demon_king_angry.png",
+            "skill": "images/creature_demon_king_skill.png",
+            "victory": "images/creature_demon_king_victory.png",
+            "defeat": "images/creature_demon_king_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_demon_king_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "god_zeus_shy",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_god_zeus_shy.jpg",
+        sprites: {
+            "idle": "images/creature_god_zeus_shy.jpg",
+            "joy": "images/creature_god_zeus_shy.jpg",
+            "sad": "images/creature_god_zeus_shy.jpg",
+            "angry": "images/creature_god_zeus_shy.jpg",
+            "skill": "images/creature_god_zeus_shy.jpg",
+            "victory": "images/creature_god_zeus_shy.jpg",
+            "defeat": "images/creature_god_zeus_shy.jpg",
+            "gallery": {
+            "lv1": "images/creature_god_zeus_shy.jpg"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "god_zeus_angry",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_god_zeus_angry.jpg",
+        sprites: {
+            "idle": "images/creature_god_zeus_angry.jpg",
+            "joy": "images/creature_god_zeus_angry.jpg",
+            "sad": "images/creature_god_zeus_angry.jpg",
+            "angry": "images/creature_god_zeus_angry.jpg",
+            "skill": "images/creature_god_zeus_angry.jpg",
+            "victory": "images/creature_god_zeus_angry.jpg",
+            "defeat": "images/creature_god_zeus_angry.jpg",
+            "gallery": {
+            "lv1": "images/creature_god_zeus_angry.jpg"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "god_zeus_love",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_god_zeus_love.jpg",
+        sprites: {
+            "idle": "images/creature_god_zeus_love.jpg",
+            "joy": "images/creature_god_zeus_love.jpg",
+            "sad": "images/creature_god_zeus_love.jpg",
+            "angry": "images/creature_god_zeus_love.jpg",
+            "skill": "images/creature_god_zeus_love.jpg",
+            "victory": "images/creature_god_zeus_love.jpg",
+            "defeat": "images/creature_god_zeus_love.jpg",
+            "gallery": {
+            "lv1": "images/creature_god_zeus_love.jpg"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "void_emperor",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_void_emperor.png",
+        sprites: {
+            "idle": "images/creature_void_emperor.png",
+            "joy": "images/creature_void_emperor_joy.png",
+            "sad": "images/creature_void_emperor_sad.png",
+            "angry": "images/creature_void_emperor_angry.png",
+            "skill": "images/creature_void_emperor_skill.png",
+            "victory": "images/creature_void_emperor_victory.png",
+            "defeat": "images/creature_void_emperor_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_void_emperor_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "giant_hill",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_giant_hill.png",
+        sprites: {
+            "idle": "images/creature_giant_hill.png",
+            "joy": "images/creature_giant_hill_joy.png",
+            "sad": "images/creature_giant_hill_sad.png",
+            "angry": "images/creature_giant_hill_angry.png",
+            "skill": "images/creature_giant_hill_skill.png",
+            "victory": "images/creature_giant_hill_victory.png",
+            "defeat": "images/creature_giant_hill_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_giant_hill_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "phoenix_eternal",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_phoenix_eternal.png",
+        sprites: {
+            "idle": "images/creature_phoenix_eternal.png",
+            "joy": "images/creature_phoenix_eternal_joy.png",
+            "sad": "images/creature_phoenix_eternal_sad.png",
+            "angry": "images/creature_phoenix_eternal_angry.png",
+            "skill": "images/creature_phoenix_eternal_skill.png",
+            "victory": "images/creature_phoenix_eternal_victory.png",
+            "defeat": "images/creature_phoenix_eternal_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_phoenix_eternal_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "eagle_iron",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_eagle_iron.png",
+        sprites: {
+            "idle": "images/creature_eagle_iron.png",
+            "joy": "images/creature_eagle_iron_joy.png",
+            "sad": "images/creature_eagle_iron_sad.png",
+            "angry": "images/creature_eagle_iron_angry.png",
+            "skill": "images/creature_eagle_iron_skill.png",
+            "victory": "images/creature_eagle_iron_victory.png",
+            "defeat": "images/creature_eagle_iron_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_eagle_iron_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "vampire_lord",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_vampire_lord.png",
+        sprites: {
+            "idle": "images/creature_vampire_lord.png",
+            "joy": "images/creature_vampire_lord_joy.png",
+            "sad": "images/creature_vampire_lord_sad.png",
+            "angry": "images/creature_vampire_lord_angry.png",
+            "skill": "images/creature_vampire_lord_skill.png",
+            "victory": "images/creature_vampire_lord_victory.png",
+            "defeat": "images/creature_vampire_lord_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_vampire_lord_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "ninja_shadow",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_ninja_shadow.png",
+        sprites: {
+            "idle": "images/creature_ninja_shadow.png",
+            "joy": "images/creature_ninja_shadow_joy.png",
+            "sad": "images/creature_ninja_shadow_sad.png",
+            "angry": "images/creature_ninja_shadow_angry.png",
+            "skill": "images/creature_ninja_shadow_skill.png",
+            "victory": "images/creature_ninja_shadow_victory.png",
+            "defeat": "images/creature_ninja_shadow_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_ninja_shadow_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "kraken_idol",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_kraken_idol.png",
+        sprites: {
+            "idle": "images/creature_kraken_idol.png",
+            "joy": "images/creature_kraken_idol_joy.png",
+            "sad": "images/creature_kraken_idol_sad.png",
+            "angry": "images/creature_kraken_idol_angry.png",
+            "skill": "images/creature_kraken_idol_skill.png",
+            "victory": "images/creature_kraken_idol_victory.png",
+            "defeat": "images/creature_kraken_idol_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_kraken_idol_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "kraken_baby",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_kraken_baby.png",
+        sprites: {
+            "idle": "images/creature_kraken_baby.png",
+            "joy": "images/creature_kraken_baby_joy.png",
+            "sad": "images/creature_kraken_baby_sad.png",
+            "angry": "images/creature_kraken_baby_angry.png",
+            "skill": "images/creature_kraken_baby_skill.png",
+            "victory": "images/creature_kraken_baby_victory.png",
+            "defeat": "images/creature_kraken_baby_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_kraken_baby_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "rat_brown",
+        name: "Unknown",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_rat_brown.png",
+        sprites: {
+            "idle": "images/creature_rat_brown.png",
+            "joy": "images/creature_rat_brown_joy.png",
+            "sad": "images/creature_rat_brown_sad.png",
+            "angry": "images/creature_rat_brown_angry.png",
+            "skill": "images/creature_rat_brown_skill.png",
+            "victory": "images/creature_rat_brown_victory.png",
+            "defeat": "images/creature_rat_brown_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_rat_brown_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "slime_green_new",
+        name: "초록 슬라임",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_slime_green_new.png",
+        sprites: {
+            "idle": "images/creature_slime_green_new.png",
+            "joy": "images/creature_slime_green_new_joy.png",
+            "sad": "images/creature_slime_green_new_sad.png",
+            "angry": "images/creature_slime_green_new_angry.png",
+            "skill": "images/creature_slime_green_new_skill.png",
+            "victory": "images/creature_slime_green_new_victory.png",
+            "defeat": "images/creature_slime_green_new_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_slime_green_new_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 초록 슬라임",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 초록 슬라임, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 초록 슬라임은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "blue_slime",
+        name: "파랑 슬라임",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_blue_slime.png",
+        sprites: {
+            "idle": "images/creature_blue_slime.png",
+            "joy": "images/creature_blue_slime_joy.png",
+            "sad": "images/creature_blue_slime_sad.png",
+            "angry": "images/creature_blue_slime_angry.png",
+            "skill": "images/creature_blue_slime_skill.png",
+            "victory": "images/creature_blue_slime_victory.png",
+            "defeat": "images/creature_blue_slime_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_blue_slime_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 파랑 슬라임",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 파랑 슬라임, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 파랑 슬라임은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
+    },
+    {
+        id: "pebble_new",
+        name: "조약돌",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creature_pebble_new.png",
+        sprites: {
+            "idle": "images/creature_pebble_new.png",
+            "joy": "images/creature_pebble_new_joy.png",
+            "sad": "images/creature_pebble_new_sad.png",
+            "angry": "images/creature_pebble_new_angry.png",
+            "skill": "images/creature_pebble_new_skill.png",
+            "victory": "images/creature_pebble_new_victory.png",
+            "defeat": "images/creature_pebble_new_defeat.png",
+            "gallery": {
+            "lv1": "images/creature_pebble_new_gallery.png"
+            }
+},
+        prompts: {
+            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 조약돌",
+            "idle": "standing pose, confident, neutral expression",
+            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+            "gallery_lv1": "cute pose, 조약돌, energetic, detailed, looking at viewer"
+},
+        lore: {
+            "title": "미지의 존재",
+            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 조약돌은(는) 특별한 능력을 지녔습니다.",
+            "personality": "Unknown"
+},
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
+        lines: { normal: "..." }
     }
 ];

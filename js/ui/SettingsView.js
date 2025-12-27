@@ -14,6 +14,8 @@ export default class SettingsView {
         this.inputNickname = document.getElementById('input-setting-nickname');
         this.btnChangeNickname = document.getElementById('btn-change-nickname');
         this.btnLogout = document.getElementById('btn-setting-logout');
+        this.btnResetAccount = document.getElementById('btn-reset-account'); // [Phase 4]
+        this.btnHeaderLogout = document.getElementById('btn-header-logout');
 
         this.isMuted = false;
 
@@ -73,12 +75,31 @@ export default class SettingsView {
             }
         });
 
-        // 6. 로그아웃
+        // 6. 로그아웃 (설정 모달 내)
         this.btnLogout?.addEventListener('click', async () => {
             if (confirm("로그아웃 하시겠습니까?")) {
                 await this.game.authManager.logout();
                 this.closeSettings();
                 location.reload(); // 새로고침
+            }
+        });
+
+        // 7. 헤더 로그아웃 버튼 (설정 모달 없이 직접 접근)
+        this.btnHeaderLogout?.addEventListener('click', async () => {
+            if (confirm("로그아웃 하시겠습니까?")) {
+                await this.game.authManager.logout();
+                location.reload();
+            }
+        });
+
+        // 8. 계정 초기화 (Reset)
+        this.btnResetAccount?.addEventListener('click', () => {
+            if (confirm("⚠️ 경고: 모든 게임 데이터가 영구적으로 삭제됩니다.\n정말 초기화 하시겠습니까?")) {
+                if (confirm("진짜로 삭제합니까? 이 작업은 되돌릴 수 없습니다.")) {
+                    localStorage.clear();
+                    alert("데이터가 초기화되었습니다. 게임을 다시 시작합니다.");
+                    location.reload();
+                }
             }
         });
     }

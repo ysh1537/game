@@ -12,67 +12,73 @@ export default class UIManager {
 
     /**
      * @private
-     * @description 주요 UI 요소들을 한 번만 캐싱합니다.
+     * @description 주요 UI 요소들을 캐싱하고 누락 시 경고를 출력합니다.
      */
     _cacheElements() {
+        const get = (id) => {
+            const el = document.getElementById(id);
+            if (!el) console.warn(`[UIManager] ⚠️ Missing UI Element: #${id}`);
+            return el;
+        };
+
         return {
             // 사이드바 및 탭
-            tabHome: document.getElementById('tab-home'),
-            tabSummon: document.getElementById('tab-summon'),
-            tabExpedition: document.getElementById('tab-expedition'),
-            tabResearch: document.getElementById('tab-research'),
-            tabMission: document.getElementById('tab-mission'),
-            tabShop: document.getElementById('tab-shop'),
-            tabTeam: document.getElementById('tab-team'),
-            tabBattle: document.getElementById('tab-battle'),
+            tabHome: get('tab-home'),
+            tabSummon: get('tab-summon'),
+            tabExpedition: get('tab-expedition'),
+            tabResearch: get('tab-research'),
+            tabMission: get('tab-mission'),
+            tabShop: get('tab-shop'),
+            tabTeam: get('tab-team'),
+            tabBattle: get('tab-battle'),
 
             // 메인 컨텐츠 영역
-            contentHome: document.getElementById('content-home'), // [Mod] Renamed from layout-container
-            contentSummon: document.getElementById('content-summon'),
-            contentExpedition: document.getElementById('content-expedition'),
-            contentResearch: document.getElementById('content-research'),
-            contentMission: document.getElementById('content-mission'),
-            contentShop: document.getElementById('content-shop'),
-            contentTeam: document.getElementById('content-team'),
-            contentBattle: document.getElementById('content-battle'),
+            contentHome: get('content-home'),
+            contentSummon: get('content-summon'),
+            contentExpedition: get('content-expedition'),
+            contentResearch: get('content-research'),
+            contentMission: get('content-mission'),
+            contentShop: get('content-shop'),
+            contentTeam: get('content-team'),
+            contentBattle: get('content-battle'),
 
             // 공통 패널
-            creatureList: document.getElementById('creature-list'),
-            detailPanel: document.getElementById('detail-panel'),
-            logContent: document.getElementById('log-content'),
+            creatureList: get('creature-list'),
+            detailPanel: get('detail-panel'),
+            logContent: get('log-content'),
 
             // 필터 & 정렬
-            sortOrder: document.getElementById('sort-order'),
-            filterRarity: document.getElementById('filter-rarity'),
-            filterElement: document.getElementById('filter-element'),
-            btnAutoCompose: document.getElementById('btn-auto-compose'),
-            autoBattleSelect: document.getElementById('select-auto-battle'),
+            sortOrder: get('sort-order'),
+            filterRarity: get('filter-rarity'),
+            filterElement: get('filter-element'),
+            btnAutoCompose: get('btn-auto-compose'),
+            autoBattleSelect: get('select-auto-battle'),
 
             // 로비 캐릭터
-            lobbyCharacterImg: document.getElementById('lobby-character-img'),
+            lobbyCharacterImg: get('lobby-character-img'),
 
             // 상태바 리소스
-            goldDisplay: document.getElementById('gold-display'),
-            gemDisplay: document.getElementById('gem-display'),
-            energyDisplay: document.getElementById('energy-display'),
+            goldDisplay: get('gold-display'),
+            gemDisplay: get('gem-display'),
+            energyDisplay: get('energy-display'),
 
             // 스테이지/전투 UI
-            stageTitle: document.getElementById('stage-title'),
-            stageInfo: document.getElementById('stage-info'),
-            stageRewards: document.getElementById('stage-rewards'),
-            btnPrevStage: document.getElementById('btn-prev-stage'),
-            btnNextStage: document.getElementById('btn-next-stage'),
-            btnStartStage: document.getElementById('btn-start-stage'),
+            stageTitle: get('stage-title'),
+            stageInfo: get('stage-info'),
+            stageRewards: get('stage-rewards'),
+            btnPrevStage: get('btn-prev-stage'),
+            btnNextStage: get('btn-next-stage'),
+            btnStartStage: get('btn-start-stage'),
 
             // 오버레이 및 모달
-            loginOverlay: document.getElementById('login-overlay'),
-            modalOverlay: document.getElementById('custom-modal-overlay'),
-            modalMsg: document.getElementById('custom-modal-msg'),
-            btnModalYes: document.getElementById('btn-modal-yes'),
-            btnModalNo: document.getElementById('btn-modal-no'),
+            loginOverlay: get('login-overlay'),
+            modalOverlay: get('custom-modal-overlay'),
+            modalMsg: get('custom-modal-msg'),
+            btnModalYes: get('btn-modal-yes'),
+            btnModalNo: get('btn-modal-no'),
 
             // 개발자 치트
-            devFill: document.getElementById('devFillResources')
+            devFill: document.getElementById('devFillResources') // Optional, so no warning
         };
     }
 

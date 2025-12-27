@@ -1,21 +1,19 @@
 import EventEmitter from '../utils/EventEmitter.js';
-
-// 리소스 초기값 (개발/테스트용) - 이 값이 무조건 초기값으로 사용됩니다.
-const INITIAL_RESOURCES = {
-    gold: 5000,
-    energy: 100,
-    gem: 10
-};
+import { GameConfig } from '../data/GameConfig.js';
 
 export default class ResourceManager extends EventEmitter {
     constructor() {
         super();
-        this.resources = { ...INITIAL_RESOURCES };
-        this.maxEnergy = 100; // [NEW] 최대 에너지
+        this.resources = {
+            gold: GameConfig.RESOURCES.STARTING_GOLD,
+            gem: GameConfig.RESOURCES.STARTING_GEMS,
+            energy: 100
+        };
+        this.maxEnergy = 100; // Default fallback if config missing
 
         // [NEW] 에너지 자동 회복 관련
         this.recoveryTimer = 0;
-        this.RECOVERY_INTERVAL = 300; // 5분 (초 단위)
+        this.RECOVERY_INTERVAL = GAME_CONFIG.ENERGY.RECOVERY_INTERVAL_SEC; // 5분 (초 단위)
 
         console.log("ResourceManager: Initialized with", this.resources);
     }

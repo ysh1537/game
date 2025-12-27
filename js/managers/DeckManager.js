@@ -65,52 +65,25 @@ export default class DeckManager extends EventEmitter {
             this.currentEditingDeck = state.currentEditingDeck !== undefined ? state.currentEditingDeck : 'main';
             console.log('[DeckManager] 덱 데이터 로드 완료:', this.decks);
         } else {
-            // 폴백: 레거시 키에서 로드 시도
-            console.log('[DeckManager] 통합 저장에서 덱 데이터 없음, 레거시 키 확인...');
-            this.load();
+            console.log('[DeckManager] 로드할 데이터 없음, 기본값 사용');
+            // 기본값 유지
         }
         this.emit('decks:updated', this.decks);
     }
 
-    // Legacy Support - 직접 localStorage에서 로드
+    // [Refactored] Legacy load removed.
     load() {
-        const data = localStorage.getItem('mcl_decks');
-        console.log('[DeckManager] 레거시 로드 시도, 데이터 존재:', !!data);
-        if (data) {
-            try {
-                const parsed = JSON.parse(data);
-                console.log('[DeckManager] 레거시 파싱 결과:', parsed);
-
-                // 직접 속성 설정 (loadFromState 호출 시 재귀 방지)
-                if (parsed.decks && Array.isArray(parsed.decks)) {
-                    this.decks = parsed.decks;
-                    this.mainDeck = parsed.mainDeck !== undefined ? parsed.mainDeck : 0;
-                    this.currentEditingDeck = parsed.currentEditingDeck || 'main';
-                    console.log('[DeckManager] 레거시 덱 로드 성공:', this.decks);
-                } else {
-                    console.warn('[DeckManager] 레거시 데이터 형식 오류');
-                }
-            } catch (e) {
-                console.error("[DeckManager] 레거시 로드 실패:", e);
-            }
-        }
+        // No-op: Data should be loaded via Game.loadUserData -> applyLoadedState
+        // this.loadFromState() will be called by Game.js
     }
 
     // Triggered internally on changes - 덱 변경 시 저장
     save() {
-        const data = this.getSerializableState();
-        console.log('[DeckManager] 저장 중:', data);
-
-        // 레거시 키와 Game.save() 통합 저장 모두 트리거
-        localStorage.setItem('mcl_decks', JSON.stringify(data));
-
-        // Game.js의 전체 저장도 트리거
+        // Game.js의 전체 저장 트리거
         if (this.game && typeof this.game.save === 'function') {
             this.game.save();
         }
-
         this.emit('decks:updated', this.decks);
-        console.log('[DeckManager] 저장 완료');
     }
 
     setCreature(deckIndex, slotIndex, creatureId) {

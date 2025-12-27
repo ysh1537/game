@@ -29,3 +29,12 @@ export function getRequiredExp(level) {
     if (level >= 30) return Infinity; // 만렙
     return LEVEL_REQ_EXP[level] || 999999;
 }
+
+// [NEW] 레벨업/훈련 비용 계산 (경제 밸런싱)
+export function getLevelUpCost(level) {
+    // Base 200, +10% per level
+    // Lv1->2: 200
+    // Lv10: ~500
+    // Lv30: ~3500
+    return Math.floor(200 * Math.pow(1.1, level - 1));
+}

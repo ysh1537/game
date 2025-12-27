@@ -1,0 +1,968 @@
+[
+  {
+    "id": "god_odin",
+    "name": "Unknown",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/creature_god_odin.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "wolf_dire",
+    "name": "Unknown",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/creature_wolf_dire.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "valkyrie",
+    "name": "Unknown",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/creature_valkyrie.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "god_zeus",
+    "name": "Unknown",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/creature_god_zeus.jpg",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "angel_arch",
+    "name": "Unknown",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/creature_angel_arch.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "giant_hill",
+    "name": "대지의 방패 그로트",
+    "current": "images/creature_giant_hill.png?v=3",
+    "found": "images/creature_giant_hill.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "titan_atlas",
+    "name": "Unknown",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/creature_titan_atlas.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "golem_mud",
+    "name": "Unknown",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/creature_golem_mud.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "eagle_iron",
+    "name": "강철 독수리",
+    "current": "images/creature_eagle_iron.png?v=3",
+    "found": "images/creature_eagle_iron.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "cloud_puff",
+    "name": "Unknown",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/creature_cloud_puff.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "bear_ice",
+    "name": "만년설 곰",
+    "current": "images/creature_bear_ice.png?v=3",
+    "found": "images/creature_bear_ice.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "mage_flame",
+    "name": "Unknown",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/creature_mage_flame.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "god_hel",
+    "name": "저승의 여왕 헬",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/god_hel.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "giant_fire_surtr",
+    "name": "불의 거인 수르트",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/giant_fire_surtr.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "huginn_crow",
+    "name": "오딘의 까마귀 후긴",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/huginn_crow.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "muninn_crow",
+    "name": "오딘의 까마귀 무닌",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/muninn_crow.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "wolf_pup_asgard",
+    "name": "아기 늑대",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/wolf_pup_asgard.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "dwarf_apprentice",
+    "name": "드워프 수습전공",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/dwarf_apprentice.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "troll_baby",
+    "name": "아기 트롤",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/troll_baby.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "ice_spirit_small",
+    "name": "작은 얼음 정령",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/ice_spirit_small.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "viking_youth",
+    "name": "열혈 바이킹 소년",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/viking_youth.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "valkyrie_recruit",
+    "name": "신입 발키리",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/valkyrie_recruit.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "einherjar_ghost",
+    "name": "방황하는 에인헤랴르",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/einherjar_ghost.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "goat_lightning",
+    "name": "번개 염소 탕그리스니르",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/goat_lightning.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "ratatoskr_squirrel",
+    "name": "전령 다람쥐 라타토스크",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/ratatoskr_squirrel.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "nidhogg_spawn",
+    "name": "니드호그의 자식",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/nidhogg_spawn.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "elk_golden",
+    "name": "황금 뿔 엘크",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/elk_golden.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "yggdrasil_guardian",
+    "name": "세계수 수호병",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/yggdrasil_guardian.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "mimir_spirit",
+    "name": "미미르의 지혜 정령",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/mimir_spirit.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "frost_giant_warrior",
+    "name": "서리 거인 전사",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/frost_giant_warrior.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "fire_giant_scout",
+    "name": "화염 거인 정찰병",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/fire_giant_scout.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "shieldmaiden_iron",
+    "name": "철벽의 방패처녀",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/shieldmaiden_iron.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "beserker_bear",
+    "name": "베어 버서커",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/beserker_bear.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "ulfhednar_wolf",
+    "name": "울프헤드나르 전사",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/ulfhednar_wolf.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "nordic_cat_freya",
+    "name": "프레이야의 고양이",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/nordic_cat_freya.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "draugr_remnant",
+    "name": "낡은 드라우그",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/draugr_remnant.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "bifrost_wisp",
+    "name": "비프뢰스트의 빛무궁",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/bifrost_wisp.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "heimdall_horn_spirit",
+    "name": "걀라르호른의 메아리",
+    "current": "images/placeholder_asgard.png",
+    "found": "images/heimdall_horn_spirit.png",
+    "sourceFile": "./js/data/creatures/AsgardData.js"
+  },
+  {
+    "id": "time_lord_chronos",
+    "name": "Unknown",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/creature_time_lord_chronos.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "angel_arch",
+    "name": "Unknown",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/creature_angel_arch.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "demon_king",
+    "name": "Unknown",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/creature_demon_king.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "creator_gaia",
+    "name": "Unknown",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/creature_creator_gaia.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "void_emperor",
+    "name": "Unknown",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/creature_void_emperor.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "valkyrie",
+    "name": "Unknown",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/creature_valkyrie.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "titan_atlas",
+    "name": "거신 아틀라스",
+    "current": "images/creature_titan_atlas.png?v=5",
+    "found": "images/creature_titan_atlas.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "giant_hill",
+    "name": "Unknown",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/creature_giant_hill.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "mage_flame",
+    "name": "화염 마법사",
+    "current": "images/creature_mage_flame.png?v=3",
+    "found": "images/creature_mage_flame.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "phoenix_eternal",
+    "name": "Unknown",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/creature_phoenix_eternal.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "elemental_water",
+    "name": "Unknown",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/creature_elemental_water.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "wolf_dire",
+    "name": "Unknown",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/creature_wolf_dire.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "eagle_iron",
+    "name": "Unknown",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/creature_eagle_iron.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "titan_kronos_shade",
+    "name": "크로노스의 그림자",
+    "current": "images/boss_kronos.png",
+    "found": "images/titan_kronos_shade.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "minotaur_king",
+    "name": "미노타우로스 왕",
+    "current": "images/boss_minotaur.png",
+    "found": "images/minotaur_king.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "cerberus_guardian",
+    "name": "지옥파수꾼 케르베로스",
+    "current": "images/boss_cerberus.png",
+    "found": "images/cerberus_guardian.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "hydra_lernaean",
+    "name": "레르나의 히드라",
+    "current": "images/boss_hydra.png",
+    "found": "images/hydra_lernaean.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "lion_nemean",
+    "name": "네메아의 사자",
+    "current": "images/boss_lion.png",
+    "found": "images/lion_nemean.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "god_hades",
+    "name": "지옥의 지배자 하데스",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/god_hades.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "god_dionysus",
+    "name": "축제의 신 디오니소스",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/god_dionysus.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "hero_hercules",
+    "name": "불멸의 영웅 헤라클레스",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/hero_hercules.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "medusa_cursed",
+    "name": "저주받은 미모 메두사",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/medusa_cursed.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "harpy_queen",
+    "name": "폭풍우의 하피 퀸",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/harpy_queen.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "siren_singer",
+    "name": "유혹의 사이렌",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/siren_singer.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "pegasus_colt",
+    "name": "아기 페가수스",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/pegasus_colt.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "satyr_young",
+    "name": "사티로스 견습생",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/satyr_young.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "dryad_seed",
+    "name": "드라이어드 씨앗",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/dryad_seed.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "cyclops_worker",
+    "name": "키클롭스 견습공",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/cyclops_worker.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "nymph_water",
+    "name": "샘의 님프",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/nymph_water.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "griffin_chick",
+    "name": "아기 그리폰",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/griffin_chick.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "cerberus_pup",
+    "name": "아기 케르베로스",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/cerberus_pup.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "hellhound_scout",
+    "name": "헬하운드 정찰개",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/hellhound_scout.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "automaton_mini",
+    "name": "미니 오토마톤",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/automaton_mini.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "minotaur_calf",
+    "name": "아기 미노타우로스",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/minotaur_calf.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "gorgon_sister_e",
+    "name": "고르곤 자매 에우리알레",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/gorgon_sister_e.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "gorgon_sister_s",
+    "name": "고르곤 자매 스테노",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/gorgon_sister_s.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "charybdis_baby",
+    "name": "소형 카리브디스",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/charybdis_baby.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "scylla_pup",
+    "name": "새끼 스킬라",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/scylla_pup.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "talos_fragment",
+    "name": "탈로스의 파편",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/talos_fragment.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "fury_hiss",
+    "name": "분노의 정령 퓨리",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/fury_hiss.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "muse_lyra",
+    "name": "악보의 뮤즈",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/muse_lyra.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "chimera_cub",
+    "name": "아기 키메라",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/chimera_cub.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "sphinx_kitten",
+    "name": "아기 스핑크스",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/sphinx_kitten.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "phoenix_chick_o",
+    "name": "베이비 피닉스",
+    "current": "images/placeholder_olympus.png",
+    "found": "images/phoenix_chick_o.png",
+    "sourceFile": "./js/data/creatures/OlympusData.js"
+  },
+  {
+    "id": "dragon_ancient",
+    "name": "태초의 용 바하무트",
+    "current": "images/creature_dragon_ancient.png?v=5",
+    "found": "images/creature_dragon_ancient.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "phoenix_eternal",
+    "name": "불멸의 화조 페이",
+    "current": "images/creature_phoenix_eternal.png?v=3",
+    "found": "images/creature_phoenix_eternal.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "ninja_shadow",
+    "name": "그림자 닌자",
+    "current": "images/creature_ninja_shadow.png?v=3",
+    "found": "images/creature_ninja_shadow.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "vampire_lord",
+    "name": "Unknown",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/creature_vampire_lord.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "angel_arch",
+    "name": "Unknown",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/creature_angel_arch.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "flower_fairy",
+    "name": "꽃의 요정",
+    "current": "images/creature_flower_fairy.png?v=3",
+    "found": "images/creature_flower_fairy.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "ent_ancient",
+    "name": "Unknown",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/creature_ent_ancient.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "giant_hill",
+    "name": "Unknown",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/creature_giant_hill.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "golem_mud",
+    "name": "Unknown",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/creature_golem_mud.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "hero_wukong",
+    "name": "제천대성 손오공",
+    "current": "images/creature_hero_wukong.png",
+    "found": "images/hero_wukong.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "dragon_azure",
+    "name": "청룡",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/dragon_azure.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "tiger_white",
+    "name": "백호",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/tiger_white.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "bird_vermilion",
+    "name": "주작",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/bird_vermilion.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "turtle_black",
+    "name": "현무",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/turtle_black.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "dokkeabi_king",
+    "name": "황금 방망이 도깨비",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/dokkeabi_king.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "crane_sage",
+    "name": "구름 위의 학 신선",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/crane_sage.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "pears_spirit",
+    "name": "연꽃 아씨",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/pears_spirit.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "mountain_god_tiger",
+    "name": "산신 호랑이",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/mountain_god_tiger.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "butterfly_dream",
+    "name": "장자의 나비",
+    "current": "images/placeholder_shangrila.png",
+    "found": "images/butterfly_dream.png",
+    "sourceFile": "./js/data/creatures/ShangriLaData.js"
+  },
+  {
+    "id": "void_emperor",
+    "name": "공허의 여제 에레보스",
+    "current": "images/creature_void_emperor.png?v=5",
+    "found": "images/creature_void_emperor.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "dragon_chaos",
+    "name": "혼돈의 용희 티아마트",
+    "current": "images/creature_dragon_chaos.png?v=5",
+    "found": "images/creature_dragon_chaos.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "demon_king",
+    "name": "마왕 바알",
+    "current": "images/creature_demon_king.png?v=5",
+    "found": "images/creature_demon_king.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "vampire_lord",
+    "name": "진홍의 여왕 카밀라",
+    "current": "images/creature_vampire_lord.png?v=3",
+    "found": "images/creature_vampire_lord.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "ninja_shadow",
+    "name": "Unknown",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/creature_ninja_shadow.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "angel_arch",
+    "name": "Unknown",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/creature_angel_arch.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "kraken_idol",
+    "name": "Unknown",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/creature_kraken_idol.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "kraken_baby",
+    "name": "Unknown",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/creature_kraken_baby.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "knight_skeleton",
+    "name": "스켈레톤 나이트",
+    "current": "images/creature_knight_skeleton.png?v=3",
+    "found": "images/creature_knight_skeleton.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "golem_mud",
+    "name": "Unknown",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/creature_golem_mud.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "rat_brown",
+    "name": "Unknown",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/creature_rat_brown.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "god_shub",
+    "name": "만 마리 새끼를 품은 숲의 염소",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/creature_god_shub.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "god_hastur",
+    "name": "황색 옷의 왕 하스터",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/god_hastur.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "god_dagon",
+    "name": "심해의 거신 다곤",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/god_dagon.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "knight_dullahan",
+    "name": "머리 없는 기사 듀라한",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/knight_dullahan.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "mimic_box",
+    "name": "탐욕의 상자 미믹",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/mimic_box.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "eye_bat",
+    "name": "외눈박이 박쥐",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/eye_bat.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "void_tentacle",
+    "name": "공허의 촉수",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/void_tentacle.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "sludge_blob",
+    "name": "오염된 슬러지",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/sludge_blob.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "bone_fragment_spirit",
+    "name": "뼈 조각 정령",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/bone_fragment_spirit.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "whispering_skull",
+    "name": "속삭이는 해골",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/whispering_skull.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "shadow_lurker",
+    "name": "그림자 잠복자",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/shadow_lurker.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "abyss_watcher_small",
+    "name": "작은 심연의 감시자",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/abyss_watcher_small.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "cursed_doll",
+    "name": "저주받은 인형",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/cursed_doll.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "ghost_lamp",
+    "name": "영혼의 등불",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/ghost_lamp.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "void_larva",
+    "name": "공허의 유충",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/void_larva.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "dark_puddles",
+    "name": "검은 물웅덩이",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/dark_puddles.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "screaming_root",
+    "name": "비명 지르는 뿌리",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/screaming_root.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "ghoul_scavenger",
+    "name": "시체 먹는 구울",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/ghoul_scavenger.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "deep_one_soldier",
+    "name": "딥 원 전사",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/deep_one_soldier.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "void_moth_small",
+    "name": "작은 공허 나방",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/void_moth_small.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "ink_squid_abyss",
+    "name": "심연 먹물 오징어",
+    "current": "images/placeholder_abyss.png",
+    "found": "images/ink_squid_abyss.png",
+    "sourceFile": "./js/data/creatures/AbyssData.js"
+  },
+  {
+    "id": "creator_gaia",
+    "name": "창조주 가이아",
+    "current": "images/creature_creator_gaia.png?v=5",
+    "found": "images/creature_creator_gaia.png",
+    "sourceFile": "./js/data/creatures/WildData.js"
+  },
+  {
+    "id": "dragon_drake",
+    "name": "폭염의 패왕 이그니스",
+    "current": "images/creature_dragon_drake.png?v=3",
+    "found": "images/creature_dragon_drake.png",
+    "sourceFile": "./js/data/creatures/WildData.js"
+  },
+  {
+    "id": "elemental_water",
+    "name": "물의 정령",
+    "current": "images/creature_elemental_water.png?v=3",
+    "found": "images/creature_elemental_water.png",
+    "sourceFile": "./js/data/creatures/WildData.js"
+  },
+  {
+    "id": "wolf_dire",
+    "name": "다이어 울프",
+    "current": "images/creature_wolf_dire.png?v=3",
+    "found": "images/creature_wolf_dire.png",
+    "sourceFile": "./js/data/creatures/WildData.js"
+  },
+  {
+    "id": "golem_mud",
+    "name": "진흙 골렘",
+    "current": "images/creature_golem_mud.png?v=3",
+    "found": "images/creature_golem_mud.png",
+    "sourceFile": "./js/data/creatures/WildData.js"
+  }
+]

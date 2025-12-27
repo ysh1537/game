@@ -3375,3 +3375,26 @@ body.archive-mode #center-panel {
     background-repeat: no-repeat !important;
 }
 
+
+/* [System V2] UI Optimization */
+.creature-card-mini {
+    content-visibility: auto;
+    contain-intrinsic-size: 100px 140px;
+}
+.btn-load-more {
+    grid-column: 1 / -1;
+    padding: 15px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+.btn-load-more:hover {
+    background: var(--accent-cyan);
+    color: #000;
+}

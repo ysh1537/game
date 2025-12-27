@@ -62,16 +62,25 @@ export default class BattleScene {
         this.stage.innerHTML = '';
         this.entityMap = {};
 
-        // [Visual] Apply background based on stage context (mock logic for now)
-        // In real implementation, pass stageId to getting background class
-        // Randomly pick for variety if not defined
-        const bgImages = ['bg_volcano.jpg', 'bg_ocean.jpg', 'bg_forest.jpg', 'bg_sky.jpg', 'bg_cave.jpg'];
-        const randomImg = bgImages[Math.floor(Math.random() * bgImages.length)];
+        // [Visual] Apply background based on stage context
+        let bgImage = 'bg_forest.jpg'; // Default
+
+        if (isPvP) {
+            bgImage = 'bg_sky.jpg'; // Arena Theme (Placeholder)
+        } else {
+            const currentStageId = this.game.battleManager.currentStageId;
+            if (currentStageId) {
+                const stageInfo = this.game.stageManager.getStageInfo(currentStageId);
+                if (stageInfo && stageInfo.background) {
+                    bgImage = stageInfo.background;
+                }
+            }
+        }
 
         // Remove old classes
         this.stage.className = 'battle-stage';
         // Apply direct style to ensure connection
-        this.stage.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('images/${randomImg}')`;
+        this.stage.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('images/${bgImage}')`;
 
         const heroContainer = document.createElement('div');
         heroContainer.id = 'hero-team-container';
@@ -105,6 +114,7 @@ export default class BattleScene {
         div.innerHTML = `
             <div class="hp-bar-container" style="position:absolute; width:100%; border-radius:3px; overflow:hidden;">
                 <div class="hp-bar-fill" style="width:${(entity.hp / entity.maxHp) * 100}%; height:100%; transition: width 0.3s;"></div>
+                <div class="shield-bar-fill" style="width:${entity.shield > 0 ? (entity.shield / entity.maxShield) * 100 : 0}%; height:100%; position:absolute; top:0; left:0; background: linear-gradient(90deg, #4fc3f7, #29b6f6); opacity:0.8; transition: width 0.3s;"></div>
             </div>
             <div class="sp-bar-container" style="position:absolute; width:100%; border-radius:2px; overflow:hidden;">
                 <div class="sp-bar-fill" style="width:${(entity.sp / entity.maxSp) * 100}%; height:100%; transition: width 0.3s;"></div>
@@ -172,7 +182,10 @@ export default class BattleScene {
                     this.showDamage(defenderEl, "MISS", "miss");
                 } else {
                     const impactType = type === 'skill' ? 'explosion' : 'slash';
-                    const dmgType = (isCrit || type === 'skill') ? 'crit' : 'normal';
+                    let dmgType = (isCrit || type === 'skill') ? 'crit' : 'normal';
+                    // [Phase 4] Elemental Visuals
+                    if (data.elemental === 'critical') dmgType = 'weak';
+                    else if (data.elemental === 'resist') dmgType = 'resist';
 
                     if (isHeal) {
                         this.createVFX(defenderEl, 'heal');
@@ -185,7 +198,7 @@ export default class BattleScene {
                     }
                 }
 
-                this.updateEntityStatus(defenderId, currentHp, maxHp);
+                this.updateEntityStatus(defenderId, currentHp, maxHp, data.shield, data.maxShield);
                 if (defenderSp !== undefined) this.updateSpBar(defenderId, defenderSp, 100);
                 if (defenderSp !== undefined) this.updateSpBar(defenderId, defenderSp, 100);
                 if (attackerSp !== undefined) this.updateSpBar(attackerId, attackerSp, 100);
@@ -246,7 +259,13 @@ export default class BattleScene {
         const attackerEl = document.getElementById(`battle-entity-${attackerId}`);
         if (!attackerEl) return;
 
-        const imgSrc = attackerEl.querySelector('img').src;
+        // [Visual] Try to use SKILL specific sprite for the cut-in
+        const sprites = this.game.battleManager.getEntitySprites(attackerId);
+        let imgSrc = attackerEl.querySelector('img').src;
+        if (sprites && sprites.skill) {
+            imgSrc = sprites.skill;
+        }
+
         const attackerName = this.entityMap[attackerId] || '사용자';
 
         // 스킬 효과 설명 생성
@@ -346,7 +365,20 @@ export default class BattleScene {
             span.style.color = '#ff7675';
             span.style.fontSize = '0.8em';
         } else {
-            span.innerText = type === 'miss' ? 'MISS' : (type === 'crit' ? `💥 ${dmg}` : dmg);
+            if (type === 'weak') {
+                span.innerHTML = `<span style="font-size:0.7em; color:#ff4757;">WEAK HIT!</span> <br>${dmg}`;
+                span.style.color = '#ff6b6b';
+                span.style.fontSize = '1.4em';
+                span.style.fontWeight = 'bold';
+                span.style.textShadow = '0 0 10px rgba(255, 107, 107, 0.5)';
+            } else if (type === 'resist') {
+                span.innerHTML = `<span style="font-size:0.7em;">GLANCING...</span> <br>${dmg}`;
+                span.style.color = '#bdc3c7'; // Grey
+                span.style.fontSize = '0.9em';
+                span.style.opacity = '0.8';
+            } else {
+                span.innerText = type === 'miss' ? 'MISS' : (type === 'crit' ? `💥 ${dmg}` : dmg);
+            }
         }
         el.appendChild(span);
         setTimeout(() => span.remove(), 1000);
@@ -391,14 +423,23 @@ export default class BattleScene {
         });
     }
 
-    updateEntityStatus(id, hp, max) {
+    updateEntityStatus(id, hp, max, shield = 0, maxShield = 0) {
         const el = document.getElementById(`battle-entity-${id}`);
         if (!el) return;
         const fill = el.querySelector('.hp-bar-fill');
+        const shieldFill = el.querySelector('.shield-bar-fill');
+
         const pct = Math.max(0, (hp / max) * 100);
         fill.style.width = `${pct}%`;
         fill.classList.toggle('low', pct <= 50 && pct > 20);
         fill.classList.toggle('critical', pct <= 20);
+
+        // 보호막 바 업데이트
+        if (shieldFill && maxShield > 0) {
+            const shieldPct = Math.max(0, (shield / maxShield) * 100);
+            shieldFill.style.width = `${shieldPct}%`;
+            shieldFill.style.display = shield > 0 ? 'block' : 'none';
+        }
     }
 
     updateHeader(turn) {
@@ -429,6 +470,28 @@ export default class BattleScene {
         `;
 
         this.overlay.appendChild(modal);
+
+        // [Visual] Dynamic Victory/Defeat Sprites
+        if (isWin) {
+            // Heroes Victory Pose
+            this.game.battleManager.heroTeam.forEach(h => {
+                this.setEntitySprite(h.id, 'victory');
+            });
+            // Enemies Defeat Pose (if not dead?)
+            this.game.battleManager.enemyTeam.forEach(e => {
+                if (e.hp > 0) this.setEntitySprite(e.id, 'defeat');
+            });
+        } else {
+            // Heroes Defeat Pose
+            this.game.battleManager.heroTeam.forEach(h => {
+                this.setEntitySprite(h.id, 'defeat');
+            });
+            // Enemies Victory Pose
+            this.game.battleManager.enemyTeam.forEach(e => {
+                this.setEntitySprite(e.id, 'victory'); // Mocking enemy victory
+            });
+        }
+
         const close = () => {
             this.overlay.style.display = 'none';
             modal.remove();

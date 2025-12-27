@@ -4,7 +4,8 @@ export const QUEST_DATA = {
         { id: 'daily_login', title: '출석 체크', description: '게임에 접속하세요.', targetCount: 1, reward: { gold: 100 } },
         { id: 'daily_summon', title: '일일 소환', description: '크리처를 1회 소환하세요.', targetCount: 1, reward: { gem: 10 } },
         { id: 'daily_battle', title: '전투의 함성', description: '전투를 3회 진행하세요.', targetCount: 3, reward: { gold: 300 } },
-        { id: 'daily_expedition', title: '탐사 보고', description: '탐사를 1회 완료하세요.', targetCount: 1, reward: { gold: 200 } }
+        { id: 'daily_expedition', title: '탐사 보고', description: '탐사를 1회 완료하세요.', targetCount: 1, reward: { gold: 200 } },
+        { id: 'daily_tower', title: '한계 돌파', description: '무한의 탑에 1회 도전하세요.', targetCount: 1, reward: { gem: 15 } }
     ],
     achievements: []
 };
@@ -14,7 +15,8 @@ const achievementTypes = [
     { id: 'col_gold', name: '부자의 길', desc: '골드를 누적 {n} 획득하세요', unit: 1000, rewardBase: 10 },
     { id: 'battle_win', name: '승리자', desc: '전투에서 {n}회 승리하세요', unit: 5, rewardBase: 5 },
     { id: 'sum_creature', name: '수집가', desc: '크리처를 {n}마리 모으세요', unit: 5, rewardBase: 20 },
-    { id: 'level_up', name: '성장', desc: '계정 레벨 {n}을 달성하세요', unit: 2, rewardBase: 50 }
+    { id: 'level_up', name: '성장', desc: '계정 레벨 {n}을 달성하세요', unit: 2, rewardBase: 50 },
+    { id: 'tower_climb', name: '탑의 정복자', desc: '무한의 탑 {n}층에 도달하세요', unit: 5, rewardBase: 30 }
 ];
 
 let achIdCounter = 1;

@@ -12,6 +12,9 @@ import ShopView from './ui/ShopView.js';
 import ResearchView from './ui/ResearchView.js';
 import MissionView from './ui/MissionView.js';
 import PrestigeView from './ui/PrestigeView.js';
+import GuildView from './ui/GuildView.js'; // [Phase 6]
+import RankingView from './ui/RankingView.js'; // [Phase 6]
+import TutorialView from './ui/TutorialView.js'; // [Standardization]
 
 window.game = null;
 const views = {};
@@ -36,6 +39,9 @@ window.onload = () => {
     views.research = new ResearchView(game);
     views.mission = new MissionView(game);
     views.prestige = new PrestigeView(game);
+    views.guild = new GuildView(game); // [Phase 6]
+    views.ranking = new RankingView(game); // [Phase 6]
+    views.tutorial = new TutorialView(game); // [Standardization]
 
     // [Fix] Initialize all views to bind events
     Object.values(views).forEach(view => {

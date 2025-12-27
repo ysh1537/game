@@ -10,6 +10,13 @@ import ShopManager from '../managers/ShopManager.js';
 import AuthManager from '../managers/AuthManager.js';
 import DeckManager from '../managers/DeckManager.js';
 import StageManager from '../managers/StageManager.js';
+import InventoryManager from '../managers/InventoryManager.js'; // [Phase 4]
+import WorldBossManager from '../managers/WorldBossManager.js'; // [Phase 4]
+import TowerManager from '../managers/TowerManager.js'; // [Phase 4]
+import MailManager from '../managers/MailManager.js'; // [Phase 4]
+import GuildManager from '../managers/GuildManager.js'; // [Phase 5]
+import RankingManager from '../managers/RankingManager.js'; // [Phase 5]
+import PassManager from '../managers/PassManager.js'; // [Phase 5]
 import BattleManager from '../managers/BattleManager.js';
 import PrestigeManager from '../managers/PrestigeManager.js';
 import TutorialManager from '../managers/TutorialManager.js';
@@ -19,6 +26,7 @@ import LanguageManager from '../managers/LanguageManager.js'; // [Mod] Import
 import PaymentManager from '../managers/PaymentManager.js';
 import DateManager from '../managers/DateManager.js';
 import { AIManager } from '../managers/AIManager.js'; // [Mod] Import AI Manager
+import AffinityManager from '../managers/AffinityManager.js'; // [NEW]
 
 import SaveManager from '../utils/SaveManager.js';
 import BattleScene from '../scenes/BattleScene.js';
@@ -49,6 +57,7 @@ export default class Game {
         this.paymentManager = new PaymentManager(this); // Init Payment early
         this.paymentManager.init();
         this.dateManager = new DateManager(this);
+        this.affinityManager = new AffinityManager(this); // [NEW]
 
         this.facilityManager = new FacilityManager(this.events, this.resourceManager);
 
@@ -59,6 +68,16 @@ export default class Game {
         this.shopManager = new ShopManager(this); // Now safe to use Payment
         this.deckManager = new DeckManager(this);
         this.stageManager = new StageManager(this);
+        this.inventoryManager = new InventoryManager(this); // [Phase 4] Artifacts
+        this.worldBossManager = new WorldBossManager(this); // [Phase 4] World Boss
+        this.worldBossManager.init(); // [Init]
+        this.towerManager = new TowerManager(this); // [Phase 4] Infinite Tower
+        this.towerManager.init();
+        this.mailManager = new MailManager(this); // [Phase 4] Mail
+        this.mailManager.init();
+        this.guildManager = new GuildManager(this); // [Phase 5] Guild
+        this.rankingManager = new RankingManager(this); // [Phase 5] Ranking
+        this.passManager = new PassManager(this); // [Phase 5] Battle Pass
         this.battleManager = new BattleManager(this, this.events, this.resourceManager, this.creatureManager);
         this.prestigeManager = new PrestigeManager(this, this.events, this.resourceManager);
         this.tutorialManager = new TutorialManager(this);
@@ -92,8 +111,41 @@ export default class Game {
     init() {
         console.log("[Game] Initializing...");
         this.authManager.init();
+
+        // [Phase 4] Offline Reward Check
+        this.checkOfflineProgress();
+        // Save heartbeat every minute for offline calculation
+        setInterval(() => {
+            localStorage.setItem('lastHeartbeat', Date.now());
+        }, 60000);
+
         console.log("[Game] Initialization complete.");
         // 로그인 체크 및 앱 시작은 main.js에서 처리
+    }
+
+    checkOfflineProgress() {
+        const lastTime = localStorage.getItem('lastHeartbeat');
+        if (lastTime) {
+            const now = Date.now();
+            const diffMs = now - parseInt(lastTime);
+            const diffMin = Math.floor(diffMs / 60000);
+
+            if (diffMin >= 5) { // Minimum 5 minutes
+                // Logic: 10 Gold per minute * Stage Level (Avg)
+                const maxStage = this.stageManager.getMaxStage() || 1;
+                const earnedGold = diffMin * 10 * maxStage;
+                // Cap at 24 hours (1440 mins)
+                const cap = 1440 * 10 * maxStage;
+                const finalGold = Math.min(earnedGold, cap);
+
+                this.resourceManager.addGold(finalGold);
+                // Wait for UI to be ready then show toast
+                setTimeout(() => {
+                    alert(`[오프라인 보상]\n게임에 접속하지 않은 ${Math.floor(diffMin / 60)}시간 ${diffMin % 60}분 동안\n💰 ${finalGold} 골드를 획득했습니다!`);
+                }, 1000);
+            }
+        }
+        localStorage.setItem('lastHeartbeat', Date.now());
     }
 
     // 사용자 데이터 로드 (로그인 후 main.js에서 호출)
@@ -200,7 +252,9 @@ export default class Game {
             shop: this.shopManager.getSerializableState(),
             decks: this.deckManager.getSerializableState(),
             stages: this.stageManager.getSerializableState(),
-            prestige: this.prestigeManager.getSerializableState()
+            prestige: this.prestigeManager.getSerializableState(),
+            ranking: this.rankingManager.getSerializableState(),
+            pass: this.passManager.getSerializableState() // [Phase 5]
         };
     }
 
@@ -218,6 +272,14 @@ export default class Game {
         if (data.stages) this.stageManager.loadFromState(data.stages);
         if (data.prestige) this.prestigeManager.loadFromState(data.prestige);
         if (data.tutorial) this.tutorialManager.loadFromState(data.tutorial);
+        // Additional managers from user's snippet
+        if (data.inventory) this.inventoryManager.loadFromState(data.inventory);
+        if (data.worldBoss) this.worldBossManager.loadFromState(data.worldBoss);
+        if (data.tower) this.towerManager.loadFromState(data.tower);
+        if (data.mail) this.mailManager.loadFromState(data.mail);
+        if (data.guild) this.guildManager.loadFromState(data.guild);
+        if (data.ranking) this.rankingManager.loadFromState(data.ranking);
+        if (data.pass) this.passManager.loadFromState(data.pass); // [Phase 5]
 
         // 2. 오프라인 보상 계산 [NEW]
         if (data.saveTime) {
@@ -305,11 +367,14 @@ export default class Game {
     }
 
     /**
-     * @description 사운드 효과 재생 (현재 스텁)
+     * @description 사운드 효과 재생
      * @param {string} soundId - 재생할 사운드 식별자
      */
     playSound(soundId) {
-        console.log(`[Sound] ${soundId} 재생 시도 (에셋 미구현)`);
-        // TODO: Web Audio API 또는 Audio 객체를 이용한 실제 재생 로직
+        if (this.audioManager) {
+            this.audioManager.playSFX(soundId);
+        } else {
+            console.log(`[Sound] ${soundId} 재생 시도 (AudioManager 미초기화)`);
+        }
     }
 }

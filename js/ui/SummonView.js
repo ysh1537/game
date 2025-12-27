@@ -34,6 +34,100 @@ export default class SummonView extends BaseView {
 
         // [NEW] 확률 정보 버튼
         this.injectProbabilityInfo();
+
+        // [NEW] 가챠 천장(Pity) UI
+        this.injectPityCounter();
+
+        // Pity Update 감지
+        this.game.creatureManager.on('pity:updated', (status) => {
+            this.updatePityUI(status);
+        });
+
+        // 초기 상태 업데이트
+        if (this.game.creatureManager.getPityStatus) {
+            this.updatePityUI(this.game.creatureManager.getPityStatus());
+        }
+    }
+
+    injectPityCounter() {
+        const contentSummon = document.getElementById('content-summon');
+        if (!contentSummon) return;
+
+        const container = document.createElement('div');
+        container.className = 'pity-counter-container';
+        container.style.cssText = `
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            border: 1px solid var(--accent-primary);
+            text-align: center;
+        `;
+
+        const label = document.createElement('div');
+        label.className = 'pity-label';
+        label.innerText = 'SSR Guaranteed Pity';
+        label.style.cssText = 'color: #fff; margin-bottom: 5px; font-size: 0.9em;';
+
+        const barContainer = document.createElement('div');
+        barContainer.style.cssText = `
+            width: 100%;
+            height: 10px;
+            background: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        `;
+
+        const barFill = document.createElement('div');
+        barFill.className = 'pity-bar-fill';
+        barFill.style.cssText = `
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+            transition: width 0.3s ease;
+        `;
+
+        const text = document.createElement('div');
+        text.className = 'pity-text';
+        text.innerText = '0 / 50';
+        text.style.cssText = 'color: #aaa; font-size: 0.8em; margin-top: 5px;';
+
+        barContainer.appendChild(barFill);
+        container.appendChild(label);
+        container.appendChild(barContainer);
+        container.appendChild(text);
+
+        // 패널 상단(헤더 아래)에 삽입
+        const header = contentSummon.querySelector('.panel-header');
+        if (header && header.nextSibling) {
+            contentSummon.insertBefore(container, header.nextSibling);
+        } else {
+            contentSummon.appendChild(container);
+        }
+    }
+
+    updatePityUI(status) {
+        const contentSummon = document.getElementById('content-summon');
+        if (!contentSummon) return;
+
+        const fill = contentSummon.querySelector('.pity-bar-fill');
+        const text = contentSummon.querySelector('.pity-text');
+
+        if (fill && text) {
+            const percent = (status.current / status.max) * 100;
+            fill.style.width = `${percent}%`;
+            text.innerText = `${status.current} / ${status.max} (Guarantee in ${status.remaining})`;
+
+            if (status.remaining === 0) {
+                text.innerText = "NEXT SUMMON SSR GUARANTEED!";
+                text.style.color = "var(--accent-primary)";
+                text.style.fontWeight = "bold";
+            } else {
+                text.style.color = "#aaa";
+                text.style.fontWeight = "normal";
+            }
+        }
     }
 
     injectProbabilityInfo() {
@@ -184,7 +278,24 @@ export default class SummonView extends BaseView {
         overlay.classList.remove('rarity-Normal', 'rarity-Unique', 'rarity-Rare', 'rarity-Special', 'rarity-SR', 'rarity-SSR', 'rarity-UR');
         overlay.classList.add(`rarity-${creature.def.rarity}`);
 
-        img.src = creature.def.image || 'images/creature_slime.png';
+        // [NEW] Premium Showoff Image Logic
+        let displayImage = creature.def.image;
+        if (['UR', 'SSR'].includes(creature.def.rarity)) {
+            // Try Gallery Lv3 (Best) -> Victory -> Skill -> Base
+            const s = creature.def.sprites;
+            if (s) {
+                if (s.gallery && s.gallery.lv3) displayImage = s.gallery.lv3;
+                else if (s.victory) displayImage = s.victory;
+                else if (s.skill) displayImage = s.skill;
+            }
+        }
+        else if (creature.def.rarity === 'SR') {
+            // Try Victory -> Base
+            const s = creature.def.sprites;
+            if (s && s.victory) displayImage = s.victory;
+        }
+
+        img.src = displayImage || 'images/creature_slime.png';
         img.className = '';
         dialogue.innerText = '';
         dialogue.className = '';

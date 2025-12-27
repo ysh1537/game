@@ -87,7 +87,7 @@ export default class BattleView extends BaseView {
                     // If we just unlocked a new stage and were at the previous max, move to new one could be optional
                     // But StageManager logic handles unlocks. 
                     // Let's just create a visual log.
-                    this.addLog(`[스테이지] 작전 구역 ${max} 개방!`);
+                    this.addLog(this.game.langManager.t('battle.stage_unlock', { stage: max }));
                 }
                 this.renderStageUI(); // Refresh UI to show unlock status/next button
             }
@@ -105,13 +105,128 @@ export default class BattleView extends BaseView {
             this.renderStageUI();
         });
 
+        // [NEW] Inject Tower/Boss UI
+        this._injectSubSections();
+
+        // 1. Tower Events
+        const btnTower = document.getElementById('btn-start-tower');
+        if (btnTower) {
+            btnTower.onclick = () => {
+                this.game.towerManager.startTowerBattle();
+            };
+        }
+
+        // 2. Boss Events
+        const btnBoss = document.getElementById('btn-attack-boss');
+        if (btnBoss) {
+            btnBoss.onclick = () => {
+                const boss = this.game.worldBossManager.boss;
+                if (!boss) {
+                    alert("현재 출현한 보스가 없습니다.");
+                    return;
+                }
+                // Start Boss Battle
+                this.game.battleManager.startBattle({
+                    mode: 'boss',
+                    boss: boss,
+                    stageId: 'World Boss Raid'
+                });
+            };
+        }
+
         // 초기 렌더링
         this.render();
     }
 
+    _injectSubSections() {
+        const container = document.getElementById('content-battle')?.querySelector('div[style*="overflow-y: auto"]');
+        if (!container || container.querySelector('#tower-section')) return;
+
+        const hr = container.querySelector('hr');
+
+        // Create Tower Section
+        const towerDiv = document.createElement('div');
+        towerDiv.id = 'tower-section';
+        towerDiv.style.marginBottom = '25px';
+        towerDiv.innerHTML = `
+            <div style="background:linear-gradient(135deg, rgba(100,200,255,0.05), rgba(0,0,0,0.2)); padding:20px; border-radius:12px; border:1px solid rgba(100,200,255,0.2);">
+                <h3 style="color:#00e5ff; margin-bottom:10px;">🏰 무한의 탑 (Infinite Tower)</h3>
+                <div style="color:#888; font-size:0.9em; margin-bottom:15px; display:flex; justify-content:space-between;">
+                    <span>현재 층: <span id="tower-floor" style="color:white; font-weight:bold; font-size:1.1em;">1F</span></span>
+                    <span style="font-size:0.8em; color:#aaa;">최고 기록: <span id="tower-best">1F</span></span>
+                </div>
+                <button id="btn-start-tower" class="cyber-btn" style="width:100%; border:1px solid #00e5ff;">도전하기 (Tower)</button>
+            </div>
+        `;
+
+        // Create Boss Section
+        const bossDiv = document.createElement('div');
+        bossDiv.id = 'boss-section';
+        bossDiv.style.marginBottom = '25px';
+        bossDiv.innerHTML = `
+            <div style="background:linear-gradient(135deg, rgba(255,50,50,0.05), rgba(0,0,0,0.2)); padding:20px; border-radius:12px; border:1px solid rgba(255,50,50,0.2);">
+                <h3 style="color:#ff4757; margin-bottom:10px;">🐉 월드 보스 (World Boss)</h3>
+                <div style="color:#888; font-size:0.9em; margin-bottom:15px;">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+                        <span id="boss-name" style="color:white; font-weight:bold;">Ancient Dragon</span>
+                        <span style="color:#ff4757; font-weight:bold;" id="boss-hp-pct">100%</span>
+                    </div>
+                    <div style="width:100%; height:8px; background:#333; border-radius:4px; overflow:hidden;">
+                        <div id="boss-hp-bar" style="width:100%; height:100%; background:#ff4757; transition:width 0.5s;"></div>
+                    </div>
+                    <div style="text-align:right; font-size:0.8em; margin-top:5px; color:#aaa;">
+                        내 피해량: <span id="boss-my-dmg" style="color:#fff;">0</span>
+                    </div>
+                </div>
+                <div style="display:flex; gap:10px; justify-content:center;">
+                    <button id="btn-attack-boss" class="cyber-btn action" style="flex:1; background:linear-gradient(135deg, #ff4757, #b71540);">⚔️ 레이드 시작</button>
+                </div>
+            </div>
+        `;
+
+        if (hr) {
+            container.insertBefore(towerDiv, hr);
+            container.insertBefore(bossDiv, hr);
+        } else {
+            container.appendChild(towerDiv);
+            container.appendChild(bossDiv);
+        }
+    }
+
     render() {
         this.renderStageUI();
+        // [New]
+        this.renderTowerUI();
+        this.renderBossUI();
+
         this.renderPvPLobby();
+    }
+
+    renderTowerUI() {
+        const mgr = this.game.towerManager;
+        if (!mgr) return;
+        const elFloor = document.getElementById('tower-floor');
+        const elBest = document.getElementById('tower-best');
+        if (elFloor) elFloor.innerText = `${mgr.currentFloor}F`;
+        if (elBest) elBest.innerText = `${mgr.bestFloor}F`;
+    }
+
+    renderBossUI() {
+        const mgr = this.game.worldBossManager;
+        if (!mgr || !mgr.boss) return;
+
+        const boss = mgr.boss;
+        const hpPct = Math.max(0, Math.floor((boss.currentHp / boss.maxHp) * 100));
+
+        const elName = document.getElementById('boss-name');
+        const elPct = document.getElementById('boss-hp-pct');
+        const elBar = document.getElementById('boss-hp-bar');
+        const elDmg = document.getElementById('boss-my-dmg');
+
+        if (elName) elName.innerText = boss.name;
+        if (elPct) elPct.innerText = `${hpPct}%`;
+        if (elBar) elBar.style.width = `${hpPct}%`;
+        if (elDmg) elDmg.innerText = mgr.myDamage.toLocaleString();
     }
 
     renderStageUI() {

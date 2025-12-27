@@ -83,7 +83,12 @@ export default class LanguageManager {
                 // Alerts
                 "alert.logout": "로그아웃 하시겠습니까?",
                 "alert.saved": "저장되었습니다.",
-                "alert.reset": "정말로 초기화 하시겠습니까?\n모든 데이터가 삭제됩니다."
+                "alert.reset": "정말로 초기화 하시겠습니까?\n모든 데이터가 삭제됩니다.",
+
+                // Battle Messages
+                "battle.stage_unlock": "[스테이지] 작전 구역 {stage} 개방!",
+                "battle.win": "승리! {gold} 골드, {exp} 경험치 획득.",
+                "battle.lose": "패배... 아군 부대가 전멸했습니다."
             },
             en: {
                 // Auth
@@ -164,7 +169,12 @@ export default class LanguageManager {
 
                 "alert.logout": "Terminate Session?",
                 "alert.saved": "Game Saved.",
-                "alert.reset": "Are you sure you want to RESET?\nAll data will be lost."
+                "alert.reset": "Are you sure you want to RESET?\nAll data will be lost.",
+
+                // Battle Messages
+                "battle.stage_unlock": "[STAGE] Operation Zone {stage} Unlocked!",
+                "battle.win": "Victory! Gained {gold} Gold, {exp} Exp.",
+                "battle.lose": "Defeat... The squad has been wiped out."
             }
         };
     }

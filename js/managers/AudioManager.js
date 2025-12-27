@@ -85,10 +85,7 @@ export default class AudioManager {
         if (this.currentBGMId === trackId) return; // 이미 재생 중이면 무시
 
         const trackPath = this.bgmTracks[trackId];
-        if (!trackPath) {
-            console.warn(`[AudioManager] BGM track not found: ${trackId}`);
-            return;
-        }
+        if (!trackPath) return; // Silent return if disabled
 
         this.stopBGM();
 
@@ -96,11 +93,18 @@ export default class AudioManager {
             this.bgm = new Audio(trackPath);
             this.bgm.volume = this.bgmVolume;
             this.bgm.loop = true;
-            this.bgm.play().catch(e => {
-                console.warn('[AudioManager] BGM play failed:', e.message);
+
+            // Missing File Detection
+            this.bgm.addEventListener('error', (e) => {
+                console.warn(`[AudioManager] File broken, disabling BGM: ${trackId}`);
+                this.bgmTracks[trackId] = null;
             });
+
+            this.bgm.play().catch(e => {
+                // Auto-play policy or load error
+            });
+
             this.currentBGMId = trackId;
-            console.log(`[AudioManager] Playing BGM: ${trackId}`);
         } catch (e) {
             console.warn('[AudioManager] BGM load failed:', e.message);
         }
@@ -126,19 +130,23 @@ export default class AudioManager {
         if (this.isMuted) return;
 
         const trackPath = this.sfxTracks[sfxId];
-        if (!trackPath) {
-            console.warn(`[AudioManager] SFX not found: ${sfxId}`);
-            return;
-        }
+        if (!trackPath) return;
 
         try {
             const sfx = new Audio(trackPath);
             sfx.volume = this.sfxVolume;
+
+            sfx.addEventListener('error', () => {
+                // Only log once per session per track? 
+                // Let's just disable it.
+                this.sfxTracks[sfxId] = null;
+            });
+
             sfx.play().catch(e => {
-                // 효과음 로드 실패는 조용히 무시 (파일 없을 수 있음)
+                // Ignore autoplay errors
             });
         } catch (e) {
-            // 무시
+            // Ignore
         }
     }
 

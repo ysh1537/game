@@ -168,21 +168,47 @@ export default class AuthView extends BaseView {
 
     /**
      * Google 유저 데이터 동기화 및 마이그레이션 헬퍼
+     * 클라우드 데이터가 있으면 로컬에 복원 (항상 클라우드 우선)
      */
     async _syncGoogleUserData(user, username) {
         const saveKey = `mclab_save_${username}`;
 
-        // 로컬에 이미 데이터가 있다면 스킵 (불필요한 네트워크 호출 방지)
-        if (localStorage.getItem(saveKey)) return;
-
-        console.log('[AuthView] 로컬 데이터 없음, 클라우드 로드 시도...');
+        console.log('[AuthView] 클라우드 데이터 로드 시도...');
         const cloudData = await window.FirebaseService.loadGameData();
+
         if (cloudData.success && cloudData.data) {
-            const dataToRestore = cloudData.data[saveKey] || cloudData.data['mclab_save_v1'] || cloudData.data['gameState'];
+            // UID 기반 저장이므로 data 자체가 게임 상태일 수 있음
+            // 또는 저장 키별로 분류된 형태일 수 있음
+            let dataToRestore = null;
+
+            // 1. 직접 gameState 필드 확인 (UID 기반 저장 시)
+            if (cloudData.data.gameState) {
+                dataToRestore = cloudData.data.gameState;
+            }
+            // 2. 닉네임 기반 저장 키 확인
+            else if (cloudData.data[saveKey]) {
+                dataToRestore = cloudData.data[saveKey];
+            }
+            // 3. 기존 mclab_save_v1 형식 확인
+            else if (cloudData.data['mclab_save_v1']) {
+                dataToRestore = cloudData.data['mclab_save_v1'];
+            }
+            // 4. 다른 세이브 키들 검색 (기존 데이터 마이그레이션)
+            else {
+                for (const key of Object.keys(cloudData.data)) {
+                    if (key.startsWith('mclab_save_')) {
+                        dataToRestore = cloudData.data[key];
+                        console.log(`[AuthView] 기존 세이브 키 발견: ${key}`);
+                        break;
+                    }
+                }
+            }
 
             if (dataToRestore) {
                 localStorage.setItem(saveKey, JSON.stringify(dataToRestore));
                 console.log(`[AuthView] 클라우드 데이터 복원 완료: ${saveKey}`);
+            } else {
+                console.log('[AuthView] 클라우드에 게임 데이터 없음 (신규 유저)');
             }
         }
     }
@@ -405,14 +431,30 @@ export default class AuthView extends BaseView {
         const googleUsername = nickname; // User chosen nickname
         const saveKey = `mclab_save_${googleUsername}`;
 
-        // 클라우드에서 데이터 로드 시도 (이 닉네임으로 저장된 데이터가 있는지?)
-        // 주의: 구글 UID 기반으로 데이터를 찾아야 정확하지만, 현재 구조상 닉네임(세이브키) 의존적입니다.
-        // 향후 UID 매핑이 필요하지만, 지금은 닉네임 기반으로 로드 시도합니다.
-
+        // 클라우드에서 데이터 로드 (UID 기반 - Firebase가 자동으로 UID로 저장)
         const cloudData = await window.FirebaseService.loadGameData();
         if (cloudData.success && cloudData.data) {
-            // 닉네임 기반 복원 (없으면 신규)
-            const dataToRestore = cloudData.data[saveKey];
+            let dataToRestore = null;
+
+            // 1. gameState 직접 확인
+            if (cloudData.data.gameState) {
+                dataToRestore = cloudData.data.gameState;
+            }
+            // 2. 닉네임 기반 세이브 키
+            else if (cloudData.data[saveKey]) {
+                dataToRestore = cloudData.data[saveKey];
+            }
+            // 3. 기존 mclab_save 키들 검색
+            else {
+                for (const key of Object.keys(cloudData.data)) {
+                    if (key.startsWith('mclab_save_')) {
+                        dataToRestore = cloudData.data[key];
+                        console.log(`[AuthView] 기존 세이브 발견: ${key}`);
+                        break;
+                    }
+                }
+            }
+
             if (dataToRestore) {
                 localStorage.setItem(saveKey, JSON.stringify(dataToRestore));
                 console.log(`[AuthView] 데이터 복원 완료: ${saveKey}`);
