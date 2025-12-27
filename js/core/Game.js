@@ -151,6 +151,27 @@ export default class Game {
         localStorage.setItem('lastHeartbeat', Date.now());
     }
 
+    startMainGame() {
+        console.log("[Game] Starting main game...");
+
+        // 1. Hide Login Overlay (Double redundancy)
+        const overlay = document.getElementById('login-overlay');
+        if (overlay) overlay.style.display = 'none';
+
+        // 2. Play Lobby BGM
+        this.audioManager.playBGM('bgm_lobby.mp3'); // Corrected from soundManager to audioManager
+
+        // 3. Show Lobby View
+        this.uiManager.showView('lobby');
+
+        // 4. Initial Toast
+        const user = this.authManager.currentUser;
+        const name = user ? (user.nickname || user.username) : "Director";
+        this.uiManager.showToast(`Welcome back, ${name}.`);
+
+        console.log("[Game] Main game started!");
+    }
+
     // 사용자 데이터 로드 (로그인 후 main.js에서 호출)
     loadUserData() {
         const user = this.authManager.currentUser;
