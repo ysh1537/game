@@ -675,14 +675,14 @@ export default class CreatureManager extends EventEmitter {
         const text = (creature.def.description || "") + (creature.def.name || "");
         const lower = text.toLowerCase();
 
-        if (lower.includes('fire') || lower.includes('flame') || lower.includes('ember')) return 'images/icons/icon_skill_fire.png';
-        if (lower.includes('water') || lower.includes('sea') || lower.includes('ice')) return 'images/icons/icon_skill_water.png';
-        if (lower.includes('wind') || lower.includes('air') || lower.includes('sky')) return 'images/icons/icon_skill_wind.png';
-        if (lower.includes('earth') || lower.includes('rock') || lower.includes('nature')) return 'images/icons/icon_skill_earth.png';
-        if (lower.includes('light') || lower.includes('holy') || lower.includes('sun')) return 'images/icons/icon_skill_light.png';
-        if (lower.includes('dark') || lower.includes('void') || lower.includes('shadow')) return 'images/icons/icon_skill_dark.png';
+        if (lower.includes('fire') || lower.includes('flame') || lower.includes('ember')) return 'images/icons/icon_skill_fire.svg';
+        if (lower.includes('water') || lower.includes('sea') || lower.includes('ice')) return 'images/icons/icon_skill_water.svg';
+        if (lower.includes('wind') || lower.includes('air') || lower.includes('sky')) return 'images/icons/icon_skill_wind.svg';
+        if (lower.includes('earth') || lower.includes('rock') || lower.includes('nature')) return 'images/icons/icon_skill_earth.svg';
+        if (lower.includes('light') || lower.includes('holy') || lower.includes('sun')) return 'images/icons/icon_skill_light.svg';
+        if (lower.includes('dark') || lower.includes('void') || lower.includes('shadow')) return 'images/icons/icon_skill_dark.svg';
 
-        return 'images/icons/icon_role_attack.png'; // Default
+        return 'images/icons/icon_role_attack.svg'; // Default
     }
 
     loadFromState(state) {
