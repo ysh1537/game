@@ -96,8 +96,7 @@ npx http-server . -p 8080 -c-1
 
 - 📖 [Game Design Bible](docs/game_design_bible.md)
 - 🌍 [Worldview](docs/worldview.md)
-- 🎨 [Creature Image Guide](docs/creature_image_master_guide.md)
-- ✏️ [AI Art Guidelines](docs/ai_art_guidelines.md)
+- 🎨 [Master Image Style Guide](docs/imgstyle_master.md)
 
 ---
 

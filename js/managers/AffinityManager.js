@@ -1,5 +1,5 @@
 
-export class AffinityManager {
+export default class AffinityManager {
     constructor(game) {
         this.game = game;
         this.affinityTable = {}; // { instanceId: { points: 0, level: 0, unlockedGallery: [] } }

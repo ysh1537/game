@@ -64,6 +64,7 @@ export default class AuthView extends BaseView {
         }
 
         // 4. 로그아웃 버튼 (있을 경우) - 커스텀 모달 사용
+        const btnLogout = document.getElementById('btn-logout');
         if (btnLogout) {
             btnLogout.addEventListener('click', () => {
                 // 커스텀 확인 모달 사용 (브라우저 팝업 차단 이슈 방지)

@@ -237,7 +237,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/bamboo_chopper.png",
+        image: "images/creatures/shangrila/creature_bamboo_chopper.png",
         sprites: {
             "idle": "images/bamboo_chopper.png",
             "joy": "images/bamboo_chopper_joy.png",
@@ -313,7 +313,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/kumiho_servant.png",
+        image: "images/creatures/shangrila/creature_kumiho_servant.png",
         sprites: {
             "idle": "images/kumiho_servant.png",
             "joy": "images/kumiho_servant_joy.png",
@@ -351,7 +351,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/scroll_dragon.png",
+        image: "images/creatures/shangrila/creature_scroll_dragon.png",
         sprites: {
             "idle": "images/scroll_dragon.png",
             "joy": "images/scroll_dragon_joy.png",
@@ -389,7 +389,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/koi_ascending.png",
+        image: "images/creatures/shangrila/creature_koi_ascending.png",
         sprites: {
             "idle": "images/koi_ascending.png",
             "joy": "images/koi_ascending_joy.png",
@@ -427,7 +427,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/tea_leaf_fairy.png",
+        image: "images/creatures/shangrila/creature_tea_leaf_fairy.png",
         sprites: {
             "idle": "images/tea_leaf_fairy.png",
             "joy": "images/tea_leaf_fairy_joy.png",
@@ -465,7 +465,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/rice_grain_spirit.png",
+        image: "images/creatures/shangrila/creature_rice_grain_spirit.png",
         sprites: {
             "idle": "images/rice_grain_spirit.png",
             "joy": "images/rice_grain_spirit_joy.png",
@@ -541,7 +541,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/yin_yang_orb.png",
+        image: "images/creatures/shangrila/creature_yin_yang_orb.png",
         sprites: {
             "idle": "images/yin_yang_orb.png",
             "joy": "images/yin_yang_orb_joy.png",
@@ -579,7 +579,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/cherry_blossom_petal.png",
+        image: "images/creatures/shangrila/creature_cherry_blossom_petal.png",
         sprites: {
             "idle": "images/cherry_blossom_petal.png",
             "joy": "images/cherry_blossom_petal_joy.png",
@@ -617,7 +617,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/magpie_messenger.png",
+        image: "images/creatures/shangrila/creature_magpie_messenger.png",
         sprites: {
             "idle": "images/magpie_messenger.png",
             "joy": "images/magpie_messenger_joy.png",
@@ -655,7 +655,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/wind_chime_spirit.png",
+        image: "images/creatures/shangrila/creature_wind_chime_spirit.png",
         sprites: {
             "idle": "images/wind_chime_spirit.png",
             "joy": "images/wind_chime_spirit_joy.png",
@@ -731,7 +731,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_dragon_ancient.png",
+        image: "images/creatures/shangrila/creature_dragon_ancient.png",
         sprites: {
             "idle": "images/creature_dragon_ancient.png",
             "joy": "images/creature_dragon_ancient_joy.png",
@@ -775,7 +775,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_fox_nine_ur.png",
+        image: "images/creatures/shangrila/creature_fox_nine_ur.png",
         sprites: {
             "idle": "images/creature_fox_nine_ur.png",
             "joy": "images/creature_fox_nine_ur_joy.png",
@@ -819,7 +819,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_god_dragon_king.png",
+        image: "images/creatures/shangrila/creature_god_dragon_king.png",
         sprites: {
             "idle": "images/creature_god_dragon_king.png",
             "joy": "images/creature_god_dragon_king_joy.png",
@@ -863,7 +863,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_phoenix_eternal.png",
+        image: "images/creatures/wild/creature_phoenix_eternal.png",
         sprites: {
             "idle": "images/creature_phoenix_eternal.png",
             "joy": "images/creature_phoenix_eternal_joy.png",
@@ -907,7 +907,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/hero_wukong.png",
+        image: "images/creatures/shangrila/hero_wukong.png",
         sprites: {
             "idle": "images/hero_wukong.png",
             "joy": "images/hero_wukong_joy.png",
@@ -951,7 +951,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_rabbit_moon.png",
+        image: "images/creatures/shangrila/creature_rabbit_moon.png",
         sprites: {
             "idle": "images/creature_rabbit_moon.png",
             "joy": "images/creature_rabbit_moon_joy.png",
@@ -995,7 +995,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_peacock_princess.png",
+        image: "images/creatures/shangrila/creature_peacock_princess.png",
         sprites: {
             "idle": "images/creature_peacock_princess.png",
             "joy": "images/creature_peacock_princess_joy.png",
@@ -1039,7 +1039,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_fox_yokai_sr.png",
+        image: "images/creatures/shangrila/creature_fox_yokai_sr.png",
         sprites: {
             "idle": "images/creature_fox_yokai_sr.png",
             "joy": "images/creature_fox_yokai_sr_joy.png",
@@ -1083,7 +1083,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/dragon_azure.png",
+        image: "images/creatures/shangrila/dragon_azure.png",
         sprites: {
             "idle": "images/dragon_azure.png",
             "joy": "images/dragon_azure_joy.png",
@@ -1127,7 +1127,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/tiger_white.png",
+        image: "images/creatures/shangrila/tiger_white.png",
         sprites: {
             "idle": "images/tiger_white.png",
             "joy": "images/tiger_white_joy.png",
@@ -1171,7 +1171,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/bird_vermilion.png",
+        image: "images/creatures/shangrila/bird_vermilion.png",
         sprites: {
             "idle": "images/bird_vermilion.png",
             "joy": "images/bird_vermilion_joy.png",
@@ -1259,7 +1259,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/dokkeabi_king.png",
+        image: "images/creatures/shangrila/dokkeabi_king.png",
         sprites: {
             "idle": "images/dokkeabi_king.png",
             "joy": "images/dokkeabi_king_joy.png",
@@ -1303,7 +1303,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/mountain_god_tiger.png",
+        image: "images/creatures/shangrila/mountain_god_tiger.png",
         sprites: {
             "idle": "images/mountain_god_tiger.png",
             "joy": "images/mountain_god_tiger_joy.png",
@@ -1347,7 +1347,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_ninja_shadow.png",
+        image: "images/creatures/wild/creature_ninja_shadow.png",
         sprites: {
             "idle": "images/creature_ninja_shadow.png",
             "joy": "images/creature_ninja_shadow_joy.png",
@@ -1423,7 +1423,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/pears_spirit.png",
+        image: "images/creatures/shangrila/pears_spirit.png",
         sprites: {
             "idle": "images/pears_spirit.png",
             "joy": "images/pears_spirit_joy.png",
@@ -1461,7 +1461,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/butterfly_dream.png",
+        image: "images/creatures/shangrila/butterfly_dream.png",
         sprites: {
             "idle": "images/butterfly_dream.png",
             "joy": "images/butterfly_dream_joy.png",
@@ -1499,7 +1499,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_flower_fairy.png",
+        image: "images/creatures/shangrila/creature_flower_fairy.png",
         sprites: {
             "idle": "images/creature_flower_fairy.png",
             "joy": "images/creature_flower_fairy_joy.png",
@@ -1537,7 +1537,7 @@ export const SHANGRILA_CREATURES = [
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_ink_spirit.png",
+        image: "images/creatures/shangrila/creature_ink_spirit.png",
         sprites: {
             "idle": "images/creature_ink_spirit.png",
             "joy": "images/creature_ink_spirit_joy.png",

@@ -1,0 +1,11 @@
+{
+    "name": "game-client",
+    "version": "1.0.0",
+    "description": "Game Client",
+    "scripts": {
+        "start": "npx serve ."
+    },
+    "dependencies": {
+        "serve": "^14.2.0"
+    }
+}

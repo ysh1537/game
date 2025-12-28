@@ -43,4 +43,12 @@ export default class RankingManager extends EventEmitter {
 
         return leaderboard;
     }
+    // [저장/로드]
+    getSerializableState() {
+        return {}; // Persistent data is not yet needed for ranking
+    }
+
+    loadFromState(state) {
+        // No state to load yet
+    }
 }

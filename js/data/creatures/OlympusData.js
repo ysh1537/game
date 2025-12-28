@@ -135,7 +135,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_god_poseidon.png",
+        image: "images/creatures/olympus/creature_god_poseidon.png",
         sprites: {
             "idle": "images/creature_god_poseidon.png",
             "joy": "images/creature_god_poseidon_joy.png",
@@ -223,7 +223,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/hero_hercules.png",
+        image: "images/creatures/olympus/hero_hercules.png",
         sprites: {
             "idle": "images/hero_hercules.png",
             "joy": "images/hero_hercules_joy.png",
@@ -267,7 +267,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_titan_atlas.png",
+        image: "images/creatures/wild/creature_titan_atlas.png",
         sprites: {
             "idle": "images/creature_titan_atlas.png",
             "joy": "images/creature_titan_atlas_joy.png",
@@ -311,7 +311,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/minotaur_king.png",
+        image: "images/creatures/olympus/minotaur_king.png",
         sprites: {
             "idle": "images/minotaur_king.png",
             "joy": "images/minotaur_king_joy.png",
@@ -355,7 +355,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/cerberus_guardian.png",
+        image: "images/creatures/olympus/cerberus_guardian.png",
         sprites: {
             "idle": "images/cerberus_guardian.png",
             "joy": "images/cerberus_guardian_joy.png",
@@ -399,7 +399,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/hydra_lernaean.png",
+        image: "images/creatures/olympus/hydra_lernaean.png",
         sprites: {
             "idle": "images/hydra_lernaean.png",
             "joy": "images/hydra_lernaean_joy.png",
@@ -443,7 +443,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/lion_nemean.png",
+        image: "images/creatures/olympus/lion_nemean.png",
         sprites: {
             "idle": "images/lion_nemean.png",
             "joy": "images/lion_nemean_joy.png",
@@ -531,7 +531,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_mage_flame.png",
+        image: "images/creatures/wild/creature_mage_flame.png",
         sprites: {
             "idle": "images/creature_mage_flame.png",
             "joy": "images/creature_mage_flame_joy.png",
@@ -569,7 +569,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/god_dionysus.png",
+        image: "images/creatures/olympus/god_dionysus.png",
         sprites: {
             "idle": "images/god_dionysus.png",
             "joy": "images/god_dionysus_joy.png",
@@ -645,7 +645,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/siren_singer.png",
+        image: "images/creatures/olympus/siren_singer.png",
         sprites: {
             "idle": "images/siren_singer.png",
             "joy": "images/siren_singer_joy.png",
@@ -683,7 +683,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/gorgon_sister_e.png",
+        image: "images/creatures/olympus/gorgon_sister_e.png",
         sprites: {
             "idle": "images/gorgon_sister_e.png",
             "joy": "images/gorgon_sister_e_joy.png",
@@ -721,7 +721,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/gorgon_sister_s.png",
+        image: "images/creatures/olympus/gorgon_sister_s.png",
         sprites: {
             "idle": "images/gorgon_sister_s.png",
             "joy": "images/gorgon_sister_s_joy.png",
@@ -759,7 +759,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/muse_lyra.png",
+        image: "images/creatures/olympus/muse_lyra.png",
         sprites: {
             "idle": "images/muse_lyra.png",
             "joy": "images/muse_lyra_joy.png",
@@ -797,7 +797,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/phoenix_chick_o.png",
+        image: "images/creatures/olympus/phoenix_chick_o.png",
         sprites: {
             "idle": "images/phoenix_chick_o.png",
             "joy": "images/phoenix_chick_o_joy.png",
@@ -835,7 +835,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/hellhound_scout.png",
+        image: "images/creatures/olympus/hellhound_scout.png",
         sprites: {
             "idle": "images/hellhound_scout.png",
             "joy": "images/hellhound_scout_joy.png",
@@ -873,7 +873,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/automaton_mini.png",
+        image: "images/creatures/olympus/automaton_mini.png",
         sprites: {
             "idle": "images/automaton_mini.png",
             "joy": "images/automaton_mini_joy.png",
@@ -911,7 +911,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/talos_fragment.png",
+        image: "images/creatures/olympus/talos_fragment.png",
         sprites: {
             "idle": "images/talos_fragment.png",
             "joy": "images/talos_fragment_joy.png",
@@ -949,7 +949,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/fury_hiss.png",
+        image: "images/creatures/olympus/fury_hiss.png",
         sprites: {
             "idle": "images/fury_hiss.png",
             "joy": "images/fury_hiss_joy.png",
@@ -987,7 +987,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/sphinx_kitten.png",
+        image: "images/creatures/olympus/sphinx_kitten.png",
         sprites: {
             "idle": "images/sphinx_kitten.png",
             "joy": "images/sphinx_kitten_joy.png",
@@ -1025,7 +1025,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_cloud_puff.png",
+        image: "images/creatures/wild/creature_cloud_puff.png",
         sprites: {
             "idle": "images/creature_cloud_puff.png",
             "joy": "images/creature_cloud_puff_joy.png",
@@ -1063,7 +1063,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/pegasus_colt.png",
+        image: "images/creatures/olympus/pegasus_colt.png",
         sprites: {
             "idle": "images/pegasus_colt.png",
             "joy": "images/pegasus_colt_joy.png",
@@ -1101,7 +1101,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/satyr_young.png",
+        image: "images/creatures/olympus/satyr_young.png",
         sprites: {
             "idle": "images/satyr_young.png",
             "joy": "images/satyr_young_joy.png",
@@ -1139,7 +1139,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/dryad_seed.png",
+        image: "images/creatures/olympus/dryad_seed.png",
         sprites: {
             "idle": "images/dryad_seed.png",
             "joy": "images/dryad_seed_joy.png",
@@ -1177,7 +1177,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/cyclops_worker.png",
+        image: "images/creatures/olympus/cyclops_worker.png",
         sprites: {
             "idle": "images/cyclops_worker.png",
             "joy": "images/cyclops_worker_joy.png",
@@ -1215,7 +1215,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/nymph_water.png",
+        image: "images/creatures/olympus/nymph_water.png",
         sprites: {
             "idle": "images/nymph_water.png",
             "joy": "images/nymph_water_joy.png",
@@ -1253,7 +1253,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/griffin_chick.png",
+        image: "images/creatures/olympus/griffin_chick.png",
         sprites: {
             "idle": "images/griffin_chick.png",
             "joy": "images/griffin_chick_joy.png",
@@ -1291,7 +1291,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/cerberus_pup.png",
+        image: "images/creatures/olympus/cerberus_pup.png",
         sprites: {
             "idle": "images/cerberus_pup.png",
             "joy": "images/cerberus_pup_joy.png",
@@ -1329,7 +1329,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/minotaur_calf.png",
+        image: "images/creatures/olympus/minotaur_calf.png",
         sprites: {
             "idle": "images/minotaur_calf.png",
             "joy": "images/minotaur_calf_joy.png",
@@ -1367,7 +1367,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/charybdis_baby.png",
+        image: "images/creatures/olympus/charybdis_baby.png",
         sprites: {
             "idle": "images/charybdis_baby.png",
             "joy": "images/charybdis_baby_joy.png",
@@ -1405,7 +1405,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/scylla_pup.png",
+        image: "images/creatures/olympus/scylla_pup.png",
         sprites: {
             "idle": "images/scylla_pup.png",
             "joy": "images/scylla_pup_joy.png",
@@ -1443,7 +1443,7 @@ export const OLYMPUS_CREATURES = [
         world: WORLDS.OLYMPUS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/chimera_cub.png",
+        image: "images/creatures/olympus/chimera_cub.png",
         sprites: {
             "idle": "images/chimera_cub.png",
             "joy": "images/chimera_cub_joy.png",

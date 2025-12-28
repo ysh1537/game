@@ -501,7 +501,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/mist_crawler.png",
+        image: "images/creatures/wild/creature_mist_crawler.png",
         sprites: {
             "idle": "images/mist_crawler.png",
             "joy": "images/mist_crawler_joy.png",
@@ -615,7 +615,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/spark_mouse.png",
+        image: "images/creatures/wild/creature_spark_mouse.png",
         sprites: {
             "idle": "images/spark_mouse.png",
             "joy": "images/spark_mouse_joy.png",
@@ -691,7 +691,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/thorny_vine.png",
+        image: "images/creatures/wild/creature_thorny_vine.png",
         sprites: {
             "idle": "images/thorny_vine.png",
             "joy": "images/thorny_vine_joy.png",
@@ -729,7 +729,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/unicorn_young.png",
+        image: "images/temp/creature_unicorn_young.png",
         sprites: {
             "idle": "images/unicorn_young.png",
             "joy": "images/unicorn_young_joy.png",
@@ -1153,7 +1153,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_dragon_drake.png",
+        image: "images/creatures/wild/creature_dragon_drake.png",
         sprites: {
             "idle": "images/creature_dragon_drake.png",
             "joy": "images/creature_dragon_drake_joy.png",
@@ -1241,7 +1241,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_chimera.png",
+        image: "images/creatures/wild/creature_chimera.png",
         sprites: {
             "idle": "images/creature_chimera.png",
             "joy": "images/creature_chimera_joy.png",
@@ -1285,7 +1285,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_ent_ancient.png",
+        image: "images/creatures/wild/creature_ent_ancient.png",
         sprites: {
             "idle": "images/creature_ent_ancient.png",
             "joy": "images/creature_ent_ancient_joy.png",
@@ -1323,7 +1323,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_elemental_water.png",
+        image: "images/creatures/wild/creature_elemental_water.png",
         sprites: {
             "idle": "images/creature_elemental_water.png",
             "joy": "images/creature_elemental_water_joy.png",
@@ -1361,7 +1361,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_wolf_dire.png",
+        image: "images/creatures/wild/creature_wolf_dire.png",
         sprites: {
             "idle": "images/creature_wolf_dire.png",
             "joy": "images/creature_wolf_dire_joy.png",
@@ -1399,7 +1399,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_golem_mud.png",
+        image: "images/creatures/wild/creature_golem_mud.png",
         sprites: {
             "idle": "images/creature_golem_mud.png",
             "joy": "images/creature_golem_mud_joy.png",
@@ -1437,7 +1437,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_magma_slime.png",
+        image: "images/creatures/wild/creature_magma_slime.png",
         sprites: {
             "idle": "images/creature_magma_slime.png",
             "joy": "images/creature_magma_slime_joy.png",
@@ -1475,7 +1475,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_mushroom_angry_new.png",
+        image: "images/creatures/wild/creature_mushroom_angry_new.png",
         sprites: {
             "idle": "images/creature_mushroom_angry_new.png",
             "joy": "images/creature_mushroom_angry_new_joy.png",
@@ -1513,7 +1513,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_fish_flying_new.png",
+        image: "images/creatures/wild/creature_fish_flying_new.png",
         sprites: {
             "idle": "images/creature_fish_flying_new.png",
             "joy": "images/creature_fish_flying_new_joy.png",
@@ -1545,127 +1545,13 @@ export const WILD_CREATURES = [
         lines: { normal: "..." }
     },
     {
-        id: "god_odin",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_god_odin.png",
-        sprites: {
-            "idle": "images/creature_god_odin.png",
-            "joy": "images/creature_god_odin_joy.png",
-            "sad": "images/creature_god_odin_sad.png",
-            "angry": "images/creature_god_odin_angry.png",
-            "skill": "images/creature_god_odin_skill.png",
-            "victory": "images/creature_god_odin_victory.png",
-            "defeat": "images/creature_god_odin_defeat.png",
-            "gallery": {
-            "lv1": "images/creature_god_odin_gallery.png"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
-        id: "valkyrie",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_valkyrie.png",
-        sprites: {
-            "idle": "images/creature_valkyrie.png",
-            "joy": "images/creature_valkyrie_joy.png",
-            "sad": "images/creature_valkyrie_sad.png",
-            "angry": "images/creature_valkyrie_angry.png",
-            "skill": "images/creature_valkyrie_skill.png",
-            "victory": "images/creature_valkyrie_victory.png",
-            "defeat": "images/creature_valkyrie_defeat.png",
-            "gallery": {
-            "lv1": "images/creature_valkyrie_gallery.png"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
-        id: "god_zeus",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_god_zeus.jpg",
-        sprites: {
-            "idle": "images/creature_god_zeus.jpg",
-            "joy": "images/creature_god_zeus.jpg",
-            "sad": "images/creature_god_zeus.jpg",
-            "angry": "images/creature_god_zeus.jpg",
-            "skill": "images/creature_god_zeus.jpg",
-            "victory": "images/creature_god_zeus.jpg",
-            "defeat": "images/creature_god_zeus.jpg",
-            "gallery": {
-            "lv1": "images/creature_god_zeus.jpg"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
         id: "angel_arch",
         name: "Unknown",
         rarity: RANKS.NORMAL,
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_angel_arch.png",
+        image: "images/creatures/wild/creature_angel_arch.png",
         sprites: {
             "idle": "images/creature_angel_arch.png",
             "joy": "images/creature_angel_arch_joy.png",
@@ -1697,127 +1583,13 @@ export const WILD_CREATURES = [
         lines: { normal: "..." }
     },
     {
-        id: "titan_atlas",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_titan_atlas.png",
-        sprites: {
-            "idle": "images/creature_titan_atlas.png",
-            "joy": "images/creature_titan_atlas_joy.png",
-            "sad": "images/creature_titan_atlas_sad.png",
-            "angry": "images/creature_titan_atlas_angry.png",
-            "skill": "images/creature_titan_atlas_skill.png",
-            "victory": "images/creature_titan_atlas_victory.png",
-            "defeat": "images/creature_titan_atlas_defeat.png",
-            "gallery": {
-            "lv1": "images/creature_titan_atlas_gallery.png"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
-        id: "cloud_puff",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_cloud_puff.png",
-        sprites: {
-            "idle": "images/creature_cloud_puff.png",
-            "joy": "images/creature_cloud_puff_joy.png",
-            "sad": "images/creature_cloud_puff_sad.png",
-            "angry": "images/creature_cloud_puff_angry.png",
-            "skill": "images/creature_cloud_puff_skill.png",
-            "victory": "images/creature_cloud_puff_victory.png",
-            "defeat": "images/creature_cloud_puff_defeat.png",
-            "gallery": {
-            "lv1": "images/creature_cloud_puff_gallery.png"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
-        id: "mage_flame",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_mage_flame.png",
-        sprites: {
-            "idle": "images/creature_mage_flame.png",
-            "joy": "images/creature_mage_flame_joy.png",
-            "sad": "images/creature_mage_flame_sad.png",
-            "angry": "images/creature_mage_flame_angry.png",
-            "skill": "images/creature_mage_flame_skill.png",
-            "victory": "images/creature_mage_flame_victory.png",
-            "defeat": "images/creature_mage_flame_defeat.png",
-            "gallery": {
-            "lv1": "images/creature_mage_flame_gallery.png"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
         id: "time_lord_chronos",
         name: "Unknown",
         rarity: RANKS.NORMAL,
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_time_lord_chronos.png",
+        image: "images/creatures/wild/creature_time_lord_chronos.png",
         sprites: {
             "idle": "images/creature_time_lord_chronos.png",
             "joy": "images/creature_time_lord_chronos_joy.png",
@@ -1849,51 +1621,13 @@ export const WILD_CREATURES = [
         lines: { normal: "..." }
     },
     {
-        id: "demon_king",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_demon_king.png",
-        sprites: {
-            "idle": "images/creature_demon_king.png",
-            "joy": "images/creature_demon_king_joy.png",
-            "sad": "images/creature_demon_king_sad.png",
-            "angry": "images/creature_demon_king_angry.png",
-            "skill": "images/creature_demon_king_skill.png",
-            "victory": "images/creature_demon_king_victory.png",
-            "defeat": "images/creature_demon_king_defeat.png",
-            "gallery": {
-            "lv1": "images/creature_demon_king_gallery.png"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
         id: "god_zeus_shy",
         name: "Unknown",
         rarity: RANKS.NORMAL,
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_god_zeus_shy.jpg",
+        image: "images/creatures/wild/creature_god_zeus_shy.jpg",
         sprites: {
             "idle": "images/creature_god_zeus_shy.jpg",
             "joy": "images/creature_god_zeus_shy.jpg",
@@ -1931,7 +1665,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_god_zeus_angry.jpg",
+        image: "images/creatures/wild/creature_god_zeus_angry.jpg",
         sprites: {
             "idle": "images/creature_god_zeus_angry.jpg",
             "joy": "images/creature_god_zeus_angry.jpg",
@@ -1969,7 +1703,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_god_zeus_love.jpg",
+        image: "images/creatures/wild/creature_god_zeus_love.jpg",
         sprites: {
             "idle": "images/creature_god_zeus_love.jpg",
             "joy": "images/creature_god_zeus_love.jpg",
@@ -2001,241 +1735,13 @@ export const WILD_CREATURES = [
         lines: { normal: "..." }
     },
     {
-        id: "void_emperor",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_void_emperor.png",
-        sprites: {
-            "idle": "images/creature_void_emperor.png",
-            "joy": "images/creature_void_emperor_joy.png",
-            "sad": "images/creature_void_emperor_sad.png",
-            "angry": "images/creature_void_emperor_angry.png",
-            "skill": "images/creature_void_emperor_skill.png",
-            "victory": "images/creature_void_emperor_victory.png",
-            "defeat": "images/creature_void_emperor_defeat.png",
-            "gallery": {
-            "lv1": "images/creature_void_emperor_gallery.png"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
-        id: "giant_hill",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_giant_hill.png",
-        sprites: {
-            "idle": "images/creature_giant_hill.png",
-            "joy": "images/creature_giant_hill_joy.png",
-            "sad": "images/creature_giant_hill_sad.png",
-            "angry": "images/creature_giant_hill_angry.png",
-            "skill": "images/creature_giant_hill_skill.png",
-            "victory": "images/creature_giant_hill_victory.png",
-            "defeat": "images/creature_giant_hill_defeat.png",
-            "gallery": {
-            "lv1": "images/creature_giant_hill_gallery.png"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
-        id: "phoenix_eternal",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_phoenix_eternal.png",
-        sprites: {
-            "idle": "images/creature_phoenix_eternal.png",
-            "joy": "images/creature_phoenix_eternal_joy.png",
-            "sad": "images/creature_phoenix_eternal_sad.png",
-            "angry": "images/creature_phoenix_eternal_angry.png",
-            "skill": "images/creature_phoenix_eternal_skill.png",
-            "victory": "images/creature_phoenix_eternal_victory.png",
-            "defeat": "images/creature_phoenix_eternal_defeat.png",
-            "gallery": {
-            "lv1": "images/creature_phoenix_eternal_gallery.png"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
-        id: "eagle_iron",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_eagle_iron.png",
-        sprites: {
-            "idle": "images/creature_eagle_iron.png",
-            "joy": "images/creature_eagle_iron_joy.png",
-            "sad": "images/creature_eagle_iron_sad.png",
-            "angry": "images/creature_eagle_iron_angry.png",
-            "skill": "images/creature_eagle_iron_skill.png",
-            "victory": "images/creature_eagle_iron_victory.png",
-            "defeat": "images/creature_eagle_iron_defeat.png",
-            "gallery": {
-            "lv1": "images/creature_eagle_iron_gallery.png"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
-        id: "vampire_lord",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_vampire_lord.png",
-        sprites: {
-            "idle": "images/creature_vampire_lord.png",
-            "joy": "images/creature_vampire_lord_joy.png",
-            "sad": "images/creature_vampire_lord_sad.png",
-            "angry": "images/creature_vampire_lord_angry.png",
-            "skill": "images/creature_vampire_lord_skill.png",
-            "victory": "images/creature_vampire_lord_victory.png",
-            "defeat": "images/creature_vampire_lord_defeat.png",
-            "gallery": {
-            "lv1": "images/creature_vampire_lord_gallery.png"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
-        id: "ninja_shadow",
-        name: "Unknown",
-        rarity: RANKS.NORMAL,
-        world: WORLDS.WILD,
-        elements: ["Light"],
-        baseStr: 10, baseInt: 10,
-        image: "images/creature_ninja_shadow.png",
-        sprites: {
-            "idle": "images/creature_ninja_shadow.png",
-            "joy": "images/creature_ninja_shadow_joy.png",
-            "sad": "images/creature_ninja_shadow_sad.png",
-            "angry": "images/creature_ninja_shadow_angry.png",
-            "skill": "images/creature_ninja_shadow_skill.png",
-            "victory": "images/creature_ninja_shadow_victory.png",
-            "defeat": "images/creature_ninja_shadow_defeat.png",
-            "gallery": {
-            "lv1": "images/creature_ninja_shadow_gallery.png"
-            }
-},
-        prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, Unknown",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, Unknown, energetic, detailed, looking at viewer"
-},
-        lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. Unknown은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
-},
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
-    },
-    {
         id: "kraken_idol",
         name: "Unknown",
         rarity: RANKS.NORMAL,
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_kraken_idol.png",
+        image: "images/creatures/wild/creature_kraken_idol.png",
         sprites: {
             "idle": "images/creature_kraken_idol.png",
             "joy": "images/creature_kraken_idol_joy.png",
@@ -2273,7 +1779,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_kraken_baby.png",
+        image: "images/creatures/wild/creature_kraken_baby.png",
         sprites: {
             "idle": "images/creature_kraken_baby.png",
             "joy": "images/creature_kraken_baby_joy.png",
@@ -2349,7 +1855,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_slime_green_new.png",
+        image: "images/creatures/wild/creature_slime_green_new.png",
         sprites: {
             "idle": "images/creature_slime_green_new.png",
             "joy": "images/creature_slime_green_new_joy.png",
@@ -2387,7 +1893,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_blue_slime.png",
+        image: "images/creatures/wild/creature_blue_slime.png",
         sprites: {
             "idle": "images/creature_blue_slime.png",
             "joy": "images/creature_blue_slime_joy.png",
@@ -2425,7 +1931,7 @@ export const WILD_CREATURES = [
         world: WORLDS.WILD,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_pebble_new.png",
+        image: "images/creatures/wild/creature_pebble_new.png",
         sprites: {
             "idle": "images/creature_pebble_new.png",
             "joy": "images/creature_pebble_new_joy.png",

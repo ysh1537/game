@@ -104,3 +104,14 @@ export const GIFT_ITEMS = [
         type: "ring"
     }
 ];
+
+export const DONATION_ITEMS = [
+    {
+        id: "donate_coffee",
+        name: "개발자에게 커피 사주기",
+        description: "개발자의 카페인을 충전합니다.",
+        priceType: "donation",
+        url: "https://buymeacoffee.com",
+        priceLabel: "Donation"
+    }
+];

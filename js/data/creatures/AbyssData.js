@@ -319,7 +319,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_void_emperor.png",
+        image: "images/temp/creature_void_emperor.png",
         sprites: {
             "idle": "images/creature_void_emperor.png",
             "joy": "images/creature_void_emperor_joy.png",
@@ -363,7 +363,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_dragon_chaos.png",
+        image: "images/creatures/abyss/creature_dragon_chaos.png",
         sprites: {
             "idle": "images/creature_dragon_chaos.png",
             "joy": "images/creature_dragon_chaos_joy.png",
@@ -407,7 +407,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_kraken_worldstar.png",
+        image: "images/creatures/abyss/creature_kraken_worldstar.png",
         sprites: {
             "idle": "images/creature_kraken_worldstar.png",
             "joy": "images/creature_kraken_worldstar_joy.png",
@@ -495,7 +495,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_god_nyarlathotep.png",
+        image: "images/creatures/abyss/creature_god_nyarlathotep.png",
         sprites: {
             "idle": "images/creature_god_nyarlathotep.png",
             "joy": "images/creature_god_nyarlathotep_joy.png",
@@ -539,7 +539,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_demon_king.png",
+        image: "images/creatures/wild/creature_demon_king.png",
         sprites: {
             "idle": "images/creature_demon_king.png",
             "joy": "images/creature_demon_king_joy.png",
@@ -583,7 +583,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_god_shub.png",
+        image: "images/creatures/abyss/creature_god_shub.png",
         sprites: {
             "idle": "images/creature_god_shub.png",
             "joy": "images/creature_god_shub_joy.png",
@@ -671,7 +671,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_vampire_lord.png",
+        image: "images/creatures/wild/creature_vampire_lord.png",
         sprites: {
             "idle": "images/creature_vampire_lord.png",
             "joy": "images/creature_vampire_lord_joy.png",
@@ -715,7 +715,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/god_dagon.png",
+        image: "images/creatures/abyss/god_dagon.png",
         sprites: {
             "idle": "images/god_dagon.png",
             "joy": "images/god_dagon_joy.png",
@@ -759,7 +759,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/knight_dullahan.png",
+        image: "images/creatures/abyss/knight_dullahan.png",
         sprites: {
             "idle": "images/knight_dullahan.png",
             "joy": "images/knight_dullahan_joy.png",
@@ -803,7 +803,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_knight_skeleton.png",
+        image: "images/creatures/abyss/creature_knight_skeleton.png",
         sprites: {
             "idle": "images/creature_knight_skeleton.png",
             "joy": "images/creature_knight_skeleton_joy.png",
@@ -841,7 +841,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/mimic_box.png",
+        image: "images/creatures/abyss/mimic_box.png",
         sprites: {
             "idle": "images/mimic_box.png",
             "joy": "images/mimic_box_joy.png",
@@ -879,7 +879,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/cursed_doll.png",
+        image: "images/creatures/abyss/cursed_doll.png",
         sprites: {
             "idle": "images/cursed_doll.png",
             "joy": "images/cursed_doll_joy.png",
@@ -917,7 +917,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/eye_bat.png",
+        image: "images/creatures/abyss/eye_bat.png",
         sprites: {
             "idle": "images/eye_bat.png",
             "joy": "images/eye_bat_joy.png",
@@ -955,7 +955,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/ghost_lamp.png",
+        image: "images/creatures/abyss/ghost_lamp.png",
         sprites: {
             "idle": "images/ghost_lamp.png",
             "joy": "images/ghost_lamp_joy.png",
@@ -1031,7 +1031,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/creature_goblin_scout_new.png",
+        image: "images/creatures/abyss/creature_goblin_scout_new.png",
         sprites: {
             "idle": "images/creature_goblin_scout_new.png",
             "joy": "images/creature_goblin_scout_new_joy.png",
@@ -1069,7 +1069,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/shadow_lurker.png",
+        image: "images/creatures/abyss/shadow_lurker.png",
         sprites: {
             "idle": "images/shadow_lurker.png",
             "joy": "images/shadow_lurker_joy.png",
@@ -1107,7 +1107,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/abyss_watcher_small.png",
+        image: "images/creatures/abyss/abyss_watcher_small.png",
         sprites: {
             "idle": "images/abyss_watcher_small.png",
             "joy": "images/abyss_watcher_small_joy.png",
@@ -1221,7 +1221,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/void_tentacle.png",
+        image: "images/creatures/abyss/void_tentacle.png",
         sprites: {
             "idle": "images/void_tentacle.png",
             "joy": "images/void_tentacle_joy.png",
@@ -1259,7 +1259,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/sludge_blob.png",
+        image: "images/creatures/abyss/sludge_blob.png",
         sprites: {
             "idle": "images/sludge_blob.png",
             "joy": "images/sludge_blob_joy.png",
@@ -1335,7 +1335,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/whispering_skull.png",
+        image: "images/creatures/abyss/whispering_skull.png",
         sprites: {
             "idle": "images/whispering_skull.png",
             "joy": "images/whispering_skull_joy.png",
@@ -1373,7 +1373,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/void_larva.png",
+        image: "images/creatures/abyss/void_larva.png",
         sprites: {
             "idle": "images/void_larva.png",
             "joy": "images/void_larva_joy.png",
@@ -1411,7 +1411,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/dark_puddles.png",
+        image: "images/creatures/abyss/dark_puddles.png",
         sprites: {
             "idle": "images/dark_puddles.png",
             "joy": "images/dark_puddles_joy.png",
@@ -1449,7 +1449,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/void_moth_small.png",
+        image: "images/creatures/abyss/void_moth_small.png",
         sprites: {
             "idle": "images/void_moth_small.png",
             "joy": "images/void_moth_small_joy.png",
@@ -1487,7 +1487,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
-        image: "images/ink_squid_abyss.png",
+        image: "images/creatures/abyss/ink_squid_abyss.png",
         sprites: {
             "idle": "images/ink_squid_abyss.png",
             "joy": "images/ink_squid_abyss_joy.png",

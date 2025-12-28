@@ -1,5 +1,6 @@
 import EventEmitter from '../utils/EventEmitter.js';
 import { GameConfig } from '../data/GameConfig.js';
+import { GAME_CONFIG } from '../config/GameConfig.js';
 
 export default class ResourceManager extends EventEmitter {
     constructor() {

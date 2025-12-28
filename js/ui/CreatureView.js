@@ -260,30 +260,30 @@ export default class CreatureView extends BaseView {
     }
 
     // Keep renderDetailPanel and others...
-    init_Old() { // Just a marker, replaced by init() above
 
-        /**
-         * @description 크리처 상세 정보를 모달로 렌더링하고 표시합니다.
-         */
-        renderDetailPanel(c) {
-            const modal = document.getElementById('creature-detail-modal');
-            const body = document.getElementById('modal-detail-body');
-            if (!modal || !body) return;
 
-            if (!c) {
-                modal.style.display = 'none';
-                return;
-            }
+    /**
+     * @description 크리처 상세 정보를 모달로 렌더링하고 표시합니다.
+     */
+    renderDetailPanel(c) {
+        const modal = document.getElementById('creature-detail-modal');
+        const body = document.getElementById('modal-detail-body');
+        if (!modal || !body) return;
 
-            const nextExp = getRequiredExp(c.level);
-            const expPercent = Math.min(100, (c.exp / nextExp) * 100).toFixed(1);
-            const isMaxLevel = c.level >= 30;
+        if (!c) {
+            modal.style.display = 'none';
+            return;
+        }
 
-            const lockBtnHtml = `<button id="btn-toggle-lock" class="cyber-btn small" style="color: ${c.isLocked ? '#ff5252' : 'inherit'};">
+        const nextExp = getRequiredExp(c.level);
+        const expPercent = Math.min(100, (c.exp / nextExp) * 100).toFixed(1);
+        const isMaxLevel = c.level >= 30;
+
+        const lockBtnHtml = `<button id="btn-toggle-lock" class="cyber-btn small" style="color: ${c.isLocked ? '#ff5252' : 'inherit'};">
             ${c.isLocked ? '🔒 잠금됨' : '🔓 잠금해제'}
         </button>`;
 
-            body.innerHTML = `
+        body.innerHTML = `
             <div class="detail-header" style="display:flex; justify-content:space-between; align-items:center;">
                 <h3 style="margin:0; font-size:1.3rem;">
                     <span class="rarity-badge rarity-${c.def.rarity}" style="font-size:0.7em; padding:2px 8px; border-radius:4px; margin-right:5px; border:1px solid currentColor;">${c.def.rarity}</span>
@@ -366,106 +366,106 @@ export default class CreatureView extends BaseView {
             </div>
         `;
 
-            modal.style.display = 'flex';
+        modal.style.display = 'flex';
 
-            // 상세 패널 이벤트 바인딩
-            document.getElementById('btn-close-detail').onclick = () => {
+        // 상세 패널 이벤트 바인딩
+        document.getElementById('btn-close-detail').onclick = () => {
+            modal.style.display = 'none';
+        };
+
+        modal.onclick = (e) => {
+            if (e.target === modal) modal.style.display = 'none';
+        };
+
+        document.getElementById('btn-toggle-lock').onclick = () => {
+            this.game.creatureManager.toggleLock(c.instanceId);
+            this.renderDetailPanel(this.game.creatureManager.getCreatureById(c.instanceId));
+            this.renderCreatureList(); // 리스트의 잠금 아이콘 갱신
+        };
+
+        document.getElementById('btn-train-basic').onclick = () => this._handleTraining('basic', c.instanceId);
+        document.getElementById('btn-train-intensive').onclick = () => this._handleTraining('intensive', c.instanceId);
+        document.getElementById('btn-compose-creature').onclick = () => this._handleCompose(c.instanceId);
+
+        // 진화 버튼 이벤트
+        const evolveBtn = document.getElementById('btn-evolve-creature');
+        if (evolveBtn && !evolveBtn.disabled) {
+            evolveBtn.onclick = () => this._handleEvolve(c.instanceId);
+        }
+
+        // 대표 크리처 설정 버튼
+        const repBtn = document.getElementById('btn-set-representative');
+        if (repBtn) {
+            repBtn.onclick = () => {
+                this.game.creatureManager.setRepresentative(c.instanceId);
+                // 로비 캐릭터 이미지 업데이트
+                const lobbyImg = document.getElementById('lobby-character-img');
+                if (lobbyImg) lobbyImg.src = c.def.image;
+                alert(`${c.def.name}을(를) 대표 크리처로 설정했습니다!`);
                 modal.style.display = 'none';
             };
-
-            modal.onclick = (e) => {
-                if (e.target === modal) modal.style.display = 'none';
-            };
-
-            document.getElementById('btn-toggle-lock').onclick = () => {
-                this.game.creatureManager.toggleLock(c.instanceId);
-                this.renderDetailPanel(this.game.creatureManager.getCreatureById(c.instanceId));
-                this.renderCreatureList(); // 리스트의 잠금 아이콘 갱신
-            };
-
-            document.getElementById('btn-train-basic').onclick = () => this._handleTraining('basic', c.instanceId);
-            document.getElementById('btn-train-intensive').onclick = () => this._handleTraining('intensive', c.instanceId);
-            document.getElementById('btn-compose-creature').onclick = () => this._handleCompose(c.instanceId);
-
-            // 진화 버튼 이벤트
-            const evolveBtn = document.getElementById('btn-evolve-creature');
-            if (evolveBtn && !evolveBtn.disabled) {
-                evolveBtn.onclick = () => this._handleEvolve(c.instanceId);
-            }
-
-            // 대표 크리처 설정 버튼
-            const repBtn = document.getElementById('btn-set-representative');
-            if (repBtn) {
-                repBtn.onclick = () => {
-                    this.game.creatureManager.setRepresentative(c.instanceId);
-                    // 로비 캐릭터 이미지 업데이트
-                    const lobbyImg = document.getElementById('lobby-character-img');
-                    if (lobbyImg) lobbyImg.src = c.def.image;
-                    alert(`${c.def.name}을(를) 대표 크리처로 설정했습니다!`);
-                    modal.style.display = 'none';
-                };
-            }
-
-            // 로비 캐릭터 설정 버튼
-            const lobbyBtn = document.getElementById('btn-set-lobby');
-            if (lobbyBtn) {
-                lobbyBtn.onclick = () => {
-                    localStorage.setItem('preferredLobbyCharacter', JSON.stringify({
-                        instanceId: c.instanceId,
-                        dataId: c.dataId
-                    }));
-                    // 즉시 로비 갱신
-                    if (typeof window.updateLobbyCharacter === 'function') {
-                        window.game.currentLobbyCreature = c;
-                        window.updateLobbyCharacter();
-                    }
-                    alert(`${c.def.name}을(를) 로비 캐릭터로 고정했습니다!`);
-                    modal.style.display = 'none';
-                };
-            }
-
-            // 스토리 보기 버튼
-            const storyBtn = document.getElementById('btn-show-story');
-            if (storyBtn && c.def.lore) {
-                storyBtn.onclick = () => this._showStoryModal(c);
-            }
-
-            // [NEW] 갤러리 버튼 이벤트 바인딩
-            const galleryBtn = document.getElementById('btn-view-gallery');
-            if (galleryBtn && c.def.gallery) {
-                galleryBtn.onclick = () => this._showGalleryModal(c);
-            }
         }
 
-        /**
-         * 진화 가능 여부 확인 (UI용)
-         */
-        _canEvolveUI(c) {
-            if (!c) return { canEvolve: false };
-            return this.game.creatureManager.canEvolve(c.instanceId);
+        // 로비 캐릭터 설정 버튼
+        const lobbyBtn = document.getElementById('btn-set-lobby');
+        if (lobbyBtn) {
+            lobbyBtn.onclick = () => {
+                localStorage.setItem('preferredLobbyCharacter', JSON.stringify({
+                    instanceId: c.instanceId,
+                    dataId: c.dataId
+                }));
+                // 즉시 로비 갱신
+                if (typeof window.updateLobbyCharacter === 'function') {
+                    window.game.currentLobbyCreature = c;
+                    window.updateLobbyCharacter();
+                }
+                alert(`${c.def.name}을(를) 로비 캐릭터로 고정했습니다!`);
+                modal.style.display = 'none';
+            };
         }
 
-        /**
-     * [NEW] 호감도 게이지 렌더링
+        // 스토리 보기 버튼
+        const storyBtn = document.getElementById('btn-show-story');
+        if (storyBtn && c.def.lore) {
+            storyBtn.onclick = () => this._showStoryModal(c);
+        }
+
+        // [NEW] 갤러리 버튼 이벤트 바인딩
+        const galleryBtn = document.getElementById('btn-view-gallery');
+        if (galleryBtn && c.def.gallery) {
+            galleryBtn.onclick = () => this._showGalleryModal(c);
+        }
+    }
+
+    /**
+     * 진화 가능 여부 확인 (UI용)
      */
-        _renderAffectionGauge(c) {
-            const affinity = this.game.affinityManager.getAffinity(c.instanceId);
-            const level = affinity.level;
-            const currentPoints = affinity.points;
-            const nextReq = this.game.affinityManager.LEVEL_THRESHOLDS[level + 1] || 9999;
-            const prevReq = this.game.affinityManager.LEVEL_THRESHOLDS[level] || 0;
+    _canEvolveUI(c) {
+        if (!c) return { canEvolve: false };
+        return this.game.creatureManager.canEvolve(c.instanceId);
+    }
 
-            // Calculate percentage for current level
-            let percent = 0;
-            if (level >= 4) {
-                percent = 100;
-            } else {
-                const range = nextReq - prevReq;
-                const progress = currentPoints - prevReq;
-                percent = Math.min(100, Math.max(0, (progress / range) * 100));
-            }
+    /**
+ * [NEW] 호감도 게이지 렌더링
+ */
+    _renderAffectionGauge(c) {
+        const affinity = this.game.affinityManager.getAffinity(c.instanceId);
+        const level = affinity.level;
+        const currentPoints = affinity.points;
+        const nextReq = this.game.affinityManager.LEVEL_THRESHOLDS[level + 1] || 9999;
+        const prevReq = this.game.affinityManager.LEVEL_THRESHOLDS[level] || 0;
 
-            return `
+        // Calculate percentage for current level
+        let percent = 0;
+        if (level >= 4) {
+            percent = 100;
+        } else {
+            const range = nextReq - prevReq;
+            const progress = currentPoints - prevReq;
+            percent = Math.min(100, Math.max(0, (progress / range) * 100));
+        }
+
+        return `
             <div class="affection-container" style="margin: 15px 0; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 8px; border: 1px solid rgba(255, 64, 129, 0.3);">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:5px;">
                     <div style="color: #ff4081; font-weight: bold; display:flex; align-items:center; gap:5px;">
@@ -484,20 +484,20 @@ export default class CreatureView extends BaseView {
                 </div>
             </div>
         `;
-        }
+    }
 
-        /**
-         * [NEW] 갤러리 모달 표시
-         */
-        _showGalleryModal(c) {
-            // Create modal if not exists
-            let modal = document.getElementById('gallery-modal');
-            if (!modal) {
-                modal = document.createElement('div');
-                modal.id = 'gallery-modal';
-                modal.className = 'modal-overlay';
-                modal.style.display = 'none';
-                modal.innerHTML = `
+    /**
+     * [NEW] 갤러리 모달 표시
+     */
+    _showGalleryModal(c) {
+        // Create modal if not exists
+        let modal = document.getElementById('gallery-modal');
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'gallery-modal';
+            modal.className = 'modal-overlay';
+            modal.style.display = 'none';
+            modal.innerHTML = `
                 <div class="modal-content" style="max-width: 900px; width: 90%; background: rgba(10, 10, 15, 0.95); border: 1px solid var(--accent-primary);">
                     <div class="modal-header">
                         <h2>🖼️ ${c.def.name}의 시크릿 갤러리</h2>
@@ -508,25 +508,25 @@ export default class CreatureView extends BaseView {
                     </div>
                 </div>
             `;
-                document.body.appendChild(modal);
-            }
+            document.body.appendChild(modal);
+        }
 
-            const galleryBody = document.getElementById('gallery-body');
-            const sprites = c.def.sprites?.gallery || {};
-            const affinity = this.game.affinityManager.getAffinity(c.instanceId);
+        const galleryBody = document.getElementById('gallery-body');
+        const sprites = c.def.sprites?.gallery || {};
+        const affinity = this.game.affinityManager.getAffinity(c.instanceId);
 
-            let html = '';
-            const levels = [1, 2, 3];
+        let html = '';
+        const levels = [1, 2, 3];
 
-            levels.forEach(lvl => {
-                const isUnlocked = affinity.level >= lvl;
-                const imgPath = sprites[`lv${lvl}`];
-                const lockIcon = isUnlocked ? '' : '<div style="font-size:3rem;">🔒</div>';
-                const filter = isUnlocked ? '' : 'filter: blur(10px) grayscale(100%); opacity: 0.5;';
-                const label = isUnlocked ? 'Open' : `Lv.${lvl} 필요`;
-                const unlockClass = isUnlocked ? 'unlocked' : 'locked';
+        levels.forEach(lvl => {
+            const isUnlocked = affinity.level >= lvl;
+            const imgPath = sprites[`lv${lvl}`];
+            const lockIcon = isUnlocked ? '' : '<div style="font-size:3rem;">🔒</div>';
+            const filter = isUnlocked ? '' : 'filter: blur(10px) grayscale(100%); opacity: 0.5;';
+            const label = isUnlocked ? 'Open' : `Lv.${lvl} 필요`;
+            const unlockClass = isUnlocked ? 'unlocked' : 'locked';
 
-                html += `
+            html += `
                 <div class="gallery-item ${unlockClass}" style="position: relative; aspect-ratio: 2/3; background: #000; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
                     <img src="${imgPath || 'images/placeholder_gallery.png'}" style="width:100%; height:100%; object-fit: cover; ${filter}" onerror="this.src='images/placeholder_gallery.png'">
                     <div style="position: absolute; inset: 0; display: flex; justify-content: center; align-items: center; color: #fff;">
@@ -538,65 +538,65 @@ export default class CreatureView extends BaseView {
                     </div>
                 </div>
             `;
-            });
+        });
 
-            galleryBody.innerHTML = html;
-            modal.style.display = 'flex';
-        }
+        galleryBody.innerHTML = html;
+        modal.style.display = 'flex';
+    }
 
-        _handleCreatureSelected(c) {
-            this.renderDetailPanel(c);
+    _handleCreatureSelected(c) {
+        this.renderDetailPanel(c);
 
-            // Re-bind touch event specific to this render
-            const touchBtn = document.getElementById('btn-interact-touch');
-            if (touchBtn) {
-                touchBtn.onclick = () => {
-                    const res = this.game.affinityManager.interact(c.instanceId, 'TOUCH');
-                    if (res) {
-                        // 1. Play Sound
-                        const audio = new Audio('audio/ui_touch_01.mp3'); // Generic for now
-                        audio.volume = 0.5;
-                        audio.play().catch(e => console.log("Audio play failed (interaction required)", e));
+        // Re-bind touch event specific to this render
+        const touchBtn = document.getElementById('btn-interact-touch');
+        if (touchBtn) {
+            touchBtn.onclick = () => {
+                const res = this.game.affinityManager.interact(c.instanceId, 'TOUCH');
+                if (res) {
+                    // 1. Play Sound
+                    const audio = new Audio('audio/ui_touch_01.mp3'); // Generic for now
+                    audio.volume = 0.5;
+                    audio.play().catch(e => console.log("Audio play failed (interaction required)", e));
 
-                        // 2. Pick Random Line
-                        const lines = c.def.touchLines?.interaction || ["..."];
-                        const randomLine = lines[Math.floor(Math.random() * lines.length)];
+                    // 2. Pick Random Line
+                    const lines = c.def.touchLines?.interaction || ["..."];
+                    const randomLine = lines[Math.floor(Math.random() * lines.length)];
 
-                        // 3. Show Speech Bubble
-                        const bubble = document.querySelector('.speech-bubble-modal');
-                        if (bubble) {
-                            bubble.innerText = `"${randomLine}"`;
-                            bubble.classList.add('pulse');
-                            setTimeout(() => bubble.classList.remove('pulse'), 500);
-                        }
-
-                        // 4. Update UI
-                        this.game.ui.showToast(`❤ 호감도 +5 (쓰다듬기)`);
-                        this.renderDetailPanel(c); // Re-render to update bar
+                    // 3. Show Speech Bubble
+                    const bubble = document.querySelector('.speech-bubble-modal');
+                    if (bubble) {
+                        bubble.innerText = `"${randomLine}"`;
+                        bubble.classList.add('pulse');
+                        setTimeout(() => bubble.classList.remove('pulse'), 500);
                     }
-                };
-            }
+
+                    // 4. Update UI
+                    this.game.ui.showToast(`❤ 호감도 +5 (쓰다듬기)`);
+                    this.renderDetailPanel(c); // Re-render to update bar
+                }
+            };
         }
+    }
 
-        /**
-         * 스토리 모달 표시 (전용 모달)
-         */
-        _showStoryModal(c) {
-            if (!c || !c.def.lore) return;
+    /**
+     * 스토리 모달 표시 (전용 모달)
+     */
+    _showStoryModal(c) {
+        if (!c || !c.def.lore) return;
 
-            const lore = c.def.lore;
-            const allDefs = this.game.creatureManager.getAllCreatureDefs();
+        const lore = c.def.lore;
+        const allDefs = this.game.creatureManager.getAllCreatureDefs();
 
-            const relHtml = lore.relationships?.map(rel => {
-                const typeEmoji = rel.type === 'ally' ? '🤝' : rel.type === 'rival' ? '⚔️' : '👨‍👩‍👧';
-                const typeLabel = rel.type === 'ally' ? '동맹' : rel.type === 'rival' ? '라이벌' : '가족';
-                const typeColor = rel.type === 'ally' ? '#66bb6a' : rel.type === 'rival' ? '#ef5350' : '#f48fb1';
+        const relHtml = lore.relationships?.map(rel => {
+            const typeEmoji = rel.type === 'ally' ? '🤝' : rel.type === 'rival' ? '⚔️' : '👨‍👩‍👧';
+            const typeLabel = rel.type === 'ally' ? '동맹' : rel.type === 'rival' ? '라이벌' : '가족';
+            const typeColor = rel.type === 'ally' ? '#66bb6a' : rel.type === 'rival' ? '#ef5350' : '#f48fb1';
 
-                // 관련 크리처 이름 조회
-                const relCreature = allDefs.find(d => d.id === rel.id);
-                const relName = relCreature ? relCreature.name : rel.id;
+            // 관련 크리처 이름 조회
+            const relCreature = allDefs.find(d => d.id === rel.id);
+            const relName = relCreature ? relCreature.name : rel.id;
 
-                return `
+            return `
                 <div style="margin:8px 0; padding:12px; background:linear-gradient(135deg, rgba(0,0,0,0.4), rgba(30,30,50,0.4)); border-radius:10px; border-left:3px solid ${typeColor};">
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
                         <span style="color:${typeColor}; font-weight:bold; font-size:1rem;">${typeEmoji} ${typeLabel}</span>
@@ -604,23 +604,23 @@ export default class CreatureView extends BaseView {
                     </div>
                     <div style="color:#ccc; font-size:0.9rem; line-height:1.5;">${rel.desc}</div>
                 </div>`;
-            }).join('') || '<div style="color:#666; padding:10px;">관계 정보가 없습니다.</div>';
+        }).join('') || '<div style="color:#666; padding:10px;">관계 정보가 없습니다.</div>';
 
-            // 기존 스토리 모달 제거
-            const existingModal = document.getElementById('story-modal');
-            if (existingModal) existingModal.remove();
+        // 기존 스토리 모달 제거
+        const existingModal = document.getElementById('story-modal');
+        if (existingModal) existingModal.remove();
 
-            // 새 모달 생성
-            const modal = document.createElement('div');
-            modal.id = 'story-modal';
-            modal.style.cssText = `
+        // 새 모달 생성
+        const modal = document.createElement('div');
+        modal.id = 'story-modal';
+        modal.style.cssText = `
             position: fixed; top: 0; left: 0; right: 0; bottom: 0;
             background: rgba(0,0,0,0.85); z-index: 3000;
             display: flex; justify-content: center; align-items: center;
             backdrop-filter: blur(5px);
         `;
 
-            modal.innerHTML = `
+        modal.innerHTML = `
             <div style="max-width:550px; max-height:80vh; overflow-y:auto; background:linear-gradient(135deg, #1a1a2e, #16213e); 
                         border-radius:16px; padding:25px; border:2px solid var(--accent-gold); box-shadow: 0 0 30px rgba(241,196,15,0.3);">
                 <div style="display:flex; align-items:center; gap:15px; margin-bottom:20px; padding-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.2);">
@@ -649,67 +649,67 @@ export default class CreatureView extends BaseView {
             </div>
         `;
 
-            document.body.appendChild(modal);
+        document.body.appendChild(modal);
 
-            // 닫기 버튼 이벤트
-            document.getElementById('btn-close-story').onclick = () => modal.remove();
-            modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+        // 닫기 버튼 이벤트
+        document.getElementById('btn-close-story').onclick = () => modal.remove();
+        modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+    }
+
+
+    /**
+     * 진화 실행 핸들러
+     */
+    _handleEvolve(instanceId) {
+        const check = this.game.creatureManager.canEvolve(instanceId);
+        if (!check.canEvolve) {
+            alert(`진화 불가: ${check.reason}`);
+            return;
         }
 
+        const creature = this.game.creatureManager.getCreature(instanceId);
+        const oldImage = creature.def.image; // 진화 전 이미지 저장
 
-        /**
-         * 진화 실행 핸들러
-         */
-        _handleEvolve(instanceId) {
-            const check = this.game.creatureManager.canEvolve(instanceId);
-            if (!check.canEvolve) {
-                alert(`진화 불가: ${check.reason}`);
-                return;
-            }
+        const targetName = check.evolvesTo.name;
+        this.uiManager.showConfirm(
+            `${targetName}(으)로 진화하시겠습니까?\n\n⚠️ 진화 시 레벨과 별이 초기화됩니다!`,
+            () => {
+                // 연출을 위해 여기서 먼저 데이터를 바꾸지 않고, 연출 시작
+                // 하지만 tryEvolve가 데이터를 바꾸므로, 순서는:
+                // 1. tryEvolve 실행 (데이터 변경)
+                // 2. 결과 받음
+                // 3. 연출 재생 (이전 이미지 -> 새 이미지)
 
-            const creature = this.game.creatureManager.getCreature(instanceId);
-            const oldImage = creature.def.image; // 진화 전 이미지 저장
+                const result = this.game.creatureManager.tryEvolve(instanceId);
+                if (result.success) {
+                    // 성공 시 모달 닫고 연출 재생
+                    const detailModal = document.getElementById('creature-detail-modal');
+                    if (detailModal) detailModal.style.display = 'none';
 
-            const targetName = check.evolvesTo.name;
-            this.uiManager.showConfirm(
-                `${targetName}(으)로 진화하시겠습니까?\n\n⚠️ 진화 시 레벨과 별이 초기화됩니다!`,
-                () => {
-                    // 연출을 위해 여기서 먼저 데이터를 바꾸지 않고, 연출 시작
-                    // 하지만 tryEvolve가 데이터를 바꾸므로, 순서는:
-                    // 1. tryEvolve 실행 (데이터 변경)
-                    // 2. 결과 받음
-                    // 3. 연출 재생 (이전 이미지 -> 새 이미지)
-
-                    const result = this.game.creatureManager.tryEvolve(instanceId);
-                    if (result.success) {
-                        // 성공 시 모달 닫고 연출 재생
-                        const detailModal = document.getElementById('creature-detail-modal');
-                        if (detailModal) detailModal.style.display = 'none';
-
-                        this._playEvolutionCutscene(oldImage, result.newCreature, () => {
-                            this.addLog(`🦋 [진화] ${result.newCreature.def.name}(으)로 진화 성공!`, 'success');
-                            this.renderDetailPanel(result.newCreature); // 연출 끝나면 상세창 다시 열기
-                            this.renderCreatureList();
-                        });
-                    } else {
-                        alert(`진화 실패: ${result.reason}`);
-                    }
+                    this._playEvolutionCutscene(oldImage, result.newCreature, () => {
+                        this.addLog(`🦋 [진화] ${result.newCreature.def.name}(으)로 진화 성공!`, 'success');
+                        this.renderDetailPanel(result.newCreature); // 연출 끝나면 상세창 다시 열기
+                        this.renderCreatureList();
+                    });
+                } else {
+                    alert(`진화 실패: ${result.reason}`);
                 }
-            );
-        }
+            }
+        );
+    }
 
-        _playEvolutionCutscene(oldInfoOrImage, newCreature, callback) {
-            // 동적으로 컷신용 DOM 생성
-            const cutsceneId = 'evolution-cutscene-overlay';
-            let overlay = document.getElementById(cutsceneId);
-            if (!overlay) {
-                overlay = document.createElement('div');
-                overlay.id = cutsceneId;
-                document.body.appendChild(overlay);
+    _playEvolutionCutscene(oldInfoOrImage, newCreature, callback) {
+        // 동적으로 컷신용 DOM 생성
+        const cutsceneId = 'evolution-cutscene-overlay';
+        let overlay = document.getElementById(cutsceneId);
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.id = cutsceneId;
+            document.body.appendChild(overlay);
 
-                // CSS 스타일 주입
-                const style = document.createElement('style');
-                style.innerHTML = `
+            // CSS 스타일 주입
+            const style = document.createElement('style');
+            style.innerHTML = `
                 #${cutsceneId} {
                     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
                     background: black; z-index: 10000;
@@ -755,12 +755,12 @@ export default class CreatureView extends BaseView {
                     100% { transform: translate(1px, -2px) rotate(-1deg); }
                 }
             `;
-                document.head.appendChild(style);
-            }
+            document.head.appendChild(style);
+        }
 
-            const oldImgSrc = typeof oldInfoOrImage === 'string' ? oldInfoOrImage : (oldInfoOrImage.def ? oldInfoOrImage.def.image : '');
+        const oldImgSrc = typeof oldInfoOrImage === 'string' ? oldInfoOrImage : (oldInfoOrImage.def ? oldInfoOrImage.def.image : '');
 
-            overlay.innerHTML = `
+        overlay.innerHTML = `
             <div class="evo-stage">
                 <div class="evo-particles"></div>
                 <img src="${oldImgSrc}" class="evo-img" id="evo-target-img" onerror="this.src='images/creature_placeholder_unknown.png'">
@@ -771,306 +771,306 @@ export default class CreatureView extends BaseView {
             </div>
         `;
 
-            overlay.style.pointerEvents = 'auto';
-            overlay.style.display = 'flex';
+        overlay.style.pointerEvents = 'auto';
+        overlay.style.display = 'flex';
 
-            // Phase 0: Fade In
-            requestAnimationFrame(() => {
-                overlay.style.opacity = '1';
-            });
+        // Phase 0: Fade In
+        requestAnimationFrame(() => {
+            overlay.style.opacity = '1';
+        });
 
-            const imgEl = document.getElementById('evo-target-img');
-            const flashEl = document.getElementById('evo-flash');
-            const textEl = document.getElementById('evo-text');
+        const imgEl = document.getElementById('evo-target-img');
+        const flashEl = document.getElementById('evo-flash');
+        const textEl = document.getElementById('evo-text');
 
-            // Phase 1: Shake & Light (0~2s)
+        // Phase 1: Shake & Light (0~2s)
+        setTimeout(() => {
+            imgEl.style.animation = 'shake 0.5s infinite';
+            imgEl.style.filter = 'brightness(2) drop-shadow(0 0 30px gold)';
+        }, 500);
+
+        // Phase 2: Flash & Swap (2s)
+        setTimeout(() => {
+            flashEl.style.transition = 'opacity 0.2s';
+            flashEl.style.opacity = '1'; // Blind white
+            flashEl.style.background = 'white';
+            flashEl.style.mixBlendMode = 'normal';
+
             setTimeout(() => {
-                imgEl.style.animation = 'shake 0.5s infinite';
-                imgEl.style.filter = 'brightness(2) drop-shadow(0 0 30px gold)';
-            }, 500);
+                // Swap Image
+                imgEl.onerror = () => { imgEl.src = 'images/creature_placeholder_unknown.png'; imgEl.onerror = null; }; // Fallback
+                imgEl.src = newCreature.def.image;
+                imgEl.style.animation = '';
+                imgEl.style.filter = 'brightness(1) drop-shadow(0 0 50px orange)';
+                imgEl.style.transform = 'scale(1.2)';
 
-            // Phase 2: Flash & Swap (2s)
-            setTimeout(() => {
-                flashEl.style.transition = 'opacity 0.2s';
-                flashEl.style.opacity = '1'; // Blind white
-                flashEl.style.background = 'white';
-                flashEl.style.mixBlendMode = 'normal';
+                flashEl.style.opacity = '0'; // Fade out flash
+            }, 200);
+        }, 2000);
 
-                setTimeout(() => {
-                    // Swap Image
-                    imgEl.onerror = () => { imgEl.src = 'images/creature_placeholder_unknown.png'; imgEl.onerror = null; }; // Fallback
-                    imgEl.src = newCreature.def.image;
-                    imgEl.style.animation = '';
-                    imgEl.style.filter = 'brightness(1) drop-shadow(0 0 50px orange)';
-                    imgEl.style.transform = 'scale(1.2)';
-
-                    flashEl.style.opacity = '0'; // Fade out flash
-                }, 200);
-            }, 2000);
-
-            // Phase 3: Text & Particles (2.5s~)
-            setTimeout(() => {
-                textEl.innerHTML = `
+        // Phase 3: Text & Particles (2.5s~)
+        setTimeout(() => {
+            textEl.innerHTML = `
                 <div style="font-size: 1.2rem; color: #gold;">EVOLUTION COMPLETE</div>
                 <h1 style="font-size: 2.5rem; background: linear-gradient(to right, #ff9800, #ffeb3b); -webkit-background-clip: text; color: transparent;">${newCreature.def.name}</h1>
                 <div style="margin-top:10px; font-size:1rem; color:#ccc;">${newCreature.star + 1} Star ${newCreature.def.rarity} Class</div>
             `;
-                textEl.style.opacity = '1';
-                textEl.style.transform = 'translateY(0)';
+            textEl.style.opacity = '1';
+            textEl.style.transform = 'translateY(0)';
 
-                // Particles
-                const stage = overlay.querySelector('.evo-particles');
-                for (let i = 0; i < 30; i++) {
-                    const p = document.createElement('div');
-                    p.className = 'particle';
-                    p.style.left = 50 + (Math.random() * 60 - 30) + '%';
-                    p.style.top = 50 + (Math.random() * 60 - 30) + '%';
-                    const size = Math.random() * 10 + 5;
-                    p.style.width = size + 'px';
-                    p.style.height = size + 'px';
-                    p.style.animationDelay = Math.random() * 0.5 + 's';
-                    stage.appendChild(p);
-                }
-            }, 2500);
+            // Particles
+            const stage = overlay.querySelector('.evo-particles');
+            for (let i = 0; i < 30; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = 50 + (Math.random() * 60 - 30) + '%';
+                p.style.top = 50 + (Math.random() * 60 - 30) + '%';
+                const size = Math.random() * 10 + 5;
+                p.style.width = size + 'px';
+                p.style.height = size + 'px';
+                p.style.animationDelay = Math.random() * 0.5 + 's';
+                stage.appendChild(p);
+            }
+        }, 2500);
 
-            // Phase 4: End (5s)
+        // Phase 4: End (5s)
+        setTimeout(() => {
+            overlay.style.opacity = '0';
             setTimeout(() => {
-                overlay.style.opacity = '0';
-                setTimeout(() => {
-                    overlay.style.display = 'none';
-                    if (callback) callback();
-                }, 500);
-            }, 5000);
+                overlay.style.display = 'none';
+                if (callback) callback();
+            }, 500);
+        }, 5000);
+    }
+
+    /**
+     * 합성(강화) 핸들러
+     */
+    _handleCompose(instanceId) {
+        const creature = this.game.creatureManager.getCreature(instanceId);
+        if (!creature) return;
+
+        if (creature.star >= 5) {
+            alert("이미 최대 강화 상태입니다! (5성)");
+            return;
         }
 
-        /**
-         * 합성(강화) 핸들러
-         */
-        _handleCompose(instanceId) {
-            const creature = this.game.creatureManager.getCreature(instanceId);
-            if (!creature) return;
+        // 같은 종류, 같은 별의 재료 찾기
+        const materials = this.game.creatureManager.owned.filter(c =>
+            c.instanceId !== instanceId &&
+            c.dataId === creature.dataId &&
+            c.star === creature.star &&
+            !c.isLocked
+        );
 
-            if (creature.star >= 5) {
-                alert("이미 최대 강화 상태입니다! (5성)");
-                return;
-            }
-
-            // 같은 종류, 같은 별의 재료 찾기
-            const materials = this.game.creatureManager.owned.filter(c =>
-                c.instanceId !== instanceId &&
-                c.dataId === creature.dataId &&
-                c.star === creature.star &&
-                !c.isLocked
-            );
-
-            if (materials.length === 0) {
-                alert(`합성 재료가 없습니다!\n\n필요: ${creature.def.name} (${creature.star}성, 잠금해제)`);
-                return;
-            }
-
-            this.uiManager.showConfirm(
-                `${creature.def.name}을(를) 합성하시겠습니까?\n\n재료: ${creature.def.name} (${creature.star}성) x1\n결과: ${creature.star + 1}성으로 강화`,
-                () => {
-                    const result = this.game.creatureManager.tryCompose(instanceId, materials[0].instanceId);
-                    if (result.success) {
-                        alert(`🎉 합성 성공! ${creature.star}성이 되었습니다!`);
-                        this.addLog(`[합성] ${creature.def.name} ${creature.star}성 강화 성공!`, 'success');
-                        this.renderDetailPanel(this.game.creatureManager.getCreature(instanceId));
-                        this.renderCreatureList();
-                    } else {
-                        alert(`합성 실패: ${result.reason}`);
-                    }
-                }
-            );
+        if (materials.length === 0) {
+            alert(`합성 재료가 없습니다!\n\n필요: ${creature.def.name} (${creature.star}성, 잠금해제)`);
+            return;
         }
 
-        // --- 내부 헬퍼 메서드 ---
-
-        _getFilteredAndSortedCreatures() {
-            let list = [];
-            const isDeckMode = this.ui.creatureList.classList.contains('mode-deck-select');
-
-            // [Archive Mode]
-            if (this.currentTab === 'archive' && !isDeckMode) {
-                const allDefs = this.game.creatureManager.getAllCreatureDefs();
-                const owned = this.game.creatureManager.owned;
-
-                list = allDefs.map(def => {
-                    // Find best owned instance (highest star, then level)
-                    const ownedInstances = owned.filter(c => c.dataId === def.id);
-                    if (ownedInstances.length > 0) {
-                        ownedInstances.sort((a, b) => (b.star - a.star) || (b.level - a.level));
-                        return ownedInstances[0]; // Return best instance
-                    } else {
-                        // Create unobtained placeholder
-                        return {
-                            instanceId: 'unobtained_' + def.id,
-                            dataId: def.id,
-                            def: def,
-                            level: 0,
-                            star: 0,
-                            isUnobtained: true
-                        };
-                    }
-                });
-            } else {
-                // Normal Inventory Mode (Owned Only)
-                list = [...(this.game.creatureManager.owned || [])];
-            }
-
-            const rFilter = this.ui.filterRarity ? this.ui.filterRarity.value : 'all';
-            const eFilter = this.ui.filterElement ? this.ui.filterElement.value : 'all';
-
-            if (rFilter !== 'all') list = list.filter(c => c.def.rarity === rFilter);
-            if (eFilter !== 'all') {
-                list = list.filter(c => {
-                    if (c.def.elements) return c.def.elements.includes(eFilter);
-                    return c.def.element === eFilter;
-                });
-            }
-
-            const sort = this.ui.sortOrder ? this.ui.sortOrder.value : 'rarity_desc';
-            const rarityRank = { 'UR': 7, 'SSR': 6, 'SR': 5, 'Special': 4, 'Rare': 3, 'Unique': 2, 'Normal': 1 };
-
-            list.sort((a, b) => {
-                if (sort === 'rarity_desc') {
-                    const ra = rarityRank[a.def.rarity] || 0;
-                    const rb = rarityRank[b.def.rarity] || 0;
-                    return (ra !== rb) ? rb - ra : b.level - a.level;
-                } else if (sort === 'level_desc') {
-                    return (a.level !== b.level) ? b.level - a.level : (rarityRank[b.def.rarity] || 0) - (rarityRank[a.def.rarity] || 0);
-                } else if (sort === 'world') {
-                    // Sort by World -> Rarity -> Name
-                    const wa = a.def.world || 'ZZZ'; // Unknown last
-                    const wb = b.def.world || 'ZZZ';
-                    if (wa !== wb) return wa.localeCompare(wb);
-                    const ra = rarityRank[a.def.rarity] || 0;
-                    const rb = rarityRank[b.def.rarity] || 0;
-                    return rb - ra;
-                } else if (sort === 'recent') {
-                    return b.instanceId - a.instanceId;
-                }
-                return 0;
-            });
-
-            return list;
-        }
-
-        _handleCreatureSelected(c) {
-            this.renderDetailPanel(c);
-            const cards = this.ui.creatureList.children;
-            Array.from(cards).forEach(card => {
-                if (card.dataset.instanceId === String(c.instanceId)) {
-                    card.classList.add('selected');
-                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        this.uiManager.showConfirm(
+            `${creature.def.name}을(를) 합성하시겠습니까?\n\n재료: ${creature.def.name} (${creature.star}성) x1\n결과: ${creature.star + 1}성으로 강화`,
+            () => {
+                const result = this.game.creatureManager.tryCompose(instanceId, materials[0].instanceId);
+                if (result.success) {
+                    alert(`🎉 합성 성공! ${creature.star}성이 되었습니다!`);
+                    this.addLog(`[합성] ${creature.def.name} ${creature.star}성 강화 성공!`, 'success');
+                    this.renderDetailPanel(this.game.creatureManager.getCreature(instanceId));
+                    this.renderCreatureList();
                 } else {
-                    card.classList.remove('selected');
+                    alert(`합성 실패: ${result.reason}`);
                 }
+            }
+        );
+    }
+
+    // --- 내부 헬퍼 메서드 ---
+
+    _getFilteredAndSortedCreatures() {
+        let list = [];
+        const isDeckMode = this.ui.creatureList.classList.contains('mode-deck-select');
+
+        // [Archive Mode]
+        if (this.currentTab === 'archive' && !isDeckMode) {
+            const allDefs = this.game.creatureManager.getAllCreatureDefs();
+            const owned = this.game.creatureManager.owned;
+
+            list = allDefs.map(def => {
+                // Find best owned instance (highest star, then level)
+                const ownedInstances = owned.filter(c => c.dataId === def.id);
+                if (ownedInstances.length > 0) {
+                    ownedInstances.sort((a, b) => (b.star - a.star) || (b.level - a.level));
+                    return ownedInstances[0]; // Return best instance
+                } else {
+                    // Create unobtained placeholder
+                    return {
+                        instanceId: 'unobtained_' + def.id,
+                        dataId: def.id,
+                        def: def,
+                        level: 0,
+                        star: 0,
+                        isUnobtained: true
+                    };
+                }
+            });
+        } else {
+            // Normal Inventory Mode (Owned Only)
+            list = [...(this.game.creatureManager.owned || [])];
+        }
+
+        const rFilter = this.ui.filterRarity ? this.ui.filterRarity.value : 'all';
+        const eFilter = this.ui.filterElement ? this.ui.filterElement.value : 'all';
+
+        if (rFilter !== 'all') list = list.filter(c => c.def.rarity === rFilter);
+        if (eFilter !== 'all') {
+            list = list.filter(c => {
+                if (c.def.elements) return c.def.elements.includes(eFilter);
+                return c.def.element === eFilter;
             });
         }
 
-        _handleLevelUp(data) {
-            const { creature, oldLevel, newLevel } = data;
-            this.addLog(`[성장] ${creature.def.name} 레벨업! Lv.${oldLevel} -> Lv.${newLevel}`);
-            if (this.game.creatureManager.selectedId === creature.instanceId) {
-                this.renderDetailPanel(creature);
+        const sort = this.ui.sortOrder ? this.ui.sortOrder.value : 'rarity_desc';
+        const rarityRank = { 'UR': 7, 'SSR': 6, 'SR': 5, 'Special': 4, 'Rare': 3, 'Unique': 2, 'Normal': 1 };
+
+        list.sort((a, b) => {
+            if (sort === 'rarity_desc') {
+                const ra = rarityRank[a.def.rarity] || 0;
+                const rb = rarityRank[b.def.rarity] || 0;
+                return (ra !== rb) ? rb - ra : b.level - a.level;
+            } else if (sort === 'level_desc') {
+                return (a.level !== b.level) ? b.level - a.level : (rarityRank[b.def.rarity] || 0) - (rarityRank[a.def.rarity] || 0);
+            } else if (sort === 'world') {
+                // Sort by World -> Rarity -> Name
+                const wa = a.def.world || 'ZZZ'; // Unknown last
+                const wb = b.def.world || 'ZZZ';
+                if (wa !== wb) return wa.localeCompare(wb);
+                const ra = rarityRank[a.def.rarity] || 0;
+                const rb = rarityRank[b.def.rarity] || 0;
+                return rb - ra;
+            } else if (sort === 'recent') {
+                return b.instanceId - a.instanceId;
             }
+            return 0;
+        });
+
+        return list;
+    }
+
+    _handleCreatureSelected(c) {
+        this.renderDetailPanel(c);
+        const cards = this.ui.creatureList.children;
+        Array.from(cards).forEach(card => {
+            if (card.dataset.instanceId === String(c.instanceId)) {
+                card.classList.add('selected');
+                card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+                card.classList.remove('selected');
+            }
+        });
+    }
+
+    _handleLevelUp(data) {
+        const { creature, oldLevel, newLevel } = data;
+        this.addLog(`[성장] ${creature.def.name} 레벨업! Lv.${oldLevel} -> Lv.${newLevel}`);
+        if (this.game.creatureManager.selectedId === creature.instanceId) {
+            this.renderDetailPanel(creature);
+        }
+    }
+
+    _handleEvolveSuccess(data) {
+        const { creature, oldName, newName } = data;
+        this.addLog(`🦋 [진화] ${oldName} → ${newName} 진화 성공!`, 'success');
+        this.renderCreatureList();
+        if (this.game.creatureManager.selectedId === creature.instanceId) {
+            this.renderDetailPanel(creature);
+        }
+    }
+
+    _handleDeckSelect(c, currentDeckIds) {
+        const deckId = this.game.deckManager.currentEditingDeck || 'main';
+        if (currentDeckIds.includes(c.instanceId)) {
+            this.addLog(`[덱] 이미 장착된 크리처입니다.`);
+            return;
         }
 
-        _handleEvolveSuccess(data) {
-            const { creature, oldName, newName } = data;
-            this.addLog(`🦋 [진화] ${oldName} → ${newName} 진화 성공!`, 'success');
+        const emptyIdx = currentDeckIds.indexOf(null);
+        if (emptyIdx !== -1) {
+            this.game.deckManager.setCreature(deckId, emptyIdx, c.instanceId);
+            this.game.events.emit('ui:deckUpdated'); // TeamView에서 수신
             this.renderCreatureList();
-            if (this.game.creatureManager.selectedId === creature.instanceId) {
-                this.renderDetailPanel(creature);
-            }
+        } else {
+            alert("덱이 가득 찼습니다! 팀 관리 탭에서 기존 크리처를 해제하세요.");
         }
+    }
 
-        _handleDeckSelect(c, currentDeckIds) {
-            const deckId = this.game.deckManager.currentEditingDeck || 'main';
-            if (currentDeckIds.includes(c.instanceId)) {
-                this.addLog(`[덱] 이미 장착된 크리처입니다.`);
-                return;
+    _handleTraining(type, instanceId) {
+        const result = this.game.creatureManager.tryTrain(instanceId, type);
+        if (result.success) {
+            const label = type === 'basic' ? '기초 훈련' : '집중 강화';
+            this.addLog(`[${label}] 경험치 +${result.expGained} 획득!`, 'success');
+            if (result.leveledUp) {
+                this.addLog(`[성장] 레벨업! Lv.${result.newLevel}`, 'success');
             }
+            // 상세 패널 및 리스트 갱신
+            const c = this.game.creatureManager.getCreatureById(instanceId);
+            if (c) this.renderDetailPanel(c);
+            this.renderCreatureList();
+        } else {
+            this.addLog(`[훈련 실패] ${result.reason}`, 'error');
+        }
+    }
 
-            const emptyIdx = currentDeckIds.indexOf(null);
-            if (emptyIdx !== -1) {
-                this.game.deckManager.setCreature(deckId, emptyIdx, c.instanceId);
-                this.game.events.emit('ui:deckUpdated'); // TeamView에서 수신
-                this.renderCreatureList();
+    handleAutoCompose() {
+        this.uiManager.showConfirm("잠금되지 않은 중복 크리처를 모두 합성하시겠습니까?", () => {
+            const result = this.game.creatureManager.autoCompose();
+            if (result.count > 0) {
+                alert(`총 ${result.count}회의 합성이 완료되었습니다.`);
+                result.logs.forEach(msg => this.addLog(msg));
             } else {
-                alert("덱이 가득 찼습니다! 팀 관리 탭에서 기존 크리처를 해제하세요.");
+                alert("합성 가능한 대상이 없습니다.");
             }
+        });
+    }
+
+    _renderElementIcons(elements) {
+        if (!elements) return '';
+        const iconMap = {
+            'Fire': '🔥', 'Water': '💧', 'Earth': '🌿', 'Wind': '🌪️', 'Light': '✨', 'Dark': '🌙',
+            'Metal': '⚙️', 'Ice': '❄️', 'Nature': '🍀', 'Lightning': '⚡', 'Time': '⏳',
+            'Void': '⚫', 'Chaos': '🌀', 'Life': '🌱'
+        };
+
+        return elements.map(e => `<span title="${e}" style="cursor:help;">${iconMap[e] || e}</span>`).join(' ');
+    }
+
+    /**
+     * 호감도 게이지 UI 렌더링
+     */
+    _renderAffectionGauge(c) {
+        const score = this.game.creatureManager.getResonanceScore(c);
+        const level = this.game.creatureManager.getAffectionLevel(c);
+        const levels = { 0: 100, 1: 300, 2: 1000, 3: 2000, 4: 5000 };
+        const labels = ['경계', '관심', '신뢰', '연인', '💍 서약(Oath)'];
+        const colors = ['#9e9e9e', '#66bb6a', '#f48fb1', '#ad1457', '#d500f9'];
+        const max = levels[level] || 5000;
+        const prevMax = level > 0 ? (levels[level - 1] || 0) : 0;
+
+        let percent = 0;
+        if (level >= 3) {
+            percent = 100;
+        } else {
+            percent = Math.max(0, Math.min(100, ((score - prevMax) / (max - prevMax)) * 100));
         }
 
-        _handleTraining(type, instanceId) {
-            const result = this.game.creatureManager.tryTrain(instanceId, type);
-            if (result.success) {
-                const label = type === 'basic' ? '기초 훈련' : '집중 강화';
-                this.addLog(`[${label}] 경험치 +${result.expGained} 획득!`, 'success');
-                if (result.leveledUp) {
-                    this.addLog(`[성장] 레벨업! Lv.${result.newLevel}`, 'success');
-                }
-                // 상세 패널 및 리스트 갱신
-                const c = this.game.creatureManager.getCreatureById(instanceId);
-                if (c) this.renderDetailPanel(c);
-                this.renderCreatureList();
-            } else {
-                this.addLog(`[훈련 실패] ${result.reason}`, 'error');
-            }
+        // 갤러리 언락 정보
+        let galleryInfo = '';
+        if (c.def.gallery && c.def.gallery.length > 0) {
+            const unlocked = c.def.gallery.filter(g => g.level <= level).length;
+            const total = c.def.gallery.length;
+            galleryInfo = `<span style="font-size:0.8em; color:#ff9800;">🖼️ ${unlocked}/${total} 해금</span>`;
         }
 
-        handleAutoCompose() {
-            this.uiManager.showConfirm("잠금되지 않은 중복 크리처를 모두 합성하시겠습니까?", () => {
-                const result = this.game.creatureManager.autoCompose();
-                if (result.count > 0) {
-                    alert(`총 ${result.count}회의 합성이 완료되었습니다.`);
-                    result.logs.forEach(msg => this.addLog(msg));
-                } else {
-                    alert("합성 가능한 대상이 없습니다.");
-                }
-            });
-        }
-
-        _renderElementIcons(elements) {
-            if (!elements) return '';
-            const iconMap = {
-                'Fire': '🔥', 'Water': '💧', 'Earth': '🌿', 'Wind': '🌪️', 'Light': '✨', 'Dark': '🌙',
-                'Metal': '⚙️', 'Ice': '❄️', 'Nature': '🍀', 'Lightning': '⚡', 'Time': '⏳',
-                'Void': '⚫', 'Chaos': '🌀', 'Life': '🌱'
-            };
-
-            return elements.map(e => `<span title="${e}" style="cursor:help;">${iconMap[e] || e}</span>`).join(' ');
-        }
-
-        /**
-         * 호감도 게이지 UI 렌더링
-         */
-        _renderAffectionGauge(c) {
-            const score = this.game.creatureManager.getResonanceScore(c);
-            const level = this.game.creatureManager.getAffectionLevel(c);
-            const levels = { 0: 100, 1: 300, 2: 1000, 3: 2000, 4: 5000 };
-            const labels = ['경계', '관심', '신뢰', '연인', '💍 서약(Oath)'];
-            const colors = ['#9e9e9e', '#66bb6a', '#f48fb1', '#ad1457', '#d500f9'];
-            const max = levels[level] || 5000;
-            const prevMax = level > 0 ? (levels[level - 1] || 0) : 0;
-
-            let percent = 0;
-            if (level >= 3) {
-                percent = 100;
-            } else {
-                percent = Math.max(0, Math.min(100, ((score - prevMax) / (max - prevMax)) * 100));
-            }
-
-            // 갤러리 언락 정보
-            let galleryInfo = '';
-            if (c.def.gallery && c.def.gallery.length > 0) {
-                const unlocked = c.def.gallery.filter(g => g.level <= level).length;
-                const total = c.def.gallery.length;
-                galleryInfo = `<span style="font-size:0.8em; color:#ff9800;">🖼️ ${unlocked}/${total} 해금</span>`;
-            }
-
-            return `
+        return `
             <div style="margin:15px 0; padding:12px; background:linear-gradient(135deg, rgba(233,30,99,0.1), rgba(255,152,0,0.1)); border-radius:10px; border:1px solid ${colors[level]};">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
                     <div style="display:flex; align-items:center; gap:8px;">
@@ -1089,20 +1089,20 @@ export default class CreatureView extends BaseView {
                 </div>
             </div>
         `;
-        }
+    }
 
-        /**
-         * 갤러리 모달 표시
-         */
-        _showGalleryModal(c) {
-            if (!c || !c.def.gallery) return;
+    /**
+     * 갤러리 모달 표시
+     */
+    _showGalleryModal(c) {
+        if (!c || !c.def.gallery) return;
 
-            const level = this.game.creatureManager.getAffectionLevel(c);
-            const gallery = c.def.gallery;
+        const level = this.game.creatureManager.getAffectionLevel(c);
+        const gallery = c.def.gallery;
 
-            const imagesHtml = gallery.map(g => {
-                const unlocked = g.level <= level;
-                return `
+        const imagesHtml = gallery.map(g => {
+            const unlocked = g.level <= level;
+            return `
                 <div style="text-align:center; padding:10px; background:rgba(0,0,0,0.3); border-radius:10px; border:1px solid ${unlocked ? '#ff9800' : '#444'};">
                     <img src="${unlocked ? g.image : 'images/locked_placeholder.png'}" 
                          alt="${g.title}" 
@@ -1111,22 +1111,22 @@ export default class CreatureView extends BaseView {
                     <div style="font-size:0.8em; color:#aaa;">${unlocked ? g.desc : '호감도를 올려주세요'}</div>
                 </div>
             `;
-            }).join('');
+        }).join('');
 
-            // 모달 생성
-            const existingModal = document.getElementById('gallery-modal');
-            if (existingModal) existingModal.remove();
+        // 모달 생성
+        const existingModal = document.getElementById('gallery-modal');
+        if (existingModal) existingModal.remove();
 
-            const modal = document.createElement('div');
-            modal.id = 'gallery-modal';
-            modal.style.cssText = `
+        const modal = document.createElement('div');
+        modal.id = 'gallery-modal';
+        modal.style.cssText = `
             position:fixed; top:0; left:0; right:0; bottom:0;
             background:rgba(0,0,0,0.9); z-index:3000;
             display:flex; justify-content:center; align-items:center;
             backdrop-filter:blur(5px);
         `;
 
-            modal.innerHTML = `
+        modal.innerHTML = `
             <div style="max-width:600px; max-height:85vh; overflow-y:auto; background:linear-gradient(135deg, #1a1a2e, #16213e); 
                         border-radius:16px; padding:25px; border:2px solid #ff9800; box-shadow:0 0 30px rgba(255,152,0,0.3);">
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; padding-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.2);">
@@ -1139,9 +1139,9 @@ export default class CreatureView extends BaseView {
             </div>
         `;
 
-            document.body.appendChild(modal);
+        document.body.appendChild(modal);
 
-            document.getElementById('btn-close-gallery').onclick = () => modal.remove();
-            modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
-        }
+        document.getElementById('btn-close-gallery').onclick = () => modal.remove();
+        modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
     }
+}
