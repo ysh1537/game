@@ -4,6 +4,13 @@ import { WORLDS } from '../WorldData.js';
 export const ASGARD_CREATURES = [
     {
         id: "wolf_fenrir",
+```javascript
+import { RANKS } from '../RankData.js';
+import { WORLDS } from '../WorldData.js';
+
+export const ASGARD_CREATURES = [
+    {
+        id: "wolf_fenrir",
         name: "종말의 늑대 펜리르",
         rarity: RANKS.SSR,
         world: WORLDS.ASGARD,
@@ -11,12 +18,6 @@ export const ASGARD_CREATURES = [
         ego: "Berserker",
         baseStr: 55, baseInt: 30,
         image: "images/creature_wolf_fenrir.png",
-        lore: {
-            title: "라그나로크의 시작",
-            story: "북유럽 신화의 거대한 늑대. 신들조차 두려워하여 마법의 사슬 글레이프니르로 묶어두었다. 라그나로크의 날, 사슬이 풀리면 오딘을 삼키고 세계를 멸망시킬 운명. 야수적 본능과 싸우며 주인을 지키려 애쓴다.",
-            origin: "북유럽 신화 / 아스가르드",
-            relationships: [
-                { id: "god_odin", type: "rival", desc: "운명의 적. 펜리르가 오딘을 삼킬 운명" ,
         sprites: {
             idle: "images/creature_wolf_fenrir.png",
             joy: "images/creature_wolf_fenrir_joy.png",
@@ -24,20 +25,6 @@ export const ASGARD_CREATURES = [
             angry: "images/creature_wolf_fenrir_angry.png",
             skill: "images/creature_wolf_fenrir_skill.png",
             gallery: "images/creature_wolf_fenrir_gallery.png"
-        ,
-        sprites: {
-            idle: "images/creature_god_odin.png",
-            joy: "images/creature_god_odin_joy.png",
-            sad: "images/creature_god_odin_sad.png",
-            angry: "images/creature_god_odin_angry.png",
-            skill: "images/creature_god_odin_skill.png",
-            gallery: "images/creature_god_odin_gallery.png"
-        },
-        prompts: {
-            base: "anime style, cell shaded, 2d game art, full body, fantasy, Light, Wind, Magic, 최고신 오딘",
-            idle: "standing pose, confident, neutral expression",
-            joy: "smiling, blushing, happy eyes, hand waving, flowers in background",
-            sad: "sad expression, looking down, tears, injured, dark atmosphere",
             angry: "angry, shouting, glowing eyes, battle stance, attacking effect",
             skill: "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
             gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, 최고신 오딘 special illustration, intimate atmosphere"
