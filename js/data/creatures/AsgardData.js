@@ -1165,6 +1165,7 @@ export const ASGARD_CREATURES = [
         name: "황금의 여신 시프",
         rarity: RANKS.SR,
         world: WORLDS.ASGARD,
+
         elements: ["Earth", "Light"],
         baseStr: 30, baseInt: 40,
         image: "images/sif.png",
@@ -1179,5 +1180,16 @@ export const ASGARD_CREATURES = [
             synergy: { ally: ["god_thor"], rival: ["god_loki"] }
         },
         lines: { normal: "가을의 풍요로움을 당신에게." }
+
+
+    {
+        id: "valhalla_guard",
+        name: "발할라 경비병",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.ASGARD,
+        elements: ["Metal"],
+        baseStr: 15, baseInt: 5,
+        image: "images/placeholder_asgard.png"
+
     }
 ];

@@ -1485,6 +1485,7 @@ export const ABYSS_CREATURES = [
         name: "심연 먹물 오징어",
         rarity: RANKS.NORMAL,
         world: WORLDS.ABYSS,
+
         elements: ["Light"],
         baseStr: 10, baseInt: 10,
         image: "images/creatures/abyss/ink_squid_abyss.png",
@@ -1517,5 +1518,52 @@ export const ABYSS_CREATURES = [
         relationships: { likes: [], dislikes: [], rival: null },
         touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
         lines: { normal: "..." }
+
+
+    {
+        id: "abyss_jellyfish",
+        name: "심연의 해파리",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.ABYSS,
+        elements: ["Water", "Void"],
+        baseStr: 6, baseInt: 10,
+        image: "images/placeholder_abyss.png"
+    },
+    {
+        id: "void_crab",
+        name: "공허 게",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.ABYSS,
+        elements: ["Water", "Earth"],
+        baseStr: 12, baseInt: 4,
+        image: "images/placeholder_abyss.png"
+    },
+    {
+        id: "dark_eel",
+        name: "암흑 장어",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.ABYSS,
+        elements: ["Water", "Dark"],
+        baseStr: 14, baseInt: 5,
+        image: "images/placeholder_abyss.png"
+    },
+    {
+        id: "skeleton_fish",
+        name: "해골 물고기",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.ABYSS,
+        elements: ["Spirit", "Water"],
+        baseStr: 8, baseInt: 8,
+        image: "images/placeholder_abyss.png"
+    },
+    {
+        id: "phantom_ray",
+        name: "유령 가오리",
+        rarity: RANKS.UNIQUE,
+        world: WORLDS.ABYSS,
+        elements: ["Spirit", "Void"],
+        baseStr: 10, baseInt: 18,
+        image: "images/placeholder_abyss.png"
+
     }
 ];

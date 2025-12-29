@@ -19,24 +19,24 @@ export default class AudioManager {
 
         // BGM 트랙 정의 (파일이 준비되면 경로 수정)
         this.bgmTracks = {
-            'lobby': 'audio/bgm_lobby.mp3',
-            'battle': 'audio/bgm_battle.mp3',
-            'boss': 'audio/bgm_boss.mp3',
-            'victory': 'audio/bgm_victory.mp3',
-            'defeat': 'audio/bgm_defeat.mp3'
+            'lobby': 'audio/bgm/lobby.mp3',
+            'battle': 'audio/bgm/battle.mp3',
+            'boss': 'audio/bgm/boss.mp3',
+            'victory': 'audio/bgm/victory.mp3',
+            'defeat': 'audio/bgm/defeat.mp3'
         };
 
         // 효과음 정의
         this.sfxTracks = {
-            'click': 'audio/sfx_click.mp3',
-            'summon': 'audio/sfx_summon.mp3',
-            'skill': 'audio/sfx_skill.mp3',
-            'hit': 'audio/sfx_hit.mp3',
-            'critical': 'audio/sfx_critical.mp3',
-            'levelup': 'audio/sfx_levelup.mp3',
-            'evolve': 'audio/sfx_evolve.mp3',
-            'gold': 'audio/sfx_gold.mp3',
-            'error': 'audio/sfx_error.mp3'
+            'click': 'audio/sfx/click.mp3',
+            'summon': 'audio/sfx/summon.mp3',
+            'skill': 'audio/sfx/skill.mp3',
+            'hit': 'audio/sfx/hit.mp3',
+            'critical': 'audio/sfx/critical.mp3',
+            'levelup': 'audio/sfx/levelup.mp3',
+            'evolve': 'audio/sfx/evolve.mp3',
+            'gold': 'audio/sfx/gold.mp3',
+            'error': 'audio/sfx/error.mp3'
         };
 
         // 오디오 컨텍스트 초기화 (사용자 인터랙션 후)
