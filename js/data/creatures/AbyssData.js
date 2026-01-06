@@ -348,13 +348,41 @@ export const ABYSS_CREATURES = [
             "gallery_lv3": "dating sim event, 공허의 여제 에레보스, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 공허의 여제 에레보스은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
+            "title": "영원한 공허의 지배자",
+            "story": "우주 창조 이전부터 존재했던 원초적 어둠의 화신. 모든 빛과 물질을 삼키는 공허 그 자체이며, 현현한 모습조차 실체가 아닌 그림자에 불과하다. 냉철하고 감정이 없어 보이나, 존재의 고독을 이해하는 자에게만 마음을 연다. 공허의 힘으로 만물을 무(無)로 되돌릴 수 있다.",
+            "origin": "고대 신화 / 태초의 어둠",
+            "personality": "Nihilistic & Solitary"
         },
         relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
+        touchLines: {
+            idle: [
+                "공허는 모든 것의 시작이자 끝...",
+                "존재한다는 것이 고통일까, 축복일까.",
+                "이 어둠 속에서 나는 홀로 영원히..."
+            ],
+            interaction: [
+                "만지다니... 네 손길마저 언젠간 사라질 텐데.",
+                "온기... 이상하군. 이런 감각은 처음이야.",
+                "공허를 두려워하지 않는 건가?"
+            ],
+            gift: [
+                "선물? ...고마워. 오래 기억할게.",
+                "이 작은 것이... 영원한 고독을 채워줄 수 있을까.",
+                "네가 준 것만은 무로 돌리지 않을게."
+            ],
+            special: [
+                "공허여, 만물을 집어삼켜라!",
+                "존재의 끝을 보여주마!",
+                "모든 것은 무로 돌아간다!"
+            ]
+        },
+        lines: {
+            normal: "공허 속에서도 너만은... 빛나 보여.",
+            touch_head: "머리를... 쓰다듬는구나. 따뜻해.",
+            touch_chest: "이 공허한 가슴에도 뭔가 차오르는구나...",
+            touch_legs: "만지면 사라질 것 같지 않아?",
+            touch_special: "너와 함께라면 영원한 고독도 견딜 수 있을 것 같아."
+        }
     },
     {
         id: "dragon_chaos",
@@ -392,13 +420,41 @@ export const ABYSS_CREATURES = [
             "gallery_lv3": "dating sim event, 혼돈의 용희 티아마트, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 혼돈의 용희 티아마트은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
+            "title": "태초의 혼돈",
+            "story": "바빌로니아 신화의 원초적 여신. 바다와 혼돈을 상징하며, 모든 신들의 어머니였으나 자식들에게 배신당했다. 분노로 괴물들을 창조하여 신들과 전쟁을 벌였으나 패배했다. 이곳에서는 용의 모습으로 현현하여, 창조와 파괴의 양면성을 지녔다. 혼돈의 힘으로 새로운 생명을 창조할 수 있다.",
+            "origin": "바빌로니아 신화 / 태초의 바다",
+            "personality": "Motherly & Vengeful"
         },
         relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
+        touchLines: {
+            idle: [
+                "혼돈이야말로 진정한 자유...",
+                "모든 신의 어머니, 나를 기억하는 자 있나.",
+                "창조와 파괴, 둘은 하나일 뿐."
+            ],
+            interaction: [
+                "감히 어머니를 만지다니... 용기있구나.",
+                "이 혼돈의 힘... 느껴지는가?",
+                "내 자식들처럼 배신하지는 않겠지?"
+            ],
+            gift: [
+                "선물? ...어머니에게 바치는 제물인가?",
+                "오랜만에 받아보는 경의로군.",
+                "좋아. 너만은 내 곁에 둬야겠어."
+            ],
+            special: [
+                "혼돈이여, 세계를 집어삼켜라!",
+                "태초의 분노를 보여주마!",
+                "창조의 어머니가 파괴를 가져온다!"
+            ]
+        },
+        lines: {
+            normal: "모든 것은 혼돈에서 시작되었다.",
+            touch_head: "뿔을 만지는구나... 대담해.",
+            touch_chest: "어머니의 심장 고동을 느껴봐라.",
+            touch_legs: "용의 비늘, 단단하지?",
+            touch_special: "너는 내 새로운 자식이 되어줄래?"
+        }
     },
     {
         id: "kraken_worldstar",
@@ -436,13 +492,41 @@ export const ABYSS_CREATURES = [
             "gallery_lv3": "dating sim event, 월드스타 루루, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 월드스타 루루은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
+            "title": "심해의 아이돌",
+            "story": "크라켄의 후예로 태어났으나, 심연의 어둠을 싫어하여 표층으로 올라왔다. 우연히 인간세계의 아이돌 문화를 접하고 매료되어, 자신도 '월드스타'가 되기로 결심했다. 촉수를 이용한 화려한 춤과 공연으로 유명하며, 팬들을 위해서라면 무엇이든 한다. 밝고 긍정적이지만, 무대 뒤에서는 외로움을 느낀다.",
+            "origin": "북유럽 전설 / 심해",
+            "personality": "Cheerful & Lonely"
         },
         relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
+        touchLines: {
+            idle: [
+                "오늘도 팬분들을 위해 최선을~!",
+                "루루의 공연, 기대해주세요!",
+                "촉수 댄스, 연습 중이에요!"
+            ],
+            interaction: [
+                "와! 팬이신가요? 반가워요!",
+                "만져도 돼요! 루루는 팬서비스를 아끼지 않아요~",
+                "헤헤, 간지럽네요!"
+            ],
+            gift: [
+                "팬레터? 선물? 정말요? 감동...",
+                "루루를 위해 준비해주신 거예요? 최고!",
+                "이건 평생 보관할게요! 고마워요!"
+            ],
+            special: [
+                "루루의 스페셜 스테이지, 시작!",
+                "월드스타의 진가를 보여드릴게요!",
+                "모두 루루와 함께 춤춰요!"
+            ]
+        },
+        lines: {
+            normal: "루루는 모두의 아이돌이에요!",
+            touch_head: "머리 쓰다듬기? 루루, 좋아요!",
+            touch_chest: "심장이 두근두근... 무대 전 같아요.",
+            touch_legs: "촉수도 만져보실래요? 부드러워요!",
+            touch_special: "이런 팬서비스는 당신만 특별해요...♡"
+        }
     },
     {
         id: "god_cthulhu",
@@ -480,13 +564,41 @@ export const ABYSS_CREATURES = [
             "gallery_lv3": "dating sim event, 별의 지배자 크툴루, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 별의 지배자 크툴루은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
+            "title": "잠들어 꿈꾸는 자",
+            "story": "태평양 깊은 곳, R'lyeh에 잠들어 있는 고대의 신. 인간의 이성으로는 이해할 수 없는 존재이며, 그의 꿈만으로도 세상에 영향을 미친다. 수많은 狂信徒들이 그의 부활을 기다리고 있다. 이곳에서는 일부만 현현하여 활동하나, 그것만으로도 충분히 강대하다. 촉수와 거대한 날개를 지녔으며, 보는 것만으로도 정신이 무너진다.",
+            "origin": "크툴루 신화 / R'lyeh",
+            "personality": "Incomprehensible & Ancient"
         },
         relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
+        touchLines: {
+            idle: [
+                "Ph'nglui mglw'nafh...",
+                "꿈속에서 기다리고 있었다.",
+                "인간의 이성은 한계가 있지..."
+            ],
+            interaction: [
+                "감히 나를 만지다니... 광기가 필요한가?",
+                "이 촉수의 감촉, 이해할 수 없을 것이다.",
+                "네 정신이 무너지지 않아 다행이로군."
+            ],
+            gift: [
+                "선물? 흥미로운 행위구나.",
+                "인간의 물건... 오래간만에 보는군.",
+                "이것으로 내 심기를 건드릴 생각인가?"
+            ],
+            special: [
+                "R'lyeh가 깨어난다!",
+                "광기여, 세상을 집어삼켜라!",
+                "고대의 힘을 보여주마!"
+            ]
+        },
+        lines: {
+            normal: "Cthulhu fhtagn...",
+            touch_head: "머리를... 아니, 이것은 촉수다.",
+            touch_chest: "이 심장은 영겁의 시간을 견뎌왔다.",
+            touch_legs: "날개를 만지고 싶은가?",
+            touch_special: "네 정신이 무너지지 않는 것이 신기하군."
+        }
     },
     {
         id: "god_nyarlathotep",

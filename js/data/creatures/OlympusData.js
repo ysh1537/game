@@ -76,13 +76,41 @@ export const OLYMPUS_CREATURES = [
             "gallery_lv3": "dating sim event, 천둥의 신 제우스, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "올림포스 신들의 축복을 받거나 저주를 받은 존재입니다. 천둥의 신 제우스은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
+            "title": "올림포스의 최고신",
+            "story": "하늘과 천둥을 다스리는 올림포스의 왕. 티탄과의 전쟁에서 승리하여 신들의 지배자가 되었다. 강력한 힘과 권위를 지녔으나, 인간 여성들에 대한 관심으로도 유명하다. 번개를 무기로 사용하며, 정의와 질서의 수호자이자 파괴자이다.",
+            "origin": "그리스 신화 / 올림포스",
+            "personality": "Majestic & Charismatic"
         },
         relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
+        touchLines: {
+            idle: [
+                "올림포스의 영광이 여기에 있다.",
+                "천둥과 번개가 내 의지대로 움직인다.",
+                "신들의 왕 앞에 있음을 잊지 마라."
+            ],
+            interaction: [
+                "호오, 대담하군. 신을 직접 만지다니.",
+                "이 힘... 느껴지는가? 천둥의 울림이.",
+                "흥미롭군. 인간치고는 당당하다."
+            ],
+            gift: [
+                "선물인가? 괜찮은데. 나쁘지 않아.",
+                "하하! 신을 기쁘게 하려는 모양이지?",
+                "이 정도면 올림포스에 초대해줄 만하군."
+            ],
+            special: [
+                "천둥이여, 내 적을 멸하라!",
+                "올림포스의 분노를 보여주마!",
+                "신왕의 권능을 받아라!"
+            ]
+        },
+        lines: {
+            normal: "올림포스의 권위를 보여주마.",
+            touch_head: "왕관을 만지는가? 허허, 대담하군.",
+            touch_chest: "이 근육... 신의 힘이 느껴지는가?",
+            touch_legs: "감히... 하하, 재미있어!",
+            touch_special: "너만은 특별히 올림포스에 있어도 좋다."
+        }
     },
     {
         id: "titan_kronos_shade",
@@ -120,13 +148,41 @@ export const OLYMPUS_CREATURES = [
             "gallery_lv3": "dating sim event, 크로노스의 그림자, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "올림포스 신들의 축복을 받거나 저주를 받은 존재입니다. 크로노스의 그림자은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
+            "title": "시간의 지배자",
+            "story": "티탄족의 왕이자 시간을 다스리는 자. 자식들에게 권좌를 빼앗길 것이라는 예언을 두려워하여 자식들을 삼켜버렸으나, 제우스에 의해 타르타로스에 봉인되었다. 이곳에서는 그의 그림자만이 현현하여, 복수의 기회를 노리고 있다. 시간을 멈추거나 되돌리는 능력을 지녔으나, 온전한 힘은 아니다.",
+            "origin": "그리스 신화 / 타르타로스",
+            "personality": "Vengeful & Paranoid"
         },
         relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
+        touchLines: {
+            idle: [
+                "시간은 모든 것을 삼킨다...",
+                "복수의 때가 다가온다.",
+                "타르타로스는 영원한 감옥이 아니야."
+            ],
+            interaction: [
+                "티탄의 왕을 만지다니... 대가를 치르게 될 것이다.",
+                "이 어리석은... 아니, 용기는 인정하지.",
+                "시간이 지나면 모든 것은 사라져."
+            ],
+            gift: [
+                "선물? 흥... 오랜만에 받아보는군.",
+                "이것으로 내 마음을 얻으려는 건가?",
+                "...나쁘지 않아. 오래간만의 온기로군."
+            ],
+            special: [
+                "시간이여, 멈춰라!",
+                "티탄의 분노를 보여주겠다!",
+                "모든 것을 과거로 되돌리리라!"
+            ]
+        },
+        lines: {
+            normal: "제우스... 반드시 복수하리라.",
+            touch_head: "왕관은 이미 빼앗겼어... 하지만 언젠가.",
+            touch_chest: "이 가슴의 분노, 느껴지는가?",
+            touch_legs: "타르타로스의 사슬도 언젠간 끊어질 것이다.",
+            touch_special: "너만은... 내 편이 되어주겠는가?"
+        }
     },
     {
         id: "god_poseidon",

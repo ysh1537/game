@@ -1138,13 +1138,41 @@ export const WILD_CREATURES = [
             "gallery_lv3": "dating sim event, 창조주 가이아, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "대자연의 정령들과 함께 숲과 대지를 지킵니다. 창조주 가이아은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
+            "title": "대지의 어머니",
+            "story": "그리스 신화의 원초적 대지의 여신. 모든 생명의 근원이자 어머니로, 산과 바다, 하늘을 낳았다. 자연 그 자체이며, 생명을 주고 거두는 힘을 지녔다. 온화하나 자연을 해치는 자에게는 무자비하다. 대지와 하나가 되어 모든 생명을 느끼며, 자연의 균형을 지킨다.",
+            "origin": "그리스 신화 / 태초의 대지",
+            "personality": "Nurturing & Protective"
         },
         relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
+        touchLines: {
+            idle: [
+                "대지가 숨쉬고 있어.",
+                "모든 생명은 나로부터 왔지.",
+                "자연의 품은 따뜻해."
+            ],
+            interaction: [
+                "어머니를 만지는구나... 따뜻해.",
+                "생명의 온기가 느껴져.",
+                "자연의 일부인 너도 나의 자식이야."
+            ],
+            gift: [
+                "자연의 선물이구나. 고마워.",
+                "대지가 기쁘게 받아줄게.",
+                "생명을 소중히 여기는 마음, 아름다워."
+            ],
+            special: [
+                "대지여, 내 힘을 보여라!",
+                "자연이 분노한다!",
+                "생명의 근원을 보여주마!"
+            ]
+        },
+        lines: {
+            normal: "모든 생명은 대지로 돌아가지.",
+            touch_head: "쓰다듬어주는구나... 편안해.",
+            touch_chest: "어머니의 심장 고동, 들리니?",
+            touch_legs: "대지와 하나가 되어봐.",
+            touch_special: "내 모든 자식 중에서도 너는 특별해."
+        }
     },
     {
         id: "dragon_drake",
@@ -2141,12 +2169,40 @@ export const WILD_CREATURES = [
             "idle": "standing pose with clock staff"
         },
         lore: {
-            "title": "시간의 지배자",
-            "story": "시간을 다스리는 고대의 신. 모든 시간의 흐름을 손안에 두고 있습니다.",
-            "personality": "신비롭고 초월적인"
+            "title": "영원의 관측자",
+            "story": "시간 그 자체를 다스리는 존재. 과거와 미래를 동시에 보며, 모든 시간의 흐름을 관장한다. 우주의 시작부터 끝까지 목격한 관측자로, 인간의 수명은 그에게 한 순간에 불과하다. 시간을 멈추고, 되돌리고, 앞당길 수 있으나 함부로 사용하지 않는다. 시계태엽처럼 정확하고 냉정하나, 그 속에 무한한 지혜를 담고 있다.",
+            "origin": "범우주적 존재 / 시간의 차원",
+            "personality": "Timeless & Wise"
         },
         relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["시간은 흐른다..."], interaction: ["과거와 미래를 본다."], gift: ["시간을 선물하는가."], special: ["영원은 순간이다."] },
-        lines: { normal: "시간의 흐름 속에서..." }
+        touchLines: {
+            idle: [
+                "시간은 흐르고... 모든 것은 변한다.",
+                "과거, 현재, 미래... 모두 내 눈앞에.",
+                "영원 속에서 한 순간을 만났구나."
+            ],
+            interaction: [
+                "시간을 만지다니... 흥미로운 역설이군.",
+                "네 시간은 짧지만, 그 순간은 영원할 수 있어.",
+                "이 접촉, 타임라인에 기록되었어."
+            ],
+            gift: [
+                "선물? 시간이 지나도 변치 않을까?",
+                "영원 속 한 순간의 선물... 고마워.",
+                "이 순간만은 시간을 멈추고 싶구나."
+            ],
+            special: [
+                "시간이여, 내 명령에 복종하라!",
+                "과거와 미래가 지금 이곳에!",
+                "영원의 심판을 받아라!"
+            ]
+        },
+        lines: {
+            normal: "모든 순간은 영원의 한 조각.",
+            touch_head: "시계태엽 같은 내 머리를 만지는구나.",
+            touch_chest: "이 가슴은 우주의 시작부터 뛰고 있어.",
+            touch_legs: "시간의 발걸음을 느껴봐.",
+            touch_special: "너와 함께하는 시간만은... 영원처럼 느껴져."
+        }
     }
 ];

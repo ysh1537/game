@@ -804,13 +804,41 @@ export const SHANGRILA_CREATURES = [
             "gallery_lv3": "dating sim event, 천년 구미호 미호, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 천년 구미호 미호은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
+            "title": "천년 복의 구미호",
+            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물. 천년을 수련하여 아홉 개의 꼬리를 얻었으며, 인간의 모습으로 변신할 수 있다. 장난기를 좋아하지만 심성은 고운하며, 한번 정한 연은 불변이라 믿는다. 여우불로 적을 혹하거나 환영을 보여주며, 달밤이면 그 힘은 배가 된다.",
+            "origin": "동양 전설 / 무릉도원",
+            "personality": "Playful & Loyal"
         },
         relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
+        touchLines: {
+            idle: [
+                "오늘도 달이 아름답구나~",
+                "아홉 꼬리의 힘을 보여줄까?",
+                "후후~ 여우비는 싫지 않아?"
+            ],
+            interaction: [
+                "오머! 만지려면 대가를 치러야 해~",
+                "에헤헤~ 간지럽네, 간지러워.",
+                "그렇게 만지고 싶어? 후후~"
+            ],
+            gift: [
+                "선물? 맘에 들어! 고마워~",
+                "오오! 이건 전에 봐던 것 같은데...",
+                "내게 이런 걸 준다는 건... 후후, 분명한 거야?"
+            ],
+            special: [
+                "여우불로 모든 걸 태워버릴 거야!",
+                "천년 구미호의 힘을 볼 준비 됐어?",
+                "달빛아래, 내 진정한 모습을 보여줄게!"
+            ]
+        },
+        lines: {
+            normal: "달빛 아래서 춤추자~",
+            touch_head: "귀 만지는 거야? 간지럽네... 힘희~",
+            touch_chest: "심장 소리 들려? 널 향한 내 마음이야.",
+            touch_legs: "꼬리까지 만지면 안 돼! ...아, 너라면 괜찮아.",
+            touch_special: "내 전부를 바칠 각오가 됐어?"
+        }
     },
     {
         id: "god_dragon_king",
@@ -848,13 +876,41 @@ export const SHANGRILA_CREATURES = [
             "gallery_lv3": "dating sim event, 수정궁의 용왕, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 수정궁의 용왕은(는) 특별한 능력을 지녔습니다.",
-            "personality": "Unknown"
+            "title": "사해의 지배자",
+            "story": "동해 수정궁을 다스리는 용왕. 바다의 모든 생물과 날씨를 지배하며, 여의주로 온갖 변화를 만들 수 있다. 위엄있고 위계적이나, 정의로운 자에게는 관대하다. 손오공과의 인연으로 여의봉을 빌려준 적이 있으며, 그 일을 아직도 후회한다. 용궁의 축제는 화려하기로 유명하다.",
+            "origin": "동양 전설 / 동해 용궁",
+            "personality": "Majestic & Just"
         },
         relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
-        lines: { normal: "..." }
+        touchLines: {
+            idle: [
+                "용궁의 위엄은 영원하다.",
+                "바다의 평화를 지키는 것이 내 임무다.",
+                "여의주의 빛이 모든 것을 비춘다."
+            ],
+            interaction: [
+                "감히 용왕을 직접... 허나 무례는 아니로군.",
+                "물의 기운이 느껴지는가?",
+                "용궁에서는 예의가 중요하네."
+            ],
+            gift: [
+                "선물이라... 나쁘지 않네. 받아주지.",
+                "이런 정성, 오래만에 보는군.",
+                "용궁의 보물과도 바꿀 수 없는 마음이로군."
+            ],
+            special: [
+                "조수여, 내 명을 따르라!",
+                "용의 분노를 보여주마!",
+                "여의주의 진정한 힘을!"
+            ]
+        },
+        lines: {
+            normal: "바다는 모든 것을 품는다.",
+            touch_head: "용의 뿔을 만지다니... 대담하군.",
+            touch_chest: "용의 심장 고동, 듣고 있는가?",
+            touch_legs: "발? 아니, 이것은 용의 발톱이라네.",
+            touch_special: "그대만은 용궁에 초대하겠네."
+        }
     },
     {
         id: "phoenix_eternal",
@@ -1568,7 +1624,7 @@ export const SHANGRILA_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "fox_nine_new",
         name: "신생 구미호",
@@ -1598,7 +1654,7 @@ export const SHANGRILA_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "jade_rabbit",
         name: "옥토끼",
@@ -1628,7 +1684,7 @@ export const SHANGRILA_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "yin_yang_fish",
         name: "음양어",
@@ -1658,7 +1714,7 @@ export const SHANGRILA_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "cloud_spirit",
         name: "운무 정령",
