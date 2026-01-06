@@ -1,15 +1,15 @@
-import { RANKS } from '../RankData.js';
+ï»¿import { RANKS } from '../RankData.js';
 import { WORLDS } from '../WorldData.js';
 
 export const ASGARD_CREATURES = [
     {
         id: "wolf_fenrir",
-        name: "Á¾¸»ÀÇ ´Á´ë Ææ¸®¸£",
+        name: "ì¢…ë§ì˜ ëŠ‘ëŒ€ íœë¦¬ë¥´",
         rarity: RANKS.SSR,
         world: WORLDS.ASGARD,
         elements: ["Dark", "Ice", "Beast"],
         ego: "Berserker",
-        baseStr: 22, baseInt: 22,
+        baseStr: 55, baseInt: 30,
         image: "images/creatures/asgard/creature_wolf_fenrir.png",
         sprites: {
             idle: "images/creatures/asgard/creature_wolf_fenrir.png",
@@ -20,47 +20,47 @@ export const ASGARD_CREATURES = [
             gallery: "images/creatures/asgard/creature_wolf_fenrir_gallery.png"
         },
         prompts: {
-            base: "anime style, cell shaded, 2d game art, full body, fantasy, Dark, Ice, Beast, Á¾¸»ÀÇ ´Á´ë Ææ¸®¸£",
+            base: "anime style, cell shaded, 2d game art, full body, fantasy, Dark, Ice, Beast, ì¢…ë§ì˜ ëŠ‘ëŒ€ íœë¦¬ë¥´",
             idle: "standing pose, confident, neutral expression",
             joy: "smiling, blushing, happy eyes, hand waving, flowers in background",
             sad: "sad expression, looking down, tears, injured, dark atmosphere",
             angry: "angry, shouting, glowing eyes, battle stance, attacking effect",
             skill: "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, Á¾¸»ÀÇ ´Á´ë Ææ¸®¸£ special illustration, intimate atmosphere"
+            gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, ì¢…ë§ì˜ ëŠ‘ëŒ€ íœë¦¬ë¥´ special illustration, intimate atmosphere"
         },
         lore: {
-            title: "ÁöÇıÀÇ ´ë°¡¸¦ Ä¡¸¥ ÀÚ",
-            story: "¾ÆÈ© ¼¼°è¸¦ ´Ù½º¸®´Â ºÏÀ¯·´ÀÇ ÃÖ°í½Å. ÁöÇı¸¦ À§ÇØ ÇÑÂÊ ´«À» Èñ»ıÇÏ°í, ¿ìÁÖÀÇ ºñ¹ĞÀ» ¾Ë±â À§ÇØ À§±×µå¶ó½Ç¿¡ 9ÀÏ°£ ¸ñÀ» ¸Å´Ş¾Ò´Ù. ³ÃÃ¶ÇÏ°í °è»êÀûÀÌÁö¸¸, ÀÎÁ¤¹ŞÀº Àü»ç¿¡°Ô´Â ¹ßÇÒ¶óÀÇ ¹®À» ¿¬´Ù. ¶ó±×³ª·ÎÅ©¿¡¼­ Ææ¸®¸£¿¡°Ô »ïÄÑÁú ¿î¸í.",
+            title: "ì§€í˜œì˜ ëŒ€ê°€ë¥¼ ì¹˜ë¥¸ ì",
+            story: "ì•„í™‰ ì„¸ê³„ë¥¼ ë‹¤ìŠ¤ë¦¬ëŠ” ë¶ìœ ëŸ½ì˜ ìµœê³ ì‹ . ì§€í˜œë¥¼ ìœ„í•´ í•œìª½ ëˆˆì„ í¬ìƒí•˜ê³ , ìš°ì£¼ì˜ ë¹„ë°€ì„ ì•Œê¸° ìœ„í•´ ìœ„ê·¸ë“œë¼ì‹¤ì— 9ì¼ê°„ ëª©ì„ ë§¤ë‹¬ì•˜ë‹¤. ëƒ‰ì² í•˜ê³  ê³„ì‚°ì ì´ì§€ë§Œ, ì¸ì •ë°›ì€ ì „ì‚¬ì—ê²ŒëŠ” ë°œí• ë¼ì˜ ë¬¸ì„ ì—°ë‹¤. ë¼ê·¸ë‚˜ë¡œí¬ì—ì„œ íœë¦¬ë¥´ì—ê²Œ ì‚¼ì¼œì§ˆ ìš´ëª….",
             personality: "Unknown"
         },
         relationships: [
-            { id: "god_odin", type: "rival", desc: "³ª¸¦ ¹­Àº Àåº»ÀÎ. ¹İµå½Ã »ïÅ²´Ù." }
+            { id: "god_odin", type: "rival", desc: "ë‚˜ë¥¼ ë¬¶ì€ ì¥ë³¸ì¸. ë°˜ë“œì‹œ ì‚¼í‚¨ë‹¤." }
         ],
         touchLines: {
             idle: ["..."],
             interaction: ["..."],
-            gift: ["°í¸¿´Ù."],
+            gift: ["ê³ ë§™ë‹¤."],
             special: ["!!!"]
         },
         lines: {
-            normal: "ÀÌ »ç½½... ²÷¾î¹ö¸®°Ú¾î!",
-            touch_head: "Å©¸£¸ª... ¾²´Ùµë´Â °Ç... µü ÇÑ ¹ø¸¸ Çã¶ôÇÏÁö.",
-            touch_chest: "½ÉÀå ¼Ò¸®°¡ °Å¼¼Áö´Â °Ç... ±¾ÁÖ¸² ¶§¹®ÀÌ¾ß!",
-            touch_chest_reject: "Å©¸£¸£! ÇÔºÎ·Î ¸¸ÁöÁö ¸¶!",
-            touch_chest_love: "Èï... ³ÊÇÑÅ×¸¸ ¿¹¿Ü¸¦ µÎ´Â °Å¾ß.",
-            touch_legs: "¹ß¸ñ »ç½½Àº ÀÌ¹Ì ²÷¾ú¾î. ´ÙÀ½Àº ³× ¸¶À½ÀÌ¾ß.",
-            touch_special: "¶ó±×³ª·ÎÅ©ÀÇ ½ÃÀÛÀÌ´Ù!"
+            normal: "ì´ ì‚¬ìŠ¬... ëŠì–´ë²„ë¦¬ê² ì–´!",
+            touch_head: "í¬ë¥´ë¦‰... ì“°ë‹¤ë“¬ëŠ” ê±´... ë”± í•œ ë²ˆë§Œ í—ˆë½í•˜ì§€.",
+            touch_chest: "ì‹¬ì¥ ì†Œë¦¬ê°€ ê±°ì„¸ì§€ëŠ” ê±´... êµ¶ì£¼ë¦¼ ë•Œë¬¸ì´ì•¼!",
+            touch_chest_reject: "í¬ë¥´ë¥´! í•¨ë¶€ë¡œ ë§Œì§€ì§€ ë§ˆ!",
+            touch_chest_love: "í¥... ë„ˆí•œí…Œë§Œ ì˜ˆì™¸ë¥¼ ë‘ëŠ” ê±°ì•¼.",
+            touch_legs: "ë°œëª© ì‚¬ìŠ¬ì€ ì´ë¯¸ ëŠì—ˆì–´. ë‹¤ìŒì€ ë„¤ ë§ˆìŒì´ì•¼.",
+            touch_special: "ë¼ê·¸ë‚˜ë¡œí¬ì˜ ì‹œì‘ì´ë‹¤!"
         },
         synergy: { ally: [], rival: ["god_odin"] }
     },
     {
         id: "god_odin",
-        name: "ÃÖ°í½Å ¿Àµò",
+        name: "ìµœê³ ì‹  ì˜¤ë”˜",
         rarity: RANKS.UR,
         world: WORLDS.ASGARD,
         elements: ["Light", "Wind", "Magic"],
         ego: "Seeker",
-        baseStr: 30, baseInt: 30,
+        baseStr: 45, baseInt: 75,
         skillId: "odin_skill",
         image: "images/creatures/asgard/creature_god_odin.png",
         sprites: {
@@ -72,23 +72,23 @@ export const ASGARD_CREATURES = [
             gallery: "images/creatures/asgard/creature_god_odin_gallery.png"
         },
         prompts: {
-            base: "anime style, cell shaded, 2d game art, full body, fantasy, Light, Wind, Magic, ÃÖ°í½Å ¿Àµò",
+            base: "anime style, cell shaded, 2d game art, full body, fantasy, Light, Wind, Magic, ìµœê³ ì‹  ì˜¤ë”˜",
             idle: "standing pose, confident, neutral expression",
             joy: "smiling, blushing, happy eyes, hand waving, flowers in background",
             sad: "sad expression, looking down, tears, injured, dark atmosphere",
             angry: "angry, shouting, glowing eyes, battle stance, attacking effect",
             skill: "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, ÃÖ°í½Å ¿Àµò special illustration, intimate atmosphere"
+            gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, ìµœê³ ì‹  ì˜¤ë”˜ special illustration, intimate atmosphere"
         },
         lore: {
-            title: "ÁöÇıÀÇ ´ë°¡¸¦ Ä¡¸¥ ÀÚ",
-            story: "¾ÆÈ© ¼¼°è¸¦ ´Ù½º¸®´Â ºÏÀ¯·´ÀÇ ÃÖ°í½Å. ÁöÇı¸¦ À§ÇØ ÇÑÂÊ ´«À» Èñ»ıÇÏ°í, ¿ìÁÖÀÇ ºñ¹ĞÀ» ¾Ë±â À§ÇØ À§±×µå¶ó½Ç¿¡ 9ÀÏ°£ ¸ñÀ» ¸Å´Ş¾Ò´Ù. ³ÃÃ¶ÇÏ°í °è»êÀûÀÌÁö¸¸, ÀÎÁ¤¹ŞÀº Àü»ç¿¡°Ô´Â ¹ßÇÒ¶óÀÇ ¹®À» ¿¬´Ù. ¶ó±×³ª·ÎÅ©¿¡¼­ Ææ¸®¸£¿¡°Ô »ïÄÑÁú ¿î¸í.",
-            origin: "ºÏÀ¯·´ ½ÅÈ­ / ¾Æ½º°¡¸£µå",
+            title: "ì§€í˜œì˜ ëŒ€ê°€ë¥¼ ì¹˜ë¥¸ ì",
+            story: "ì•„í™‰ ì„¸ê³„ë¥¼ ë‹¤ìŠ¤ë¦¬ëŠ” ë¶ìœ ëŸ½ì˜ ìµœê³ ì‹ . ì§€í˜œë¥¼ ìœ„í•´ í•œìª½ ëˆˆì„ í¬ìƒí•˜ê³ , ìš°ì£¼ì˜ ë¹„ë°€ì„ ì•Œê¸° ìœ„í•´ ìœ„ê·¸ë“œë¼ì‹¤ì— 9ì¼ê°„ ëª©ì„ ë§¤ë‹¬ì•˜ë‹¤. ëƒ‰ì² í•˜ê³  ê³„ì‚°ì ì´ì§€ë§Œ, ì¸ì •ë°›ì€ ì „ì‚¬ì—ê²ŒëŠ” ë°œí• ë¼ì˜ ë¬¸ì„ ì—°ë‹¤. ë¼ê·¸ë‚˜ë¡œí¬ì—ì„œ íœë¦¬ë¥´ì—ê²Œ ì‚¼ì¼œì§ˆ ìš´ëª….",
+            origin: "ë¶ìœ ëŸ½ ì‹ í™” / ì•„ìŠ¤ê°€ë¥´ë“œ",
             personality: "Wise & Domineering"
         },
         relationships: [
-            { id: "wolf_fenrir", type: "rival", desc: "¿î¸íÀû ¼÷Àû. ¶ó±×³ª·ÎÅ©¿¡¼­ ¿ÀµòÀ» »ïÅ³ ÀÚ." },
-            { id: "valkyrie", type: "ally", desc: "Ãæ½ÇÇÑ Àü»ç. ÇÔ²²ÇÏ¸é Ä¡¸íÅ¸À² Áõ°¡." }
+            { id: "wolf_fenrir", type: "rival", desc: "ìš´ëª…ì  ìˆ™ì . ë¼ê·¸ë‚˜ë¡œí¬ì—ì„œ ì˜¤ë”˜ì„ ì‚¼í‚¬ ì." },
+            { id: "valkyrie", type: "ally", desc: "ì¶©ì‹¤í•œ ì „ì‚¬. í•¨ê»˜í•˜ë©´ ì¹˜ëª…íƒ€ìœ¨ ì¦ê°€." }
         ],
         touchLines: {
             idle: ["..."],
@@ -97,25 +97,25 @@ export const ASGARD_CREATURES = [
             special: ["!!!"]
         },
         lines: {
-            normal: "ÁöÇı¸¦ Å½±¸ÇÏ´Â ÀÚ¸¸ÀÌ Áø½Ç¿¡ µµ´ŞÇÒ ¼ö ÀÖ´Ù.",
-            touch_head: "½ÅµéÀÇ ¿Õ¿¡°Ô ¼ÕÀ» ´ë´Â°¡? ¹«·ÊÇÏ±º.",
-            touch_head_reject: "¹°·¯°Å¶ó. Áö±İÀº »ç»ö ÁßÀÌ´Ù.",
-            touch_head_love: "ÈÄÈÊ, ³ªÀÇ ¸Ó¸®¸¦ ¾²´ÙµëÀ» ¼ö ÀÖ´Â °Ç ±×´ë»ÓÀÌ±º.",
-            touch_chest: "±Ã´Ï¸£ÀÇ Ã¢³¡Àº ¾ğÁ¦³ª ÀûÀ» ÇâÇØ ÀÖ´Ù.",
-            touch_chest_reject: "°©¿Ê¿¡ ¼Õ´ëÁö ¸¶¶ó. ÀüÀïÀÇ ÈçÀûÀÌ´Ù.",
-            touch_chest_love: "³ªÀÇ ½ÉÀå, ±×¸®°í ¾ÆÈ© ¼¼°è´Â ±×´ëÀÇ °ÍÀÌ´Ù.",
-            touch_legs: "ÀÌ ¹ß°ÉÀ½Àº ¶ó±×³ª·ÎÅ©¸¦ ÇâÇÑ °ÍÀÌ´Ù.",
-            touch_legs_love: "±×´ë¿Í ÇÔ²²¶ó¸é, Á¾¸»ÀÇ ³¯µµ µÎ·ÆÁö ¾Ê±¸³ª."
+            normal: "ì§€í˜œë¥¼ íƒêµ¬í•˜ëŠ” ìë§Œì´ ì§„ì‹¤ì— ë„ë‹¬í•  ìˆ˜ ìˆë‹¤.",
+            touch_head: "ì‹ ë“¤ì˜ ì™•ì—ê²Œ ì†ì„ ëŒ€ëŠ”ê°€? ë¬´ë¡€í•˜êµ°.",
+            touch_head_reject: "ë¬¼ëŸ¬ê±°ë¼. ì§€ê¸ˆì€ ì‚¬ìƒ‰ ì¤‘ì´ë‹¤.",
+            touch_head_love: "í›„í›—, ë‚˜ì˜ ë¨¸ë¦¬ë¥¼ ì“°ë‹¤ë“¬ì„ ìˆ˜ ìˆëŠ” ê±´ ê·¸ëŒ€ë¿ì´êµ°.",
+            touch_chest: "ê¶ë‹ˆë¥´ì˜ ì°½ëì€ ì–¸ì œë‚˜ ì ì„ í–¥í•´ ìˆë‹¤.",
+            touch_chest_reject: "ê°‘ì˜·ì— ì†ëŒ€ì§€ ë§ˆë¼. ì „ìŸì˜ í”ì ì´ë‹¤.",
+            touch_chest_love: "ë‚˜ì˜ ì‹¬ì¥, ê·¸ë¦¬ê³  ì•„í™‰ ì„¸ê³„ëŠ” ê·¸ëŒ€ì˜ ê²ƒì´ë‹¤.",
+            touch_legs: "ì´ ë°œê±¸ìŒì€ ë¼ê·¸ë‚˜ë¡œí¬ë¥¼ í–¥í•œ ê²ƒì´ë‹¤.",
+            touch_legs_love: "ê·¸ëŒ€ì™€ í•¨ê»˜ë¼ë©´, ì¢…ë§ì˜ ë‚ ë„ ë‘ë µì§€ ì•Šêµ¬ë‚˜."
         },
         synergy: { ally: ["valkyrie"], rival: ["wolf_fenrir"] }
     },
     {
         id: "valkyrie",
-        name: "ÀüÀåÀÇ ±ê¹ß ºê·ôÈúÆ®",
+        name: "ì „ì¥ì˜ ê¹ƒë°œ ë¸Œë¥€ííŠ¸",
         rarity: RANKS.SSR,
         world: WORLDS.ASGARD,
         ego: "Soldier",
-        baseStr: 22, baseInt: 22,
+        baseStr: 40, baseInt: 40,
         skillId: "valkyrie_skill",
         image: "images/creatures/asgard/creature_valkyrie.png",
         sprites: {
@@ -127,22 +127,22 @@ export const ASGARD_CREATURES = [
             gallery: "images/creatures/asgard/creature_valkyrie.png"
         },
         prompts: {
-            base: "anime style, cell shaded, 2d game art, full body, fantasy, Light, Metal, Wind, ÀüÀåÀÇ ±ê¹ß ºê·ôÈúÆ®",
+            base: "anime style, cell shaded, 2d game art, full body, fantasy, Light, Metal, Wind, ì „ì¥ì˜ ê¹ƒë°œ ë¸Œë¥€ííŠ¸",
             idle: "standing pose, confident, neutral expression",
             joy: "smiling, blushing, happy eyes, hand waving, flowers in background",
             sad: "sad expression, looking down, tears, injured, dark atmosphere",
             angry: "angry, shouting, glowing eyes, battle stance, attacking effect",
             skill: "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, ÀüÀåÀÇ ±ê¹ß ºê·ôÈúÆ® special illustration, intimate atmosphere"
+            gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, ì „ì¥ì˜ ê¹ƒë°œ ë¸Œë¥€ííŠ¸ special illustration, intimate atmosphere"
         },
         lore: {
-            title: "¼¶±¤ÀÇ ¼±º°ÀÚ",
-            story: "¿ÀµòÀÇ ¸íÀ» ¹Ş¾Æ ÀüÀå¿¡¼­ °¡Àå ¿ë¸ÍÇÑ Àü»ç¸¦ ¹ßÇÒ¶ó·Î ÀÎµµÇÏ´Â ÀüÀï Ã³³à. ³ÃÃ¶ÇÏ°í ¹«ÀÚºñÇÏ°Ô º¸ÀÌÁö¸¸, ¼±ÅÃ¹ŞÁö ¸øÇÑ ÀÚµéÀ» À§ÇØ ¸ô·¡ ´«¹° Èê¸®´Â ¼¶¼¼ÇÑ ¸¶À½ÀÇ ¼ÒÀ¯ÀÚ.",
-            origin: "ºÏÀ¯·´ ½ÅÈ­ / ¾Æ½º°¡¸£µå",
+            title: "ì„¬ê´‘ì˜ ì„ ë³„ì",
+            story: "ì˜¤ë”˜ì˜ ëª…ì„ ë°›ì•„ ì „ì¥ì—ì„œ ê°€ì¥ ìš©ë§¹í•œ ì „ì‚¬ë¥¼ ë°œí• ë¼ë¡œ ì¸ë„í•˜ëŠ” ì „ìŸ ì²˜ë…€. ëƒ‰ì² í•˜ê³  ë¬´ìë¹„í•˜ê²Œ ë³´ì´ì§€ë§Œ, ì„ íƒë°›ì§€ ëª»í•œ ìë“¤ì„ ìœ„í•´ ëª°ë˜ ëˆˆë¬¼ í˜ë¦¬ëŠ” ì„¬ì„¸í•œ ë§ˆìŒì˜ ì†Œìœ ì.",
+            origin: "ë¶ìœ ëŸ½ ì‹ í™” / ì•„ìŠ¤ê°€ë¥´ë“œ",
             personality: "Unknown"
         },
         relationships: [
-            { id: "god_odin", type: "master", desc: "ÁÖ±º. Àı´ëÀû Ãæ¼º." }
+            { id: "god_odin", type: "master", desc: "ì£¼êµ°. ì ˆëŒ€ì  ì¶©ì„±." }
         ],
         touchLines: {
             idle: ["..."],
@@ -154,12 +154,12 @@ export const ASGARD_CREATURES = [
     },
     {
         id: "god_thor",
-        name: "ÃµµÕÀÇ ½Å Åä¸£",
+        name: "ì²œë‘¥ì˜ ì‹  í† ë¥´",
         rarity: RANKS.SSR,
         world: WORLDS.ASGARD,
         elements: ["Wind", "Light", "Warrior"],
         ego: "Warlord",
-        baseStr: 22, baseInt: 22,
+        baseStr: 60, baseInt: 20,
         skillId: "thor_skill",
         image: "images/creatures/asgard/creature_god_thor.png",
         sprites: {
@@ -171,23 +171,23 @@ export const ASGARD_CREATURES = [
             gallery: "images/creatures/asgard/creature_god_thor_gallery.png"
         },
         prompts: {
-            base: "anime style, cell shaded, 2d game art, full body, fantasy, Wind, Light, Warrior, ÃµµÕÀÇ ½Å Åä¸£",
+            base: "anime style, cell shaded, 2d game art, full body, fantasy, Wind, Light, Warrior, ì²œë‘¥ì˜ ì‹  í† ë¥´",
             idle: "standing pose, confident, neutral expression",
             joy: "smiling, blushing, happy eyes, hand waving, flowers in background",
             sad: "sad expression, looking down, tears, injured, dark atmosphere",
             angry: "angry, shouting, glowing eyes, battle stance, attacking effect",
             skill: "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, ÃµµÕÀÇ ½Å Åä¸£ special illustration, intimate atmosphere"
+            gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, ì²œë‘¥ì˜ ì‹  í† ë¥´ special illustration, intimate atmosphere"
         },
         lore: {
-            title: "¾Æ½º°¡¸£µåÀÇ ¼öÈ£ÀÚ",
-            story: "ÃµµÕ°ú ¹ø°³¸¦ ´Ù·ç´Â ¿ÀµòÀÇ ¾Æµé(È¤Àº µş). ¹¨´Ï¸£¸¦ ÈÖµÎ¸£¸ç °ÅÀÎµé·ÎºÎÅÍ ¾Æ½º°¡¸£µå¸¦ ÁöÅµ´Ï´Ù. ´Ü¼øÇÏ°í È£ÄèÇÑ ¼º°İÀÌ¸ç, ¼ú°ú ÀüÅõ¸¦ »ç¶ûÇÕ´Ï´Ù.",
-            origin: "ºÏÀ¯·´ ½ÅÈ­ / ¾Æ½º°¡¸£µå",
+            title: "ì•„ìŠ¤ê°€ë¥´ë“œì˜ ìˆ˜í˜¸ì",
+            story: "ì²œë‘¥ê³¼ ë²ˆê°œë¥¼ ë‹¤ë£¨ëŠ” ì˜¤ë”˜ì˜ ì•„ë“¤(í˜¹ì€ ë”¸). ë¬ ë‹ˆë¥´ë¥¼ íœ˜ë‘ë¥´ë©° ê±°ì¸ë“¤ë¡œë¶€í„° ì•„ìŠ¤ê°€ë¥´ë“œë¥¼ ì§€í‚µë‹ˆë‹¤. ë‹¨ìˆœí•˜ê³  í˜¸ì¾Œí•œ ì„±ê²©ì´ë©°, ìˆ ê³¼ ì „íˆ¬ë¥¼ ì‚¬ë‘í•©ë‹ˆë‹¤.",
+            origin: "ë¶ìœ ëŸ½ ì‹ í™” / ì•„ìŠ¤ê°€ë¥´ë“œ",
             personality: "Energetic"
         },
         relationships: [
-            { id: "god_loki", type: "friend", desc: "°ñÄ¡ ¾ÆÇÂ ÀÇÇüÁ¦. ¹è½ÅÇØµµ ¹Ì¿öÇÒ ¼ö ¾ø´Ù." },
-            { id: "wolf_fenrir", type: "rival", desc: "À§ÇùÀûÀÎ Á¸Àç." }
+            { id: "god_loki", type: "friend", desc: "ê³¨ì¹˜ ì•„í”ˆ ì˜í˜•ì œ. ë°°ì‹ í•´ë„ ë¯¸ì›Œí•  ìˆ˜ ì—†ë‹¤." },
+            { id: "wolf_fenrir", type: "rival", desc: "ìœ„í˜‘ì ì¸ ì¡´ì¬." }
         ],
         touchLines: {
             idle: ["..."],
@@ -195,17 +195,17 @@ export const ASGARD_CREATURES = [
             gift: ["..."],
             special: ["!!!"]
         },
-        lines: { normal: "¹ø°³¿©, ³» ºÎ¸§¿¡ ´äÇÏ¶ó!" },
+        lines: { normal: "ë²ˆê°œì—¬, ë‚´ ë¶€ë¦„ì— ë‹µí•˜ë¼!" },
         synergy: { ally: ["god_loki"], rival: ["wolf_fenrir"] }
     },
     {
         id: "god_loki",
-        name: "±³È°ÇÑ ½Å ·ÎÅ°",
+        name: "êµí™œí•œ ì‹  ë¡œí‚¤",
         rarity: RANKS.SSR,
         world: WORLDS.ASGARD,
         elements: ["Dark", "Magic", "Trickster"],
         ego: "Nihilist",
-        baseStr: 22, baseInt: 22,
+        baseStr: 25, baseInt: 65,
         skillId: "loki_skill",
         image: "images/creatures/asgard/creature_god_loki.png",
         sprites: {
@@ -217,23 +217,23 @@ export const ASGARD_CREATURES = [
             gallery: "images/creatures/asgard/creature_god_loki_gallery.png"
         },
         prompts: {
-            base: "anime style, cell shaded, 2d game art, full body, fantasy, Dark, Magic, Trickster, ±³È°ÇÑ ½Å ·ÎÅ°",
+            base: "anime style, cell shaded, 2d game art, full body, fantasy, Dark, Magic, Trickster, êµí™œí•œ ì‹  ë¡œí‚¤",
             idle: "standing pose, confident, neutral expression",
             joy: "smiling, blushing, happy eyes, hand waving, flowers in background",
             sad: "sad expression, looking down, tears, injured, dark atmosphere",
             angry: "angry, shouting, glowing eyes, battle stance, attacking effect",
             skill: "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, ±³È°ÇÑ ½Å ·ÎÅ° special illustration, intimate atmosphere"
+            gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, êµí™œí•œ ì‹  ë¡œí‚¤ special illustration, intimate atmosphere"
         },
         lore: {
-            title: "º¯½Å°ú ¼ÓÀÓ¼öÀÇ ´ŞÀÎ",
-            story: "½ÅµéÀÇ ¸»½é²Ù·¯±âÀÌÀÚ ÇØ°á»ç. °ÅÀÎÀÇ ÇÇ¸¦ ÀÌ¾î¹Ş¾ÒÀ¸¸ç, º¯½Å¼ú¿¡ ´ÉÇÕ´Ï´Ù. ¿Àµò°ú ÀÇÇüÁ¦¸¦ ¸Î¾úÁö¸¸, °á±¹ ½ÅµéÀ» ¹è½ÅÇÏ°í ¶ó±×³ª·ÎÅ©¸¦ ÀÏÀ¸Åµ´Ï´Ù.",
-            origin: "ºÏÀ¯·´ ½ÅÈ­ / ¾Æ½º°¡¸£µå",
+            title: "ë³€ì‹ ê³¼ ì†ì„ìˆ˜ì˜ ë‹¬ì¸",
+            story: "ì‹ ë“¤ì˜ ë§ì½ê¾¸ëŸ¬ê¸°ì´ì í•´ê²°ì‚¬. ê±°ì¸ì˜ í”¼ë¥¼ ì´ì–´ë°›ì•˜ìœ¼ë©°, ë³€ì‹ ìˆ ì— ëŠ¥í•©ë‹ˆë‹¤. ì˜¤ë”˜ê³¼ ì˜í˜•ì œë¥¼ ë§ºì—ˆì§€ë§Œ, ê²°êµ­ ì‹ ë“¤ì„ ë°°ì‹ í•˜ê³  ë¼ê·¸ë‚˜ë¡œí¬ë¥¼ ì¼ìœ¼í‚µë‹ˆë‹¤.",
+            origin: "ë¶ìœ ëŸ½ ì‹ í™” / ì•„ìŠ¤ê°€ë¥´ë“œ",
             personality: "Mischievous"
         },
         relationships: [
-            { id: "god_thor", type: "friend", desc: "Èû¸¸ ¼¾ ¸ÛÃ»ÀÌ. ³î¸®´Â Àç¹Ì°¡ ÀÖ´Ù." },
-            { id: "god_odin", type: "rival", desc: "³ª¸¦ ÀÎÁ¤ÇÏÁö ¾Ê´Â ´ÄÀºÀÌ." }
+            { id: "god_thor", type: "friend", desc: "í˜ë§Œ ì„¼ ë©ì²­ì´. ë†€ë¦¬ëŠ” ì¬ë¯¸ê°€ ìˆë‹¤." },
+            { id: "god_odin", type: "rival", desc: "ë‚˜ë¥¼ ì¸ì •í•˜ì§€ ì•ŠëŠ” ëŠ™ì€ì´." }
         ],
         touchLines: {
             idle: ["..."],
@@ -241,17 +241,17 @@ export const ASGARD_CREATURES = [
             gift: ["..."],
             special: ["!!!"]
         },
-        lines: { normal: "Àç¹ÌÀÖ´Â Àå³­À» ÃÄº¼±î?" },
+        lines: { normal: "ì¬ë¯¸ìˆëŠ” ì¥ë‚œì„ ì³ë³¼ê¹Œ?" },
         synergy: { ally: ["god_thor"], rival: ["god_odin"] }
     },
     {
         id: "god_hel",
-        name: "Á×À½ÀÇ ¿©½Å Çï",
+        name: "ì£½ìŒì˜ ì—¬ì‹  í—¬",
         rarity: RANKS.UR,
         world: WORLDS.ASGARD,
         elements: ["Dark", "Ice", "Undead"],
         ego: "Nihilist",
-        baseStr: 30, baseInt: 30,
+        baseStr: 30, baseInt: 80,
         image: "images/creatures/asgard/creature_god_hel.png",
         sprites: {
             idle: "images/creatures/asgard/creature_god_hel.png",
@@ -262,17 +262,17 @@ export const ASGARD_CREATURES = [
             gallery: "images/creatures/asgard/creature_god_hel.png"
         },
         prompts: {
-            base: "anime style, cell shaded, 2d game art, full body, fantasy, Dark, Ice, Undead, Á×À½ÀÇ ¿©½Å Çï",
+            base: "anime style, cell shaded, 2d game art, full body, fantasy, Dark, Ice, Undead, ì£½ìŒì˜ ì—¬ì‹  í—¬",
             idle: "standing pose, confident, neutral expression",
             joy: "smiling, blushing, happy eyes, hand waving, flowers in background",
             sad: "sad expression, looking down, tears, injured, dark atmosphere",
             angry: "angry, shouting, glowing eyes, battle stance, attacking effect",
             skill: "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, Á×À½ÀÇ ¿©½Å Çï special illustration, intimate atmosphere"
+            gallery: "alluring pose, blushing, soft lighting, detailed face, looking at viewer, charm, slight smile, high detail masterpiece, ì£½ìŒì˜ ì—¬ì‹  í—¬ special illustration, intimate atmosphere"
         },
         lore: {
-            title: "´ÏÇÃÇìÀÓÀÇ Áö¹èÀÚ",
-            story: "¿Àµò¿¡ ÀÇÇØ ´ÏÇÃÇìÀÓÀ¸·Î Ãß¹æ´çÇÑ ·ÎÅ°ÀÇ µş. ¹İÀº ¾Æ¸§´Ù¿î ¿©ÀÎ, ¹İÀº ½â¾î°¡´Â ½ÃÃ¼ÀÇ ¸ğ½ÀÀ» ÇÏ°í ÀÖ¾úÀ¸³ª, ÀÌ°÷¿¡¼­´Â ¾Æ¸§´Ù¿î ¸ğ½ÀÀ¸·Î ÇöÇöÇß½À´Ï´Ù. Á×Àº ÀÚµéÀ» ´Ù½º¸®¸ç ¶ó±×³ª·ÎÅ©¸¦ ±â´Ù¸³´Ï´Ù.",
+            title: "ë‹ˆí”Œí—¤ì„ì˜ ì§€ë°°ì",
+            story: "ì˜¤ë”˜ì— ì˜í•´ ë‹ˆí”Œí—¤ì„ìœ¼ë¡œ ì¶”ë°©ë‹¹í•œ ë¡œí‚¤ì˜ ë”¸. ë°˜ì€ ì•„ë¦„ë‹¤ìš´ ì—¬ì¸, ë°˜ì€ ì©ì–´ê°€ëŠ” ì‹œì²´ì˜ ëª¨ìŠµì„ í•˜ê³  ìˆì—ˆìœ¼ë‚˜, ì´ê³³ì—ì„œëŠ” ì•„ë¦„ë‹¤ìš´ ëª¨ìŠµìœ¼ë¡œ í˜„í˜„í–ˆìŠµë‹ˆë‹¤. ì£½ì€ ìë“¤ì„ ë‹¤ìŠ¤ë¦¬ë©° ë¼ê·¸ë‚˜ë¡œí¬ë¥¼ ê¸°ë‹¤ë¦½ë‹ˆë‹¤.",
             personality: "Cold"
         },
         relationships: [],
@@ -286,11 +286,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "god_freya",
-        name: "¿©½Å ÇÁ·¹ÀÌ¾ß",
+        name: "ì—¬ì‹  í”„ë ˆì´ì•¼",
         rarity: RANKS.SSR,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 22, baseInt: 22,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_god_freya.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_god_freya.png",
@@ -301,7 +301,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ¿©½Å ÇÁ·¹ÀÌ¾ß",
+            "base": "anime style, ì—¬ì‹  í”„ë ˆì´ì•¼",
             "idle": "standing"
         },
         lore: {
@@ -316,11 +316,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "nordic_cat_freya",
-        name: "ÇÁ·¹ÀÌ¾ßÀÇ °í¾çÀÌ",
+        name: "í”„ë ˆì´ì•¼ì˜ ê³ ì–‘ì´",
         rarity: RANKS.RARE,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 12, baseInt: 12,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_nordic_cat_freya.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_nordic_cat_freya.png",
@@ -331,7 +331,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ÇÁ·¹ÀÌ¾ßÀÇ °í¾çÀÌ",
+            "base": "anime style, í”„ë ˆì´ì•¼ì˜ ê³ ì–‘ì´",
             "idle": "standing"
         },
         lore: {
@@ -346,11 +346,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "heimdall_horn_spirit",
-        name: "ÇìÀÓ´ŞÀÇ »Ô Á¤·É",
+        name: "í—¤ì„ë‹¬ì˜ ë¿” ì •ë ¹",
         rarity: RANKS.RARE,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 12, baseInt: 12,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_heimdall_horn_spirit.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_heimdall_horn_spirit.png",
@@ -361,7 +361,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ÇìÀÓ´ŞÀÇ »Ô Á¤·É",
+            "base": "anime style, í—¤ì„ë‹¬ì˜ ë¿” ì •ë ¹",
             "idle": "standing"
         },
         lore: {
@@ -376,11 +376,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "mimir_spirit",
-        name: "¹Ì¹Ì¸£ÀÇ ÁöÇı Á¤·É",
+        name: "ë¯¸ë¯¸ë¥´ì˜ ì§€í˜œ ì •ë ¹",
         rarity: RANKS.SR,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 18, baseInt: 18,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_mimir_spirit.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_mimir_spirit.png",
@@ -391,7 +391,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ¹Ì¹Ì¸£ÀÇ ÁöÇı Á¤·É",
+            "base": "anime style, ë¯¸ë¯¸ë¥´ì˜ ì§€í˜œ ì •ë ¹",
             "idle": "standing"
         },
         lore: {
@@ -406,11 +406,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "muninn_crow",
-        name: "±î¸¶±Í ¹«´Ñ",
+        name: "ê¹Œë§ˆê·€ ë¬´ë‹Œ",
         rarity: RANKS.RARE,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 12, baseInt: 12,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_muninn_crow.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_muninn_crow.png",
@@ -421,7 +421,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ±î¸¶±Í ¹«´Ñ",
+            "base": "anime style, ê¹Œë§ˆê·€ ë¬´ë‹Œ",
             "idle": "standing"
         },
         lore: {
@@ -436,11 +436,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "ratatoskr_squirrel",
-        name: "´Ù¶÷Áã ¶óÅ¸Åä½ºÅ©",
+        name: "ë‹¤ëŒì¥ ë¼íƒ€í† ìŠ¤í¬",
         rarity: RANKS.RARE,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 12, baseInt: 12,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_ratatoskr_squirrel.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_ratatoskr_squirrel.png",
@@ -451,7 +451,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ´Ù¶÷Áã ¶óÅ¸Åä½ºÅ©",
+            "base": "anime style, ë‹¤ëŒì¥ ë¼íƒ€í† ìŠ¤í¬",
             "idle": "standing"
         },
         lore: {
@@ -466,11 +466,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "shieldmaiden_iron",
-        name: "°­Ã¶ÀÇ ¹æÆĞÃ³³à",
+        name: "ê°•ì² ì˜ ë°©íŒ¨ì²˜ë…€",
         rarity: RANKS.SR,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 18, baseInt: 18,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_shieldmaiden_iron.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_shieldmaiden_iron.png",
@@ -481,7 +481,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, °­Ã¶ÀÇ ¹æÆĞÃ³³à",
+            "base": "anime style, ê°•ì² ì˜ ë°©íŒ¨ì²˜ë…€",
             "idle": "standing"
         },
         lore: {
@@ -496,11 +496,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "sleipnir_foal",
-        name: "½½·¹ÀÌÇÁ´Ï¸£ ¸Á¾ÆÁö",
+        name: "ìŠ¬ë ˆì´í”„ë‹ˆë¥´ ë§ì•„ì§€",
         rarity: RANKS.RARE,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 12, baseInt: 12,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_sleipnir_foal.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_sleipnir_foal.png",
@@ -511,7 +511,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ½½·¹ÀÌÇÁ´Ï¸£ ¸Á¾ÆÁö",
+            "base": "anime style, ìŠ¬ë ˆì´í”„ë‹ˆë¥´ ë§ì•„ì§€",
             "idle": "standing"
         },
         lore: {
@@ -526,11 +526,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "ulfhednar_wolf",
-        name: "¿ïÇÁÇìµå³ª¸£ ´Á´ë",
+        name: "ìš¸í”„í—¤ë“œë‚˜ë¥´ ëŠ‘ëŒ€",
         rarity: RANKS.SR,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 18, baseInt: 18,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_ulfhednar_wolf.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_ulfhednar_wolf.png",
@@ -541,7 +541,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ¿ïÇÁÇìµå³ª¸£ ´Á´ë",
+            "base": "anime style, ìš¸í”„í—¤ë“œë‚˜ë¥´ ëŠ‘ëŒ€",
             "idle": "standing"
         },
         lore: {
@@ -556,11 +556,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "valkyrie_leader_gunnr",
-        name: "¹ßÅ°¸® ´ëÀå ±º¸£",
+        name: "ë°œí‚¤ë¦¬ ëŒ€ì¥ êµ°ë¥´",
         rarity: RANKS.SSR,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 22, baseInt: 22,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_valkyrie_leader_gunnr.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_valkyrie_leader_gunnr.png",
@@ -571,7 +571,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ¹ßÅ°¸® ´ëÀå ±º¸£",
+            "base": "anime style, ë°œí‚¤ë¦¬ ëŒ€ì¥ êµ°ë¥´",
             "idle": "standing"
         },
         lore: {
@@ -586,11 +586,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "valkyrie_recruit",
-        name: "¹ßÅ°¸® ½Åº´",
+        name: "ë°œí‚¤ë¦¬ ì‹ ë³‘",
         rarity: RANKS.NORMAL,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 8, baseInt: 8,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_valkyrie_recruit.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_valkyrie_recruit.png",
@@ -601,7 +601,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ¹ßÅ°¸® ½Åº´",
+            "base": "anime style, ë°œí‚¤ë¦¬ ì‹ ë³‘",
             "idle": "standing"
         },
         lore: {
@@ -616,11 +616,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "wolf_pup_asgard",
-        name: "¾Æ½º°¡¸£µå ´Á´ë°³",
+        name: "ì•„ìŠ¤ê°€ë¥´ë“œ ëŠ‘ëŒ€ê°œ",
         rarity: RANKS.NORMAL,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 8, baseInt: 8,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_wolf_pup_asgard.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_wolf_pup_asgard.png",
@@ -631,7 +631,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ¾Æ½º°¡¸£µå ´Á´ë°³",
+            "base": "anime style, ì•„ìŠ¤ê°€ë¥´ë“œ ëŠ‘ëŒ€ê°œ",
             "idle": "standing"
         },
         lore: {
@@ -646,11 +646,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "yggdrasil_guardian",
-        name: "ÀÌ±×µå¶ó½Ç ¼öÈ£ÀÚ",
+        name: "ì´ê·¸ë“œë¼ì‹¤ ìˆ˜í˜¸ì",
         rarity: RANKS.SSR,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 22, baseInt: 22,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_yggdrasil_guardian.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_yggdrasil_guardian.png",
@@ -661,7 +661,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ÀÌ±×µå¶ó½Ç ¼öÈ£ÀÚ",
+            "base": "anime style, ì´ê·¸ë“œë¼ì‹¤ ìˆ˜í˜¸ì",
             "idle": "standing"
         },
         lore: {
@@ -676,11 +676,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "bifrost_wisp",
-        name: "ºñÇÁ·Î½ºÆ® À§½À",
+        name: "ë¹„í”„ë¡œìŠ¤íŠ¸ ìœ„ìŠµ",
         rarity: RANKS.NORMAL,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 8, baseInt: 8,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_bifrost_wisp.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_bifrost_wisp.png",
@@ -691,7 +691,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ºñÇÁ·Î½ºÆ® À§½À",
+            "base": "anime style, ë¹„í”„ë¡œìŠ¤íŠ¸ ìœ„ìŠµ",
             "idle": "standing"
         },
         lore: {
@@ -706,11 +706,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "creature_dwarf",
-        name: "µå¿öÇÁ ´ëÀåÀåÀÌ",
+        name: "ë“œì›Œí”„ ëŒ€ì¥ì¥ì´",
         rarity: RANKS.NORMAL,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 8, baseInt: 8,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_creature_dwarf.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_creature_dwarf.png",
@@ -721,7 +721,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, µå¿öÇÁ ´ëÀåÀåÀÌ",
+            "base": "anime style, ë“œì›Œí”„ ëŒ€ì¥ì¥ì´",
             "idle": "standing"
         },
         lore: {
@@ -736,11 +736,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "creature_eagle_iron",
-        name: "°­Ã¶ µ¶¼ö¸®",
+        name: "ê°•ì²  ë…ìˆ˜ë¦¬",
         rarity: RANKS.RARE,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 12, baseInt: 12,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_creature_eagle_iron.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_creature_eagle_iron.png",
@@ -751,7 +751,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, °­Ã¶ µ¶¼ö¸®",
+            "base": "anime style, ê°•ì²  ë…ìˆ˜ë¦¬",
             "idle": "standing"
         },
         lore: {
@@ -766,11 +766,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "einherjar_ghost",
-        name: "¿¡ÀÎÇì·ª¸£ ¿µÈ¥",
+        name: "ì—ì¸í—¤ë´ë¥´ ì˜í˜¼",
         rarity: RANKS.NORMAL,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 8, baseInt: 8,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_einherjar_ghost.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_einherjar_ghost.png",
@@ -781,7 +781,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ¿¡ÀÎÇì·ª¸£ ¿µÈ¥",
+            "base": "anime style, ì—ì¸í—¤ë´ë¥´ ì˜í˜¼",
             "idle": "standing"
         },
         lore: {
@@ -796,11 +796,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "elk_golden",
-        name: "È²±İ ¿¤Å©",
+        name: "í™©ê¸ˆ ì—˜í¬",
         rarity: RANKS.SR,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 18, baseInt: 18,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_elk_golden.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_elk_golden.png",
@@ -811,7 +811,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, È²±İ ¿¤Å©",
+            "base": "anime style, í™©ê¸ˆ ì—˜í¬",
             "idle": "standing"
         },
         lore: {
@@ -826,11 +826,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "fire_giant_scout",
-        name: "ºÒÀÇ °ÅÀÎ Á¤Âûº´",
+        name: "ë¶ˆì˜ ê±°ì¸ ì •ì°°ë³‘",
         rarity: RANKS.NORMAL,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 8, baseInt: 8,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_fire_giant_scout.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_fire_giant_scout.png",
@@ -841,7 +841,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ºÒÀÇ °ÅÀÎ Á¤Âûº´",
+            "base": "anime style, ë¶ˆì˜ ê±°ì¸ ì •ì°°ë³‘",
             "idle": "standing"
         },
         lore: {
@@ -856,11 +856,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "frost_giant_warrior",
-        name: "¼­¸® °ÅÀÎ Àü»ç",
+        name: "ì„œë¦¬ ê±°ì¸ ì „ì‚¬",
         rarity: RANKS.RARE,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 12, baseInt: 12,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_frost_giant_warrior.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_frost_giant_warrior.png",
@@ -871,7 +871,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ¼­¸® °ÅÀÎ Àü»ç",
+            "base": "anime style, ì„œë¦¬ ê±°ì¸ ì „ì‚¬",
             "idle": "standing"
         },
         lore: {
@@ -886,11 +886,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "snake_world_jormungandr",
-        name: "¿ä¸£¹®°£µå",
+        name: "ìš”ë¥´ë¬¸ê°„ë“œ",
         rarity: RANKS.UR,
         world: WORLDS.ASGARD,
         elements: ["Earth"], // Default element
-        baseStr: 30, baseInt: 30,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_snake_world_jormungandr.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_snake_world_jormungandr.png",
@@ -901,7 +901,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ¿ä¸£¹®°£µå",
+            "base": "anime style, ìš”ë¥´ë¬¸ê°„ë“œ",
             "idle": "standing"
         },
         lore: {
@@ -916,11 +916,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "goat_lightning",
-        name: "ÃµµÕ ¿°¼Ò",
+        name: "ì²œë‘¥ ì—¼ì†Œ",
         rarity: RANKS.RARE,
         world: WORLDS.ASGARD,
         elements: ["Earth"],
-        baseStr: 12, baseInt: 12,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_goat_lightning.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_goat_lightning.png",
@@ -931,7 +931,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ÃµµÕ ¿°¼Ò",
+            "base": "anime style, ì²œë‘¥ ì—¼ì†Œ",
             "idle": "standing"
         },
         lore: {
@@ -946,11 +946,11 @@ export const ASGARD_CREATURES = [
     ,
     {
         id: "ice_spirit_small",
-        name: "ÀÛÀº ¾óÀ½ Á¤·É",
+        name: "ì‘ì€ ì–¼ìŒ ì •ë ¹",
         rarity: RANKS.NORMAL,
         world: WORLDS.ASGARD,
         elements: ["Earth"],
-        baseStr: 8, baseInt: 8,
+        baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_ice_spirit_small.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_ice_spirit_small.png",
@@ -961,7 +961,7 @@ export const ASGARD_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ÀÛÀº ¾óÀ½ Á¤·É",
+            "base": "anime style, ì‘ì€ ì–¼ìŒ ì •ë ¹",
             "idle": "standing"
         },
         lore: {
@@ -974,4 +974,3 @@ export const ASGARD_CREATURES = [
         lines: { normal: "..." }
     }
 ];
-
