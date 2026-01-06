@@ -4,11 +4,11 @@ import { WORLDS } from '../WorldData.js';
 export const SHANGRILA_CREATURES = [
     {
         id: "bonsai_spirit",
-        name: "천년 분재 정령",
+        name: "천년 분재 ?�령",
         rarity: RANKS.SPECIAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 15, baseInt: 15,
         image: "images/creatures/shangrila/creature_bonsai_spirit.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_bonsai_spirit.png",
@@ -23,17 +23,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 천년 분재 정령",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 천년 분재 ?�령",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 천년 분재 정령, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 천년 분재 ?�령, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 천년 분재 정령은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 천년 분재 ?�령?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -42,11 +42,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "panda_monk",
-        name: "판다 수도승",
+        name: "?�다 ?�도??,
         rarity: RANKS.RARE,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 12, baseInt: 12,
         image: "images/creatures/shangrila/creature_panda_monk.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_panda_monk.png",
@@ -61,17 +61,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 판다 수도승",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�다 ?�도??,
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 판다 수도승, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, ?�다 ?�도?? energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 판다 수도승은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�다 ?�도?��?(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -80,11 +80,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "lucky_cat_kuro",
-        name: "복 고양이 쿠로",
+        name: "�?고양??쿠로",
         rarity: RANKS.RARE,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 12, baseInt: 12,
         image: "images/creatures/shangrila/creature_lucky_cat_kuro.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_lucky_cat_kuro.png",
@@ -99,17 +99,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 복 고양이 쿠로",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, �?고양??쿠로",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 복 고양이 쿠로, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, �?고양??쿠로, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 복 고양이 쿠로은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? �?고양??쿠로?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -118,11 +118,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "heavenly_maiden_small",
-        name: "꼬마 선녀",
+        name: "꼬마 ?��?",
         rarity: RANKS.RARE,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 12, baseInt: 12,
         image: "images/creatures/shangrila/creature_heavenly_maiden_small.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_heavenly_maiden_small.png",
@@ -137,17 +137,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 꼬마 선녀",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 꼬마 ?��?",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 꼬마 선녀, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 꼬마 ?��?, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 꼬마 선녀은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 꼬마 ?��??�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -156,11 +156,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "cloud_serpent",
-        name: "구름 이무기",
+        name: "구름 ?�무�?,
         rarity: RANKS.RARE,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 12, baseInt: 12,
         image: "images/creatures/shangrila/creature_cloud_serpent.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_cloud_serpent.png",
@@ -175,17 +175,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 구름 이무기",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 구름 ?�무�?,
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 구름 이무기, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 구름 ?�무�? energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 구름 이무기은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 구름 ?�무기�?(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -194,11 +194,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "statue_lion_dog",
-        name: "해치 석상",
+        name: "?�치 ?�상",
         rarity: RANKS.RARE,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 12, baseInt: 12,
         image: "images/creatures/shangrila/creature_statue_lion_dog.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_statue_lion_dog.png",
@@ -213,17 +213,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 해치 석상",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�치 ?�상",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 해치 석상, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, ?�치 ?�상, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 해치 석상은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�치 ?�상?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -232,7 +232,7 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "bamboo_chopper",
-        name: "대나무 전사",
+        name: "?�?�무 ?�사",
         rarity: RANKS.UNIQUE,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
@@ -251,17 +251,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 대나무 전사",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�?�무 ?�사",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 대나무 전사, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, ?�?�무 ?�사, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 대나무 전사은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�?�무 ?�사?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -270,7 +270,7 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "lantern_ghost",
-        name: "초롱불 귀신",
+        name: "초롱�?귀??,
         rarity: RANKS.UNIQUE,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
@@ -289,17 +289,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 초롱불 귀신",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 초롱�?귀??,
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 초롱불 귀신, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 초롱�?귀?? energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 초롱불 귀신은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 초롱�?귀?��?(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -308,7 +308,7 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "kumiho_servant",
-        name: "미호의 시종",
+        name: "미호???�종",
         rarity: RANKS.UNIQUE,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
@@ -327,17 +327,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 미호의 시종",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 미호???�종",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 미호의 시종, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 미호???�종, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 미호의 시종은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 미호???�종?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -346,7 +346,7 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "scroll_dragon",
-        name: "그림 속의 용",
+        name: "그림 ?�의 ??,
         rarity: RANKS.UNIQUE,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
@@ -365,17 +365,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 그림 속의 용",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 그림 ?�의 ??,
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 그림 속의 용, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 그림 ?�의 ?? energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 그림 속의 용은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 그림 ?�의 ?��?(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -384,7 +384,7 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "koi_ascending",
-        name: "용이 되고 싶은 잉어",
+        name: "?�이 ?�고 ?��? ?�어",
         rarity: RANKS.UNIQUE,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
@@ -403,17 +403,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 용이 되고 싶은 잉어",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�이 ?�고 ?��? ?�어",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 용이 되고 싶은 잉어, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, ?�이 ?�고 ?��? ?�어, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 용이 되고 싶은 잉어은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�이 ?�고 ?��? ?�어?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -422,11 +422,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "tea_leaf_fairy",
-        name: "찻잎 요정",
+        name: "찻잎 ?�정",
         rarity: RANKS.NORMAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 8, baseInt: 8,
         image: "images/creatures/shangrila/creature_tea_leaf_fairy.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_tea_leaf_fairy.png",
@@ -441,17 +441,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 찻잎 요정",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 찻잎 ?�정",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 찻잎 요정, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 찻잎 ?�정, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 찻잎 요정은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 찻잎 ?�정?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -460,11 +460,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "rice_grain_spirit",
-        name: "쌀알 정령",
+        name: "?�???�령",
         rarity: RANKS.NORMAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 8, baseInt: 8,
         image: "images/creatures/shangrila/creature_rice_grain_spirit.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_rice_grain_spirit.png",
@@ -479,17 +479,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 쌀알 정령",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�???�령",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 쌀알 정령, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, ?�???�령, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 쌀알 정령은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�???�령?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -498,11 +498,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "paper_charm_seal",
-        name: "봉인 부적",
+        name: "봉인 부??,
         rarity: RANKS.NORMAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 8, baseInt: 8,
         image: "images/creatures/shangrila/creature_paper_charm_seal.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_paper_charm_seal.png",
@@ -517,17 +517,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 봉인 부적",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 봉인 부??,
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 봉인 부적, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 봉인 부?? energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 봉인 부적은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 봉인 부?��?(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -536,11 +536,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "yin_yang_orb",
-        name: "음양구",
+        name: "?�양�?,
         rarity: RANKS.NORMAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 8, baseInt: 8,
         image: "images/creatures/shangrila/creature_yin_yang_orb.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_yin_yang_orb.png",
@@ -555,17 +555,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 음양구",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�양�?,
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 음양구, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, ?�양�? energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 음양구은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�양구�?(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -574,11 +574,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "cherry_blossom_petal",
-        name: "벚꽃잎 요정",
+        name: "벚꽃???�정",
         rarity: RANKS.NORMAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 8, baseInt: 8,
         image: "images/creatures/shangrila/creature_cherry_blossom_petal.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_cherry_blossom_petal.png",
@@ -593,17 +593,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 벚꽃잎 요정",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 벚꽃???�정",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 벚꽃잎 요정, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 벚꽃???�정, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 벚꽃잎 요정은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 벚꽃???�정?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -612,11 +612,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "magpie_messenger",
-        name: "반가운 까치 전령",
+        name: "반�???까치 ?�령",
         rarity: RANKS.NORMAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 8, baseInt: 8,
         image: "images/creatures/shangrila/creature_magpie_messenger.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_magpie_messenger.png",
@@ -631,17 +631,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 반가운 까치 전령",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 반�???까치 ?�령",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 반가운 까치 전령, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 반�???까치 ?�령, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 반가운 까치 전령은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 반�???까치 ?�령?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -650,11 +650,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "wind_chime_spirit",
-        name: "풍경 소리 요정",
+        name: "?�경 ?�리 ?�정",
         rarity: RANKS.NORMAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 8, baseInt: 8,
         image: "images/creatures/shangrila/creature_wind_chime_spirit.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_wind_chime_spirit.png",
@@ -669,17 +669,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 풍경 소리 요정",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�경 ?�리 ?�정",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 풍경 소리 요정, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, ?�경 ?�리 ?�정, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 풍경 소리 요정은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�경 ?�리 ?�정?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -688,11 +688,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "firefly_night",
-        name: "달밤의 반딧불이",
+        name: "?�밤??반딧불이",
         rarity: RANKS.NORMAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 8, baseInt: 8,
         image: "images/creatures/shangrila/creature_firefly_night.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_firefly_night.png",
@@ -707,17 +707,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 달밤의 반딧불이",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�밤??반딧불이",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 달밤의 반딧불이, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, ?�밤??반딧불이, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 달밤의 반딧불이은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�밤??반딧불이?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -726,11 +726,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "dragon_ancient",
-        name: "태초의 용 바하무트",
+        name: "?�초????바하무트",
         rarity: RANKS.UR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 30, baseInt: 30,
         image: "images/creatures/shangrila/creature_dragon_ancient.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_dragon_ancient.png",
@@ -747,7 +747,7 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 태초의 용 바하무트",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�초????바하무트",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
@@ -755,13 +755,13 @@ export const SHANGRILA_CREATURES = [
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
             "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
             "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 태초의 용 바하무트, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 태초의 용 바하무트, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 태초의 용 바하무트, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "gallery_lv1": "dating sim event, ?�초????바하무트, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, ?�초????바하무트, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, ?�초????바하무트, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 태초의 용 바하무트은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�초????바하무트?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -770,11 +770,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "fox_nine_ur",
-        name: "천년 구미호 미호",
+        name: "천년 구�???미호",
         rarity: RANKS.UR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 30, baseInt: 30,
         image: "images/creatures/shangrila/creature_fox_nine_ur.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_fox_nine_ur.png",
@@ -791,7 +791,7 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 천년 구미호 미호",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 천년 구�???미호",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
@@ -799,13 +799,13 @@ export const SHANGRILA_CREATURES = [
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
             "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
             "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 천년 구미호 미호, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 천년 구미호 미호, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 천년 구미호 미호, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "gallery_lv1": "dating sim event, 천년 구�???미호, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, 천년 구�???미호, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, 천년 구�???미호, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 천년 구미호 미호은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 천년 구�???미호?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -814,11 +814,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "god_dragon_king",
-        name: "수정궁의 용왕",
+        name: "?�정궁의 ?�왕",
         rarity: RANKS.UR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 30, baseInt: 30,
         image: "images/creatures/shangrila/creature_god_dragon_king.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_god_dragon_king.png",
@@ -835,7 +835,7 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 수정궁의 용왕",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�정궁의 ?�왕",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
@@ -843,13 +843,13 @@ export const SHANGRILA_CREATURES = [
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
             "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
             "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 수정궁의 용왕, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 수정궁의 용왕, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 수정궁의 용왕, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "gallery_lv1": "dating sim event, ?�정궁의 ?�왕, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, ?�정궁의 ?�왕, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, ?�정궁의 ?�왕, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 수정궁의 용왕은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�정궁의 ?�왕?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -858,11 +858,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "phoenix_eternal",
-        name: "불멸의 화조 페이",
+        name: "불멸???�조 ?�이",
         rarity: RANKS.SSR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 22, baseInt: 22,
         image: "images/creatures/shangrila/creature_phoenix_eternal.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_phoenix_eternal.png",
@@ -879,7 +879,7 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 불멸의 화조 페이",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 불멸???�조 ?�이",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
@@ -887,13 +887,13 @@ export const SHANGRILA_CREATURES = [
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
             "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
             "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 불멸의 화조 페이, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 불멸의 화조 페이, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 불멸의 화조 페이, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "gallery_lv1": "dating sim event, 불멸???�조 ?�이, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, 불멸???�조 ?�이, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, 불멸???�조 ?�이, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 불멸의 화조 페이은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 불멸???�조 ?�이?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -902,11 +902,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "hero_wukong",
-        name: "제천대성 손오공",
+        name: "?�천?�???�오�?,
         rarity: RANKS.SSR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 22, baseInt: 22,
         image: "images/creatures/shangrila/creature_hero_wukong.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_hero_wukong.png",
@@ -923,7 +923,7 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 제천대성 손오공",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�천?�???�오�?,
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
@@ -931,13 +931,13 @@ export const SHANGRILA_CREATURES = [
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
             "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
             "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 제천대성 손오공, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 제천대성 손오공, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 제천대성 손오공, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "gallery_lv1": "dating sim event, ?�천?�???�오�? shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, ?�천?�???�오�? intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, ?�천?�???�오�? seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 제천대성 손오공은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�천?�???�오공�?(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -946,11 +946,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "rabbit_moon",
-        name: "달토끼 루나",
+        name: "?�토??루나",
         rarity: RANKS.SSR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 22, baseInt: 22,
         image: "images/creatures/shangrila/creature_rabbit_moon.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_rabbit_moon.png",
@@ -967,7 +967,7 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 달토끼 루나",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�토??루나",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
@@ -975,13 +975,13 @@ export const SHANGRILA_CREATURES = [
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
             "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
             "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 달토끼 루나, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 달토끼 루나, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 달토끼 루나, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "gallery_lv1": "dating sim event, ?�토??루나, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, ?�토??루나, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, ?�토??루나, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 달토끼 루나은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�토??루나?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -994,7 +994,7 @@ export const SHANGRILA_CREATURES = [
         rarity: RANKS.SSR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 22, baseInt: 22,
         image: "images/creatures/shangrila/creature_peacock_princess.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_peacock_princess.png",
@@ -1024,8 +1024,8 @@ export const SHANGRILA_CREATURES = [
             "gallery_lv3": "dating sim event, 공작 공주, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 공작 공주은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 공작 공주?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1034,11 +1034,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "fox_yokai_sr",
-        name: "여우요괴 미호",
+        name: "?�우?�괴 미호",
         rarity: RANKS.SR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 18, baseInt: 18,
         image: "images/creatures/shangrila/creature_fox_yokai_sr.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_fox_yokai_sr.png",
@@ -1055,7 +1055,7 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 여우요괴 미호",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�우?�괴 미호",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
@@ -1063,13 +1063,13 @@ export const SHANGRILA_CREATURES = [
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
             "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
             "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 여우요괴 미호, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 여우요괴 미호, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 여우요괴 미호, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "gallery_lv1": "dating sim event, ?�우?�괴 미호, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, ?�우?�괴 미호, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, ?�우?�괴 미호, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 여우요괴 미호은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�우?�괴 미호?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1078,11 +1078,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "dragon_azure",
-        name: "청룡",
+        name: "�?��",
         rarity: RANKS.SR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 18, baseInt: 18,
         image: "images/creatures/shangrila/creature_dragon_azure.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_dragon_azure.png",
@@ -1099,7 +1099,7 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 청룡",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, �?��",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
@@ -1107,13 +1107,13 @@ export const SHANGRILA_CREATURES = [
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
             "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
             "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 청룡, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 청룡, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 청룡, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "gallery_lv1": "dating sim event, �?��, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, �?��, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, �?��, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 청룡은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? �?��?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1126,7 +1126,7 @@ export const SHANGRILA_CREATURES = [
         rarity: RANKS.SR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 18, baseInt: 18,
         image: "images/creatures/shangrila/creature_tiger_white.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_tiger_white.png",
@@ -1156,8 +1156,8 @@ export const SHANGRILA_CREATURES = [
             "gallery_lv3": "dating sim event, 백호, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 백호은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 백호?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1170,7 +1170,7 @@ export const SHANGRILA_CREATURES = [
         rarity: RANKS.SR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 18, baseInt: 18,
         image: "images/creatures/shangrila/creature_bird_vermilion.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_bird_vermilion.png",
@@ -1200,8 +1200,8 @@ export const SHANGRILA_CREATURES = [
             "gallery_lv3": "dating sim event, 주작, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 주작은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 주작?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1210,11 +1210,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "turtle_black",
-        name: "현무",
+        name: "?�무",
         rarity: RANKS.SR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 18, baseInt: 18,
         image: "images/creatures/shangrila/creature_turtle_black.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_turtle_black.png",
@@ -1231,7 +1231,7 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 현무",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�무",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
@@ -1239,13 +1239,13 @@ export const SHANGRILA_CREATURES = [
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
             "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
             "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 현무, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 현무, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 현무, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "gallery_lv1": "dating sim event, ?�무, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, ?�무, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, ?�무, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 현무은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�무?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1254,11 +1254,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "dokkeabi_king",
-        name: "황금 방망이 도깨비",
+        name: "?�금 방망???�깨�?,
         rarity: RANKS.SR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 18, baseInt: 18,
         image: "images/creatures/shangrila/creature_dokkeabi_king.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_dokkeabi_king.png",
@@ -1275,7 +1275,7 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 황금 방망이 도깨비",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�금 방망???�깨�?,
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
@@ -1283,13 +1283,13 @@ export const SHANGRILA_CREATURES = [
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
             "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
             "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 황금 방망이 도깨비, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 황금 방망이 도깨비, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 황금 방망이 도깨비, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "gallery_lv1": "dating sim event, ?�금 방망???�깨�? shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, ?�금 방망???�깨�? intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, ?�금 방망???�깨�? seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 황금 방망이 도깨비은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�금 방망???�깨비�?(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1298,11 +1298,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "mountain_god_tiger",
-        name: "산신 호랑이",
+        name: "?�신 ?�랑??,
         rarity: RANKS.SR,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 18, baseInt: 18,
         image: "images/creatures/shangrila/creature_mountain_god_tiger.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_mountain_god_tiger.png",
@@ -1319,7 +1319,7 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 산신 호랑이",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�신 ?�랑??,
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
@@ -1327,13 +1327,13 @@ export const SHANGRILA_CREATURES = [
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
             "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
             "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 산신 호랑이, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 산신 호랑이, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 산신 호랑이, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "gallery_lv1": "dating sim event, ?�신 ?�랑?? shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+            "gallery_lv2": "dating sim event, ?�신 ?�랑?? intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+            "gallery_lv3": "dating sim event, ?�신 ?�랑?? seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 산신 호랑이은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�신 ?�랑?��?(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1342,11 +1342,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "ninja_shadow",
-        name: "그림자 닌자",
+        name: "그림???�자",
         rarity: RANKS.SPECIAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 15, baseInt: 15,
         image: "images/creatures/shangrila/creature_ninja_shadow.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_ninja_shadow.png",
@@ -1361,17 +1361,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 그림자 닌자",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 그림???�자",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 그림자 닌자, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 그림???�자, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 그림자 닌자은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 그림???�자?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1380,11 +1380,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "crane_sage",
-        name: "구름 위의 학 신선",
+        name: "구름 ?�의 ???�선",
         rarity: RANKS.SPECIAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 15, baseInt: 15,
         image: "images/creatures/shangrila/creature_crane_sage.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_crane_sage.png",
@@ -1399,17 +1399,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 구름 위의 학 신선",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 구름 ?�의 ???�선",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 구름 위의 학 신선, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 구름 ?�의 ???�선, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 구름 위의 학 신선은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 구름 ?�의 ???�선?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1418,11 +1418,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "pears_spirit",
-        name: "연꽃 아씨",
+        name: "?�꽃 ?�씨",
         rarity: RANKS.SPECIAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 15, baseInt: 15,
         image: "images/creatures/shangrila/creature_pears_spirit.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_pears_spirit.png",
@@ -1437,17 +1437,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 연꽃 아씨",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�꽃 ?�씨",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 연꽃 아씨, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, ?�꽃 ?�씨, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 연꽃 아씨은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�꽃 ?�씨?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1456,11 +1456,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "butterfly_dream",
-        name: "장자의 나비",
+        name: "?�자???�비",
         rarity: RANKS.SPECIAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 15, baseInt: 15,
         image: "images/creatures/shangrila/creature_butterfly_dream.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_butterfly_dream.png",
@@ -1475,17 +1475,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 장자의 나비",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, ?�자???�비",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 장자의 나비, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, ?�자???�비, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 장자의 나비은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? ?�자???�비?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1494,11 +1494,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "flower_fairy",
-        name: "꽃의 요정",
+        name: "꽃의 ?�정",
         rarity: RANKS.RARE,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 12, baseInt: 12,
         image: "images/creatures/shangrila/creature_flower_fairy.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_flower_fairy.png",
@@ -1513,17 +1513,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 꽃의 요정",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 꽃의 ?�정",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 꽃의 요정, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 꽃의 ?�정, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 꽃의 요정은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 꽃의 ?�정?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1532,11 +1532,11 @@ export const SHANGRILA_CREATURES = [
     },
     {
         id: "ink_spirit",
-        name: "먹물 요정",
+        name: "먹물 ?�정",
         rarity: RANKS.NORMAL,
         world: WORLDS.SHANGRILA,
         elements: ["Light"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 8, baseInt: 8,
         image: "images/creatures/shangrila/creature_ink_spirit.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_ink_spirit.png",
@@ -1551,17 +1551,17 @@ export const SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 먹물 요정",
+            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 먹물 ?�정",
             "idle": "standing pose, confident, neutral expression",
             "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
             "sad": "sad expression, looking down, tears, injured, dark atmosphere",
             "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
             "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 먹물 요정, energetic, detailed, looking at viewer"
+            "gallery_lv1": "cute pose, 먹물 ?�정, energetic, detailed, looking at viewer"
         },
         lore: {
-            "title": "미지의 존재",
-            "story": "무릉도원의 신비로운 기운을 머금고 태어난 영물입니다. 먹물 요정은(는) 특별한 능력을 지녔습니다.",
+            "title": "미�???존재",
+            "story": "무릉?�원???�비로운 기운??머금�??�어???�물?�니?? 먹물 ?�정?�(?? ?�별???�력??지?�습?�다.",
             "personality": "Unknown"
         },
         relationships: { likes: [], dislikes: [], rival: null },
@@ -1571,11 +1571,11 @@ export const SHANGRILA_CREATURES = [
 ,
     {
         id: "fox_nine_new",
-        name: "신생 구미호",
+        name: "?�생 구�???,
         rarity: RANKS.SSR,
         world: WORLDS.SHANGRILA,
         elements: ["Earth"], // Default element
-        baseStr: 10, baseInt: 10,
+        baseStr: 22, baseInt: 22,
         image: "images/creatures/shangrila/creature_fox_nine_new.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_fox_nine_new.png",
@@ -1586,7 +1586,7 @@ export const SHANGRILA_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 신생 구미호",
+            "base": "anime style, ?�생 구�???,
             "idle": "standing"
         },
         lore: {
@@ -1601,11 +1601,11 @@ export const SHANGRILA_CREATURES = [
 ,
     {
         id: "jade_rabbit",
-        name: "옥토끼",
+        name: "?�토??,
         rarity: RANKS.RARE,
         world: WORLDS.SHANGRILA,
         elements: ["Earth"], // Default element
-        baseStr: 10, baseInt: 10,
+        baseStr: 12, baseInt: 12,
         image: "images/creatures/shangrila/creature_jade_rabbit.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_jade_rabbit.png",
@@ -1616,7 +1616,7 @@ export const SHANGRILA_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 옥토끼",
+            "base": "anime style, ?�토??,
             "idle": "standing"
         },
         lore: {
@@ -1631,11 +1631,11 @@ export const SHANGRILA_CREATURES = [
 ,
     {
         id: "yin_yang_fish",
-        name: "음양어",
+        name: "?�양??,
         rarity: RANKS.RARE,
         world: WORLDS.SHANGRILA,
         elements: ["Earth"], // Default element
-        baseStr: 10, baseInt: 10,
+        baseStr: 12, baseInt: 12,
         image: "images/creatures/shangrila/creature_yin_yang_fish.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_yin_yang_fish.png",
@@ -1646,7 +1646,7 @@ export const SHANGRILA_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 음양어",
+            "base": "anime style, ?�양??,
             "idle": "standing"
         },
         lore: {
@@ -1661,11 +1661,11 @@ export const SHANGRILA_CREATURES = [
 ,
     {
         id: "cloud_spirit",
-        name: "운무 정령",
+        name: "?�무 ?�령",
         rarity: RANKS.NORMAL,
         world: WORLDS.SHANGRILA,
         elements: ["Earth"],
-        baseStr: 10, baseInt: 10,
+        baseStr: 8, baseInt: 8,
         image: "images/creatures/shangrila/creature_cloud_spirit.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_cloud_spirit.png",
@@ -1676,7 +1676,7 @@ export const SHANGRILA_CREATURES = [
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 운무 정령",
+            "base": "anime style, ?�무 ?�령",
             "idle": "standing"
         },
         lore: {
