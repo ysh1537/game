@@ -54,6 +54,11 @@ export default class AudioManager {
                 this._unlocked = true;
                 console.log('[AudioManager] Audio context unlocked');
                 document.removeEventListener('click', unlock);
+
+                // Resume BGM if needed
+                if (this.currentBGMId && !this.bgm) {
+                    this.playBGM(this.currentBGMId);
+                }
             }
         };
         document.addEventListener('click', unlock);
@@ -61,19 +66,38 @@ export default class AudioManager {
         // 게임 이벤트와 연동
         this.game.events.on('ui:tabSwitched', (tabId) => {
             // 탭에 따라 BGM 변경
-            if (tabId === 'home') this.playBGM('lobby');
-            else if (tabId === 'battle') this.playBGM('battle');
+            if (this.game.battleManager.inBattle) return; // 전투 중에는 탭 전환 BGM 무시
+
+            if (tabId === 'home' || tabId === 'team' || tabId === 'shop' || tabId === 'research' || tabId === 'mission') {
+                // Common Lobby BGM
+                this.playBGM('lobby');
+            }
+            // Add other themes if available, e.g. 'expedition'
         });
 
-        this.game.events.on('battle:start', () => this.playBGM('battle'));
+        this.game.events.on('battle:start', ({ mode }) => {
+            this.playBGM(mode === 'boss' ? 'boss' : 'battle');
+        });
+
         this.game.events.on('battle:end', ({ isWin }) => {
             this.playBGM(isWin ? 'victory' : 'defeat');
-            setTimeout(() => this.playBGM('lobby'), 3000);
+            // Return to lobby music handled by UI flow usually, but we can auto-switch after stinger
         });
 
         this.game.events.on('summon:complete', () => this.playSFX('summon'));
         this.game.events.on('creature:leveledUp', () => this.playSFX('levelup'));
         this.game.events.on('evolve:success', () => this.playSFX('evolve'));
+
+        // [NEW] Battle SFX Binding
+        this.game.events.on('battle:action', (data) => {
+            if (data.type === 'attack') {
+                if (data.isCrit) this.playSFX('critical');
+                else if (data.isMiss) this.playSFX('click'); // Miss sound?
+                else this.playSFX('hit');
+            } else if (data.type === 'skill') {
+                this.playSFX('skill');
+            }
+        });
     }
 
     /**
@@ -161,6 +185,7 @@ export default class AudioManager {
             this.playBGM('lobby');
         }
         console.log(`[AudioManager] Muted: ${this.isMuted}`);
+        if (!this.isMuted) this.playSFX('click');
         return this.isMuted;
     }
 

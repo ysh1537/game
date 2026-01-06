@@ -1535,7 +1535,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Water", "Earth"],
         baseStr: 12, baseInt: 4,
-        image: "images/creatures/abyss/creature_abyss_jellyfish.png"
+        image: "images/creatures/abyss/creature_void_crab.png"
     },
     {
         id: "dark_eel",
@@ -1544,7 +1544,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Water", "Dark"],
         baseStr: 14, baseInt: 5,
-        image: "images/creatures/abyss/creature_abyss_jellyfish.png"
+        image: "images/creatures/abyss/creature_dark_eel.png"
     },
     {
         id: "skeleton_fish",
@@ -1553,7 +1553,7 @@ export const ABYSS_CREATURES = [
         world: WORLDS.ABYSS,
         elements: ["Spirit", "Water"],
         baseStr: 8, baseInt: 8,
-        image: "images/creatures/abyss/creature_abyss_jellyfish.png"
+        image: "images/creatures/abyss/creature_skeleton_fish.png"
     },
     {
         id: "phantom_ray",
@@ -1565,7 +1565,7 @@ export const ABYSS_CREATURES = [
         image: "images/creatures/abyss/creature_abyss_jellyfish.png"
 
     }
-,
+    ,
     {
         id: "wisp_faint",
         name: "희미한 위습",

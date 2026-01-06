@@ -1,3 +1,6 @@
+// import UIManager from './UIManager.js'; // REMOVED SELF IMPORT
+import { getCreaturePersonality } from '../data/PersonalityData.js';
+
 /**
  * @class UIManager
  * @description 전역 UI 요소 캐싱, 탭 전환, 공통 UI 기능(로그, 모달)을 관리합니다.
@@ -118,6 +121,34 @@ export default class UIManager {
                 this.game.resourceManager.addEnergy(100);
                 this.addLog("치트 사용: 자원 충전 완료");
             });
+        }
+
+        // [NEW] Lobby Touch Init
+        this.initLobbyInteraction();
+
+        // [NEW] Outpost Claim
+        const btnOutpost = document.getElementById('btn-outpost-claim');
+        if (btnOutpost) {
+            btnOutpost.addEventListener('click', () => {
+                const result = this.game.outpostManager.claim();
+                if (result.success) {
+                    this.addLog(`[정찰] ${result.rewards.gold} 골드, ${result.rewards.exp} 경험치 획득!`);
+                    this.showToast(`정찰 보상: 💰+${result.rewards.gold}, ✨+${result.rewards.exp}`);
+                    const badge = document.getElementById('outpost-badge');
+                    if (badge) badge.style.display = 'none';
+                } else {
+                    this.showToast("아직 수령할 보상이 없습니다.");
+                }
+            });
+
+            // Notification Check Loop (Simple)
+            setInterval(() => {
+                const check = this.game.outpostManager.calculateRewards();
+                const badge = document.getElementById('outpost-badge');
+                if (badge) {
+                    badge.style.display = (check.gold > 0) ? 'block' : 'none';
+                }
+            }, 5000);
         }
     }
 
@@ -255,44 +286,153 @@ export default class UIManager {
     /**
      * @description 로비 캐릭터 터치 상호작용 초기화
      */
+    /**
+     * @description 로비 캐릭터 터치 상호작용 (Coordinate Based)
+     */
     initLobbyInteraction() {
-        const zones = ['head', 'body', 'legs'];
-        const reactions = {
-            head: [
-                "머리를 쓰다듬어 주시는 건가요? 기분 좋네요.",
-                "지휘관님, 머리가 헝클어지잖아요...",
-                "후훗, 칭찬해 주시는 건가요?"
-            ],
-            body: [
-                "어머, 어딜 만지시는 거죠?",
-                "가슴이 두근거려요...",
-                "지휘관님, 너무 가까워요!"
-            ],
-            legs: [
-                "무릎베개... 원하시나요?",
-                "지휘관님, 발은 조금 부끄러워요...",
-                "간지러워요!"
-            ]
-        };
+        const img = document.getElementById('lobby-character-img');
+        if (!img) return;
 
-        zones.forEach(zone => {
-            const el = document.getElementById(`touch-${zone}`);
-            if (el) {
-                el.addEventListener('click', (e) => {
-                    e.stopPropagation(); // 이벤트 전파 방지
-                    const texts = reactions[zone];
-                    const randomText = texts[Math.floor(Math.random() * texts.length)];
-                    this.showLobbySpeech(randomText);
+        img.addEventListener('click', (e) => {
+            e.stopPropagation();
 
-                    // 애니메이션 효과 (작게 흔들림)
-                    const img = document.getElementById('lobby-character-img');
-                    if (img) {
-                        img.style.transform = 'scale(1.02)';
-                        setTimeout(() => img.style.transform = 'scale(1)', 150);
-                    }
-                });
-            }
+            // 1. Get Interaction Zone
+            const rect = img.getBoundingClientRect();
+            const y = e.clientY - rect.top;
+            const height = rect.height;
+            const ratio = y / height;
+
+            let zone = 'body';
+            if (ratio < 0.25) zone = 'head';
+            else if (ratio > 0.75) zone = 'legs';
+
+            // 2. Determine Action & Speech
+            this._handleLobbyTouch(zone, e.clientX, e.clientY);
         });
+    }
+
+    _handleLobbyTouch(zone, clientX, clientY) {
+        // 1. Identify Current Lobby Creature
+        let lobbyCreature = null;
+        try {
+            const saved = JSON.parse(localStorage.getItem('lobbyCharacter'));
+            if (saved && saved.instanceId) {
+                lobbyCreature = this.game.creatureManager.getCreatureById(saved.instanceId);
+            }
+        } catch (e) { }
+
+        if (!lobbyCreature) {
+            this.showLobbySpeech("...");
+            return;
+        }
+
+        const def = lobbyCreature.def;
+        const affinity = this.game.affinityManager.getAffinity(lobbyCreature.instanceId);
+        const affinityLv = affinity.level || 0;
+        const img = this.ui.lobbyCharacterImg;
+
+        let line = "";
+
+        // Tier 1: UR (Ultimate Customizing Feedback)
+        if (def.rarity === 'UR') {
+            this._handleURVisuals(lobbyCreature, zone, img);
+        }
+
+        // Tier 2: SSR+ (Unique Lines)
+        let dataKey = `touch_${zone}`;
+        if (zone === 'body') dataKey = 'touch_chest';
+
+        if (['SSR', 'UR'].includes(def.rarity) && def.lines) {
+            // Unique Lines Logic
+            if (affinityLv >= 3 && def.lines[`${dataKey}_love`]) {
+                line = def.lines[`${dataKey}_love`];
+            } else if (affinityLv < 2 && def.lines[`${dataKey}_reject`]) {
+                line = def.lines[`${dataKey}_reject`];
+            } else if (def.lines[dataKey]) {
+                line = def.lines[dataKey];
+            }
+        }
+
+        // Tier 3: SR- (Personality Archetypes) or Fallback if SSR lines missing
+        if (!line) {
+            const personality = getCreaturePersonality(lobbyCreature);
+            const pKey = zone === 'body' ? 'touch_chest' : `touch_${zone}`;
+            const mood = affinityLv >= 3 ? 'high' : 'low';
+
+            const lines = personality[pKey]?.[mood] || ["..."];
+            line = lines[Math.floor(Math.random() * lines.length)];
+        }
+
+        // 3. Show Speech
+        this.showLobbySpeech(line);
+
+        // 4. Affinity Increase & Effect
+        const result = this.game.affinityManager.interact(lobbyCreature.instanceId, 'TOUCH');
+        if (result.success) {
+            this.showHeartEffect(clientX, clientY, result.points);
+        } else {
+            this.showHeartEffect(clientX, clientY);
+        }
+
+        // 5. Animation (Basic Scaling for all)
+        if (img) {
+            img.style.transform = 'scale(1.02)';
+            setTimeout(() => img.style.transform = 'scale(1)', 150);
+        }
+    }
+
+    /**
+     * @description UR 등급 전용 비주얼 효과 (표정/자세 변화)
+     */
+    _handleURVisuals(creature, zone, imgEl) {
+        if (!creature.def.sprites) return;
+
+        let targetSprite = null;
+
+        // Zone based expression
+        if (zone === 'head') {
+            // Head pat -> Joy/Blush
+            targetSprite = creature.def.sprites.joy || creature.def.sprites.gallery;
+        } else if (zone === 'body') {
+            // Body touch -> Shy/Angry/Surprised depends on creature
+            // For now, use 'joy' or 'intro' if available, or 'angry' if low affinity?
+            // Let's keep it positive for UR premium feel -> 'joy'
+            targetSprite = creature.def.sprites.joy;
+        } else if (zone === 'legs') {
+            targetSprite = creature.def.sprites.sad; // Embarrassed?
+        }
+
+        // Temporary Sprite Swap
+        if (targetSprite && imgEl.src !== targetSprite) {
+            const originalSrc = creature.def.image; // Base image
+
+            // Preload?
+            const tempImg = new Image();
+            tempImg.src = targetSprite;
+            tempImg.onload = () => {
+                imgEl.src = targetSprite;
+
+                // Revert after 2 seconds
+                if (this._urVisualTimer) clearTimeout(this._urVisualTimer);
+                this._urVisualTimer = setTimeout(() => {
+                    imgEl.src = originalSrc;
+                }, 2000);
+            };
+        }
+    }
+
+    showHeartEffect(x, y, points = 0) {
+        const heart = document.createElement('div');
+        heart.innerHTML = points > 0 ? `❤️ +${points}` : '❤️';
+        heart.style.cssText = `
+            position: fixed; top: ${y}px; left: ${x}px;
+            font-size: 1.5rem; color: #ff4081; font-weight: bold;
+            pointer-events: none; z-index: 9999;
+            animation: floatUp 1s ease-out forwards;
+            text-shadow: 0 0 5px white;
+        `;
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 1000);
     }
 
     showLobbySpeech(text) {

@@ -1,5 +1,6 @@
 import EventEmitter from '../utils/EventEmitter.js';
-import { GOLD_PACKS, GEM_PACKS, BUNDLES, SPECIALS, GIFT_ITEMS, DONATION_ITEMS } from '../data/ShopData.js';
+import { GOLD_PACKS, GEM_PACKS, BUNDLES, SPECIALS, GIFT_ITEMS, DONATION_ITEMS, EQUIPMENT_PACKS } from '../data/ShopData.js';
+import { ARTIFACT_DEFS } from '../data/ArtifactData.js'; // [NEW]
 
 export default class ShopManager extends EventEmitter {
     constructor(game) {
@@ -17,7 +18,8 @@ export default class ShopManager extends EventEmitter {
             bundles: BUNDLES,
             specials: SPECIALS,
             gifts: GIFT_ITEMS,
-            donations: DONATION_ITEMS // Added
+            equipment: EQUIPMENT_PACKS, // [NEW] Added
+            donations: DONATION_ITEMS
         };
     }
 
@@ -35,6 +37,7 @@ export default class ShopManager extends EventEmitter {
         else if (BUNDLES.find(i => i.id === itemId)) item = BUNDLES.find(i => i.id === itemId);
         else if (SPECIALS.find(i => i.id === itemId)) item = SPECIALS.find(i => i.id === itemId);
         else if (GIFT_ITEMS.find(i => i.id === itemId)) item = GIFT_ITEMS.find(i => i.id === itemId);
+        else if (EQUIPMENT_PACKS.find(i => i.id === itemId)) item = EQUIPMENT_PACKS.find(i => i.id === itemId);
         else if (DONATION_ITEMS.find(i => i.id === itemId)) item = DONATION_ITEMS.find(i => i.id === itemId);
 
         if (!item) {
@@ -48,7 +51,6 @@ export default class ShopManager extends EventEmitter {
             return;
         }
 
-        // 3. 결제 타입 분기
         // 3. 결제 타입 분기
         if (item.priceType === 'donation') {
             if (confirm("개발자 후원 페이지(외부)로 이동하시겠습니까?")) {
@@ -78,9 +80,9 @@ export default class ShopManager extends EventEmitter {
             }
 
             // 6. 보상 지급
-            this._giveRewards(item, targetCreatureId);
+            const result = this._giveRewards(item, targetCreatureId);
 
-            this.emit('shop:purchaseSuccess', { item, message: `${item.name} 구매 완료` });
+            this.emit('shop:purchaseSuccess', { item, message: `${item.name} 구매 완료`, result });
             this.emit('shop:updated');
         } else {
             this.emit('shop:purchaseFailed', { reason: `자원(${item.priceType})이 부족합니다.` });
@@ -108,6 +110,8 @@ export default class ShopManager extends EventEmitter {
     }
 
     _giveRewards(item, targetId) {
+        let obtainedItem = null;
+
         // 1. 골드/젬 직접 지급
         if (item.goldAmount) this.game.resourceManager.addGold(item.goldAmount);
         if (item.gemAmount) this.game.resourceManager.addGem(item.gemAmount);
@@ -118,6 +122,22 @@ export default class ShopManager extends EventEmitter {
             if (item.rewards.gem) this.game.resourceManager.addGem(item.rewards.gem);
             if (item.rewards.creature) {
                 this.game.creatureManager.summonOneByRarity(item.rewards.creature.rarity);
+            }
+            // [NEW] Equipment Reward
+            if (item.rewards.equipment) {
+                const { minTier, maxTier } = item.rewards.equipment;
+                // Filter artifacts by tier (mock logic as Tier is not strictly defined in simple DEFS yet)
+                // Assuming keys might indicate or we just pick random.
+                // Let's rely on simple random pick for now for all ARTIFACT_DEFS.
+                // TODO: Implement Tier filtering in ArtifactData.
+
+                const keys = Object.keys(ARTIFACT_DEFS);
+                const randomKey = keys[Math.floor(Math.random() * keys.length)];
+
+                if (this.game.inventoryManager.addItem(randomKey, 1)) {
+                    obtainedItem = ARTIFACT_DEFS[randomKey];
+                    console.log(`[Shop] Obtained Equipment: ${obtainedItem.name}`);
+                }
             }
         }
 
@@ -130,6 +150,8 @@ export default class ShopManager extends EventEmitter {
                 console.warn("[Shop] Gift purchased but no target specified.");
             }
         }
+
+        return obtainedItem; // Return for UI display
     }
 
     // [저장/로드]
@@ -147,3 +169,5 @@ export default class ShopManager extends EventEmitter {
         this.emit('shop:updated');
     }
 }
+
+

@@ -2000,7 +2000,7 @@ export const WILD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "creature_unicorn",
         name: "유니콘",
@@ -2030,7 +2030,7 @@ export const WILD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "creature_giant_hill",
         name: "언덕 거인",
@@ -2060,7 +2060,7 @@ export const WILD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "creature_bat_small",
         name: "동굴 박쥐",
@@ -2090,7 +2090,7 @@ export const WILD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "snow_spirit",
         name: "설원 정령",
@@ -2119,5 +2119,34 @@ export const WILD_CREATURES = [
         relationships: { likes: [], dislikes: [], rival: null },
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
+    },
+    {
+        id: "time_lord_chronos",
+        name: "시간의 신 크로노스",
+        rarity: RANKS.UR,
+        world: WORLDS.WILD,
+        elements: ["Light", "Dark"],
+        baseStr: 15, baseInt: 15,
+        image: "images/creatures/wild/creature_time_lord_chronos.png",
+        sprites: {
+            "idle": "images/creatures/wild/creature_time_lord_chronos.png",
+            "joy": "images/creatures/wild/creature_time_lord_chronos.png",
+            "sad": "images/creatures/wild/creature_time_lord_chronos.png",
+            "angry": "images/creatures/wild/creature_time_lord_chronos.png",
+            "skill": "images/creatures/wild/creature_time_lord_chronos.png",
+            "gallery": {}
+        },
+        prompts: {
+            "base": "anime style, 시간의 신 크로노스, time lord, chronos, clock gears, purple energy",
+            "idle": "standing pose with clock staff"
+        },
+        lore: {
+            "title": "시간의 지배자",
+            "story": "시간을 다스리는 고대의 신. 모든 시간의 흐름을 손안에 두고 있습니다.",
+            "personality": "신비롭고 초월적인"
+        },
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["시간은 흐른다..."], interaction: ["과거와 미래를 본다."], gift: ["시간을 선물하는가."], special: ["영원은 순간이다."] },
+        lines: { normal: "시간의 흐름 속에서..." }
     }
 ];

@@ -40,6 +40,7 @@ export default class ShopView extends BaseView {
         }
 
         this._renderSection("❤️ 호감도 선물 (Gifts)", allItems.gifts, shopListEl, true); // Gifts first
+        this._renderSection("⚔️ 장비 상자 (Equipment)", allItems.equipment, shopListEl); // [NEW]
         this._renderSection("💎 젬 충전 (Charge)", allItems.gemPacks, shopListEl);
         this._renderSection("💰 골드 보급 (Exchange)", allItems.goldPacks, shopListEl);
         this._renderSection("📦 특수 패키지 (Bundle)", allItems.bundles, shopListEl);

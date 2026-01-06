@@ -78,6 +78,7 @@ export default class TutorialView extends BaseView {
 
     showStep(data) {
         if (!this.overlay) this.createOverlay();
+        if (!this.overlay) return; // Guard clause
         this.overlay.style.display = 'block';
         this.textElement.textContent = data.message;
 

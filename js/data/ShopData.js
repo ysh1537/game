@@ -115,3 +115,26 @@ export const DONATION_ITEMS = [
         priceLabel: "Donation"
     }
 ];
+
+export const EQUIPMENT_PACKS = [
+    {
+        id: "equip_chest_wood",
+        name: "낡은 장비 상자",
+        description: "일반(Normal) ~ 고급(Unique) 등급의 장비 1개를 획득합니다.",
+        priceType: "gold",
+        priceValue: 1000,
+        rewards: {
+            equipment: { minTier: 1, maxTier: 2 }
+        }
+    },
+    {
+        id: "equip_chest_iron",
+        name: "철제 장비 상자",
+        description: "고급(Unique) ~ 희귀(Rare) 등급의 장비 1개를 획득합니다.",
+        priceType: "gem",
+        priceValue: 30, // 30 Gems = 3300 Gold approx
+        rewards: {
+            equipment: { minTier: 2, maxTier: 3 }
+        }
+    }
+];

@@ -1,0 +1,647 @@
+{
+  "total_issues": 116,
+  "unique_missing_count": 59,
+  "unique_missing_list": [
+    "images/creatures/abyss/creature_deep_one_soldier.png",
+    "images/creatures/abyss/creature_abyss_jellyfish.png",
+    "images/creature_wolf_fenrir.png",
+    "images/creature_god_odin.png",
+    "images/creature_valkyrie.png",
+    "images/creatures/wild/creature_giant_hill.png",
+    "images/creature_dwarf.png",
+    "images/creatures/wild/creature_eagle_iron.png",
+    "images/creatures/asgard/creature_bear_ice.png",
+    "images/creatures/asgard/god_loki.png",
+    "images/creatures/asgard/god_freya.png",
+    "images/creatures/asgard/ratatoskr_squirrel.png",
+    "images/creatures/asgard/god_hel.png",
+    "images/creatures/asgard/muninn_crow.png",
+    "images/creatures/asgard/elk_golden.png",
+    "images/creatures/asgard/bifrost_wisp.png",
+    "images/creatures/asgard/einherjar_ghost.png",
+    "images/creatures/asgard/heimdall_horn_spirit.png",
+    "images/creatures/asgard/mimir_spirit.png",
+    "images/creatures/asgard/shieldmaiden_iron.png",
+    "images/creatures/asgard/ulfhednar_wolf.png",
+    "images/creatures/asgard/wolf_pup_asgard.png",
+    "images/creatures/asgard/yggdrasil_guardian.png",
+    "images/god_thor.png",
+    "images/creatures/unknown/nordic_cat_freya.png",
+    "images/creatures/unknown/creature_snow_spirit.png",
+    "images/sif.png",
+    "images/placeholder_asgard.png",
+    "images/creature_god_hel.png",
+    "images/creature_placeholder_unknown.png",
+    "images/creatures/shangrila/creature_bonsai_spirit.png",
+    "images/creatures/shangrila/creature_lucky_cat_kuro.png",
+    "images/creatures/shangrila/creature_heavenly_maiden_small.png",
+    "images/creatures/shangrila/creature_lantern_ghost.png",
+    "images/creatures/shangrila/creature_paper_charm_seal.png",
+    "images/creatures/shangrila/creature_firefly_night.png",
+    "images/creatures/shangrila/creature_turtle_black.png",
+    "images/creatures/shangrila/creature_crane_sage.png",
+    "images/creatures/wild/creature_griffin_gold.png",
+    "images/creatures/wild/creature_turtle_ancient_wild.png",
+    "images/creatures/wild/creature_dryad_queen.png",
+    "images/creatures/wild/creature_mantis_warrior.png",
+    "images/creatures/wild/creature_orchid_mantis.png",
+    "images/creatures/wild/creature_crystal_crab.png",
+    "images/creatures/wild/creature_electric_eel_king.png",
+    "images/creatures/wild/creature_magma_slime_giant.png",
+    "images/creatures/wild/creature_fossil_stone.png",
+    "images/creatures/wild/creature_forest_guardian.png",
+    "images/creatures/wild/creature_tadpole_wiggle.png",
+    "images/creatures/wild/creature_leaf_insect.png",
+    "images/creatures/wild/creature_willOWisp_green.png",
+    "images/creatures/wild/creature_sun_flower_spirit.png",
+    "images/creatures/wild/creature_moon_flower_spirit.png",
+    "images/creatures/wild/creature_desert_scorpion.png",
+    "images/creatures/wild/creature_beast_behemoth.png",
+    "images/creatures/wild/creature_god_zeus_shy.jpg",
+    "images/creatures/wild/creature_god_zeus_angry.jpg",
+    "images/creatures/wild/creature_god_zeus_love.jpg",
+    "images/creatures/wild/creature_rat_brown.png"
+  ],
+  "details": [
+    {
+      "file": "AbyssData.js",
+      "image": "images/creatures/abyss/creature_deep_one_soldier.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AbyssData.js",
+      "image": "images/creatures/abyss/creature_abyss_jellyfish.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AbyssData.js",
+      "image": "images/creatures/abyss/creature_abyss_jellyfish.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AbyssData.js",
+      "image": "images/creatures/abyss/creature_abyss_jellyfish.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AbyssData.js",
+      "image": "images/creatures/abyss/creature_abyss_jellyfish.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AbyssData.js",
+      "image": "images/creatures/abyss/creature_abyss_jellyfish.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardHeader.js",
+      "image": "images/creature_wolf_fenrir.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creature_god_odin.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creature_valkyrie.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/wild/creature_giant_hill.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creature_dwarf.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/wild/creature_eagle_iron.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/creature_bear_ice.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/god_loki.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/god_freya.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/ratatoskr_squirrel.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/god_hel.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/muninn_crow.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/elk_golden.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/bifrost_wisp.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/einherjar_ghost.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/heimdall_horn_spirit.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/mimir_spirit.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/shieldmaiden_iron.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/ulfhednar_wolf.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/wolf_pup_asgard.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/asgard/yggdrasil_guardian.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/god_thor.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/unknown/nordic_cat_freya.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/creatures/unknown/creature_snow_spirit.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/sif.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "AsgardTail.js",
+      "image": "images/placeholder_asgard.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "HelSnippet.js",
+      "image": "images/creature_god_hel.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "OlympusData.js",
+      "image": "images/creature_placeholder_unknown.png",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "ShangriLaData.js",
+      "image": "images/creatures/shangrila/creature_bonsai_spirit.png",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "ShangriLaData.js",
+      "image": "images/creatures/shangrila/creature_lucky_cat_kuro.png",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "ShangriLaData.js",
+      "image": "images/creatures/shangrila/creature_heavenly_maiden_small.png",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "ShangriLaData.js",
+      "image": "images/creatures/shangrila/creature_lantern_ghost.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "ShangriLaData.js",
+      "image": "images/creatures/shangrila/creature_paper_charm_seal.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "ShangriLaData.js",
+      "image": "images/creatures/shangrila/creature_firefly_night.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "ShangriLaData.js",
+      "image": "images/creatures/shangrila/creature_turtle_black.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "ShangriLaData.js",
+      "image": "images/creatures/shangrila/creature_crane_sage.png",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "temp_clean_batch.js",
+      "image": "images/placeholder_asgard.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_clean_batch.js",
+      "image": "images/creatures/wild/creature_giant_hill.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_header.js",
+      "image": "images/creature_wolf_fenrir.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_odin_valkyrie.js",
+      "image": "images/placeholder_asgard.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_odin_valkyrie.js",
+      "image": "images/placeholder_asgard.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/wild/creature_giant_hill.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creature_dwarf.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/wild/creature_eagle_iron.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/creature_bear_ice.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/god_loki.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/god_freya.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/ratatoskr_squirrel.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/god_hel.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/muninn_crow.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/elk_golden.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/bifrost_wisp.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/einherjar_ghost.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/heimdall_horn_spirit.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/mimir_spirit.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/shieldmaiden_iron.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/ulfhednar_wolf.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/wolf_pup_asgard.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/asgard/yggdrasil_guardian.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/god_thor.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/unknown/nordic_cat_freya.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creatures/unknown/creature_snow_spirit.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/sif.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/placeholder_asgard.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail.js",
+      "image": "images/creature_god_hel.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creature_dwarf.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/wild/creature_eagle_iron.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/creature_bear_ice.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/god_loki.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/god_freya.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/ratatoskr_squirrel.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/god_hel.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/muninn_crow.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/elk_golden.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/bifrost_wisp.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/einherjar_ghost.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/heimdall_horn_spirit.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/mimir_spirit.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/shieldmaiden_iron.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/ulfhednar_wolf.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/wolf_pup_asgard.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/asgard/yggdrasil_guardian.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/god_thor.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/unknown/nordic_cat_freya.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creatures/unknown/creature_snow_spirit.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/sif.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/placeholder_asgard.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "temp_tail_clean.js",
+      "image": "images/creature_god_hel.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_griffin_gold.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_turtle_ancient_wild.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_dryad_queen.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_mantis_warrior.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_orchid_mantis.png",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_crystal_crab.png",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_electric_eel_king.png",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_magma_slime_giant.png",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_fossil_stone.png",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_forest_guardian.png",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_tadpole_wiggle.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_leaf_insect.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_willOWisp_green.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_sun_flower_spirit.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_moon_flower_spirit.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_desert_scorpion.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creature_placeholder_unknown.png",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_beast_behemoth.png",
+      "status": "MISSING"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_god_zeus_shy.jpg",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_god_zeus_angry.jpg",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_god_zeus_love.jpg",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "file": "WildData.js",
+      "image": "images/creatures/wild/creature_rat_brown.png",
+      "status": "MISSING"
+    }
+  ]
+}

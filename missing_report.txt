@@ -1,0 +1,125 @@
+Scanning Data Files for Image Paths...
+Placeholder Size Target: 241475 bytes
+
+====== REPORT RESULTS ======
+Total Issues Found: 116
+
+--- MISSING FILES (101) ---
+[AbyssData.js] images/creatures/abyss/creature_deep_one_soldier.png
+[AbyssData.js] images/creatures/abyss/creature_abyss_jellyfish.png
+[AbyssData.js] images/creatures/abyss/creature_abyss_jellyfish.png
+[AbyssData.js] images/creatures/abyss/creature_abyss_jellyfish.png
+[AbyssData.js] images/creatures/abyss/creature_abyss_jellyfish.png
+[AbyssData.js] images/creatures/abyss/creature_abyss_jellyfish.png
+[AsgardHeader.js] images/creature_wolf_fenrir.png
+[AsgardTail.js] images/creature_god_odin.png
+[AsgardTail.js] images/creature_valkyrie.png
+[AsgardTail.js] images/creatures/wild/creature_giant_hill.png
+[AsgardTail.js] images/creature_dwarf.png
+[AsgardTail.js] images/creatures/wild/creature_eagle_iron.png
+[AsgardTail.js] images/creatures/asgard/creature_bear_ice.png
+[AsgardTail.js] images/creatures/asgard/god_loki.png
+[AsgardTail.js] images/creatures/asgard/god_freya.png
+[AsgardTail.js] images/creatures/asgard/ratatoskr_squirrel.png
+[AsgardTail.js] images/creatures/asgard/god_hel.png
+[AsgardTail.js] images/creatures/asgard/muninn_crow.png
+[AsgardTail.js] images/creatures/asgard/elk_golden.png
+[AsgardTail.js] images/creatures/asgard/bifrost_wisp.png
+[AsgardTail.js] images/creatures/asgard/einherjar_ghost.png
+[AsgardTail.js] images/creatures/asgard/heimdall_horn_spirit.png
+[AsgardTail.js] images/creatures/asgard/mimir_spirit.png
+[AsgardTail.js] images/creatures/asgard/shieldmaiden_iron.png
+[AsgardTail.js] images/creatures/asgard/ulfhednar_wolf.png
+[AsgardTail.js] images/creatures/asgard/wolf_pup_asgard.png
+[AsgardTail.js] images/creatures/asgard/yggdrasil_guardian.png
+[AsgardTail.js] images/god_thor.png
+[AsgardTail.js] images/creatures/unknown/nordic_cat_freya.png
+[AsgardTail.js] images/creatures/unknown/creature_snow_spirit.png
+[AsgardTail.js] images/sif.png
+[AsgardTail.js] images/placeholder_asgard.png
+[HelSnippet.js] images/creature_god_hel.png
+[ShangriLaData.js] images/creatures/shangrila/creature_lantern_ghost.png
+[ShangriLaData.js] images/creatures/shangrila/creature_paper_charm_seal.png
+[ShangriLaData.js] images/creatures/shangrila/creature_firefly_night.png
+[ShangriLaData.js] images/creatures/shangrila/creature_turtle_black.png
+[temp_clean_batch.js] images/placeholder_asgard.png
+[temp_clean_batch.js] images/creatures/wild/creature_giant_hill.png
+[temp_header.js] images/creature_wolf_fenrir.png
+[temp_odin_valkyrie.js] images/placeholder_asgard.png
+[temp_odin_valkyrie.js] images/placeholder_asgard.png
+[temp_tail.js] images/creatures/wild/creature_giant_hill.png
+[temp_tail.js] images/creature_dwarf.png
+[temp_tail.js] images/creatures/wild/creature_eagle_iron.png
+[temp_tail.js] images/creatures/asgard/creature_bear_ice.png
+[temp_tail.js] images/creatures/asgard/god_loki.png
+[temp_tail.js] images/creatures/asgard/god_freya.png
+[temp_tail.js] images/creatures/asgard/ratatoskr_squirrel.png
+[temp_tail.js] images/creatures/asgard/god_hel.png
+[temp_tail.js] images/creatures/asgard/muninn_crow.png
+[temp_tail.js] images/creatures/asgard/elk_golden.png
+[temp_tail.js] images/creatures/asgard/bifrost_wisp.png
+[temp_tail.js] images/creatures/asgard/einherjar_ghost.png
+[temp_tail.js] images/creatures/asgard/heimdall_horn_spirit.png
+[temp_tail.js] images/creatures/asgard/mimir_spirit.png
+[temp_tail.js] images/creatures/asgard/shieldmaiden_iron.png
+[temp_tail.js] images/creatures/asgard/ulfhednar_wolf.png
+[temp_tail.js] images/creatures/asgard/wolf_pup_asgard.png
+[temp_tail.js] images/creatures/asgard/yggdrasil_guardian.png
+[temp_tail.js] images/god_thor.png
+[temp_tail.js] images/creatures/unknown/nordic_cat_freya.png
+[temp_tail.js] images/creatures/unknown/creature_snow_spirit.png
+[temp_tail.js] images/sif.png
+[temp_tail.js] images/placeholder_asgard.png
+[temp_tail.js] images/creature_god_hel.png
+[temp_tail_clean.js] images/creature_dwarf.png
+[temp_tail_clean.js] images/creatures/wild/creature_eagle_iron.png
+[temp_tail_clean.js] images/creatures/asgard/creature_bear_ice.png
+[temp_tail_clean.js] images/creatures/asgard/god_loki.png
+[temp_tail_clean.js] images/creatures/asgard/god_freya.png
+[temp_tail_clean.js] images/creatures/asgard/ratatoskr_squirrel.png
+[temp_tail_clean.js] images/creatures/asgard/god_hel.png
+[temp_tail_clean.js] images/creatures/asgard/muninn_crow.png
+[temp_tail_clean.js] images/creatures/asgard/elk_golden.png
+[temp_tail_clean.js] images/creatures/asgard/bifrost_wisp.png
+[temp_tail_clean.js] images/creatures/asgard/einherjar_ghost.png
+[temp_tail_clean.js] images/creatures/asgard/heimdall_horn_spirit.png
+[temp_tail_clean.js] images/creatures/asgard/mimir_spirit.png
+[temp_tail_clean.js] images/creatures/asgard/shieldmaiden_iron.png
+[temp_tail_clean.js] images/creatures/asgard/ulfhednar_wolf.png
+[temp_tail_clean.js] images/creatures/asgard/wolf_pup_asgard.png
+[temp_tail_clean.js] images/creatures/asgard/yggdrasil_guardian.png
+[temp_tail_clean.js] images/god_thor.png
+[temp_tail_clean.js] images/creatures/unknown/nordic_cat_freya.png
+[temp_tail_clean.js] images/creatures/unknown/creature_snow_spirit.png
+[temp_tail_clean.js] images/sif.png
+[temp_tail_clean.js] images/placeholder_asgard.png
+[temp_tail_clean.js] images/creature_god_hel.png
+[WildData.js] images/creatures/wild/creature_griffin_gold.png
+[WildData.js] images/creatures/wild/creature_turtle_ancient_wild.png
+[WildData.js] images/creatures/wild/creature_dryad_queen.png
+[WildData.js] images/creatures/wild/creature_mantis_warrior.png
+[WildData.js] images/creatures/wild/creature_tadpole_wiggle.png
+[WildData.js] images/creatures/wild/creature_leaf_insect.png
+[WildData.js] images/creatures/wild/creature_willOWisp_green.png
+[WildData.js] images/creatures/wild/creature_sun_flower_spirit.png
+[WildData.js] images/creatures/wild/creature_moon_flower_spirit.png
+[WildData.js] images/creatures/wild/creature_desert_scorpion.png
+[WildData.js] images/creatures/wild/creature_beast_behemoth.png
+[WildData.js] images/creatures/wild/creature_rat_brown.png
+
+--- PLACEHOLDER FILES (15) ---
+[OlympusData.js] images/creature_placeholder_unknown.png (Size: 241475)
+[ShangriLaData.js] images/creatures/shangrila/creature_bonsai_spirit.png (Size: 241475)
+[ShangriLaData.js] images/creatures/shangrila/creature_lucky_cat_kuro.png (Size: 241475)
+[ShangriLaData.js] images/creatures/shangrila/creature_heavenly_maiden_small.png (Size: 241475)
+[ShangriLaData.js] images/creatures/shangrila/creature_crane_sage.png (Size: 241475)
+[WildData.js] images/creatures/wild/creature_orchid_mantis.png (Size: 241475)
+[WildData.js] images/creatures/wild/creature_crystal_crab.png (Size: 241475)
+[WildData.js] images/creatures/wild/creature_electric_eel_king.png (Size: 241475)
+[WildData.js] images/creatures/wild/creature_magma_slime_giant.png (Size: 241475)
+[WildData.js] images/creatures/wild/creature_fossil_stone.png (Size: 241475)
+[WildData.js] images/creatures/wild/creature_forest_guardian.png (Size: 241475)
+[WildData.js] images/creature_placeholder_unknown.png (Size: 241475)
+[WildData.js] images/creatures/wild/creature_god_zeus_shy.jpg (Size: 241475)
+[WildData.js] images/creatures/wild/creature_god_zeus_angry.jpg (Size: 241475)
+[WildData.js] images/creatures/wild/creature_god_zeus_love.jpg (Size: 241475)

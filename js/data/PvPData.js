@@ -34,3 +34,9 @@ export function getMockPlayerById(id) {
 export function getRankings() {
     return MOCK_RANKINGS;
 }
+
+export function searchMockPlayers(query = '') {
+    if (!query) return MOCK_RANKINGS;
+    const lowerQ = query.toLowerCase();
+    return MOCK_RANKINGS.filter(p => p.name.toLowerCase().includes(lowerQ));
+}

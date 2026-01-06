@@ -43,8 +43,8 @@
                 cm.owned.push(newCreature);
                 count++;
 
-                // 이벤트 발생 (UI 업데이트용)
-                cm.emit('summon:result', newCreature);
+                // 이벤트 발생 (UI 업데이트용) - 소환 애니메이션 제거
+                // cm.emit('summon:result', newCreature);
             }
         });
 
@@ -54,10 +54,7 @@
 
         console.log(`✅ 총 ${count}마리의 크리처가 복구(지급)되었습니다.`);
 
-        // UI 표시
-        setTimeout(() => {
-            alert(`[데이터 긴급 복구 완료]\n\n총 ${count}마리의 크리처를 다시 찾았습니다!\n\n(확인을 누르면 자동 저장됩니다)`);
-            window.game.save();
-        }, 500);
+        // 조용히 저장 (알림 제거)
+        window.game.save();
     }
 })();

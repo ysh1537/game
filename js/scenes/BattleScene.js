@@ -121,9 +121,25 @@ export default class BattleScene {
             </div>
             <div class="status-effect-container"></div>
             <img src="${entity.image}" alt="${entity.name}" onerror="this.src='images/creature_slime_fire.png'">
+            <div class="element-icon" style="position:absolute; top:-8px; left:-8px; font-size:16px; z-index:10; filter:drop-shadow(0 0 2px black);">
+                ${this.getElementIcon(entity.elements ? entity.elements[0] : null)}
+            </div>
             <div class="name-tag">${entity.name}</div>
         `;
         return div;
+    }
+
+    getElementIcon(element) {
+        if (!element) return '⚪';
+        const map = {
+            'fire': '🔥',
+            'water': '💧',
+            'earth': '🌿',
+            'wind': '🍃',
+            'light': '✨',
+            'dark': '🌑'
+        };
+        return map[element.toLowerCase()] || '⚪';
     }
 
     async onBattleAction(data) {
@@ -159,7 +175,14 @@ export default class BattleScene {
             } else if (isCrit) {
                 p.innerHTML = `<span style="color:#4cd137">${attName}</span>이(가) <span style="color:#e74c3c">${defName}</span>에게 <span style="color:#ff4500; font-weight:bold;">💥 ${damage} 크리티컬!</span>`;
             } else {
-                p.innerHTML = `<span style="color:#4cd137">${attName}</span>이(가) <span style="color:#e74c3c">${defName}</span>에게 <span style="color:#f1c40f;">${damage}</span>의 피해를 입혔습니다!`;
+                let damageText = `<span style="color:#f1c40f;">${damage}</span>`;
+                // [NEW] Elemental Text in Log
+                if (data.elemental === 'critical') {
+                    damageText = `<span style="color:#ff4757; font-weight:bold;">${damage} (약점!)</span>`;
+                } else if (data.elemental === 'resist') {
+                    damageText = `<span style="color:#95a5a6;">${damage} (반감)</span>`;
+                }
+                p.innerHTML = `<span style="color:#4cd137">${attName}</span> > <span style="color:#e74c3c">${defName}</span> : ${damageText}`;
             }
             logBox.appendChild(p);
             logBox.scrollTop = logBox.scrollHeight;
@@ -452,12 +475,34 @@ export default class BattleScene {
         modal.style.cssText = "position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:1000;";
 
         const modeText = autoBattleMode === 'repeat' ? '현재 스테이지 반복' : '다음 스테이지 진행';
-        const nextText = nextStageId ? (autoBattleMode === 'repeat' ? '재도전 중...' : `Stage ${nextStageId} 진입 중...`) : '종료 중...';
+        // const nextText = nextStageId ? (autoBattleMode === 'repeat' ? '재도전 중...' : `Stage ${nextStageId} 진입 중...`) : '종료 중...';
+
+        let rewardHtml = '';
+        if (isWin && rewards) {
+            rewardHtml += `<div style="color:#2ecc71; margin-bottom:5px;">💰 ${rewards.gold} Gold + 🌟 ${rewards.exp} Exp</div>`;
+            if (rewards.item) {
+                const itemType = rewards.item.type === 'weapon' ? '⚔️' : (rewards.item.type === 'armor' ? '🛡️' : '💍');
+                const rarityColor = {
+                    'Normal': '#9e9e9e', 'Rare': '#42a5f5', 'SR': '#ff7043', 'SSR': '#ef5350', 'UR': '#ffd700'
+                }[rewards.item.rarity] || '#ffffff';
+
+                rewardHtml += `
+                    <div style="margin-top:10px; padding:10px; background:rgba(255,255,255,0.1); border-radius:8px; border:1px solid ${rarityColor}; display:flex; align-items:center; gap:10px; animation: popIn 0.5s ease;">
+                        <span style="font-size:1.5rem;">${itemType}</span>
+                        <div style="text-align:left;">
+                            <div style="color:${rarityColor}; font-weight:bold;">${rewards.item.name}</div>
+                            <div style="color:#aaa; font-size:0.8rem;">${rewards.item.rarity} 아이템 획득!</div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
 
         modal.innerHTML = `
             <h1 style="color:${isWin ? '#f1c40f' : '#e74c3c'}; font-size:3.5em; font-family:'Outfit';">${isWin ? "VICTORY!" : "DEFEAT"}</h1>
             <p style="color:#eee; font-size:1.4em;">${reason}</p>
-            ${isWin && rewards ? `<div style="color:#2ecc71;">💰 ${rewards.gold} Gold + 🌟 ${rewards.exp} Exp</div>` : ''}
+            ${rewardHtml}
+
             <button id="btn-close-battle" class="cyber-btn" style="margin-top:20px;">확인</button>
             ${autoBattleMode !== 'off' && isWin ? `
                 <div style="margin-top:20px; width:60%;">

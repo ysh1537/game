@@ -2,7 +2,9 @@
 import EventEmitter from '../utils/EventEmitter.js';
 import { WORLDS } from '../data/CreatureData.js';
 import { SKILLS, TARGET_TYPES, SKILL_TYPES, STATUS_EFFECTS, getSkillData } from '../data/SkillData.js';
-import { GameConfig } from '../data/GameConfig.js'; // [Refactor]
+import { getElementMultiplier } from '../data/ElementData.js';
+import { GameConfig } from '../data/GameConfig.js';
+import { ARTIFACT_DEFS } from '../data/ArtifactData.js'; // [NEW] Import for Drops
 
 export default class BattleManager extends EventEmitter {
     constructor(game, events, resourceManager, userCreatures) {
@@ -497,14 +499,20 @@ export default class BattleManager extends EventEmitter {
         // [Mod] 방어력 효율 감소 (분모 100 -> 200), 기본 데미지 배율 증가 (1.5 -> 2.0)
         const defFactor = 200 / (200 + defender.def);
         let damage = Math.max(1, attacker.atk * defFactor * 2.0);
-        const advantage = this.checkElementalAdvantage(attacker.elements, defender.elements);
+
+        // [Phase 5 Refactor] Use ElementData
+        const atkElem = (attacker.elements && attacker.elements.length > 0) ? attacker.elements[0] : null;
+        const defElem = (defender.elements && defender.elements.length > 0) ? defender.elements[0] : null;
+
+        const multiplier = getElementMultiplier(atkElem, defElem);
+        damage *= multiplier;
+
         let isCrit = false;
         let isGlancing = false;
 
-        if (advantage === 1) { // Advantage
-            damage *= 1.5; // [Phase 5] Increased to 1.5x
-        } else if (advantage === -1) { // Disadvantage
-            damage *= 0.7;
+        if (multiplier > 1.0) { // Advantage
+            // damage already multiplied
+        } else if (multiplier < 1.0) { // Disadvantage
             isGlancing = Math.random() < 0.25;
         }
 
@@ -567,7 +575,10 @@ export default class BattleManager extends EventEmitter {
             damage: finalDamage,
             isCrit: isCrit,
             isMiss: isGlancing,
-            elemental: advantage === 1 ? 'critical' : (advantage === -1 ? 'resist' : 'normal'), // Use 'critical' for Weakness for now to trigger big numbers, or 'weak' if UI supports it
+            damage: finalDamage,
+            isCrit: isCrit,
+            isMiss: isGlancing,
+            elemental: multiplier > 1.0 ? 'critical' : (multiplier < 1.0 ? 'resist' : 'normal'), // 'critical' maps to red text usually, 'resist' to grey
             attackerSp: attacker.sp,
             defenderSp: defender.sp,
             currentHp: defender.hp,
@@ -749,26 +760,12 @@ export default class BattleManager extends EventEmitter {
     }
 
     checkElementalAdvantage(atkElems, defElems) {
-        if (!atkElems || !defElems) return 0;
-        const A = atkElems[0]; // Primary Element
-        const D = defElems[0];
+        // [Refactor] Wrapper for backward compatibility or internal logic if needed
+        if (!atkElems || !defElems || atkElems.length === 0 || defElems.length === 0) return 0;
 
-        // [Phase 4] Expanded Elemental Chart
-        // Fire > Wind > Earth > Water > Fire
-        // Light <> Dark
-        // Metal > Nature
-        const WIN = {
-            'Fire': 'Wind', 'Wind': 'Earth', 'Earth': 'Water', 'Water': 'Fire',
-            'Light': 'Dark', 'Dark': 'Light',
-            'Metal': 'Nature', 'Nature': 'Earth'
-        };
-        const LOSE = {
-            'Wind': 'Fire', 'Earth': 'Wind', 'Water': 'Earth', 'Fire': 'Water',
-            'Nature': 'Metal'
-        };
-
-        if (WIN[A] === D) return 1;
-        if (LOSE[A] === D) return -1;
+        const mult = getElementMultiplier(atkElems[0], defElems[0]);
+        if (mult > 1.0) return 1;
+        if (mult < 1.0) return -1;
         return 0;
     }
 
@@ -890,13 +887,32 @@ export default class BattleManager extends EventEmitter {
             rewards: { gold: earnedGold, exp: earnedExp } // Pass actual rewards
         });
 
+        // [NEW] Artifact Drop System (Simple Implementation)
+        let droppedItem = null;
+        if (isWin && ARTIFACT_DEFS) {
+            // Base Drop Rate: 30%
+            if (Math.random() < 0.3) {
+                const keys = Object.keys(ARTIFACT_DEFS);
+                // Simple Weighted Drop: Lower tiers more common
+                // Filter by Tier if implemented, else random
+                const randomKey = keys[Math.floor(Math.random() * keys.length)];
+
+                // Add to Inventory
+                if (this.game.inventoryManager.addItem(randomKey, 1)) {
+                    droppedItem = ARTIFACT_DEFS[randomKey];
+                    console.log(`[Battle] Item Dropped: ${droppedItem.name}`);
+                    // Notify UI (Optional: Toast or specialized event)
+                }
+            }
+        }
+
         const lastStageId = this.currentStageId; // Preserve for event
         this.currentStageId = null;
 
         this.events.emit('battle:end', {
             isWin,
             reason,
-            rewards: { gold: earnedGold, exp: earnedExp },
+            rewards: { gold: earnedGold, exp: earnedExp, item: droppedItem }, // Pass Item info
             autoBattleMode: this.autoBattleMode,
             nextStageId: nextStageId, // 다음 예정 스테이지 (뷰에서 표시용)
             autoDelay: 2000 / (this.battleSpeed || 1) // 딜레이 정보 전달

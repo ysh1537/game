@@ -28,6 +28,7 @@ import PaymentManager from '../managers/PaymentManager.js';
 import DateManager from '../managers/DateManager.js';
 import { AIManager } from '../managers/AIManager.js'; // [Mod] Import AI Manager
 import AffinityManager from '../managers/AffinityManager.js'; // [NEW]
+import OutpostManager from '../managers/OutpostManager.js'; // [NEW]
 
 import SaveManager from '../utils/SaveManager.js';
 import BattleScene from '../scenes/BattleScene.js';
@@ -59,6 +60,7 @@ export default class Game {
         this.paymentManager.init();
         this.dateManager = new DateManager(this);
         this.affinityManager = new AffinityManager(this); // [NEW]
+        this.outpostManager = new OutpostManager(this); // [NEW]
 
         this.facilityManager = new FacilityManager(this.events, this.resourceManager);
 
@@ -93,6 +95,7 @@ export default class Game {
         this.audioManager = new AudioManager(this);
 
         this.deckManager.init();
+        this.outpostManager.init(); // [NEW]
         this.loop = new Loop(this.update.bind(this));
 
         // [연구] 최대 에너지 연동
@@ -219,6 +222,14 @@ export default class Game {
             console.log("저장 데이터가 없습니다. 기본 초기화.");
             // 초기값 렌더링
             this.renderResources(this.resourceManager.getResources());
+
+            // [NEW] Starter Pack Injection (For testing/new users)
+            if (this.inventoryManager) {
+                this.inventoryManager.addItem('sword_wood', 1);
+                this.inventoryManager.addItem('armor_cloth', 1);
+                this.inventoryManager.addItem('ring_copper', 1);
+                console.log("[Game] Starter Equipment Pack Added: Wooden Sword, Coth Armor, Copper Ring");
+            }
         }
 
         // 2. 리소스 변경 구독

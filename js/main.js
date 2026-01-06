@@ -2,6 +2,7 @@
  * main.js - Game Entry Point & UI Controller
  */
 import Game from './core/Game.js';
+import { firebaseService } from './firebase/FirebaseService.js'; // [NEW]
 import AuthView from './ui/AuthView.js';
 import BattleView from './ui/BattleView.js';
 import CreatureView from './ui/CreatureView.js';
@@ -22,6 +23,13 @@ const views = {};
 
 window.onload = () => {
     console.log("[Main] Window Loaded");
+
+    // [New] Init Firebase
+    firebaseService.init((user) => {
+        console.log("[Main] Firebase Auth State Changed:", user ? user.email : "Logged Out");
+        // Reload or Notify Game? 
+        // For now, Game will check firebase state when needed (Save/Load).
+    });
 
     // 1. Game Core Init
     game = new Game();
@@ -302,7 +310,11 @@ function initLobbyInteraction() {
         } else {
             img.className = `touch-react-${part}`;
         }
-        setTimeout(() => img.className = '', 500);
+
+        // Restore Breathing after interaction anim (500ms)
+        setTimeout(() => {
+            img.className = 'breathing-effect';
+        }, 500);
 
         // Dialogue
         if (!isRejected) {

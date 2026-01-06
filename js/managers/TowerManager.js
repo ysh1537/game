@@ -56,10 +56,10 @@ export default class TowerManager extends EventEmitter {
             sp: 0,
             maxSp: 100,
             skillId: 'default_attack',
-            image: 'images/creature_golem_mud.png', // Placeholder
+            image: 'images/creature_golem_mud_girl.png',
             elements: [],
             statusEffects: [],
-            sprites: { idle: 'images/creature_golem_mud.png' }
+            sprites: { idle: 'images/creature_golem_mud_girl.png' }
         };
     }
 

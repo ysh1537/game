@@ -333,7 +333,7 @@ export default class BattleView extends BaseView {
                                 style="width:50px; height:50px; border-radius:50%; border:3px solid ${rankColor}; object-fit:cover;"
                                 onerror="this.src='images/placeholder.png'">
                             <div style="position:absolute; bottom:-2px; right:-2px; background:${rankColor}; padding:1px 4px; border-radius:3px; font-size:0.6em; font-weight:bold;">
-                                ${p.rank.charAt(0)}
+                                ${String(p.rank || 'N').charAt(0)}
                             </div>
                         </div>
                         <div>

@@ -1511,8 +1511,30 @@ export const OLYMPUS_CREATURES = [
         relationships: { likes: [], dislikes: [], rival: null },
         touchLines: { idle: ["..."], interaction: ["..."], gift: ["Thank you."], special: ["!"] },
         lines: { normal: "..." }
-    }
-,
+    },
+    {
+        id: "archangel_michael",
+        name: "대천사 미카엘",
+        rarity: RANKS.SSR,
+        world: WORLDS.OLYMPUS,
+        elements: ["Light"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creatures/olympus/creature_archangel_michael.png",
+        sprites: {
+            "idle": "images/creatures/olympus/creature_archangel_michael.png"
+        },
+        prompts: {
+            "base": "anime style, 대천사 미카엘"
+        },
+        lore: {
+            "title": "천상의 전사",
+            "story": "정의와 빛의 힘을 지닌 전사입니다.",
+            "personality": "정의로운"
+        },
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: { idle: ["정의는 승리한다."], interaction: ["함께 싸우자."], gift: ["감사."], special: ["!"] },
+        lines: { normal: "어둠을 물리친다!" }
+    },
     {
         id: "nymph_dark",
         name: "어둠의 님프",

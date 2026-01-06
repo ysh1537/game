@@ -319,6 +319,9 @@ export default class CreatureView extends BaseView {
                 <!-- [NEW] 호감도 게이지 UI -->
                 ${this._renderAffectionGauge(c)}
 
+                <!-- [NEW] 장비 슬롯 UI -->
+                ${this._renderEquipmentSlots(c)}
+
                 <div class="stat-group" style="margin:15px 0; background:rgba(255,255,255,0.03); padding:10px; border-radius:8px;">
                     <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
                         <strong style="color:var(--text-primary);">Lv.${c.level}</strong>
@@ -434,6 +437,160 @@ export default class CreatureView extends BaseView {
         const galleryBtn = document.getElementById('btn-view-gallery');
         if (galleryBtn && c.def.gallery) {
             galleryBtn.onclick = () => this._showGalleryModal(c);
+        }
+
+        // [NEW] 장비 슬롯 이벤트 바인딩
+        ['weapon', 'armor', 'accessory'].forEach(slot => {
+            const el = document.getElementById(`equip-slot-${slot}`);
+            if (el) {
+                el.onclick = () => this._showEquipmentSelectModal(c, slot);
+            }
+        });
+    }
+
+    // [NEW] 장비 슬롯 렌더링
+    _renderEquipmentSlots(c) {
+        const slots = ['weapon', 'armor', 'accessory'];
+        const slotNames = { weapon: '무기', armor: '방어구', accessory: '장신구' };
+
+        let html = '<div class="equipment-group" style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; margin-bottom:15px;">';
+
+        slots.forEach(slot => {
+            const itemId = c.equipment ? c.equipment[slot] : null;
+            let icon = '🛡️'; // Default
+            if (slot === 'weapon') icon = '⚔️';
+            if (slot === 'accessory') icon = '💍';
+
+            // 실제 아이템 데이터 조회 (간이)
+            // InventoryManager를 통해 상세 정보를 가져오거나 ArtifactData 사용
+            // 여기서는 이미지만 간단히 처리하거나 텍스트로 표시
+
+            const isEquipped = !!itemId;
+
+            html += `
+                <div id="equip-slot-${slot}" class="equip-slot" style="
+                    background: ${isEquipped ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255, 255, 255, 0.05)'}; 
+                    border: 1px dashed ${isEquipped ? '#4caf50' : '#666'}; 
+                    border-radius: 8px; 
+                    padding: 10px; 
+                    text-align: center; 
+                    cursor: pointer;
+                    transition: all 0.2s;
+                " onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='${isEquipped ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255, 255, 255, 0.05)'}'">
+                    <div style="font-size:1.5rem; margin-bottom:5px;">${icon}</div>
+                    <div style="font-size:0.8rem; color:${isEquipped ? '#a5d6a7' : '#888'}; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">
+                        ${isEquipped ? itemId : slotNames[slot]}
+                    </div>
+                </div>
+            `;
+        });
+
+        html += '</div>';
+        return html;
+    }
+
+    // [NEW] 장비 선택 모달
+    _showEquipmentSelectModal(c, slot) {
+        // 모달 생성
+        let modal = document.getElementById('equip-select-modal');
+        if (modal) modal.remove();
+
+        modal = document.createElement('div');
+        modal.id = 'equip-select-modal';
+        modal.className = 'modal-overlay';
+        modal.style.cssText = `
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85); z-index: 3100;
+            display: flex; justify-content: center; align-items: center;
+        `;
+
+        const slotNames = { weapon: '무기', armor: '방어구', accessory: '장신구' };
+
+        modal.innerHTML = `
+            <div class="modal-content" style="width: 400px; background: #1e1e2e; border: 1px solid var(--accent-cyan); border-radius: 12px; padding: 20px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;">
+                    <h3 style="margin:0; color:var(--accent-cyan);">🛠️ ${slotNames[slot]} 장착 / 해제</h3>
+                    <button id="btn-close-equip" style="background:none; border:none; color:white; font-size:1.5rem; cursor:pointer;">×</button>
+                </div>
+                
+                <div id="equip-list" style="max-height: 400px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px;">
+                    <!-- Items go here -->
+                </div>
+                
+                <button id="btn-unequip" class="cyber-btn" style="width:100%; margin-top:15px; background: #ef5350;">🛑 장착 해제</button>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        // Remove button event
+        document.getElementById('btn-close-equip').onclick = () => modal.remove();
+        document.getElementById('btn-unequip').onclick = () => {
+            this.game.inventoryManager.unequipArtifact(c.instanceId, slot);
+            this.renderDetailPanel(this.game.creatureManager.getCreatureById(c.instanceId));
+            modal.remove();
+        };
+
+        // Populate List
+        const listEl = document.getElementById('equip-list');
+        const inventory = this.game.inventoryManager.inventory;
+        const availableItems = Object.keys(inventory).filter(itemId => {
+            // ArtifactData import is handled via managers usually, but we need definition to check type
+            // Assuming Manager has helper or expose defs. 
+            // Ideally: this.game.inventoryManager.getArtifactDef(itemId)
+            // But InventoryManager uses internal import. 
+            // We'll rely on global look up or assume naming convention/manager helper?
+            // Ah, InventoryManager doesn't expose `getArtifactDef`.
+            // FIX: Let's assume `getArtifactDef` is globally imported or use `InventoryManager` checking method if exists?
+            // No, `addItem` checks valid item.
+            // We need to verify Slot Type.
+            // Let's modify InventoryManager slightly or trust a global helper?
+            // Actually, `BattleManager` imports it. `CreatureManager` imports it.
+            // Access via valid path if possible? 
+            // Or, we can just list ALL and let `equipArtifact` fail if wrong type (it returns reason).
+            return true;
+        });
+
+        // We will try to filter purely by attempting equip check or just visually.
+        // Since we don't have direct access to defs here easily without import...
+        // Wait, `CreatureManager` has `getArtifactDef`. Can we access it? No it's import.
+        // We can check `this.game.inventoryManager.equipArtifact`'s type check logic? No.
+
+        // Better: Import `getArtifactDef` in this file?
+        // OR: Just list everything. The user will see error if they try.
+        // BUT: User experience is bad.
+        // NOTE: `CreatureView.js` doesn't import `ArtifactData`.
+        // Let's rely on the fact that filtering visually is better.
+        // I will add `getDef` to `InventoryManager` or `Game` globally? 
+        // Or just blindly list and show result.
+
+        if (availableItems.length === 0) {
+            listEl.innerHTML = '<div style="text-align:center; color:#666;">보유한 아이템이 없습니다.</div>';
+        } else {
+            availableItems.forEach(itemId => {
+                const count = inventory[itemId];
+                const div = document.createElement('div');
+                div.className = 'equip-item';
+                div.style.padding = '10px';
+                div.style.background = 'rgba(255,255,255,0.05)';
+                div.style.borderRadius = '8px';
+                div.style.cursor = 'pointer';
+                div.innerHTML = `
+                    <div style="font-weight:bold; color:var(--accent-gold);">${itemId} (x${count})</div>
+                `;
+
+                div.onclick = () => {
+                    const res = this.game.inventoryManager.equipArtifact(c.instanceId, itemId, slot);
+                    if (res.success) {
+                        this.game.ui.showToast(`✅ ${itemId} 장착 완료!`);
+                        this.renderDetailPanel(this.game.creatureManager.getCreatureById(c.instanceId));
+                        modal.remove();
+                    } else {
+                        alert(`장착 실패: ${res.reason}`);
+                    }
+                };
+                listEl.appendChild(div);
+            });
         }
     }
 

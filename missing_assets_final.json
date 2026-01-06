@@ -1,0 +1,167 @@
+[
+  {
+    "file": "AbyssData.js",
+    "image": "images/creatures/abyss/creature_deep_one_soldier.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "AbyssData.js",
+    "image": "images/creatures/abyss/creature_abyss_jellyfish.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "AbyssData.js",
+    "image": "images/creatures/abyss/creature_abyss_jellyfish.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "AbyssData.js",
+    "image": "images/creatures/abyss/creature_abyss_jellyfish.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "AbyssData.js",
+    "image": "images/creatures/abyss/creature_abyss_jellyfish.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "AbyssData.js",
+    "image": "images/creatures/abyss/creature_abyss_jellyfish.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "OlympusData.js",
+    "image": "images/creature_placeholder_unknown.png",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "ShangriLaData.js",
+    "image": "images/creatures/shangrila/creature_bonsai_spirit.png",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "ShangriLaData.js",
+    "image": "images/creatures/shangrila/creature_lucky_cat_kuro.png",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "ShangriLaData.js",
+    "image": "images/creatures/shangrila/creature_heavenly_maiden_small.png",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "ShangriLaData.js",
+    "image": "images/creatures/shangrila/creature_lantern_ghost.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "ShangriLaData.js",
+    "image": "images/creatures/shangrila/creature_paper_charm_seal.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "ShangriLaData.js",
+    "image": "images/creatures/shangrila/creature_firefly_night.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "ShangriLaData.js",
+    "image": "images/creatures/shangrila/creature_crane_sage.png",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_turtle_ancient_wild.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_orchid_mantis.png",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_crystal_crab.png",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_electric_eel_king.png",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_magma_slime_giant.png",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_fossil_stone.png",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_forest_guardian.png",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_tadpole_wiggle.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_leaf_insect.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_willOWisp_green.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_sun_flower_spirit.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_moon_flower_spirit.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_desert_scorpion.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creature_placeholder_unknown.png",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_beast_behemoth.png",
+    "status": "MISSING"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_god_zeus_shy.jpg",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_god_zeus_angry.jpg",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_god_zeus_love.jpg",
+    "status": "PLACEHOLDER"
+  },
+  {
+    "file": "WildData.js",
+    "image": "images/creatures/wild/creature_rat_brown.png",
+    "status": "MISSING"
+  }
+]

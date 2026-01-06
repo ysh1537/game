@@ -84,7 +84,7 @@ export const ASGARD_CREATURES = [
             title: "지혜의 대가를 치른 자",
             story: "아홉 세계를 다스리는 북유럽의 최고신. 지혜를 위해 한쪽 눈을 희생하고, 우주의 비밀을 알기 위해 위그드라실에 9일간 목을 매달았다. 냉철하고 계산적이지만, 인정받은 전사에게는 발할라의 문을 연다. 라그나로크에서 펜리르에게 삼켜질 운명.",
             origin: "북유럽 신화 / 아스가르드",
-            personality: "Unknown"
+            personality: "Wise & Domineering"
         },
         relationships: [
             { id: "wolf_fenrir", type: "rival", desc: "운명적 숙적. 라그나로크에서 오딘을 삼킬 자." },
@@ -96,7 +96,17 @@ export const ASGARD_CREATURES = [
             gift: ["..."],
             special: ["!!!"]
         },
-        lines: { normal: "..." },
+        lines: {
+            normal: "지혜를 탐구하는 자만이 진실에 도달할 수 있다.",
+            touch_head: "신들의 왕에게 손을 대는가? 무례하군.",
+            touch_head_reject: "물러거라. 지금은 사색 중이다.",
+            touch_head_love: "후훗, 나의 머리를 쓰다듬을 수 있는 건 그대뿐이군.",
+            touch_chest: "궁니르의 창끝은 언제나 적을 향해 있다.",
+            touch_chest_reject: "갑옷에 손대지 마라. 전쟁의 흔적이다.",
+            touch_chest_love: "나의 심장, 그리고 아홉 세계는 그대의 것이다.",
+            touch_legs: "이 발걸음은 라그나로크를 향한 것이다.",
+            touch_legs_love: "그대와 함께라면, 종말의 날도 두렵지 않구나."
+        },
         synergy: { ally: ["valkyrie"], rival: ["wolf_fenrir"] }
     },
     {
@@ -104,7 +114,6 @@ export const ASGARD_CREATURES = [
         name: "전장의 깃발 브륀힐트",
         rarity: RANKS.SSR,
         world: WORLDS.ASGARD,
-        elements: ["Light", "Metal", "Wind"],
         ego: "Soldier",
         baseStr: 40, baseInt: 40,
         skillId: "valkyrie_skill",
@@ -274,7 +283,7 @@ export const ASGARD_CREATURES = [
             special: ["!!!"]
         }
     }
-,
+    ,
     {
         id: "god_freya",
         name: "여신 프레이야",
@@ -304,7 +313,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "nordic_cat_freya",
         name: "프레이야의 고양이",
@@ -334,7 +343,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "heimdall_horn_spirit",
         name: "헤임달의 뿔 정령",
@@ -364,7 +373,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "mimir_spirit",
         name: "미미르의 지혜 정령",
@@ -394,7 +403,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "muninn_crow",
         name: "까마귀 무닌",
@@ -424,7 +433,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "ratatoskr_squirrel",
         name: "다람쥐 라타토스크",
@@ -454,7 +463,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "shieldmaiden_iron",
         name: "강철의 방패처녀",
@@ -484,7 +493,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "sleipnir_foal",
         name: "슬레이프니르 망아지",
@@ -514,7 +523,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "ulfhednar_wolf",
         name: "울프헤드나르 늑대",
@@ -544,7 +553,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "valkyrie_leader_gunnr",
         name: "발키리 대장 군르",
@@ -574,7 +583,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "valkyrie_recruit",
         name: "발키리 신병",
@@ -604,7 +613,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "wolf_pup_asgard",
         name: "아스가르드 늑대개",
@@ -634,7 +643,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "yggdrasil_guardian",
         name: "이그드라실 수호자",
@@ -664,7 +673,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "bifrost_wisp",
         name: "비프로스트 위습",
@@ -694,7 +703,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "creature_dwarf",
         name: "드워프 대장장이",
@@ -724,7 +733,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "creature_eagle_iron",
         name: "강철 독수리",
@@ -754,7 +763,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "einherjar_ghost",
         name: "에인헤랴르 영혼",
@@ -784,7 +793,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "elk_golden",
         name: "황금 엘크",
@@ -814,7 +823,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "fire_giant_scout",
         name: "불의 거인 정찰병",
@@ -844,7 +853,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "frost_giant_warrior",
         name: "서리 거인 전사",
@@ -874,7 +883,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "snake_world_jormungandr",
         name: "요르문간드",
@@ -904,7 +913,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "goat_lightning",
         name: "천둥 염소",
@@ -934,7 +943,7 @@ export const ASGARD_CREATURES = [
         touchLines: { idle: ["..."], interaction: ["!"], gift: ["Thanks"], special: ["?!"] },
         lines: { normal: "..." }
     }
-,
+    ,
     {
         id: "ice_spirit_small",
         name: "작은 얼음 정령",
