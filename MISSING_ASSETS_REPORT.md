@@ -1,0 +1,1025 @@
+# Missing Assets Report
+
+Generated at: 2026-01-12T08:01:55.273Z
+Missing: 1010 / 1755
+
+## Asgard (57)
+- **최고신 오딘** [sprite:victory]: `images/creatures/asgard/creature_god_odin_victory.png`
+- **최고신 오딘** [sprite:defeat]: `images/creatures/asgard/creature_god_odin_defeat.png`
+- **천둥의 신 토르** [sprite:sad]: `images/creatures/asgard/creature_god_thor_sad.png`
+- **천둥의 신 토르** [sprite:angry]: `images/creatures/asgard/creature_god_thor_angry.png`
+- **천둥의 신 토르** [sprite:gallery:lv1]: `images/creatures/asgard/creature_god_thor_gallery_lv1.png`
+- **천둥의 신 토르** [sprite:gallery:lv2]: `images/creatures/asgard/creature_god_thor_gallery_lv2.png`
+- **천둥의 신 토르** [sprite:gallery:lv3]: `images/creatures/asgard/creature_god_thor_gallery_lv3.png`
+- **교활한 신 로키** [sprite:sad]: `images/creatures/asgard/creature_god_loki_sad.png`
+- **교활한 신 로키** [sprite:angry]: `images/creatures/asgard/creature_god_loki_angry.png`
+- **교활한 신 로키** [sprite:gallery:lv1]: `images/creatures/asgard/creature_god_loki_gallery_lv1.png`
+- **교활한 신 로키** [sprite:gallery:lv2]: `images/creatures/asgard/creature_god_loki_gallery_lv2.png`
+- **교활한 신 로키** [sprite:gallery:lv3]: `images/creatures/asgard/creature_god_loki_gallery_lv3.png`
+- **죽음의 여신 헬** [sprite:victory]: `images/creatures/asgard/creature_god_hel_victory.png`
+- **죽음의 여신 헬** [sprite:defeat]: `images/creatures/asgard/creature_god_hel_defeat.png`
+- **펜리르의 권속** [sprite:joy]: `images/creatures/wild/creature_wolf_dire_joy.png`
+- **펜리르의 권속** [sprite:sad]: `images/creatures/wild/creature_wolf_dire_sad.png`
+- **펜리르의 권속** [sprite:angry]: `images/creatures/wild/creature_wolf_dire_angry.png`
+- **펜리르의 권속** [sprite:skill]: `images/creatures/wild/creature_wolf_dire_skill.png`
+- **펜리르의 권속** [sprite:victory]: `images/creatures/wild/creature_wolf_dire_victory.png`
+- **펜리르의 권속** [sprite:defeat]: `images/creatures/wild/creature_wolf_dire_defeat.png`
+- **펜리르의 권속** [sprite:gallery:lv1]: `images/creatures/wild/creature_wolf_dire_gallery_lv1.png`
+- **진흙 트롤** [sprite:joy]: `images/creatures/wild/creature_golem_mud_joy.png`
+- **진흙 트롤** [sprite:sad]: `images/creatures/wild/creature_golem_mud_sad.png`
+- **진흙 트롤** [sprite:angry]: `images/creatures/wild/creature_golem_mud_angry.png`
+- **진흙 트롤** [sprite:skill]: `images/creatures/wild/creature_golem_mud_skill.png`
+- **진흙 트롤** [sprite:victory]: `images/creatures/wild/creature_golem_mud_victory.png`
+- **진흙 트롤** [sprite:defeat]: `images/creatures/wild/creature_golem_mud_defeat.png`
+- **진흙 트롤** [sprite:gallery:lv1]: `images/creatures/wild/creature_golem_mud_gallery_lv1.png`
+- **빌스킬니르 쥐** [sprite:joy]: `images/creatures/wild/creature_rat_brown_joy.png`
+- **빌스킬니르 쥐** [sprite:sad]: `images/creatures/wild/creature_rat_brown_sad.png`
+- **빌스킬니르 쥐** [sprite:angry]: `images/creatures/wild/creature_rat_brown_angry.png`
+- **빌스킬니르 쥐** [sprite:skill]: `images/creatures/wild/creature_rat_brown_skill.png`
+- **빌스킬니르 쥐** [sprite:victory]: `images/creatures/wild/creature_rat_brown_victory.png`
+- **빌스킬니르 쥐** [sprite:defeat]: `images/creatures/wild/creature_rat_brown_defeat.png`
+- **빌스킬니르 쥐** [sprite:gallery:lv1]: `images/creatures/wild/creature_rat_brown_gallery_lv1.png`
+- **살아있는 룬석** [sprite:joy]: `images/creatures/wild/creature_pebble_new_joy.png`
+- **살아있는 룬석** [sprite:sad]: `images/creatures/wild/creature_pebble_new_sad.png`
+- **살아있는 룬석** [sprite:angry]: `images/creatures/wild/creature_pebble_new_angry.png`
+- **살아있는 룬석** [sprite:skill]: `images/creatures/wild/creature_pebble_new_skill.png`
+- **살아있는 룬석** [sprite:victory]: `images/creatures/wild/creature_pebble_new_victory.png`
+- **살아있는 룬석** [sprite:defeat]: `images/creatures/wild/creature_pebble_new_defeat.png`
+- **살아있는 룬석** [sprite:gallery:lv1]: `images/creatures/wild/creature_pebble_new_gallery_lv1.png`
+- **고대의 화석** [sprite:joy]: `images/creatures/wild/creature_fossil_stone_joy.png`
+- **고대의 화석** [sprite:sad]: `images/creatures/wild/creature_fossil_stone_sad.png`
+- **고대의 화석** [sprite:angry]: `images/creatures/wild/creature_fossil_stone_angry.png`
+- **고대의 화석** [sprite:skill]: `images/creatures/wild/creature_fossil_stone_skill.png`
+- **고대의 화석** [sprite:victory]: `images/creatures/wild/creature_fossil_stone_victory.png`
+- **고대의 화석** [sprite:defeat]: `images/creatures/wild/creature_fossil_stone_defeat.png`
+- **고대의 화석** [sprite:gallery:lv1]: `images/creatures/wild/creature_fossil_stone_gallery_lv1.png`
+- **안개 마수** [sprite:joy]: `images/creatures/wild/creature_mist_crawler_joy.png`
+- **안개 마수** [sprite:sad]: `images/creatures/wild/creature_mist_crawler_sad.png`
+- **안개 마수** [sprite:angry]: `images/creatures/wild/creature_mist_crawler_angry.png`
+- **안개 마수** [sprite:skill]: `images/creatures/wild/creature_mist_crawler_skill.png`
+- **안개 마수** [sprite:victory]: `images/creatures/wild/creature_mist_crawler_victory.png`
+- **안개 마수** [sprite:defeat]: `images/creatures/wild/creature_mist_crawler_defeat.png`
+- **안개 마수** [sprite:gallery:lv1]: `images/creatures/wild/creature_mist_crawler_gallery_lv1.png`
+- **늪지의 빛** [sprite:gallery:lv1]: `images/creatures/wild/creature_willOWisp_green_gallery_lv1.png`
+
+## Abyss (245)
+- **공허의 야수** [sprite:joy]: `images/creatures/abyss/creature_void_beast_joy.png`
+- **공허의 야수** [sprite:sad]: `images/creatures/abyss/creature_void_beast_sad.png`
+- **공허의 야수** [sprite:angry]: `images/creatures/abyss/creature_void_beast_angry.png`
+- **공허의 야수** [sprite:skill]: `images/creatures/abyss/creature_void_beast_skill.png`
+- **공허의 야수** [sprite:victory]: `images/creatures/abyss/creature_void_beast_victory.png`
+- **공허의 야수** [sprite:defeat]: `images/creatures/abyss/creature_void_beast_defeat.png`
+- **공허의 야수** [sprite:gallery:lv1]: `images/creatures/abyss/creature_void_beast_gallery_lv1.png`
+- **공허의 야수** [sprite:gallery:lv2]: `images/creatures/abyss/creature_void_beast_gallery_lv2.png`
+- **공허의 야수** [sprite:gallery:lv3]: `images/creatures/abyss/creature_void_beast_gallery_lv3.png`
+- **그림자 암살자** [sprite:joy]: `images/creatures/abyss/creature_shadow_assassin_joy.png`
+- **그림자 암살자** [sprite:sad]: `images/creatures/abyss/creature_shadow_assassin_sad.png`
+- **그림자 암살자** [sprite:angry]: `images/creatures/abyss/creature_shadow_assassin_angry.png`
+- **그림자 암살자** [sprite:skill]: `images/creatures/abyss/creature_shadow_assassin_skill.png`
+- **그림자 암살자** [sprite:victory]: `images/creatures/abyss/creature_shadow_assassin_victory.png`
+- **그림자 암살자** [sprite:defeat]: `images/creatures/abyss/creature_shadow_assassin_defeat.png`
+- **그림자 암살자** [sprite:gallery:lv1]: `images/creatures/abyss/creature_shadow_assassin_gallery_lv1.png`
+- **석상 가고일** [sprite:joy]: `images/creatures/abyss/creature_gargoyle_stone_joy.png`
+- **석상 가고일** [sprite:sad]: `images/creatures/abyss/creature_gargoyle_stone_sad.png`
+- **석상 가고일** [sprite:angry]: `images/creatures/abyss/creature_gargoyle_stone_angry.png`
+- **석상 가고일** [sprite:skill]: `images/creatures/abyss/creature_gargoyle_stone_skill.png`
+- **석상 가고일** [sprite:victory]: `images/creatures/abyss/creature_gargoyle_stone_victory.png`
+- **석상 가고일** [sprite:defeat]: `images/creatures/abyss/creature_gargoyle_stone_defeat.png`
+- **석상 가고일** [sprite:gallery:lv1]: `images/creatures/abyss/creature_gargoyle_stone_gallery_lv1.png`
+- **혼돈의 눈** [sprite:joy]: `images/creatures/abyss/creature_eye_of_chaos_joy.png`
+- **혼돈의 눈** [sprite:sad]: `images/creatures/abyss/creature_eye_of_chaos_sad.png`
+- **혼돈의 눈** [sprite:angry]: `images/creatures/abyss/creature_eye_of_chaos_angry.png`
+- **혼돈의 눈** [sprite:skill]: `images/creatures/abyss/creature_eye_of_chaos_skill.png`
+- **혼돈의 눈** [sprite:victory]: `images/creatures/abyss/creature_eye_of_chaos_victory.png`
+- **혼돈의 눈** [sprite:defeat]: `images/creatures/abyss/creature_eye_of_chaos_defeat.png`
+- **혼돈의 눈** [sprite:gallery:lv1]: `images/creatures/abyss/creature_eye_of_chaos_gallery_lv1.png`
+- **심연의 추적자** [sprite:victory]: `images/creatures/abyss/creature_abyss_stalker_victory.png`
+- **심연의 추적자** [sprite:defeat]: `images/creatures/abyss/creature_abyss_stalker_defeat.png`
+- **심연의 추적자** [sprite:gallery:lv1]: `images/creatures/abyss/creature_abyss_stalker_gallery_lv1.png`
+- **암흑 물질 슬라임** [sprite:joy]: `images/creatures/abyss/creature_dark_matter_slime_joy.png`
+- **암흑 물질 슬라임** [sprite:sad]: `images/creatures/abyss/creature_dark_matter_slime_sad.png`
+- **암흑 물질 슬라임** [sprite:victory]: `images/creatures/abyss/creature_dark_matter_slime_victory.png`
+- **암흑 물질 슬라임** [sprite:defeat]: `images/creatures/abyss/creature_dark_matter_slime_defeat.png`
+- **암흑 물질 슬라임** [sprite:gallery:lv1]: `images/creatures/abyss/creature_dark_matter_slime_gallery_lv1.png`
+- **공허의 보행자** [sprite:joy]: `images/creatures/abyss/creature_void_walker_joy.png`
+- **공허의 보행자** [sprite:sad]: `images/creatures/abyss/creature_void_walker_sad.png`
+- **공허의 보행자** [sprite:angry]: `images/creatures/abyss/creature_void_walker_angry.png`
+- **공허의 보행자** [sprite:skill]: `images/creatures/abyss/creature_void_walker_skill.png`
+- **공허의 보행자** [sprite:victory]: `images/creatures/abyss/creature_void_walker_victory.png`
+- **공허의 보행자** [sprite:defeat]: `images/creatures/abyss/creature_void_walker_defeat.png`
+- **공허의 보행자** [sprite:gallery:lv1]: `images/creatures/abyss/creature_void_walker_gallery_lv1.png`
+- **심연의 거머리** [sprite:victory]: `images/creatures/abyss/creature_abyss_leech_victory.png`
+- **심연의 거머리** [sprite:defeat]: `images/creatures/abyss/creature_abyss_leech_defeat.png`
+- **심연의 거머리** [sprite:gallery:lv1]: `images/creatures/abyss/creature_abyss_leech_gallery_lv1.png`
+- **공허의 여제 에레보스** [sprite:sad]: `images/creatures/abyss/creature_void_emperor_sad.png`
+- **공허의 여제 에레보스** [sprite:angry]: `images/creatures/abyss/creature_void_emperor_angry.png`
+- **공허의 여제 에레보스** [sprite:victory]: `images/creatures/abyss/creature_void_emperor_victory.png`
+- **공허의 여제 에레보스** [sprite:defeat]: `images/creatures/abyss/creature_void_emperor_defeat.png`
+- **공허의 여제 에레보스** [sprite:gallery:lv1]: `images/creatures/abyss/creature_void_emperor_gallery_lv1.png`
+- **공허의 여제 에레보스** [sprite:gallery:lv2]: `images/creatures/abyss/creature_void_emperor_gallery_lv2.png`
+- **공허의 여제 에레보스** [sprite:gallery:lv3]: `images/creatures/abyss/creature_void_emperor_gallery_lv3.png`
+- **혼돈의 용희 티아마트** [sprite:sad]: `images/creatures/abyss/creature_dragon_chaos_sad.png`
+- **혼돈의 용희 티아마트** [sprite:angry]: `images/creatures/abyss/creature_dragon_chaos_angry.png`
+- **혼돈의 용희 티아마트** [sprite:victory]: `images/creatures/abyss/creature_dragon_chaos_victory.png`
+- **혼돈의 용희 티아마트** [sprite:defeat]: `images/creatures/abyss/creature_dragon_chaos_defeat.png`
+- **혼돈의 용희 티아마트** [sprite:gallery:lv1]: `images/creatures/abyss/creature_dragon_chaos_gallery_lv1.png`
+- **혼돈의 용희 티아마트** [sprite:gallery:lv2]: `images/creatures/abyss/creature_dragon_chaos_gallery_lv2.png`
+- **혼돈의 용희 티아마트** [sprite:gallery:lv3]: `images/creatures/abyss/creature_dragon_chaos_gallery_lv3.png`
+- **월드스타 루루** [sprite:sad]: `images/creatures/abyss/creature_kraken_worldstar_sad.png`
+- **월드스타 루루** [sprite:angry]: `images/creatures/abyss/creature_kraken_worldstar_angry.png`
+- **월드스타 루루** [sprite:victory]: `images/creatures/abyss/creature_kraken_worldstar_victory.png`
+- **월드스타 루루** [sprite:defeat]: `images/creatures/abyss/creature_kraken_worldstar_defeat.png`
+- **월드스타 루루** [sprite:gallery:lv2]: `images/creatures/abyss/creature_kraken_worldstar_gallery_lv2.png`
+- **별의 지배자 크툴루** [sprite:sad]: `images/creatures/abyss/creature_god_cthulhu_sad.png`
+- **별의 지배자 크툴루** [sprite:angry]: `images/creatures/abyss/creature_god_cthulhu_angry.png`
+- **별의 지배자 크툴루** [sprite:victory]: `images/creatures/abyss/creature_god_cthulhu_victory.png`
+- **별의 지배자 크툴루** [sprite:defeat]: `images/creatures/abyss/creature_god_cthulhu_defeat.png`
+- **별의 지배자 크툴루** [sprite:gallery:lv1]: `images/creatures/abyss/creature_god_cthulhu_gallery_lv1.png`
+- **별의 지배자 크툴루** [sprite:gallery:lv2]: `images/creatures/abyss/creature_god_cthulhu_gallery_lv2.png`
+- **별의 지배자 크툴루** [sprite:gallery:lv3]: `images/creatures/abyss/creature_god_cthulhu_gallery_lv3.png`
+- **마왕 바알** [sprite:victory]: `images/creatures/abyss/creature_demon_king_victory.png`
+- **마왕 바알** [sprite:defeat]: `images/creatures/abyss/creature_demon_king_defeat.png`
+- **마왕 바알** [sprite:gallery:lv1]: `images/creatures/abyss/creature_demon_king_gallery_lv1.png`
+- **마왕 바알** [sprite:gallery:lv2]: `images/creatures/abyss/creature_demon_king_gallery_lv2.png`
+- **마왕 바알** [sprite:gallery:lv3]: `images/creatures/abyss/creature_demon_king_gallery_lv3.png`
+- **만 마리 새끼를 품은 숲의 염소** [sprite:sad]: `images/creatures/abyss/creature_god_shub_sad.png`
+- **만 마리 새끼를 품은 숲의 염소** [sprite:angry]: `images/creatures/abyss/creature_god_shub_angry.png`
+- **만 마리 새끼를 품은 숲의 염소** [sprite:victory]: `images/creatures/abyss/creature_god_shub_victory.png`
+- **만 마리 새끼를 품은 숲의 염소** [sprite:defeat]: `images/creatures/abyss/creature_god_shub_defeat.png`
+- **만 마리 새끼를 품은 숲의 염소** [sprite:gallery:lv1]: `images/creatures/abyss/creature_god_shub_gallery_lv1.png`
+- **만 마리 새끼를 품은 숲의 염소** [sprite:gallery:lv2]: `images/creatures/abyss/creature_god_shub_gallery_lv2.png`
+- **만 마리 새끼를 품은 숲의 염소** [sprite:gallery:lv3]: `images/creatures/abyss/creature_god_shub_gallery_lv3.png`
+- **황색 옷의 왕 하스터** [sprite:sad]: `images/creatures/abyss/creature_god_hastur_sad.png`
+- **황색 옷의 왕 하스터** [sprite:angry]: `images/creatures/abyss/creature_god_hastur_angry.png`
+- **황색 옷의 왕 하스터** [sprite:victory]: `images/creatures/abyss/creature_god_hastur_victory.png`
+- **황색 옷의 왕 하스터** [sprite:defeat]: `images/creatures/abyss/creature_god_hastur_defeat.png`
+- **황색 옷의 왕 하스터** [sprite:gallery:lv1]: `images/creatures/abyss/creature_god_hastur_gallery_lv1.png`
+- **황색 옷의 왕 하스터** [sprite:gallery:lv2]: `images/creatures/abyss/creature_god_hastur_gallery_lv2.png`
+- **황색 옷의 왕 하스터** [sprite:gallery:lv3]: `images/creatures/abyss/creature_god_hastur_gallery_lv3.png`
+- **진홍의 여왕 카밀라** [sprite:victory]: `images/creatures/abyss/creature_vampire_lord_victory.png`
+- **진홍의 여왕 카밀라** [sprite:defeat]: `images/creatures/abyss/creature_vampire_lord_defeat.png`
+- **진홍의 여왕 카밀라** [sprite:gallery:lv1]: `images/creatures/abyss/creature_vampire_lord_gallery_lv1.png`
+- **진홍의 여왕 카밀라** [sprite:gallery:lv2]: `images/creatures/abyss/creature_vampire_lord_gallery_lv2.png`
+- **진홍의 여왕 카밀라** [sprite:gallery:lv3]: `images/creatures/abyss/creature_vampire_lord_gallery_lv3.png`
+- **심해의 거신 다곤** [sprite:joy]: `images/creatures/abyss/creature_god_dagon_joy.png`
+- **심해의 거신 다곤** [sprite:sad]: `images/creatures/abyss/creature_god_dagon_sad.png`
+- **심해의 거신 다곤** [sprite:angry]: `images/creatures/abyss/creature_god_dagon_angry.png`
+- **심해의 거신 다곤** [sprite:skill]: `images/creatures/abyss/creature_god_dagon_skill.png`
+- **심해의 거신 다곤** [sprite:victory]: `images/creatures/abyss/creature_god_dagon_victory.png`
+- **심해의 거신 다곤** [sprite:defeat]: `images/creatures/abyss/creature_god_dagon_defeat.png`
+- **심해의 거신 다곤** [sprite:gallery:lv1]: `images/creatures/abyss/creature_god_dagon_gallery_lv1.png`
+- **심해의 거신 다곤** [sprite:gallery:lv2]: `images/creatures/abyss/creature_god_dagon_gallery_lv2.png`
+- **심해의 거신 다곤** [sprite:gallery:lv3]: `images/creatures/abyss/creature_god_dagon_gallery_lv3.png`
+- **머리 없는 기사 듀라한** [sprite:joy]: `images/creatures/abyss/creature_knight_dullahan_joy.png`
+- **머리 없는 기사 듀라한** [sprite:sad]: `images/creatures/abyss/creature_knight_dullahan_sad.png`
+- **머리 없는 기사 듀라한** [sprite:angry]: `images/creatures/abyss/creature_knight_dullahan_angry.png`
+- **머리 없는 기사 듀라한** [sprite:skill]: `images/creatures/abyss/creature_knight_dullahan_skill.png`
+- **머리 없는 기사 듀라한** [sprite:victory]: `images/creatures/abyss/creature_knight_dullahan_victory.png`
+- **머리 없는 기사 듀라한** [sprite:defeat]: `images/creatures/abyss/creature_knight_dullahan_defeat.png`
+- **머리 없는 기사 듀라한** [sprite:gallery:lv1]: `images/creatures/abyss/creature_knight_dullahan_gallery_lv1.png`
+- **머리 없는 기사 듀라한** [sprite:gallery:lv2]: `images/creatures/abyss/creature_knight_dullahan_gallery_lv2.png`
+- **머리 없는 기사 듀라한** [sprite:gallery:lv3]: `images/creatures/abyss/creature_knight_dullahan_gallery_lv3.png`
+- **스켈레톤 나이트** [sprite:joy]: `images/creatures/abyss/creature_knight_skeleton_joy.png`
+- **스켈레톤 나이트** [sprite:sad]: `images/creatures/abyss/creature_knight_skeleton_sad.png`
+- **스켈레톤 나이트** [sprite:angry]: `images/creatures/abyss/creature_knight_skeleton_angry.png`
+- **스켈레톤 나이트** [sprite:skill]: `images/creatures/abyss/creature_knight_skeleton_skill.png`
+- **스켈레톤 나이트** [sprite:victory]: `images/creatures/abyss/creature_knight_skeleton_victory.png`
+- **스켈레톤 나이트** [sprite:defeat]: `images/creatures/abyss/creature_knight_skeleton_defeat.png`
+- **스켈레톤 나이트** [sprite:gallery:lv1]: `images/creatures/abyss/creature_knight_skeleton_gallery_lv1.png`
+- **탐욕의 상자 미믹** [sprite:joy]: `images/creatures/abyss/creature_mimic_box_joy.png`
+- **탐욕의 상자 미믹** [sprite:sad]: `images/creatures/abyss/creature_mimic_box_sad.png`
+- **탐욕의 상자 미믹** [sprite:angry]: `images/creatures/abyss/creature_mimic_box_angry.png`
+- **탐욕의 상자 미믹** [sprite:skill]: `images/creatures/abyss/creature_mimic_box_skill.png`
+- **탐욕의 상자 미믹** [sprite:victory]: `images/creatures/abyss/creature_mimic_box_victory.png`
+- **탐욕의 상자 미믹** [sprite:defeat]: `images/creatures/abyss/creature_mimic_box_defeat.png`
+- **탐욕의 상자 미믹** [sprite:gallery:lv1]: `images/creatures/abyss/creature_mimic_box_gallery_lv1.png`
+- **저주받은 인형** [sprite:joy]: `images/creatures/abyss/creature_cursed_doll_joy.png`
+- **저주받은 인형** [sprite:sad]: `images/creatures/abyss/creature_cursed_doll_sad.png`
+- **저주받은 인형** [sprite:angry]: `images/creatures/abyss/creature_cursed_doll_angry.png`
+- **저주받은 인형** [sprite:skill]: `images/creatures/abyss/creature_cursed_doll_skill.png`
+- **저주받은 인형** [sprite:victory]: `images/creatures/abyss/creature_cursed_doll_victory.png`
+- **저주받은 인형** [sprite:defeat]: `images/creatures/abyss/creature_cursed_doll_defeat.png`
+- **저주받은 인형** [sprite:gallery:lv1]: `images/creatures/abyss/creature_cursed_doll_gallery_lv1.png`
+- **외눈박이 박쥐** [sprite:joy]: `images/creatures/abyss/creature_eye_bat_joy.png`
+- **외눈박이 박쥐** [sprite:sad]: `images/creatures/abyss/creature_eye_bat_sad.png`
+- **외눈박이 박쥐** [sprite:angry]: `images/creatures/abyss/creature_eye_bat_angry.png`
+- **외눈박이 박쥐** [sprite:skill]: `images/creatures/abyss/creature_eye_bat_skill.png`
+- **외눈박이 박쥐** [sprite:victory]: `images/creatures/abyss/creature_eye_bat_victory.png`
+- **외눈박이 박쥐** [sprite:defeat]: `images/creatures/abyss/creature_eye_bat_defeat.png`
+- **외눈박이 박쥐** [sprite:gallery:lv1]: `images/creatures/abyss/creature_eye_bat_gallery_lv1.png`
+- **영혼의 등불** [sprite:joy]: `images/creatures/abyss/creature_ghost_lamp_joy.png`
+- **영혼의 등불** [sprite:sad]: `images/creatures/abyss/creature_ghost_lamp_sad.png`
+- **영혼의 등불** [sprite:angry]: `images/creatures/abyss/creature_ghost_lamp_angry.png`
+- **영혼의 등불** [sprite:skill]: `images/creatures/abyss/creature_ghost_lamp_skill.png`
+- **영혼의 등불** [sprite:victory]: `images/creatures/abyss/creature_ghost_lamp_victory.png`
+- **영혼의 등불** [sprite:defeat]: `images/creatures/abyss/creature_ghost_lamp_defeat.png`
+- **영혼의 등불** [sprite:gallery:lv1]: `images/creatures/abyss/creature_ghost_lamp_gallery_lv1.png`
+- **딥 원 전사** [sprite:joy]: `images/creatures/abyss/creature_deep_one_soldier_joy.png`
+- **딥 원 전사** [sprite:sad]: `images/creatures/abyss/creature_deep_one_soldier_sad.png`
+- **딥 원 전사** [sprite:angry]: `images/creatures/abyss/creature_deep_one_soldier_angry.png`
+- **딥 원 전사** [sprite:skill]: `images/creatures/abyss/creature_deep_one_soldier_skill.png`
+- **딥 원 전사** [sprite:victory]: `images/creatures/abyss/creature_deep_one_soldier_victory.png`
+- **딥 원 전사** [sprite:defeat]: `images/creatures/abyss/creature_deep_one_soldier_defeat.png`
+- **딥 원 전사** [sprite:gallery:lv1]: `images/creatures/abyss/creature_deep_one_soldier_gallery_lv1.png`
+- **고블린 정찰병** [sprite:joy]: `images/creatures/abyss/creature_goblin_scout_new_joy.png`
+- **고블린 정찰병** [sprite:sad]: `images/creatures/abyss/creature_goblin_scout_new_sad.png`
+- **고블린 정찰병** [sprite:angry]: `images/creatures/abyss/creature_goblin_scout_new_angry.png`
+- **고블린 정찰병** [sprite:skill]: `images/creatures/abyss/creature_goblin_scout_new_skill.png`
+- **고블린 정찰병** [sprite:victory]: `images/creatures/abyss/creature_goblin_scout_new_victory.png`
+- **고블린 정찰병** [sprite:defeat]: `images/creatures/abyss/creature_goblin_scout_new_defeat.png`
+- **고블린 정찰병** [sprite:gallery:lv1]: `images/creatures/abyss/creature_goblin_scout_new_gallery_lv1.png`
+- **그림자 잠복자** [sprite:joy]: `images/creatures/abyss/creature_shadow_lurker_joy.png`
+- **그림자 잠복자** [sprite:sad]: `images/creatures/abyss/creature_shadow_lurker_sad.png`
+- **그림자 잠복자** [sprite:angry]: `images/creatures/abyss/creature_shadow_lurker_angry.png`
+- **그림자 잠복자** [sprite:skill]: `images/creatures/abyss/creature_shadow_lurker_skill.png`
+- **그림자 잠복자** [sprite:victory]: `images/creatures/abyss/creature_shadow_lurker_victory.png`
+- **그림자 잠복자** [sprite:defeat]: `images/creatures/abyss/creature_shadow_lurker_defeat.png`
+- **그림자 잠복자** [sprite:gallery:lv1]: `images/creatures/abyss/creature_shadow_lurker_gallery_lv1.png`
+- **작은 심연의 감시자** [sprite:victory]: `images/creatures/abyss/creature_abyss_watcher_small_victory.png`
+- **작은 심연의 감시자** [sprite:defeat]: `images/creatures/abyss/creature_abyss_watcher_small_defeat.png`
+- **작은 심연의 감시자** [sprite:gallery:lv1]: `images/creatures/abyss/creature_abyss_watcher_small_gallery_lv1.png`
+- **비명 지르는 뿌리** [sprite:joy]: `images/creatures/abyss/creature_screaming_root_joy.png`
+- **비명 지르는 뿌리** [sprite:sad]: `images/creatures/abyss/creature_screaming_root_sad.png`
+- **비명 지르는 뿌리** [sprite:angry]: `images/creatures/abyss/creature_screaming_root_angry.png`
+- **비명 지르는 뿌리** [sprite:skill]: `images/creatures/abyss/creature_screaming_root_skill.png`
+- **비명 지르는 뿌리** [sprite:victory]: `images/creatures/abyss/creature_screaming_root_victory.png`
+- **비명 지르는 뿌리** [sprite:defeat]: `images/creatures/abyss/creature_screaming_root_defeat.png`
+- **비명 지르는 뿌리** [sprite:gallery:lv1]: `images/creatures/abyss/creature_screaming_root_gallery_lv1.png`
+- **시체 먹는 구울** [sprite:joy]: `images/creatures/abyss/creature_ghoul_scavenger_joy.png`
+- **시체 먹는 구울** [sprite:sad]: `images/creatures/abyss/creature_ghoul_scavenger_sad.png`
+- **시체 먹는 구울** [sprite:angry]: `images/creatures/abyss/creature_ghoul_scavenger_angry.png`
+- **시체 먹는 구울** [sprite:skill]: `images/creatures/abyss/creature_ghoul_scavenger_skill.png`
+- **시체 먹는 구울** [sprite:victory]: `images/creatures/abyss/creature_ghoul_scavenger_victory.png`
+- **시체 먹는 구울** [sprite:defeat]: `images/creatures/abyss/creature_ghoul_scavenger_defeat.png`
+- **시체 먹는 구울** [sprite:gallery:lv1]: `images/creatures/abyss/creature_ghoul_scavenger_gallery_lv1.png`
+- **공허의 촉수** [sprite:joy]: `images/creatures/abyss/creature_void_tentacle_joy.png`
+- **공허의 촉수** [sprite:sad]: `images/creatures/abyss/creature_void_tentacle_sad.png`
+- **공허의 촉수** [sprite:angry]: `images/creatures/abyss/creature_void_tentacle_angry.png`
+- **공허의 촉수** [sprite:skill]: `images/creatures/abyss/creature_void_tentacle_skill.png`
+- **공허의 촉수** [sprite:victory]: `images/creatures/abyss/creature_void_tentacle_victory.png`
+- **공허의 촉수** [sprite:defeat]: `images/creatures/abyss/creature_void_tentacle_defeat.png`
+- **공허의 촉수** [sprite:gallery:lv1]: `images/creatures/abyss/creature_void_tentacle_gallery_lv1.png`
+- **오염된 슬러지** [sprite:joy]: `images/creatures/abyss/creature_sludge_blob_joy.png`
+- **오염된 슬러지** [sprite:sad]: `images/creatures/abyss/creature_sludge_blob_sad.png`
+- **오염된 슬러지** [sprite:angry]: `images/creatures/abyss/creature_sludge_blob_angry.png`
+- **오염된 슬러지** [sprite:skill]: `images/creatures/abyss/creature_sludge_blob_skill.png`
+- **오염된 슬러지** [sprite:victory]: `images/creatures/abyss/creature_sludge_blob_victory.png`
+- **오염된 슬러지** [sprite:defeat]: `images/creatures/abyss/creature_sludge_blob_defeat.png`
+- **오염된 슬러지** [sprite:gallery:lv1]: `images/creatures/abyss/creature_sludge_blob_gallery_lv1.png`
+- **뼈 조각 정령** [sprite:joy]: `images/creatures/abyss/creature_bone_fragment_spirit_joy.png`
+- **뼈 조각 정령** [sprite:sad]: `images/creatures/abyss/creature_bone_fragment_spirit_sad.png`
+- **뼈 조각 정령** [sprite:angry]: `images/creatures/abyss/creature_bone_fragment_spirit_angry.png`
+- **뼈 조각 정령** [sprite:skill]: `images/creatures/abyss/creature_bone_fragment_spirit_skill.png`
+- **뼈 조각 정령** [sprite:victory]: `images/creatures/abyss/creature_bone_fragment_spirit_victory.png`
+- **뼈 조각 정령** [sprite:defeat]: `images/creatures/abyss/creature_bone_fragment_spirit_defeat.png`
+- **뼈 조각 정령** [sprite:gallery:lv1]: `images/creatures/abyss/creature_bone_fragment_spirit_gallery_lv1.png`
+- **속삭이는 해골** [sprite:joy]: `images/creatures/abyss/creature_whispering_skull_joy.png`
+- **속삭이는 해골** [sprite:sad]: `images/creatures/abyss/creature_whispering_skull_sad.png`
+- **속삭이는 해골** [sprite:angry]: `images/creatures/abyss/creature_whispering_skull_angry.png`
+- **속삭이는 해골** [sprite:skill]: `images/creatures/abyss/creature_whispering_skull_skill.png`
+- **속삭이는 해골** [sprite:victory]: `images/creatures/abyss/creature_whispering_skull_victory.png`
+- **속삭이는 해골** [sprite:defeat]: `images/creatures/abyss/creature_whispering_skull_defeat.png`
+- **속삭이는 해골** [sprite:gallery:lv1]: `images/creatures/abyss/creature_whispering_skull_gallery_lv1.png`
+- **공허의 유충** [sprite:joy]: `images/creatures/abyss/creature_void_larva_joy.png`
+- **공허의 유충** [sprite:sad]: `images/creatures/abyss/creature_void_larva_sad.png`
+- **공허의 유충** [sprite:angry]: `images/creatures/abyss/creature_void_larva_angry.png`
+- **공허의 유충** [sprite:skill]: `images/creatures/abyss/creature_void_larva_skill.png`
+- **공허의 유충** [sprite:victory]: `images/creatures/abyss/creature_void_larva_victory.png`
+- **공허의 유충** [sprite:defeat]: `images/creatures/abyss/creature_void_larva_defeat.png`
+- **공허의 유충** [sprite:gallery:lv1]: `images/creatures/abyss/creature_void_larva_gallery_lv1.png`
+- **검은 물웅덩이** [sprite:joy]: `images/creatures/abyss/creature_dark_puddles_joy.png`
+- **검은 물웅덩이** [sprite:sad]: `images/creatures/abyss/creature_dark_puddles_sad.png`
+- **검은 물웅덩이** [sprite:angry]: `images/creatures/abyss/creature_dark_puddles_angry.png`
+- **검은 물웅덩이** [sprite:skill]: `images/creatures/abyss/creature_dark_puddles_skill.png`
+- **검은 물웅덩이** [sprite:victory]: `images/creatures/abyss/creature_dark_puddles_victory.png`
+- **검은 물웅덩이** [sprite:defeat]: `images/creatures/abyss/creature_dark_puddles_defeat.png`
+- **검은 물웅덩이** [sprite:gallery:lv1]: `images/creatures/abyss/creature_dark_puddles_gallery_lv1.png`
+- **작은 공허 나방** [sprite:joy]: `images/creatures/abyss/creature_void_moth_small_joy.png`
+- **작은 공허 나방** [sprite:sad]: `images/creatures/abyss/creature_void_moth_small_sad.png`
+- **작은 공허 나방** [sprite:angry]: `images/creatures/abyss/creature_void_moth_small_angry.png`
+- **작은 공허 나방** [sprite:skill]: `images/creatures/abyss/creature_void_moth_small_skill.png`
+- **작은 공허 나방** [sprite:victory]: `images/creatures/abyss/creature_void_moth_small_victory.png`
+- **작은 공허 나방** [sprite:defeat]: `images/creatures/abyss/creature_void_moth_small_defeat.png`
+- **작은 공허 나방** [sprite:gallery:lv1]: `images/creatures/abyss/creature_void_moth_small_gallery_lv1.png`
+- **심연 먹물 오징어** [sprite:joy]: `images/creatures/abyss/creature_ink_squid_abyss_joy.png`
+- **심연 먹물 오징어** [sprite:sad]: `images/creatures/abyss/creature_ink_squid_abyss_sad.png`
+- **심연 먹물 오징어** [sprite:angry]: `images/creatures/abyss/creature_ink_squid_abyss_angry.png`
+- **심연 먹물 오징어** [sprite:skill]: `images/creatures/abyss/creature_ink_squid_abyss_skill.png`
+- **심연 먹물 오징어** [sprite:victory]: `images/creatures/abyss/creature_ink_squid_abyss_victory.png`
+- **심연 먹물 오징어** [sprite:defeat]: `images/creatures/abyss/creature_ink_squid_abyss_defeat.png`
+- **심연 먹물 오징어** [sprite:gallery:lv1]: `images/creatures/abyss/creature_ink_squid_abyss_gallery_lv1.png`
+
+## Olympus (267)
+- **켄타우로스 정찰병** [sprite:joy]: `images/creatures/olympus/creature_centaur_scout_joy.png`
+- **켄타우로스 정찰병** [sprite:sad]: `images/creatures/olympus/creature_centaur_scout_sad.png`
+- **켄타우로스 정찰병** [sprite:angry]: `images/creatures/olympus/creature_centaur_scout_angry.png`
+- **켄타우로스 정찰병** [sprite:skill]: `images/creatures/olympus/creature_centaur_scout_skill.png`
+- **켄타우로스 정찰병** [sprite:victory]: `images/creatures/olympus/creature_centaur_scout_victory.png`
+- **켄타우로스 정찰병** [sprite:defeat]: `images/creatures/olympus/creature_centaur_scout_defeat.png`
+- **켄타우로스 정찰병** [sprite:gallery:lv1]: `images/creatures/olympus/creature_centaur_scout_gallery_lv1.png`
+- **크로노스의 그림자** [sprite:sad]: `images/creatures/olympus/creature_titan_kronos_shade_sad.png`
+- **크로노스의 그림자** [sprite:angry]: `images/creatures/olympus/creature_titan_kronos_shade_angry.png`
+- **크로노스의 그림자** [sprite:victory]: `images/creatures/olympus/creature_titan_kronos_shade_victory.png`
+- **크로노스의 그림자** [sprite:defeat]: `images/creatures/olympus/creature_titan_kronos_shade_defeat.png`
+- **크로노스의 그림자** [sprite:gallery:lv1]: `images/creatures/olympus/creature_titan_kronos_shade_gallery_lv1.png`
+- **크로노스의 그림자** [sprite:gallery:lv2]: `images/creatures/olympus/creature_titan_kronos_shade_gallery_lv2.png`
+- **크로노스의 그림자** [sprite:gallery:lv3]: `images/creatures/olympus/creature_titan_kronos_shade_gallery_lv3.png`
+- **심해의 군주 포세이돈** [sprite:sad]: `images/creatures/olympus/creature_god_poseidon_sad.png`
+- **심해의 군주 포세이돈** [sprite:angry]: `images/creatures/olympus/creature_god_poseidon_angry.png`
+- **심해의 군주 포세이돈** [sprite:victory]: `images/creatures/olympus/creature_god_poseidon_victory.png`
+- **심해의 군주 포세이돈** [sprite:defeat]: `images/creatures/olympus/creature_god_poseidon_defeat.png`
+- **지옥의 지배자 하데스** [sprite:sad]: `images/creatures/olympus/creature_god_hades_sad.png`
+- **지옥의 지배자 하데스** [sprite:angry]: `images/creatures/olympus/creature_god_hades_angry.png`
+- **지옥의 지배자 하데스** [sprite:victory]: `images/creatures/olympus/creature_god_hades_victory.png`
+- **지옥의 지배자 하데스** [sprite:defeat]: `images/creatures/olympus/creature_god_hades_defeat.png`
+- **지옥의 지배자 하데스** [sprite:gallery:lv1]: `images/creatures/olympus/creature_god_hades_gallery_lv1.png`
+- **지옥의 지배자 하데스** [sprite:gallery:lv2]: `images/creatures/olympus/creature_god_hades_gallery_lv2.png`
+- **지옥의 지배자 하데스** [sprite:gallery:lv3]: `images/creatures/olympus/creature_god_hades_gallery_lv3.png`
+- **불멸의 영웅 헤라클레스** [sprite:joy]: `images/creatures/olympus/creature_hero_hercules_joy.png`
+- **불멸의 영웅 헤라클레스** [sprite:sad]: `images/creatures/olympus/creature_hero_hercules_sad.png`
+- **불멸의 영웅 헤라클레스** [sprite:angry]: `images/creatures/olympus/creature_hero_hercules_angry.png`
+- **불멸의 영웅 헤라클레스** [sprite:skill]: `images/creatures/olympus/creature_hero_hercules_skill.png`
+- **불멸의 영웅 헤라클레스** [sprite:victory]: `images/creatures/olympus/creature_hero_hercules_victory.png`
+- **불멸의 영웅 헤라클레스** [sprite:defeat]: `images/creatures/olympus/creature_hero_hercules_defeat.png`
+- **불멸의 영웅 헤라클레스** [sprite:gallery:lv1]: `images/creatures/olympus/creature_hero_hercules_gallery_lv1.png`
+- **불멸의 영웅 헤라클레스** [sprite:gallery:lv2]: `images/creatures/olympus/creature_hero_hercules_gallery_lv2.png`
+- **불멸의 영웅 헤라클레스** [sprite:gallery:lv3]: `images/creatures/olympus/creature_hero_hercules_gallery_lv3.png`
+- **거신 아틀라스** [sprite:joy]: `images/creatures/olympus/creature_titan_atlas_joy.png`
+- **거신 아틀라스** [sprite:sad]: `images/creatures/olympus/creature_titan_atlas_sad.png`
+- **거신 아틀라스** [sprite:angry]: `images/creatures/olympus/creature_titan_atlas_angry.png`
+- **거신 아틀라스** [sprite:skill]: `images/creatures/olympus/creature_titan_atlas_skill.png`
+- **거신 아틀라스** [sprite:victory]: `images/creatures/olympus/creature_titan_atlas_victory.png`
+- **거신 아틀라스** [sprite:defeat]: `images/creatures/olympus/creature_titan_atlas_defeat.png`
+- **거신 아틀라스** [sprite:gallery:lv1]: `images/creatures/olympus/creature_titan_atlas_gallery_lv1.png`
+- **거신 아틀라스** [sprite:gallery:lv2]: `images/creatures/olympus/creature_titan_atlas_gallery_lv2.png`
+- **거신 아틀라스** [sprite:gallery:lv3]: `images/creatures/olympus/creature_titan_atlas_gallery_lv3.png`
+- **미노타우로스 왕** [sprite:joy]: `images/creatures/olympus/creature_minotaur_king_joy.png`
+- **미노타우로스 왕** [sprite:sad]: `images/creatures/olympus/creature_minotaur_king_sad.png`
+- **미노타우로스 왕** [sprite:angry]: `images/creatures/olympus/creature_minotaur_king_angry.png`
+- **미노타우로스 왕** [sprite:skill]: `images/creatures/olympus/creature_minotaur_king_skill.png`
+- **미노타우로스 왕** [sprite:victory]: `images/creatures/olympus/creature_minotaur_king_victory.png`
+- **미노타우로스 왕** [sprite:defeat]: `images/creatures/olympus/creature_minotaur_king_defeat.png`
+- **미노타우로스 왕** [sprite:gallery:lv1]: `images/creatures/olympus/creature_minotaur_king_gallery_lv1.png`
+- **미노타우로스 왕** [sprite:gallery:lv2]: `images/creatures/olympus/creature_minotaur_king_gallery_lv2.png`
+- **미노타우로스 왕** [sprite:gallery:lv3]: `images/creatures/olympus/creature_minotaur_king_gallery_lv3.png`
+- **지옥파수꾼 케르베로스** [sprite:joy]: `images/creatures/olympus/creature_cerberus_guardian_joy.png`
+- **지옥파수꾼 케르베로스** [sprite:sad]: `images/creatures/olympus/creature_cerberus_guardian_sad.png`
+- **지옥파수꾼 케르베로스** [sprite:angry]: `images/creatures/olympus/creature_cerberus_guardian_angry.png`
+- **지옥파수꾼 케르베로스** [sprite:skill]: `images/creatures/olympus/creature_cerberus_guardian_skill.png`
+- **지옥파수꾼 케르베로스** [sprite:victory]: `images/creatures/olympus/creature_cerberus_guardian_victory.png`
+- **지옥파수꾼 케르베로스** [sprite:defeat]: `images/creatures/olympus/creature_cerberus_guardian_defeat.png`
+- **지옥파수꾼 케르베로스** [sprite:gallery:lv1]: `images/creatures/olympus/creature_cerberus_guardian_gallery_lv1.png`
+- **지옥파수꾼 케르베로스** [sprite:gallery:lv2]: `images/creatures/olympus/creature_cerberus_guardian_gallery_lv2.png`
+- **지옥파수꾼 케르베로스** [sprite:gallery:lv3]: `images/creatures/olympus/creature_cerberus_guardian_gallery_lv3.png`
+- **레르나의 히드라** [sprite:joy]: `images/creatures/olympus/creature_hydra_lernaean_joy.png`
+- **레르나의 히드라** [sprite:sad]: `images/creatures/olympus/creature_hydra_lernaean_sad.png`
+- **레르나의 히드라** [sprite:angry]: `images/creatures/olympus/creature_hydra_lernaean_angry.png`
+- **레르나의 히드라** [sprite:skill]: `images/creatures/olympus/creature_hydra_lernaean_skill.png`
+- **레르나의 히드라** [sprite:victory]: `images/creatures/olympus/creature_hydra_lernaean_victory.png`
+- **레르나의 히드라** [sprite:defeat]: `images/creatures/olympus/creature_hydra_lernaean_defeat.png`
+- **레르나의 히드라** [sprite:gallery:lv1]: `images/creatures/olympus/creature_hydra_lernaean_gallery_lv1.png`
+- **레르나의 히드라** [sprite:gallery:lv2]: `images/creatures/olympus/creature_hydra_lernaean_gallery_lv2.png`
+- **레르나의 히드라** [sprite:gallery:lv3]: `images/creatures/olympus/creature_hydra_lernaean_gallery_lv3.png`
+- **네메아의 사자** [sprite:joy]: `images/creatures/olympus/creature_lion_nemean_joy.png`
+- **네메아의 사자** [sprite:sad]: `images/creatures/olympus/creature_lion_nemean_sad.png`
+- **네메아의 사자** [sprite:angry]: `images/creatures/olympus/creature_lion_nemean_angry.png`
+- **네메아의 사자** [sprite:skill]: `images/creatures/olympus/creature_lion_nemean_skill.png`
+- **네메아의 사자** [sprite:victory]: `images/creatures/olympus/creature_lion_nemean_victory.png`
+- **네메아의 사자** [sprite:defeat]: `images/creatures/olympus/creature_lion_nemean_defeat.png`
+- **네메아의 사자** [sprite:gallery:lv1]: `images/creatures/olympus/creature_lion_nemean_gallery_lv1.png`
+- **네메아의 사자** [sprite:gallery:lv2]: `images/creatures/olympus/creature_lion_nemean_gallery_lv2.png`
+- **네메아의 사자** [sprite:gallery:lv3]: `images/creatures/olympus/creature_lion_nemean_gallery_lv3.png`
+- **저주받은 미모 메두사** [sprite:joy]: `images/creatures/olympus/creature_medusa_cursed_joy.png`
+- **저주받은 미모 메두사** [sprite:sad]: `images/creatures/olympus/creature_medusa_cursed_sad.png`
+- **저주받은 미모 메두사** [sprite:angry]: `images/creatures/olympus/creature_medusa_cursed_angry.png`
+- **저주받은 미모 메두사** [sprite:skill]: `images/creatures/olympus/creature_medusa_cursed_skill.png`
+- **저주받은 미모 메두사** [sprite:victory]: `images/creatures/olympus/creature_medusa_cursed_victory.png`
+- **저주받은 미모 메두사** [sprite:defeat]: `images/creatures/olympus/creature_medusa_cursed_defeat.png`
+- **저주받은 미모 메두사** [sprite:gallery:lv1]: `images/creatures/olympus/creature_medusa_cursed_gallery_lv1.png`
+- **저주받은 미모 메두사** [sprite:gallery:lv2]: `images/creatures/olympus/creature_medusa_cursed_gallery_lv2.png`
+- **저주받은 미모 메두사** [sprite:gallery:lv3]: `images/creatures/olympus/creature_medusa_cursed_gallery_lv3.png`
+- **화염 마법사** [sprite:joy]: `images/creatures/olympus/creature_mage_flame_joy.png`
+- **화염 마법사** [sprite:sad]: `images/creatures/olympus/creature_mage_flame_sad.png`
+- **화염 마법사** [sprite:angry]: `images/creatures/olympus/creature_mage_flame_angry.png`
+- **화염 마법사** [sprite:skill]: `images/creatures/olympus/creature_mage_flame_skill.png`
+- **화염 마법사** [sprite:victory]: `images/creatures/olympus/creature_mage_flame_victory.png`
+- **화염 마법사** [sprite:defeat]: `images/creatures/olympus/creature_mage_flame_defeat.png`
+- **화염 마법사** [sprite:gallery:lv1]: `images/creatures/olympus/creature_mage_flame_gallery_lv1.png`
+- **축제의 신 디오니소스** [sprite:joy]: `images/creatures/olympus/creature_god_dionysus_joy.png`
+- **축제의 신 디오니소스** [sprite:sad]: `images/creatures/olympus/creature_god_dionysus_sad.png`
+- **축제의 신 디오니소스** [sprite:angry]: `images/creatures/olympus/creature_god_dionysus_angry.png`
+- **축제의 신 디오니소스** [sprite:skill]: `images/creatures/olympus/creature_god_dionysus_skill.png`
+- **축제의 신 디오니소스** [sprite:victory]: `images/creatures/olympus/creature_god_dionysus_victory.png`
+- **축제의 신 디오니소스** [sprite:defeat]: `images/creatures/olympus/creature_god_dionysus_defeat.png`
+- **축제의 신 디오니소스** [sprite:gallery:lv1]: `images/creatures/olympus/creature_god_dionysus_gallery_lv1.png`
+- **폭풍우의 하피 퀸** [sprite:joy]: `images/creatures/olympus/creature_harpy_queen_joy.png`
+- **폭풍우의 하피 퀸** [sprite:sad]: `images/creatures/olympus/creature_harpy_queen_sad.png`
+- **폭풍우의 하피 퀸** [sprite:angry]: `images/creatures/olympus/creature_harpy_queen_angry.png`
+- **폭풍우의 하피 퀸** [sprite:skill]: `images/creatures/olympus/creature_harpy_queen_skill.png`
+- **폭풍우의 하피 퀸** [sprite:victory]: `images/creatures/olympus/creature_harpy_queen_victory.png`
+- **폭풍우의 하피 퀸** [sprite:defeat]: `images/creatures/olympus/creature_harpy_queen_defeat.png`
+- **폭풍우의 하피 퀸** [sprite:gallery:lv1]: `images/creatures/olympus/creature_harpy_queen_gallery_lv1.png`
+- **유혹의 사이렌** [sprite:joy]: `images/creatures/olympus/creature_siren_singer_joy.png`
+- **유혹의 사이렌** [sprite:sad]: `images/creatures/olympus/creature_siren_singer_sad.png`
+- **유혹의 사이렌** [sprite:angry]: `images/creatures/olympus/creature_siren_singer_angry.png`
+- **유혹의 사이렌** [sprite:skill]: `images/creatures/olympus/creature_siren_singer_skill.png`
+- **유혹의 사이렌** [sprite:victory]: `images/creatures/olympus/creature_siren_singer_victory.png`
+- **유혹의 사이렌** [sprite:defeat]: `images/creatures/olympus/creature_siren_singer_defeat.png`
+- **유혹의 사이렌** [sprite:gallery:lv1]: `images/creatures/olympus/creature_siren_singer_gallery_lv1.png`
+- **고르곤 자매 에우리알레** [sprite:joy]: `images/creatures/olympus/creature_gorgon_sister_e_joy.png`
+- **고르곤 자매 에우리알레** [sprite:sad]: `images/creatures/olympus/creature_gorgon_sister_e_sad.png`
+- **고르곤 자매 에우리알레** [sprite:angry]: `images/creatures/olympus/creature_gorgon_sister_e_angry.png`
+- **고르곤 자매 에우리알레** [sprite:skill]: `images/creatures/olympus/creature_gorgon_sister_e_skill.png`
+- **고르곤 자매 에우리알레** [sprite:victory]: `images/creatures/olympus/creature_gorgon_sister_e_victory.png`
+- **고르곤 자매 에우리알레** [sprite:defeat]: `images/creatures/olympus/creature_gorgon_sister_e_defeat.png`
+- **고르곤 자매 에우리알레** [sprite:gallery:lv1]: `images/creatures/olympus/creature_gorgon_sister_e_gallery_lv1.png`
+- **고르곤 자매 스테노** [sprite:joy]: `images/creatures/olympus/creature_gorgon_sister_s_joy.png`
+- **고르곤 자매 스테노** [sprite:sad]: `images/creatures/olympus/creature_gorgon_sister_s_sad.png`
+- **고르곤 자매 스테노** [sprite:angry]: `images/creatures/olympus/creature_gorgon_sister_s_angry.png`
+- **고르곤 자매 스테노** [sprite:skill]: `images/creatures/olympus/creature_gorgon_sister_s_skill.png`
+- **고르곤 자매 스테노** [sprite:victory]: `images/creatures/olympus/creature_gorgon_sister_s_victory.png`
+- **고르곤 자매 스테노** [sprite:defeat]: `images/creatures/olympus/creature_gorgon_sister_s_defeat.png`
+- **고르곤 자매 스테노** [sprite:gallery:lv1]: `images/creatures/olympus/creature_gorgon_sister_s_gallery_lv1.png`
+- **악보의 뮤즈** [sprite:joy]: `images/creatures/olympus/creature_muse_lyra_joy.png`
+- **악보의 뮤즈** [sprite:sad]: `images/creatures/olympus/creature_muse_lyra_sad.png`
+- **악보의 뮤즈** [sprite:angry]: `images/creatures/olympus/creature_muse_lyra_angry.png`
+- **악보의 뮤즈** [sprite:skill]: `images/creatures/olympus/creature_muse_lyra_skill.png`
+- **악보의 뮤즈** [sprite:victory]: `images/creatures/olympus/creature_muse_lyra_victory.png`
+- **악보의 뮤즈** [sprite:defeat]: `images/creatures/olympus/creature_muse_lyra_defeat.png`
+- **악보의 뮤즈** [sprite:gallery:lv1]: `images/creatures/olympus/creature_muse_lyra_gallery_lv1.png`
+- **베이비 피닉스** [sprite:joy]: `images/creatures/olympus/creature_phoenix_chick_o_joy.png`
+- **베이비 피닉스** [sprite:sad]: `images/creatures/olympus/creature_phoenix_chick_o_sad.png`
+- **베이비 피닉스** [sprite:angry]: `images/creatures/olympus/creature_phoenix_chick_o_angry.png`
+- **베이비 피닉스** [sprite:skill]: `images/creatures/olympus/creature_phoenix_chick_o_skill.png`
+- **베이비 피닉스** [sprite:victory]: `images/creatures/olympus/creature_phoenix_chick_o_victory.png`
+- **베이비 피닉스** [sprite:defeat]: `images/creatures/olympus/creature_phoenix_chick_o_defeat.png`
+- **베이비 피닉스** [sprite:gallery:lv1]: `images/creatures/olympus/creature_phoenix_chick_o_gallery_lv1.png`
+- **헬하운드 정찰개** [sprite:joy]: `images/creatures/olympus/creature_hellhound_scout_joy.png`
+- **헬하운드 정찰개** [sprite:sad]: `images/creatures/olympus/creature_hellhound_scout_sad.png`
+- **헬하운드 정찰개** [sprite:angry]: `images/creatures/olympus/creature_hellhound_scout_angry.png`
+- **헬하운드 정찰개** [sprite:skill]: `images/creatures/olympus/creature_hellhound_scout_skill.png`
+- **헬하운드 정찰개** [sprite:victory]: `images/creatures/olympus/creature_hellhound_scout_victory.png`
+- **헬하운드 정찰개** [sprite:defeat]: `images/creatures/olympus/creature_hellhound_scout_defeat.png`
+- **헬하운드 정찰개** [sprite:gallery:lv1]: `images/creatures/olympus/creature_hellhound_scout_gallery_lv1.png`
+- **미니 오토마톤** [sprite:joy]: `images/creatures/olympus/creature_automaton_mini_joy.png`
+- **미니 오토마톤** [sprite:sad]: `images/creatures/olympus/creature_automaton_mini_sad.png`
+- **미니 오토마톤** [sprite:angry]: `images/creatures/olympus/creature_automaton_mini_angry.png`
+- **미니 오토마톤** [sprite:skill]: `images/creatures/olympus/creature_automaton_mini_skill.png`
+- **미니 오토마톤** [sprite:victory]: `images/creatures/olympus/creature_automaton_mini_victory.png`
+- **미니 오토마톤** [sprite:defeat]: `images/creatures/olympus/creature_automaton_mini_defeat.png`
+- **미니 오토마톤** [sprite:gallery:lv1]: `images/creatures/olympus/creature_automaton_mini_gallery_lv1.png`
+- **탈로스의 파편** [sprite:joy]: `images/creatures/olympus/creature_talos_fragment_joy.png`
+- **탈로스의 파편** [sprite:sad]: `images/creatures/olympus/creature_talos_fragment_sad.png`
+- **탈로스의 파편** [sprite:angry]: `images/creatures/olympus/creature_talos_fragment_angry.png`
+- **탈로스의 파편** [sprite:skill]: `images/creatures/olympus/creature_talos_fragment_skill.png`
+- **탈로스의 파편** [sprite:victory]: `images/creatures/olympus/creature_talos_fragment_victory.png`
+- **탈로스의 파편** [sprite:defeat]: `images/creatures/olympus/creature_talos_fragment_defeat.png`
+- **탈로스의 파편** [sprite:gallery:lv1]: `images/creatures/olympus/creature_talos_fragment_gallery_lv1.png`
+- **분노의 정령 퓨리** [sprite:joy]: `images/creatures/olympus/creature_fury_hiss_joy.png`
+- **분노의 정령 퓨리** [sprite:sad]: `images/creatures/olympus/creature_fury_hiss_sad.png`
+- **분노의 정령 퓨리** [sprite:angry]: `images/creatures/olympus/creature_fury_hiss_angry.png`
+- **분노의 정령 퓨리** [sprite:skill]: `images/creatures/olympus/creature_fury_hiss_skill.png`
+- **분노의 정령 퓨리** [sprite:victory]: `images/creatures/olympus/creature_fury_hiss_victory.png`
+- **분노의 정령 퓨리** [sprite:defeat]: `images/creatures/olympus/creature_fury_hiss_defeat.png`
+- **분노의 정령 퓨리** [sprite:gallery:lv1]: `images/creatures/olympus/creature_fury_hiss_gallery_lv1.png`
+- **아기 스핑크스** [sprite:joy]: `images/creatures/olympus/creature_sphinx_kitten_joy.png`
+- **아기 스핑크스** [sprite:sad]: `images/creatures/olympus/creature_sphinx_kitten_sad.png`
+- **아기 스핑크스** [sprite:angry]: `images/creatures/olympus/creature_sphinx_kitten_angry.png`
+- **아기 스핑크스** [sprite:skill]: `images/creatures/olympus/creature_sphinx_kitten_skill.png`
+- **아기 스핑크스** [sprite:victory]: `images/creatures/olympus/creature_sphinx_kitten_victory.png`
+- **아기 스핑크스** [sprite:defeat]: `images/creatures/olympus/creature_sphinx_kitten_defeat.png`
+- **아기 스핑크스** [sprite:gallery:lv1]: `images/creatures/olympus/creature_sphinx_kitten_gallery_lv1.png`
+- **구름 솜사탕** [sprite:joy]: `images/creatures/olympus/creature_cloud_puff_joy.png`
+- **구름 솜사탕** [sprite:sad]: `images/creatures/olympus/creature_cloud_puff_sad.png`
+- **구름 솜사탕** [sprite:angry]: `images/creatures/olympus/creature_cloud_puff_angry.png`
+- **구름 솜사탕** [sprite:skill]: `images/creatures/olympus/creature_cloud_puff_skill.png`
+- **구름 솜사탕** [sprite:victory]: `images/creatures/olympus/creature_cloud_puff_victory.png`
+- **구름 솜사탕** [sprite:defeat]: `images/creatures/olympus/creature_cloud_puff_defeat.png`
+- **구름 솜사탕** [sprite:gallery:lv1]: `images/creatures/olympus/creature_cloud_puff_gallery_lv1.png`
+- **아기 페가수스** [sprite:joy]: `images/creatures/olympus/creature_pegasus_colt_joy.png`
+- **아기 페가수스** [sprite:sad]: `images/creatures/olympus/creature_pegasus_colt_sad.png`
+- **아기 페가수스** [sprite:angry]: `images/creatures/olympus/creature_pegasus_colt_angry.png`
+- **아기 페가수스** [sprite:skill]: `images/creatures/olympus/creature_pegasus_colt_skill.png`
+- **아기 페가수스** [sprite:victory]: `images/creatures/olympus/creature_pegasus_colt_victory.png`
+- **아기 페가수스** [sprite:defeat]: `images/creatures/olympus/creature_pegasus_colt_defeat.png`
+- **아기 페가수스** [sprite:gallery:lv1]: `images/creatures/olympus/creature_pegasus_colt_gallery_lv1.png`
+- **사티로스 견습생** [sprite:joy]: `images/creatures/olympus/creature_satyr_young_joy.png`
+- **사티로스 견습생** [sprite:sad]: `images/creatures/olympus/creature_satyr_young_sad.png`
+- **사티로스 견습생** [sprite:angry]: `images/creatures/olympus/creature_satyr_young_angry.png`
+- **사티로스 견습생** [sprite:skill]: `images/creatures/olympus/creature_satyr_young_skill.png`
+- **사티로스 견습생** [sprite:victory]: `images/creatures/olympus/creature_satyr_young_victory.png`
+- **사티로스 견습생** [sprite:defeat]: `images/creatures/olympus/creature_satyr_young_defeat.png`
+- **사티로스 견습생** [sprite:gallery:lv1]: `images/creatures/olympus/creature_satyr_young_gallery_lv1.png`
+- **드라이어드 씨앗** [sprite:joy]: `images/creatures/olympus/creature_dryad_seed_joy.png`
+- **드라이어드 씨앗** [sprite:sad]: `images/creatures/olympus/creature_dryad_seed_sad.png`
+- **드라이어드 씨앗** [sprite:angry]: `images/creatures/olympus/creature_dryad_seed_angry.png`
+- **드라이어드 씨앗** [sprite:skill]: `images/creatures/olympus/creature_dryad_seed_skill.png`
+- **드라이어드 씨앗** [sprite:victory]: `images/creatures/olympus/creature_dryad_seed_victory.png`
+- **드라이어드 씨앗** [sprite:defeat]: `images/creatures/olympus/creature_dryad_seed_defeat.png`
+- **드라이어드 씨앗** [sprite:gallery:lv1]: `images/creatures/olympus/creature_dryad_seed_gallery_lv1.png`
+- **키클롭스 견습공** [sprite:joy]: `images/creatures/olympus/creature_cyclops_worker_joy.png`
+- **키클롭스 견습공** [sprite:sad]: `images/creatures/olympus/creature_cyclops_worker_sad.png`
+- **키클롭스 견습공** [sprite:angry]: `images/creatures/olympus/creature_cyclops_worker_angry.png`
+- **키클롭스 견습공** [sprite:skill]: `images/creatures/olympus/creature_cyclops_worker_skill.png`
+- **키클롭스 견습공** [sprite:victory]: `images/creatures/olympus/creature_cyclops_worker_victory.png`
+- **키클롭스 견습공** [sprite:defeat]: `images/creatures/olympus/creature_cyclops_worker_defeat.png`
+- **키클롭스 견습공** [sprite:gallery:lv1]: `images/creatures/olympus/creature_cyclops_worker_gallery_lv1.png`
+- **샘의 님프** [sprite:joy]: `images/creatures/olympus/creature_nymph_water_joy.png`
+- **샘의 님프** [sprite:sad]: `images/creatures/olympus/creature_nymph_water_sad.png`
+- **샘의 님프** [sprite:angry]: `images/creatures/olympus/creature_nymph_water_angry.png`
+- **샘의 님프** [sprite:skill]: `images/creatures/olympus/creature_nymph_water_skill.png`
+- **샘의 님프** [sprite:victory]: `images/creatures/olympus/creature_nymph_water_victory.png`
+- **샘의 님프** [sprite:defeat]: `images/creatures/olympus/creature_nymph_water_defeat.png`
+- **샘의 님프** [sprite:gallery:lv1]: `images/creatures/olympus/creature_nymph_water_gallery_lv1.png`
+- **아기 그리폰** [sprite:joy]: `images/creatures/olympus/creature_griffin_chick_joy.png`
+- **아기 그리폰** [sprite:sad]: `images/creatures/olympus/creature_griffin_chick_sad.png`
+- **아기 그리폰** [sprite:angry]: `images/creatures/olympus/creature_griffin_chick_angry.png`
+- **아기 그리폰** [sprite:skill]: `images/creatures/olympus/creature_griffin_chick_skill.png`
+- **아기 그리폰** [sprite:victory]: `images/creatures/olympus/creature_griffin_chick_victory.png`
+- **아기 그리폰** [sprite:defeat]: `images/creatures/olympus/creature_griffin_chick_defeat.png`
+- **아기 그리폰** [sprite:gallery:lv1]: `images/creatures/olympus/creature_griffin_chick_gallery_lv1.png`
+- **아기 케르베로스** [sprite:joy]: `images/creatures/olympus/creature_cerberus_pup_joy.png`
+- **아기 케르베로스** [sprite:sad]: `images/creatures/olympus/creature_cerberus_pup_sad.png`
+- **아기 케르베로스** [sprite:angry]: `images/creatures/olympus/creature_cerberus_pup_angry.png`
+- **아기 케르베로스** [sprite:skill]: `images/creatures/olympus/creature_cerberus_pup_skill.png`
+- **아기 케르베로스** [sprite:victory]: `images/creatures/olympus/creature_cerberus_pup_victory.png`
+- **아기 케르베로스** [sprite:defeat]: `images/creatures/olympus/creature_cerberus_pup_defeat.png`
+- **아기 케르베로스** [sprite:gallery:lv1]: `images/creatures/olympus/creature_cerberus_pup_gallery_lv1.png`
+- **아기 미노타우로스** [sprite:joy]: `images/creatures/olympus/creature_minotaur_calf_joy.png`
+- **아기 미노타우로스** [sprite:sad]: `images/creatures/olympus/creature_minotaur_calf_sad.png`
+- **아기 미노타우로스** [sprite:angry]: `images/creatures/olympus/creature_minotaur_calf_angry.png`
+- **아기 미노타우로스** [sprite:skill]: `images/creatures/olympus/creature_minotaur_calf_skill.png`
+- **아기 미노타우로스** [sprite:victory]: `images/creatures/olympus/creature_minotaur_calf_victory.png`
+- **아기 미노타우로스** [sprite:defeat]: `images/creatures/olympus/creature_minotaur_calf_defeat.png`
+- **아기 미노타우로스** [sprite:gallery:lv1]: `images/creatures/olympus/creature_minotaur_calf_gallery_lv1.png`
+- **소형 카리브디스** [sprite:joy]: `images/creatures/olympus/creature_charybdis_baby_joy.png`
+- **소형 카리브디스** [sprite:sad]: `images/creatures/olympus/creature_charybdis_baby_sad.png`
+- **소형 카리브디스** [sprite:angry]: `images/creatures/olympus/creature_charybdis_baby_angry.png`
+- **소형 카리브디스** [sprite:skill]: `images/creatures/olympus/creature_charybdis_baby_skill.png`
+- **소형 카리브디스** [sprite:victory]: `images/creatures/olympus/creature_charybdis_baby_victory.png`
+- **소형 카리브디스** [sprite:defeat]: `images/creatures/olympus/creature_charybdis_baby_defeat.png`
+- **소형 카리브디스** [sprite:gallery:lv1]: `images/creatures/olympus/creature_charybdis_baby_gallery_lv1.png`
+- **새끼 스킬라** [sprite:joy]: `images/creatures/olympus/creature_scylla_pup_joy.png`
+- **새끼 스킬라** [sprite:sad]: `images/creatures/olympus/creature_scylla_pup_sad.png`
+- **새끼 스킬라** [sprite:angry]: `images/creatures/olympus/creature_scylla_pup_angry.png`
+- **새끼 스킬라** [sprite:skill]: `images/creatures/olympus/creature_scylla_pup_skill.png`
+- **새끼 스킬라** [sprite:victory]: `images/creatures/olympus/creature_scylla_pup_victory.png`
+- **새끼 스킬라** [sprite:defeat]: `images/creatures/olympus/creature_scylla_pup_defeat.png`
+- **새끼 스킬라** [sprite:gallery:lv1]: `images/creatures/olympus/creature_scylla_pup_gallery_lv1.png`
+- **아기 키메라** [sprite:joy]: `images/creatures/olympus/creature_chimera_cub_joy.png`
+- **아기 키메라** [sprite:sad]: `images/creatures/olympus/creature_chimera_cub_sad.png`
+- **아기 키메라** [sprite:angry]: `images/creatures/olympus/creature_chimera_cub_angry.png`
+- **아기 키메라** [sprite:skill]: `images/creatures/olympus/creature_chimera_cub_skill.png`
+- **아기 키메라** [sprite:victory]: `images/creatures/olympus/creature_chimera_cub_victory.png`
+- **아기 키메라** [sprite:defeat]: `images/creatures/olympus/creature_chimera_cub_defeat.png`
+- **아기 키메라** [sprite:gallery:lv1]: `images/creatures/olympus/creature_chimera_cub_gallery_lv1.png`
+- **대지의 여신 가이아** [sprite:sad]: `images/creatures/olympus/creature_god_gaia_sad.png`
+- **대지의 여신 가이아** [sprite:angry]: `images/creatures/olympus/creature_god_gaia_angry.png`
+- **대지의 여신 가이아** [sprite:victory]: `images/creatures/olympus/creature_god_gaia_victory.png`
+- **대지의 여신 가이아** [sprite:defeat]: `images/creatures/olympus/creature_god_gaia_defeat.png`
+
+## ShangriLa (287)
+- **천년 분재 정령** [sprite:joy]: `images/creatures/shangrila/creature_bonsai_spirit_joy.png`
+- **천년 분재 정령** [sprite:sad]: `images/creatures/shangrila/creature_bonsai_spirit_sad.png`
+- **천년 분재 정령** [sprite:angry]: `images/creatures/shangrila/creature_bonsai_spirit_angry.png`
+- **천년 분재 정령** [sprite:skill]: `images/creatures/shangrila/creature_bonsai_spirit_skill.png`
+- **천년 분재 정령** [sprite:victory]: `images/creatures/shangrila/creature_bonsai_spirit_victory.png`
+- **천년 분재 정령** [sprite:defeat]: `images/creatures/shangrila/creature_bonsai_spirit_defeat.png`
+- **천년 분재 정령** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_bonsai_spirit_gallery_lv1.png`
+- **판다 수도승** [sprite:joy]: `images/creatures/shangrila/creature_panda_monk_joy.png`
+- **판다 수도승** [sprite:sad]: `images/creatures/shangrila/creature_panda_monk_sad.png`
+- **판다 수도승** [sprite:angry]: `images/creatures/shangrila/creature_panda_monk_angry.png`
+- **판다 수도승** [sprite:skill]: `images/creatures/shangrila/creature_panda_monk_skill.png`
+- **판다 수도승** [sprite:victory]: `images/creatures/shangrila/creature_panda_monk_victory.png`
+- **판다 수도승** [sprite:defeat]: `images/creatures/shangrila/creature_panda_monk_defeat.png`
+- **판다 수도승** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_panda_monk_gallery_lv1.png`
+- **복 고양이 쿠로** [sprite:joy]: `images/creatures/shangrila/creature_lucky_cat_kuro_joy.png`
+- **복 고양이 쿠로** [sprite:sad]: `images/creatures/shangrila/creature_lucky_cat_kuro_sad.png`
+- **복 고양이 쿠로** [sprite:angry]: `images/creatures/shangrila/creature_lucky_cat_kuro_angry.png`
+- **복 고양이 쿠로** [sprite:skill]: `images/creatures/shangrila/creature_lucky_cat_kuro_skill.png`
+- **복 고양이 쿠로** [sprite:victory]: `images/creatures/shangrila/creature_lucky_cat_kuro_victory.png`
+- **복 고양이 쿠로** [sprite:defeat]: `images/creatures/shangrila/creature_lucky_cat_kuro_defeat.png`
+- **복 고양이 쿠로** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_lucky_cat_kuro_gallery_lv1.png`
+- **꼬마 선녀** [sprite:joy]: `images/creatures/shangrila/creature_heavenly_maiden_small_joy.png`
+- **꼬마 선녀** [sprite:sad]: `images/creatures/shangrila/creature_heavenly_maiden_small_sad.png`
+- **꼬마 선녀** [sprite:angry]: `images/creatures/shangrila/creature_heavenly_maiden_small_angry.png`
+- **꼬마 선녀** [sprite:skill]: `images/creatures/shangrila/creature_heavenly_maiden_small_skill.png`
+- **꼬마 선녀** [sprite:victory]: `images/creatures/shangrila/creature_heavenly_maiden_small_victory.png`
+- **꼬마 선녀** [sprite:defeat]: `images/creatures/shangrila/creature_heavenly_maiden_small_defeat.png`
+- **꼬마 선녀** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_heavenly_maiden_small_gallery_lv1.png`
+- **구름 이무기** [sprite:joy]: `images/creatures/shangrila/creature_cloud_serpent_joy.png`
+- **구름 이무기** [sprite:sad]: `images/creatures/shangrila/creature_cloud_serpent_sad.png`
+- **구름 이무기** [sprite:angry]: `images/creatures/shangrila/creature_cloud_serpent_angry.png`
+- **구름 이무기** [sprite:skill]: `images/creatures/shangrila/creature_cloud_serpent_skill.png`
+- **구름 이무기** [sprite:victory]: `images/creatures/shangrila/creature_cloud_serpent_victory.png`
+- **구름 이무기** [sprite:defeat]: `images/creatures/shangrila/creature_cloud_serpent_defeat.png`
+- **구름 이무기** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_cloud_serpent_gallery_lv1.png`
+- **해치 석상** [sprite:joy]: `images/creatures/shangrila/creature_statue_lion_dog_joy.png`
+- **해치 석상** [sprite:sad]: `images/creatures/shangrila/creature_statue_lion_dog_sad.png`
+- **해치 석상** [sprite:angry]: `images/creatures/shangrila/creature_statue_lion_dog_angry.png`
+- **해치 석상** [sprite:skill]: `images/creatures/shangrila/creature_statue_lion_dog_skill.png`
+- **해치 석상** [sprite:victory]: `images/creatures/shangrila/creature_statue_lion_dog_victory.png`
+- **해치 석상** [sprite:defeat]: `images/creatures/shangrila/creature_statue_lion_dog_defeat.png`
+- **해치 석상** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_statue_lion_dog_gallery_lv1.png`
+- **대나무 전사** [sprite:victory]: `images/creatures/shangrila/creature_bamboo_chopper_victory.png`
+- **대나무 전사** [sprite:defeat]: `images/creatures/shangrila/creature_bamboo_chopper_defeat.png`
+- **대나무 전사** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_bamboo_chopper_gallery_lv1.png`
+- **초롱불 귀신** [sprite:joy]: `images/creatures/shangrila/creature_lantern_ghost_joy.png`
+- **초롱불 귀신** [sprite:sad]: `images/creatures/shangrila/creature_lantern_ghost_sad.png`
+- **초롱불 귀신** [sprite:angry]: `images/creatures/shangrila/creature_lantern_ghost_angry.png`
+- **초롱불 귀신** [sprite:skill]: `images/creatures/shangrila/creature_lantern_ghost_skill.png`
+- **초롱불 귀신** [sprite:victory]: `images/creatures/shangrila/creature_lantern_ghost_victory.png`
+- **초롱불 귀신** [sprite:defeat]: `images/creatures/shangrila/creature_lantern_ghost_defeat.png`
+- **초롱불 귀신** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_lantern_ghost_gallery_lv1.png`
+- **미호의 시종** [sprite:joy]: `images/creatures/shangrila/creature_kumiho_servant_joy.png`
+- **미호의 시종** [sprite:sad]: `images/creatures/shangrila/creature_kumiho_servant_sad.png`
+- **미호의 시종** [sprite:angry]: `images/creatures/shangrila/creature_kumiho_servant_angry.png`
+- **미호의 시종** [sprite:skill]: `images/creatures/shangrila/creature_kumiho_servant_skill.png`
+- **미호의 시종** [sprite:victory]: `images/creatures/shangrila/creature_kumiho_servant_victory.png`
+- **미호의 시종** [sprite:defeat]: `images/creatures/shangrila/creature_kumiho_servant_defeat.png`
+- **미호의 시종** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_kumiho_servant_gallery_lv1.png`
+- **그림 속의 용** [sprite:joy]: `images/creatures/shangrila/creature_scroll_dragon_joy.png`
+- **그림 속의 용** [sprite:sad]: `images/creatures/shangrila/creature_scroll_dragon_sad.png`
+- **그림 속의 용** [sprite:angry]: `images/creatures/shangrila/creature_scroll_dragon_angry.png`
+- **그림 속의 용** [sprite:skill]: `images/creatures/shangrila/creature_scroll_dragon_skill.png`
+- **그림 속의 용** [sprite:victory]: `images/creatures/shangrila/creature_scroll_dragon_victory.png`
+- **그림 속의 용** [sprite:defeat]: `images/creatures/shangrila/creature_scroll_dragon_defeat.png`
+- **그림 속의 용** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_scroll_dragon_gallery_lv1.png`
+- **용이 되고 싶은 잉어** [sprite:joy]: `images/creatures/shangrila/creature_koi_ascending_joy.png`
+- **용이 되고 싶은 잉어** [sprite:sad]: `images/creatures/shangrila/creature_koi_ascending_sad.png`
+- **용이 되고 싶은 잉어** [sprite:angry]: `images/creatures/shangrila/creature_koi_ascending_angry.png`
+- **용이 되고 싶은 잉어** [sprite:skill]: `images/creatures/shangrila/creature_koi_ascending_skill.png`
+- **용이 되고 싶은 잉어** [sprite:victory]: `images/creatures/shangrila/creature_koi_ascending_victory.png`
+- **용이 되고 싶은 잉어** [sprite:defeat]: `images/creatures/shangrila/creature_koi_ascending_defeat.png`
+- **용이 되고 싶은 잉어** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_koi_ascending_gallery_lv1.png`
+- **찻잎 요정** [sprite:joy]: `images/creatures/shangrila/creature_tea_leaf_fairy_joy.png`
+- **찻잎 요정** [sprite:sad]: `images/creatures/shangrila/creature_tea_leaf_fairy_sad.png`
+- **찻잎 요정** [sprite:angry]: `images/creatures/shangrila/creature_tea_leaf_fairy_angry.png`
+- **찻잎 요정** [sprite:skill]: `images/creatures/shangrila/creature_tea_leaf_fairy_skill.png`
+- **찻잎 요정** [sprite:victory]: `images/creatures/shangrila/creature_tea_leaf_fairy_victory.png`
+- **찻잎 요정** [sprite:defeat]: `images/creatures/shangrila/creature_tea_leaf_fairy_defeat.png`
+- **찻잎 요정** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_tea_leaf_fairy_gallery_lv1.png`
+- **쌀알 정령** [sprite:joy]: `images/creatures/shangrila/creature_rice_grain_spirit_joy.png`
+- **쌀알 정령** [sprite:sad]: `images/creatures/shangrila/creature_rice_grain_spirit_sad.png`
+- **쌀알 정령** [sprite:angry]: `images/creatures/shangrila/creature_rice_grain_spirit_angry.png`
+- **쌀알 정령** [sprite:skill]: `images/creatures/shangrila/creature_rice_grain_spirit_skill.png`
+- **쌀알 정령** [sprite:victory]: `images/creatures/shangrila/creature_rice_grain_spirit_victory.png`
+- **쌀알 정령** [sprite:defeat]: `images/creatures/shangrila/creature_rice_grain_spirit_defeat.png`
+- **쌀알 정령** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_rice_grain_spirit_gallery_lv1.png`
+- **봉인 부적** [sprite:joy]: `images/creatures/shangrila/creature_paper_charm_seal_joy.png`
+- **봉인 부적** [sprite:sad]: `images/creatures/shangrila/creature_paper_charm_seal_sad.png`
+- **봉인 부적** [sprite:angry]: `images/creatures/shangrila/creature_paper_charm_seal_angry.png`
+- **봉인 부적** [sprite:skill]: `images/creatures/shangrila/creature_paper_charm_seal_skill.png`
+- **봉인 부적** [sprite:victory]: `images/creatures/shangrila/creature_paper_charm_seal_victory.png`
+- **봉인 부적** [sprite:defeat]: `images/creatures/shangrila/creature_paper_charm_seal_defeat.png`
+- **봉인 부적** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_paper_charm_seal_gallery_lv1.png`
+- **음양구** [sprite:joy]: `images/creatures/shangrila/creature_yin_yang_orb_joy.png`
+- **음양구** [sprite:sad]: `images/creatures/shangrila/creature_yin_yang_orb_sad.png`
+- **음양구** [sprite:angry]: `images/creatures/shangrila/creature_yin_yang_orb_angry.png`
+- **음양구** [sprite:skill]: `images/creatures/shangrila/creature_yin_yang_orb_skill.png`
+- **음양구** [sprite:victory]: `images/creatures/shangrila/creature_yin_yang_orb_victory.png`
+- **음양구** [sprite:defeat]: `images/creatures/shangrila/creature_yin_yang_orb_defeat.png`
+- **음양구** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_yin_yang_orb_gallery_lv1.png`
+- **벚꽃잎 요정** [sprite:joy]: `images/creatures/shangrila/creature_cherry_blossom_petal_joy.png`
+- **벚꽃잎 요정** [sprite:sad]: `images/creatures/shangrila/creature_cherry_blossom_petal_sad.png`
+- **벚꽃잎 요정** [sprite:angry]: `images/creatures/shangrila/creature_cherry_blossom_petal_angry.png`
+- **벚꽃잎 요정** [sprite:skill]: `images/creatures/shangrila/creature_cherry_blossom_petal_skill.png`
+- **벚꽃잎 요정** [sprite:victory]: `images/creatures/shangrila/creature_cherry_blossom_petal_victory.png`
+- **벚꽃잎 요정** [sprite:defeat]: `images/creatures/shangrila/creature_cherry_blossom_petal_defeat.png`
+- **벚꽃잎 요정** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_cherry_blossom_petal_gallery_lv1.png`
+- **반가운 까치 전령** [sprite:joy]: `images/creatures/shangrila/creature_magpie_messenger_joy.png`
+- **반가운 까치 전령** [sprite:sad]: `images/creatures/shangrila/creature_magpie_messenger_sad.png`
+- **반가운 까치 전령** [sprite:angry]: `images/creatures/shangrila/creature_magpie_messenger_angry.png`
+- **반가운 까치 전령** [sprite:skill]: `images/creatures/shangrila/creature_magpie_messenger_skill.png`
+- **반가운 까치 전령** [sprite:victory]: `images/creatures/shangrila/creature_magpie_messenger_victory.png`
+- **반가운 까치 전령** [sprite:defeat]: `images/creatures/shangrila/creature_magpie_messenger_defeat.png`
+- **반가운 까치 전령** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_magpie_messenger_gallery_lv1.png`
+- **풍경 소리 요정** [sprite:joy]: `images/creatures/shangrila/creature_wind_chime_spirit_joy.png`
+- **풍경 소리 요정** [sprite:sad]: `images/creatures/shangrila/creature_wind_chime_spirit_sad.png`
+- **풍경 소리 요정** [sprite:angry]: `images/creatures/shangrila/creature_wind_chime_spirit_angry.png`
+- **풍경 소리 요정** [sprite:skill]: `images/creatures/shangrila/creature_wind_chime_spirit_skill.png`
+- **풍경 소리 요정** [sprite:victory]: `images/creatures/shangrila/creature_wind_chime_spirit_victory.png`
+- **풍경 소리 요정** [sprite:defeat]: `images/creatures/shangrila/creature_wind_chime_spirit_defeat.png`
+- **풍경 소리 요정** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_wind_chime_spirit_gallery_lv1.png`
+- **달밤의 반딧불이** [sprite:joy]: `images/creatures/shangrila/creature_firefly_night_joy.png`
+- **달밤의 반딧불이** [sprite:sad]: `images/creatures/shangrila/creature_firefly_night_sad.png`
+- **달밤의 반딧불이** [sprite:angry]: `images/creatures/shangrila/creature_firefly_night_angry.png`
+- **달밤의 반딧불이** [sprite:skill]: `images/creatures/shangrila/creature_firefly_night_skill.png`
+- **달밤의 반딧불이** [sprite:victory]: `images/creatures/shangrila/creature_firefly_night_victory.png`
+- **달밤의 반딧불이** [sprite:defeat]: `images/creatures/shangrila/creature_firefly_night_defeat.png`
+- **달밤의 반딧불이** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_firefly_night_gallery_lv1.png`
+- **태초의 용 바하무트** [sprite:sad]: `images/creatures/shangrila/creature_dragon_ancient_sad.png`
+- **태초의 용 바하무트** [sprite:angry]: `images/creatures/shangrila/creature_dragon_ancient_angry.png`
+- **태초의 용 바하무트** [sprite:victory]: `images/creatures/shangrila/creature_dragon_ancient_victory.png`
+- **태초의 용 바하무트** [sprite:defeat]: `images/creatures/shangrila/creature_dragon_ancient_defeat.png`
+- **태초의 용 바하무트** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_dragon_ancient_gallery_lv1.png`
+- **태초의 용 바하무트** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_dragon_ancient_gallery_lv2.png`
+- **태초의 용 바하무트** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_dragon_ancient_gallery_lv3.png`
+- **천년 구미호 미호** [sprite:victory]: `images/creatures/shangrila/creature_fox_nine_ur_victory.png`
+- **천년 구미호 미호** [sprite:defeat]: `images/creatures/shangrila/creature_fox_nine_ur_defeat.png`
+- **천년 구미호 미호** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_fox_nine_ur_gallery_lv2.png`
+- **천년 구미호 미호** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_fox_nine_ur_gallery_lv3.png`
+- **수정궁의 용왕** [sprite:sad]: `images/creatures/shangrila/creature_god_dragon_king_sad.png`
+- **수정궁의 용왕** [sprite:angry]: `images/creatures/shangrila/creature_god_dragon_king_angry.png`
+- **수정궁의 용왕** [sprite:victory]: `images/creatures/shangrila/creature_god_dragon_king_victory.png`
+- **수정궁의 용왕** [sprite:defeat]: `images/creatures/shangrila/creature_god_dragon_king_defeat.png`
+- **수정궁의 용왕** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_god_dragon_king_gallery_lv1.png`
+- **수정궁의 용왕** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_god_dragon_king_gallery_lv2.png`
+- **수정궁의 용왕** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_god_dragon_king_gallery_lv3.png`
+- **불멸의 화조 페이** [sprite:sad]: `images/creatures/shangrila/creature_phoenix_eternal_sad.png`
+- **불멸의 화조 페이** [sprite:angry]: `images/creatures/shangrila/creature_phoenix_eternal_angry.png`
+- **불멸의 화조 페이** [sprite:victory]: `images/creatures/shangrila/creature_phoenix_eternal_victory.png`
+- **불멸의 화조 페이** [sprite:defeat]: `images/creatures/shangrila/creature_phoenix_eternal_defeat.png`
+- **불멸의 화조 페이** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_phoenix_eternal_gallery_lv1.png`
+- **불멸의 화조 페이** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_phoenix_eternal_gallery_lv2.png`
+- **불멸의 화조 페이** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_phoenix_eternal_gallery_lv3.png`
+- **제천대성 손오공** [sprite:sad]: `images/creatures/shangrila/creature_hero_wukong_sad.png`
+- **제천대성 손오공** [sprite:angry]: `images/creatures/shangrila/creature_hero_wukong_angry.png`
+- **제천대성 손오공** [sprite:victory]: `images/creatures/shangrila/creature_hero_wukong_victory.png`
+- **제천대성 손오공** [sprite:defeat]: `images/creatures/shangrila/creature_hero_wukong_defeat.png`
+- **제천대성 손오공** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_hero_wukong_gallery_lv1.png`
+- **제천대성 손오공** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_hero_wukong_gallery_lv2.png`
+- **제천대성 손오공** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_hero_wukong_gallery_lv3.png`
+- **달토끼 루나** [sprite:sad]: `images/creatures/shangrila/creature_rabbit_moon_sad.png`
+- **달토끼 루나** [sprite:angry]: `images/creatures/shangrila/creature_rabbit_moon_angry.png`
+- **달토끼 루나** [sprite:victory]: `images/creatures/shangrila/creature_rabbit_moon_victory.png`
+- **달토끼 루나** [sprite:defeat]: `images/creatures/shangrila/creature_rabbit_moon_defeat.png`
+- **달토끼 루나** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_rabbit_moon_gallery_lv1.png`
+- **달토끼 루나** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_rabbit_moon_gallery_lv2.png`
+- **달토끼 루나** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_rabbit_moon_gallery_lv3.png`
+- **공작 공주** [sprite:sad]: `images/creatures/shangrila/creature_peacock_princess_sad.png`
+- **공작 공주** [sprite:angry]: `images/creatures/shangrila/creature_peacock_princess_angry.png`
+- **공작 공주** [sprite:victory]: `images/creatures/shangrila/creature_peacock_princess_victory.png`
+- **공작 공주** [sprite:defeat]: `images/creatures/shangrila/creature_peacock_princess_defeat.png`
+- **공작 공주** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_peacock_princess_gallery_lv1.png`
+- **공작 공주** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_peacock_princess_gallery_lv2.png`
+- **공작 공주** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_peacock_princess_gallery_lv3.png`
+- **아기 여우 미호** [sprite:joy]: `images/creatures/shangrila/creature_kumiho_servant_joy.png`
+- **아기 여우 미호** [sprite:sad]: `images/creatures/shangrila/creature_kumiho_servant_sad.png`
+- **아기 여우 미호** [sprite:angry]: `images/creatures/shangrila/creature_kumiho_servant_angry.png`
+- **아기 여우 미호** [sprite:skill]: `images/creatures/shangrila/creature_kumiho_servant_skill.png`
+- **아기 여우 미호** [sprite:victory]: `images/creatures/shangrila/creature_kumiho_servant_victory.png`
+- **아기 여우 미호** [sprite:defeat]: `images/creatures/shangrila/creature_kumiho_servant_defeat.png`
+- **아기 여우 미호** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_kumiho_servant_gallery_lv1.png`
+- **여우요괴 미호** [sprite:joy]: `images/creatures/shangrila/creature_fox_yokai_sr_joy.png`
+- **여우요괴 미호** [sprite:sad]: `images/creatures/shangrila/creature_fox_yokai_sr_sad.png`
+- **여우요괴 미호** [sprite:angry]: `images/creatures/shangrila/creature_fox_yokai_sr_angry.png`
+- **여우요괴 미호** [sprite:skill]: `images/creatures/shangrila/creature_fox_yokai_sr_skill.png`
+- **여우요괴 미호** [sprite:victory]: `images/creatures/shangrila/creature_fox_yokai_sr_victory.png`
+- **여우요괴 미호** [sprite:defeat]: `images/creatures/shangrila/creature_fox_yokai_sr_defeat.png`
+- **여우요괴 미호** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_fox_yokai_sr_gallery_lv1.png`
+- **여우요괴 미호** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_fox_yokai_sr_gallery_lv2.png`
+- **여우요괴 미호** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_fox_yokai_sr_gallery_lv3.png`
+- **청룡** [sprite:joy]: `images/creatures/shangrila/creature_dragon_azure_joy.png`
+- **청룡** [sprite:sad]: `images/creatures/shangrila/creature_dragon_azure_sad.png`
+- **청룡** [sprite:angry]: `images/creatures/shangrila/creature_dragon_azure_angry.png`
+- **청룡** [sprite:skill]: `images/creatures/shangrila/creature_dragon_azure_skill.png`
+- **청룡** [sprite:victory]: `images/creatures/shangrila/creature_dragon_azure_victory.png`
+- **청룡** [sprite:defeat]: `images/creatures/shangrila/creature_dragon_azure_defeat.png`
+- **청룡** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_dragon_azure_gallery_lv1.png`
+- **청룡** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_dragon_azure_gallery_lv2.png`
+- **청룡** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_dragon_azure_gallery_lv3.png`
+- **백호** [sprite:joy]: `images/creatures/shangrila/creature_tiger_white_joy.png`
+- **백호** [sprite:sad]: `images/creatures/shangrila/creature_tiger_white_sad.png`
+- **백호** [sprite:angry]: `images/creatures/shangrila/creature_tiger_white_angry.png`
+- **백호** [sprite:skill]: `images/creatures/shangrila/creature_tiger_white_skill.png`
+- **백호** [sprite:victory]: `images/creatures/shangrila/creature_tiger_white_victory.png`
+- **백호** [sprite:defeat]: `images/creatures/shangrila/creature_tiger_white_defeat.png`
+- **백호** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_tiger_white_gallery_lv1.png`
+- **백호** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_tiger_white_gallery_lv2.png`
+- **백호** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_tiger_white_gallery_lv3.png`
+- **주작** [sprite:joy]: `images/creatures/shangrila/creature_bird_vermilion_joy.png`
+- **주작** [sprite:sad]: `images/creatures/shangrila/creature_bird_vermilion_sad.png`
+- **주작** [sprite:angry]: `images/creatures/shangrila/creature_bird_vermilion_angry.png`
+- **주작** [sprite:skill]: `images/creatures/shangrila/creature_bird_vermilion_skill.png`
+- **주작** [sprite:victory]: `images/creatures/shangrila/creature_bird_vermilion_victory.png`
+- **주작** [sprite:defeat]: `images/creatures/shangrila/creature_bird_vermilion_defeat.png`
+- **주작** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_bird_vermilion_gallery_lv1.png`
+- **주작** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_bird_vermilion_gallery_lv2.png`
+- **주작** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_bird_vermilion_gallery_lv3.png`
+- **현무** [sprite:joy]: `images/creatures/shangrila/creature_turtle_black_joy.png`
+- **현무** [sprite:sad]: `images/creatures/shangrila/creature_turtle_black_sad.png`
+- **현무** [sprite:angry]: `images/creatures/shangrila/creature_turtle_black_angry.png`
+- **현무** [sprite:skill]: `images/creatures/shangrila/creature_turtle_black_skill.png`
+- **현무** [sprite:victory]: `images/creatures/shangrila/creature_turtle_black_victory.png`
+- **현무** [sprite:defeat]: `images/creatures/shangrila/creature_turtle_black_defeat.png`
+- **현무** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_turtle_black_gallery_lv1.png`
+- **현무** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_turtle_black_gallery_lv2.png`
+- **현무** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_turtle_black_gallery_lv3.png`
+- **황금 방망이 도깨비** [sprite:joy]: `images/creatures/shangrila/creature_dokkeabi_king_joy.png`
+- **황금 방망이 도깨비** [sprite:sad]: `images/creatures/shangrila/creature_dokkeabi_king_sad.png`
+- **황금 방망이 도깨비** [sprite:angry]: `images/creatures/shangrila/creature_dokkeabi_king_angry.png`
+- **황금 방망이 도깨비** [sprite:skill]: `images/creatures/shangrila/creature_dokkeabi_king_skill.png`
+- **황금 방망이 도깨비** [sprite:victory]: `images/creatures/shangrila/creature_dokkeabi_king_victory.png`
+- **황금 방망이 도깨비** [sprite:defeat]: `images/creatures/shangrila/creature_dokkeabi_king_defeat.png`
+- **황금 방망이 도깨비** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_dokkeabi_king_gallery_lv1.png`
+- **황금 방망이 도깨비** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_dokkeabi_king_gallery_lv2.png`
+- **황금 방망이 도깨비** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_dokkeabi_king_gallery_lv3.png`
+- **산신 호랑이** [sprite:joy]: `images/creatures/shangrila/creature_mountain_god_tiger_joy.png`
+- **산신 호랑이** [sprite:sad]: `images/creatures/shangrila/creature_mountain_god_tiger_sad.png`
+- **산신 호랑이** [sprite:angry]: `images/creatures/shangrila/creature_mountain_god_tiger_angry.png`
+- **산신 호랑이** [sprite:skill]: `images/creatures/shangrila/creature_mountain_god_tiger_skill.png`
+- **산신 호랑이** [sprite:victory]: `images/creatures/shangrila/creature_mountain_god_tiger_victory.png`
+- **산신 호랑이** [sprite:defeat]: `images/creatures/shangrila/creature_mountain_god_tiger_defeat.png`
+- **산신 호랑이** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_mountain_god_tiger_gallery_lv1.png`
+- **산신 호랑이** [sprite:gallery:lv2]: `images/creatures/shangrila/creature_mountain_god_tiger_gallery_lv2.png`
+- **산신 호랑이** [sprite:gallery:lv3]: `images/creatures/shangrila/creature_mountain_god_tiger_gallery_lv3.png`
+- **그림자 닌자** [sprite:joy]: `images/creatures/shangrila/creature_ninja_shadow_joy.png`
+- **그림자 닌자** [sprite:sad]: `images/creatures/shangrila/creature_ninja_shadow_sad.png`
+- **그림자 닌자** [sprite:angry]: `images/creatures/shangrila/creature_ninja_shadow_angry.png`
+- **그림자 닌자** [sprite:skill]: `images/creatures/shangrila/creature_ninja_shadow_skill.png`
+- **그림자 닌자** [sprite:victory]: `images/creatures/shangrila/creature_ninja_shadow_victory.png`
+- **그림자 닌자** [sprite:defeat]: `images/creatures/shangrila/creature_ninja_shadow_defeat.png`
+- **그림자 닌자** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_ninja_shadow_gallery_lv1.png`
+- **구름 위의 학 신선** [sprite:joy]: `images/creatures/shangrila/creature_crane_sage_joy.png`
+- **구름 위의 학 신선** [sprite:sad]: `images/creatures/shangrila/creature_crane_sage_sad.png`
+- **구름 위의 학 신선** [sprite:angry]: `images/creatures/shangrila/creature_crane_sage_angry.png`
+- **구름 위의 학 신선** [sprite:skill]: `images/creatures/shangrila/creature_crane_sage_skill.png`
+- **구름 위의 학 신선** [sprite:victory]: `images/creatures/shangrila/creature_crane_sage_victory.png`
+- **구름 위의 학 신선** [sprite:defeat]: `images/creatures/shangrila/creature_crane_sage_defeat.png`
+- **구름 위의 학 신선** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_crane_sage_gallery_lv1.png`
+- **연꽃 아씨** [sprite:joy]: `images/creatures/shangrila/creature_pears_spirit_joy.png`
+- **연꽃 아씨** [sprite:sad]: `images/creatures/shangrila/creature_pears_spirit_sad.png`
+- **연꽃 아씨** [sprite:angry]: `images/creatures/shangrila/creature_pears_spirit_angry.png`
+- **연꽃 아씨** [sprite:skill]: `images/creatures/shangrila/creature_pears_spirit_skill.png`
+- **연꽃 아씨** [sprite:victory]: `images/creatures/shangrila/creature_pears_spirit_victory.png`
+- **연꽃 아씨** [sprite:defeat]: `images/creatures/shangrila/creature_pears_spirit_defeat.png`
+- **연꽃 아씨** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_pears_spirit_gallery_lv1.png`
+- **장자의 나비** [sprite:joy]: `images/creatures/shangrila/creature_butterfly_dream_joy.png`
+- **장자의 나비** [sprite:sad]: `images/creatures/shangrila/creature_butterfly_dream_sad.png`
+- **장자의 나비** [sprite:angry]: `images/creatures/shangrila/creature_butterfly_dream_angry.png`
+- **장자의 나비** [sprite:skill]: `images/creatures/shangrila/creature_butterfly_dream_skill.png`
+- **장자의 나비** [sprite:victory]: `images/creatures/shangrila/creature_butterfly_dream_victory.png`
+- **장자의 나비** [sprite:defeat]: `images/creatures/shangrila/creature_butterfly_dream_defeat.png`
+- **장자의 나비** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_butterfly_dream_gallery_lv1.png`
+- **꽃의 요정** [sprite:joy]: `images/creatures/shangrila/creature_flower_fairy_joy.png`
+- **꽃의 요정** [sprite:sad]: `images/creatures/shangrila/creature_flower_fairy_sad.png`
+- **꽃의 요정** [sprite:angry]: `images/creatures/shangrila/creature_flower_fairy_angry.png`
+- **꽃의 요정** [sprite:skill]: `images/creatures/shangrila/creature_flower_fairy_skill.png`
+- **꽃의 요정** [sprite:victory]: `images/creatures/shangrila/creature_flower_fairy_victory.png`
+- **꽃의 요정** [sprite:defeat]: `images/creatures/shangrila/creature_flower_fairy_defeat.png`
+- **꽃의 요정** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_flower_fairy_gallery_lv1.png`
+- **먹물 요정** [sprite:joy]: `images/creatures/shangrila/creature_ink_spirit_joy.png`
+- **먹물 요정** [sprite:sad]: `images/creatures/shangrila/creature_ink_spirit_sad.png`
+- **먹물 요정** [sprite:angry]: `images/creatures/shangrila/creature_ink_spirit_angry.png`
+- **먹물 요정** [sprite:skill]: `images/creatures/shangrila/creature_ink_spirit_skill.png`
+- **먹물 요정** [sprite:victory]: `images/creatures/shangrila/creature_ink_spirit_victory.png`
+- **먹물 요정** [sprite:defeat]: `images/creatures/shangrila/creature_ink_spirit_defeat.png`
+- **먹물 요정** [sprite:gallery:lv1]: `images/creatures/shangrila/creature_ink_spirit_gallery_lv1.png`
+
+## Wild (154)
+- **심해의 재앙 레비아탄** [sprite:victory]: `images/creatures/wild/creature_beast_leviathan_victory.png`
+- **심해의 재앙 레비아탄** [sprite:defeat]: `images/creatures/wild/creature_beast_leviathan_defeat.png`
+- **심해의 재앙 레비아탄** [sprite:gallery:lv1]: `images/creatures/wild/creature_beast_leviathan_gallery_lv1.png`
+- **심해의 재앙 레비아탄** [sprite:gallery:lv2]: `images/creatures/wild/creature_beast_leviathan_gallery_lv2.png`
+- **심해의 재앙 레비아탄** [sprite:gallery:lv3]: `images/creatures/wild/creature_beast_leviathan_gallery_lv3.png`
+- **요정 여왕 티타니아** [sprite:sad]: `images/creatures/wild/creature_fairy_queen_titania_sad.png`
+- **요정 여왕 티타니아** [sprite:angry]: `images/creatures/wild/creature_fairy_queen_titania_angry.png`
+- **요정 여왕 티타니아** [sprite:victory]: `images/creatures/wild/creature_fairy_queen_titania_victory.png`
+- **요정 여왕 티타니아** [sprite:defeat]: `images/creatures/wild/creature_fairy_queen_titania_defeat.png`
+- **요정 여왕 티타니아** [sprite:gallery:lv1]: `images/creatures/wild/creature_fairy_queen_titania_gallery_lv1.png`
+- **요정 여왕 티타니아** [sprite:gallery:lv2]: `images/creatures/wild/creature_fairy_queen_titania_gallery_lv2.png`
+- **요정 여왕 티타니아** [sprite:gallery:lv3]: `images/creatures/wild/creature_fairy_queen_titania_gallery_lv3.png`
+- **황금 그리폰** [sprite:joy]: `images/creatures/wild/creature_griffin_gold_joy.png`
+- **황금 그리폰** [sprite:sad]: `images/creatures/wild/creature_griffin_gold_sad.png`
+- **황금 그리폰** [sprite:angry]: `images/creatures/wild/creature_griffin_gold_angry.png`
+- **황금 그리폰** [sprite:skill]: `images/creatures/wild/creature_griffin_gold_skill.png`
+- **황금 그리폰** [sprite:victory]: `images/creatures/wild/creature_griffin_gold_victory.png`
+- **황금 그리폰** [sprite:defeat]: `images/creatures/wild/creature_griffin_gold_defeat.png`
+- **황금 그리폰** [sprite:gallery:lv1]: `images/creatures/wild/creature_griffin_gold_gallery_lv1.png`
+- **황금 그리폰** [sprite:gallery:lv2]: `images/creatures/wild/creature_griffin_gold_gallery_lv2.png`
+- **황금 그리폰** [sprite:gallery:lv3]: `images/creatures/wild/creature_griffin_gold_gallery_lv3.png`
+- **만년 고대 거북** [sprite:joy]: `images/creatures/wild/creature_turtle_ancient_wild_joy.png`
+- **만년 고대 거북** [sprite:sad]: `images/creatures/wild/creature_turtle_ancient_wild_sad.png`
+- **만년 고대 거북** [sprite:angry]: `images/creatures/wild/creature_turtle_ancient_wild_angry.png`
+- **만년 고대 거북** [sprite:skill]: `images/creatures/wild/creature_turtle_ancient_wild_skill.png`
+- **만년 고대 거북** [sprite:victory]: `images/creatures/wild/creature_turtle_ancient_wild_victory.png`
+- **만년 고대 거북** [sprite:defeat]: `images/creatures/wild/creature_turtle_ancient_wild_defeat.png`
+- **만년 고대 거북** [sprite:gallery:lv1]: `images/creatures/wild/creature_turtle_ancient_wild_gallery_lv1.png`
+- **만년 고대 거북** [sprite:gallery:lv2]: `images/creatures/wild/creature_turtle_ancient_wild_gallery_lv2.png`
+- **만년 고대 거북** [sprite:gallery:lv3]: `images/creatures/wild/creature_turtle_ancient_wild_gallery_lv3.png`
+- **드라이어드 여왕** [sprite:joy]: `images/creatures/wild/creature_dryad_queen_joy.png`
+- **드라이어드 여왕** [sprite:sad]: `images/creatures/wild/creature_dryad_queen_sad.png`
+- **드라이어드 여왕** [sprite:angry]: `images/creatures/wild/creature_dryad_queen_angry.png`
+- **드라이어드 여왕** [sprite:skill]: `images/creatures/wild/creature_dryad_queen_skill.png`
+- **드라이어드 여왕** [sprite:victory]: `images/creatures/wild/creature_dryad_queen_victory.png`
+- **드라이어드 여왕** [sprite:defeat]: `images/creatures/wild/creature_dryad_queen_defeat.png`
+- **드라이어드 여왕** [sprite:gallery:lv1]: `images/creatures/wild/creature_dryad_queen_gallery_lv1.png`
+- **드라이어드 여왕** [sprite:gallery:lv2]: `images/creatures/wild/creature_dryad_queen_gallery_lv2.png`
+- **드라이어드 여왕** [sprite:gallery:lv3]: `images/creatures/wild/creature_dryad_queen_gallery_lv3.png`
+- **사마귀 무사** [sprite:joy]: `images/creatures/wild/creature_mantis_warrior_joy.png`
+- **사마귀 무사** [sprite:sad]: `images/creatures/wild/creature_mantis_warrior_sad.png`
+- **사마귀 무사** [sprite:angry]: `images/creatures/wild/creature_mantis_warrior_angry.png`
+- **사마귀 무사** [sprite:skill]: `images/creatures/wild/creature_mantis_warrior_skill.png`
+- **사마귀 무사** [sprite:victory]: `images/creatures/wild/creature_mantis_warrior_victory.png`
+- **사마귀 무사** [sprite:defeat]: `images/creatures/wild/creature_mantis_warrior_defeat.png`
+- **사마귀 무사** [sprite:gallery:lv1]: `images/creatures/wild/creature_mantis_warrior_gallery_lv1.png`
+- **난초 사마귀** [sprite:joy]: `images/creatures/wild/creature_orchid_mantis_joy.png`
+- **난초 사마귀** [sprite:sad]: `images/creatures/wild/creature_orchid_mantis_sad.png`
+- **난초 사마귀** [sprite:angry]: `images/creatures/wild/creature_orchid_mantis_angry.png`
+- **난초 사마귀** [sprite:skill]: `images/creatures/wild/creature_orchid_mantis_skill.png`
+- **난초 사마귀** [sprite:victory]: `images/creatures/wild/creature_orchid_mantis_victory.png`
+- **난초 사마귀** [sprite:defeat]: `images/creatures/wild/creature_orchid_mantis_defeat.png`
+- **난초 사마귀** [sprite:gallery:lv1]: `images/creatures/wild/creature_orchid_mantis_gallery_lv1.png`
+- **수정 게** [sprite:joy]: `images/creatures/wild/creature_crystal_crab_joy.png`
+- **수정 게** [sprite:sad]: `images/creatures/wild/creature_crystal_crab_sad.png`
+- **수정 게** [sprite:angry]: `images/creatures/wild/creature_crystal_crab_angry.png`
+- **수정 게** [sprite:skill]: `images/creatures/wild/creature_crystal_crab_skill.png`
+- **수정 게** [sprite:victory]: `images/creatures/wild/creature_crystal_crab_victory.png`
+- **수정 게** [sprite:defeat]: `images/creatures/wild/creature_crystal_crab_defeat.png`
+- **수정 게** [sprite:gallery:lv1]: `images/creatures/wild/creature_crystal_crab_gallery_lv1.png`
+- **번개 장어 왕** [sprite:joy]: `images/creatures/wild/creature_electric_eel_king_joy.png`
+- **번개 장어 왕** [sprite:sad]: `images/creatures/wild/creature_electric_eel_king_sad.png`
+- **번개 장어 왕** [sprite:angry]: `images/creatures/wild/creature_electric_eel_king_angry.png`
+- **번개 장어 왕** [sprite:skill]: `images/creatures/wild/creature_electric_eel_king_skill.png`
+- **번개 장어 왕** [sprite:victory]: `images/creatures/wild/creature_electric_eel_king_victory.png`
+- **번개 장어 왕** [sprite:defeat]: `images/creatures/wild/creature_electric_eel_king_defeat.png`
+- **번개 장어 왕** [sprite:gallery:lv1]: `images/creatures/wild/creature_electric_eel_king_gallery_lv1.png`
+- **대형 마그마 슬라임** [sprite:joy]: `images/creatures/wild/creature_magma_slime_giant_joy.png`
+- **대형 마그마 슬라임** [sprite:sad]: `images/creatures/wild/creature_magma_slime_giant_sad.png`
+- **대형 마그마 슬라임** [sprite:angry]: `images/creatures/wild/creature_magma_slime_giant_angry.png`
+- **대형 마그마 슬라임** [sprite:skill]: `images/creatures/wild/creature_magma_slime_giant_skill.png`
+- **대형 마그마 슬라임** [sprite:victory]: `images/creatures/wild/creature_magma_slime_giant_victory.png`
+- **대형 마그마 슬라임** [sprite:defeat]: `images/creatures/wild/creature_magma_slime_giant_defeat.png`
+- **대형 마그마 슬라임** [sprite:gallery:lv1]: `images/creatures/wild/creature_magma_slime_giant_gallery_lv1.png`
+- **숲의 수호자** [sprite:joy]: `images/creatures/wild/creature_forest_guardian_joy.png`
+- **숲의 수호자** [sprite:sad]: `images/creatures/wild/creature_forest_guardian_sad.png`
+- **숲의 수호자** [sprite:angry]: `images/creatures/wild/creature_forest_guardian_angry.png`
+- **숲의 수호자** [sprite:skill]: `images/creatures/wild/creature_forest_guardian_skill.png`
+- **숲의 수호자** [sprite:victory]: `images/creatures/wild/creature_forest_guardian_victory.png`
+- **숲의 수호자** [sprite:defeat]: `images/creatures/wild/creature_forest_guardian_defeat.png`
+- **숲의 수호자** [sprite:gallery:lv1]: `images/creatures/wild/creature_forest_guardian_gallery_lv1.png`
+- **해바라기 정령** [sprite:joy]: `images/creatures/wild/creature_sun_flower_spirit_joy.png`
+- **해바라기 정령** [sprite:sad]: `images/creatures/wild/creature_sun_flower_spirit_sad.png`
+- **해바라기 정령** [sprite:angry]: `images/creatures/wild/creature_sun_flower_spirit_angry.png`
+- **해바라기 정령** [sprite:skill]: `images/creatures/wild/creature_sun_flower_spirit_skill.png`
+- **해바라기 정령** [sprite:victory]: `images/creatures/wild/creature_sun_flower_spirit_victory.png`
+- **해바라기 정령** [sprite:defeat]: `images/creatures/wild/creature_sun_flower_spirit_defeat.png`
+- **해바라기 정령** [sprite:gallery:lv1]: `images/creatures/wild/creature_sun_flower_spirit_gallery_lv1.png`
+- **다이어 울프** [sprite:joy]: `images/creatures/wild/creature_wolf_dire_joy.png`
+- **다이어 울프** [sprite:sad]: `images/creatures/wild/creature_wolf_dire_sad.png`
+- **다이어 울프** [sprite:angry]: `images/creatures/wild/creature_wolf_dire_angry.png`
+- **다이어 울프** [sprite:skill]: `images/creatures/wild/creature_wolf_dire_skill.png`
+- **다이어 울프** [sprite:victory]: `images/creatures/wild/creature_wolf_dire_victory.png`
+- **다이어 울프** [sprite:defeat]: `images/creatures/wild/creature_wolf_dire_defeat.png`
+- **다이어 울프** [sprite:gallery:lv1]: `images/creatures/wild/creature_wolf_dire_gallery_lv1.png`
+- **진흙 골렘** [sprite:joy]: `images/creatures/wild/creature_golem_mud_joy.png`
+- **진흙 골렘** [sprite:sad]: `images/creatures/wild/creature_golem_mud_sad.png`
+- **진흙 골렘** [sprite:angry]: `images/creatures/wild/creature_golem_mud_angry.png`
+- **진흙 골렘** [sprite:skill]: `images/creatures/wild/creature_golem_mud_skill.png`
+- **진흙 골렘** [sprite:victory]: `images/creatures/wild/creature_golem_mud_victory.png`
+- **진흙 골렘** [sprite:defeat]: `images/creatures/wild/creature_golem_mud_defeat.png`
+- **진흙 골렘** [sprite:gallery:lv1]: `images/creatures/wild/creature_golem_mud_gallery_lv1.png`
+- **마그마 슬라임** [sprite:victory]: `images/creatures/wild/creature_magma_slime_victory.png`
+- **마그마 슬라임** [sprite:defeat]: `images/creatures/wild/creature_magma_slime_defeat.png`
+- **마그마 슬라임** [sprite:gallery:lv1]: `images/creatures/wild/creature_magma_slime_gallery_lv1.png`
+- **화난 버섯** [sprite:joy]: `images/creatures/wild/creature_mushroom_angry_new_joy.png`
+- **화난 버섯** [sprite:sad]: `images/creatures/wild/creature_mushroom_angry_new_sad.png`
+- **화난 버섯** [sprite:angry]: `images/creatures/wild/creature_mushroom_angry_new_angry.png`
+- **화난 버섯** [sprite:skill]: `images/creatures/wild/creature_mushroom_angry_new_skill.png`
+- **화난 버섯** [sprite:victory]: `images/creatures/wild/creature_mushroom_angry_new_victory.png`
+- **화난 버섯** [sprite:defeat]: `images/creatures/wild/creature_mushroom_angry_new_defeat.png`
+- **화난 버섯** [sprite:gallery:lv1]: `images/creatures/wild/creature_mushroom_angry_new_gallery_lv1.png`
+- **날치** [sprite:joy]: `images/creatures/wild/creature_fish_flying_new_joy.png`
+- **날치** [sprite:sad]: `images/creatures/wild/creature_fish_flying_new_sad.png`
+- **날치** [sprite:angry]: `images/creatures/wild/creature_fish_flying_new_angry.png`
+- **날치** [sprite:skill]: `images/creatures/wild/creature_fish_flying_new_skill.png`
+- **날치** [sprite:victory]: `images/creatures/wild/creature_fish_flying_new_victory.png`
+- **날치** [sprite:defeat]: `images/creatures/wild/creature_fish_flying_new_defeat.png`
+- **날치** [sprite:gallery:lv1]: `images/creatures/wild/creature_fish_flying_new_gallery_lv1.png`
+- **숲의 천사** [sprite:joy]: `images/creatures/wild/creature_angel_arch_joy.png`
+- **숲의 천사** [sprite:sad]: `images/creatures/wild/creature_angel_arch_sad.png`
+- **숲의 천사** [sprite:angry]: `images/creatures/wild/creature_angel_arch_angry.png`
+- **숲의 천사** [sprite:skill]: `images/creatures/wild/creature_angel_arch_skill.png`
+- **숲의 천사** [sprite:victory]: `images/creatures/wild/creature_angel_arch_victory.png`
+- **숲의 천사** [sprite:defeat]: `images/creatures/wild/creature_angel_arch_defeat.png`
+- **숲의 천사** [sprite:gallery:lv1]: `images/creatures/wild/creature_angel_arch_gallery_lv1.png`
+- **시간의 환영** [main]: `images/creatures/wild/creature_time_phantom.png`
+- **시간의 환영** [sprite:idle]: `images/creatures/wild/creature_time_phantom.png`
+- **시간의 환영** [sprite:joy]: `images/creatures/wild/creature_time_phantom.png`
+- **시간의 환영** [sprite:sad]: `images/creatures/wild/creature_time_phantom.png`
+- **시간의 환영** [sprite:angry]: `images/creatures/wild/creature_time_phantom.png`
+- **시간의 환영** [sprite:skill]: `images/creatures/wild/creature_time_phantom.png`
+- **시간의 환영** [sprite:victory]: `images/creatures/wild/creature_time_phantom.png`
+- **시간의 환영** [sprite:defeat]: `images/creatures/wild/creature_time_phantom.png`
+- **시간의 환영** [sprite:gallery:lv1]: `images/creatures/wild/creature_time_phantom.png`
+- **아기 크라켄** [sprite:joy]: `images/creatures/wild/creature_kraken_baby_joy.png`
+- **아기 크라켄** [sprite:sad]: `images/creatures/wild/creature_kraken_baby_sad.png`
+- **아기 크라켄** [sprite:angry]: `images/creatures/wild/creature_kraken_baby_angry.png`
+- **아기 크라켄** [sprite:skill]: `images/creatures/wild/creature_kraken_baby_skill.png`
+- **아기 크라켄** [sprite:victory]: `images/creatures/wild/creature_kraken_baby_victory.png`
+- **아기 크라켄** [sprite:defeat]: `images/creatures/wild/creature_kraken_baby_defeat.png`
+- **아기 크라켄** [sprite:gallery:lv1]: `images/creatures/wild/creature_kraken_baby_gallery_lv1.png`
+- **초록 슬라임** [sprite:victory]: `images/creatures/wild/creature_slime_green_new_victory.png`
+- **초록 슬라임** [sprite:defeat]: `images/creatures/wild/creature_slime_green_new_defeat.png`
+- **초록 슬라임** [sprite:gallery:lv1]: `images/creatures/wild/creature_slime_green_new_gallery_lv1.png`
+- **파랑 슬라임** [sprite:victory]: `images/creatures/wild/creature_blue_slime_victory.png`
+- **파랑 슬라임** [sprite:defeat]: `images/creatures/wild/creature_blue_slime_defeat.png`
+- **파랑 슬라임** [sprite:gallery:lv1]: `images/creatures/wild/creature_blue_slime_gallery_lv1.png`
+- **유니콘** [main]: `images/creatures/wild/creature_unicorn.png`
+- **유니콘** [sprite:idle]: `images/creatures/wild/creature_unicorn.png`
+- **유니콘** [sprite:joy]: `images/creatures/wild/creature_unicorn.png`
+- **유니콘** [sprite:sad]: `images/creatures/wild/creature_unicorn.png`
+- **유니콘** [sprite:angry]: `images/creatures/wild/creature_unicorn.png`
+- **유니콘** [sprite:skill]: `images/creatures/wild/creature_unicorn.png`
+

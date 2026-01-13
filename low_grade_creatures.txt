@@ -1,0 +1,93 @@
+﻿# 저등급 크리처 목록
+
+## NORMAL (61개)
+heimdall_horn_spirit	발키리 신병	Asgard
+mimir_spirit	아스가르드 늑대개	Asgard
+ratatoskr_squirrel	비프로스트 위습	Asgard
+shieldmaiden_iron	드워프 대장장이	Asgard
+ulfhednar_wolf	에인헤랴르 영혼	Asgard
+valkyrie_recruit	불의 거인 정찰병	Asgard
+creature_dwarf	작은 얼음 정령	Asgard
+cloud_puff	구름 솜사탕	Olympus
+pegasus_colt	아기 페가수스	Olympus
+satyr_young	사티로스 견습생	Olympus
+dryad_seed	드라이어드 씨앗	Olympus
+cyclops_worker	키클롭스 견습공	Olympus
+nymph_water	샘의 님프	Olympus
+griffin_chick	아기 그리폰	Olympus
+cerberus_pup	아기 케르베로스	Olympus
+minotaur_calf	아기 미노타우로스	Olympus
+charybdis_baby	소형 카리브디스	Olympus
+scylla_pup	새끼 스킬라	Olympus
+chimera_cub	아기 키메라	Olympus
+tea_leaf_fairy	찻잎 요정	ShangriLa
+rice_grain_spirit	쌀알 정령	ShangriLa
+paper_charm_seal	봉인 부적	ShangriLa
+yin_yang_orb	음양구	ShangriLa
+cherry_blossom_petal	벚꽃잎 요정	ShangriLa
+magpie_messenger	반가운 까치 전령	ShangriLa
+wind_chime_spirit	풍경 소리 요정	ShangriLa
+firefly_night	달밤의 반딧불이	ShangriLa
+ink_spirit	먹물 요정	ShangriLa
+cloud_spirit	운무 정령	ShangriLa
+void_walker	공허의 보행자	Abyss
+abyss_leech	심연의 거머리	Abyss
+void_tentacle	공허의 촉수	Abyss
+sludge_blob	오염된 슬러지	Abyss
+bone_fragment_spirit	뼈 조각 정령	Abyss
+whispering_skull	속삭이는 해골	Abyss
+void_larva	공허의 유충	Abyss
+dark_puddles	검은 물웅덩이	Abyss
+void_moth_small	작은 공허 나방	Abyss
+ink_squid_abyss	심연 먹물 오징어	Abyss
+abyss_jellyfish	심연의 해파리	Abyss
+void_crab	공허 게	Abyss
+dark_eel	암흑 장어	Abyss
+skeleton_fish	해골 물고기	Abyss
+wisp_faint	희미한 위습	Abyss
+unicorn_young	Unknown	Wild
+seedling_spirit	새싹 정령	Wild
+caterpillar_fat	통통한 애벌레	Wild
+tadpole_wiggle	꼬물거리는 올챙이	Wild
+leaf_insect	나뭇잎 벌레	Wild
+willOWisp_green	초록 도깨비불	Wild
+sun_flower_spirit	해바라기 정령	Wild
+moon_flower_spirit	달맞이꽃 정령	Wild
+desert_scorpion	사막 전갈	Wild
+angel_arch	Unknown	Wild
+time_lord_chronos	Unknown	Wild
+kraken_idol	Unknown	Wild
+kraken_baby	Unknown	Wild
+slime_green_new	초록 슬라임	Wild
+blue_slime	파랑 슬라임	Wild
+pebble_new	조약돌	Wild
+creature_bat_small	동굴 박쥐	Wild
+
+## UNIQUE (26개)
+hellhound_scout	헬하운드 정찰개	Olympus
+automaton_mini	미니 오토마톤	Olympus
+talos_fragment	탈로스의 파편	Olympus
+fury_hiss	분노의 정령 퓨리	Olympus
+sphinx_kitten	아기 스핑크스	Olympus
+bamboo_chopper	대나무 전사	ShangriLa
+lantern_ghost	초롱불 귀신	ShangriLa
+kumiho_servant	미호의 시종	ShangriLa
+scroll_dragon	그림 속의 용	ShangriLa
+koi_ascending	용이 되고 싶은 잉어	ShangriLa
+miho_baby	아기 여우 미호	ShangriLa
+dark_matter_slime	암흑 물질 슬라임	Abyss
+kraken_trainee	연습생 루루	Abyss
+goblin_scout_new	고블린 정찰병	Abyss
+shadow_lurker	그림자 잠복자	Abyss
+abyss_watcher_small	작은 심연의 감시자	Abyss
+screaming_root	비명 지르는 뿌리	Abyss
+ghoul_scavenger	시체 먹는 구울	Abyss
+phantom_ray	유령 가오리	Abyss
+sand_prowler	모래 잠복꾼	Wild
+spark_mouse	번개 생쥐	Wild
+boulder_beetle	바위 딱정벌레	Wild
+thorny_vine	가시 덩굴	Wild
+magma_slime	마그마 슬라임	Wild
+mushroom_angry_new	화난 버섯	Wild
+fish_flying_new	날치	Wild
+

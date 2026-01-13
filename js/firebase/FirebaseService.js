@@ -184,4 +184,9 @@ class FirebaseService {
 // 싱글톤 인스턴스
 const firebaseService = new FirebaseService();
 
+// Make Global for Vanilla JS Managers to access
+window.firebaseService = firebaseService;
+window.auth = auth;
+window.db = db;
+
 export { firebaseService, auth, db };

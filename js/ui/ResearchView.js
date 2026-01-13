@@ -3,11 +3,11 @@ import { FACILITIES } from '../data/FacilityData.js';
 
 export default class ResearchView extends BaseView {
     init() {
-        this.game.facilityManager.on('facility:upgraded', (data) => {
-            const def = FACILITIES.find(f => f.id === data.id);
-            this.addLog(`${def.name} 레벨업! (Lv.${data.level})`, "facility");
-            this.renderFacilityList();
-        });
+        // Redraw when inventory changes (e.g. summon or upgrade)
+        // Since we don't have a direct 'inventory:updated' event from SaveManager yet, 
+        // we can hook into game loop or manually refresh on button click.
+        // Ideally, LabManager should emit event.
+        // For now, simple re-render on Tab Switch.
 
         this.game.events.on('ui:tabSwitched', (tabId) => {
             if (tabId === 'research') {
@@ -17,72 +17,95 @@ export default class ResearchView extends BaseView {
     }
 
     render() {
-        this.renderFacilityList();
+        this.renderCreatureList();
     }
 
-    renderFacilityList() {
+    renderCreatureList() {
         if (!this.ui.facilityList) return;
         this.ui.facilityList.innerHTML = '';
 
-        FACILITIES.forEach(def => {
-            const level = this.game.facilityManager.getLevel(def.id);
-            const cost = this.game.facilityManager.getUpgradeCost(def.id);
-            const isMax = level >= def.maxLevel;
+        // 1. Get Inventory
+        if (!window.SaveManager || !window.SaveManager.data.inventory) {
+            this.ui.facilityList.innerHTML = '<div style="padding:20px;">데이터를 불러오는 중...</div>';
+            return;
+        }
 
-            let currentEffect = def.baseEffect + (def.effectPerLevel * level);
-            let nextEffect = def.baseEffect + (def.effectPerLevel * (level + 1));
+        const inventory = window.SaveManager.data.inventory;
+        // Convert to array
+        const creatures = Object.values(inventory).sort((a, b) => b.level - a.level); // High level first
 
-            let effectStr = `현재: +${currentEffect}`;
-            if (!isMax) effectStr += ` → 다음: +${nextEffect}`;
-            if (def.effectType === "gold_bonus_percent") effectStr += "%";
+        if (creatures.length === 0) {
+            this.ui.facilityList.innerHTML = '<div style="padding:20px; text-align:center;">보유한 크리처가 없습니다.<br>소환을 통해 크리처를 획득하세요.</div>';
+            return;
+        }
+
+        // Header
+        const header = document.createElement('div');
+        header.style.padding = '10px';
+        header.style.marginBottom = '20px';
+        header.style.textAlign = 'center';
+        header.innerHTML = '<h3 style="margin:0; color:var(--accent-primary);">크리처 연구소 (Creature Lab)</h3><p style="margin:5px 0; font-size:0.9em; color:#888;">골드를 사용하여 크리처의 레벨을 올리세요.</p>';
+        this.ui.facilityList.appendChild(header);
+
+        creatures.forEach(entry => {
+            // entry = { id, count, level, aquiredAt }
+            // We need metadata (name, rarity) from CreatureManager or Definitions
+            // Temporary: Use ID as name if def missing.
+            // Ideally: this.game.creatureManager.getCreatureDef(entry.id)
+
+            // Assume this.game.creatureManager is still valid for data lookup
+            // Or use window.ASGARD_CREATURES etc if globally available.
+
+            // Let's try to get def from game instance (legacy way still works for data)
+            let def = null;
+            if (this.game.creatureManager && this.game.creatureManager.getCreatureDef) {
+                def = this.game.creatureManager.getCreatureDef(entry.id);
+            }
+
+            const name = def ? def.name : entry.id;
+            const rarity = def ? def.rarity : 'Unknown';
+            const img = def ? def.image : 'images/creature_slime.png';
+
+            const level = entry.level || 1;
+            // [Fixed] Pass rarity to LabManager
+            const cost = window.LabManager ? window.LabManager.getUpgradeCost(rarity, level) : 999999;
+            const canUpgrade = window.EconomyManager.has('gold', cost);
 
             const card = document.createElement('div');
-            const canUpgrade = !isMax && this.game.resourceManager.gold >= cost;
-            const progressPercent = (level / def.maxLevel) * 100;
-
-            card.className = `facility-card glass-panel ${canUpgrade ? 'can-upgrade' : ''}`;
+            card.className = `facility-card glass-panel rarity-${rarity}`; // Reuse facility-card style
             card.style.padding = '15px';
             card.style.marginBottom = '10px';
-            card.style.position = 'relative';
-            card.style.borderLeft = isMax ? '4px solid var(--accent-secondary)' : '4px solid var(--accent-primary)';
+            card.style.display = 'flex';
+            card.style.alignItems = 'center';
+            card.style.gap = '15px';
+            card.style.borderLeft = `4px solid var(--col-${rarity})`;
 
             card.innerHTML = `
-                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
-                    <div style="display:flex; gap:15px; align-items:center;">
-                        <div class="facility-icon" style="font-size:2rem; width:50px; height:50px; background:rgba(0,0,0,0.3); border-radius:8px; display:flex; justify-content:center; align-items:center;">🧪</div>
-                        <div>
-                            <h4 style="margin:0; font-size:1.1rem; color:var(--text-highlight);">${def.name}</h4>
-                            <div style="font-size:0.8rem; color:#888; margin:2px 0;">${def.description}</div>
-                        </div>
-                    </div>
-                    <div style="text-align:right;">
-                         <div style="font-size:1.2rem; font-weight:bold; color:var(--accent-secondary);">${isMax ? 'MAX' : 'Lv.' + level}</div>
-                         <div style="font-size:0.75em; color:#666;">Max: Lv.${def.maxLevel}</div>
-                    </div>
+                <div class="creature-icon" style="width:60px; height:60px; border-radius:8px; overflow:hidden; background:#000;">
+                    <img src="${img}" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='images/creature_slime.png'">
                 </div>
-
-                <div style="margin:15px 0; background:rgba(0,0,0,0.5); height:6px; border-radius:3px; overflow:hidden;">
-                     <div style="width:${progressPercent}%; height:100%; background:linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));"></div>
+                <div style="flex:1;">
+                    <div style="font-size:1.1rem; font-weight:bold; color:var(--text-highlight);">[${rarity}] ${name}</div>
+                    <div style="font-size:0.9rem; color:#aaa;">Lv.${level} <span style="font-size:0.8em; color:#666;">(보유: ${entry.count})</span></div>
                 </div>
-
-                <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.03); padding:10px; border-radius:6px;">
-                    <div style="font-size:0.9rem;">
-                        <span style="color:#aaa;">효과:</span> 
-                        <span style="color:var(--accent-tertiary); font-weight:bold;">+${currentEffect}${def.effectType.includes('percent') ? '%' : ''}</span>
-                        ${!isMax ? `<span style="color:#666; font-size:0.8em;"> → +${nextEffect}</span>` : ''}
-                    </div>
-                    <button class="cyber-btn small btn-upgrade" data-id="${def.id}" ${isMax ? 'disabled' : ''} style="min-width:100px;">
-                        ${isMax ? '완료' : `강화 ${cost} G`}
-                    </button>
-                </div>
+                <button class="cyber-btn small btn-upgrade ${canUpgrade ? '' : 'disabled'}" style="min-width:100px;">
+                    강화 ${cost} G
+                </button>
             `;
 
-            card.querySelector('.btn-upgrade').addEventListener('click', () => {
-                const success = this.game.facilityManager.tryUpgrade(def.id);
-                if (!success) {
-                    this.addLog("골드가 부족합니다.", "facility");
+            const btn = card.querySelector('.btn-upgrade');
+            btn.onclick = () => {
+                if (!window.LabManager) return;
+                const result = window.LabManager.upgradeCreature(entry.id);
+                if (result.success) {
+                    this.addLog(`${name} 강화 성공! (Lv.${result.newLevel})`, "success");
+                    // SFX
+                    if (window.SoundManager) window.SoundManager.playSFX('sounds/ui/upgrade_success.mp3'); // Mock path
+                    this.renderCreatureList(); // Re-render
+                } else {
+                    alert(result.reason);
                 }
-            });
+            };
 
             this.ui.facilityList.appendChild(card);
         });

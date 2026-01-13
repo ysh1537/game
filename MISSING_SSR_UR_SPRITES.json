@@ -1,0 +1,64 @@
+[
+  {
+    "id": "god_dagon",
+    "name": "심해의 거신 다곤",
+    "rarity": "SSR",
+    "world": "ABYSS",
+    "missing": [
+      "joy",
+      "skill"
+    ],
+    "baseImage": "images/creatures/abyss/creature_god_dagon.png",
+    "prompts": {
+      "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 심해의 거신 다곤",
+      "idle": "standing pose, confident, neutral expression",
+      "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+      "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+      "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+      "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+      "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
+      "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+      "gallery_lv1": "dating sim event, 심해의 거신 다곤, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+      "gallery_lv2": "dating sim event, 심해의 거신 다곤, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+      "gallery_lv3": "dating sim event, 심해의 거신 다곤, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+    }
+  },
+  {
+    "id": "archangel_michael",
+    "name": "대천사 미카엘",
+    "rarity": "SSR",
+    "world": "OLYMPUS",
+    "missing": [
+      "joy",
+      "skill"
+    ],
+    "baseImage": "images/creatures/olympus/creature_archangel_michael.png",
+    "prompts": {
+      "base": "anime style, 대천사 미카엘"
+    }
+  },
+  {
+    "id": "creator_gaia",
+    "name": "창조주 가이아",
+    "rarity": "UR",
+    "world": "WILD",
+    "missing": [
+      "joy",
+      "skill"
+    ],
+    "baseImage": "images/creatures/wild/creature_creator_gaia.png",
+    "prompts": {
+      "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 창조주 가이아",
+      "idle": "standing pose, confident, neutral expression",
+      "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
+      "sad": "sad expression, looking down, tears, injured, dark atmosphere",
+      "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
+      "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
+      "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
+      "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+      "gallery_lv1": "dating sim event, 창조주 가이아, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
+      "gallery_lv2": "dating sim event, 창조주 가이아, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
+      "gallery_lv3": "dating sim event, 창조주 가이아, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+    }
+  }
+]

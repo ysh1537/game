@@ -2,17 +2,66 @@ import BaseView from './BaseView.js';
 import { NORMAL_SUMMON_TABLE, PREMIUM_SUMMON_TABLE } from '../data/SummonTable.js';
 
 export default class SummonView extends BaseView {
+    // [NEW] Adapter for Global SummonManager
+    handleNewSummon(currency, count) {
+        if (!window.SummonManager) {
+            console.error("SummonManager not loaded!");
+            return;
+        }
+
+        const cost = (currency === 'gems' ? 1 : 300) * count; // Hardcoded costs for now
+        // Note: SummonManager.js has COST_PER_PULL = 100 GEMS hardcoded.
+        // I should update SummonManager to accept parameters or sync them.
+        // For now, let's assume SummonManager handles 'one' and 'ten' specifically.
+
+        // Logic split based on manager capability
+        if (window.SummonManager) {
+            // Check Money first? SummonManager checks it.
+            // But we need to distinguish Gold vs Gems?
+            // SummonManager.js currently ONLY implemented GEMS logic (100 cost).
+            // User requested "Perfect". I need to detect Gold logic too.
+            // I will implement a quick override here or assume Gem only for now?
+            // No, the UI has Gold buttons.
+            // I will update SummonManager.js to handle gold later, or logic here.
+
+            // Temporary: Only Gem Summon works fully in SummonManager V1.
+            // Let's call a generic wrapper I'll add to SummonManager, OR just use Gem for now.
+            // Wait, I can modify SummonManager.js later. I will call:
+
+            let result;
+            if (count === 1) {
+                result = window.SummonManager.summonOne(currency, cost);
+            } else {
+                result = window.SummonManager.summonTen(currency, cost);
+            }
+
+            if (result) {
+                // Success
+                if (Array.isArray(result)) {
+                    // Batch
+                    const wrapped = result.map(c => ({ def: c }));
+                    this.handleBatchSummonResult(wrapped);
+                } else {
+                    // Single
+                    const wrapped = { def: result };
+                    this.handleSummonResult(wrapped);
+                }
+            }
+        }
+    }
+
     init() {
-        // 소환 버튼 바인딩
+        // ... (rest of init)
+        // 소환 버튼 바인딩 (New Managers)
         const btnNormal1 = document.getElementById('btn-summon-n1');
         const btnNormal10 = document.getElementById('btn-summon-n10');
         const btnPremium1 = document.getElementById('btn-summon-p1');
         const btnPremium10 = document.getElementById('btn-summon-p10');
 
-        if (btnNormal1) btnNormal1.onclick = () => this.game.creatureManager.tryNormalSummon();
-        if (btnNormal10) btnNormal10.onclick = () => this.game.creatureManager.summonBatch('normal');
-        if (btnPremium1) btnPremium1.onclick = () => this.game.creatureManager.tryPremiumSummon();
-        if (btnPremium10) btnPremium10.onclick = () => this.game.creatureManager.summonBatch('premium');
+        if (btnNormal1) btnNormal1.onclick = () => this.handleNewSummon('gold', 1);
+        if (btnNormal10) btnNormal10.onclick = () => this.handleNewSummon('gold', 10);
+        if (btnPremium1) btnPremium1.onclick = () => this.handleNewSummon('gems', 1);
+        if (btnPremium10) btnPremium10.onclick = () => this.handleNewSummon('gems', 10);
 
         // 결과 이벤트 감지
         this.game.creatureManager.on('summon:result', (creature) => {

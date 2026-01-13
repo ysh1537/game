@@ -24,7 +24,10 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request).then((response) => {
             // Return cached response if found, else fetch from network
-            return response || fetch(event.request);
+            return response || fetch(event.request).catch(() => {
+                // Return 404 for failed fetches (prevent console spam)
+                return new Response('Network error', { status: 404, statusText: 'Offline' });
+            });
         })
     );
 });

@@ -1,10 +1,10 @@
 Starting Creature Data Verification...
 checked OlympusData.js: 40 creatures
-checked AsgardData.js: 39 creatures
-checked ShangriLaData.js: 40 creatures
-checked AbyssData.js: 35 creatures
-checked WildData.js: 40 creatures
+checked AsgardData.js: 29 creatures
+checked ShangriLaData.js: 44 creatures
+checked AbyssData.js: 46 creatures
+checked WildData.js: 54 creatures
 ------------------------------------------------
-Total unique creatures identified: 194
+Total unique creatures identified: 213
 Total duplicates found: 0
 ✅ Data integrity check passed (No duplicates).

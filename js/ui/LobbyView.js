@@ -59,17 +59,15 @@ export default class LobbyView {
             if (team && team[0]) creature = team[0];
         }
 
-        // 6. Fallback: Highest Rarity Owned
         if (!creature) {
-            if (this.game.creatureManager.owned.length === 0) {
-                console.log("[Lobby] Still loading creatures, skipping fallback update.");
-                return;
-            }
-            const sorted = [...this.game.creatureManager.owned].sort((a, b) => {
-                if (b.def.rarity !== a.def.rarity) return b.def.rarity - a.def.rarity;
-                return a.def.id.localeCompare(b.def.id);
-            });
-            creature = sorted[0];
+            img.style.display = 'none';
+            if (nameEl) nameEl.innerText = "대표 크리처를 설정해주세요";
+            // Hide resonance bar if exists
+            const bar = document.getElementById('lobby-resonance-bar');
+            if (bar) bar.style.display = 'none';
+            return;
+        } else {
+            img.style.display = 'block';
         }
 
         if (creature) {

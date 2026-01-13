@@ -279,8 +279,8 @@ export default class ExpeditionManager extends EventEmitter {
     // [저장/로드 시스템]
     getSerializableState() {
         return {
-            activeExpeditions: this.activeExpeditions,
-            isAutoRepeat: this.isAutoRepeat
+            activeExpeditions: this.activeExpeditions || [],
+            isAutoRepeat: (this.isAutoRepeat === true) // Force boolean
         };
     }
 

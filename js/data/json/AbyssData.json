@@ -38,9 +38,9 @@
             "gallery_lv3": "dating sim event, 공허의 야수, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 공허의 야수은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "공허의 포식자",
+            "story": "차원의 틈새에서 넘어온 흉포한 맹수. 끊임없는 허기를 채우기 위해 모든 것을 집어삼킨다. 지능은 낮지만 본능적인 사냥 감각이 뛰어나며, 그림자 속에 숨어 먹잇감을 노린다. 그 울음소리는 영혼을 얼어붙게 만든다.",
+            "personality": "Voracious"
         },
         "relationships": {
             "likes": [],
@@ -49,20 +49,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "배고파... 끊임없이...",
+                "공허가... 나를 채우지 못해.",
+                "크르르... 먹잇감은 어디 있나?"
             ],
             "interaction": [
-                "..."
+                "먹어도 되나?",
+                "내 이빨은 차원을 찢지.",
+                "가까이 오면... 삼켜버린다."
             ],
             "gift": [
-                "Thank you."
+                "고기? 부족해...",
+                "더 가져와... 더!",
+                "냠냠... 맛이 없군."
             ],
             "special": [
-                "!"
+                "크아아아!",
+                "모든 것을 무로 돌려주마!",
+                "공허의 이빨을 받아라!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "나는 배고프다...",
+            "touch_head": "머리를 만지면 손이 사라질걸?",
+            "touch_chest": "텅 빈 위장이 울부짖는다.",
+            "touch_legs": "도망쳐도 소용없다.",
+            "touch_special": "이 세계를 통째로 씹어먹어 주지!"
         }
     },
     {
@@ -98,9 +110,9 @@
             "gallery_lv1": "cute pose, 그림자 암살자, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 그림자 암살자은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "그림자 암살자",
+            "story": "빛조차 도망치는 심연의 암살자. 소리 없이 움직이며, 적의 그림자에 동화되어 치명적인 일격을 가한다. 감정이 없으며 오직 임무만을 수행하는 냉혹한 살인 기계다. 그의 단검에는 공허의 독이 발라져 있다.",
+            "personality": "Ruthless"
         },
         "relationships": {
             "likes": [],
@@ -109,20 +121,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "......",
+                "그림자는 언제나 네 곁에 있다.",
+                "임무 대기 중."
             ],
             "interaction": [
-                "..."
+                "목숨이 아깝지 않나 보군.",
+                "빈틈이 보인다.",
+                "내 칼날은 소리를 내지 않아."
             ],
             "gift": [
-                "Thank you."
+                "보수인가? 받아두지.",
+                "쓸만하군.",
+                "감정은... 필요 없다."
             ],
             "special": [
-                "!"
+                "그림자 속으로!",
+                "죽음은 조용히 찾아오지.",
+                "단 일격에 끝낸다."
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "어둠 속에서 나는 왕이다.",
+            "touch_head": "투구를 건드리지 마라.",
+            "touch_chest": "심장은 차갑게 식어있다.",
+            "touch_legs": "발소리를 죽여라.",
+            "touch_special": "네가 눈치챘을 땐, 이미 늦었다."
         }
     },
     {
@@ -158,9 +182,9 @@
             "gallery_lv1": "cute pose, 석상 가고일, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 석상 가고일은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "심연의 파수꾼",
+            "story": "심연의 고대 요새를 지키는 석상. 평소에는 돌처럼 굳어 있다가 침입자가 나타나면 움직인다. 마법에 면역이 있으며, 단단한 피부는 어떤 칼날도 튕겨낸다. 주인의 명령에 절대 복종한다.",
+            "personality": "Loyal"
         },
         "relationships": {
             "likes": [],
@@ -169,20 +193,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "...",
+                "침입자... 감시 중.",
+                "심연의 문을 지킨다."
             ],
             "interaction": [
-                "..."
+                "움직이지 마라.",
+                "너는 허가받지 못했다.",
+                "돌덩이라고 무시하지 마라."
             ],
             "gift": [
-                "Thank you."
+                "가져와도 소용없다.",
+                "제물인가?",
+                "주인님께 바치겠다."
             ],
             "special": [
-                "!"
+                "석화!",
+                "무겁게 짓눌러주마!",
+                "절대 방어!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "나는 영원히 이곳을 지킨다.",
+            "touch_head": "딱딱하다고 투덜대지 마.",
+            "touch_chest": "내 몸은 금강불괴다.",
+            "touch_legs": "한번 자리를 잡으면 절대 비키지 않아.",
+            "touch_special": "돌이 되어 영원히 멈춰라."
         }
     },
     {
@@ -218,9 +254,9 @@
             "gallery_lv1": "cute pose, 혼돈의 눈, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 혼돈의 눈은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "광기를 보는 눈",
+            "story": "모든 것을 지켜보는 혼돈의 눈. 마주치는 순간 상대의 정신을 오염시키고 환각을 보여준다. 심연의 군주들에게 정보를 전달하는 정찰병 역할을 한다. 눈동자 속에는 무수한 우주가 담겨 있다.",
+            "personality": "Observant"
         },
         "relationships": {
             "likes": [],
@@ -229,20 +265,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "보고 있다...",
+                "모든 것이 보여...",
+                "네 안의 공포가 느껴지는구나."
             ],
             "interaction": [
-                "..."
+                "눈을 피하지 마라.",
+                "내 시선은 영혼을 꿰뚫지.",
+                "어딜 숨으려는 거냐?"
             ],
             "gift": [
-                "Thank you."
+                "이건... 흥미롭군.",
+                "잘 보겠다.",
+                "지식을 바쳐라."
             ],
             "special": [
-                "!"
+                "혼돈을 보아라!",
+                "정신 붕괴!",
+                "미쳐버려라!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "나는 심연의 눈이다.",
+            "touch_head": "눈을 찌르지 마!",
+            "touch_chest": "이건 심장이 아니라 핵이야.",
+            "touch_legs": "날개 달린 눈을 본 적 없나?",
+            "touch_special": "끝없는 악몽 속에 가둬주지."
         }
     },
     {
@@ -278,9 +326,9 @@
             "gallery_lv1": "cute pose, 심연의 추적자, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 심연의 추적자은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "보이지 않는 추적자",
+            "story": "어둠 속에서 사냥감을 끝까지 추적하는 사냥꾼. 발자국 소리조차 내지 않으며, 한 번 찍은 목표는 절대 놓치지 않는다. 심연의 생태계에서 매우 위험한 포식자 중 하나다.",
+            "personality": "Persistent"
         },
         "relationships": {
             "likes": [],
@@ -289,20 +337,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "킁킁... 냄새가 난다.",
+                "도망쳐 봐라.",
+                "어디까지 갈 수 있을까?"
             ],
             "interaction": [
-                "..."
+                "잡았다.",
+                "네 뒤에 있어.",
+                "발버둥 쳐 보시지."
             ],
             "gift": [
-                "Thank you."
+                "뇌물인가?",
+                "잠시... 봐주지.",
+                "이걸로 도망칠 시간을 벌 셈인가?"
             ],
             "special": [
-                "!"
+                "숨통을 끊어주마!",
+                "사냥 시작!",
+                "절대 놓치지 않는다!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "그림자는 나의 사냥터다.",
+            "touch_head": "쓰다듬어도 소용없어.",
+            "touch_chest": "심장은 멈추지 않고 뛴다.",
+            "touch_legs": "지치지 않는 다리다.",
+            "touch_special": "네 공포가 나를 즐겁게 하는군."
         }
     },
     {
@@ -338,9 +398,9 @@
             "gallery_lv1": "cute pose, 암흑 물질 슬라임, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 암흑 물질 슬라임은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "암흑의 점액질",
+            "story": "암흑 물질로 이루어진 슬라임. 닿는 모든 것을 부식시키고 흡수한다. 형태가 일정하지 않아 물리 공격이 잘 통하지 않는다. 작다고 무시했다가는 뼈도 못 추리기 십상이다.",
+            "personality": "Mindless"
         },
         "relationships": {
             "likes": [],
@@ -349,20 +409,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "꿈틀... 꿈틀...",
+                "녹인다... 흡수한다...",
+                "흐물... 흐물..."
             ],
             "interaction": [
-                "..."
+                "다... 내 거야...",
+                "끈적... 기분 나빠?",
+                "만지면... 녹아..."
             ],
             "gift": [
-                "Thank you."
+                "먹는 거? 꿀꺽...",
+                "녹여 먹을래.",
+                "더 줘..."
             ],
             "special": [
-                "!"
+                "모조리 녹아라!",
+                "산성 분출!",
+                "형체 없는 공포!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "나는... 암흑 그 자체...",
+            "touch_head": "머리? 몸통? 구분이 없어.",
+            "touch_chest": "핵을 건드리지 마...",
+            "touch_legs": "발이 어디 있냐고?",
+            "touch_special": "뼈도 안 남기고 먹어주지."
         }
     },
     {
@@ -398,9 +470,9 @@
             "gallery_lv1": "cute pose, 공허의 보행자, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 공허의 보행자은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "공허의 방랑자",
+            "story": "공허를 떠도는 망령. 원래는 다른 차원의 모험가였으나 심연에 잠식되어 자아를 잃었다. 무의식적으로 생명체를 찾아 헤매며, 닿는 자에게 공허의 저주를 건다.",
+            "personality": "Curses"
         },
         "relationships": {
             "likes": [],
@@ -409,20 +481,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "여긴 어디지...?",
+                "빛이 그리워...",
+                "나를... 데려가 줘..."
             ],
             "interaction": [
-                "..."
+                "가까이 오지 마...",
+                "저주가... 옮을 거야...",
+                "내 이름을... 잊어버렸어."
             ],
             "gift": [
-                "Thank you."
+                "이건... 따뜻해.",
+                "기억 나지 않아.",
+                "고마워... 아마도."
             ],
             "special": [
-                "!"
+                "내 고통을 느껴봐라!",
+                "공허의 손길!",
+                "함께 타락하자..."
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "돌아갈 곳이 없어...",
+            "touch_head": "머리가 깨질 것 같아.",
+            "touch_chest": "가슴에 구멍이 뚫렸어.",
+            "touch_legs": "더 이상 걷고 싶지 않아.",
+            "touch_special": "나와 함께 영원히 여기 있자."
         }
     },
     {
@@ -458,9 +542,9 @@
             "gallery_lv1": "cute pose, 심연의 거머리, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 심연의 거머리은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "에너지 기생충",
+            "story": "심연의 생명력을 흡수하는 거대 거머리. 숙주의 몸에 달라붙어 피와 마력을 빨아먹는다. 떼를 지어 다니며 거대한 몬스터조차 말려 죽일 수 있다.",
+            "personality": "Parasitic"
         },
         "relationships": {
             "likes": [],
@@ -469,20 +553,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "피... 피 냄새...",
+                "쪽쪽 빨아먹을 테다.",
+                "꿈틀꿈틀..."
             ],
             "interaction": [
-                "..."
+                "살점이 부드럽군.",
+                "달라붙으면 안 떨어져!",
+                "네 피는 무슨 맛이지?"
             ],
             "gift": [
-                "Thank you."
+                "피가 아니잖아?",
+                "이것도 먹을 순 있겠군.",
+                "냠냠..."
             ],
             "special": [
-                "!"
+                "흡혈!",
+                "말라 비틀어져라!",
+                "기생 완료!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "나는 배가 고프다... 언제나...",
+            "touch_head": "머리에서 피를 뽑아주지.",
+            "touch_chest": "심장 가까이 붙어있고 싶어.",
+            "touch_legs": "다리에 붙어도 되겠나?",
+            "touch_special": "네 모든 생명력을 내가 가져가겠어!"
         }
     },
     {
@@ -788,7 +884,7 @@
     {
         "id": "kraken_worldstar",
         "name": "월드스타 루루",
-        "rarity": "UR",
+        "rarity": "SR",
         "world": "ABYSS",
         "elements": [
             "Light"
@@ -867,7 +963,7 @@
     {
         "id": "god_cthulhu",
         "name": "별의 지배자 크툴루",
-        "rarity": "UR",
+        "rarity": "SSR",
         "world": "ABYSS",
         "elements": [
             "Light"
@@ -946,7 +1042,7 @@
     {
         "id": "god_nyarlathotep",
         "name": "기어다니는 혼돈 니알라토텝",
-        "rarity": "UR",
+        "rarity": "SSR",
         "world": "ABYSS",
         "elements": [
             "Light"
@@ -982,9 +1078,9 @@
             "gallery_lv3": "dating sim event, 기어다니는 혼돈 니알라토텝, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 기어다니는 혼돈 니알라토텝은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "기어다니는 혼돈",
+            "story": "천의 얼굴을 가진 혼돈의 사자. 인간의 모습을 하고 세상을 활보하며, 파멸과 광기를 퍼뜨리는 것을 즐긴다. 아우터 갓들의 영혼이자 전령이며, 과학과 마법을 동시에 다루는 사악한 지능을 지녔다.",
+            "personality": "Chaotic & Deceptive"
         },
         "relationships": {
             "likes": [],
@@ -993,26 +1089,38 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "다음엔 어떤 가면을 쓸까?",
+                "너희의 절망이 나에겐 유희일 뿐이지.",
+                "혼돈만이 유일한 진리다."
             ],
             "interaction": [
-                "..."
+                "내 진짜 모습을 보고 싶나?",
+                "후후, 재미있는 반응이군.",
+                "네 운명을 내가 바꿔줄 수도 있어."
             ],
             "gift": [
-                "Thank you."
+                "흥미롭군. 받아주지.",
+                "대가 없는 선물은 없다.",
+                "이걸로 무엇을 원하지?"
             ],
             "special": [
-                "!"
+                "혼돈의 연주를 들어라!",
+                "모든 것은 나의 장난감이다!",
+                "절망하라, 그리고 숭배하라!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "나는 어디에나 존재한다.",
+            "touch_head": "머리를 쓰다듬다니, 겁도 없군.",
+            "touch_chest": "심장 대신 혼돈이 뛰고 있다.",
+            "touch_legs": "기어다니는 혼돈을 따라잡을 순 없어.",
+            "touch_special": "네 영혼을 내 컬렉션에 추가해주지."
         }
     },
     {
         "id": "demon_king",
         "name": "마왕 바알",
-        "rarity": "SSR",
+        "rarity": "SR",
         "world": "ABYSS",
         "elements": [
             "Light"
@@ -1048,9 +1156,10 @@
             "gallery_lv3": "dating sim event, 마왕 바알, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 마왕 바알은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "폭풍의 마왕",
+            "story": "지옥의 7대 마왕 중 하나이자 파리와 오물의 군주. 하지만 이곳에서는 붉은 번개를 다루는 압도적인 힘의 소유자로 현현했다. 강함을 절대적인 가치로 여기며, 자신보다 약한 자를 철저히 유린하는 가학적인 성격을 지녔다.",
+            "origin": "솔로몬의 72악마 / 지옥",
+            "personality": "Arrogant & Sadistic"
         },
         "relationships": {
             "likes": [],
@@ -1059,20 +1168,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "나는 최초의 왕이다.",
+                "약한 것들은 내 앞에서 사라져라.",
+                "폭풍이... 나를 부르는군."
             ],
             "interaction": [
-                "..."
+                "감히 옥체에 손을 대다니.",
+                "전율하라, 이것이 왕의 힘이다.",
+                "무릎 꿇어라!"
             ],
             "gift": [
-                "Thank you."
+                "조공인가? 나쁘지 않군.",
+                "나에게 바치는 영광을 허락하마.",
+                "미천한 것 치고는 제법이구나."
             ],
             "special": [
-                "!"
+                "지옥의 번개여!",
+                "티끌 하나 남기지 않겠다!",
+                "절대적인 힘 앞에 굴복해라!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "나의 등장은 곧 재앙이다.",
+            "touch_head": "왕관의 무게를 견딜 수 있겠나?",
+            "touch_chest": "나의 분노는 번개보다 뜨겁지.",
+            "touch_legs": "내 발밑이 네가 있을 곳이다.",
+            "touch_special": "고통 속에서 나를 찬양하게 될 것이다."
         }
     },
     {
@@ -1114,9 +1235,10 @@
             "gallery_lv3": "dating sim event, 만 마리 새끼를 품은 숲의 염소, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 만 마리 새끼를 품은 숲의 염소은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "검은 숲의 어머니",
+            "story": "천 마리 새끼를 거느린 숲의 검은 염소. 풍요와 다산의 상징이자, 끔찍한 생명력의 원천이다. 그녀의 품은 따뜻하면서도 영원히 벗어날 수 없는 굴레와 같다. 모든 생명을 자신의 아이로 만들고자 하는 뒤틀린 모성애를 지녔다.",
+            "origin": "크툴루 신화 / 검은 숲",
+            "personality": "Motherly & Obsessive"
         },
         "relationships": {
             "likes": [],
@@ -1125,20 +1247,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "이리 온, 아가야...",
+                "숲은 언제나 너를 환영한단다.",
+                "내 품에서 영원히 쉬렴."
             ],
             "interaction": [
-                "..."
+                "착하지, 내 아이가 되고 싶니?",
+                "따뜻하지? 여기가 네 집이야.",
+                "어딜 가려고? 못 가..."
             ],
             "gift": [
-                "Thank you."
+                "어머, 효도하는 거니?",
+                "기특하기도 해라.",
+                "이것도 숲의 양분이 되겠지."
             ],
             "special": [
-                "!"
+                "생명은 끝없이 태어난단다!",
+                "검은 숲으로 돌아오렴!",
+                "천 마리 아이들아, 일어나라!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "숲의 숨결이 느껴지니?",
+            "touch_head": "뿔은 조심하렴.",
+            "touch_chest": "모든 생명이 이곳에서 시작되었단다.",
+            "touch_legs": "더 깊은 숲으로 안내해줄게.",
+            "touch_special": "너는 이제 영원히 나의 것이란다... 사랑스러운 아가."
         }
     },
     {
@@ -1180,9 +1314,10 @@
             "gallery_lv3": "dating sim event, 황색 옷의 왕 하스터, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 황색 옷의 왕 하스터은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "황색 옷의 왕",
+            "story": "'이름을 말해선 안 되는 그분'의 화신. 별들 사이의 공간을 걷는 바람의 신이다. 황색 옷과 창백한 가면을 쓰고 있으며, 가면 아래의 진실을 본 자는 영원한 광기에 휩싸인다. 카르코사의 왕좌에서 우주의 종말을 기다리고 있다.",
+            "origin": "크툴루 신화 / 카르코사",
+            "personality": "Mysterious & Madness"
         },
         "relationships": {
             "likes": [],
@@ -1191,20 +1326,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "바람이 불어온다...",
+                "카르코사의 노래가 들리는가?",
+                "가면 무도회는 끝나지 않아."
             ],
             "interaction": [
-                "..."
+                "가면을 벗기려 하지 마라.",
+                "내 이름을 말했는가?",
+                "진실은 감당할 수 없을 것이다."
             ],
             "gift": [
-                "Thank you."
+                "황색의 징표를 주마.",
+                "이것도 연극의 소품일 뿐.",
+                "재미없군."
             ],
             "special": [
-                "!"
+                "보아라, 황색의 징표를!",
+                "카르코사의 그림자가 드리운다!",
+                "광기의 바람이여!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "별들이 제자리를 찾을 때가 온다.",
+            "touch_head": "내 생각은 인간의 언어로 표현할 수 없다.",
+            "touch_chest": "텅 빈 옷자락 속에는 무엇이 있을까?",
+            "touch_legs": "발자국 없이 걷는 법을 아는가?",
+            "touch_special": "가면 아래를 본 대가는 네 영혼이다."
         }
     },
     {
@@ -1246,9 +1393,10 @@
             "gallery_lv3": "dating sim event, 진홍의 여왕 카밀라, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 진홍의 여왕 카밀라은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "진홍의 뱀파이어",
+            "story": "피의 귀부인 카밀라. 영원한 젊음과 아름다움을 유지하기 위해 흡혈을 한다. 우아하고 고혹적이지만, 배신자는 절대 용서하지 않는 잔혹함을 지녔다. 그녀의 성에는 수많은 희생자의 피로 채워진 목욕탕이 있다고 한다.",
+            "origin": "고딕 호러 / 카밀라",
+            "personality": "Elegant & Cruel"
         },
         "relationships": {
             "likes": [],
@@ -1257,20 +1405,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "목이 마르구나...",
+                "아름다움은 고통을 동반하지.",
+                "달빛이 참 붉기도 하여라."
             ],
             "interaction": [
-                "..."
+                "가까이 오렴, 물지 않을게.",
+                "피 냄새가... 향긋해.",
+                "내 피부가 부러운 거니?"
             ],
             "gift": [
-                "Thank you."
+                "와인인가? 아, 피로군.",
+                "취향이 꽤 고급이네.",
+                "잘 받을게, 나의 하인."
             ],
             "special": [
-                "!"
+                "피의 축제를 열자꾸나!",
+                "붉게 물들어라!",
+                "영원히 내 곁에서 시들어라!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "영원한 삶은 지루해... 네가 날 즐겁게 해줄래?",
+            "touch_head": "머리 스타일 망가지잖아.",
+            "touch_chest": "죽은 심장이라 뛰지 않아.",
+            "touch_legs": "내 다리에 키스하고 싶니?",
+            "touch_special": "네 피 한 방울까지 남김없이 마셔줄게."
         }
     },
     {
@@ -1312,9 +1472,10 @@
             "gallery_lv3": "dating sim event, 심해의 거신 다곤, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 심해의 거신 다곤은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "심해의 아버지",
+            "story": "딥 원들의 아버지이자 숭배의 대상. 심해의 거대한 지배자로, 폭풍과 해일을 부르며 바다의 모든 생물을 다스린다. 거대한 비늘로 뒤덮인 몸은 어떤 무기로도 뚫을 수 없으며, 그의 분노는 곧 자연재해와 같다.",
+            "origin": "크툴루 신화 / 심해",
+            "personality": "Dominant & Mighty"
         },
         "relationships": {
             "likes": [],
@@ -1323,20 +1484,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "파도가 부르는 소리가 들린다.",
+                "심해의 수압은 나에겐 산들바람이지.",
+                "바다를 더럽히는 자, 용서치 않으리."
             ],
             "interaction": [
-                "..."
+                "비늘이 단단해서 아플 텐데.",
+                "나의 힘을 시험하려는가?",
+                "물러가라, 아직은 때가 아니다."
             ],
             "gift": [
-                "Thank you."
+                "육지의 물건인가?",
+                "바다에 바치는 공물로 알겠다.",
+                "쓸모없군. 수장시켜라."
             ],
             "special": [
-                "!"
+                "해일을 일으켜라!",
+                "심해의 분노를 느껴봐라!",
+                "모든 것은 씻겨 내려갈 것이다!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "육지는 언젠가 바다 아래 잠길 것이다.",
+            "touch_head": "내 뿔은 심해의 보석보다 단단하지.",
+            "touch_chest": "내 폐활량은 무한하다.",
+            "touch_legs": "이봐, 미끄러질걸?",
+            "touch_special": "너를 심해의 왕국으로 초대하지... 숨이 막힐 정도로 아름다운 곳이야."
         }
     },
     {
@@ -1378,9 +1551,10 @@
             "gallery_lv3": "dating sim event, 머리 없는 기사 듀라한, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 머리 없는 기사 듀라한은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "죽음을 알리는 기사",
+            "story": "자신의 머리를 옆구리에 끼고 다니는 죽음의 기사. 밤길에 그의 이름을 들으면 영혼을 빼앗긴다고 전해진다. 척추로 만든 채찍을 휘두르며, 멈추지 않고 목표를 향해 돌진한다.",
+            "origin": "아일랜드 신화 / 듀라한",
+            "personality": "Grim & Relentless"
         },
         "relationships": {
             "likes": [],
@@ -1389,20 +1563,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "내 머리... 어디 있나...",
+                "죽음의 마차가 달린다!",
+                "너의 이름은... 아직 명부에 없군."
             ],
             "interaction": [
-                "..."
+                "길을 막지 마라.",
+                "이 채찍의 맛을 보고 싶은가?",
+                "내 눈은 너를 보고 있다... 옆구리에서."
             ],
             "gift": [
-                "Thank you."
+                "죽은 자에게 선물이라니.",
+                "이건 저승길 노잣돈으로 쓰지.",
+                "흥미롭군."
             ],
             "special": [
-                "!"
+                "죽음의 질주!",
+                "영혼 수확!",
+                "네 목을 가지러 왔다!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "밤길을 조심하는 게 좋을 거야.",
+            "touch_head": "거긴 아무것도 없어, 목만 남았지.",
+            "touch_chest": "내 심장은 오래전에 멈췄다.",
+            "touch_legs": "내 말은 지치지 않는다.",
+            "touch_special": "너의 영혼... 아주 맛있게 생겼군."
         }
     },
     {
@@ -1438,9 +1624,9 @@
             "gallery_lv1": "cute pose, 스켈레톤 나이트, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 스켈레톤 나이트은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "불멸의 충성",
+            "story": "죽어서도 주군에 대한 충성을 버리지 못한 기사의 해골. 낡은 갑옷과 녹슨 검을 들고 있으나, 그 검술만은 생전 그대로다. 심연의 군단에서 가장 규율지키는 병사들이다.",
+            "personality": "Loyal & Undead"
         },
         "relationships": {
             "likes": [],
@@ -1449,20 +1635,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "주군을 위하여...",
+                "죽음은 휴식이 아니다.",
+                "명령만 내리십시오."
             ],
             "interaction": [
-                "..."
+                "갑옷이 낡았다고 얕보지 마라.",
+                "뼈가 부딪히는 소리가 들리는가?",
+                "내 검은 아직 날카롭다."
             ],
             "gift": [
-                "Thank you."
+                "감사합니다, 주군.",
+                "이것 또한 군수품으로 쓰겠습니다.",
+                "영광입니다."
             ],
             "special": [
-                "!"
+                "전군 돌격!",
+                "두려움을 모르는 군단이여!",
+                "죽음조차 우리를 막을 수 없다!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "경계를 늦추지 않겠습니다.",
+            "touch_head": "투구가 흔들립니다.",
+            "touch_chest": "갈비뼈 사이로 바람이 지나갑니다.",
+            "touch_legs": "아직 잘 걸을 수 있습니다.",
+            "touch_special": "당신을 위해서라면 지옥 끝까지 가겠습니다."
         }
     },
     {
@@ -1498,9 +1696,9 @@
             "gallery_lv1": "cute pose, 탐욕의 상자 미믹, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 탐욕의 상자 미믹은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "탐욕의 덫",
+            "story": "보물상자로 위장한 탐욕의 괴물. 모험가들의 욕심을 이용하여 그들을 잡아먹는다. 날카로운 이빨과 긴 혀를 가지고 있으며, 상자 안에는 보물 대신 끔찍한 소화액이 들어있다.",
+            "personality": "Deceptive & Greedy"
         },
         "relationships": {
             "likes": [],
@@ -1509,20 +1707,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "달그락... 달그락...",
+                "반짝이는 거... 좋아해?",
+                "히히히... 이리 와 봐."
             ],
             "interaction": [
-                "..."
+                "아이쿠, 손 조심해야지?",
+                "내 입속이 궁금해?",
+                "앙! 물어버린다!"
             ],
             "gift": [
-                "Thank you."
+                "오오! 이건 진짜 보물이다!",
+                "내 뱃속에 저장할게!",
+                "맛있는 냄새가 나!"
             ],
             "special": [
-                "!"
+                "서프라이즈!",
+                "다 먹어치우겠다!",
+                "탐욕의 대가다!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "함부로 열면 다쳐요.",
+            "touch_head": "뚜껑 닫지 마!",
+            "touch_chest": "여긴 자물쇠가 있는 곳이야.",
+            "touch_legs": "다리 달린 상자 처음 봐?",
+            "touch_special": "너도 보물상자에 들어와 볼래? 아주 아늑해..."
         }
     },
     {
@@ -1558,9 +1768,9 @@
             "gallery_lv1": "cute pose, 저주받은 인형, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 저주받은 인형은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "버려진 원한",
+            "story": "주인에게 버림받은 인형에 원한이 깃들어 움직이는 존재. 밤마다 주인을 찾아다니며, 자신과 함께 영원히 놀자고 속삭인다. 못과 바늘을 무기로 사용한다.",
+            "personality": "Creepy & Obsessive"
         },
         "relationships": {
             "likes": [],
@@ -1569,20 +1779,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "나랑 놀자...",
+                "왜 나를 버렸어?",
+                "심심해... 심심해..."
             ],
             "interaction": [
-                "..."
+                "망가뜨리지 마...",
+                "바늘로 콕 찌를 거야.",
+                "헤헤... 안아줘."
             ],
             "gift": [
-                "Thank you."
+                "새 장난감이야?",
+                "이건 안 버릴 거지?",
+                "고마워... 히히."
             ],
             "special": [
-                "!"
+                "영원히 함께야!",
+                "저주할 거야!",
+                "아무도 못 나가!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "내 눈... 어디 갔는지 알아?",
+            "touch_head": "머리카락 뽑지 마.",
+            "touch_chest": "솜뭉치밖에 없어.",
+            "touch_legs": "걷는 건 힘들어...",
+            "touch_special": "너도 인형으로 만들어줄까? 그러면 영원히 같이 있을 수 있어."
         }
     },
     {
@@ -1618,9 +1840,9 @@
             "gallery_lv1": "cute pose, 외눈박이 박쥐, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 외눈박이 박쥐은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "심연의 감시자",
+            "story": "거대한 하나의 눈을 가진 변종 박쥐. 어둠 속에서도 사물을 완벽하게 볼 수 있으며, 초음파 대신 시선으로 적을 마비시킨다. 심연의 동굴 천장에 매달려 먹잇감을 기다린다.",
+            "personality": "Vigilant & Aerial"
         },
         "relationships": {
             "likes": [],
@@ -1629,20 +1851,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "키익... 킥...",
+                "다 보고 있다...",
+                "어둠이 좋아..."
             ],
             "interaction": [
-                "..."
+                "날개 건드리지 마!",
+                "눈 부셔!",
+                "거꾸로 매달리면 편해."
             ],
             "gift": [
-                "Thank you."
+                "벌레? 아니네...",
+                "반짝이는 거다!",
+                "키이익! (좋음)"
             ],
             "special": [
-                "!"
+                "초음파 발사!",
+                "마비되어라!",
+                "어둠 속으로!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "내 눈을 피할 순 없어.",
+            "touch_head": "귀 간지러워.",
+            "touch_chest": "심장 소리 들려?",
+            "touch_legs": "발톱 날카로워.",
+            "touch_special": "너의 공포가 보여... 아주 선명하게."
         }
     },
     {
@@ -1678,9 +1912,9 @@
             "gallery_lv1": "cute pose, 영혼의 등불, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 영혼의 등불은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "도깨비불",
+            "story": "죽은 자의 영혼이 뭉쳐 만들어진 푸른 불꽃. 낡은 등불에 깃들어 스스로 떠다닌다. 길 잃은 여행자를 안전한 곳으로 안내하는 척하며 벼랑 끝으로 유인한다.",
+            "personality": "Mischievous & Spirit"
         },
         "relationships": {
             "likes": [],
@@ -1689,20 +1923,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "이쪽이야... 이쪽...",
+                "따뜻하지?",
+                "길을 잃었니?"
             ],
             "interaction": [
-                "..."
+                "손 데일걸?",
+                "후~ 불어도 안 꺼져.",
+                "나랑 춤출래?"
             ],
             "gift": [
-                "Thank you."
+                "기름인가?",
+                "내 불꽃이 더 커졌어!",
+                "고마워, 여행자."
             ],
             "special": [
-                "!"
+                "홀려라!",
+                "영혼을 태워라!",
+                "길을 잃게 해주지!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "어두운 밤길엔 내가 필요할걸?",
+            "touch_head": "뜨거워!",
+            "touch_chest": "심지는 내 생명이야.",
+            "touch_legs": "다리? 난 떠다녀.",
+            "touch_special": "나를 따라와... 돌아올 수 없는 곳으로 안내해줄게."
         }
     },
     {
@@ -1738,9 +1984,9 @@
             "gallery_lv1": "cute pose, 딥 원 전사, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 딥 원 전사은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "심해의 보병",
+            "story": "다곤과 크툴루를 섬기는 수중 종족. 물갈퀴가 달린 손발과 비늘로 덮인 몸을 가졌다. 육지에서도 활동할 수 있으나 물속에서 더욱 강력하다. 그들의 창은 심해의 금속으로 만들어졌다.",
+            "personality": "Subservient & Aquatic"
         },
         "relationships": {
             "likes": [],
@@ -1749,20 +1995,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "쿠르... 르르...",
+                "바다 냄새가 그립다.",
+                "다곤 님을 위하여."
             ],
             "interaction": [
-                "..."
+                "미끈거린다고?",
+                "내 창은 날카롭다.",
+                "물 좀 줘..."
             ],
             "gift": [
-                "Thank you."
+                "물고기?",
+                "신선하군.",
+                "바다의 맛이야."
             ],
             "special": [
-                "!"
+                "심해의 일격!",
+                "물살을 갈라라!",
+                "침입자 제거!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "육지는 너무 건조해.",
+            "touch_head": "비늘이 마르면 안 돼.",
+            "touch_chest": "아가미를 건드리지 마.",
+            "touch_legs": "헤엄치기 좋은 다리지.",
+            "touch_special": "심해의 도시 르뤼에를 본 적 있나? 꿈에서도 잊을 수 없지."
         }
     },
     {
@@ -1798,9 +2056,9 @@
             "gallery_lv1": "cute pose, 고블린 정찰병, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 고블린 정찰병은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "심연의 약탈자",
+            "story": "심연의 환경에 적응하여 피부가 검게 변한 고블린. 일반 고블린보다 훨씬 잔인하고 교활하다. 어둠 속에서 은신하는 능력이 뛰어나며, 독을 바른 무기를 즐겨 사용한다.",
+            "personality": "Cunning & Cruel"
         },
         "relationships": {
             "likes": [],
@@ -1809,20 +2067,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "케헤헤... 주머니 조심해.",
+                "뭐 훔칠 거 없나?",
+                "심심한데 누구 괴롭힐까?"
             ],
             "interaction": [
-                "..."
+                "뭘 봐?",
+                "내 칼에 독 있다?",
+                "돈 내놔!"
             ],
             "gift": [
-                "Thank you."
+                "오! 금화다!",
+                "이건 내 거야!",
+                "더 줘!"
             ],
             "special": [
-                "!"
+                "기습이다!",
+                "독침 발사!",
+                "다 털어라!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "어둠 속에 숨으면 아무도 모르지.",
+            "touch_head": "때리지 마!",
+            "touch_chest": "갑옷 훔친 거 아니야.",
+            "touch_legs": "도망치는 건 자신 있어.",
+            "touch_special": "네 보물... 내가 잘 보관해줄게. 영원히."
         }
     },
     {
@@ -1858,9 +2128,9 @@
             "gallery_lv1": "cute pose, 그림자 잠복자, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 그림자 잠복자은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "그림자 속의 눈",
+            "story": "그림자 속에 숨어 오직 눈만 내놓고 주변을 감시하는 정령. 직접 공격하기보다는 적의 위치를 알리고 혼란을 주는 역할을 한다. 빛을 받으면 사라진다.",
+            "personality": "Shy & Observant"
         },
         "relationships": {
             "likes": [],
@@ -1869,20 +2139,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "...",
+                "(지켜보고 있다)",
+                "그림자가 길어지네."
             ],
             "interaction": [
-                "..."
+                "놀랐지?",
+                "난 여기 없어.",
+                "잡을 수 없을걸?"
             ],
             "gift": [
-                "Thank you."
+                "...",
+                "(조용히 가져간다)",
+                "흥미로워."
             ],
             "special": [
-                "!"
+                "어둠의 장막!",
+                "숨을 곳은 없다!",
+                "그림자 습격!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "나는 어디에나 있고, 어디에도 없다.",
+            "touch_head": "만질 수 없을걸?",
+            "touch_chest": "그림자에 심장이 있나?",
+            "touch_legs": "발소리를 죽여.",
+            "touch_special": "네 그림자 속에 이미 내가 있을지도 몰라."
         }
     },
     {
@@ -1918,9 +2200,9 @@
             "gallery_lv1": "cute pose, 작은 심연의 감시자, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 작은 심연의 감시자은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "작은 감시자",
+            "story": "심연의 군주들이 부리는 작은 정찰병. 날개가 달려 있어 빠르게 비행하며, 본 것을 군주에게 텔레파시로 전달한다. 귀여운 외모와 달리 성격은 사납다.",
+            "personality": "Loyal & Scout"
         },
         "relationships": {
             "likes": [],
@@ -1929,20 +2211,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "삐익! 삐익!",
+                "수상한 놈 발견!",
+                "보고해야 해!"
             ],
             "interaction": [
-                "..."
+                "만지지 마!",
+                "군주님께 다 이를 거야!",
+                "쪼아버린다!"
             ],
             "gift": [
-                "Thank you."
+                "뇌물인가?",
+                "이걸로 봐주지.",
+                "냠냠."
             ],
             "special": [
-                "!"
+                "지원 요청!",
+                "경계 경보!",
+                "눈을 찔러라!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "나는 군주님의 눈과 귀야.",
+            "touch_head": "머리 헝클어지잖아!",
+            "touch_chest": "작다고 무시하지 마.",
+            "touch_legs": "내 날개 빠르지?",
+            "touch_special": "너, 지금 딴생각했지? 다 보고했어."
         }
     },
     {
@@ -1978,9 +2272,9 @@
             "gallery_lv1": "cute pose, 비명 지르는 뿌리, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 비명 지르는 뿌리은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "비명의 식물",
+            "story": "땅속에 숨어 있다가 지나가는 생물에게 비명을 질러 기절시키는 식물. 그 비명 소리는 정신을 혼미하게 만들며, 기절한 먹잇감을 뿌리로 감아 영양분을 섭취한다.",
+            "personality": "Loud & Trap"
         },
         "relationships": {
             "likes": [],
@@ -1989,20 +2283,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "...",
+                "(부스럭)",
+                "기다리고 있어..."
             ],
             "interaction": [
-                "..."
+                "꺄아아아악!!",
+                "건드리면 소리 지른다!",
+                "깜짝 놀랐지?"
             ],
             "gift": [
-                "Thank you."
+                "비료?",
+                "물...",
+                "맛없어."
             ],
             "special": [
-                "!"
+                "고막 파괴!",
+                "절규하라!",
+                "뿌리 묶기!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "조용히 지나가는 게 좋을 거야.",
+            "touch_head": "잎사귀 뜯지 마.",
+            "touch_chest": "뿌리가 깊어서 안 뽑혀.",
+            "touch_legs": "내 뿌리에 걸리면 끝장이야.",
+            "touch_special": "내 비명 소리를 듣고도 서 있을 수 있을까? 꺄아아악!"
         }
     },
     {
@@ -2038,9 +2344,9 @@
             "gallery_lv1": "cute pose, 시체 먹는 구울, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 시체 먹는 구울은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "부패의 청소부",
+            "story": "심연의 전장을 돌아다니며 시체를 먹어 치우는 구울. 썩은 고기를 즐기며, 질병과 독을 퍼뜨린다. 무덤을 파헤치는 것을 좋아하며, 살아있는 자도 공격하여 시체로 만든다.",
+            "personality": "Filthy & Scavenger"
         },
         "relationships": {
             "likes": [],
@@ -2049,20 +2355,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "배고파...",
+                "썩은 냄새... 좋아...",
+                "시체가 어딨지?"
             ],
             "interaction": [
-                "..."
+                "캬아악!",
+                "내 밥이야!",
+                "너도 맛있겠군."
             ],
             "gift": [
-                "Thank you."
+                "썩은 고기?",
+                "뼈다귀!",
+                "히히... 고마워."
             ],
             "special": [
-                "!"
+                "질병 퍼뜨리기!",
+                "살점을 뜯어라!",
+                "다 먹어치워!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "산 사람 냄새가 나.",
+            "touch_head": "머리 때리지 마.",
+            "touch_chest": "갈비뼈가 드러났어.",
+            "touch_legs": "쩔뚝거려도 빨라.",
+            "touch_special": "죽으면 내가 제일 먼저 찾아갈게."
         }
     },
     {
@@ -2098,9 +2416,9 @@
             "gallery_lv1": "cute pose, 공허의 촉수, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 공허의 촉수은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "차원의 촉수",
+            "story": "허공에서 갑자기 튀어나오는 공허의 촉수. 본체는 다른 차원에 있으며 촉수만으로 공격한다. 무엇이든 휘감아 차원의 틈새로 끌고 들어가려 한다.",
+            "personality": "Unknown & Grasping"
         },
         "relationships": {
             "likes": [],
@@ -2109,20 +2427,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "...",
+                "(꿈틀)",
+                "공허가 부른다."
             ],
             "interaction": [
-                "..."
+                "잡았다!",
+                "끌려들어 올 거야.",
+                "놓아주지 않아."
             ],
             "gift": [
-                "Thank you."
+                "...",
+                "(사라진다)",
+                "흡수."
             ],
             "special": [
-                "!"
+                "차원 균열!",
+                "휘감기!",
+                "공허로!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "어디서 튀어나올지 몰라.",
+            "touch_head": "미끌거려.",
+            "touch_chest": "본체는 여기가 아냐.",
+            "touch_legs": "다리? 촉수뿐이야.",
+            "touch_special": "저 너머의 세상이 궁금하지 않아?"
         }
     },
     {
@@ -2158,9 +2488,9 @@
             "gallery_lv1": "cute pose, 오염된 슬러지, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 오염된 슬러지은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "독성 슬러지",
+            "story": "산업 폐기물과 심연의 마력이 섞여 태어난 오염된 몬스터. 지독한 악취를 풍기며, 닿으면 피부가 썩어들어간다. 정화되지 않는 한 계속해서 증식한다.",
+            "personality": "Toxic & Pollution"
         },
         "relationships": {
             "likes": [],
@@ -2169,20 +2499,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "보글... 보글...",
+                "녹아버려...",
+                "더러워..."
             ],
             "interaction": [
-                "..."
+                "만지지 마... 녹아.",
+                "끈적거리지?",
+                "합체하자."
             ],
             "gift": [
-                "Thank you."
+                "쓰레기?",
+                "오염 물질...",
+                "좋아..."
             ],
             "special": [
-                "!"
+                "독성 분출!",
+                "오염 지대!",
+                "모두 썩어라!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "나는 인간이 만든 재앙이야.",
+            "touch_head": "형체가 없어.",
+            "touch_chest": "핵이 보여?",
+            "touch_legs": "흐물흐물해.",
+            "touch_special": "깨끗한 건 싫어... 모두 더럽혀주지."
         }
     },
     {
@@ -2218,9 +2560,9 @@
             "gallery_lv1": "cute pose, 뼈 조각 정령, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 뼈 조각 정령은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "부서진 영혼",
+            "story": "전쟁터에 흩어진 뼈 조각에 깃든 하급 정령. 온전한 형태를 갖추지 못해 끊임없이 뼈를 모으려 한다. 약하지만 떼로 덤벼들면 귀찮은 존재다.",
+            "personality": "Fragile & Persistent"
         },
         "relationships": {
             "likes": [],
@@ -2229,20 +2571,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "딱... 딱...",
+                "내 뼈...",
+                "추워..."
             ],
             "interaction": [
-                "..."
+                "부서져.",
+                "조심해.",
+                "붙여줘."
             ],
             "gift": [
-                "Thank you."
+                "칼슘?",
+                "우유...",
+                "고마워."
             ],
             "special": [
-                "!"
+                "뼈 던지기!",
+                "합체!",
+                "따끔할걸!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "완전한 몸을 가지고 싶어.",
+            "touch_head": "두개골 조각이야.",
+            "touch_chest": "텅 비었어.",
+            "touch_legs": "발가락 뼈가 모자라.",
+            "touch_special": "네 뼈는 튼튼해 보이네... 하나만 줄래?"
         }
     },
     {
@@ -2278,9 +2632,9 @@
             "gallery_lv1": "cute pose, 속삭이는 해골, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 속삭이는 해골은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "저주의 속삭임",
+            "story": "공중에 떠다니며 불길한 말을 속삭이는 해골. 그 속삭임을 계속 들으면 정신이 피폐해지고 불운이 닥친다. 마법사들이 연구실을 지키기 위해 만들어내기도 한다.",
+            "personality": "Cursed & Chatterbox"
         },
         "relationships": {
             "likes": [],
@@ -2289,20 +2643,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "너는 곧 불행해질 거야...",
+                "조심해... 뒤에...",
+                "키키키..."
             ],
             "interaction": [
-                "..."
+                "내 입을 막으려고?",
+                "저주받아라!",
+                "시끄러워?"
             ],
             "gift": [
-                "Thank you."
+                "부적?",
+                "태워버려.",
+                "필요 없어."
             ],
             "special": [
-                "!"
+                "비명 발사!",
+                "저주 걸기!",
+                "정신 붕괴!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "내 말은 예언이 될 거야.",
+            "touch_head": "머리만 남아서 편해.",
+            "touch_chest": "몸뚱이는 어디 갔지?",
+            "touch_legs": "날아다니는 게 최고야.",
+            "touch_special": "비밀 하나 알려줄까? 너... 오늘 죽을지도 몰라."
         }
     },
     {
@@ -2338,9 +2704,9 @@
             "gallery_lv1": "cute pose, 공허의 유충, energetic, detailed, looking at viewer"
         },
         "lore": {
-            "title": "미지의 존재",
-            "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 공허의 유충은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "title": "공허의 씨앗",
+            "story": "공허의 생명체가 되기 전의 유충 단계. 작고 약해 보이지만 강한 생명력을 지녔다. 성장하면 어떤 괴물이 될지 알 수 없으므로 미리 제거하는 것이 좋다.",
+            "personality": "Weak & Potential"
         },
         "relationships": {
             "likes": [],
@@ -2349,20 +2715,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "꿈틀... 꿈틀...",
+                "배고파...",
+                "진화할 거야."
             ],
             "interaction": [
-                "..."
+                "징그러워?",
+                "터트리지 마.",
+                "물어버린다."
             ],
             "gift": [
-                "Thank you."
+                "에너지?",
+                "먹이...",
+                "힘이 솟아."
             ],
             "special": [
-                "!"
+                "산성액!",
+                "물어뜯기!",
+                "변태 시작!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "나는 위대한 존재가 될 거야.",
+            "touch_head": "말랑말랑해.",
+            "touch_chest": "내부는 복잡해.",
+            "touch_legs": "기어다니는 게 좋아.",
+            "touch_special": "언젠가 너를 내려다볼 날이 올 거야."
         }
     },
     {
@@ -2400,7 +2778,7 @@
         "lore": {
             "title": "미지의 존재",
             "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 검은 물웅덩이은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "personality": "Hidden & Trap"
         },
         "relationships": {
             "likes": [],
@@ -2409,20 +2787,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "찰박...",
+                "깊이를 알 수 없어.",
+                "빠지지 마."
             ],
             "interaction": [
-                "..."
+                "밟지 마.",
+                "더러워질걸?",
+                "발목을 잡겠어."
             ],
             "gift": [
-                "Thank you."
+                "돌멩이?",
+                "가라앉아.",
+                "꿀꺽."
             ],
             "special": [
-                "!"
+                "늪지대!",
+                "익사!",
+                "모두 삼킨다!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "그냥 물웅덩이인 줄 알았어?",
+            "touch_head": "수면이 일렁여.",
+            "touch_chest": "핵은 깊은 곳에.",
+            "touch_legs": "퍼져나가.",
+            "touch_special": "내 안에는 끝없는 어둠이 있어. 들어와 볼래?"
         }
     },
     {
@@ -2460,7 +2850,7 @@
         "lore": {
             "title": "미지의 존재",
             "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 작은 공허 나방은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "personality": "Fluttering & Void"
         },
         "relationships": {
             "likes": [],
@@ -2469,20 +2859,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "팔락... 팔락...",
+                "빛을 쫓아서...",
+                "공허의 가루..."
             ],
             "interaction": [
-                "..."
+                "잡지 마.",
+                "가루 묻는다.",
+                "간지러워."
             ],
             "gift": [
-                "Thank you."
+                "빛?",
+                "꿀?",
+                "좋아..."
             ],
             "special": [
-                "!"
+                "가루 뿌리기!",
+                "환각!",
+                "군집 비행!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "불꽃을 보면 뛰어들고 싶어.",
+            "touch_head": "더듬이 조심해.",
+            "touch_chest": "날개는 약해.",
+            "touch_legs": "작은 다리야.",
+            "touch_special": "내 날갯짓이 폭풍이 될 수도 있어."
         }
     },
     {
@@ -2520,7 +2922,7 @@
         "lore": {
             "title": "미지의 존재",
             "story": "심연의 깊은 곳에서 기어 올라온 혼돈의 존재입니다. 심연 먹물 오징어은(는) 특별한 능력을 지녔습니다.",
-            "personality": "알 수 없음"
+            "personality": "Inky & Slippery"
         },
         "relationships": {
             "likes": [],
@@ -2529,20 +2931,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "뿌우...",
+                "먹물 발사 준비.",
+                "미끌미끌."
             ],
             "interaction": [
-                "..."
+                "먹물 맞고 싶어?",
+                "미끄러워.",
+                "다리가 많지?"
             ],
             "gift": [
-                "Thank you."
+                "오징어?",
+                "동족 상잔...",
+                "맛은 있어."
             ],
             "special": [
-                "!"
+                "먹물 폭탄!",
+                "시야 차단!",
+                "다리 묶기!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "바다의 무법자... 가 되고 싶어.",
+            "touch_head": "말랑해.",
+            "touch_chest": "내장은 여기.",
+            "touch_legs": "빨판 조심해.",
+            "touch_special": "온 세상을 검게 물들여주지."
         }
     },
     {
@@ -2557,10 +2971,56 @@
         "baseStr": 6,
         "baseInt": 10,
         "image": "images/creatures/abyss/creature_abyss_jellyfish.png",
+        "sprites": {
+            "idle": "images/creatures/abyss/creature_abyss_jellyfish.png",
+            "joy": "images/creatures/abyss/creature_abyss_jellyfish.png",
+            "sad": "images/creatures/abyss/creature_abyss_jellyfish.png",
+            "angry": "images/creatures/abyss/creature_abyss_jellyfish.png",
+            "skill": "images/creatures/abyss/creature_abyss_jellyfish.png",
+            "gallery": {}
+        },
+        "prompts": {
+            "base": "anime style, 심연의 해파리",
+            "idle": "floating"
+        },
         "lore": {
-            "title": "미확인 생명체",
-            "story": "데이터가 유실되어 정보를 확인할 수 없습니다.",
-            "personality": "알 수 없음"
+            "title": "부유하는 독",
+            "story": "투명한 몸체 안에 공허의 에너지를 품고 떠다니는 해파리. 아름답지만 촉수에 닿으면 영혼까지 마비된다.",
+            "personality": "Floating & Toxic"
+        },
+        "relationships": {
+            "likes": [],
+            "dislikes": [],
+            "rival": null
+        },
+        "touchLines": {
+            "idle": [
+                "둥실... 둥실...",
+                "건드리면 쏘인다.",
+                "투명해지고 싶어."
+            ],
+            "interaction": [
+                "찌릿할걸?",
+                "물컹해.",
+                "독침 조심해."
+            ],
+            "gift": [
+                "플랑크톤?",
+                "빛나는 돌...",
+                "먹을래."
+            ],
+            "special": [
+                "마비 독!",
+                "촉수 채찍!",
+                "투명화!"
+            ]
+        },
+        "lines": {
+            "normal": "바다의 유령이라고 불리지.",
+            "touch_head": "머리가 어디게?",
+            "touch_chest": "심장이 보이니?",
+            "touch_legs": "촉수야.",
+            "touch_special": "나를 안으면 영원히 잠들 거야."
         }
     },
     {
@@ -2575,10 +3035,56 @@
         "baseStr": 12,
         "baseInt": 4,
         "image": "images/creatures/abyss/creature_void_crab.png",
+        "sprites": {
+            "idle": "images/creatures/abyss/creature_void_crab.png",
+            "joy": "images/creatures/abyss/creature_void_crab.png",
+            "sad": "images/creatures/abyss/creature_void_crab.png",
+            "angry": "images/creatures/abyss/creature_void_crab.png",
+            "skill": "images/creatures/abyss/creature_void_crab.png",
+            "gallery": {}
+        },
+        "prompts": {
+            "base": "anime style, 공허 게",
+            "idle": "standing"
+        },
         "lore": {
-            "title": "미확인 생명체",
-            "story": "데이터가 유실되어 정보를 확인할 수 없습니다.",
-            "personality": "알 수 없음"
+            "title": "단단한 껍질",
+            "story": "공허의 힘으로 강화된 등껍질을 가진 게. 집게발은 강철도 자를 수 있다고 한다. 옆으로 걷지만 공격은 정면으로 한다.",
+            "personality": "Hard & Crabby"
+        },
+        "relationships": {
+            "likes": [],
+            "dislikes": [],
+            "rival": null
+        },
+        "touchLines": {
+            "idle": [
+                "딸깍... 딸깍...",
+                "거품 뽀글...",
+                "집게발 자랑."
+            ],
+            "interaction": [
+                "딱딱해.",
+                "집게 조심해.",
+                "뒤집지 마."
+            ],
+            "gift": [
+                "조개?",
+                "단단한 거...",
+                "좋아."
+            ],
+            "special": [
+                "집게 절단!",
+                "거품 광선!",
+                "껍질 강화!"
+            ]
+        },
+        "lines": {
+            "normal": "내 등껍질은 최강의 방패야.",
+            "touch_head": "눈 찌르지 마.",
+            "touch_chest": "배는 약점이야.",
+            "touch_legs": "다리가 많아서 편해.",
+            "touch_special": "내 집게에 잡히면 절대 놓지 않아."
         }
     },
     {
@@ -2593,10 +3099,56 @@
         "baseStr": 14,
         "baseInt": 5,
         "image": "images/creatures/abyss/creature_dark_eel.png",
+        "sprites": {
+            "idle": "images/creatures/abyss/creature_dark_eel.png",
+            "joy": "images/creatures/abyss/creature_dark_eel.png",
+            "sad": "images/creatures/abyss/creature_dark_eel.png",
+            "angry": "images/creatures/abyss/creature_dark_eel.png",
+            "skill": "images/creatures/abyss/creature_dark_eel.png",
+            "gallery": {}
+        },
+        "prompts": {
+            "base": "anime style, 암흑 장어",
+            "idle": "swimming"
+        },
         "lore": {
-            "title": "미확인 생명체",
-            "story": "데이터가 유실되어 정보를 확인할 수 없습니다.",
-            "personality": "알 수 없음"
+            "title": "미끄러운 포식자",
+            "story": "어두운 틈새에 숨어 사는 거대 장어. 몸에서 검은 점액을 분비하여 잡으려 해도 미끄러져 나간다. 전기를 내뿜어 먹이를 기절시킨다.",
+            "personality": "Slippery & Electric"
+        },
+        "relationships": {
+            "likes": [],
+            "dislikes": [],
+            "rival": null
+        },
+        "touchLines": {
+            "idle": [
+                "스으윽...",
+                "미끌미끌...",
+                "틈새가 좋아."
+            ],
+            "interaction": [
+                "못 잡을걸?",
+                "찌릿할 거야.",
+                "물어뜯는다."
+            ],
+            "gift": [
+                "물고기?",
+                "미끼?",
+                "냠냠."
+            ],
+            "special": [
+                "전기 충격!",
+                "휘감기!",
+                "점액 발사!"
+            ]
+        },
+        "lines": {
+            "normal": "어둠 속에서 나는 보이지 않지.",
+            "touch_head": "미끄럽지?",
+            "touch_chest": "길다란 몸이야.",
+            "touch_legs": "다리 없어.",
+            "touch_special": "너를 칭칭 감아서 심해로 데려가줄까?"
         }
     },
     {
@@ -2611,10 +3163,56 @@
         "baseStr": 8,
         "baseInt": 8,
         "image": "images/creatures/abyss/creature_skeleton_fish.png",
+        "sprites": {
+            "idle": "images/creatures/abyss/creature_skeleton_fish.png",
+            "joy": "images/creatures/abyss/creature_skeleton_fish.png",
+            "sad": "images/creatures/abyss/creature_skeleton_fish.png",
+            "angry": "images/creatures/abyss/creature_skeleton_fish.png",
+            "skill": "images/creatures/abyss/creature_skeleton_fish.png",
+            "gallery": {}
+        },
+        "prompts": {
+            "base": "anime style, 해골 물고기",
+            "idle": "swimming"
+        },
         "lore": {
-            "title": "미확인 생명체",
-            "story": "데이터가 유실되어 정보를 확인할 수 없습니다.",
-            "personality": "알 수 없음"
+            "title": "죽지 않는 물고기",
+            "story": "살점은 다 썩어 없어지고 뼈만 남은 물고기. 원인 모를 마력으로 계속해서 헤엄친다. 떼를 지어 다니며 살아있는 것들의 살점을 탐한다.",
+            "personality": "Undead & Hungry"
+        },
+        "relationships": {
+            "likes": [],
+            "dislikes": [],
+            "rival": null
+        },
+        "touchLines": {
+            "idle": [
+                "달그락... 달그락...",
+                "물고 싶어...",
+                "끝없는 허기."
+            ],
+            "interaction": [
+                "뼈만 남았어.",
+                "손가락 조심해.",
+                "안 아파."
+            ],
+            "gift": [
+                "고기?",
+                "피...",
+                "살점 줘."
+            ],
+            "special": [
+                "뼈 가시!",
+                "물어뜯기!",
+                "죽음의 행진!"
+            ]
+        },
+        "lines": {
+            "normal": "배고프지 않아도 계속 먹어.",
+            "touch_head": "가시 조심해.",
+            "touch_chest": "심장이 없어.",
+            "touch_legs": "지느러미 뼈야.",
+            "touch_special": "너도 뼈만 남으면 우리랑 친구가 될 수 있어."
         }
     },
     {
@@ -2628,11 +3226,57 @@
         ],
         "baseStr": 10,
         "baseInt": 18,
-        "image": "images/creatures/abyss/creature_abyss_jellyfish.png",
+        "image": "images/creatures/abyss/creature_phantom_ray.png",
+        "sprites": {
+            "idle": "images/creatures/abyss/creature_phantom_ray.png",
+            "joy": "images/creatures/abyss/creature_phantom_ray.png",
+            "sad": "images/creatures/abyss/creature_phantom_ray.png",
+            "angry": "images/creatures/abyss/creature_phantom_ray.png",
+            "skill": "images/creatures/abyss/creature_phantom_ray.png",
+            "gallery": {}
+        },
+        "prompts": {
+            "base": "anime style, 유령 가오리",
+            "idle": "flying"
+        },
         "lore": {
-            "title": "미확인 생명체",
-            "story": "데이터가 유실되어 정보를 확인할 수 없습니다.",
-            "personality": "알 수 없음"
+            "title": "심해의 유령",
+            "story": "물속을 날아다니듯 헤엄치는 유령 가오리. 벽이나 바닥을 통과할 수 있으며, 기분 나쁜 웃음소리를 낸다. 등에 달린 눈알 무늬로 적을 최면 건다.",
+            "personality": "Ghostly & Hypnotic"
+        },
+        "relationships": {
+            "likes": [],
+            "dislikes": [],
+            "rival": null
+        },
+        "touchLines": {
+            "idle": [
+                "스으윽...",
+                "날아오른다...",
+                "벽을 넘어서."
+            ],
+            "interaction": [
+                "통과할걸?",
+                "만져지지 않아.",
+                "최면을 걸어주지."
+            ],
+            "gift": [
+                "영혼?",
+                "기억...",
+                "맛있어."
+            ],
+            "special": [
+                "최면 파동!",
+                "유령 돌진!",
+                "투과!"
+            ]
+        },
+        "lines": {
+            "normal": "나는 어디든 갈 수 있어.",
+            "touch_head": "날개 짓.",
+            "touch_chest": "유령이야.",
+            "touch_legs": "꼬리에 독침 있어.",
+            "touch_special": "내 등의 눈을 봐... 점점... 잠이 온다..."
         }
     },
     {
@@ -2659,9 +3303,9 @@
             "idle": "standing"
         },
         "lore": {
-            "title": "미확인 생명체",
-            "story": "이 생명체에 대한 상세 기록은 아직 발견되지 않았습니다. 심층 탐사가 필요합니다.",
-            "personality": "알 수 없음"
+            "title": "희미한 존재",
+            "story": "심연의 가장자리에서 희미하게 빛나는 하급 정령. 존재감이 거의 없어 눈에 잘 띄지 않는다. 하지만 모이면 어둠을 밝히는 길잡이가 되기도 한다.",
+            "personality": "Faint & Helpful"
         },
         "relationships": {
             "likes": [],
@@ -2670,14 +3314,32 @@
         },
         "touchLines": {
             "idle": [
-                "..."
+                "나 여기 있어...",
+                "보이니?",
+                "깜빡... 깜빡..."
             ],
             "interaction": [
-                "!"
+                "꺼지지 않아.",
+                "후 불지 마.",
+                "간지러워."
+            ],
+            "gift": [
+                "빛조각?",
+                "고마워...",
+                "힘이 나."
+            ],
+            "special": [
+                "빛의 점멸!",
+                "눈부시지?",
+                "여기라고!"
             ]
         },
         "lines": {
-            "normal": "..."
+            "normal": "나를 잊지 말아줘.",
+            "touch_head": "형체가 희미해.",
+            "touch_chest": "마음만은 따뜻해.",
+            "touch_legs": "발이 없어.",
+            "touch_special": "네 마음속의 작은 빛이 되어줄게."
         }
     }
 ]

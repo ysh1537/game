@@ -24,6 +24,24 @@ window.game = null;
 const views = {};
 
 window.onload = async () => {
+    // [Audio] User Interaction Unlock
+    const unlockAudio = () => {
+        if (window.SoundManager) {
+            window.SoundManager.playBGM('LOBBY');
+            window.SoundManager.playSFX('POPUP_OPEN'); // Start sound
+            console.log("[Main] Audio Unlocked");
+        }
+        document.removeEventListener('click', unlockAudio);
+    };
+    document.addEventListener('click', unlockAudio, { once: true });
+
+    // [Global UI Sound]
+    document.addEventListener('click', (e) => {
+        if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
+            if (window.SoundManager) window.SoundManager.playSFX('CLICK');
+        }
+    });
+
     console.log("[Main] Window Loaded");
 
     // [New] Init Firebase
@@ -90,19 +108,22 @@ window.onload = async () => {
     }
 
     // 3. Auth Check & Start Logic
-    // Define Start Function
     const startApp = async () => {
+        if (window.isAppStarted) return; // Prevent double start
+        window.isAppStarted = true;
         console.log("[Main] Starting Application Flow...");
 
         // Load user data from Game
-        // [Safety]: Ensure DataManager is done (It is awaited above)
-
         try {
-            await game.loadUserData(); // Make loadUserData awaitable if it's async, or regular sync.
-            // game.loadUserData currently sync, but let's assume it works.
+            await game.loadUserData();
 
             // [Safety] Mark Data Ready ONLY after successful load
-            game.markDataReady();
+            if (typeof game.markDataReady === 'function') {
+                game.markDataReady();
+            } else {
+                console.warn("[Main] game.markDataReady not found, setting flag manually.");
+                game.isDataReady = true;
+            }
 
         } catch (e) {
             console.error("[Main] Critical Error during User Data Load:", e);
@@ -174,13 +195,18 @@ window.onload = async () => {
         };
     }
 
-    // Check Login State
-    if (views.auth.checkLogin()) {
-        console.log("[Main] Auto-login success");
+    // [Auto-Start Logic]
+    // User enforced: GOOGLE LOGIN ONLY.
+    // We wait for Firebase onAuthStateChanged to trigger startApp() via AuthView or manually checking here.
+
+    if (game.authManager.isAuthenticated) {
+        console.log("[Main] Already Authenticated. Launching Game...");
         startApp();
+        if (views.auth) views.auth.hide();
     } else {
-        console.log("[Main] Need Login - Waiting for user action");
-        if (loginOverlay) loginOverlay.style.display = 'flex';
+        console.log("[Main] Waiting for Google Login...");
+        // Ensure Auth View is shown
+        if (views.auth) views.auth.show();
     }
 };
 

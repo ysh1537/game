@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "ESNext",
+        "checkJs": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "build",
+        ".git",
+        "images",
+        "audio",
+        "assets",
+        "backups",
+        "_backup",
+        "docs",
+        "tools",
+        "scripts",
+        "temp_review",
+        "ysh1537-pages",
+        "**/*.test.js",
+        "**/*.spec.js"
+    ]
+}

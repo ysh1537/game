@@ -137,13 +137,7 @@ export default class Game {
         // 로그인 체크 및 앱 시작은 main.js에서 처리
     }
 
-    markDataReady() {
-        console.log("[Game] Data marked as ready.");
-        this.isDataReady = true;
 
-        // Notify managers if needed
-        if (this.battleManager) this.battleManager.onGameDataReady();
-    }
 
     // checkOfflineProgress removed - logic consolidated in handleOfflineRewards
 

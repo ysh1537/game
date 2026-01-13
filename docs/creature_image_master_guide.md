@@ -1,112 +1,151 @@
-# 🎨 크리처 이미지 생성 마스터 가이드
+# 🎨 크리처 이미지 생성 마스터 가이드 (Consolidated SSOT)
 
 > **프로젝트**: 멀티버스 크리처 랩
 > **스타일**: 블루아카이브 + 니케 스타일 (2D Anime, Cel Shading, Glazing)
 > **타겟**: 성인 서브컬처 (매력적이고 관능적인 캐릭터)
-> **최신 업데이트**: 2026-01-07
+> **버전**: 3.0 (Consolidated)
 
 ---
 
-## 🛠️ 표준 워크플로우 (Standard Workflow)
+# 🎨 Creature Image Master Guide (The Freya Standard)
 
-이미지 생성부터 적용까지 다음 절차를 **엄격히** 준수합니다.
+> **[2026-01-13 Update]**
+> 모든 크리처 에셋 제작은 **'프레이야 스탠다드(Freya Standard)'**를 따릅니다.
+> 기존의 모호한 스타일 가이드는 폐기하며, **반드시 아래 원칙에 따라 제작**해야 합니다.
 
-### 1. 생성 및 동기화 (Generation & Sync)
+## 🏆 The Golden Rule: "Like Freya"
 
-1. **이미지 생성**: AI 도구로 이미지 생성 (Artifacts 폴더에 저장됨).
-2. **즉시 복제 (Dual Backup)**:
-    * 생성 즉시 `images/temp/` 폴더로 복사합니다. (사용자 확인용)
-    * `copy "C:\Users\...\Artifacts\img.png" "D:\test\...\images\temp\img.png"`
+모든 이미지는 **[프레이야 Base]**의 화풍, 질감, 조명과 이질감이 없어야 합니다.
 
-### 2. 리뷰 작성 (Walkthrough)
-
-* `walkthrough.md`에 테이블 형태(Type | Image | Concept)로 정리하여 리뷰를 요청합니다.
-* **⚠️ 중요**: 이미지 경로는 반드시 **Artifacts 원본 경로**(`C:\Users\...\brain\...`)를 사용해야 합니다. (외부 경로 사용 시 엑스박스 발생)
-
-### 3. 승인 및 적용 (Approval & Apply)
-
-* **승인 시**: `images/temp/`의 파일을 `images/creatures/[world]/`로 이동하고 파일명을 변경합니다.
-* **거부 시**: `images/_unused_archive/`로 이동하여 보관합니다. (삭제 금지)
+1. **화풍**: Soft Anime Illustration (NOT heavy impasto, NOT 3D)
+2. **피부**: **Shiny & Sweaty** (매끄러운 윤기와 리얼한 땀방울)
+3. **조명**: **Soft Bloom** (뽀샤시하고 몽환적인 빛)
+4. **연출**: **Alluring Curves** (단순 노출이 아닌, 몸매의 굴곡과 탄력을 강조)
 
 ---
 
-## 🚫 핵심 규칙 (Core Rules)
+## 🏛️ 절대 헌장 (The Constitution of Art)
 
-| 항목 | 규칙 |
-| :--- | :--- |
-| **파일 경로** | 공식: `images/creatures/[world]/` <br> 임시: `images/temp/` |
-| **파일명** | `creature_[id].png` (예: `creature_void_emperor.png`) |
-| **해상도** | 세로형 권장 (512x768 또는 768x1024) |
-| **구도** | **전신(Full Body)** 필수 (머리~발끝 잘림 없음), 화면의 80% 차지 |
-| **금지 사항** | 텍스트, UI, 말풍선, 3D/실사 렌더링, SD(Chibi) 스타일 |
+**모든 이미지 생성은 아래 규칙을 따른다. 예외는 없다.**
+
+### 1. 스타일 (Style)
+
+* **키워드**: `(masterpiece:1.5), (blue archive style:1.5), (nikke style:1.4), (cel shading:1.3)`
+* **전신(Full Body)**: 발끝부터 정수리까지 잘림 없이 나와야 함.
+* **여체화(Moe Anthropomorphism)**: 모든 신, 괴물, 동물은 **미소녀/성인 여성**으로 의인화. (남캐 금지)
+
+### 2. 매력 포인트 (Appeal)
+
+* **바디**: `huge breasts`, `thick thighs`, `wide hips`, `glossy skin`
+* **얼굴**: `beautiful anime face`, `blushing`, `expressive eyes`
+* **금지**: 실사(Realistic), 3D 렌더, 서양 카툰, 텍스트, UI, 기괴함, 노인.
+
+### 3. 워크플로우 (Strict Workflow)
+
+**위반 시 롤백 대상임.**
+
+1. **검증 (Audit)**: 작업 전 `MISSING_ASSETS_REPORT.md` 또는 `deep_asset_audit.js` 확인.
+2. **생성 (Generate)**: AI 생성 후 즉시 `images/temp/` 로 저장 (절대 실서버 경로 직저장 금지).
+3. **리뷰 (Review)**: `walkthrough.md`에 등재하여 사용자 승인 요청.
+4. **승인 (Approve)**: 사용자 승인 후 `images/creatures/[world]/`로 이동.
+5. **적용 (Apply)**: `js/data/*.js`의 경로가 실제 파일과 일치하는지 최종 확인.
 
 ---
 
-## 🎨 프롬프트 시스템 (Prompt System)
+### 4. 파일 명명 규칙 (Naming Convention - 2026 Update)
 
-### 필수 프롬프트 (Base Prompts)
+**절대 규칙: `god_` 접두사 사용 금지.**
 
-* **Positive**: `(masterpiece:1.5), (best quality:1.4), (blue archive art style:1.5), (nikke art style:1.4), (cel shading:1.3), full body shot, solo, (glossy skin:1.2)`
-* **Negative**: `(3d:1.5), (realistic:1.5), (photorealistic:1.5), (lowres:1.4), simple background, white background, chibi, deformed, bad anatomy, text, watermark`
-
-### 등급별 스타일 가이드
-
-* **UR/SSR (High-End)**: `(oil painting texture:1.3)`, `(thick coating:1.2)`, `(cinematic lighting:1.3)`, `extremely detailed face`, `huge breasts`, `thick thighs`
-* **SR/Rare**: `(vibrant colors)`, `(clean lines)`, `dynamic pose`
+* **기본 구조**: `creature_[id]_[variation].png`
+* **ID 규칙**:
+  * `god_thor` (X) -> `thor` (O)
+  * `god_zeus` (X) -> `zeus` (O)
+  * `titan_kronos` (O) -> `titan` 접두사는 유지 (계급 구분이 아닌 종족명인 경우)
+* **Variation 표준 (9-Set Standard)**:
+    1. `base` (또는 `idle`): 기본 전신
+    2. `joy`: 웃는 표정
+    3. `sad`: 슬픈 표정
+    4. `angry`: 화난 표정/전투 태세 (구 `battle`)
+    5. `skill`: 스킬 컷신 (Cinematic)
+    6. `victory`: 승리 포즈 (구 `clear`)
+    7. `defeat`: 패배 포즈 (구 `fail`)
+    8. `gallery_lv1`: 호감도 1단계
+    9. `gallery_lv2`: 호감도 2단계
+    10. `gallery_lv3`: 호감도 3단계 (성인 버전)
 
 ---
 
-## 📦 크리처 데이터베이스 (Status & Prompts)
+## 🎨 레퍼런스 아키타입 (Reference Archetypes)
 
-상태 범례: ✅ 완료 | 🔄 재생성 필요 (스타일/퀄리티 이슈) | ❌ 생성 필요 (파일 없음)
+### 🩸 Abyss (뱀파이어/심연)
 
-### 🟡 UR (초월 - Gold)
+* **Visuals**: 고딕 롤리타, 창백한 피부, 붉은 눈, 검은 안개.
+* **Apply to**: 뱀파이어, 악마, 크툴루 계열.
+* **Keywords**: `gothic lolita`, `pale skin`, `red aura`, `tentacles (hair)`
 
-| 상태 | 이름 (ID) | 월드 | 컨셉 & 핵심 프롬프트 |
+### 👼 Olympus/Asgard (천사/발키리)
+
+* **Visuals**: 화이트/골드 갑옷, 날개, 성스러운 빛.
+* **Apply to**: 제우스, 오딘, 발키리, 천사 계열.
+* **Keywords**: `white armor`, `gold trim`, `angel wings`, `divine light`
+
+### 🔥 Wild/Elements (자연/정령)
+
+* **Visuals**: 원소 이펙트(불, 물, 풀), 노출도 높은 판타지 의상.
+* **Apply to**: 드래곤, 이프리트, 정령왕.
+* **Keywords**: `fire aura`, `water droplets`, `nature dress`, `floating elements`
+
+### 🦊 Shangri-La (동양/요괴)
+
+* **Visuals**: 한복/기모노/치파오 변형, 동물귀/꼬리.
+* **Apply to**: 구미호, 손오공, 사신수.
+* **Keywords**: `kimono`, `hanbok`, `animal ears`, `oriental patterns`
+
+---
+
+## 📝 프롬프트 뱅크 (Prompt Bank)
+
+### Global Prompts
+
+* **Positive**: `(masterpiece:1.5, best quality:1.4), (blue archive art style:1.5), (nikke art style:1.4), full body, female, solo, (beautiful face:1.3), (thick thighs:1.4), (wide hips:1.4), (huge breasts:1.2)`
+* **Negative**: `(western cartoon:1.5), (3d render:1.5), (realistic:1.5), lowres, bad anatomy, text, watermark, cropped, ugly face, old`
+
+### 주요 캐릭터 프롬프트 (Verified)
+
+#### 🐙 God Cthulhu (Abyss UR)
+>
+> `female cthulhu girl, green twin-tails hair resemble tentacles, gothic lolita dress, glowing green eyes, underwater ruins background, mysterious aura`
+
+#### 🦅 Harpy Queen (Olympus SR)
+>
+> `female harpy queen, large feathered wings, aviator outfit, open jacket, tight hotpants, blue sky background`
+
+#### 🐉 Cloud Serpent (Shangri-La SR)
+>
+> `female dragon girl, white oriental dress, scales, dragon horns, floating on clouds, white mist effects`
+
+*(나머지 상세 프롬프트는 `js/data/*.js`의 `prompt` 필드 참조)*
+
+---
+
+## 5. 프롬프트 정규화 및 등급별 자산 규칙 (2026.01 Standard)
+
+### A. 프롬프트 정규화 (Prompt Normalization)
+
+캐릭터 일관성(Consistency) 유지를 위해 **[Core Prompt]**와 **[Variation]**을 물리적으로 분리하여 조합한다.
+
+1. **Core Prompt Defined**: 캐릭터의 고정 외형(머리색, 눈동자, 옷, 체형, 귀/꼬리 등) 및 기본 Quality Tag.
+    * *모든 바리에이션 생성 시 이 문장이 100% 동일하게 선행되어야 함.*
+2. **Variation Added**: 해당 씬의 독자적인 동작, 표정, 배경 효과만 뒤에 추가.
+    * *예: [Core Prompt], smiling, waving hand*
+
+### B. 등급별 갤러리/이미지 구성 (Rank-based Composition)
+
+| 등급 (Rank) | 구성 (Total Images) | 갤러리 (Gallery) | 비고 |
 | :--- | :--- | :--- | :--- |
-| ✅ | **제우스** (`god_zeus`) | OLYMPUS | 번개의 여신, 은발, 토가 드레스, 복근, 오만한 표정 <br> `female thunder goddess, massive lightning bolt, regal toga, electric aura` |
-| ✅ | **크로노스** (`time_lord_chronos`) | OLYMPUS | 시간의 지배자, 오드아이, 시계태엽 코르셋, 얀데레 <br> `heterochromia, clock gears, hourglass, time freeze effect` |
-| ✅ | **바하무트** (`dragon_ancient`) | SHANGRILA | 태초의 용, 은발, 용비늘 갑옷, 거대한 날개, 도서관 <br> `ancient dragon girl, tome with runes, dragon scale armor` |
-| ❌ ([Plan](file:///C:/Users/CTS_Sol/.gemini/antigravity/brain/33ff88a8-b2c8-4bd4-a70b-5c65df5b9177/gaia_image_plan.md)) | **창조주 가이아** (`creator_gaia`) | WILD | 태초의 야성녀, 나뭇잎 비키니, 태닝 피부 <br> `wild messy hair, leaf bikini armor, tanned skin, tribal` |
-| ✅ | **티아마트** (`dragon_chaos`) | ABYSS | 혼돈의 용희, 흑적색 머리, 비늘 갑옷, 압도적 글래머 <br> `chaos dragon, black scale armor, massive wings, seductive` |
-| ✅ | **에레보스** (`void_emperor`) | ABYSS | 공허의 여제, 시스루 그림자 드레스, 순백의 눈 <br> `void empress, translucent shadow dress, white glowing eyes` |
-| ✅ | **오딘** (`god_odin`) | ASGARD | 최고신, 안대, 룬 갑옷, 궁니르, 까마귀 <br> `one eye patch, silver hair, rune armor, gungnir spear` |
-| ⏳ (8/10) | **니알라토텝** (`god_nyarlathotep`) | ABYSS | 기어다니는 혼돈, 간호사/메이드 변장, 촉수, 광기 <br> `naughty nurse/maid, spiral eyes, shadow tentacles, glitch effect` |
-| ❌ ([Plan](file:///C:/Users/CTS_Sol/.gemini/antigravity/brain/33ff88a8-b2c8-4bd4-a70b-5c65df5b9177/cthulhu_image_plan.md)) | **크툴루** (`god_cthulhu`) | ABYSS | 심해의 여왕, 녹색 머리, 비키니 아머 vs 고스 로리 <br> `deep sea queen, green scale bikini armor, dragon wings` |
-| ❌ ([Plan](file:///C:/Users/CTS_Sol/.gemini/antigravity/brain/33ff88a8-b2c8-4bd4-a70b-5c65df5b9177/gaia_image_plan.md)) | **대지의 여신 가이아** (`god_gaia`) | OLYMPUS | 풍요의 여신, 그리스 드레스, 압도적 글래머 <br> `greek goddess, white/green dress, motherly, massive curves` |
+| **SSR / SR** | **10장** | **3장 (Lv1, Lv2, Lv3)** | 훅(Lv1), 데이트(Lv2), 침실(Lv3) 필수 |
+| **Rare / Special** | **8장** | **1장 (Lv1 Only)** | 캐릭터성 강조 (Hook) |
+| **Normal** | **8장** | **1장 (Lv1 Only)** | 단순/귀여움 강조 (Mob Style) |
 
-### 🟠 SR (전설 - Orange)
-
-| 상태 | 이름 (ID) | 월드 | 컨셉 & 핵심 프롬프트 |
-| :--- | :--- | :--- | :--- |
-| ✅ | **카밀라** (`vampire_lord`) | ABYSS | 뱀파이어 로드, 고딕 롤리타, 와인잔 <br> `vampire lord, gothic lolita, red wine, rose petals` |
-| ✅ | **쉐도우 닌자** (`ninja_shadow`) | SHANGRILA | 쿠노이치, 망사, 잠입 액션 <br> `shadow ninja, fishnet outfit, katana, cherry blossoms` |
-| 🔄 | **아틀라스** (`titan_atlas`) | OLYMPUS | 거신, 태닝 피부, 근육질, 기계 건틀릿 <br> `titan, tanned muscle, mechanical gauntlets, celestial globe` |
-| 🔄 | **브륀힐트** (`valkyrie`) | ASGARD | 발키리, 은색 갑옷, 깃발 <br> `valkyrie, silver armor, holding banner, heroic` |
-| 🔄 | **그로트** (`giant_hill`) | ASGARD | 언덕 거인, 원시 부족 의상, 거대 방패, 치유계 <br> `hill giant, primitive leather, massive shield, gentle` |
-| 🔄 | **루루** (`kraken_baby`) | ABYSS | 크라켄 아이돌, 홀로그램 의상, 텐타클 트윈테일 <br> `kraken idol, holographic sailor suit, tentacle hair` |
-| ❌ | **미호** (`fox9`) | SHANGRILA | 구미호, 개량 한복, 여우불 <br> `nine-tailed fox, hanbok, fox fire, seductive` |
-| ❌ | **키메라** (`chimera`) | WILD | 사자갈기+염소뿔+뱀꼬리, 가죽 갑옷 <br> `chimera girl, lion mane, snake tail, beast hide armor` |
-
-### 🟣 Special / 🔵 Rare / ⚪ Normal (요약)
-
-| 등급 | 상태 | 이름 (ID) | 컨셉 요약 |
-| :--- | :--- | :--- | :--- |
-| **Sp** | 🔄 | **화염 마법사** | 노출 로브, 화염 지팡이 |
-| **Sp** | 🔄 | **유니콘** | 파스텔톤, 순수, 뿔 |
-| **Sp** | ✅ | **스켈레톤 나이트** | 부서진 갑옷, 창백한 피부 |
-| **Sp** | ✅ | **물의 정령** | 물방울 드레스, 투명 피부 |
-| **Sp** | ❌ | **드워프 대장장이** | 글래머러스, 가죽 앞치마, 망치 |
-| **Sp** | ❌ | **고대 엔트** | 나무 피부, 나뭇잎 의상, 모성애 |
-| **Ra** | ✅ | **강철 독수리** | 파일럿 고글, 강철 깃털 |
-| **Ra** | ✅ | **만년설 곰** | 흰 털옷, 졸린 표정 |
-| **Ra** | ✅ | **꽃의 요정** | 꽃잎 드레스, 작은 날개 |
-| **Ra** | ✅ | **다이어 울프** | 부족 전사, 늑대 귀/꼬리 |
-| **Ra** | ✅ | **진흙 골렘** | 진흙 텍스처, 멍한 표정 |
-| **Ra** | ❌ | **켄타우로스** | 반인반마, 궁수, 스포티 |
-| **Ra** | ❌ | **판다 수도승** | 뚱랑이(통통), 도복, 대나무 |
-| **Ra** | ❌ | **가고일** | 석조 피부, 고딕, 웅크린 자세 |
-| **No** | ✅ | **시궁쥐, 박쥐, 조약돌** | 심플한 의인화 (완료) |
-| **No** | ❌ | **구름, 눈송이, 먹물** | 정령 컨셉 (생성 필요) |
-
----
+* **Gallery Lv1 규칙**: `date sim event`, `no text`, `no ui` 필수.
+* **Gallery Lv3 규칙 (SR 이상)**: `intimate`, `bed scene`, `ecstatic expression` 등 수위 묘사 포함 (Safety Filter 우회 필요 시 `intimate atmosphere` 등으로 순화).

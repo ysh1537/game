@@ -9,10 +9,17 @@
 
 **절대 원칙**: "생성된 이미지는 **즉시 게임에 적용하지 않는다**."
 
+### Step 0: 사전 검증 (Pre-Check Audit)
+
+- 작업 시작 전 반드시 `MISSING_ASSETS_REPORT.md` 또는 `tools/deep_asset_audit.js`를 실행하여 누락/불일치 현황을 파악한다.
+- **불일치(Mismatch)** 발견 시, 코드(`Data.js`)와 파일명(`creature_*.png`)을 일치시키는 작업을 우선 수행한다.
+
 ### Step 1: 생성 (Generation)
 
 - 사용자의 요청 또는 `missing_assets_report.md`에 따라 이미지를 생성한다.
-- **파일명 규칙**: `creature_[영문이름]_[variant].png` (예: `creature_dragon_fire.png`)
+- **파일명 규칙**: `creature_[id]_[variant].png` (Master Guide 제4조 필독)
+  - ❌ `creature_god_thor.png` (금지)
+  - ✅ `creature_thor.png` (허용)
 
 ### Step 2: 임시 저장 (Temporary Storage)
 

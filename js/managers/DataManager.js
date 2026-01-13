@@ -18,8 +18,8 @@ export default class DataManager {
                 this.loadCreatures("OlympusData.json", OLYMPUS_CREATURES),
                 this.loadCreatures("AsgardData.json", ASGARD_CREATURES),
                 this.loadCreatures("ShangriLaData.json", SHANGRILA_CREATURES),
-                this.loadCreatures("AbyssData.json", ABYSS_CREATURES),
-                this.loadCreatures("WildData.json", WILD_CREATURES)
+                this.loadCreatures("AbyssData.json", ABYSS_CREATURES)
+                // this.loadCreatures("WildData.json", WILD_CREATURES) // [FIX] File Missing
             ]);
 
             this.rebuildIndex();
