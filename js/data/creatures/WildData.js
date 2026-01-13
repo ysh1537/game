@@ -22,17 +22,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 심해의 재앙 레비아탄",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 심해의 재앙 레비아탄, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 심해의 재앙 레비아탄, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 심해의 재앙 레비아탄, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, beast leviathan girl, sea dragon monster girl, deep blue scales, dragon horns, water dragon tail, revealing swimsuit armor, glamorous body, huge breasts, extremely thick thighs, wide hips, deep ocean background, masterpiece, best quality",
+            "idle": "standing pose, confident, crossing arms, water twisting around, floating, no text, no ui",
+            "joy": "laughing, water forming heart shape, arrogant smile, happy, no text, no ui",
+            "sad": "looking away, scales dull, underwater rain, gloomy bubbles, no text, no ui",
+            "angry": "summoning tidal wave, glowing blue eyes, shouting, stormy ocean, aggressive, no text, no ui",
+            "skill": "hydro cannon, giant water dragon spirit, cinematic angle, intense pressure, masterpiece, no text, no ui",
+            "victory": "standing on water surface, looking down, hand on hip, queen pose, no text, no ui",
+            "defeat": "sinking, armor broken, exhausted, bubbles rising, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, beast leviathan girl, underwater throne, looking at viewer like prey, seductive smile, crossing legs, no text, no ui",
+            "gallery_lv2": "dating sim event, beast leviathan girl, surfacing at beach, wet skin, water dripping, glaring at sun, shiny skin, no text, no ui",
+            "gallery_lv3": "dating sim event, beast leviathan girl, deep sea embrace, pulling viewer close, glowing markings, possessive gaze, masterpiece, no text, no ui"
         },
         lore: {
             "title": "심해의 지배자",
@@ -94,17 +94,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 요정 여왕 티타니아",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 요정 여왕 티타니아, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 요정 여왕 티타니아, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 요정 여왕 티타니아, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, fairy queen titania, butterfly wings, elegant nature dress, flower crown, magic dust, glamorous body, huge breasts, extremely thick thighs, wide hips, magical forest background, masterpiece, best quality",
+            "idle": "standing pose, floating, playing with butterfly, gentle smile, soft light, no text, no ui",
+            "joy": "dancing in air, sparkles, laughing, bright aura, happy, no text, no ui",
+            "sad": "wings drooping, sitting on mushroom, looking down, petals falling, no text, no ui",
+            "angry": "commanding nature, vines rising, stern expression, glowing eyes, aggressive, no text, no ui",
+            "skill": "moonlight blessing, fairy dust storm, cinematic angle, magical forest, masterpiece, no text, no ui",
+            "victory": "pirouette, spreading wings, bowing elegantly, radiant smile, no text, no ui",
+            "defeat": "wings torn, sitting on ground, crying, flowers wilting, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, fairy queen titania, tea party in forest, pouring tea, sunlight filtering, smiling, no text, no ui",
+            "gallery_lv2": "dating sim event, fairy queen titania, night flight, holding hands, moon in background, glowing dust, romantic, no text, no ui",
+            "gallery_lv3": "dating sim event, fairy queen titania, fairy bed, lying on flowers, inviting viewer, alluring gaze, magical atmosphere, no text, no ui"
         },
         lore: {
             "title": "요정들의 여왕",
@@ -165,17 +165,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 황금 그리폰",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 황금 그리폰, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 황금 그리폰, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 황금 그리폰, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, golden griffin girl, lion ears, eagle wings, gold armor bikini, feather details, glamorous body, huge breasts, extremely thick thighs, wide hips, treasure mountain background, masterpiece, best quality",
+            "idle": "standing pose, polishing gold coin, checking nails/claws, confident smirk, no text, no ui",
+            "joy": "holding treasure chest, eyes sparkling, wings spread, laughing, happy, no text, no ui",
+            "sad": "empty chest, looking disappointed, wings folded, gloomy, no text, no ui",
+            "angry": "guarding treasure, screeching, claws out, wind pressure, aggressive, no text, no ui",
+            "skill": "golden dive, sonic boom, cinematic angle, feathers flying, masterpiece, no text, no ui",
+            "victory": "sitting on pile of gold, crossing legs, arrogant smile, crown, no text, no ui",
+            "defeat": "lying on gold, armor broken, dizzy, feathers scattered, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, golden griffin girl, showing off collection, proud face, holding gem, shiny, no text, no ui",
+            "gallery_lv2": "dating sim event, golden griffin girl, grooming wings, asking for help, blushing, looking back, no text, no ui",
+            "gallery_lv3": "dating sim event, golden griffin girl, lying in treasure pile, beckoning viewer, gold covering bits, seductive, alluring eyes, no text, no ui"
         },
         lore: {
             "title": "황금빛 수호수",
@@ -236,17 +236,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 만년 고대 거북",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 만년 고대 거북, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 만년 고대 거북, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 만년 고대 거북, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, ancient turtle girl, heavy shell shield on back, green hair, slow and calm, mossy stone armor, glamorous body, huge breasts, extremely thick thighs, wide hips, ancient ruins background, masterpiece, best quality",
+            "idle": "standing pose, yawning, leaning on shield/shell, sleepy, slow movement, no text, no ui",
+            "joy": "sipping tea, calm smile, birds sitting on head, peaceful, no text, no ui",
+            "sad": "hiding in shell, only eyes visible, scared/sad, dark cloud, no text, no ui",
+            "angry": "stomping ground, earth shaking, stern face, rock spikes, aggressive, no text, no ui",
+            "skill": "earthquake stomp, absolute defense, cinematic angle, flying rocks, masterpiece, no text, no ui",
+            "victory": "sleeping peacefully, bubble from nose, battle over, relaxed, no text, no ui",
+            "defeat": "flipped on back, struggling to get up, dizzy, shell cracked, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, ancient turtle girl, slow walk in forest, holding hands, blushing, taking time, no text, no ui",
+            "gallery_lv2": "dating sim event, ancient turtle girl, sunbathing on rock, stretching, exposing curves, relaxed, no text, no ui",
+            "gallery_lv3": "dating sim event, ancient turtle girl, inviting into shell (metaphor), shy but bold, close face, ancient wisdom, no text, no ui"
         },
         lore: {
             "title": "살아있는 섬",
@@ -307,17 +307,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 드라이어드 여왕",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 드라이어드 여왕, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 드라이어드 여왕, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 드라이어드 여왕, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, dryad queen girl, wood texture skin patches, leafy hair, vine dress (revealing), nature staff, glamorous body, huge breasts, extremely thick thighs, wide hips, lush forest background, masterpiece, best quality",
+            "idle": "standing pose, vines moving like snakes, nurturing smile, holding a flower, no text, no ui",
+            "joy": "blooming flowers around, twirling, bright laugh, sunlight, happy, no text, no ui",
+            "sad": "leaves falling, winter atmosphere, cold expression, hugging self, no text, no ui",
+            "angry": "thorny vines, dark forest, red glowing eyes, menacing, aggressive, no text, no ui",
+            "skill": "forest growth, giant tree root attack, cinematic angle, nature power, masterpiece, no text, no ui",
+            "victory": "sitting on tree branch, swinging legs, animals gathering, happy, no text, no ui",
+            "defeat": "withered, drying up, sitting on ground, leaves brown, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, dryad queen girl, offering fruit, feeding viewer, sweet smile, forest glade, no text, no ui",
+            "gallery_lv2": "dating sim event, dryad queen girl, bathing in forest stream, wet leaves, covering with vines, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, dryad queen girl, merging with tree, pulling viewer effectively, nature's embrace, intense green eyes, no text, no ui"
         },
         lore: {
             "title": "숲의 어머니",
@@ -376,13 +376,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 사마귀 무사",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 사마귀 무사, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, mantis warrior girl, green insectoid armor, twin scythe blades, katana style, ponytail, glamorous body, huge breasts, extremely thick thighs, wide hips, bamboo forest background, masterpiece, best quality",
+            "idle": "standing pose, sharpening blade, focused gaze, warrior stance, no text, no ui",
+            "joy": "sheathing blade, faint smile, nodding in approval, wind blowing, no text, no ui",
+            "sad": "blade chipped, looking at reflection, shameful expression, rain, no text, no ui",
+            "angry": "crossing blades, compound eyes glowing, combat stance, speed lines, aggressive, no text, no ui",
+            "skill": "cross slash, sonic cut, cinematic angle, green energy, masterpiece, no text, no ui",
+            "victory": "cleaning blade, closing eyes, meditation posture, cool, no text, no ui",
+            "defeat": "armor cracked, kneeling, supporting with blade, panting, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, mantis warrior girl, meditation under waterfall, wet armor, focused, noticing viewer, no text, no ui",
+            "gallery_lv2": "dating sim event, mantis warrior girl, blade maintenance, asking for help, close proximity, accidental touch, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, mantis warrior girl, sparring accident, pinned down, looking intense, heavy breathing, sweat, no text, no ui"
         },
         lore: {
             "title": "녹색의 검객",
@@ -441,13 +445,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 난초 사마귀",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 난초 사마귀, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, orchid mantis girl, pink flower dress, petal wings, camouflage, elegant assassin, glamorous body, huge breasts, extremely thick thighs, wide hips, flower garden background, masterpiece, best quality",
+            "idle": "standing pose, posing like a flower, innocent look, hidden blades, no text, no ui",
+            "joy": "giggling behind hand, eyes closing, pink aura, happy, no text, no ui",
+            "sad": "petals falling, makeup running, sad pout, looking down, no text, no ui",
+            "angry": "revealing true form, scary face, blades out, hissing, aggressive, no text, no ui",
+            "skill": "petal dance strike, pink slash, cinematic angle, beautiful death, masterpiece, no text, no ui",
+            "victory": "curtsy, elegant smile, wiping blade, innocent act, no text, no ui",
+            "defeat": "sitting on ground, dress torn, messy hair, crying, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, orchid mantis girl, flower viewing, pointing at bloom, smiling sweetly, hidden intent, no text, no ui",
+            "gallery_lv2": "dating sim event, orchid mantis girl, tea time, feeding viewer sweets, close up, lips, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, orchid mantis girl, revealing trap, leaning over viewer, dangerous allure, predatory eyes, heart pupils, no text, no ui"
         },
         lore: {
             "title": "죽음의 꽃",
@@ -506,13 +514,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 수정 게",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 수정 게, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, crystal crab girl, transparent diamond skin, gem bikini armor, prism hair, sparkling, glamorous body, huge breasts, extremely thick thighs, wide hips, crystal cave background, masterpiece, best quality",
+            "idle": "standing pose, checking reflection in crystal, admiring self, shiny, no text, no ui",
+            "joy": "sparkling brightly, posing, flashing peace sign, happy, no text, no ui",
+            "sad": "dull colors, cracks in crystal, sitting curled up, crying, no text, no ui",
+            "angry": "sharp edges, blinding light, refraction, pointing finger/claw, aggressive, no text, no ui",
+            "skill": "prism laser, diamond hard defense, cinematic angle, rainbow light, masterpiece, no text, no ui",
+            "victory": "shining brightest, spotlight on self, confident pose, wink, no text, no ui",
+            "defeat": "shattered look, lying on ground, light fading, dizzy eyes, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, crystal crab girl, finding a gem, showing it to viewer, excited face, cave adventure, no text, no ui",
+            "gallery_lv2": "dating sim event, crystal crab girl, polishing armor, ask for help, back view, glowing skin, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, crystal crab girl, surrounded by crystals, light reflecting everywhere, mesmerizing body, alluring gaze, masterpiece, no text, no ui"
         },
         lore: {
             "title": "투명한 갑옷",
@@ -571,13 +583,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 번개 장어 왕",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 번개 장어 왕, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, electric eel king girl, punk rocker style, yellow lightning tattoos, shiny black leather bodysuit, electric guitar weapon, glamorous body, huge breasts, extremely thick thighs, wide hips, underwater concert background, masterpiece, best quality",
+            "idle": "standing pose, tuning guitar, sparks flying, confident smirk, no text, no ui",
+            "joy": "rocking out, playing guitar riff, lightning aura, shouting happy, no text, no ui",
+            "sad": "guitar string broken, sitting on amp, depressed, dim lights, no text, no ui",
+            "angry": "smashing guitar, voltage spike, glowing yellow eyes, screaming, aggressive, no text, no ui",
+            "skill": "thunderstruck, giant lightning bolt, cinematic angle, stage lights, masterpiece, no text, no ui",
+            "victory": "crowd surfing pose, peace signs, stage fireworks, electric vibes, no text, no ui",
+            "defeat": "short circuited, frizzy hair, covered in soot, guitar broken, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, electric eel king girl, backstage pass, drinking energy drink, messy hair, winking, no text, no ui",
+            "gallery_lv2": "dating sim event, electric eel king girl, teaching guitar, close proximity, static shock, blushing, laughing, no text, no ui",
+            "gallery_lv3": "dating sim event, electric eel king girl, private concert, sweaty skin, intense gaze, alluring performance, masterpiece, no text, no ui"
         },
         lore: {
             "title": "심해의 발전소",
@@ -636,13 +652,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 대형 마그마 슬라임",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 대형 마그마 슬라임, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, giant magma slime girl, lava skin texture, dripping magma dress (semi-solid), glowing cracks, obsidian accessories, glamorous body, huge breasts, extremely thick thighs, wide hips, volcano crater background, masterpiece, best quality",
+            "idle": "standing pose, magma dripping, checking nails (hardening), hot air shimmering, no text, no ui",
+            "joy": "bubbling up, bright glow, heat haze, laughing, happy, no text, no ui",
+            "sad": "cooling down, turning to stone, grey skin, sad expression, no text, no ui",
+            "angry": "erupting, hair turning to fire, flowing fast, menacing heat, aggressive, no text, no ui",
+            "skill": "volcanic eruption, giant lava wave, cinematic angle, destruction, masterpiece, no text, no ui",
+            "victory": "posing on rock, melting it, proud smile, steam rising, no text, no ui",
+            "defeat": "solidified, stuck in rock form, cracks, immobilized, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, giant magma slime girl, hot spring (lava), invites viewer, steamy atmosphere, teasing smile, no text, no ui",
+            "gallery_lv2": "dating sim event, giant magma slime girl, cooking on self, feeding viewer, blushing, too hot to touch, no text, no ui",
+            "gallery_lv3": "dating sim event, giant magma slime girl, melting clothes, intense heat, passionate gaze, glowing body, masterpiece, no text, no ui"
         },
         lore: {
             "title": "흐르는 용암",
@@ -703,13 +723,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 숲의 수호자",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 숲의 수호자, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, forest guardian girl, stone texture skin patches, vine hair, golem armor parts, mossy details, gentle giantess, glamorous body, huge breasts, extremely thick thighs, wide hips, ancient forest background, masterpiece, best quality",
+            "idle": "standing pose, bird landing on shoulder, still and calm, nature blending, no text, no ui",
+            "joy": "flowering vines, gentle smile, holding small animal, peaceful, no text, no ui",
+            "sad": "moss turning brown, stone cracking, looking down, gloomy, no text, no ui",
+            "angry": "roots erupting, glowing green runes, stone fist clenched, serious face, aggressive, no text, no ui",
+            "skill": "nature's wrath, giant root smash, cinematic angle, forest power, masterpiece, no text, no ui",
+            "victory": "sitting on log, animals gathering, peaceful atmosphere, soft smile, no text, no ui",
+            "defeat": "crumbled, vines cut, kneeling, flowers wilting, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, forest guardian girl, nap in sunlight, lap pillow, peaceful, nature sounds, no text, no ui",
+            "gallery_lv2": "dating sim event, forest guardian girl, waterfall shower, removing moss, shy, looking back, no text, no ui",
+            "gallery_lv3": "dating sim event, forest guardian girl, overgrown ruins, pinned by vines, intense nature power, alluring gaze, masterpiece, no text, no ui"
         },
         lore: {
             "title": "숲의 파수꾼",
@@ -770,13 +794,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 해바라기 정령",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 해바라기 정령, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, sunflower spirit girl, bright yellow dress, sunflower hat, green stem ribbons, cheerful, sunny demeanor, glamorous body, huge breasts, extremely thick thighs, wide hips, sunflower field background, masterpiece, best quality",
+            "idle": "standing pose, looking at sun, stretching, big smile, swaying, no text, no ui",
+            "joy": "twirling, petals falling, bright laughter, sunlight aura, happy, no text, no ui",
+            "sad": "wilting hat, clouds over head, pouting, hugging knees, no text, no ui",
+            "angry": "burning sun power, intense glare, heat waves, pointing finger, aggressive, no text, no ui",
+            "skill": "solar beam, focused sunlight, cinematic angle, blinding light, masterpiece, no text, no ui",
+            "victory": "holding giant sunflower, v sign, winking, bright day, no text, no ui",
+            "defeat": "dress torn, petals scattered, kneeling, crying, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, sunflower spirit girl, picnic in field, feeding sandwich, happy smile, summer vibe, no text, no ui",
+            "gallery_lv2": "dating sim event, sunflower spirit girl, watering flowers, bent over, skirt flutter, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, sunflower spirit girl, sunset glow, leaning close, warm embrace, love in eyes, masterpiece, no text, no ui"
         },
         lore: {
             "title": "태양의 아이",
@@ -836,13 +864,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 다이어 울프",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 다이어 울프, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, dire wolf girl, grey wolf ears and bushy tail, fur lined winter coat (open), scar on cheek, wild look, sharp claws, glamorous body, huge breasts, extremely thick thighs, wide hips, snowy forest background, masterpiece, best quality",
+            "idle": "standing pose, sniffing air, alert, hand on hip, cold breath, no text, no ui",
+            "joy": "tail wagging fast, excited face, jumping, sparkles, happy, no text, no ui",
+            "sad": "ears flat, tail between legs, whimpering look, snowy rain, no text, no ui",
+            "angry": "baring fangs, growling face, claws out, red eyes, aggressive, no text, no ui",
+            "skill": "pack hunt, rushing forward, cinematic angle, snow storm, masterpiece, no text, no ui",
+            "victory": "howling at moon, chest puffed out, proud pose, triumphant, no text, no ui",
+            "defeat": "lying in snow, fur matted, panting, looking at wound, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, dire wolf girl, sharing meat, campfire, wild smile, primitive charm, no text, no ui",
+            "gallery_lv2": "dating sim event, dire wolf girl, grooming tail, embarrassed, looking away, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, dire wolf girl, huddled for warmth, fur coat blanket, intense animal instinct, alluring eyes, masterpiece, no text, no ui"
         },
         lore: {
             "title": "고대의 늑대",
@@ -901,13 +933,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 진흙 골렘",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 진흙 골렘, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, mud golem girl, wet mud skin, clay armor parts, smooth features, messy hair, earthy tones, glamorous body, huge breasts, extremely thick thighs, wide hips, swamp background, masterpiece, best quality",
+            "idle": "standing pose, dripping mud, blank expression, slowly reshaping, no text, no ui",
+            "joy": "reshaping into smiley face, mud splashing, clapping hands, happy, no text, no ui",
+            "sad": "melting into pile, losing form, sad eyes, rain, no text, no ui",
+            "angry": "hardening, spikes forming, dark shadow, heavy stance, aggressive, no text, no ui",
+            "skill": "mud slide, giant wave of earth, cinematic angle, swamp power, masterpiece, no text, no ui",
+            "victory": "perfect statue pose, shining (wet), proud, steady, no text, no ui",
+            "defeat": "dried up, cracking, crumbling, dust falling, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, mud golem girl, making pottery, focused face, mud on cheek, innocent, no text, no ui",
+            "gallery_lv2": "dating sim event, mud golem girl, stuck in rain, mud sliding off, revealing smooth form, embarrassed, no text, no ui",
+            "gallery_lv3": "dating sim event, mud golem girl, mud wrestling context, slippery body, pin down, alluring gaze, masterpiece, no text, no ui"
         },
         lore: {
             "title": "대지의 인형",
@@ -966,13 +1002,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 마그마 슬라임",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 마그마 슬라임, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, magma slime girl, bright red lava skin, flame hair, small horns, energetic, bubbling, glamorous body, huge breasts, extremely thick thighs, wide hips, volcanic cave background, masterpiece, best quality",
+            "idle": "standing pose, bouncing, sparks frying, hot and cute, no text, no ui",
+            "joy": "jumping high, firework effect, bright smile, happy, no text, no ui",
+            "sad": "dim glow, smoke rising, sitting curled, sad pout, no text, no ui",
+            "angry": "boiling, red face, steam jets, shouting, aggressive, no text, no ui",
+            "skill": "lava splash, fireball throw, cinematic angle, heat distortion, masterpiece, no text, no ui",
+            "victory": "peace sign, glowing brightly, lava heart background, wink, no text, no ui",
+            "defeat": "puddle of lava, eyes spinning, steam, exhausted, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, magma slime girl, roasting marshmallows, happy face, sharing food, warm atmosphere, no text, no ui",
+            "gallery_lv2": "dating sim event, magma slime girl, accidental burn, apologizing, blowing on finger, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, magma slime girl, lava bath, inviting viewer, too hot to handle, steamy, alluring, masterpiece, no text, no ui"
         },
         lore: {
             "title": "불타는 점액",
@@ -1031,13 +1071,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 화난 버섯",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 화난 버섯, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, angry mushroom girl, red mushroom cap beret, toxic spots dress, purple poison aura, pouting face, glamorous body, huge breasts, extremely thick thighs, wide hips, dark forest background, masterpiece, best quality",
+            "idle": "standing pose, arms crossed, tapping foot, annoyed look, no text, no ui",
+            "joy": "evil snicker, holding poison flask, prank success, happy, no text, no ui",
+            "sad": "mushroom cap deflated, sitting in corner, growing mushrooms, gloomy, no text, no ui",
+            "angry": "exploding rage, face red, spores flying, shouting, aggressive, no text, no ui",
+            "skill": "toxic cloud, spore bomb, cinematic angle, purple haze, masterpiece, no text, no ui",
+            "victory": "standing over defeated foe, laughing, poison gas background, triumphant, no text, no ui",
+            "defeat": "dizzy from own poison, coughing, lying down, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, angry mushroom girl, refusing to talk, looking away, blushing, tsundere, no text, no ui",
+            "gallery_lv2": "dating sim event, angry mushroom girl, cooking mushroom soup, forcing viewer to eat, sinister smile, no text, no ui",
+            "gallery_lv3": "dating sim event, angry mushroom girl, releasing aphrodisiac spores, hazy vision, alluring smirk, dangerous love, masterpiece, no text, no ui"
         },
         lore: {
             "title": "독 뿜는 버섯",
@@ -1096,13 +1140,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 날치",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 날치, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, flying fish new girl, wing-like fins on back, blue scale swimsuit, sporty visor, wind barrier, water splash, glamorous body, huge breasts, extremely thick thighs, wide hips, open ocean background, masterpiece, best quality",
+            "idle": "standing pose, stretching legs, ready to run/fly, energetic, no text, no ui",
+            "joy": "jumping in air, high five, splashing water, bright smile, happy, no text, no ui",
+            "sad": "sitting on rock, wing hurt, looking at sky, bandage, no text, no ui",
+            "angry": "creating whirlwind, water cutters, serious athlete face, aggressive, no text, no ui",
+            "skill": "sonic glide, water dash, cinematic angle, speed lines, masterpiece, no text, no ui",
+            "victory": "posing with trophy/catch, thumbs up, wet hair, sunny, no text, no ui",
+            "defeat": "lying on beach, panting, dehydrated, dizzy, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, flying fish new girl, beach volleyball, spiking, sweat, dynamic pose, no text, no ui",
+            "gallery_lv2": "dating sim event, flying fish new girl, applying sunscreen, asking for help, straps, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, flying fish new girl, underwater kiss, bubbles, floating hair, romantic silence, masterpiece, no text, no ui"
         },
         lore: {
             "title": "바다의 비행사",
@@ -1161,13 +1209,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 숲의 천사",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 숲의 천사, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, forest angel girl, white feathered wings, leaf and flower halo, pure white dress with vines, healing light, glamorous body, huge breasts, extremely thick thighs, wide hips, sacred grove background, masterpiece, best quality",
+            "idle": "standing pose, praying hands, eyes closed, soft glow, floating, no text, no ui",
+            "joy": "spreading wings, birds landing on arms, gentle laugh, holy aura, happy, no text, no ui",
+            "sad": "praying on knees, tears, rain, flowers wilting, no text, no ui",
+            "angry": "holy smite, glowing staff, stern judgment, wind blowing, aggressive, no text, no ui",
+            "skill": "divine restoration, forest blessing, cinematic angle, light pilars, masterpiece, no text, no ui",
+            "victory": "descending from sky, hand extended, benevolent smile, peace, no text, no ui",
+            "defeat": "feathers falling, dress stained, lying on grass, crying, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, forest angel girl, healing viewer's wound, concerned face, soft touch, glowing hands, no text, no ui",
+            "gallery_lv2": "dating sim event, forest angel girl, bathing in holy spring, wings wet, angelic purity, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, forest angel girl, forbidden love, fallen angel hints, intense longing, divine embrace, masterpiece, no text, no ui"
         },
         lore: {
             "title": "숲의 수호 천사",
@@ -1226,13 +1278,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 시간의 환영",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 시간의 환영, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, time phantom girl, clockwork gear accessories, misty form (legs f ading), hourglass staff, mysterious hood, glamorous body, huge breasts, extremely thick thighs, wide hips, clock tower dimension background, masterpiece, best quality",
+            "idle": "standing pose, checking pocket watch, ticking effect, floating, no text, no ui",
+            "joy": "winding clock, fast movement, motion blur, laughing, happy, no text, no ui",
+            "sad": "time stopping, frozen tears, looking at broken gear, grey scale, no text, no ui",
+            "angry": "time acceleration, aging effect around, glowing clock eyes, aggressive, no text, no ui",
+            "skill": "chrono break, time distortion, cinematic angle, reality warping, masterpiece, no text, no ui",
+            "victory": "sitting on giant clock hand, swinging legs, mysterious smile, wink, no text, no ui",
+            "defeat": "fading away, glitch effect, reaching out, static time, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, time phantom girl, showing past memory, sepia tone, nostalgic smile, holding hands, no text, no ui",
+            "gallery_lv2": "dating sim event, time phantom girl, freezing time moment, stealing a kiss, mischievous, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, time phantom girl, future vision, wedding dress hint, eternal promise, alluring gaze, masterpiece, no text, no ui"
         },
         lore: {
             "title": "불완전한 시간",
@@ -1291,15 +1347,17 @@ var WILD_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, lightning fairy girl, cute face, short yellow hair, glowing electric wings, simple dress, sparking effects, floating pose, forest background, 번개 요정",
-            "idle": "floating pose, curious, neutral expression",
-            "joy": "smiling brightly, eyes closed in happiness, sparks flying",
-            "sad": "drooping wings, dim glow, sad expression, looking down",
-            "angry": "pouting, cheeks puffed, sparking aggressively, angry eyes",
-            "skill": "summoning a small thunderbolt, pointing finger, glowing intensely",
-            "victory": "spinning in air, v sign, bright glow",
-            "defeat": "dizzy eyes, lying on ground, wings faded",
-            "gallery_lv1": "dating sim event, lightning fairy girl, sitting on a leaf, curious expression, close up"
+            "base": "anime, blue archive style, nikke style, full body, lightning fairy girl, cute face, short yellow hair, glowing electric wings, revealing yellow dress, sparking effects, floating pose, glamorous body, huge breasts, extremely thick thighs, wide hips, storm forest background, masterpiece, best quality",
+            "idle": "floating pose, curious, sparking finger, confident, no text, no ui",
+            "joy": "smiling brightly, eyes closed in happiness, sparks forming hearts, happy, no text, no ui",
+            "sad": "drooping wings, dim glow, sad expression, looking down, rain, no text, no ui",
+            "angry": "pouting, cheeks puffed, sparking aggressively, angry eyes, thunder background, no text, no ui",
+            "skill": "summoning a small thunderbolt, pointing finger, glowing intensely, cinematic angle, masterpiece, no text, no ui",
+            "victory": "spinning in air, v sign, bright glow, wink, no text, no ui",
+            "defeat": "dizzy eyes, lying on ground, wings faded, smoke rising, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, lightning fairy girl, sitting on a leaf, curious expression, close up, spark gap, no text, no ui",
+            "gallery_lv2": "dating sim event, lightning fairy girl, charging phone (comically), holding cable, blushing, energetic, no text, no ui",
+            "gallery_lv3": "dating sim event, lightning fairy girl, overload, glowing too bright, revealing silhouette, intense energy, alluring, masterpiece, no text, no ui"
         },
         lore: {
             "title": "찌릿찌릿 장난꾸러기",
@@ -1375,13 +1433,17 @@ lines: {
         }
     },
     prompts: {
-        "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 아기 크라켄",
-            "idle": "standing pose, confident, neutral expression",
-                "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-                    "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-                        "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-                            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-                                "gallery_lv1": "cute pose, 아기 크라켄, energetic, detailed, looking at viewer"
+        "base": "anime, blue archive style, nikke style, full body, kraken baby girl, purple octopus tentacles as hair, cute swimsuit, holding a toy ship, small suckers on skin, huge breasts, wide hips, thick thighs, underwater playground background, masterpiece, best quality",
+            "idle": "standing pose, hugging a plushie whale, giggling, cute, no text, no ui",
+                "joy": "clapping hands, tentacles waving happily, bright smile, bubbles, no text, no ui",
+                    "sad": "sitting on floor, tentacles droopy, crying, holding broken toy, no text, no ui",
+                        "angry": "pouting, cheeks puffed, crossing tentacles, throwing a tantrum, cute angry, no text, no ui",
+                            "skill": "summoning a small whirlpool, cinematic angle, glowing suckers, masterpiece, no text, no ui",
+                                "victory": "holding up a 'winner' sign, peace sign, bright aura, confetti, no text, no ui",
+                                    "defeat": "lying on tummy, sobbing, ink blob on face, defeat, no text, no ui",
+                                        "gallery_lv1": "dating sim event, kraken baby girl, playing in shallow water, splashing viewer, laughing, wet skin, no text, no ui",
+                                            "gallery_lv2": "dating sim event, kraken baby girl, eating takoyaki (ironic), offering a bite, blushing, cute, no text, no ui",
+                                                "gallery_lv3": "dating sim event, kraken baby girl, grown up version shadow, embracing viewer with tentacles, intense affection, allure, masterpiece, no text, no ui"
     },
     lore: {
         "title": "심해의 꿈나무",
@@ -1441,13 +1503,17 @@ lines: {
         }
     },
     prompts: {
-        "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 초록 슬라임",
-            "idle": "standing pose, confident, neutral expression",
-                "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-                    "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-                        "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-                            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-                                "gallery_lv1": "cute pose, 초록 슬라임, energetic, detailed, looking at viewer"
+        "base": "anime, blue archive style, nikke style, full body, green slime girl, translucent green slime body, leaf bikini, vines in hair, smooth and shiny, glamorous body, huge breasts, extremely thick thighs, wide hips, forest stream background, masterpiece, best quality",
+            "idle": "standing pose, poking cheek, wobbly, cute smile, no text, no ui",
+                "joy": "bouncing, translucent effect, bright laugh, green sparkles, no text, no ui",
+                    "sad": "melting slightly, droopy face, dull green color, sad, no text, no ui",
+                        "angry": "forming spike, darker green, shouting, aggressive pose, no text, no ui",
+                            "skill": "engulfing wave, giant slime fist, cinematic angle, dynamic, masterpiece, no text, no ui",
+                                "victory": "peace sign, dissolving ground lightly, happy jump, bright, no text, no ui",
+                                    "defeat": "puddle form, eyes swirling, steam rising, defeated, no text, no ui",
+                                        "gallery_lv1": "dating sim event, green slime girl, sunbathing on rock, transparent skin effect, shy smile, no text, no ui",
+                                            "gallery_lv2": "dating sim event, green slime girl, absorption incident (clothes), embarrassed, covering up, blushing, no text, no ui",
+                                                "gallery_lv3": "dating sim event, green slime girl, slime massage, enveloping viewer, intense pleasure face, allure, masterpiece, no text, no ui"
     },
     lore: {
         "title": "초록 점액",
@@ -1506,13 +1572,17 @@ lines: {
         }
     },
     prompts: {
-        "base": "anime style, cell shaded, 2d game art, full body, nature, wild untamed, organic, forests, elemental, Light, 파랑 슬라임",
-            "idle": "standing pose, confident, neutral expression",
-                "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-                    "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-                        "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-                            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-                                "gallery_lv1": "cute pose, 파랑 슬라임, energetic, detailed, looking at viewer"
+        "base": "anime, blue archive style, nikke style, full body, blue slime girl, water texture skin, bubbles inside body, seashell bikini, wet look, glamorous body, huge breasts, extremely thick thighs, wide hips, ocean beach background, masterpiece, best quality",
+            "idle": "standing pose, playing with water ball, shimmering, cooling, no text, no ui",
+                "joy": "making rainbow, clapping, splashing water, happy, no text, no ui",
+                    "sad": "evaporating slightly, turning into puddle, sad eyes, steam, no text, no ui",
+                        "angry": "boiling bubbles, tidal wave hair, shouting, aggressive, no text, no ui",
+                            "skill": "hydro pump, giant water dragon form, cinematic angle, splash, masterpiece, no text, no ui",
+                                "victory": "surfing on self, thumbs up, bright sun, energetic, no text, no ui",
+                                    "defeat": "dried up, cracking skin, lying on sand, defeated, no text, no ui",
+                                        "gallery_lv1": "dating sim event, blue slime girl, serving ice water, maid outfit (slime), cute curtsy, no text, no ui",
+                                            "gallery_lv2": "dating sim event, blue slime girl, pool party, floating on water (sleeping), peaceful face, alluring, no text, no ui",
+                                                "gallery_lv3": "dating sim event, blue slime girl, underwater kiss, merging liquid, breathless, intense romance, masterpiece, no text, no ui"
     },
     lore: {
         "title": "푸른 점액",
@@ -1572,13 +1642,17 @@ lines: {
         }
     },
     prompts: {
-        "base": "anime style, cell shaded, 2d game art, full body, greek mythology, monster, lion goat snake hybrid, fierce, fire breathing, Light, 키메라",
-            "idle": "standing pose, confident, neutral expression",
-                "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-                    "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-                        "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-                            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-                                "gallery_lv1": "cute pose, 키메라, energetic, detailed, looking at viewer"
+        "base": "anime, blue archive style, nikke style, full body, chimera girl, three heads (lion girl main, goat horn girl left, snake girl right tail), chaotic armor, mismatching eyes, wild mane hair, confident smirk, glamorous body, huge breasts, extremely thick thighs, wide hips, burning ruins background, masterpiece, best quality",
+            "idle": "standing pose, all heads arguing, crossing arms, tough, no text, no ui",
+                "joy": "all heads laughing, high fiving each other, fire breath fun, no text, no ui",
+                    "sad": "all heads crying, mismatched tears, gloomy fire, no text, no ui",
+                        "angry": "triple roar, fire ice poison aura, terrifying glare, aggressive, no text, no ui",
+                            "skill": "chaos blast, combined element bean, cinematic angle, destruction, masterpiece, no text, no ui",
+                                "victory": "posing on rubble, foot on enemy, proud laugh, triumph, no text, no ui",
+                                    "defeat": "knocked out, heads dizzy, smoke rising, defeated, no text, no ui",
+                                        "gallery_lv1": "dating sim event, chimera girl, arguing over food (meat vs grass), cute pouting, messy eating, no text, no ui",
+                                            "gallery_lv2": "dating sim event, chimera girl, sleeping in a pile, tangled limbs, peaceful chaos, blushing, no text, no ui",
+                                                "gallery_lv3": "dating sim event, chimera girl, dominating presence, three minds one heart, intense harem vibe, alluring, masterpiece, no text, no ui"
     },
     lore: {
         "title": "재앙의 합성수",
@@ -1627,15 +1701,30 @@ lines: {
                             image: "images/creatures/wild/creature_unicorn.png",
                                 sprites: {
         "idle": "images/creatures/wild/creature_unicorn.png",
-            "joy": "images/creatures/wild/creature_unicorn.png", // Fallback
-                "sad": "images/creatures/wild/creature_unicorn.png", // Fallback
-                    "angry": "images/creatures/wild/creature_unicorn.png", // Fallback
-                        "skill": "images/creatures/wild/creature_unicorn.png",
-                            "gallery": { }
+            "joy": "images/creatures/wild/creature_unicorn_joy.png",
+                "sad": "images/creatures/wild/creature_unicorn_sad.png",
+                    "angry": "images/creatures/wild/creature_unicorn_angry.png",
+                        "skill": "images/creatures/wild/creature_unicorn_skill.png",
+                            "victory": "images/creatures/wild/creature_unicorn_victory.png",
+                                "defeat": "images/creatures/wild/creature_unicorn_defeat.png",
+                                    "gallery": {
+            "lv1": "images/creatures/wild/creature_unicorn_gallery_lv1.png",
+                "lv2": "images/creatures/wild/creature_unicorn_gallery_lv2.png",
+                    "lv3": "images/creatures/wild/creature_unicorn_gallery_lv3.png"
+        }
     },
     prompts: {
-        "base": "anime style, 유니콘",
-            "idle": "standing"
+        "base": "anime, blue archive style, nikke style, full body, unicorn girl, single spiral horn, rainbow mane hair, white purity dress, golden hooves (shoes), gentle expression, glamorous body, huge breasts, extremely thick thighs, wide hips, enchanted forest background, masterpiece, best quality",
+            "idle": "standing pose, brushing hair, elegance, sparkles, no text, no ui",
+                "joy": "prancing, laughing softly, rainbow aura, happy, no text, no ui",
+                    "sad": "horn dim, looking down, shedding crystal tear, sad, no text, no ui",
+                        "angry": "rearing up, magic gathering at horn, stern face, aggressive, no text, no ui",
+                            "skill": "purification light, horn laser, cinematic angle, holy magic, masterpiece, no text, no ui",
+                                "victory": "standing tall, wind blowing hair, noble smile, triumph, no text, no ui",
+                                    "defeat": "kneeling, dress dirty, horn cracked, looking down, defeated, no text, no ui",
+                                        "gallery_lv1": "dating sim event, unicorn girl, reading in library, glasses, shy look, intelligence, no text, no ui",
+                                            "gallery_lv2": "dating sim event, unicorn girl, healing injured animal, gentle touch, motherly smile, warm light, no text, no ui",
+                                                "gallery_lv3": "dating sim event, unicorn girl, laying head on viewer's lap, trust, sleeping face, alluring, masterpiece, no text, no ui"
     },
     lore: {
         "title": "숲의 수호수",
@@ -1672,12 +1761,7 @@ lines: {
                     touch_legs: "바람보다 빠르게 달릴 수 있어.",
                         touch_special: "그대와 함께라면 어둠도 두렵지 않아."
     }
-}
-    ,
-
-    ,
-
-    ,
+},
 
 {
     id: "time_lord_chronos",
@@ -1772,8 +1856,17 @@ lines: {
                                     gallery: { }
     },
     prompts: {
-        base: "anime style, 천상의 여왕 지즈, giant mythical bird, glowing wings",
-            idle: "flying"
+        "base": "anime, blue archive style, nikke style, full body, beast ziz girl, giant wingspan cloak, feathery armor, sky blue hair with cloud tips, wind aura, arrogant queen, glamorous body, huge breasts, extremely thick thighs, wide hips, high altitude sky background, masterpiece, best quality",
+            "idle": "floating pose, looking down on world, arms crossed, confident, no text, no ui",
+                "joy": "flying high,looping in air, laughing loudly, wind blast, no text, no ui",
+                    "sad": "grounded, wings heavy, looking up at sky, longing, no text, no ui",
+                        "angry": "summoning storm, eyes glowing white, hurricane hair, aggressive, no text, no ui",
+                            "skill": "sky fall, giant tornado, cinematic angle, wind pressure, masterpiece, no text, no ui",
+                                "victory": "spread wings wide, sun halo behind, goddess pose, triumph, no text, no ui",
+                                    "defeat": "falling from sky, feathers scattered, unconscious, defeated, no text, no ui",
+                                        "gallery_lv1": "dating sim event, beast ziz girl, bird feeding (giant birds), motherly side, soft smile, no text, no ui",
+                                            "gallery_lv2": "dating sim event, beast ziz girl, cloud surfing, holding hand, exhilarating seed, blushing, no text, no ui",
+                                                "gallery_lv3": "dating sim event, beast ziz girl, throne of clouds, inviting viewer to sit, queen's favor, alluring, masterpiece, no text, no ui"
     },
     lore: {
         title: "하늘의 지배자",
@@ -1804,17 +1897,30 @@ lines: {
                     elements: ["Earth"],
                         baseStr: 90, baseInt: 10,
                             image: "images/creatures/wild/creature_beast_behemoth.png",
-                                sprites: {
+                                prompts: {
+        "base": "anime, blue archive style, nikke style, full body, beast behemoth girl, earth armor, beast ears and tail, heavy gauntlets, massive strength, confident grin, glamorous body, huge breasts, extremely thick thighs, wide hips, grand canyon background, masterpiece, best quality",
+            "idle": "standing pose, cracking knuckles, heavy stance, confident, no text, no ui",
+                "joy": "flexing muscles, laughing heartily, earthquake shake, happy, no text, no ui",
+                    "sad": "sitting on broken rock, pouting, hungry, stomach growl, no text, no ui",
+                        "angry": "stomping ground, fissures forming, glowing red eyes, aggressive, no text, no ui",
+                            "skill": "earthquake smash, throwing mountain, cinematic angle, dust cloud, masterpiece, no text, no ui",
+                                "victory": "rearing up, arms raised, roaring victory, power, no text, no ui",
+                                    "defeat": "buried in rubble, dizzy, armor broken, defeated, no text, no ui",
+                                        "gallery_lv1": "dating sim event, beast behemoth girl, arm wrestling, sweating, determined face, close up, no text, no ui",
+                                            "gallery_lv2": "dating sim event, beast behemoth girl, big feast, eating meat, messy face, happy, no text, no ui",
+                                                "gallery_lv3": "dating sim event, beast behemoth girl, protecting viewer from landslide, strong back, looking over shoulder, alluring, masterpiece, no text, no ui"
+    },
+    sprites: {
         idle: "images/creatures/wild/creature_beast_behemoth.png",
             joy: "images/creatures/wild/creature_beast_behemoth_joy.png",
                 sad: "images/creatures/wild/creature_beast_behemoth_sad.png",
                     angry: "images/creatures/wild/creature_beast_behemoth_angry.png",
                         skill: "images/creatures/wild/creature_beast_behemoth_skill.png",
-                            gallery: { }
-    },
-    prompts: {
-        base: "anime style, 대지의 패왕 베히모스, gigantic beast",
-            idle: "standing"
+                            "gallery": {
+            "lv1": "images/creatures/wild/creature_beast_behemoth_gallery_lv1.png",
+                "lv2": "images/creatures/wild/creature_beast_behemoth_gallery_lv2.png",
+                    "lv3": "images/creatures/wild/creature_beast_behemoth_gallery_lv3.png"
+        }
     },
     lore: {
         title: "대지의 기둥",
@@ -1828,30 +1934,72 @@ lines: {
 {
     id: "creator_gaia_wild",
         name: "대지의 어머니 가이아 (Wild)",
-            rarity: "SSR",
-                world: "WILD",
+            rarity: RANKS.SSR,
+                world: WORLDS.WILD,
                     elements: ["Earth", "Nature"],
                         baseStr: 30, baseInt: 80,
                             image: "images/creatures/olympus/creature_gaia.png",
                                 sprites: {
-        idle: "images/creatures/olympus/creature_gaia.png",
-            joy: "images/creatures/olympus/creature_gaia_joy.png",
-                sad: "images/creatures/olympus/creature_gaia_sad.png",
-                    angry: "images/creatures/olympus/creature_gaia_angry.png",
-                        skill: "images/creatures/olympus/creature_gaia_skill.png",
-                            gallery: { }
+        "idle": "images/creatures/olympus/creature_gaia.png",
+            "joy": "images/creatures/olympus/creature_gaia_joy.png",
+                "sad": "images/creatures/olympus/creature_gaia_sad.png",
+                    "angry": "images/creatures/olympus/creature_gaia_angry.png",
+                        "skill": "images/creatures/olympus/creature_gaia_skill.png",
+                            "victory": "images/creatures/olympus/creature_gaia_victory.png",
+                                "defeat": "images/creatures/olympus/creature_gaia_defeat.png",
+                                    "gallery": {
+            "lv1": "images/creatures/olympus/creature_gaia_gallery_lv1.png",
+                "lv2": "images/creatures/olympus/creature_gaia_gallery_lv2.png",
+                    "lv3": "images/creatures/olympus/creature_gaia_gallery_lv3.png"
+        }
     },
     prompts: {
-        base: "anime style, 대지의 어머니 가이아",
-            idle: "standing"
+        "base": "anime, blue archive style, nikke style, full body, gaia goddess girl, earth mother, flowing vines dress, flowers in hair, gentle motherly figure, glamorous body, huge breasts, extremely thick thighs, wide hips, primordial garden background, masterpiece, best quality",
+            "idle": "sitting on a grassy knoll, animals gathering around, gentle smile, peaceful, no text, no ui",
+                "joy": "holding hands with nature spirits, bright laughter, flowers blooming around, happy, no text, no ui",
+                    "sad": "withered flowers, grey sky, looking down sadly, tears nourishing dry earth, no text, no ui",
+                        "angry": "thorny vines erupting, earth shaking, stern goddess face, glowing green eyes, aggressive, no text, no ui",
+                            "skill": "world creation, giant tree spawning, cinematic angle, life energy, masterpiece, no text, no ui",
+                                "victory": "standing amidst blooming paradise, arms open welcoming, warm glow, triumph, no text, no ui",
+                                    "defeat": "kneeling on barren ground, fading away into petals, sorrowful look, defeated, no text, no ui",
+                                        "gallery_lv1": "dating sim event, gaia goddess girl, gardening together, dirt on face, cute smile, sunlight, no text, no ui",
+                                            "gallery_lv2": "dating sim event, gaia goddess girl, napping on moss bed, forest animals sleeping too, peaceful, soft lighting, no text, no ui",
+                                                "gallery_lv3": "dating sim event, gaia goddess girl, waterfall bath, nature's beauty, revealing but holy, alluring, masterpiece, no text, no ui"
     },
     lore: {
-        title: "생명의 요람",
-            story: "모든 생명체의 어머니. 야생의 땅에서도 그녀의 숨결은 숲을 이루고 강을 흐르게 합니다.",
-                personality: "Motherly"
+        "title": "생명의 요람",
+            "story": "모든 생명체의 어머니. 야생의 땅에서도 그녀의 숨결은 숲을 이루고 강을 흐르게 합니다.",
+                "personality": "Motherly"
     },
     relationships: { likes: [], dislikes: [], rival: null },
-    touchLines: { idle: ["모든 것은 흙으로..."], interaction: ["다정하구나."], gift: ["꽃이구나."], special: ["자라나라!"] },
-    lines: { normal: "나는 모든 것의 시작이다." }
+    touchLines: {
+        idle: [
+            "모든 것은 흙으로 돌아간단다.",
+            "생명의 숨결이 느껴지니?",
+            "편안하게 쉬렴, 나의 아이야."
+        ],
+            interaction: [
+                "간지럽구나, 후후.",
+                "너의 손길은 따뜻하구나.",
+                "대지의 기운을 나누어주마."
+            ],
+                gift: [
+                    "자연의 선물이구나.",
+                    "아름다운 마음씨에 감동했단다.",
+                    "이것 또한 생명의 순환이지."
+                ],
+                    special: [
+                        "자라나라, 생명의 나무여!",
+                        "대지의 분노를 느껴라!",
+                        "모든 것을 품어주마."
+                    ]
+    },
+    lines: {
+        normal: "나는 모든 것의 시작이자 끝이란다.",
+            touch_head: "머릿결에서 숲의 향기가 나지 않니?",
+                touch_chest: "이 심장은 대지의 맥박이란다.",
+                    touch_legs: "뿌리처럼 단단하게 지탱하고 있지.",
+                        touch_special: "언제든 나의 품으로 돌아오렴."
+    }
 }
 ];
