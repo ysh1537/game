@@ -20,52 +20,82 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime, blue archive style, nikke style, full body, centaur girl, horse body lower half, human upper half, athletic body, green archer outfit, nature background, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style",
-            "idle": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing tall, holding bow, confident",
-            "joy": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, laughing, waving hand, flowers",
-            "sad": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, crying, looking down",
-            "angry": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, drawing bow, shouting, battle aura",
-            "skill": "anime, full body, wide angle, centaur girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, firing magic arrow, wind effects",
-            "victory": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, rearing up on hind legs, cheerful",
-            "defeat": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, kneeling, exhausted, armor broken",
-            "gallery_lv1": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, resting in forest, brushing tail, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, horse girl, horse ears, long horse tail, human legs, athletic body, green archer outfit, nature background, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, horse girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing tall, holding bow, confident",
+            "joy": "anime, blue archive style, nikke style, full body, horse girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, laughing, waving hand, flowers",
+            "sad": "anime, blue archive style, nikke style, full body, horse girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, crying, looking down, ears drooping",
+            "angry": "anime, blue archive style, nikke style, full body, horse girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, drawing bow, shouting, battle aura",
+            "skill": "anime, full body, wide angle, horse girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, firing magic arrow, wind effects",
+            "victory": "anime, blue archive style, nikke style, full body, horse girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, jumping, victory pose, cheerful",
+            "defeat": "anime, blue archive style, nikke style, full body, horse girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, kneeling, exhausted, clothes torn",
+            "gallery_lv1": "anime, blue archive style, nikke style, full body, horse girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, resting in forest, brushing tail, looking at viewer"
         },
-        lore: {
-            "title": "숲의 수호자",
-            "story": "상반신은 인간, 하반신은 말인 켄타우로스 족의 정찰병. 뛰어난 기동력과 궁술로 올림포스의 숲을 침입자로부터 지킨다. 거친 성격이지만 자연을 사랑하는 마음은 진심이다.",
-            "personality": "Wild & Guardian"
-        },
-        relationships: { likes: [], dislikes: [], rival: null },
-        touchLines: {
-            idle: [
-                "내 화살은 빗나가지 않아.",
-                "숲이 속삭이는 소리가 들리나?",
-                "침입자는 용서하지 않는다."
-            ],
-            interaction: [
-                "내 말굽에 차이고 싶나?",
-                "활시위를 당길 땐 조용히 해.",
-                "등에 태워달라고? 건방지군."
-            ],
-            gift: [
-                "좋은 화살촉이군.",
-                "숲의 과일인가?",
-                "나쁘지 않아."
-            ],
-            special: [
-                "전속력으로 돌격!",
-                "숲의 분노를 받아라!",
-                "조준, 발사!"
-            ]
-        },
-        lines: {
-            normal: "올림포스의 숲은 내가 지킨다.",
-            touch_head: "머리 만지지 마. 어린애 취급인가?",
-            touch_chest: "인간의 심장과 말의 심장, 두 개가 뛰지.",
-            touch_legs: "내 다리는 바람보다 빠르다.",
-            touch_special: "함께 달리겠나? 떨어져도 책임 안 진다."
-        }
-    },
+        // ... (Minotaur)
+        prompts: {
+            "base": "anime, full body, wide angle, minotaur girl, bull horns, bull tail, human body, bikini armor, giant axe, shiny skin, sweat, alluring curves, abs, masterpiece, best quality, consistent with freya style, intimidating pose",
+            "idle": "anime, full body, wide angle, minotaur girl, holding axe, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, guarding",
+            "joy": "anime, full body, wide angle, minotaur girl, hearty laugh, flexing muscles, shiny skin, bloom, masterpiece, best quality, consistent with freya style, energetic",
+            "sad": "anime, full body, wide angle, minotaur girl, lost expression, sitting down, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, confused",
+            "angry": "anime, full body, wide angle, minotaur girl, red eyes, charging stance, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, furious",
+            "skill": "anime, full body, wide angle, minotaur girl, labyrinth shift, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, maze master",
+            "victory": "anime, full body, wide angle, minotaur girl, raising axe, triumphant roar, shiny skin, bloom, masterpiece, best quality, consistent with freya style, victorious",
+            "defeat": "anime, full body, wide angle, minotaur girl, kneeling, horns broken, shiny skin, sweat, masterpiece, best quality, consistent with freya style, defeated",
+            // ... (Cerberus)
+            prompts: {
+                "base": "anime, full body, wide angle, cerberus girl, dog ears, dog tail, spiked collar, demonic armor, chains, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, guarding pose",
+                "idle": "anime, full body, wide angle, cerberus girl, holding chains, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, vigilant",
+                "joy": "anime, full body, wide angle, cerberus girl, tail wagging, happy expressions, shiny skin, bloom, masterpiece, best quality, consistent with freya style, playful",
+                "sad": "anime, full body, wide angle, cerberus girl, whining, ears down, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, lonely",
+                "angry": "anime, full body, wide angle, cerberus girl, snarling, claws out, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, savage",
+                "skill": "anime, full body, wide angle, cerberus girl, hellfire explosion, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, gatekeeper power",
+                "victory": "anime, full body, wide angle, cerberus girl, peace sign, stepping on enemy, shiny skin, bloom, masterpiece, best quality, consistent with freya style, dominant",
+                "defeat": "anime, full body, wide angle, cerberus girl, lying down, whimpering, shiny skin, sweat, masterpiece, best quality, consistent with freya style, defeated",
+                // ... (Hydra)
+                prompts: {
+                    "base": "anime, full body, wide angle, hydra girl, snake hair accessories, poison aura, swamp background, scale armor bikini, glowing green eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, threatening pose",
+                    "idle": "anime, full body, wide angle, hydra girl, dangerous smile, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, waiting",
+                    "joy": "anime, full body, wide angle, hydra girl, sinister laugh, shiny skin, bloom, masterpiece, best quality, consistent with freya style, cruel joy",
+                    "sad": "anime, full body, wide angle, hydra girl, looking down, poison dripping, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, toxicity",
+                    "angry": "anime, full body, wide angle, hydra girl, dual blades, poison breath, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, rampage",
+                    "skill": "anime, full body, wide angle, hydra girl, regenerating health, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, immortal",
+                    "victory": "anime, full body, wide angle, hydra girl, standing over defeated foes, shiny skin, bloom, masterpiece, best quality, consistent with freya style, survivor",
+                    "defeat": "anime, full body, wide angle, hydra girl, collapsing, clothes torn, shiny skin, sweat, masterpiece, best quality, consistent with freya style, slain",
+                    lore: {
+                        "title": "숲의 수호자",
+                        "story": "상반신은 인간, 하반신은 말인 켄타우로스 족의 정찰병. 뛰어난 기동력과 궁술로 올림포스의 숲을 침입자로부터 지킨다. 거친 성격이지만 자연을 사랑하는 마음은 진심이다.",
+                        "personality": "Wild & Guardian"
+                    },
+                    relationships: { likes: [], dislikes: [], rival: null },
+                    touchLines: {
+                        idle: [
+                            "내 화살은 빗나가지 않아.",
+                            "숲이 속삭이는 소리가 들리나?",
+                            "침입자는 용서하지 않는다."
+                        ],
+                        interaction: [
+                            "내 말굽에 차이고 싶나?",
+                            "활시위를 당길 땐 조용히 해.",
+                            "등에 태워달라고? 건방지군."
+                        ],
+                        gift: [
+                            "좋은 화살촉이군.",
+                            "숲의 과일인가?",
+                            "나쁘지 않아."
+                        ],
+                        special: [
+                            "전속력으로 돌격!",
+                            "숲의 분노를 받아라!",
+                            "조준, 발사!"
+                        ]
+                    },
+                    lines: {
+                        normal: "올림포스의 숲은 내가 지킨다.",
+                        touch_head: "머리 만지지 마. 어린애 취급인가?",
+                        touch_chest: "인간의 심장과 말의 심장, 두 개가 뛰지.",
+                        touch_legs: "내 다리는 바람보다 빠르다.",
+                        touch_special: "함께 달리겠나? 떨어져도 책임 안 진다."
+                    }
+                },
     {
         id: "zeus",
         name: "천둥의 신 제우스",

@@ -13,7 +13,7 @@
 
 <br>
 
-<img src="images/creature_fox_nine_ur.png" width="280" alt="Miho / 미호"/>
+<img src="images/creatures/shangrila/creature_fox_nine_ur.png" width="280" alt="Miho / 미호"/>
 
 </div>
 
@@ -31,7 +31,7 @@
 
 |  |  |  |
 |:---:|:---:|:---:|
-| <img src="images/creature_god_zeus.jpg" width="180"/> | <img src="images/creature_demon_king.png" width="180"/> | <img src="images/creature_creator_gaia.png" width="180"/> |
+| <img src="images/creatures/olympus/creature_zeus.jpg" width="180"/> | <img src="images/creatures/abyss/creature_demon_king.png" width="180"/> | <img src="images/creatures/wild/creature_creator_gaia.png" width="180"/> |
 | ⚡ **제우스 (Zeus)** | 👿 **마왕 바알 (Baal)** | 🌿 **창조주 가이아 (Gaia)** |
 
 </div>

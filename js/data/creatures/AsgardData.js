@@ -307,6 +307,8 @@ var ASGARD_CREATURES = [
             sad: "images/creatures/asgard/creature_loki_sad.png",
             angry: "images/creatures/asgard/creature_loki_angry.png",
             skill: "images/creatures/asgard/creature_loki_skill.png",
+            victory: "images/creatures/asgard/creature_loki_victory.png",
+            defeat: "images/creatures/asgard/creature_loki_defeat.png",
             gallery: {
                 "lv1": "images/creatures/asgard/creature_loki_gallery_lv1.png",
                 "lv2": "images/creatures/asgard/creature_loki_gallery_lv2.png",
