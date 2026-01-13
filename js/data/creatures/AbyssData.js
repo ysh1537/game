@@ -22,17 +22,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 공허의 야수",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 공허의 야수, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 공허의 야수, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 공허의 야수, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, void beast girl, wild wolf ears, sharp claws, purple fur accents, glowing purple eyes, tentacles from back, void energy, sharp fangs, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, roaring pose",
+            "idle": "anime, full body, wide angle, void beast girl, wild wolf ears, sharp claws, purple fur accents, glowing purple eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, stalking pose",
+            "joy": "anime, full body, wide angle, void beast girl, wild wolf ears, purple fur, glowing purple eyes, happy expression, waging tail, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, playful pose",
+            "sad": "anime, full body, wide angle, void beast girl, wild wolf ears, purple fur, glowing purple eyes, sad expression, drooping ears, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, sitting pose",
+            "angry": "anime, full body, wide angle, void beast girl, wild wolf ears, purple fur, glowing purple eyes, angry expression, baring fangs, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, attacking pose",
+            "skill": "anime, full body, wide angle, void beast girl, wild wolf ears, purple fur, glowing purple eyes, using skill, void blast, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, void beast girl, wild wolf ears, purple fur, glowing purple eyes, victory pose, howling, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, void beast girl, wild wolf ears, purple fur, glowing purple eyes, defeated pose, collapsed, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, lying down"
         },
         lore: {
             "title": "공허의 포식자",
@@ -91,13 +88,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 그림자 암살자",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 그림자 암살자, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, shadow assassin girl, skin tight black bodysuit, hood, glowing purple eyes, dual daggers, shadow aura, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, combat stance",
+            "idle": "anime, full body, wide angle, shadow assassin girl, skin tight black bodysuit, hood, glowing purple eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, stealth pose",
+            "joy": "anime, full body, wide angle, shadow assassin girl, skin tight black bodysuit, hood, glowing purple eyes, happy expression, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, smiling pose",
+            "sad": "anime, full body, wide angle, shadow assassin girl, skin tight black bodysuit, hood, glowing purple eyes, sad expression, removing mask, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, looking down",
+            "angry": "anime, full body, wide angle, shadow assassin girl, skin tight black bodysuit, hood, glowing purple eyes, angry expression, drawing daggers, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, aggressive pose",
+            "skill": "anime, full body, wide angle, shadow assassin girl, skin tight black bodysuit, hood, glowing purple eyes, using skill, shadow strike, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, shadow assassin girl, skin tight black bodysuit, hood, glowing purple eyes, victory pose, cleaning dagger, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, confident",
+            "defeat": "anime, full body, wide angle, shadow assassin girl, skin tight black bodysuit, hood, glowing purple eyes, defeated pose, kneeling, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, exhausted"
         },
         lore: {
             "title": "그림자 암살자",
@@ -156,13 +154,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 석상 가고일",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 석상 가고일, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, gargoyle girl, grey skin like stone, demonic wings, horns, stone armor bikini, glowing red eyes, shiny stone texture, soft lighting, bloom, alluring curves, masterpiece, best quality, consistent with freya style, perched pose",
+            "idle": "anime, full body, wide angle, gargoyle girl, grey skin like stone, demonic wings, horns, stone armor bikini, glowing red eyes, shiny stone texture, soft lighting, bloom, masterpiece, best quality, consistent with freya style, statue pose",
+            "joy": "anime, full body, wide angle, gargoyle girl, grey skin like stone, demonic wings, horns, stone armor bikini, happy expression, shiny stone texture, alluring curves, masterpiece, best quality, consistent with freya style, smiling pose",
+            "sad": "anime, full body, wide angle, gargoyle girl, grey skin like stone, demonic wings, horns, stone armor bikini, sad expression, crumbling stone, shiny stone texture, alluring curves, masterpiece, best quality, consistent with freya style, sitting pose",
+            "angry": "anime, full body, wide angle, gargoyle girl, grey skin like stone, demonic wings, horns, stone armor bikini, angry expression, glowing red eyes, shiny stone texture, alluring curves, masterpiece, best quality, consistent with freya style, threatening pose",
+            "skill": "anime, full body, wide angle, gargoyle girl, grey skin like stone, demonic wings, horns, stone armor bikini, using skill, stone skin, shiny stone texture, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, gargoyle girl, grey skin like stone, demonic wings, horns, stone armor bikini, victory pose, wings spread, shiny stone texture, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, gargoyle girl, grey skin like stone, demonic wings, horns, stone armor bikini, defeated pose, cracked stone, shiny stone texture, alluring curves, masterpiece, best quality, consistent with freya style, broken pose"
         },
         lore: {
             "title": "심연의 파수꾼",
@@ -221,13 +220,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 혼돈의 눈",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 혼돈의 눈, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, eye of chaos girl, gothic dress with eye patterns, giant floating eye background, bat wings, purple aura, looking at viewer, detailed iris, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, observing pose",
+            "idle": "anime, full body, wide angle, eye of chaos girl, gothic dress, giant floating eye, purple aura, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, floating",
+            "joy": "anime, full body, wide angle, eye of chaos girl, gothic dress, giant floating eye, happy expression, winking, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, cheerful pose",
+            "sad": "anime, full body, wide angle, eye of chaos girl, gothic dress, giant floating eye, sad expression, tearing up, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, looking down",
+            "angry": "anime, full body, wide angle, eye of chaos girl, gothic dress, giant floating eye, angry expression, glowing red iris, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, staring intensity",
+            "skill": "anime, full body, wide angle, eye of chaos girl, gothic dress, giant floating eye, using skill, chaos beam, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, eye of chaos girl, gothic dress, giant floating eye, victory pose, peace sign, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, floating high",
+            "defeat": "anime, full body, wide angle, eye of chaos girl, gothic dress, giant floating eye, defeated pose, closing eye, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, falling"
         },
         lore: {
             "title": "광기를 보는 눈",
@@ -286,13 +286,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 심연의 추적자",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 심연의 추적자, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, abyss stalker girl, dark leather hunter outfit, hood, glowing blue eyes, dual crossbows, mist effect, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, tracking pose",
+            "idle": "anime, full body, wide angle, abyss stalker girl, dark leather hunter outfit, glowing blue eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, crouching",
+            "joy": "anime, full body, wide angle, abyss stalker girl, dark leather hunter outfit, glowing blue eyes, happy expression, holding crossbows up, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, smiling pose",
+            "sad": "anime, full body, wide angle, abyss stalker girl, dark leather hunter outfit, glowing blue eyes, sad expression, sitting on ground, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, gloomy pose",
+            "angry": "anime, full body, wide angle, abyss stalker girl, dark leather hunter outfit, glowing blue eyes, angry expression, aiming crossbows, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, combat ready",
+            "skill": "anime, full body, wide angle, abyss stalker girl, dark leather hunter outfit, glowing blue eyes, using skill, rapid fire, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, abyss stalker girl, dark leather hunter outfit, glowing blue eyes, victory pose, standing tall, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, abyss stalker girl, dark leather hunter outfit, glowing blue eyes, defeated pose, kneeling, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, exhausted"
         },
         lore: {
             "title": "보이지 않는 추적자",
@@ -351,13 +352,15 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 암흑 물질 슬라임",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 암흑 물질 슬라임, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, dark matter slime girl, translucent purple slime skin, black core, melting dress, glowing eyes, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, melting pose",
+            "idle": "anime, full body, wide angle, dark matter slime girl, translucent purple slime skin, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, dark matter slime girl, translucent purple slime skin, happy expression, bubbling, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, cheerful pose",
+            "sad": "anime, full body, wide angle, dark matter slime girl, translucent purple slime skin, sad expression, melting down, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, puddle pose",
+            "angry": "anime, full body, wide angle, dark matter slime girl, translucent purple slime skin, angry expression, spikes forming, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, aggressive pose",
+            "skill": "anime, full body, wide angle, dark matter slime girl, translucent purple slime skin, using skill, dark matter explosion, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, dark matter slime girl, translucent purple slime skin, victory pose, forming shape, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, dark matter slime girl, translucent purple slime skin, defeated pose, splattered, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, flat pose",
+            "gallery_lv1": "anime, full body, wide angle, dark matter slime girl, translucent purple slime skin, curious expression, looking at viewer, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, cute pose"
         },
         lore: {
             "title": "암흑의 점액질",
@@ -416,13 +419,15 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 공허의 보행자",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 공허의 보행자, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, void walker girl, tattered hooded cloak, void stepping, purple portals, mysterious face, glowing eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, walking pose",
+            "idle": "anime, full body, wide angle, void walker girl, tattered hooded cloak, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, void walker girl, tattered hooded cloak, happy expression, hood down, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, waving pose",
+            "sad": "anime, full body, wide angle, void walker girl, tattered hooded cloak, sad expression, looking at void, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, lonely pose",
+            "angry": "anime, full body, wide angle, void walker girl, tattered hooded cloak, angry expression, void energy flaring, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, combat pose",
+            "skill": "anime, full body, wide angle, void walker girl, tattered hooded cloak, using skill, dimension warp, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, void walker girl, tattered hooded cloak, victory pose, floating over void, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, void walker girl, tattered hooded cloak, defeated pose, cloak torn, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, kneeling",
+            "gallery_lv1": "anime, full body, wide angle, void walker girl, tattered hooded cloak, mysterious smile, reaching out, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dating event"
         },
         lore: {
             "title": "공허의 방랑자",
@@ -481,13 +486,15 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 심연의 거머리",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 심연의 거머리, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, abyss leech girl, dark slick suit, leech tails, purple markings, sucking mask or accessory, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, clinging pose",
+            "idle": "anime, full body, wide angle, abyss leech girl, dark slick suit, leech tails, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, abyss leech girl, dark slick suit, leech tails, happy expression, thirst satisfied, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, smiling pose",
+            "sad": "anime, full body, wide angle, abyss leech girl, dark slick suit, leech tails, sad expression, hungry, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, drooping pose",
+            "angry": "anime, full body, wide angle, abyss leech girl, dark slick suit, leech tails, angry expression, hissing, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, aggressive pose",
+            "skill": "anime, full body, wide angle, abyss leech girl, dark slick suit, leech tails, using skill, life drain, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, abyss leech girl, dark slick suit, leech tails, victory pose, full belly, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, satisfied",
+            "defeat": "anime, full body, wide angle, abyss leech girl, dark slick suit, leech tails, defeated pose, dried up, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, collapsed",
+            "gallery_lv1": "anime, full body, wide angle, abyss leech girl, dark slick suit, leech tails, seductive gaze, licking lips, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, close up"
         },
         lore: {
             "title": "에너지 기생충",
@@ -999,17 +1006,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "(masterpiece, best quality, ultra-detailed), distinct nikke style, hyung-tae kim style, oil painting texture, thick coating, glossy skin, extremely beautiful female demon king baal, long straight black hair, small bat wings on back, elegant curved horns, wearing stylish black and red gothic military uniform with mini skirt, black pantyhose, garter belt, high heels, cape on shoulders, standing full body pose, arms crossed under breasts, arrogant expression looking down at viewer, simple red gradient background, spotlight effect, perfect anatomy, thick thighs, wide hips, curvy figure, (human-like:1.5), semi-realism anime face, attractive dominant vibe, NO monster features, NO ugly face, NO text",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 마왕 바알, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 마왕 바알, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 마왕 바알, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, demon king baal girl, black gothic military uniform, mini skirt, bat wings, horns, red lightning, arrogant expression, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, arms crossed",
+            "idle": "anime, full body, wide angle, demon king baal girl, black gothic military uniform, mini skirt, bat wings, horns, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, commanding pose",
+            "joy": "anime, full body, wide angle, demon king baal girl, black gothic military uniform, bat wings, horns, red lightning, arrogant laugh, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, laughing pose",
+            "sad": "anime, full body, wide angle, demon king baal girl, black gothic military uniform, bat wings, horns, frustrated expression, looking away, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, annoyed pose",
+            "angry": "anime, full body, wide angle, demon king baal girl, black gothic military uniform, bat wings, horns, red lightning intensifying, angry expression, glowing eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, threatening pose",
+            "skill": "anime, full body, wide angle, demon king baal girl, black gothic military uniform, bat wings, horns, using skill, massive lightning bolt, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, demon king baal girl, black gothic military uniform, bat wings, horns, victory pose, stepping on debris, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dominant",
+            "defeat": "anime, full body, wide angle, demon king baal girl, black gothic military uniform, bat wings, horns, defeated pose, clothes torn, angry blush, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, kneeling"
         },
         lore: {
             "title": "폭풍의 마왕",
@@ -1071,17 +1075,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "(masterpiece, best quality, ultra-detailed), distinct nikke style, hyung-tae kim style, oil painting texture, thick coating, glossy skin, extremely beautiful female shub-niggurath, black goat of the woods, voluminous white hair reaching floor, elegant curved goat horns, wearing revealing white silk druid priestess robe with gold ornaments (see-through fabric), dress slit high to hips, deep neckline showing massive breasts, standing full body pose, gentle motherly smile, hand reaching out, simple green and soft sunlight background, nature particles, perfect anatomy, extremely wide hips, thick thighs, voluptuous body, (human-like:1.5), semi-realism anime face, attractive, NO monster features, NO slime, NO horror, NO text",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 만 마리 새끼를 품은 숲의 염소, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 만 마리 새끼를 품은 숲의 염소, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 만 마리 새끼를 품은 숲의 염소, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, shub-niggurath girl, black goat horns, white silk priestess robe, see-through, massive breasts, wide hips, nature magic, forest background, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, motherly smile",
+            "idle": "anime, full body, wide angle, shub-niggurath girl, black goat horns, white silk priestess robe, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, shub-niggurath girl, black goat horns, white silk priestess robe, happy expression, holding hands together, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, gentle pose",
+            "sad": "anime, full body, wide angle, shub-niggurath girl, black goat horns, white silk priestess robe, sad expression, looking down, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, worried pose",
+            "angry": "anime, full body, wide angle, shub-niggurath girl, black goat horns, white silk priestess robe, angry expression, tentacles emerging from robe, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, terrifying pose",
+            "skill": "anime, full body, wide angle, shub-niggurath girl, black goat horns, white silk priestess robe, using skill, forest overgrowth, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, shub-niggurath girl, black goat horns, white silk priestess robe, victory pose, open arms, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, embracing",
+            "defeat": "anime, full body, wide angle, shub-niggurath girl, black goat horns, white silk priestess robe, defeated pose, robe torn, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, kneeling"
         },
         lore: {
             "title": "검은 숲의 어머니",
@@ -1143,17 +1144,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 황색 옷의 왕 하스터",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 황색 옷의 왕 하스터, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 황색 옷의 왕 하스터, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 황색 옷의 왕 하스터, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, hastur girl, yellow hooded robe, mask, wind magic, mysterious aura, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, floating pose",
+            "idle": "anime, full body, wide angle, hastur girl, yellow hooded robe, mask, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, hastur girl, yellow hooded robe, mask, happy expression (implied), hood blown back, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, playful breeze",
+            "sad": "anime, full body, wide angle, hastur girl, yellow hooded robe, mask, sad aura, robe drooping, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, motionless",
+            "angry": "anime, full body, wide angle, hastur girl, yellow hooded robe, mask, angry aura, violet wind raging, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, tempest pose",
+            "skill": "anime, full body, wide angle, hastur girl, yellow hooded robe, mask, using skill, yellow sign magic, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, hastur girl, yellow hooded robe, mask, victory pose, floating high, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, majestic",
+            "defeat": "anime, full body, wide angle, hastur girl, yellow hooded robe, mask cracked, defeated pose, falling, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, collapsed"
         },
         lore: {
             "title": "황색 옷의 왕",
@@ -1215,17 +1213,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 진홍의 여왕 카밀라",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 진홍의 여왕 카밀라, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 진홍의 여왕 카밀라, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 진홍의 여왕 카밀라, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, vampire queen camilla, elegant gothic dress, red and black, pale skin, red eyes, bat wings, blood magic, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, seductive pose",
+            "idle": "anime, full body, wide angle, vampire queen camilla, elegant gothic dress, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing elegant",
+            "joy": "anime, full body, wide angle, vampire queen camilla, elegant gothic dress, happy expression, holding wine glass with blood, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, toasting",
+            "sad": "anime, full body, wide angle, vampire queen camilla, elegant gothic dress, sad expression, looking away, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, lonely pose",
+            "angry": "anime, full body, wide angle, vampire queen camilla, elegant gothic dress, angry expression, glowing red eyes, showing fangs, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hissing pose",
+            "skill": "anime, full body, wide angle, vampire queen camilla, elegant gothic dress, using skill, blood bats swarm, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, vampire queen camilla, elegant gothic dress, victory pose, sitting on throne, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, regal",
+            "defeat": "anime, full body, wide angle, vampire queen camilla, elegant gothic dress, defeated pose, dress torn, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, kneeling"
         },
         lore: {
             "title": "진홍의 뱀파이어",
@@ -1287,17 +1282,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 심해의 거신 다곤",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 심해의 거신 다곤, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 심해의 거신 다곤, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 심해의 거신 다곤, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, dagon girl, fish scales, aquatic armor, fins, trident, water magic, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, ruling pose",
+            "idle": "anime, full body, wide angle, dagon girl, fish scales, aquatic armor, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, dagon girl, fish scales, aquatic armor, happy expression, holding trident up, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, smiling pose",
+            "sad": "anime, full body, wide angle, dagon girl, fish scales, aquatic armor, sad expression, underwater gloom, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, looking down",
+            "angry": "anime, full body, wide angle, dagon girl, fish scales, aquatic armor, angry expression, summoning tidal wave, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, fierce pose",
+            "skill": "anime, full body, wide angle, dagon girl, fish scales, aquatic armor, using skill, trident thrust, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, dagon girl, fish scales, aquatic armor, victory pose, waves crashing behind, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, dagon girl, fish scales, aquatic armor, defeated pose, floating in water, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, unconscious"
         },
         lore: {
             "title": "심해의 아버지",
@@ -1359,17 +1351,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 머리 없는 기사 듀라한",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 머리 없는 기사 듀라한, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 머리 없는 기사 듀라한, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 머리 없는 기사 듀라한, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, dullahan girl, holding own head, black armor, headless neck, purple flame, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, holding sword",
+            "idle": "anime, full body, wide angle, dullahan girl, holding own head, black armor, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, dullahan girl, holding own head, head smiling, black armor, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, happy pose",
+            "sad": "anime, full body, wide angle, dullahan girl, holding own head, head looking sad, black armor, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, gloomy pose",
+            "angry": "anime, full body, wide angle, dullahan girl, holding own head, head angry, flaming neck, black armor, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, combat pose",
+            "skill": "anime, full body, wide angle, dullahan girl, holding own head, high angle, swinging sword, black armor, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, dullahan girl, holding own head high, black armor, victory flame, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, dullahan girl, head dropped on ground, kneeling body, black armor, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, defeated"
         },
         lore: {
             "title": "죽음을 알리는 기사",
@@ -1429,13 +1418,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 스켈레톤 나이트",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 스켈레톤 나이트, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, skeleton knight girl, bone armor, rusty sword, shield, blue flame eyes, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, combat stance",
+            "idle": "anime, full body, wide angle, skeleton knight girl, bone armor, blue flame eyes, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, skeleton knight girl, bone armor, blue flame eyes, happy rattle, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, pose with sword",
+            "sad": "anime, full body, wide angle, skeleton knight girl, bone armor, blue flame eyes dim, sad stance, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, drooping pose",
+            "angry": "anime, full body, wide angle, skeleton knight girl, bone armor, red flame eyes, angry stance, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, attacking pose",
+            "skill": "anime, full body, wide angle, skeleton knight girl, bone armor, blue flame eyes, using skill, shield bash, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, skeleton knight girl, bone armor, blue flame eyes, victory pose, raising sword, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, skeleton knight girl, bone armor, blue flame eyes, defeated pose, bones scattered, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, collapsed"
         },
         lore: {
             "title": "불멸의 충성",
@@ -1494,13 +1484,15 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 탐욕의 상자 미믹",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 탐욕의 상자 미믹, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, mimic box girl, monster chest, sharp teeth, tongue out, shiny wood texture, sweat, alluring curves, masterpiece, best quality, consistent with freya style, trap pose",
+            "idle": "anime, full body, wide angle, mimic box girl, monster chest, shiny wood texture, sweat, alluring curves, masterpiece, best quality, consistent with freya style, closed pose",
+            "joy": "anime, full body, wide angle, mimic box girl, monster chest, happy expression, open wide displaying gold, shiny wood texture, sweat, alluring curves, masterpiece, best quality, consistent with freya style, inviting pose",
+            "sad": "anime, full body, wide angle, mimic box girl, monster chest, sad expression, slightly open, shiny wood texture, sweat, alluring curves, masterpiece, best quality, consistent with freya style, gloomy pose",
+            "angry": "anime, full body, wide angle, mimic box girl, monster chest, angry expression, teeth bared, drooling, shiny wood texture, sweat, alluring curves, masterpiece, best quality, consistent with freya style, aggressive pose",
+            "skill": "anime, full body, wide angle, mimic box girl, monster chest, using skill, biting attack, shiny wood texture, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, mimic box girl, monster chest, victory pose, burping, shiny wood texture, sweat, alluring curves, masterpiece, best quality, consistent with freya style, satisfied",
+            "defeat": "anime, full body, wide angle, mimic box girl, monster chest, defeated pose, broken wood, shiny wood texture, sweat, alluring curves, masterpiece, best quality, consistent with freya style, shattered",
+            "gallery_lv1": "anime, full body, wide angle, mimic box girl, monster chest, playing with adventurer, cute pose, shiny wood texture, sweat, alluring curves, masterpiece, best quality, consistent with freya style, detailed"
         },
         lore: {
             "title": "탐욕의 덫",
@@ -1559,13 +1551,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 저주받은 인형",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 저주받은 인형, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, cursed doll girl, gothic lolita dress, stitched skin, button eye, holding needle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, creepy cute pose",
+            "idle": "anime, full body, wide angle, cursed doll girl, gothic lolita dress, stitched skin, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, cursed doll girl, gothic lolita dress, stitched skin, happy creepy smile, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dancing pose",
+            "sad": "anime, full body, wide angle, cursed doll girl, gothic lolita dress, stitched skin, sad expression, tearing fabric, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, sitting pose",
+            "angry": "anime, full body, wide angle, cursed doll girl, gothic lolita dress, stitched skin, angry expression, holding many needles, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, threatening pose",
+            "skill": "anime, full body, wide angle, cursed doll girl, gothic lolita dress, stitched skin, using skill, voodoo magic, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, cursed doll girl, gothic lolita dress, stitched skin, victory pose, hugging self, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, happy",
+            "defeat": "anime, full body, wide angle, cursed doll girl, gothic lolita dress, stitched skin, defeated pose, torn arm, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, broken"
         },
         lore: {
             "title": "버려진 원한",
@@ -1624,13 +1617,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 외눈박이 박쥐",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 외눈박이 박쥐, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, eye bat girl, bat wings, single large eye, cute fangs, fur collar, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, flying pose",
+            "idle": "anime, full body, wide angle, eye bat girl, bat wings, single large eye, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hanging upside down",
+            "joy": "anime, full body, wide angle, eye bat girl, bat wings, happy eye, flapping wings, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, playful pose",
+            "sad": "anime, full body, wide angle, eye bat girl, bat wings, sad eye, wings wrapped around, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, sleeping pose",
+            "angry": "anime, full body, wide angle, eye bat girl, bat wings, angry eye, glowing red, screeching, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, attacking pose",
+            "skill": "anime, full body, wide angle, eye bat girl, bat wings, using skill, sonic wave, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, eye bat girl, bat wings, victory pose, flying high, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, eye bat girl, bat wings, defeated pose, on ground, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, fallen"
         },
         lore: {
             "title": "심연의 감시자",
@@ -1689,13 +1683,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 영혼의 등불",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 영혼의 등불, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, ghost lamp girl, holding lantern, blue spirit fire, transparent dress, floating, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, guiding pose",
+            "idle": "anime, full body, wide angle, ghost lamp girl, holding lantern, blue spirit fire, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, floating",
+            "joy": "anime, full body, wide angle, ghost lamp girl, holding lantern, bright blue fire, happy smile, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dancing pose",
+            "sad": "anime, full body, wide angle, ghost lamp girl, holding lantern, dim fire, sad expression, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, lonely pose",
+            "angry": "anime, full body, wide angle, ghost lamp girl, holding lantern, explosive fire, angry expression, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, threatening pose",
+            "skill": "anime, full body, wide angle, ghost lamp girl, holding lantern, using skill, soul burn, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, ghost lamp girl, holding lantern, victory pose, swirling lights, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, ghost lamp girl, holding lantern, defeated pose, light extinguished, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, fading"
         },
         lore: {
             "title": "도깨비불",
@@ -1754,13 +1749,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 딥 원 전사",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 딥 원 전사, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, deep one soldier girl, fish scales, webbed hands, gills, spear, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, underwater combat pose",
+            "idle": "anime, full body, wide angle, deep one soldier girl, fish scales, gills, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, deep one soldier girl, fish scales, gills, happy expression, raising spear, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, celebrating pose",
+            "sad": "anime, full body, wide angle, deep one soldier girl, fish scales, gills, sad expression, droopy fins, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, sitting pose",
+            "angry": "anime, full body, wide angle, deep one soldier girl, fish scales, gills, angry expression, showing teeth, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, attacking pose",
+            "skill": "anime, full body, wide angle, deep one soldier girl, fish scales, gills, using skill, water thrust, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, deep one soldier girl, fish scales, gills, victory pose, swimming fast, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, deep one soldier girl, fish scales, gills, defeated pose, floating, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, unconscious"
         },
         lore: {
             "title": "심해의 보병",
@@ -1819,13 +1815,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 고블린 정찰병",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 고블린 정찰병, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, goblin scout girl, green skin, leather armor, dagger, mischievous grin, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, sneaking pose",
+            "idle": "anime, full body, wide angle, goblin scout girl, green skin, leather armor, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, crouching",
+            "joy": "anime, full body, wide angle, goblin scout girl, green skin, leather armor, happy expression, holding gold coin, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, laughing pose",
+            "sad": "anime, full body, wide angle, goblin scout girl, green skin, leather armor, sad expression, empty pockets, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, sitting pose",
+            "angry": "anime, full body, wide angle, goblin scout girl, green skin, leather armor, angry expression, brandishing dagger, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, threatening pose",
+            "skill": "anime, full body, wide angle, goblin scout girl, green skin, leather armor, using skill, backstab, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, goblin scout girl, green skin, leather armor, victory pose, bag of loot, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, goblin scout girl, green skin, leather armor, defeated pose, tied up, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, captured"
         },
         lore: {
             "title": "심연의 약탈자",
@@ -1884,13 +1881,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 그림자 잠복자",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 그림자 잠복자, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, shadow lurker girl, black shadowy form, glowing white eyes, hiding in darkness, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, stalking pose",
+            "idle": "anime, full body, wide angle, shadow lurker girl, black shadowy form, glowing white eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hiding pose",
+            "joy": "anime, full body, wide angle, shadow lurker girl, black shadowy form, glowing white eyes, happy expression, curving eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, smiling pose",
+            "sad": "anime, full body, wide angle, shadow lurker girl, black shadowy form, glowing white eyes, sad expression, fading form, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, gloomy pose",
+            "angry": "anime, full body, wide angle, shadow lurker girl, black shadowy form, glowing white eyes, angry expression, many eyes opening, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, scary pose",
+            "skill": "anime, full body, wide angle, shadow lurker girl, black shadowy form, glowing white eyes, using skill, shadow spikes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, shadow lurker girl, black shadowy form, glowing white eyes, victory pose, expanding shadow, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, shadow lurker girl, black shadowy form, glowing white eyes, defeated pose, dissolved by light, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, vanished"
         },
         lore: {
             "title": "그림자 속의 눈",
@@ -1949,13 +1947,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 작은 심연의 감시자",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 작은 심연의 감시자, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, small abyss watcher girl, bat wings, large single eye, scout outfit, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, flying pose",
+            "idle": "anime, full body, wide angle, small abyss watcher girl, bat wings, large single eye, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hovering",
+            "joy": "anime, full body, wide angle, small abyss watcher girl, bat wings, large single eye, happy expression, doing loop-de-loop, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, playful pose",
+            "sad": "anime, full body, wide angle, small abyss watcher girl, bat wings, large single eye, sad expression, broken wing, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, falling",
+            "angry": "anime, full body, wide angle, small abyss watcher girl, bat wings, large single eye, angry expression, screeching, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, attacking pose",
+            "skill": "anime, full body, wide angle, small abyss watcher girl, bat wings, large single eye, using skill, eye beam, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, small abyss watcher girl, bat wings, large single eye, victory pose, saluting, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, small abyss watcher girl, bat wings, large single eye, defeated pose, crashed on ground, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, unconscious"
         },
         lore: {
             "title": "작은 감시자",
@@ -2014,13 +2013,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 비명 지르는 뿌리",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 비명 지르는 뿌리, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, screaming root girl, plant monster, mandrake roots, open mouth screaming, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, screaming pose",
+            "idle": "anime, full body, wide angle, screaming root girl, plant monster, mandrake roots, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, buried pose",
+            "joy": "anime, full body, wide angle, screaming root girl, plant monster, mandrake roots, happy expression, flowers blooming, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, growing pose",
+            "sad": "anime, full body, wide angle, screaming root girl, plant monster, mandrake roots, sad expression, withering leaves, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, shrinking pose",
+            "angry": "anime, full body, wide angle, screaming root girl, plant monster, mandrake roots, angry expression, ear-piercing scream, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, loud pose",
+            "skill": "anime, full body, wide angle, screaming root girl, plant monster, mandrake roots, using skill, root entanglement, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, screaming root girl, plant monster, mandrake roots, victory pose, giant size, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dominant",
+            "defeat": "anime, full body, wide angle, screaming root girl, plant monster, mandrake roots, defeated pose, pulled out of ground, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, helpless"
         },
         lore: {
             "title": "비명의 식물",
@@ -2079,13 +2079,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 시체 먹는 구울",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 시체 먹는 구울, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, ghoul scavenger girl, pale grey skin, sharp claws, tattered clothes, hunger expression, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, eating pose",
+            "idle": "anime, full body, wide angle, ghoul scavenger girl, pale grey skin, sharp claws, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, crouching",
+            "joy": "anime, full body, wide angle, ghoul scavenger girl, pale grey skin, sharp claws, happy expression, eating bone, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, full pose",
+            "sad": "anime, full body, wide angle, ghoul scavenger girl, pale grey skin, sharp claws, sad expression, holding empty stomach, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, starving pose",
+            "angry": "anime, full body, wide angle, ghoul scavenger girl, pale grey skin, sharp claws, angry expression, hissing, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, threatening pose",
+            "skill": "anime, full body, wide angle, ghoul scavenger girl, pale grey skin, sharp claws, using skill, claw slash, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, ghoul scavenger girl, pale grey skin, sharp claws, victory pose, sitting on pile of bones, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, satisfied",
+            "defeat": "anime, full body, wide angle, ghoul scavenger girl, pale grey skin, sharp claws, defeated pose, dead on ground, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, collapsed"
         },
         lore: {
             "title": "부패의 청소부",
@@ -2144,13 +2145,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 공허의 촉수",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 공허의 촉수, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, void tentacle girl, purple tentacles, portal background, void energy, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, wrapping pose",
+            "idle": "anime, full body, wide angle, void tentacle girl, purple tentacles, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, wriggling",
+            "joy": "anime, full body, wide angle, void tentacle girl, purple tentacles, happy expression, tentacles forming heart, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, playful pose",
+            "sad": "anime, full body, wide angle, void tentacle girl, purple tentacles, sad expression, tentacles drooping, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, lonely pose",
+            "angry": "anime, full body, wide angle, void tentacle girl, purple tentacles, angry expression, tentacles thrashing, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, aggressive pose",
+            "skill": "anime, full body, wide angle, void tentacle girl, purple tentacles, using skill, portal opening, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, void tentacle girl, purple tentacles, victory pose, holding captured object, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, void tentacle girl, purple tentacles, defeated pose, retreating to portal, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, escaping"
         },
         lore: {
             "title": "차원의 촉수",
@@ -2209,13 +2211,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 오염된 슬러지",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 오염된 슬러지, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, sludge blob girl, slime monster, purple toxic slime, melting clothes, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, melting pose",
+            "idle": "anime, full body, wide angle, sludge blob girl, slime monster, purple toxic slime, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, bubbling",
+            "joy": "anime, full body, wide angle, sludge blob girl, slime monster, purple toxic slime, happy expression, bubbling happily, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, bouncing pose",
+            "sad": "anime, full body, wide angle, sludge blob girl, slime monster, purple toxic slime, sad expression, melting down, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, flattened pose",
+            "angry": "anime, full body, wide angle, sludge blob girl, slime monster, purple toxic slime, angry expression, emitting fumes, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, toxic pose",
+            "skill": "anime, full body, wide angle, sludge blob girl, slime monster, purple toxic slime, using skill, sludge wave, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, sludge blob girl, slime monster, purple toxic slime, victory pose, expanding size, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, dominant",
+            "defeat": "anime, full body, wide angle, sludge blob girl, slime monster, purple toxic slime, defeated pose, dried puddle, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, evaporated"
         },
         lore: {
             "title": "독성 슬러지",
@@ -2274,13 +2277,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 뼈 조각 정령",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 뼈 조각 정령, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, bone spirit girl, floating bone shards, ghostly aura, white dress, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, drifting pose",
+            "idle": "anime, full body, wide angle, bone spirit girl, floating bone shards, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, floating",
+            "joy": "anime, full body, wide angle, bone spirit girl, floating bone shards, happy expression, bones dancing, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, playful pose",
+            "sad": "anime, full body, wide angle, bone spirit girl, floating bone shards, sad expression, bones falling, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, crying pose",
+            "angry": "anime, full body, wide angle, bone spirit girl, floating bone shards, angry expression, bones swirling fast, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, threatening pose",
+            "skill": "anime, full body, wide angle, bone spirit girl, floating bone shards, using skill, bone spike, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, bone spirit girl, floating bone shards, victory pose, forming a throne, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, regal",
+            "defeat": "anime, full body, wide angle, bone spirit girl, floating bone shards, defeated pose, bones scattered, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dust"
         },
         lore: {
             "title": "부서진 영혼",
@@ -2339,13 +2343,14 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 속삭이는 해골",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 속삭이는 해골, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, whispering skull girl, holding skull, gothic dress, pale skin, eerie whisper, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, whispering pose",
+            "idle": "anime, full body, wide angle, whispering skull girl, holding skull, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, whispering skull girl, holding skull, happy expression, giggling, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, laughing pose",
+            "sad": "anime, full body, wide angle, whispering skull girl, holding skull, sad expression, silent, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, quiet pose",
+            "angry": "anime, full body, wide angle, whispering skull girl, holding skull, angry expression, screaming skull, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, loud pose",
+            "skill": "anime, full body, wide angle, whispering skull girl, holding skull, using skill, curse aura, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, whispering skull girl, holding skull, victory pose, floating high, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, eerie smile",
+            "defeat": "anime, full body, wide angle, whispering skull girl, holding skull, defeated pose, dropped skull, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, crying"
         },
         lore: {
             "title": "저주의 속삭임",
@@ -2404,13 +2409,15 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 공허의 유충",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 공허의 유충, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, void larva girl, insect monster girl, purple chitin, wriggling tail, cute face, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, crawling pose",
+            "idle": "anime, full body, wide angle, void larva girl, insect monster girl, purple chitin, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, void larva girl, insect monster girl, purple chitin, happy expression, wriggling happily, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, playful pose",
+            "sad": "anime, full body, wide angle, void larva girl, insect monster girl, purple chitin, sad expression, curled up, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hiding pose",
+            "angry": "anime, full body, wide angle, void larva girl, insect monster girl, purple chitin, angry expression, hissing, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, threatening pose",
+            "skill": "anime, full body, wide angle, void larva girl, insect monster girl, purple chitin, using skill, acid spit, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, void larva girl, insect monster girl, purple chitin, victory pose, eating magical leaf, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, happy eating",
+            "defeat": "anime, full body, wide angle, void larva girl, insect monster girl, purple chitin, defeated pose, rolled over, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, unconscious",
+            "gallery_lv1": "anime, full body, wide angle, void larva girl, insect monster girl, purple chitin, cute pose, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, detailed"
         },
         lore: {
             "title": "공허의 씨앗",
@@ -2469,13 +2476,15 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 검은 물웅덩이",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 검은 물웅덩이, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, dark puddle girl, liquid form, oil slime, purple tint, rising from ground, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, merging pose",
+            "idle": "anime, full body, wide angle, dark puddle girl, liquid form, oil slime, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, dark puddle girl, liquid form, oil slime, happy expression, rippling water, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, splashing pose",
+            "sad": "anime, full body, wide angle, dark puddle girl, liquid form, oil slime, sad expression, becoming flat, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, hiding pose",
+            "angry": "anime, full body, wide angle, dark puddle girl, liquid form, oil slime, angry expression, boiling bubbles, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, surging pose",
+            "skill": "anime, full body, wide angle, dark puddle girl, liquid form, oil slime, using skill, drowning grasp, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, dark puddle girl, liquid form, oil slime, victory pose, covering ground, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, dominant",
+            "defeat": "anime, full body, wide angle, dark puddle girl, liquid form, oil slime, defeated pose, evaporated mist, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, vanishing",
+            "gallery_lv1": "anime, full body, wide angle, dark puddle girl, liquid form, oil slime, cute pose, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, detailed"
         },
         lore: {
             "title": "미지의 존재",
@@ -2534,13 +2543,15 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 작은 공허 나방",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 작은 공허 나방, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, void moth girl, moth wings, antennae, fur collar, purple dust, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, flying pose",
+            "idle": "anime, full body, wide angle, void moth girl, moth wings, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, fluttering",
+            "joy": "anime, full body, wide angle, void moth girl, moth wings, happy expression, dancing in air, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, playful pose",
+            "sad": "anime, full body, wide angle, void moth girl, moth wings, sad expression, wings folded, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, resting pose",
+            "angry": "anime, full body, wide angle, void moth girl, moth wings, angry expression, spreading dust, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, attacking pose",
+            "skill": "anime, full body, wide angle, void moth girl, moth wings, using skill, confusion powder, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, void moth girl, moth wings, victory pose, landed on flower, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, beautiful",
+            "defeat": "anime, full body, wide angle, void moth girl, moth wings, defeated pose, wings torn, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, fallen",
+            "gallery_lv1": "anime, full body, wide angle, void moth girl, moth wings, cute pose, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, detailed"
         },
         lore: {
             "title": "미지의 존재",
@@ -2600,13 +2611,15 @@ var ABYSS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, dark fantasy, eldritch horror, purple and black energy, tentacles, void, Light, 심연 먹물 오징어",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 심연 먹물 오징어, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, ink squid girl, black tentacles, squid hat, ink splatter, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, painting pose",
+            "idle": "anime, full body, wide angle, ink squid girl, black tentacles, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, ink squid girl, black tentacles, happy expression, spraying ink heart, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, playful pose",
+            "sad": "anime, full body, wide angle, ink squid girl, black tentacles, sad expression, pale color, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, crying ink",
+            "angry": "anime, full body, wide angle, ink squid girl, black tentacles, angry expression, red skin, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, splattering ink",
+            "skill": "anime, full body, wide angle, ink squid girl, black tentacles, using skill, multiple tentacle strike, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, ink squid girl, black tentacles, victory pose, holding prey, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, ink squid girl, black tentacles, defeated pose, dissolved, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, melting",
+            "gallery_lv1": "anime, full body, wide angle, ink squid girl, black tentacles, cute pose, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, detailed"
         },
         lore: {
             "title": "미지의 존재",
@@ -2654,15 +2667,26 @@ var ABYSS_CREATURES = [
         image: "images/creatures/abyss/creature_abyss_jellyfish.png",
         sprites: {
             "idle": "images/creatures/abyss/creature_abyss_jellyfish.png",
-            "joy": "images/creatures/abyss/creature_abyss_jellyfish.png",
-            "sad": "images/creatures/abyss/creature_abyss_jellyfish.png",
-            "angry": "images/creatures/abyss/creature_abyss_jellyfish.png",
-            "skill": "images/creatures/abyss/creature_abyss_jellyfish.png",
-            "gallery": {}
+            "joy": "images/creatures/abyss/creature_abyss_jellyfish_joy.png",
+            "sad": "images/creatures/abyss/creature_abyss_jellyfish_sad.png",
+            "angry": "images/creatures/abyss/creature_abyss_jellyfish_angry.png",
+            "skill": "images/creatures/abyss/creature_abyss_jellyfish_skill.png",
+            "victory": "images/creatures/abyss/creature_abyss_jellyfish_victory.png",
+            "defeat": "images/creatures/abyss/creature_abyss_jellyfish_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/abyss/creature_abyss_jellyfish_gallery_lv1.png"
+            }
         },
         prompts: {
-            "base": "anime style, 심연의 해파리",
-            "idle": "floating"
+            "base": "anime, full body, wide angle, abyss jellyfish girl, transparent dress, glowing tentacles, biological lights, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, floating pose",
+            "idle": "anime, full body, wide angle, abyss jellyfish girl, transparent dress, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hovering",
+            "joy": "anime, full body, wide angle, abyss jellyfish girl, transparent dress, happy expression, glowing bright, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dancing pose",
+            "sad": "anime, full body, wide angle, abyss jellyfish girl, transparent dress, sad expression, dim light, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, sinking pose",
+            "angry": "anime, full body, wide angle, abyss jellyfish girl, transparent dress, angry expression, electrical sparks, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, stinging pose",
+            "skill": "anime, full body, wide angle, abyss jellyfish girl, transparent dress, using skill, poison sting, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, abyss jellyfish girl, transparent dress, victory pose, floating high, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, majestic",
+            "defeat": "anime, full body, wide angle, abyss jellyfish girl, transparent dress, defeated pose, melted on ground, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, liquid",
+            "gallery_lv1": "anime, full body, wide angle, abyss jellyfish girl, transparent dress, cute pose, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, detailed"
         },
         lore: {
             "title": "부유하는 독",
@@ -2694,15 +2718,26 @@ var ABYSS_CREATURES = [
         image: "images/creatures/abyss/creature_void_crab.png",
         sprites: {
             "idle": "images/creatures/abyss/creature_void_crab.png",
-            "joy": "images/creatures/abyss/creature_void_crab.png",
-            "sad": "images/creatures/abyss/creature_void_crab.png",
-            "angry": "images/creatures/abyss/creature_void_crab.png",
-            "skill": "images/creatures/abyss/creature_void_crab.png",
-            "gallery": {}
+            "joy": "images/creatures/abyss/creature_void_crab_joy.png",
+            "sad": "images/creatures/abyss/creature_void_crab_sad.png",
+            "angry": "images/creatures/abyss/creature_void_crab_angry.png",
+            "skill": "images/creatures/abyss/creature_void_crab_skill.png",
+            "victory": "images/creatures/abyss/creature_void_crab_victory.png",
+            "defeat": "images/creatures/abyss/creature_void_crab_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/abyss/creature_void_crab_gallery_lv1.png"
+            }
         },
         prompts: {
-            "base": "anime style, 공허 게",
-            "idle": "standing"
+            "base": "anime, full body, wide angle, void crab girl, crab armor, large claws, purple carapace, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, combat stance",
+            "idle": "anime, full body, wide angle, void crab girl, crab armor, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing pose",
+            "joy": "anime, full body, wide angle, void crab girl, crab armor, happy expression, clicking claws, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, victory V pose",
+            "sad": "anime, full body, wide angle, void crab girl, crab armor, sad expression, hiding in shell, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, defensive pose",
+            "angry": "anime, full body, wide angle, void crab girl, crab armor, angry expression, bubbles foaming, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, pinching pose",
+            "skill": "anime, full body, wide angle, void crab girl, crab armor, using skill, giant clamp, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, void crab girl, crab armor, victory pose, standing on rock, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, strong",
+            "defeat": "anime, full body, wide angle, void crab girl, crab armor, defeated pose, flipped over, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dizzy",
+            "gallery_lv1": "anime, full body, wide angle, void crab girl, crab armor, cute pose, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, detailed"
         },
         lore: {
             "title": "단단한 껍질",
@@ -2734,15 +2769,26 @@ var ABYSS_CREATURES = [
         image: "images/creatures/abyss/creature_dark_eel.png",
         sprites: {
             "idle": "images/creatures/abyss/creature_dark_eel.png",
-            "joy": "images/creatures/abyss/creature_dark_eel.png",
-            "sad": "images/creatures/abyss/creature_dark_eel.png",
-            "angry": "images/creatures/abyss/creature_dark_eel.png",
-            "skill": "images/creatures/abyss/creature_dark_eel.png",
-            "gallery": {}
+            "joy": "images/creatures/abyss/creature_dark_eel_joy.png",
+            "sad": "images/creatures/abyss/creature_dark_eel_sad.png",
+            "angry": "images/creatures/abyss/creature_dark_eel_angry.png",
+            "skill": "images/creatures/abyss/creature_dark_eel_skill.png",
+            "victory": "images/creatures/abyss/creature_dark_eel_victory.png",
+            "defeat": "images/creatures/abyss/creature_dark_eel_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/abyss/creature_dark_eel_gallery_lv1.png"
+            }
         },
         prompts: {
-            "base": "anime style, 암흑 장어",
-            "idle": "swimming"
+            "base": "anime, full body, wide angle, dark eel girl, sleek bodysuit, long tail, electric aura, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, swimming pose",
+            "idle": "anime, full body, wide angle, dark eel girl, sleek bodysuit, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, floating",
+            "joy": "anime, full body, wide angle, dark eel girl, sleek bodysuit, happy expression, swimming loops, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, playful pose",
+            "sad": "anime, full body, wide angle, dark eel girl, sleek bodysuit, sad expression, coiling up, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, hiding pose",
+            "angry": "anime, full body, wide angle, dark eel girl, sleek bodysuit, angry expression, sparks flying, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, shocking pose",
+            "skill": "anime, full body, wide angle, dark eel girl, sleek bodysuit, using skill, thunderbolt, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, dark eel girl, sleek bodysuit, victory pose, mouth open wide, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, roaring",
+            "defeat": "anime, full body, wide angle, dark eel girl, sleek bodysuit, defeated pose, tied in knot, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, stunned",
+            "gallery_lv1": "anime, full body, wide angle, dark eel girl, sleek bodysuit, cute pose, shiny wet skin, alluring curves, masterpiece, best quality, consistent with freya style, detailed"
         },
         lore: {
             "title": "미끄러운 포식자",
@@ -2774,15 +2820,26 @@ var ABYSS_CREATURES = [
         image: "images/creatures/abyss/creature_skeleton_fish.png",
         sprites: {
             "idle": "images/creatures/abyss/creature_skeleton_fish.png",
-            "joy": "images/creatures/abyss/creature_skeleton_fish.png",
-            "sad": "images/creatures/abyss/creature_skeleton_fish.png",
-            "angry": "images/creatures/abyss/creature_skeleton_fish.png",
-            "skill": "images/creatures/abyss/creature_skeleton_fish.png",
-            "gallery": {}
+            "joy": "images/creatures/abyss/creature_skeleton_fish_joy.png",
+            "sad": "images/creatures/abyss/creature_skeleton_fish_sad.png",
+            "angry": "images/creatures/abyss/creature_skeleton_fish_angry.png",
+            "skill": "images/creatures/abyss/creature_skeleton_fish_skill.png",
+            "victory": "images/creatures/abyss/creature_skeleton_fish_victory.png",
+            "defeat": "images/creatures/abyss/creature_skeleton_fish_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/abyss/creature_skeleton_fish_gallery_lv1.png"
+            }
         },
         prompts: {
-            "base": "anime style, 해골 물고기",
-            "idle": "swimming"
+            "base": "anime, full body, wide angle, skeleton fish girl, bone armor, fish tail, empty eyes, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, swimming pose",
+            "idle": "anime, full body, wide angle, skeleton fish girl, bone armor, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, floating",
+            "joy": "anime, full body, wide angle, skeleton fish girl, bone armor, happy rattle, jaw clacking, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, fast swim",
+            "sad": "anime, full body, wide angle, skeleton fish girl, bone armor, sad expression, sinking, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, deep sea pose",
+            "angry": "anime, full body, wide angle, skeleton fish girl, bone armor, angry rattle, teeth chattering, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, biting pose",
+            "skill": "anime, full body, wide angle, skeleton fish girl, bone armor, using skill, bone bite, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, skeleton fish girl, bone armor, victory pose, swimming fast, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, leading",
+            "defeat": "anime, full body, wide angle, skeleton fish girl, bone armor, defeated pose, bones falling apart, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, broken",
+            "gallery_lv1": "anime, full body, wide angle, skeleton fish girl, bone armor, cute pose, shiny bones, sweat, alluring curves, masterpiece, best quality, consistent with freya style, detailed"
         },
         lore: {
             "title": "죽지 않는 물고기",
@@ -2814,15 +2871,26 @@ var ABYSS_CREATURES = [
         image: "images/creatures/abyss/creature_phantom_ray.png",
         sprites: {
             "idle": "images/creatures/abyss/creature_phantom_ray.png",
-            "joy": "images/creatures/abyss/creature_phantom_ray.png",
-            "sad": "images/creatures/abyss/creature_phantom_ray.png",
-            "angry": "images/creatures/abyss/creature_phantom_ray.png",
-            "skill": "images/creatures/abyss/creature_phantom_ray.png",
-            "gallery": {}
+            "joy": "images/creatures/abyss/creature_phantom_ray_joy.png",
+            "sad": "images/creatures/abyss/creature_phantom_ray_sad.png",
+            "angry": "images/creatures/abyss/creature_phantom_ray_angry.png",
+            "skill": "images/creatures/abyss/creature_phantom_ray_skill.png",
+            "victory": "images/creatures/abyss/creature_phantom_ray_victory.png",
+            "defeat": "images/creatures/abyss/creature_phantom_ray_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/abyss/creature_phantom_ray_gallery_lv1.png"
+            }
         },
         prompts: {
-            "base": "anime style, 유령 가오리",
-            "idle": "flying"
+            "base": "anime, full body, wide angle, phantom ray girl, transparent wings, ghostly blue, glowing eyes on back, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, gliding pose",
+            "idle": "anime, full body, wide angle, phantom ray girl, transparent wings, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hovering",
+            "joy": "anime, full body, wide angle, phantom ray girl, transparent wings, happy expression, gliding gracefully, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dancing pose",
+            "sad": "anime, full body, wide angle, phantom ray girl, transparent wings, sad expression, fading away, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, transparent pose",
+            "angry": "anime, full body, wide angle, phantom ray girl, transparent wings, angry expression, eyes glowing red, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, scaring pose",
+            "skill": "anime, full body, wide angle, phantom ray girl, transparent wings, using skill, hypnosis wave, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, phantom ray girl, transparent wings, victory pose, looping in air, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, playful",
+            "defeat": "anime, full body, wide angle, phantom ray girl, transparent wings, defeated pose, vanished on ground, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, exhausted",
+            "gallery_lv1": "anime, full body, wide angle, phantom ray girl, transparent wings, cute pose, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, detailed"
         },
         lore: {
             "title": "심해의 유령",
@@ -2855,15 +2923,26 @@ var ABYSS_CREATURES = [
         image: "images/creatures/abyss/creature_wisp_faint.png",
         sprites: {
             "idle": "images/creatures/abyss/creature_wisp_faint.png",
-            "joy": "images/creatures/abyss/creature_wisp_faint.png", // Fallback
-            "sad": "images/creatures/abyss/creature_wisp_faint.png", // Fallback
-            "angry": "images/creatures/abyss/creature_wisp_faint.png", // Fallback
-            "skill": "images/creatures/abyss/creature_wisp_faint.png",
-            "gallery": {}
+            "joy": "images/creatures/abyss/creature_wisp_faint_joy.png",
+            "sad": "images/creatures/abyss/creature_wisp_faint_sad.png",
+            "angry": "images/creatures/abyss/creature_wisp_faint_angry.png",
+            "skill": "images/creatures/abyss/creature_wisp_faint_skill.png",
+            "victory": "images/creatures/abyss/creature_wisp_faint_victory.png",
+            "defeat": "images/creatures/abyss/creature_wisp_faint_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/abyss/creature_wisp_faint_gallery_lv1.png"
+            }
         },
         prompts: {
-            "base": "anime style, 희미한 위습",
-            "idle": "standing"
+            "base": "anime, full body, wide angle, faint wisp girl, small glowing spirit, translucent body, weak light, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, shy pose",
+            "idle": "anime, full body, wide angle, faint wisp girl, small glowing spirit, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, floating",
+            "joy": "anime, full body, wide angle, faint wisp girl, small glowing spirit, happy expression, flickering bright, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, glowing pose",
+            "sad": "anime, full body, wide angle, faint wisp girl, small glowing spirit, sad expression, almost invisible, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, fading pose",
+            "angry": "anime, full body, wide angle, faint wisp girl, small glowing spirit, angry expression, flaring up, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, warning pose",
+            "skill": "anime, full body, wide angle, faint wisp girl, small glowing spirit, using skill, flashbang, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, dynamic pose",
+            "victory": "anime, full body, wide angle, faint wisp girl, small glowing spirit, victory pose, guiding light, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, helpful",
+            "defeat": "anime, full body, wide angle, faint wisp girl, small glowing spirit, defeated pose, darkness, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, extinguished",
+            "gallery_lv1": "anime, full body, wide angle, faint wisp girl, small glowing spirit, cute pose, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, detailed"
         },
         lore: {
             "title": "희미한 존재",

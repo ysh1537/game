@@ -110,3 +110,10 @@ npx http-server . -p 8080 -c-1
 *Multiverse Creature Lab* © 2025
 
 </div>
+
+---
+
+## 🤖 Credits
+
+**본 게임의 모든 기획, 개발, 및 운영 시스템은 Google Antigravity Development Agent에 의해 작성되었습니다.**
+*(All planning, development, and system operations of this game were executed by Google Antigravity Development Agent.)*

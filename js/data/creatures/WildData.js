@@ -1394,612 +1394,596 @@ var WILD_CREATURES = [
             touch_legs: "날개는 만지면 안 돼.",
             touch_special: "너랑 친구 할래!"
         }
-    }, "그대의 마음, 잘 받겠소.",
-    "이 선물보다 그대가 더 빛나요."
-],
-    special: [
-        "사랑의 힘으로!",
-        "그대를 지키겠소!",
-        "하트 빔!"
-    ]
-        },
-lines: {
-    normal: "사랑 없는 세상은 암흑과 같소.",
-        touch_head: "그대의 생각으로 머리가 가득 차 있소.",
-            touch_chest: "심장이 그대를 위해 뛰고 있소.",
-                touch_legs: "그대에게 달려갈 준비가 되었소.",
-                    touch_special: "우리 둘만의 낙원을 만듭시다."
-}
     },
 
-{
-    id: "kraken_baby",
+    {
+        id: "kraken_baby",
         name: "아기 크라켄",
-            rarity: RANKS.NORMAL,
-                world: WORLDS.WILD,
-                    elements: ["Water"],
-                        baseStr: 10, baseInt: 10,
-                            image: "images/creatures/wild/creature_kraken_baby.png",
-                                sprites: {
-        "idle": "images/creatures/wild/creature_kraken_baby.png",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Water"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creatures/wild/creature_kraken_baby.png",
+        sprites: {
+            "idle": "images/creatures/wild/creature_kraken_baby.png",
             "joy": "images/creatures/wild/creature_kraken_baby_joy.png",
-                "sad": "images/creatures/wild/creature_kraken_baby_sad.png",
-                    "angry": "images/creatures/wild/creature_kraken_baby_angry.png",
-                        "skill": "images/creatures/wild/creature_kraken_baby_skill.png",
-                            "victory": "images/creatures/wild/creature_kraken_baby_victory.png",
-                                "defeat": "images/creatures/wild/creature_kraken_baby_defeat.png",
-                                    "gallery": {
-            "lv1": "images/creatures/wild/creature_kraken_baby_gallery_lv1.png"
-        }
-    },
-    prompts: {
-        "base": "anime, blue archive style, nikke style, full body, kraken baby girl, purple octopus tentacles as hair, cute swimsuit, holding a toy ship, small suckers on skin, huge breasts, wide hips, thick thighs, underwater playground background, masterpiece, best quality",
+            "sad": "images/creatures/wild/creature_kraken_baby_sad.png",
+            "angry": "images/creatures/wild/creature_kraken_baby_angry.png",
+            "skill": "images/creatures/wild/creature_kraken_baby_skill.png",
+            "victory": "images/creatures/wild/creature_kraken_baby_victory.png",
+            "defeat": "images/creatures/wild/creature_kraken_baby_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/wild/creature_kraken_baby_gallery_lv1.png"
+            }
+        },
+        prompts: {
+            "base": "anime, blue archive style, nikke style, full body, kraken baby girl, purple octopus tentacles as hair, cute swimsuit, holding a toy ship, small suckers on skin, huge breasts, wide hips, thick thighs, underwater playground background, masterpiece, best quality",
             "idle": "standing pose, hugging a plushie whale, giggling, cute, no text, no ui",
-                "joy": "clapping hands, tentacles waving happily, bright smile, bubbles, no text, no ui",
-                    "sad": "sitting on floor, tentacles droopy, crying, holding broken toy, no text, no ui",
-                        "angry": "pouting, cheeks puffed, crossing tentacles, throwing a tantrum, cute angry, no text, no ui",
-                            "skill": "summoning a small whirlpool, cinematic angle, glowing suckers, masterpiece, no text, no ui",
-                                "victory": "holding up a 'winner' sign, peace sign, bright aura, confetti, no text, no ui",
-                                    "defeat": "lying on tummy, sobbing, ink blob on face, defeat, no text, no ui",
-                                        "gallery_lv1": "dating sim event, kraken baby girl, playing in shallow water, splashing viewer, laughing, wet skin, no text, no ui",
-                                            "gallery_lv2": "dating sim event, kraken baby girl, eating takoyaki (ironic), offering a bite, blushing, cute, no text, no ui",
-                                                "gallery_lv3": "dating sim event, kraken baby girl, grown up version shadow, embracing viewer with tentacles, intense affection, allure, masterpiece, no text, no ui"
-    },
-    lore: {
-        "title": "심해의 꿈나무",
+            "joy": "clapping hands, tentacles waving happily, bright smile, bubbles, no text, no ui",
+            "sad": "sitting on floor, tentacles droopy, crying, holding broken toy, no text, no ui",
+            "angry": "pouting, cheeks puffed, crossing tentacles, throwing a tantrum, cute angry, no text, no ui",
+            "skill": "summoning a small whirlpool, cinematic angle, glowing suckers, masterpiece, no text, no ui",
+            "victory": "holding up a 'winner' sign, peace sign, bright aura, confetti, no text, no ui",
+            "defeat": "lying on tummy, sobbing, ink blob on face, defeat, no text, no ui",
+            "gallery_lv1": "dating sim event, kraken baby girl, playing in shallow water, splashing viewer, laughing, wet skin, no text, no ui",
+            "gallery_lv2": "dating sim event, kraken baby girl, eating takoyaki (ironic), offering a bite, blushing, cute, no text, no ui",
+            "gallery_lv3": "dating sim event, kraken baby girl, grown up version shadow, embracing viewer with tentacles, intense affection, allure, masterpiece, no text, no ui"
+        },
+        lore: {
+            "title": "심해의 꿈나무",
             "story": "아직 작고 귀여운 아기 크라켄. 언젠가 바다를 지배할 대왕 크라켄이 되는 것을 꿈꾼다. 지금은 작은 물고기들과 숨바꼭질하는 것을 좋아한다.",
-                "personality": "Cute & Ambitious"
-    },
-    relationships: { likes: [], dislikes: [], rival: null },
-    touchLines: {
-        idle: [
-            "나는 커서 바다의 왕이 될 거야!",
-            "크아앙! 무섭지! 무섭지?",
-            "내 다리 좀 봐, 벌써 길어졌어."
-        ],
+            "personality": "Cute & Ambitious"
+        },
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: {
+            idle: [
+                "나는 커서 바다의 왕이 될 거야!",
+                "크아앙! 무섭지! 무섭지?",
+                "내 다리 좀 봐, 벌써 길어졌어."
+            ],
             interaction: [
                 "간지럼 태우지 마! 난 제왕이라고.",
                 "잡았다! 아니, 잡혔나?",
                 "물방울 놀이하자!"
             ],
-                gift: [
-                    "왕에게 바치는 공물이냐? 좋아!",
-                    "장난감? 아니, 훈련 도구지.",
-                    "이거 먹으면 빨리 커?"
-                ],
-                    special: [
-                        "소용돌이 치기!",
-                        "먹물 뿜기!",
-                        "다리 꼬기!"
-                    ]
-    },
-    lines: {
-        normal: "바다 괴물 아니야. 바다의 왕자라구!",
+            gift: [
+                "왕에게 바치는 공물이냐? 좋아!",
+                "장난감? 아니, 훈련 도구지.",
+                "이거 먹으면 빨리 커?"
+            ],
+            special: [
+                "소용돌이 치기!",
+                "먹물 뿜기!",
+                "다리 꼬기!"
+            ]
+        },
+        lines: {
+            normal: "바다 괴물 아니야. 바다의 왕자라구!",
             touch_head: "왕관 쓸 머리야. 조심해.",
-                touch_chest: "용기가 샘솟고 있어.",
-                    touch_legs: "다리가 많아서 걷기 힘들어...",
-                        touch_special: "너는 내 첫 번째 부하로 임명할게."
-    }
-},
-
-{
-    id: "slime_green_new",
-        name: "초록 슬라임",
-            rarity: RANKS.NORMAL,
-                world: WORLDS.WILD,
-                    elements: ["Nature"],
-                        baseStr: 10, baseInt: 10,
-                            image: "images/creatures/wild/creature_slime_green_new.png",
-                                sprites: {
-        "idle": "images/creatures/wild/creature_slime_green_new.png",
-            "joy": "images/creatures/wild/creature_slime_green_new_joy.png",
-                "sad": "images/creatures/wild/creature_slime_green_new_sad.png",
-                    "angry": "images/creatures/wild/creature_slime_green_new_angry.png",
-                        "skill": "images/creatures/wild/creature_slime_green_new_skill.png",
-                            "victory": "images/creatures/wild/creature_slime_green_new_victory.png",
-                                "defeat": "images/creatures/wild/creature_slime_green_new_defeat.png",
-                                    "gallery": {
-            "lv1": "images/creatures/wild/creature_slime_green_new_gallery_lv1.png"
+            touch_chest: "용기가 샘솟고 있어.",
+            touch_legs: "다리가 많아서 걷기 힘들어...",
+            touch_special: "너는 내 첫 번째 부하로 임명할게."
         }
     },
-    prompts: {
-        "base": "anime, blue archive style, nikke style, full body, green slime girl, translucent green slime body, leaf bikini, vines in hair, smooth and shiny, glamorous body, huge breasts, extremely thick thighs, wide hips, forest stream background, masterpiece, best quality",
+
+    {
+        id: "slime_green_new",
+        name: "초록 슬라임",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Nature"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creatures/wild/creature_slime_green_new.png",
+        sprites: {
+            "idle": "images/creatures/wild/creature_slime_green_new.png",
+            "joy": "images/creatures/wild/creature_slime_green_new_joy.png",
+            "sad": "images/creatures/wild/creature_slime_green_new_sad.png",
+            "angry": "images/creatures/wild/creature_slime_green_new_angry.png",
+            "skill": "images/creatures/wild/creature_slime_green_new_skill.png",
+            "victory": "images/creatures/wild/creature_slime_green_new_victory.png",
+            "defeat": "images/creatures/wild/creature_slime_green_new_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/wild/creature_slime_green_new_gallery_lv1.png"
+            }
+        },
+        prompts: {
+            "base": "anime, blue archive style, nikke style, full body, green slime girl, translucent green slime body, leaf bikini, vines in hair, smooth and shiny, glamorous body, huge breasts, extremely thick thighs, wide hips, forest stream background, masterpiece, best quality",
             "idle": "standing pose, poking cheek, wobbly, cute smile, no text, no ui",
-                "joy": "bouncing, translucent effect, bright laugh, green sparkles, no text, no ui",
-                    "sad": "melting slightly, droopy face, dull green color, sad, no text, no ui",
-                        "angry": "forming spike, darker green, shouting, aggressive pose, no text, no ui",
-                            "skill": "engulfing wave, giant slime fist, cinematic angle, dynamic, masterpiece, no text, no ui",
-                                "victory": "peace sign, dissolving ground lightly, happy jump, bright, no text, no ui",
-                                    "defeat": "puddle form, eyes swirling, steam rising, defeated, no text, no ui",
-                                        "gallery_lv1": "dating sim event, green slime girl, sunbathing on rock, transparent skin effect, shy smile, no text, no ui",
-                                            "gallery_lv2": "dating sim event, green slime girl, absorption incident (clothes), embarrassed, covering up, blushing, no text, no ui",
-                                                "gallery_lv3": "dating sim event, green slime girl, slime massage, enveloping viewer, intense pleasure face, allure, masterpiece, no text, no ui"
-    },
-    lore: {
-        "title": "초록 점액",
+            "joy": "bouncing, translucent effect, bright laugh, green sparkles, no text, no ui",
+            "sad": "melting slightly, droopy face, dull green color, sad, no text, no ui",
+            "angry": "forming spike, darker green, shouting, aggressive pose, no text, no ui",
+            "skill": "engulfing wave, giant slime fist, cinematic angle, dynamic, masterpiece, no text, no ui",
+            "victory": "peace sign, dissolving ground lightly, happy jump, bright, no text, no ui",
+            "defeat": "puddle form, eyes swirling, steam rising, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, green slime girl, sunbathing on rock, transparent skin effect, shy smile, no text, no ui",
+            "gallery_lv2": "dating sim event, green slime girl, absorption incident (clothes), embarrassed, covering up, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, green slime girl, slime massage, enveloping viewer, intense pleasure face, allure, masterpiece, no text, no ui"
+        },
+        lore: {
+            "title": "초록 점액",
             "story": "숲에서 흔히 볼 수 있는 초록색 슬라임. 풀을 소화시켜 몸을 유지하며, 성격이 온순하여 숲속 작은 동물들의 친구가 되어준다.",
-                "personality": "Friendly & Green"
-    },
-    relationships: { likes: [], dislikes: [], rival: null },
-    touchLines: {
-        idle: [
-            "말랑말랑~ 기분 좋아.",
-            "풀냄새... 향긋해.",
-            "나랑 톡톡 치기 놀이할래?"
-        ],
+            "personality": "Friendly & Green"
+        },
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: {
+            idle: [
+                "말랑말랑~ 기분 좋아.",
+                "풀냄새... 향긋해.",
+                "나랑 톡톡 치기 놀이할래?"
+            ],
             interaction: [
                 "터지지 않아. 걱정 마.",
                 "쭉 늘어난다~ 신기하지?",
                 "몸속에 나뭇잎이 들어왔어."
             ],
-                gift: [
-                    "나한테 주는 거야? 고마워!",
-                    "녹색이다! 나랑 색이 같네.",
-                    "잘 먹을게. (흡수 중)"
-                ],
-                    special: [
-                        "점액 발사!",
-                        "통통 튀기!",
-                        "합체!"
-                    ]
-    },
-    lines: {
-        normal: "숲은 정말 평화로워.",
+            gift: [
+                "나한테 주는 거야? 고마워!",
+                "녹색이다! 나랑 색이 같네.",
+                "잘 먹을게. (흡수 중)"
+            ],
+            special: [
+                "점액 발사!",
+                "통통 튀기!",
+                "합체!"
+            ]
+        },
+        lines: {
+            normal: "숲은 정말 평화로워.",
             touch_head: "머리가 어디냐고? 글쎄...",
-                touch_chest: "핵이 반짝거리지?",
-                    touch_legs: "다리는 없지만 굴러갈 순 있어.",
-                        touch_special: "너랑 붙어있으면 따뜻해."
-    }
-},
-{
-    id: "blue_slime",
-        name: "파랑 슬라임",
-            rarity: RANKS.NORMAL,
-                world: WORLDS.WILD,
-                    elements: ["Water"],
-                        baseStr: 10, baseInt: 10,
-                            image: "images/creatures/wild/creature_blue_slime.png",
-                                sprites: {
-        "idle": "images/creatures/wild/creature_blue_slime.png",
-            "joy": "images/creatures/wild/creature_blue_slime_joy.png",
-                "sad": "images/creatures/wild/creature_blue_slime_sad.png",
-                    "angry": "images/creatures/wild/creature_blue_slime_angry.png",
-                        "skill": "images/creatures/wild/creature_blue_slime_skill.png",
-                            "victory": "images/creatures/wild/creature_blue_slime_victory.png",
-                                "defeat": "images/creatures/wild/creature_blue_slime_defeat.png",
-                                    "gallery": {
-            "lv1": "images/creatures/wild/creature_blue_slime_gallery_lv1.png"
+            touch_chest: "핵이 반짝거리지?",
+            touch_legs: "다리는 없지만 굴러갈 순 있어.",
+            touch_special: "너랑 붙어있으면 따뜻해."
         }
     },
-    prompts: {
-        "base": "anime, blue archive style, nikke style, full body, blue slime girl, water texture skin, bubbles inside body, seashell bikini, wet look, glamorous body, huge breasts, extremely thick thighs, wide hips, ocean beach background, masterpiece, best quality",
+    {
+        id: "blue_slime",
+        name: "파랑 슬라임",
+        rarity: RANKS.NORMAL,
+        world: WORLDS.WILD,
+        elements: ["Water"],
+        baseStr: 10, baseInt: 10,
+        image: "images/creatures/wild/creature_blue_slime.png",
+        sprites: {
+            "idle": "images/creatures/wild/creature_blue_slime.png",
+            "joy": "images/creatures/wild/creature_blue_slime_joy.png",
+            "sad": "images/creatures/wild/creature_blue_slime_sad.png",
+            "angry": "images/creatures/wild/creature_blue_slime_angry.png",
+            "skill": "images/creatures/wild/creature_blue_slime_skill.png",
+            "victory": "images/creatures/wild/creature_blue_slime_victory.png",
+            "defeat": "images/creatures/wild/creature_blue_slime_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/wild/creature_blue_slime_gallery_lv1.png"
+            }
+        },
+        prompts: {
+            "base": "anime, blue archive style, nikke style, full body, blue slime girl, water texture skin, bubbles inside body, seashell bikini, wet look, glamorous body, huge breasts, extremely thick thighs, wide hips, ocean beach background, masterpiece, best quality",
             "idle": "standing pose, playing with water ball, shimmering, cooling, no text, no ui",
-                "joy": "making rainbow, clapping, splashing water, happy, no text, no ui",
-                    "sad": "evaporating slightly, turning into puddle, sad eyes, steam, no text, no ui",
-                        "angry": "boiling bubbles, tidal wave hair, shouting, aggressive, no text, no ui",
-                            "skill": "hydro pump, giant water dragon form, cinematic angle, splash, masterpiece, no text, no ui",
-                                "victory": "surfing on self, thumbs up, bright sun, energetic, no text, no ui",
-                                    "defeat": "dried up, cracking skin, lying on sand, defeated, no text, no ui",
-                                        "gallery_lv1": "dating sim event, blue slime girl, serving ice water, maid outfit (slime), cute curtsy, no text, no ui",
-                                            "gallery_lv2": "dating sim event, blue slime girl, pool party, floating on water (sleeping), peaceful face, alluring, no text, no ui",
-                                                "gallery_lv3": "dating sim event, blue slime girl, underwater kiss, merging liquid, breathless, intense romance, masterpiece, no text, no ui"
-    },
-    lore: {
-        "title": "푸른 점액",
+            "joy": "making rainbow, clapping, splashing water, happy, no text, no ui",
+            "sad": "evaporating slightly, turning into puddle, sad eyes, steam, no text, no ui",
+            "angry": "boiling bubbles, tidal wave hair, shouting, aggressive, no text, no ui",
+            "skill": "hydro pump, giant water dragon form, cinematic angle, splash, masterpiece, no text, no ui",
+            "victory": "surfing on self, thumbs up, bright sun, energetic, no text, no ui",
+            "defeat": "dried up, cracking skin, lying on sand, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, blue slime girl, serving ice water, maid outfit (slime), cute curtsy, no text, no ui",
+            "gallery_lv2": "dating sim event, blue slime girl, pool party, floating on water (sleeping), peaceful face, alluring, no text, no ui",
+            "gallery_lv3": "dating sim event, blue slime girl, underwater kiss, merging liquid, breathless, intense romance, masterpiece, no text, no ui"
+        },
+        lore: {
+            "title": "푸른 점액",
             "story": "맑은 물가에 사는 파란색 슬라임. 몸속에 물을 저장하고 있어 가뭄이 들면 주변 식물들에게 물을 나눠준다.",
-                "personality": "Cool & Helpful"
-    },
-    relationships: { likes: [], dislikes: [], rival: null },
-    touchLines: {
-        idle: [
-            "찰랑찰랑~ 시원하지?",
-            "목마르면 말해. 물 나눠줄게.",
-            "더운 날엔 내가 최고야."
-        ],
+            "personality": "Cool & Helpful"
+        },
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: {
+            idle: [
+                "찰랑찰랑~ 시원하지?",
+                "목마르면 말해. 물 나눠줄게.",
+                "더운 날엔 내가 최고야."
+            ],
             interaction: [
                 "손 차가워질걸?",
                 "물이 튀어도 괜찮아?",
                 "내 몸은 항상 맑아야 해."
             ],
-                gift: [
-                    "얼음? 오, 시원해.",
-                    "물병 선물이라니, 센스 있네.",
-                    "고마워. 더 맑아진 기분이야."
-                ],
-                    special: [
-                        "물대포!",
-                        "쿨링 타임!",
-                        "파도타기!"
-                    ]
-    },
-    lines: {
-        normal: "물은 생명의 근원이지.",
+            gift: [
+                "얼음? 오, 시원해.",
+                "물병 선물이라니, 센스 있네.",
+                "고마워. 더 맑아진 기분이야."
+            ],
+            special: [
+                "물대포!",
+                "쿨링 타임!",
+                "파도타기!"
+            ]
+        },
+        lines: {
+            normal: "물은 생명의 근원이지.",
             touch_head: "머리 위로 무지개가 뜰 거야.",
-                touch_chest: "투명해서 다 보이지?",
-                    touch_legs: "흐르는 물처럼 자유로워.",
-                        touch_special: "나랑 같이 바다 보러 갈래?"
-    }
-},
-
-{
-    id: "chimera_mythic",
-        name: "신화의 키메라",
-            rarity: RANKS.SSR,
-                world: WORLDS.WILD,
-                    elements: ["Fire", "Dark", "Beast"],
-                        baseStr: 30, baseInt: 20,
-                            image: "images/creatures/wild/creature_chimera_joy.png",
-                                sprites: {
-        "idle": "images/creatures/wild/creature_chimera_joy.png",
-            "joy": "images/creatures/wild/creature_chimera_joy.png",
-                "sad": "images/creatures/wild/creature_chimera_joy.png",
-                    "angry": "images/creatures/wild/creature_chimera_joy.png",
-                        "skill": "images/creatures/wild/creature_chimera_joy.png",
-                            "victory": "images/creatures/wild/creature_chimera_joy.png",
-                                "defeat": "images/creatures/wild/creature_chimera_joy.png",
-                                    "gallery": {
-            "lv1": "images/creatures/wild/creature_chimera_joy.png"
+            touch_chest: "투명해서 다 보이지?",
+            touch_legs: "흐르는 물처럼 자유로워.",
+            touch_special: "나랑 같이 바다 보러 갈래?"
         }
     },
-    prompts: {
-        "base": "anime, blue archive style, nikke style, full body, chimera girl, three heads (lion girl main, goat horn girl left, snake girl right tail), chaotic armor, mismatching eyes, wild mane hair, confident smirk, glamorous body, huge breasts, extremely thick thighs, wide hips, burning ruins background, masterpiece, best quality",
+
+    {
+        id: "chimera_mythic",
+        name: "신화의 키메라",
+        rarity: RANKS.SSR,
+        world: WORLDS.WILD,
+        elements: ["Fire", "Dark", "Beast"],
+        baseStr: 30, baseInt: 20,
+        image: "images/creatures/wild/creature_chimera_joy.png",
+        sprites: {
+            "idle": "images/creatures/wild/creature_chimera_joy.png",
+            "joy": "images/creatures/wild/creature_chimera_joy.png",
+            "sad": "images/creatures/wild/creature_chimera_joy.png",
+            "angry": "images/creatures/wild/creature_chimera_joy.png",
+            "skill": "images/creatures/wild/creature_chimera_joy.png",
+            "victory": "images/creatures/wild/creature_chimera_joy.png",
+            "defeat": "images/creatures/wild/creature_chimera_joy.png",
+            "gallery": {
+                "lv1": "images/creatures/wild/creature_chimera_joy.png"
+            }
+        },
+        prompts: {
+            "base": "anime, blue archive style, nikke style, full body, chimera girl, three heads (lion girl main, goat horn girl left, snake girl right tail), chaotic armor, mismatching eyes, wild mane hair, confident smirk, glamorous body, huge breasts, extremely thick thighs, wide hips, burning ruins background, masterpiece, best quality",
             "idle": "standing pose, all heads arguing, crossing arms, tough, no text, no ui",
-                "joy": "all heads laughing, high fiving each other, fire breath fun, no text, no ui",
-                    "sad": "all heads crying, mismatched tears, gloomy fire, no text, no ui",
-                        "angry": "triple roar, fire ice poison aura, terrifying glare, aggressive, no text, no ui",
-                            "skill": "chaos blast, combined element bean, cinematic angle, destruction, masterpiece, no text, no ui",
-                                "victory": "posing on rubble, foot on enemy, proud laugh, triumph, no text, no ui",
-                                    "defeat": "knocked out, heads dizzy, smoke rising, defeated, no text, no ui",
-                                        "gallery_lv1": "dating sim event, chimera girl, arguing over food (meat vs grass), cute pouting, messy eating, no text, no ui",
-                                            "gallery_lv2": "dating sim event, chimera girl, sleeping in a pile, tangled limbs, peaceful chaos, blushing, no text, no ui",
-                                                "gallery_lv3": "dating sim event, chimera girl, dominating presence, three minds one heart, intense harem vibe, alluring, masterpiece, no text, no ui"
-    },
-    lore: {
-        "title": "재앙의 합성수",
+            "joy": "all heads laughing, high fiving each other, fire breath fun, no text, no ui",
+            "sad": "all heads crying, mismatched tears, gloomy fire, no text, no ui",
+            "angry": "triple roar, fire ice poison aura, terrifying glare, aggressive, no text, no ui",
+            "skill": "chaos blast, combined element bean, cinematic angle, destruction, masterpiece, no text, no ui",
+            "victory": "posing on rubble, foot on enemy, proud laugh, triumph, no text, no ui",
+            "defeat": "knocked out, heads dizzy, smoke rising, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, chimera girl, arguing over food (meat vs grass), cute pouting, messy eating, no text, no ui",
+            "gallery_lv2": "dating sim event, chimera girl, sleeping in a pile, tangled limbs, peaceful chaos, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, chimera girl, dominating presence, three minds one heart, intense harem vibe, alluring, masterpiece, no text, no ui"
+        },
+        lore: {
+            "title": "재앙의 합성수",
             "story": "고대 신화 속에서 깨어난 진정한 키메라. 세 개의 머리가 조화를 이루어 파괴적인 힘을 발휘한다. 그가 지나간 자리는 불길만이 남는다.",
-                "personality": "Destructive & Mythic"
-    },
-    relationships: { likes: [], dislikes: [], rival: null },
-    touchLines: {
-        idle: [
-            "크르르... 불태울 것이 더 없나?",
-            "뱀의 독니가 쑤시는군.",
-            "염소의 뿔이 하늘을 찌른다."
-        ],
+            "personality": "Destructive & Mythic"
+        },
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: {
+            idle: [
+                "크르르... 불태울 것이 더 없나?",
+                "뱀의 독니가 쑤시는군.",
+                "염소의 뿔이 하늘을 찌른다."
+            ],
             interaction: [
                 "어느 머리에 손을 대는 거냐?",
                 "우리는 셋이자, 파괴의 하나다.",
                 "조심해, 꼬리가 널 노리고 있어."
             ],
-                gift: [
-                    "신화에 걸맞은 공물이군.",
-                    "마음에 든다. 살려주지.",
-                    "힘이 넘쳐흐른다!"
-                ],
-                    special: [
-                        "신화적 맹공!",
-                        "트리플 디재스터!",
-                        "헬파이어!"
-                    ]
-    },
-    lines: {
-        normal: "공포에 떨어라, 필멸자여.",
+            gift: [
+                "신화에 걸맞은 공물이군.",
+                "마음에 든다. 살려주지.",
+                "힘이 넘쳐흐른다!"
+            ],
+            special: [
+                "신화적 맹공!",
+                "트리플 디재스터!",
+                "헬파이어!"
+            ]
+        },
+        lines: {
+            normal: "공포에 떨어라, 필멸자여.",
             touch_head: "사자의 포효를 들어라!",
-                touch_chest: "염소의 고집을 꺾을 순 없다.",
-                    touch_legs: "뱀의 맹독은 치료할 수 없지.",
-                        touch_special: "우리와 함께 세상을 지배하자."
-    }
-}
-    ,
-{
-    id: "unicorn",
-        name: "유니콘",
-            rarity: RANKS.SR,
-                world: WORLDS.WILD,
-                    elements: ["Earth"], // Default element
-                        baseStr: 10, baseInt: 10,
-                            image: "images/creatures/wild/creature_unicorn.png",
-                                sprites: {
-        "idle": "images/creatures/wild/creature_unicorn.png",
-            "joy": "images/creatures/wild/creature_unicorn_joy.png",
-                "sad": "images/creatures/wild/creature_unicorn_sad.png",
-                    "angry": "images/creatures/wild/creature_unicorn_angry.png",
-                        "skill": "images/creatures/wild/creature_unicorn_skill.png",
-                            "victory": "images/creatures/wild/creature_unicorn_victory.png",
-                                "defeat": "images/creatures/wild/creature_unicorn_defeat.png",
-                                    "gallery": {
-            "lv1": "images/creatures/wild/creature_unicorn_gallery_lv1.png",
-                "lv2": "images/creatures/wild/creature_unicorn_gallery_lv2.png",
-                    "lv3": "images/creatures/wild/creature_unicorn_gallery_lv3.png"
+            touch_chest: "염소의 고집을 꺾을 순 없다.",
+            touch_legs: "뱀의 맹독은 치료할 수 없지.",
+            touch_special: "우리와 함께 세상을 지배하자."
         }
-    },
-    prompts: {
-        "base": "anime, blue archive style, nikke style, full body, unicorn girl, single spiral horn, rainbow mane hair, white purity dress, golden hooves (shoes), gentle expression, glamorous body, huge breasts, extremely thick thighs, wide hips, enchanted forest background, masterpiece, best quality",
+    }
+    ,
+    {
+        id: "unicorn",
+        name: "유니콘",
+        rarity: RANKS.SR,
+        world: WORLDS.WILD,
+        elements: ["Earth"], // Default element
+        baseStr: 10, baseInt: 10,
+        image: "images/creatures/wild/creature_unicorn.png",
+        sprites: {
+            "idle": "images/creatures/wild/creature_unicorn.png",
+            "joy": "images/creatures/wild/creature_unicorn_joy.png",
+            "sad": "images/creatures/wild/creature_unicorn_sad.png",
+            "angry": "images/creatures/wild/creature_unicorn_angry.png",
+            "skill": "images/creatures/wild/creature_unicorn_skill.png",
+            "victory": "images/creatures/wild/creature_unicorn_victory.png",
+            "defeat": "images/creatures/wild/creature_unicorn_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/wild/creature_unicorn_gallery_lv1.png",
+                "lv2": "images/creatures/wild/creature_unicorn_gallery_lv2.png",
+                "lv3": "images/creatures/wild/creature_unicorn_gallery_lv3.png"
+            }
+        },
+        prompts: {
+            "base": "anime, blue archive style, nikke style, full body, unicorn girl, single spiral horn, rainbow mane hair, white purity dress, golden hooves (shoes), gentle expression, glamorous body, huge breasts, extremely thick thighs, wide hips, enchanted forest background, masterpiece, best quality",
             "idle": "standing pose, brushing hair, elegance, sparkles, no text, no ui",
-                "joy": "prancing, laughing softly, rainbow aura, happy, no text, no ui",
-                    "sad": "horn dim, looking down, shedding crystal tear, sad, no text, no ui",
-                        "angry": "rearing up, magic gathering at horn, stern face, aggressive, no text, no ui",
-                            "skill": "purification light, horn laser, cinematic angle, holy magic, masterpiece, no text, no ui",
-                                "victory": "standing tall, wind blowing hair, noble smile, triumph, no text, no ui",
-                                    "defeat": "kneeling, dress dirty, horn cracked, looking down, defeated, no text, no ui",
-                                        "gallery_lv1": "dating sim event, unicorn girl, reading in library, glasses, shy look, intelligence, no text, no ui",
-                                            "gallery_lv2": "dating sim event, unicorn girl, healing injured animal, gentle touch, motherly smile, warm light, no text, no ui",
-                                                "gallery_lv3": "dating sim event, unicorn girl, laying head on viewer's lap, trust, sleeping face, alluring, masterpiece, no text, no ui"
-    },
-    lore: {
-        "title": "숲의 수호수",
+            "joy": "prancing, laughing softly, rainbow aura, happy, no text, no ui",
+            "sad": "horn dim, looking down, shedding crystal tear, sad, no text, no ui",
+            "angry": "rearing up, magic gathering at horn, stern face, aggressive, no text, no ui",
+            "skill": "purification light, horn laser, cinematic angle, holy magic, masterpiece, no text, no ui",
+            "victory": "standing tall, wind blowing hair, noble smile, triumph, no text, no ui",
+            "defeat": "kneeling, dress dirty, horn cracked, looking down, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, unicorn girl, reading in library, glasses, shy look, intelligence, no text, no ui",
+            "gallery_lv2": "dating sim event, unicorn girl, healing injured animal, gentle touch, motherly smile, warm light, no text, no ui",
+            "gallery_lv3": "dating sim event, unicorn girl, laying head on viewer's lap, trust, sleeping face, alluring, masterpiece, no text, no ui"
+        },
+        lore: {
+            "title": "숲의 수호수",
             "story": "성스러운 뿔을 가진 전설의 유니콘. 숲의 깊은 곳 성소에 머물며, 순결한 처녀만이 그에게 다가갈 수 있다고 전해진다. 뿔에는 해독 작용이 있다.",
-                "personality": "Pure & Holy"
-    },
-    relationships: { likes: [], dislikes: [], rival: null },
-    touchLines: {
-        idle: [
-            "이 숲은 내가 지킨다.",
-            "순수한 마음만이 나를 볼 수 있지.",
-            "뿔에서 빛이 나는군. 누군가 치유가 필요한가?"
-        ],
+            "personality": "Pure & Holy"
+        },
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: {
+            idle: [
+                "이 숲은 내가 지킨다.",
+                "순수한 마음만이 나를 볼 수 있지.",
+                "뿔에서 빛이 나는군. 누군가 치유가 필요한가?"
+            ],
             interaction: [
                 "나를 만질 수 있다니... 그대는 순수하군.",
                 "내 갈기는 부드럽지만, 뿔은 날카로워.",
                 "등에 타는 건 허락하지 않았어."
             ],
-                gift: [
-                    "성스러운 기운이 느껴지는군.",
-                    "숲의 정수인가? 고맙다.",
-                    "네 마음이 가장 큰 선물이야."
-                ],
-                    special: [
-                        "성스러운 돌격!",
-                        "정화의 뿔!",
-                        "빛의 질주!"
-                    ]
-    },
-    lines: {
-        normal: "어둠은 빛 앞에서 사라질 뿐.",
+            gift: [
+                "성스러운 기운이 느껴지는군.",
+                "숲의 정수인가? 고맙다.",
+                "네 마음이 가장 큰 선물이야."
+            ],
+            special: [
+                "성스러운 돌격!",
+                "정화의 뿔!",
+                "빛의 질주!"
+            ]
+        },
+        lines: {
+            normal: "어둠은 빛 앞에서 사라질 뿐.",
             touch_head: "뿔을 만지면 모든 독이 사라지지.",
-                touch_chest: "고결한 심장 박동이 느껴지나?",
-                    touch_legs: "바람보다 빠르게 달릴 수 있어.",
-                        touch_special: "그대와 함께라면 어둠도 두렵지 않아."
-    }
-},
-
-{
-    id: "time_lord_chronos",
-        name: "시간의 지배자 크로노스",
-            rarity: RANKS.UR,
-                world: WORLDS.WILD,
-                    elements: ["Light", "Dark"],
-                        baseStr: 40, baseInt: 80,
-                            image: "images/creatures/wild/creature_time_lord_chronos.png",
-                                sprites: {
-        "idle": "images/creatures/wild/creature_time_lord_chronos.png",
-            "joy": "images/creatures/wild/creature_time_lord_chronos_joy.png",
-                "sad": "images/creatures/wild/creature_time_lord_chronos_sad.png",
-                    "angry": "images/creatures/wild/creature_time_lord_chronos_angry.png",
-                        "skill": "images/creatures/wild/creature_time_lord_chronos_skill.png",
-                            "victory": "images/creatures/wild/creature_time_lord_chronos_victory.png",
-                                "defeat": "images/creatures/wild/creature_time_lord_chronos_defeat.png",
-                                    "gallery": {
-            "lv1": "images/creatures/wild/creature_time_lord_chronos_gallery_lv1.png",
-                "lv2": "images/creatures/wild/creature_time_lord_chronos_gallery_lv2.png",
-                    "lv3": "images/creatures/wild/creature_time_lord_chronos_gallery_lv3.png"
+            touch_chest: "고결한 심장 박동이 느껴지나?",
+            touch_legs: "바람보다 빠르게 달릴 수 있어.",
+            touch_special: "그대와 함께라면 어둠도 두렵지 않아."
         }
     },
-    prompts: {
-        "base": "(masterpiece:1.5), (best quality:1.4), (nikke style:1.4), (blue archive style:1.2), full body, solo, time_lord_chronos, female, (beautiful mature face:1.4), (glowing purple eyes with clock pupils:1.3), long silver hair styling like gear teeth, (revealing steampunk gothic dress:1.3), (mechanical limbs or accessories:1.2), (glamorous body:1.4), (huge breasts:1.3), (wide hips:1.4), (thick thighs:1.3), pale skin, giant clock gears background, floating time runes, arrogant but seductive pose",
+
+    {
+        id: "time_lord_chronos",
+        name: "시간의 지배자 크로노스",
+        rarity: RANKS.UR,
+        world: WORLDS.WILD,
+        elements: ["Light", "Dark"],
+        baseStr: 40, baseInt: 80,
+        image: "images/creatures/wild/creature_time_lord_chronos.png",
+        sprites: {
+            "idle": "images/creatures/wild/creature_time_lord_chronos.png",
+            "joy": "images/creatures/wild/creature_time_lord_chronos_joy.png",
+            "sad": "images/creatures/wild/creature_time_lord_chronos_sad.png",
+            "angry": "images/creatures/wild/creature_time_lord_chronos_angry.png",
+            "skill": "images/creatures/wild/creature_time_lord_chronos_skill.png",
+            "victory": "images/creatures/wild/creature_time_lord_chronos_victory.png",
+            "defeat": "images/creatures/wild/creature_time_lord_chronos_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/wild/creature_time_lord_chronos_gallery_lv1.png",
+                "lv2": "images/creatures/wild/creature_time_lord_chronos_gallery_lv2.png",
+                "lv3": "images/creatures/wild/creature_time_lord_chronos_gallery_lv3.png"
+            }
+        },
+        prompts: {
+            "base": "(masterpiece:1.5), (best quality:1.4), (nikke style:1.4), (blue archive style:1.2), full body, solo, time_lord_chronos, female, (beautiful mature face:1.4), (glowing purple eyes with clock pupils:1.3), long silver hair styling like gear teeth, (revealing steampunk gothic dress:1.3), (mechanical limbs or accessories:1.2), (glamorous body:1.4), (huge breasts:1.3), (wide hips:1.4), (thick thighs:1.3), pale skin, giant clock gears background, floating time runes, arrogant but seductive pose",
             "idle": "standing pose with clock staff, confident smile, looking at viewer, rotating gears background, no text, no ui",
-                "joy": "laughing elegantly, hand covering mouth, blushing, time stopping effect, happy eyes, no text, no ui",
-                    "sad": "tears flowing up (reversed time), looking down, holding a broken pocket watch, gloomy atmosphere, no text, no ui",
-                        "angry": "furious expression, glowing purple aura, clocks shattering background, summoning ancient weapons, aggressive stance, no text, no ui",
-                            "skill": "floating in time stream, casting ultimate time spell, galaxy and clock gears mixed, cinematic lighting, extreme angle, no text, no ui",
-                                "victory": "sitting on a floating clock, crossing legs, arrogant victory smile, holding a wine glass of time essence, no text, no ui",
-                                    "defeat": "collapsed on gears, dress torn revealing skin, mechanical parts sparks, exhausted, humiliated look, no text, no ui",
-                                        "gallery_lv1": "dating sim event, standing inside a giant clock tower, cogs turning, wind blowing skirt, looking down at viewer with interest, detailed background, no text, no ui",
-                                            "gallery_lv2": "dating sim event, bound by golden time chains on a gear wall, struggling but blushing, torn clothes, seductive expression, soft lighting, no text, no ui",
-                                                "gallery_lv3": "dating sim event, lying on a bed made of soft time clouds, inviting viewer, extreme close up, heart shaped pupils, mouth open, overwhelming love, no text, no ui"
-    },
-    lore: {
-        "title": "영원의 관측자",
+            "joy": "laughing elegantly, hand covering mouth, blushing, time stopping effect, happy eyes, no text, no ui",
+            "sad": "tears flowing up (reversed time), looking down, holding a broken pocket watch, gloomy atmosphere, no text, no ui",
+            "angry": "furious expression, glowing purple aura, clocks shattering background, summoning ancient weapons, aggressive stance, no text, no ui",
+            "skill": "floating in time stream, casting ultimate time spell, galaxy and clock gears mixed, cinematic lighting, extreme angle, no text, no ui",
+            "victory": "sitting on a floating clock, crossing legs, arrogant victory smile, holding a wine glass of time essence, no text, no ui",
+            "defeat": "collapsed on gears, dress torn revealing skin, mechanical parts sparks, exhausted, humiliated look, no text, no ui",
+            "gallery_lv1": "dating sim event, standing inside a giant clock tower, cogs turning, wind blowing skirt, looking down at viewer with interest, detailed background, no text, no ui",
+            "gallery_lv2": "dating sim event, bound by golden time chains on a gear wall, struggling but blushing, torn clothes, seductive expression, soft lighting, no text, no ui",
+            "gallery_lv3": "dating sim event, lying on a bed made of soft time clouds, inviting viewer, extreme close up, heart shaped pupils, mouth open, overwhelming love, no text, no ui"
+        },
+        lore: {
+            "title": "영원의 관측자",
             "story": "시간 그 자체를 다스리는 존재. 과거와 미래를 동시에 보며, 모든 시간의 흐름을 관장한다. 우주의 시작부터 끝까지 목격한 관측자로, 인간의 수명은 그에게 한 순간에 불과하다. 시간을 멈추고, 되돌리고, 앞당길 수 있으나 함부로 사용하지 않는다. 시계태엽처럼 정확하고 냉정하나, 그 속에 무한한 지혜를 담고 있다.",
-                "origin": "범우주적 존재 / 시간의 차원",
-                    "personality": "Timeless & Wise"
-    },
-    relationships: { likes: [], dislikes: [], rival: null },
-    touchLines: {
-        idle: [
-            "시간은 흐르고... 모든 것은 변한다.",
-            "과거, 현재, 미래... 모두 내 눈앞에.",
-            "영원 속에서 한 순간을 만났구나."
-        ],
+            "origin": "범우주적 존재 / 시간의 차원",
+            "personality": "Timeless & Wise"
+        },
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: {
+            idle: [
+                "시간은 흐르고... 모든 것은 변한다.",
+                "과거, 현재, 미래... 모두 내 눈앞에.",
+                "영원 속에서 한 순간을 만났구나."
+            ],
             interaction: [
                 "시간을 만지다니... 흥미로운 역설이군.",
                 "네 시간은 짧지만, 그 순간은 영원할 수 있어.",
                 "이 접촉, 타임라인에 기록되었어."
             ],
-                gift: [
-                    "선물? 시간이 지나도 변치 않을까?",
-                    "영원 속 한 순간의 선물... 고마워.",
-                    "이 순간만은 시간을 멈추고 싶구나."
-                ],
-                    special: [
-                        "시간이여, 내 명령에 복종하라!",
-                        "과거와 미래가 지금 이곳에!",
-                        "영원의 심판을 받아라!"
-                    ]
-    },
-    lines: {
-        normal: "모든 순간은 영원의 한 조각.",
+            gift: [
+                "선물? 시간이 지나도 변치 않을까?",
+                "영원 속 한 순간의 선물... 고마워.",
+                "이 순간만은 시간을 멈추고 싶구나."
+            ],
+            special: [
+                "시간이여, 내 명령에 복종하라!",
+                "과거와 미래가 지금 이곳에!",
+                "영원의 심판을 받아라!"
+            ]
+        },
+        lines: {
+            normal: "모든 순간은 영원의 한 조각.",
             touch_head: "시계태엽 같은 내 머리를 만지는구나.",
-                touch_chest: "이 가슴은 우주의 시작부터 뛰고 있어.",
-                    touch_legs: "시간의 발걸음을 느껴봐.",
-                        touch_special: "너와 함께하는 시간만은... 영원처럼 느껴져."
+            touch_chest: "이 가슴은 우주의 시작부터 뛰고 있어.",
+            touch_legs: "시간의 발걸음을 느껴봐.",
+            touch_special: "너와 함께하는 시간만은... 영원처럼 느껴져."
+        }
     }
-}
     ,
 
-{
-    id: "beast_ziz",
+    {
+        id: "beast_ziz",
         name: "천상의 여왕 지즈",
-            rarity: RANKS.UR,
-                world: WORLDS.WILD,
-                    elements: ["Wind", "Light"],
-                        baseStr: 80, baseInt: 60,
-                            image: "images/creatures/wild/creature_beast_ziz.png",
-                                sprites: {
-        idle: "images/creatures/wild/creature_beast_ziz.png",
+        rarity: RANKS.UR,
+        world: WORLDS.WILD,
+        elements: ["Wind", "Light"],
+        baseStr: 80, baseInt: 60,
+        image: "images/creatures/wild/creature_beast_ziz.png",
+        sprites: {
+            idle: "images/creatures/wild/creature_beast_ziz.png",
             joy: "images/creatures/wild/creature_beast_ziz_joy.png",
-                sad: "images/creatures/wild/creature_beast_ziz_sad.png",
-                    angry: "images/creatures/wild/creature_beast_ziz_angry.png",
-                        skill: "images/creatures/wild/creature_beast_ziz_skill.png",
-                            victory: "images/creatures/wild/creature_beast_ziz_victory.png",
-                                defeat: "images/creatures/wild/creature_beast_ziz_defeat.png",
-                                    gallery: { }
-    },
-    prompts: {
-        "base": "anime, blue archive style, nikke style, full body, beast ziz girl, giant wingspan cloak, feathery armor, sky blue hair with cloud tips, wind aura, arrogant queen, glamorous body, huge breasts, extremely thick thighs, wide hips, high altitude sky background, masterpiece, best quality",
+            sad: "images/creatures/wild/creature_beast_ziz_sad.png",
+            angry: "images/creatures/wild/creature_beast_ziz_angry.png",
+            skill: "images/creatures/wild/creature_beast_ziz_skill.png",
+            victory: "images/creatures/wild/creature_beast_ziz_victory.png",
+            defeat: "images/creatures/wild/creature_beast_ziz_defeat.png",
+            gallery: {}
+        },
+        prompts: {
+            "base": "anime, blue archive style, nikke style, full body, beast ziz girl, giant wingspan cloak, feathery armor, sky blue hair with cloud tips, wind aura, arrogant queen, glamorous body, huge breasts, extremely thick thighs, wide hips, high altitude sky background, masterpiece, best quality",
             "idle": "floating pose, looking down on world, arms crossed, confident, no text, no ui",
-                "joy": "flying high,looping in air, laughing loudly, wind blast, no text, no ui",
-                    "sad": "grounded, wings heavy, looking up at sky, longing, no text, no ui",
-                        "angry": "summoning storm, eyes glowing white, hurricane hair, aggressive, no text, no ui",
-                            "skill": "sky fall, giant tornado, cinematic angle, wind pressure, masterpiece, no text, no ui",
-                                "victory": "spread wings wide, sun halo behind, goddess pose, triumph, no text, no ui",
-                                    "defeat": "falling from sky, feathers scattered, unconscious, defeated, no text, no ui",
-                                        "gallery_lv1": "dating sim event, beast ziz girl, bird feeding (giant birds), motherly side, soft smile, no text, no ui",
-                                            "gallery_lv2": "dating sim event, beast ziz girl, cloud surfing, holding hand, exhilarating seed, blushing, no text, no ui",
-                                                "gallery_lv3": "dating sim event, beast ziz girl, throne of clouds, inviting viewer to sit, queen's favor, alluring, masterpiece, no text, no ui"
-    },
-    lore: {
-        title: "하늘의 지배자",
+            "joy": "flying high,looping in air, laughing loudly, wind blast, no text, no ui",
+            "sad": "grounded, wings heavy, looking up at sky, longing, no text, no ui",
+            "angry": "summoning storm, eyes glowing white, hurricane hair, aggressive, no text, no ui",
+            "skill": "sky fall, giant tornado, cinematic angle, wind pressure, masterpiece, no text, no ui",
+            "victory": "spread wings wide, sun halo behind, goddess pose, triumph, no text, no ui",
+            "defeat": "falling from sky, feathers scattered, unconscious, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, beast ziz girl, bird feeding (giant birds), motherly side, soft smile, no text, no ui",
+            "gallery_lv2": "dating sim event, beast ziz girl, cloud surfing, holding hand, exhilarating seed, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, beast ziz girl, throne of clouds, inviting viewer to sit, queen's favor, alluring, masterpiece, no text, no ui"
+        },
+        lore: {
+            title: "하늘의 지배자",
             story: "하늘을 지배하는 거대한 새. 날개를 펼치면 태양을 가릴 정도로 거대하며, 레비아탄, 베히모스와 함께 태초의 짐승 중 하나입니다.",
-                personality: "Majestic"
-    },
-    relationships: { likes: [], dislikes: [], rival: null },
-    touchLines: {
-        idle: ["하늘은 나의 것이다.", "바람이 느껴지는가?", "구름 위로 올라오라."],
+            personality: "Majestic"
+        },
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: {
+            idle: ["하늘은 나의 것이다.", "바람이 느껴지는가?", "구름 위로 올라오라."],
             interaction: ["깃털 하나가 숲 하나를 덮을 수 있지.", "나를 부르는 자 누구냐.", "태양 가까이로 가자."],
-                gift: ["하늘의 보물이군.", "바람의 선물인가?", "만족스럽다."],
-                    special: ["천공의 심판!", "하늘이 무너질 것이다!", "태풍을 불러오마!"]
-    },
-    lines: {
-        normal: "나의 날개 아래 모든 것이 평온하리라.",
+            gift: ["하늘의 보물이군.", "바람의 선물인가?", "만족스럽다."],
+            special: ["천공의 심판!", "하늘이 무너질 것이다!", "태풍을 불러오마!"]
+        },
+        lines: {
+            normal: "나의 날개 아래 모든 것이 평온하리라.",
             touch_head: "왕관을 건드리지 마라.",
-                touch_chest: "심장은 폭풍처럼 뛰고 있다.",
-                    touch_legs: "대지에 발을 딛는 것은 드문 일이지.",
-                        touch_special: "함께 하늘의 끝까지 날아보자꾸나."
+            touch_chest: "심장은 폭풍처럼 뛰고 있다.",
+            touch_legs: "대지에 발을 딛는 것은 드문 일이지.",
+            touch_special: "함께 하늘의 끝까지 날아보자꾸나."
+        }
     }
-}
     ,
-{
-    id: "beast_behemoth",
+    {
+        id: "beast_behemoth",
         name: "대지의 패왕 베히모스",
-            rarity: "SSR",
-                world: "WILD",
-                    elements: ["Earth"],
-                        baseStr: 90, baseInt: 10,
-                            image: "images/creatures/wild/creature_beast_behemoth.png",
-                                prompts: {
-        "base": "anime, blue archive style, nikke style, full body, beast behemoth girl, earth armor, beast ears and tail, heavy gauntlets, massive strength, confident grin, glamorous body, huge breasts, extremely thick thighs, wide hips, grand canyon background, masterpiece, best quality",
+        rarity: "SSR",
+        world: "WILD",
+        elements: ["Earth"],
+        baseStr: 90, baseInt: 10,
+        image: "images/creatures/wild/creature_beast_behemoth.png",
+        prompts: {
+            "base": "anime, blue archive style, nikke style, full body, beast behemoth girl, earth armor, beast ears and tail, heavy gauntlets, massive strength, confident grin, glamorous body, huge breasts, extremely thick thighs, wide hips, grand canyon background, masterpiece, best quality",
             "idle": "standing pose, cracking knuckles, heavy stance, confident, no text, no ui",
-                "joy": "flexing muscles, laughing heartily, earthquake shake, happy, no text, no ui",
-                    "sad": "sitting on broken rock, pouting, hungry, stomach growl, no text, no ui",
-                        "angry": "stomping ground, fissures forming, glowing red eyes, aggressive, no text, no ui",
-                            "skill": "earthquake smash, throwing mountain, cinematic angle, dust cloud, masterpiece, no text, no ui",
-                                "victory": "rearing up, arms raised, roaring victory, power, no text, no ui",
-                                    "defeat": "buried in rubble, dizzy, armor broken, defeated, no text, no ui",
-                                        "gallery_lv1": "dating sim event, beast behemoth girl, arm wrestling, sweating, determined face, close up, no text, no ui",
-                                            "gallery_lv2": "dating sim event, beast behemoth girl, big feast, eating meat, messy face, happy, no text, no ui",
-                                                "gallery_lv3": "dating sim event, beast behemoth girl, protecting viewer from landslide, strong back, looking over shoulder, alluring, masterpiece, no text, no ui"
-    },
-    sprites: {
-        idle: "images/creatures/wild/creature_beast_behemoth.png",
+            "joy": "flexing muscles, laughing heartily, earthquake shake, happy, no text, no ui",
+            "sad": "sitting on broken rock, pouting, hungry, stomach growl, no text, no ui",
+            "angry": "stomping ground, fissures forming, glowing red eyes, aggressive, no text, no ui",
+            "skill": "earthquake smash, throwing mountain, cinematic angle, dust cloud, masterpiece, no text, no ui",
+            "victory": "rearing up, arms raised, roaring victory, power, no text, no ui",
+            "defeat": "buried in rubble, dizzy, armor broken, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, beast behemoth girl, arm wrestling, sweating, determined face, close up, no text, no ui",
+            "gallery_lv2": "dating sim event, beast behemoth girl, big feast, eating meat, messy face, happy, no text, no ui",
+            "gallery_lv3": "dating sim event, beast behemoth girl, protecting viewer from landslide, strong back, looking over shoulder, alluring, masterpiece, no text, no ui"
+        },
+        sprites: {
+            idle: "images/creatures/wild/creature_beast_behemoth.png",
             joy: "images/creatures/wild/creature_beast_behemoth_joy.png",
-                sad: "images/creatures/wild/creature_beast_behemoth_sad.png",
-                    angry: "images/creatures/wild/creature_beast_behemoth_angry.png",
-                        skill: "images/creatures/wild/creature_beast_behemoth_skill.png",
-                            "gallery": {
-            "lv1": "images/creatures/wild/creature_beast_behemoth_gallery_lv1.png",
+            sad: "images/creatures/wild/creature_beast_behemoth_sad.png",
+            angry: "images/creatures/wild/creature_beast_behemoth_angry.png",
+            skill: "images/creatures/wild/creature_beast_behemoth_skill.png",
+            "gallery": {
+                "lv1": "images/creatures/wild/creature_beast_behemoth_gallery_lv1.png",
                 "lv2": "images/creatures/wild/creature_beast_behemoth_gallery_lv2.png",
-                    "lv3": "images/creatures/wild/creature_beast_behemoth_gallery_lv3.png"
-        }
-    },
-    lore: {
-        title: "대지의 기둥",
+                "lv3": "images/creatures/wild/creature_beast_behemoth_gallery_lv3.png"
+            }
+        },
+        lore: {
+            title: "대지의 기둥",
             story: "대지를 지탱하는 거대한 짐승. 그가 걸음을 옮길 때마다 지각 변동이 일어납니다.",
-                personality: "Stoic"
+            personality: "Stoic"
+        },
+        relationships: { likes: [], dislikes: ["beast_leviathan"], rival: null },
+        touchLines: { idle: ["쿵..."], interaction: ["!"], gift: ["..."], special: ["크아앙!"] },
+        lines: { normal: "산보다 거대하다." }
     },
-    relationships: { likes: [], dislikes: ["beast_leviathan"], rival: null },
-    touchLines: { idle: ["쿵..."], interaction: ["!"], gift: ["..."], special: ["크아앙!"] },
-    lines: { normal: "산보다 거대하다." }
-},
-{
-    id: "creator_gaia_wild",
+    {
+        id: "creator_gaia_wild",
         name: "대지의 어머니 가이아 (Wild)",
-            rarity: RANKS.SSR,
-                world: WORLDS.WILD,
-                    elements: ["Earth", "Nature"],
-                        baseStr: 30, baseInt: 80,
-                            image: "images/creatures/olympus/creature_gaia.png",
-                                sprites: {
-        "idle": "images/creatures/olympus/creature_gaia.png",
+        rarity: RANKS.SSR,
+        world: WORLDS.WILD,
+        elements: ["Earth", "Nature"],
+        baseStr: 30, baseInt: 80,
+        image: "images/creatures/olympus/creature_gaia.png",
+        sprites: {
+            "idle": "images/creatures/olympus/creature_gaia.png",
             "joy": "images/creatures/olympus/creature_gaia_joy.png",
-                "sad": "images/creatures/olympus/creature_gaia_sad.png",
-                    "angry": "images/creatures/olympus/creature_gaia_angry.png",
-                        "skill": "images/creatures/olympus/creature_gaia_skill.png",
-                            "victory": "images/creatures/olympus/creature_gaia_victory.png",
-                                "defeat": "images/creatures/olympus/creature_gaia_defeat.png",
-                                    "gallery": {
-            "lv1": "images/creatures/olympus/creature_gaia_gallery_lv1.png",
+            "sad": "images/creatures/olympus/creature_gaia_sad.png",
+            "angry": "images/creatures/olympus/creature_gaia_angry.png",
+            "skill": "images/creatures/olympus/creature_gaia_skill.png",
+            "victory": "images/creatures/olympus/creature_gaia_victory.png",
+            "defeat": "images/creatures/olympus/creature_gaia_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/olympus/creature_gaia_gallery_lv1.png",
                 "lv2": "images/creatures/olympus/creature_gaia_gallery_lv2.png",
-                    "lv3": "images/creatures/olympus/creature_gaia_gallery_lv3.png"
-        }
-    },
-    prompts: {
-        "base": "anime, blue archive style, nikke style, full body, gaia goddess girl, earth mother, flowing vines dress, flowers in hair, gentle motherly figure, glamorous body, huge breasts, extremely thick thighs, wide hips, primordial garden background, masterpiece, best quality",
+                "lv3": "images/creatures/olympus/creature_gaia_gallery_lv3.png"
+            }
+        },
+        prompts: {
+            "base": "anime, blue archive style, nikke style, full body, gaia goddess girl, earth mother, flowing vines dress, flowers in hair, gentle motherly figure, glamorous body, huge breasts, extremely thick thighs, wide hips, primordial garden background, masterpiece, best quality",
             "idle": "sitting on a grassy knoll, animals gathering around, gentle smile, peaceful, no text, no ui",
-                "joy": "holding hands with nature spirits, bright laughter, flowers blooming around, happy, no text, no ui",
-                    "sad": "withered flowers, grey sky, looking down sadly, tears nourishing dry earth, no text, no ui",
-                        "angry": "thorny vines erupting, earth shaking, stern goddess face, glowing green eyes, aggressive, no text, no ui",
-                            "skill": "world creation, giant tree spawning, cinematic angle, life energy, masterpiece, no text, no ui",
-                                "victory": "standing amidst blooming paradise, arms open welcoming, warm glow, triumph, no text, no ui",
-                                    "defeat": "kneeling on barren ground, fading away into petals, sorrowful look, defeated, no text, no ui",
-                                        "gallery_lv1": "dating sim event, gaia goddess girl, gardening together, dirt on face, cute smile, sunlight, no text, no ui",
-                                            "gallery_lv2": "dating sim event, gaia goddess girl, napping on moss bed, forest animals sleeping too, peaceful, soft lighting, no text, no ui",
-                                                "gallery_lv3": "dating sim event, gaia goddess girl, waterfall bath, nature's beauty, revealing but holy, alluring, masterpiece, no text, no ui"
-    },
-    lore: {
-        "title": "생명의 요람",
+            "joy": "holding hands with nature spirits, bright laughter, flowers blooming around, happy, no text, no ui",
+            "sad": "withered flowers, grey sky, looking down sadly, tears nourishing dry earth, no text, no ui",
+            "angry": "thorny vines erupting, earth shaking, stern goddess face, glowing green eyes, aggressive, no text, no ui",
+            "skill": "world creation, giant tree spawning, cinematic angle, life energy, masterpiece, no text, no ui",
+            "victory": "standing amidst blooming paradise, arms open welcoming, warm glow, triumph, no text, no ui",
+            "defeat": "kneeling on barren ground, fading away into petals, sorrowful look, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, gaia goddess girl, gardening together, dirt on face, cute smile, sunlight, no text, no ui",
+            "gallery_lv2": "dating sim event, gaia goddess girl, napping on moss bed, forest animals sleeping too, peaceful, soft lighting, no text, no ui",
+            "gallery_lv3": "dating sim event, gaia goddess girl, waterfall bath, nature's beauty, revealing but holy, alluring, masterpiece, no text, no ui"
+        },
+        lore: {
+            "title": "생명의 요람",
             "story": "모든 생명체의 어머니. 야생의 땅에서도 그녀의 숨결은 숲을 이루고 강을 흐르게 합니다.",
-                "personality": "Motherly"
-    },
-    relationships: { likes: [], dislikes: [], rival: null },
-    touchLines: {
-        idle: [
-            "모든 것은 흙으로 돌아간단다.",
-            "생명의 숨결이 느껴지니?",
-            "편안하게 쉬렴, 나의 아이야."
-        ],
+            "personality": "Motherly"
+        },
+        relationships: { likes: [], dislikes: [], rival: null },
+        touchLines: {
+            idle: [
+                "모든 것은 흙으로 돌아간단다.",
+                "생명의 숨결이 느껴지니?",
+                "편안하게 쉬렴, 나의 아이야."
+            ],
             interaction: [
                 "간지럽구나, 후후.",
                 "너의 손길은 따뜻하구나.",
                 "대지의 기운을 나누어주마."
             ],
-                gift: [
-                    "자연의 선물이구나.",
-                    "아름다운 마음씨에 감동했단다.",
-                    "이것 또한 생명의 순환이지."
-                ],
-                    special: [
-                        "자라나라, 생명의 나무여!",
-                        "대지의 분노를 느껴라!",
-                        "모든 것을 품어주마."
-                    ]
-    },
-    lines: {
-        normal: "나는 모든 것의 시작이자 끝이란다.",
+            gift: [
+                "자연의 선물이구나.",
+                "아름다운 마음씨에 감동했단다.",
+                "이것 또한 생명의 순환이지."
+            ],
+            special: [
+                "자라나라, 생명의 나무여!",
+                "대지의 분노를 느껴라!",
+                "모든 것을 품어주마."
+            ]
+        },
+        lines: {
+            normal: "나는 모든 것의 시작이자 끝이란다.",
             touch_head: "머릿결에서 숲의 향기가 나지 않니?",
-                touch_chest: "이 심장은 대지의 맥박이란다.",
-                    touch_legs: "뿌리처럼 단단하게 지탱하고 있지.",
-                        touch_special: "언제든 나의 품으로 돌아오렴."
+            touch_chest: "이 심장은 대지의 맥박이란다.",
+            touch_legs: "뿌리처럼 단단하게 지탱하고 있지.",
+            touch_special: "언제든 나의 품으로 돌아오렴."
+        }
     }
-}
 ];

@@ -20,13 +20,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 천년 분재 정령",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 천년 분재 정령, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, bonsai spirit girl, nature goddess, ancient tree features, leafy hair accessories, oriental green dress, glamorous body, huge breasts, extremely thick thighs, wide hips, holding a small bonsai tree, mystical forest background, soft bloom lighting, masterpiece, best quality",
+            "idle": "standing pose, calm and wise expression, holding bonsai, gentle wind, no text, no ui",
+            "joy": "smiling gently, flowers blooming around, eyes closed in delight, hand on cheek, happy atmosphere, no text, no ui",
+            "sad": "melancholic expression, leaves withering, looking down, holding a broken branch, rainy background, no text, no ui",
+            "angry": "frowning, glowing green eyes, roots emerging from ground, aggressive nature magic, summon pose, no text, no ui",
+            "skill": "casting ancient nature spell, giant spectral tree appear, cinematic angle, glowing green rune circles, wind blowing, masterpiece, no text, no ui",
+            "victory": "peaceful victory pose, sitting on a floating root, holding tea cup, satisfied smile, sunbeams, no text, no ui",
+            "defeat": "collapsed on ground, dress torn, leaves scattered, exhausted expression, looking at withered tree, no text, no ui",
+            "gallery_lv1": "dating sim event, bonsai spirit girl, trimming a bonsai tree, looking at viewer with a warm smile, sunlight filtering through leaves, peaceful garden, close up, no text, no ui"
         },
         lore: {
             "title": "오랜 시간의 지혜",
@@ -85,13 +87,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 판다 수도승",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 판다 수도승, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, panda monk girl, martial artist, cute panda ears, black and white martial arts gi, china dress modification, glamorous body, huge breasts, extremely thick thighs, wide hips, bamboo forest background, punching pose, masterpiece, best quality",
+            "idle": "standing pose, fighting stance, confident smirk, fists raised, no text, no ui",
+            "joy": "eating bamboo bun, happy expression, cheeks stuffed, winking, hearts floating, no text, no ui",
+            "sad": "sitting on ground, panda ears drooping, hungry expression, holding empty bowl, no text, no ui",
+            "angry": "furious expression, burning aura, breaking a bamboo stick, glowing eyes, dynamic angle, no text, no ui",
+            "skill": "performing high kick, energy shockwave, cinematic lighting, bamboo leaves flying, dynamic motion blur, masterpiece, no text, no ui",
+            "victory": "one finger handstand, triumphant smile, sweating lightly, thumbs up, no text, no ui",
+            "defeat": "lying on back, dizzy eyes, clothes dusty, bamboo bun dropped, defeated pose, no text, no ui",
+            "gallery_lv1": "dating sim event, panda monk girl, meditating under a waterfall, wet clothes clinging to skin, focused expression, peaceful nature, no text, no ui"
         },
         lore: {
             "title": "대나무 숲의 무도가",
@@ -150,13 +154,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 복 고양이 쿠로",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 복 고양이 쿠로, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, lucky cat girl, nekomimi, kuro cat ears, black twin tails, red kimono with gold coin patterns, short skirt, glamorous body, huge breasts, extremely thick thighs, wide hips, holding giant gold coin, japanese shrine background, masterpiece, best quality",
+            "idle": "standing pose, beckoning hand gesture (maneki neko), playful smile, winking, no text, no ui",
+            "joy": "jumping with joy, coins raining down, excited expression, cat mouth, sparkling eyes, no text, no ui",
+            "sad": "ears went down, dropped gold coin, crying, looking at viewer with puppy eyes, no text, no ui",
+            "angry": "hissing, claws out, fur standing up, glowing yellow eyes, aggressive pose, no text, no ui",
+            "skill": "throwing massive gold coins, golden light explosion, cinematic angle, wealth aura, masterpiece, no text, no ui",
+            "victory": "sitting on a pile of gold, counting coins, satisfied smirk, rich atmosphere, no text, no ui",
+            "defeat": "empty pockets, clothes dirty, sitting in despair, comic tears, defeated pose, no text, no ui",
+            "gallery_lv1": "dating sim event, lucky cat girl, working at a shrine shop, leaning over counter, cleavage visible, teasing smile, inviting viewer, no text, no ui"
         },
         lore: {
             "title": "행운을 부르는 고양이",
@@ -215,13 +221,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 꼬마 선녀",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 꼬마 선녀, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, little heavenly maiden, fairy girl, petite and cute, floating celestial robes, pink and white dress, soft wings, cute body, petite frame, lovely face, clouds and rainbows background, masterpiece, best quality",
+            "idle": "floating pose, holding a peach, innocent smile, curiosity, no text, no ui",
+            "joy": "spinning in air, robes fluttering, laughing, flowers blooming, bright sparkles, no text, no ui",
+            "sad": "sitting on a cloud, hugging knees, pouting, cloudy sky, sad atmosphere, no text, no ui",
+            "angry": "puffing cheeks, stomping on cloud, small lightning strikes, pouting angrily, no text, no ui",
+            "skill": "summoning giant peach, pink energy wave, cinematic angle, celestial light, masterpiece, no text, no ui",
+            "victory": "holding a basket of peaches, peace sign, winking, radiant background, no text, no ui",
+            "defeat": "tangled in robes, falling from cloud, dizzy eyes, crying, cute defeat pose, no text, no ui",
+            "gallery_lv1": "dating sim event, little heavenly maiden, offering a bite of peach, sitting on a cloud bench, close up, innocent blush, looking at viewer, no text, no ui"
         },
         lore: {
             "title": "천계의 심부름꾼",
@@ -280,13 +288,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 구름 이무기",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 구름 이무기, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, cloud serpent girl, imugi, dragon horns, white scales on skin, flowing white hanbok, misty clouds, glamorous body, huge breasts, extremely thick thighs, wide hips, floating in sky, mystical atmosphere, masterpiece, best quality",
+            "idle": "floating pose, arms crossed, looking down arrogantly, wind blowing hair, no text, no ui",
+            "joy": "flying through clouds, excited expression, laughing, scales glowing, dynamic pose, no text, no ui",
+            "sad": "coiled up in clouds, hiding face, rain falling, thunderstorm in distance, gloomy, no text, no ui",
+            "angry": "summoning thunder, glowing blue eyes, lightning aura, aggressive hiss, battle ready, no text, no ui",
+            "skill": "transforming into dragon form (partial), massive lightning strike, cinematic angle, storm clouds, masterpiece, no text, no ui",
+            "victory": "holding a dragon pearl (yeouiju), triumphant smile, rainbow in background, glowing aura, no text, no ui",
+            "defeat": "falling from sky, clothes burnt, exhausted, pearl rolled away, defeated pose, no text, no ui",
+            "gallery_lv1": "dating sim event, cloud serpent girl, bathing in a cloud pool, wet skin, mist covering private parts, blushing, looking at viewer, steam, no text, no ui"
         },
         lore: {
             "title": "하늘을 노니는 뱀",
@@ -345,13 +355,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 해치 석상",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 해치 석상, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, haechi girl, lion dog statue spirit, stone textured armor, fluffy mane hair, single horn, golden eyes, glamorous body, huge breasts, extremely thick thighs, wide hips, standing guard, palace entrance background, masterpiece, best quality",
+            "idle": "standing attention, stoic expression, holding a spear, scanning surroundings, no text, no ui",
+            "joy": "wagging tail (stone), rare soft smile, patting head, warm atmosphere, no text, no ui",
+            "sad": "chipped stone armor, sitting down, ears drooping, moss growing, lonely, no text, no ui",
+            "angry": "roaring, stone skin glowing red, ground cracking, fierce glare, protective stance, no text, no ui",
+            "skill": "justice judgment beam, horn glowing, cinematic angle, golden light, masterpiece, no text, no ui",
+            "victory": "chest puffed out, proud pose, sun shining on armor, confident smirk, no text, no ui",
+            "defeat": "turned to rubble (partial), kneeling, armor broken, apologetic expression, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, haechi girl, off-duty, polishing her armor, sweating, tank top, looking at viewer with loyalty, sunset, no text, no ui"
         },
         lore: {
             "title": "정의의 수호상",
@@ -410,13 +422,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 대나무 전사",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 대나무 전사, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, bamboo warrior girl, kaguya style, green bamboo armor, revealing sides, long green hair, holding bamboo spear, glamorous body, huge breasts, extremely thick thighs, wide hips, bamboo forest background, masterpiece, best quality",
+            "idle": "standing pose, holding spear, sharp eyes, wind in hair, no text, no ui",
+            "joy": "practicing martial arts, wiping sweat, satisfied smile, refreshing atmosphere, no text, no ui",
+            "sad": "spear broken, sitting on bamboo stump, looking down, leaves falling, sad, no text, no ui",
+            "angry": "sharp glare, drawing hidden blade, bamboo leaves cutting like knives, action pose, no text, no ui",
+            "skill": "bamboo forest trap, infinite spears rising, cinematic angle, green energy, masterpiece, no text, no ui",
+            "victory": "planting spear in ground, resting on it, cool smile, wind blowing, no text, no ui",
+            "defeat": "armor cut open, kneeling, exhausted, breathing heavily, defeated pose, no text, no ui",
+            "gallery_lv1": "dating sim event, bamboo warrior girl, drinking water from a bamboo cup, sweat on neck, cleavage visible, looking at viewer, refreshing forest, no text, no ui"
         },
         lore: {
             "title": "대나무 숲의 파수꾼",
@@ -475,13 +489,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 초롱불 귀신",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 초롱불 귀신, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, lantern ghost girl, oriental ghost, floating, pale skin, wearing tattered hanbok, holding a spooky lantern, blue ghost fire, glamorous body, huge breasts, extremely thick thighs, wide hips, night forest background, masterpiece, best quality",
+            "idle": "floating pose, legs transparent at bottom, spooky smile, head tilted, no text, no ui",
+            "joy": "playing with ghost fire, giggling, covering mouth, eyes glowing playfully, no text, no ui",
+            "sad": "lantern light dimming, crying transparent tears, hiding face in sleeves, gloomy, no text, no ui",
+            "angry": "scary face change, red eyes, lantern bursting with fire, dark shadows, aggressive, no text, no ui",
+            "skill": "soul absorb, hundreds of lanterns lighting up, cinematic angle, blue flames, masterpiece, no text, no ui",
+            "victory": "sitting on a giant floating lantern, swinging legs, mischievous grin, night sky, no text, no ui",
+            "defeat": "fading away, transparent body, lantern broken, fearful expression, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, lantern ghost girl, looking under her skirt playfully, glowing skin, night cherry blossoms, spooky but cute, no text, no ui"
         },
         lore: {
             "title": "길 잃은 영혼의 인도자",
@@ -540,13 +556,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 미호의 시종",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 미호의 시종, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, fox servant girl, kitsune maid, one fluffy tail, fox ears, wearing shrine maiden outfit (miko), holding a large calligraphy brush, glamorous body, huge breasts, extremely thick thighs, wide hips, shrine background, masterpiece, best quality",
+            "idle": "standing pose, bowing politely, holding brush, serene expression, no text, no ui",
+            "joy": "wagging tail, happy smile, brushing hair behind ear, flowers blooming, no text, no ui",
+            "sad": "tail between legs, drooping ears, holding broken brush, teary eyes, no text, no ui",
+            "angry": "hissing, hair standing up, brush glowing with ink magic, battle stance, no text, no ui",
+            "skill": "ink magic spell, calligraphy characters floating, cinematic angle, magical brush stroke, masterpiece, no text, no ui",
+            "victory": "cleaning up, wiping sweat, satisfied smile, sparkling clean background, no text, no ui",
+            "defeat": "clothes dirty with ink, sitting on floor, clumsy pose, apologizing, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, fox servant girl, writing a love letter with brush, ink on face, blushing, looking up at viewer, cute mistake, no text, no ui"
         },
         lore: {
             "title": "여우 구슬의 관리자",
@@ -605,13 +623,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 그림 속의 용",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 그림 속의 용, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, ink dragon girl, sumi-e style embodied, white skin with black ink tattoos, dragon horns, translucent ink robes, glamorous body, huge breasts, extremely thick thighs, wide hips, paper scroll background, artistic atmosphere, masterpiece, best quality",
+            "idle": "floating pose, smoking a pipe, mysterious smile, ink dripping effects, no text, no ui",
+            "joy": "painting in air, creative expression, eyes sparkling, ink birds flying, no text, no ui",
+            "sad": "ink fading, pale expression, looking specifically 2D, rain erasing her, sad, no text, no ui",
+            "angry": "ink splashing violently, turning into black dragon silhouette, fierce eyes, dynamic pose, no text, no ui",
+            "skill": "summoning ink dragon, world turning black and white, cinematic angle, brush stroke effects, masterpiece, no text, no ui",
+            "victory": "posing on a giant scroll, elegant posture, finishing a painting, satisfied, no text, no ui",
+            "defeat": "spilled ink, robe stained, lying on wet paper, exhausted, messy, no text, no ui",
+            "gallery_lv1": "dating sim event, ink dragon girl, partially emerging from a hanging scroll, 2D to 3D transition, seductive pose, reaching out to viewer, no text, no ui"
         },
         lore: {
             "title": "수묵화의 생명",
@@ -670,13 +690,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 용이 되고 싶은 잉어",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 용이 되고 싶은 잉어, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, koi fish girl, mermaid legs (or feet with fins), orange scale armor, splashing water, waterfall background, determined expression, glamorous body, huge breasts, extremely thick thighs, wide hips, wet skin, masterpiece, best quality",
+            "idle": "stretching pose, preparing to jump, confident look, water droplets, no text, no ui",
+            "joy": "jumping in water, splashing, laughing mouth open, rainbow, energetic, no text, no ui",
+            "sad": "floating in water face down, bubbles, depressed, dark deep water, no text, no ui",
+            "angry": "slapping water, wave crashing, fierce determination, glowing scales, aggressive, no text, no ui",
+            "skill": "waterfall climb, transforming into dragon (partial), cinematic angle, massive splash, masterpiece, no text, no ui",
+            "victory": "standing at top of waterfall, sunrise, triumphant pose, wet hair, glowing, no text, no ui",
+            "defeat": "washed away by current, dizzy, armor loose, lying on riverbank, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, koi fish girl, underwater swimming, bubbles, hair floating, close up, looking at viewer with curiosity, beautiful light refraction, no text, no ui"
         },
         lore: {
             "title": "등용문의 도전자",
@@ -735,13 +757,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 찻잎 요정",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 찻잎 요정, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, tea spirit girl, green tea fairy, wearing leaves dress, sitting in giant tea cup, steam, aroma, glamorous body, huge breasts, extremely thick thighs, wide hips, calm expression, tea ceremony background, masterpiece, best quality",
+            "idle": "sitting pose, pouring tea, elegant movement, warm steam, no text, no ui",
+            "joy": "sipping tea, contented sigh, blushing cheeks, sparkles, relaxing atmosphere, no text, no ui",
+            "sad": "tea cup broken, spilled tea, crying, leaves withering, mess, no text, no ui",
+            "angry": "boiling water, red face, throwing hot tea, steam explosion, aggressive, no text, no ui",
+            "skill": "healing tea rain, giant tea leaf shield, cinematic angle, green light, masterpiece, no text, no ui",
+            "victory": "serving perfect tea, kneeling politely, gentle smile, peaceful, no text, no ui",
+            "defeat": "fainted from heat, lying on floor, dress wet, dazed expression, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, tea spirit girl, offering a cup of tea on a tray, POV shot, warm smile, cleavage visible, steam fogging up screen, no text, no ui"
         },
         lore: {
             "title": "향기로운 차의 요정",
@@ -800,13 +824,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 쌀알 정령",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 쌀알 정령, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, rice spirit girl, white farmer outfit (cute version), straw hat, holding rice stalk, golden rice field background, glamorous body, huge breasts, extremely thick thighs, wide hips, bright sun, masterpiece, best quality",
+            "idle": "wiping sweat, harvesting pose, sunny smile, wind blowing, no text, no ui",
+            "joy": "eating rice ball (onigiri), happy chewing, cheeks full, glowing skin, energetic, no text, no ui",
+            "sad": "hungry expression, holding empty bowl, stomach growling, locusts in background, no text, no ui",
+            "angry": "wielding sickle, protecting crop, fierce eyes, shouting, battle ready, no text, no ui",
+            "skill": "golden harvest wave, rice rain, cinematic angle, abundance aura, masterpiece, no text, no ui",
+            "victory": "sitting on rice bags, peace sign, full stomach, satisfaction, no text, no ui",
+            "defeat": "collapsed in mud, clothes dirty, straw hat falling off, crying, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, rice spirit girl, feeding viewer a rice ball, 'say ahh', blushing, close up, harvest festival atmosphere, no text, no ui"
         },
         lore: {
             "title": "풍요의 상징",
@@ -865,13 +891,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 봉인 부적",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 봉인 부적, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, paper charm girl, talisman spirit, ofuda dress, yellow paper with red writing, floating charms, glamorous body, huge breasts, extremely thick thighs, wide hips, mystical shrine background, masterpiece, best quality",
+            "idle": "standing pose, holding a giant talisman, chanting sutras, floating slightly, no text, no ui",
+            "joy": "happy expression, talismans flying like confetti, winking, energetic pose, no text, no ui",
+            "sad": "paper creased, talismans falling down, crying ink tears, gloomy, no text, no ui",
+            "angry": "eyes glowing red, talismans arranging into battle formation, shouting spell, aggressive, no text, no ui",
+            "skill": "sealing spell, giant golden rune appearing, cinematic angle, spiritual pressure, masterpiece, no text, no ui",
+            "victory": "striking a pose with peace sign, talismans glowing, successful seal, triumphant, no text, no ui",
+            "defeat": "paper torn, lying on ground, ink smudged, dizzy expression, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, paper charm girl, writing a new spell on her dress, blushing, asking viewer to check the calligraphy, close up, mystical light, no text, no ui"
         },
         lore: {
             "title": "강시 제어 부적",
@@ -930,13 +958,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 음양구",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 음양구, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, yin yang girl, daoist master, split colored hair (black and white), yin yang symbol dress, floating orbs, glamorous body, huge breasts, extremely thick thighs, wide hips, oriental clouds background, masterpiece, best quality",
+            "idle": "meditating in air, floating pose, serene expression, rotating orbs, no text, no ui",
+            "joy": "laughing brightly, balancing on an orb, playful expression, harmony aura, no text, no ui",
+            "sad": "unbalanced pose, orbs dim, looking down, grey atmosphere, sad, no text, no ui",
+            "angry": "channels energy, eyes glowing black and white, chaotic aura, battle ready, no text, no ui",
+            "skill": "union of yin and yang, massive beam, cinematic angle, black and white energy swirl, masterpiece, no text, no ui",
+            "victory": "holding yin yang orb high, radiant smile, enlightened pose, serene light, no text, no ui",
+            "defeat": "falling to ground, energy dissipated, exhausted, clothes disheveled, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, yin yang girl, teaching meditation, sitting in lotus position, tranquil smile, incense smoke, close up, no text, no ui"
         },
         lore: {
             "title": "조화의 구슬",
@@ -995,13 +1025,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 벚꽃잎 요정",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 벚꽃잎 요정, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, sakura fairy, cherry blossom spirit, pink petal dress, fairy wings made of petals, pink hair, glamorous body, huge breasts, extremely thick thighs, wide hips, spring garden background, falling petals, masterpiece, best quality",
+            "idle": "floating pose, dancing in wind, soft smile, holding a flower, no text, no ui",
+            "joy": "twirling, petals scattering, laughing, blushing, spring breeze, no text, no ui",
+            "sad": "petals withering, crying, sitting on a branch, cold wind, sad, no text, no ui",
+            "angry": "storm of petals, glowing pink eyes, wind blowing hair, fierce expression, no text, no ui",
+            "skill": "thousand cherry blossoms technique, petal storm, cinematic angle, flowery explosion, masterpiece, no text, no ui",
+            "victory": "posing with v-sign, wink, blanket of flowers, cheering, no text, no ui",
+            "defeat": "lying on scattered petals, wings drooping, exhausted, teary eyed, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, sakura fairy, sitting on viewer's shoulder (perspective trick but full body view), blowing a kiss, spring picnic, sunlight, no text, no ui"
         },
         lore: {
             "title": "흩날리는 봄의 전령",
@@ -1060,13 +1092,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 반가운 까치 전령",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 반가운 까치 전령, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, magpie girl, bird spirit, black and white feather dress, wings on back, short hair, glamorous body, huge breasts, extremely thick thighs, wide hips, atop a pine tree, morning sun, masterpiece, best quality",
+            "idle": "perched pose, fixing hair, chirping expression, curious look, no text, no ui",
+            "joy": "flying pose, delivering a letter, happy smile, feathers flying, energetic, no text, no ui",
+            "sad": "wings drooping, sitting on branch looking down, rain, lonely, no text, no ui",
+            "angry": "screeching, feathers turning to blades, red eyes, diving attack pose, no text, no ui",
+            "skill": "messenger of good news, radiant light beam, cinematic angle, rainbow bridge (ojakgyo), masterpiece, no text, no ui",
+            "victory": "landing gracefully, thumbs up, sparkling teeth, confident smile, no text, no ui",
+            "defeat": "crash landed, dizzy, feathers messy, letter dropped, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, magpie girl, delivering a love letter to viewer, blushing, shyly holding envelope, school rooftop background, no text, no ui"
         },
         lore: {
             "title": "좋은 소식의 전달자",
@@ -1125,13 +1159,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 풍경 소리 요정",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 풍경 소리 요정, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, wind chime spirit girl, glass body features, transparent silk dress, bell hair accessories, glamorous body, huge breasts, extremely thick thighs, wide hips, summer porch background, gentle breeze, masterpiece, best quality",
+            "idle": "swaying in wind, peaceful expression, soft ringing effect, closed eyes, no text, no ui",
+            "joy": "spinning, making music, laughing, bright sunlight, refreshing atmosphere, no text, no ui",
+            "sad": "cracked glass, motionless, dull colors, no wind, melancholic, no text, no ui",
+            "angry": "vibrating intensely, sound wave attack, glowing core, shouting, aggressive, no text, no ui",
+            "skill": "resonance wave, shattering glass sound, cinematic angle, sonic boom visual, masterpiece, no text, no ui",
+            "victory": "floating gracefully, sparkling, sweet smile, melody notes floating, no text, no ui",
+            "defeat": "fallen on ground, glass shards scattered (illusion), weak expression, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, wind chime spirit girl, cooling viewer with a fan, summer heat, sweat drops, semi-transparent clothes, alluring look, no text, no ui"
         },
         lore: {
             "title": "처마 밑의 연주자",
@@ -1190,13 +1226,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 달밤의 반딧불이",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 달밤의 반딧불이, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, firefly girl, nocturne fairy, glowing wings, bioluminescent dress, holding a small lantern, glamorous body, huge breasts, extremely thick thighs, wide hips, dark forest night background, magical glow, masterpiece, best quality",
+            "idle": "hovering, glowing softly, looking at light, peaceful, no text, no ui",
+            "joy": "dancing with other fireflies, bright glow, happy smile, night festival, no text, no ui",
+            "sad": "light dimming, hiding in darkness, lonely expression, cold blue tones, no text, no ui",
+            "angry": "blinding flash, harsh white light, angry expression, buzzing wings, no text, no ui",
+            "skill": "starlight swarm, massive beam of light, cinematic angle, night illuminated, masterpiece, no text, no ui",
+            "victory": "shining brightest, posing with lantern high, proud smile, stars twinkling, no text, no ui",
+            "defeat": "light went out, lying on moss, exhausted, dark surroundings, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, firefly girl, leading viewer through dark woods, looking back, glowing path, romantic night atmosphere, no text, no ui"
         },
         lore: {
             "title": "어둠을 밝히는 빛",
@@ -1257,7 +1295,7 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "(masterpiece:1.5), (best quality:1.4), (nikke style:1.4), (blue archive style:1.2), full body, solo, dragon_ancient, female, (beautiful authoritative face:1.4), (glowing dragon eyes:1.3), long silver hair, dragon horns, large black dragon wings, fierce dragon tail, (revealing scale armor:1.3), (glamorous body:1.4), (huge breasts:1.3), (wide hips:1.4), (thick thighs:1.3), metallic scales on skin, epic cloudy sky background, lightning, domineering pose",
+            "base": "anime, blue archive style, nikke style, full body, ancient dragon girl, bahamut personification, silver scales, dragon horns, large black dragon wings, fierce dragon tail, revealing scale armor, glamorous body, huge breasts, extremely thick thighs, wide hips, metallic scales on skin, epic cloudy sky background, lightning, domineering pose, masterpiece, best quality",
             "idle": "standing pose, arms crossed, confident smirk, looking down at viewer, wind blowing hair, no text, no ui",
             "joy": "laughing heartily, head tilted back, flushed cheeks, powerful aura, happy eyes, no text, no ui",
             "sad": "looking away, touching chest, slightly tearing up, rain falling, gloomy atmosphere, no text, no ui",
@@ -1265,9 +1303,9 @@ var SHANGRILA_CREATURES = [
             "skill": "flying in sky, gathering massive energy ball, cinematic angle, epic lighting, destruction background, no text, no ui",
             "victory": "standing on defeated enemies, triumphant pose, holding a flag or weapon high, glorious light, no text, no ui",
             "defeat": "kneeling on ground, armor broken, heavy breathing, sweat, looking frustrated, dust and scratches, no text, no ui",
-            "gallery_lv1": "dating sim event, sitting on a cliff edge, watching sunset, wind blowing, looking back at viewer with a soft smile, peaceful atmosphere, no text, no ui",
-            "gallery_lv2": "dating sim event, bathing in a mountain hot spring, steam, wet skin, scales glistening, covering chest slightly, blushing, inviting look, no text, no ui",
-            "gallery_lv3": "dating sim event, lying on a hoard of gold and treasures, sultry pose, heavy blush, heart shaped pupils, sweat, dragon tail wrapping around leg, overwhelming desire, no text, no ui"
+            "gallery_lv1": "dating sim event, ancient dragon girl, sitting on a cliff edge, watching sunset, wind blowing, looking back at viewer with a soft smile, peaceful atmosphere, no text, no ui",
+            "gallery_lv2": "dating sim event, ancient dragon girl, bathing in a mountain hot spring, steam, wet skin, scales glistening, covering chest slightly, blushing, inviting look, no text, no ui",
+            "gallery_lv3": "dating sim event, ancient dragon girl, lying on a hoard of gold and treasures, sultry pose, heavy blush, heart shaped pupils, sweat, dragon tail wrapping around leg, overwhelming desire, no text, no ui"
         },
         lore: {
             "title": "세상의 시작",
@@ -1328,7 +1366,7 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "(masterpiece:1.5), (best quality:1.4), (nikke style:1.4), (blue archive style:1.2), full body, solo, kumiho_miho, female, (beautiful seductive face:1.4), (fox ears:1.2), (nine fluffy fox tails:1.4), long white hair, golden eyes, wearing traditional fancy hanbok with off-shoulder and mini skirt modification, (glamorous body:1.4), (huge breasts:1.3), (wide hips:1.4), (thick thighs:1.3), oriental palace background, cherry blossoms, mystical aura",
+            "base": "anime, blue archive style, nikke style, full body, nine tailed fox girl, kumiho, beautiful seductive face, fox ears, nine fluffy white fox tails, long white hair, golden eyes, wearing traditional fancy hanbok (modified, revealing), glamorous body, huge breasts, extremely thick thighs, wide hips, oriental palace background, cherry blossoms, mystical aura, masterpiece, best quality",
             "idle": "standing pose, holding a fan, seductive smile, winking, graceful posture, no text, no ui",
             "joy": "giggling, covering mouth with fan, happy eyes, fox ears twitching, flowers floating, no text, no ui",
             "sad": "droopy fox ears, looking down, tearing up, fan closed, melancholic atmosphere, no text, no ui",
@@ -1336,9 +1374,9 @@ var SHANGRILA_CREATURES = [
             "skill": "dancing with fox fire, summoning spiritual energy, cinematic lighting, petals blowing, masterpiece, no text, no ui",
             "victory": "sitting on air, crossing legs, triumphant smile, spinning fan, looking down, no text, no ui",
             "defeat": "collapsed on floor, hanbok torn, messy hair, panting, sweat, looking resentful, no text, no ui",
-            "gallery_lv1": "dating sim event, walking under moonlight, holding a lantern, looking back at viewer, mysterious smile, oriental garden background, no text, no ui",
-            "gallery_lv2": "dating sim event, sitting on a veranda, drinking tea, hanbok loosening, exposing shoulder and cleavage, flushed face, tipsy, intimate atmosphere, no text, no ui",
-            "gallery_lv3": "dating sim event, lying on silk bedding, hanbok disheveled, exposing skin, heart shaped pupils, tails wrapping around body, heavy blush, seducing viewer, no text, no ui"
+            "gallery_lv1": "dating sim event, nine tailed fox girl, walking under moonlight, holding a lantern, looking back at viewer, mysterious smile, oriental garden background, no text, no ui",
+            "gallery_lv2": "dating sim event, nine tailed fox girl, sitting on a veranda, drinking tea, hanbok loosening, exposing shoulder and cleavage, flushed face, tipsy, intimate atmosphere, no text, no ui",
+            "gallery_lv3": "dating sim event, nine tailed fox girl, lying on silk bedding, hanbok disheveled, exposing skin, heart shaped pupils, tails wrapping around body, heavy blush, seducing viewer, no text, no ui"
         },
         lore: {
             "title": "천년 복의 구미호",
@@ -1400,17 +1438,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime, blue archive style, nikke style, full body, dragon goddess, majestic mature face, long flowing white hair with teal gradient, elaborate regal robes with gold embroidery, translucent silk, exposed cleavage and legs, glamorous body, huge breasts, extremely thick thighs, wide hips, holding radiant dragon pearl, underwater throne room with glowing crystals, swirling water aura, cinematic lighting, masterpiece, best quality, intricate details",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling brightly, happy expression, gentle water swirling, glowing eyes, hand on cheek, radiant atmosphere",
-            "sad": "sad expression, tearing up, looking down, darkened background, drooping dragon horns",
-            "angry": "furious expression, shouting, glowing red eyes, summoning stormy waves, dynamic action pose",
-            "skill": "unleashing ultimate attack, summoning massive water dragon, cinematic lighting, dramatic camera angle, extreme masterpiece",
-            "victory": "proud victory pose, winking, peace sign, glowing radiantly, treasures falling",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, messed up hair, shy expression",
-            "gallery_lv1": "dating sim event, dragon god girl, sitting on throne, crossing legs, seductive look, underwater bedroom",
-            "gallery_lv2": "dating sim event, dragon god girl, close up, intimate moment, blushing hard, holding commander's hand",
-            "gallery_lv3": "dating sim event, dragon god girl, lying on bed, barely covered by silk, extremely seductive, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, dragon queen girl, majestic mature face, long flowing white hair with teal gradient, elaborate regal robes with gold embroidery, translucent silk, exposed cleavage and legs, glamorous body, huge breasts, extremely thick thighs, wide hips, holding radiant dragon pearl, underwater throne room with glowing crystals, swirling water aura, cinematic lighting, masterpiece, best quality",
+            "idle": "standing pose, confident, neutral expression, floating hair, no text, no ui",
+            "joy": "smiling brightly, happy expression, gentle water swirling, glowing eyes, hand on cheek, radiant atmosphere, no text, no ui",
+            "sad": "sad expression, tearing up, looking down, darkened background, drooping dragon horns, no text, no ui",
+            "angry": "furious expression, shouting, glowing red eyes, summoning stormy waves, dynamic action pose, no text, no ui",
+            "skill": "unleashing ultimate attack, summoning massive water dragon, cinematic lighting, dramatic camera angle, masterpiece, no text, no ui",
+            "victory": "proud victory pose, winking, peace sign, glowing radiantly, treasures falling, no text, no ui",
+            "defeat": "defeated pose, kneeling, clothes torn, exhausted, messed up hair, shy expression, no text, no ui",
+            "gallery_lv1": "dating sim event, dragon queen girl, sitting on throne, crossing legs, seductive look, underwater bedroom, close up, no text, no ui",
+            "gallery_lv2": "dating sim event, dragon queen girl, close up, intimate moment, blushing hard, holding commander's hand, steam, no text, no ui",
+            "gallery_lv3": "dating sim event, dragon queen girl, lying on bed, barely covered by silk, extremely seductive, heart eyes, wet skin, no text, no ui"
         },
         lore: {
             "title": "사해의 지배자",
@@ -1472,17 +1510,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 불멸의 화조 페이",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 불멸의 화조 페이, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 불멸의 화조 페이, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 불멸의 화조 페이, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, phoenix goddess girl, flame wings, red and gold dress, burning eyes, fire aura, glamorous body, huge breasts, extremely thick thighs, wide hips, volcanic sunset background, masterpiece, best quality",
+            "idle": "floating pose, wings spread gently, regal expression, looking into distance, flame particles, no text, no ui",
+            "joy": "laughing, flames brightening, warm smile, dancing in air, energetic, no text, no ui",
+            "sad": "flames dimming, wings wrapping around body, crying tears of lava, grey ash falling, no text, no ui",
+            "angry": "bursting into flames, wings fully spread, shouting, fire storm, aggressive, no text, no ui",
+            "skill": "phoenix rebirth, giant fire bird avatar, cinematic angle, blinding light, masterpiece, no text, no ui",
+            "victory": "rising from ashes, glowing skin, triumphant pose, radiant smile, no text, no ui",
+            "defeat": "lying in ashes, clothes burnt, wings broken, exhausted, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, phoenix goddess girl, resting on a cloud, sunset light, warm smile, cleavage visible, holding a feather, no text, no ui",
+            "gallery_lv2": "dating sim event, phoenix goddess girl, bathing in magma (safe), steam, wet skin, looking at viewer with desire, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, phoenix goddess girl, embrace, intense heat, heart eyes, kissing expression, overwhelming passion, close up, no text, no ui"
         },
         lore: {
             "title": "남쪽의 수호신",
@@ -1543,17 +1581,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 제천대성 손오공",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 제천대성 손오공, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 제천대성 손오공, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 제천대성 손오공, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, wukong girl, monkey king style, golden fillet on head, tiger skin skirt, holding ruyi jingu bang (golden staff), glamorous body, huge breasts, extremely thick thighs, wide hips, cloud standing pose, mountain peak background, masterpiece, best quality",
+            "idle": "spinning staff, chewing on straw, confident smirk, standing on one leg, no text, no ui",
+            "joy": "laughing, eating a peach, jumping on cloud, happy expression, energetic, no text, no ui",
+            "sad": "sitting on rock, staff on ground, looking bored or sad, tail drooping, no text, no ui",
+            "angry": "eyes glowing gold, baring teeth, hair turning spiky, battle aura, aggressive, no text, no ui",
+            "skill": "giant staff smash, multiplication technique (clones), cinematic angle, shockwave, masterpiece, no text, no ui",
+            "victory": "sitting on top of staff, looking at horizon, thumb on nose, triumphant, no text, no ui",
+            "defeat": "trapped under rock (partial), clothes torn, dizzy eyes, staff broken, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, wukong girl, sharing a peach, wink, sitting on a cloud bench, close up, playful smile, no text, no ui",
+            "gallery_lv2": "dating sim event, wukong girl, arm wrestling with viewer, sweating, tank top, intense focus, cleavage view, blushing, no text, no ui",
+            "gallery_lv3": "dating sim event, wukong girl, waterfall meditation (training), wet clothes clinging, eyes opening, looking at viewer with love, steam, no text, no ui"
         },
         lore: {
             "title": "돌원숭이의 왕",
@@ -1614,17 +1652,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 달토끼 루나",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 달토끼 루나, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 달토끼 루나, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 달토끼 루나, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, moon rabbit girl, usagi ears, white futuristic hanbok, holding a large pestle, moon crater background, starry night, glamorous body, huge breasts, extremely thick thighs, wide hips, shiny skin, masterpiece, best quality",
+            "idle": "standing pose, adjusting ears, holding pestle, curious expression, looking at stars, no text, no ui",
+            "joy": "jumping high (low gravity), happy bunny hop, laughing, stars twinkling, energetic, no text, no ui",
+            "sad": "drooping ears, hugging pestle, looking at earth, lonely expression, cold light, no text, no ui",
+            "angry": "red eyes, pestle glowing, stomping foot, shockwave, aggressive, no text, no ui",
+            "skill": "meteor pestle strike, moon gravity crushing, cinematic angle, white explosion, masterpiece, no text, no ui",
+            "victory": "making peace sign, floating in zero G, happy smile, ears twitching, no text, no ui",
+            "defeat": "floating helplessly, clothes disheveled, dizzy spiral eyes, pestle floating away, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, moon rabbit girl, making rice cakes (mochi), flour on face, blushing, offering a taste, cute apron, no text, no ui",
+            "gallery_lv2": "dating sim event, moon rabbit girl, zero gravity float, skirt floating up, blushing, trying to cover up, cute panic, close up, no text, no ui",
+            "gallery_lv3": "dating sim event, moon rabbit girl, sleeping on the moon, dreaming, murmuring viewer's name, defenseless pose, soft glow, no text, no ui"
         },
         lore: {
             "title": "달의 약제사",
@@ -1685,17 +1723,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 공작 공주",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 공작 공주, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 공작 공주, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 공작 공주, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, peacock princess girl, dancer, colorful feather dress, spreading peacock tail (feathers), jewelry, glamorous body, huge breasts, extremely thick thighs, wide hips, palace garden background, masterpiece, best quality",
+            "idle": "dancing pose, holding a fan, elegant expression, feathers shimmering, no text, no ui",
+            "joy": "twirling, laughing, feathers spreading wide, bright colors, happy atmosphere, no text, no ui",
+            "sad": "feathers closed, hiding face behind fan, crying, rain, dull colors, no text, no ui",
+            "angry": "feathers turning into sharp blades, eyes glowing, aggressive dance, wind blowing, no text, no ui",
+            "skill": "thousand eye gaze, hypnotic dance, cinematic angle, colorful light beam, masterpiece, no text, no ui",
+            "victory": "final pose, spotlight, blowing a kiss, feathers glowing, triumphant, no text, no ui",
+            "defeat": "collapsed on stage, feathers scattered, dress torn, makeup running, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, peacock princess girl, practicing dance, sweating, looking at viewer through mirror, confident smile, no text, no ui",
+            "gallery_lv2": "dating sim event, peacock princess girl, dressing room, adjusting corset, cleavage visible, blushing, asking for help, no text, no ui",
+            "gallery_lv3": "dating sim event, peacock princess girl, private dance, seductive gaze, heavy blush, feathers wrapping around viewer, intimate, no text, no ui"
         },
         lore: {
             "title": "화려한 춤사위",
@@ -1755,9 +1793,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, cute baby fox girl, fluffy tail, innocent look, Light, 아기 여우 미호",
-            "idle": "sitting pose, curious eyes, tilting head",
-            "gallery_lv1": "playing with butterfly, cute paws, sunny garden"
+            "base": "anime style, cell shaded, 2d game art, full body, baby fox girl, chibi style, cute face, huge eyes, one fluffy tail, small shrine maiden outfit, holding a toy, forest background, masterpiece, best quality, adorable",
+            "idle": "sitting pose, tilting head, curious look, tail wagging, no text, no ui",
+            "joy": "jumping up and down, happy laughing, flowers, sparkles, cute, no text, no ui",
+            "sad": "crying, rubbing eyes, dropped toy, ears drooping, sad, no text, no ui",
+            "angry": "pouting, puffing cheeks, trying to look scary, small flame, cute angry, no text, no ui",
+            "skill": "summoning small will-o-wisp, tripping over, accidental magic, cute effect, masterpiece, no text, no ui",
+            "victory": "holding a candy, happy smile, V sign, confetti, cute victory, no text, no ui",
+            "defeat": "sleeping on ground (napping), bubble from nose, safe and sound, cute defeat, no text, no ui",
+            "gallery_lv1": "dating sim event, baby fox girl, napping on a porch, tummy visible, peaceful afternoon, butterflies, cute, no text, no ui"
         },
         lore: {
             "title": "천년의 시작",
@@ -1799,17 +1843,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 여우요괴 미호",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 여우요괴 미호, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 여우요괴 미호, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 여우요괴 미호, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, seductive fox girl, fox yokai, three tails or more, pink and white hanbok (short), fox ears, playful expression, glamorous body, huge breasts, extremely thick thighs, wide hips, mystical forest background, masterpiece, best quality",
+            "idle": "standing pose, teasing smile, hand on hip, tail wagging, winking, no text, no ui",
+            "joy": "laughing, spinning around, flowery aura, happy eyes, energetic, no text, no ui",
+            "sad": "ears drooping, pouting, looking away, arms crossed, gloomy, no text, no ui",
+            "angry": "hissing, claws out, tails bristling, glowing eyes, aggressive, no text, no ui",
+            "skill": "casting illusion, pink smoke, cinematic angle, magic circle, masterpiece, no text, no ui",
+            "victory": "peace sign, tongue out, sitting on air, cheerful, confetti, no text, no ui",
+            "defeat": "sitting on ground, clothes dirty, dizzy eyes, tails messy, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, seductive fox girl, chasing butterflies, tripping towards viewer, cute accident, blushing, close up, no text, no ui",
+            "gallery_lv2": "dating sim event, seductive fox girl, offering a drink, pouring sake, sitting close, cleavage view, tipsy smile, no text, no ui",
+            "gallery_lv3": "dating sim event, seductive fox girl, lap pillow, looking down at viewer, stroking hair, intense love, heart eyes, no text, no ui"
         },
         lore: {
             "title": "둔갑의 귀재",
@@ -1870,17 +1914,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 청룡",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 청룡, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 청룡, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 청룡, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, azure dragon girl, blue scales, dragon horns, lightning aura, martial arts outfit (revealing), glamorous body, huge breasts, extremely thick thighs, wide hips, stormy sky background, masterpiece, best quality",
+            "idle": "standing pose, arms crossed, electric sparks, confident gaze, wind blowing, no text, no ui",
+            "joy": "smiling, high five, lightning clearing to sun, energetic, happy, no text, no ui",
+            "sad": "looking at rain, electric sparks weak, droopy horns, sad expression, no text, no ui",
+            "angry": "shouting, lightning striking background, glowing blue eyes, hair floating, aggressive, no text, no ui",
+            "skill": "summoning thunder, dragon claw energy, cinematic angle, bright flash, masterpiece, no text, no ui",
+            "victory": "fist pump, standing on defeated cloud, lightning background, proud smile, no text, no ui",
+            "defeat": "kneeling, clothes torn, static hair, exhausted, smoke, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, azure dragon girl, training under a waterfall, wet clothes, focused expression, noticing viewer, blushing, no text, no ui",
+            "gallery_lv2": "dating sim event, azure dragon girl, drying off, towel only, steam, surprised look, covering chest, blushing hard, no text, no ui",
+            "gallery_lv3": "dating sim event, azure dragon girl, sharing an umbrella in rain, clinging to viewer's arm, pressing chest against arm, loving gaze, no text, no ui"
         },
         lore: {
             "title": "동방의 수호신",
@@ -1941,17 +1985,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 백호",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 백호, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 백호, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 백호, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, white tiger girl, byakko, tiger ears, tiger tail, white and black outfit (military style), metal gauntlets, glamorous body, huge breasts, extremely thick thighs, wide hips, mountain peak background, masterpiece, best quality",
+            "idle": "standing pose, inspecting claws (guantlets), sharp gaze, cool expression, no text, no ui",
+            "joy": "subtle smile, crossing arms, slight blush, approving look, no text, no ui",
+            "sad": "looking away, ears flat, raining, lonely atmosphere, sad, no text, no ui",
+            "angry": "baring fangs, claws glowing, metallic aura, fierce expression, ready to pounce, no text, no ui",
+            "skill": "metal claw slash, shockwave, cinematic angle, speed lines, masterpiece, no text, no ui",
+            "victory": "stepping on rock, looking down, confident smirk, arms crossed, hero pose, no text, no ui",
+            "defeat": "lying on side, armor broken, scratches, panting, humiliated expression, no text, no ui",
+            "gallery_lv1": "dating sim event, white tiger girl, polishing gauntlets, focused face, sitting on bench, sunset, no text, no ui",
+            "gallery_lv2": "dating sim event, white tiger girl, sparring break, drinking water, sweat dripping, cleavage view, heavy breathing, no text, no ui",
+            "gallery_lv3": "dating sim event, white tiger girl, ear cleaning (lap pillow), viewer's pov, blushing, avoiding eye contact, vulnerable side, no text, no ui"
         },
         lore: {
             "title": "서방의 수호신",
@@ -2012,17 +2056,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 주작",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 주작, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 주작, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 주작, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, vermilion bird girl, suzaku, red feather dress, flame wings, holding a fan, elegant lady, glamorous body, huge breasts, extremely thick thighs, wide hips, fire background, masterpiece, best quality",
+            "idle": "standing pose, fanning self, elegant smile, floating slightly, warm light, no text, no ui",
+            "joy": "laughing behind fan, eyes crinkling, flames dancing, happy, no text, no ui",
+            "sad": "fan lowered, looking concern, flames dim, petals falling, sad, no text, no ui",
+            "angry": "fan thrown aside, surrounded by fire, burning eyes, shouting, aggressive, no text, no ui",
+            "skill": "fire tornado, phoenix dance, cinematic angle, intense heat, masterpiece, no text, no ui",
+            "victory": "elegant bow, flames forming hearts, warm smile, radiant, no text, no ui",
+            "defeat": "sitting on knees, dress slightly burnt, soot on face, exhausted, tearing up, no text, no ui",
+            "gallery_lv1": "dating sim event, vermilion bird girl, tea ceremony, elegant posture, steam, kimino, garden, no text, no ui",
+            "gallery_lv2": "dating sim event, vermilion bird girl, hot spring bath, looking over shoulder, bare back, steam, blushing, inviting, no text, no ui",
+            "gallery_lv3": "dating sim event, vermilion bird girl, summer festival, fireworks, yukata falling off, leaning on viewer, drunk on atmosphere, heart eyes, no text, no ui"
         },
         lore: {
             "title": "남방의 수호신",
@@ -2083,17 +2127,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 현무",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 현무, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 현무, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 현무, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, black tortoise girl, genbu, black armored dress, shield, snake companion sitting on shoulder, calm expression, glamorous body, huge breasts, extremely thick thighs, wide hips, icy background, masterpiece, best quality",
+            "idle": "standing pose, holding shield, petting snake, stoic expression, no text, no ui",
+            "joy": "small smile, snake forming heart shape, soft eyes, relieving atmosphere, no text, no ui",
+            "sad": "looking down, shield grounded, cold wind, lonely, no text, no ui",
+            "angry": "eyes glowing purple, shield raised, snake hissing, ice spikes, defensive aura, no text, no ui",
+            "skill": "absolute barrier, ice wall, cinematic angle, unstoppable defense, masterpiece, no text, no ui",
+            "victory": "adjusting glasses (if any) or hair, snake satisfied, cool pose, snow falling, no text, no ui",
+            "defeat": "shield broken, sitting on ground, heavy breathing, snake worried, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, black tortoise girl, reading a book in library, quiet atmosphere, glancing at viewer, snake sleeping, no text, no ui",
+            "gallery_lv2": "dating sim event, black tortoise girl, changing clothes (armored to casual), caught in act, blushing, covering up with shield, no text, no ui",
+            "gallery_lv3": "dating sim event, black tortoise girl, cold winter night, sharing a blanket, hudling for warmth, looking into eyes, snake watching awkwardly, no text, no ui"
         },
         lore: {
             "title": "북방의 수호신",
@@ -2154,17 +2198,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 황금 방망이 도깨비",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 황금 방망이 도깨비, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 황금 방망이 도깨비, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 황금 방망이 도깨비, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, goblin queen girl, dokkaebi, small horns, tiger skin bikini, holding golden spiked club, wild hairstyle, glamorous body, huge breasts, extremely thick thighs, wide hips, gold coins background, masterpiece, best quality",
+            "idle": "standing pose, resting club on shoulder, confident grin, chewing gum/straw, no text, no ui",
+            "joy": "laughing out loud, holding gold coin, slapping knee, energetic, no text, no ui",
+            "sad": "sitting on club, pouting, looking bored, dark cloud, no text, no ui",
+            "angry": "club glowing gold, shouting, eyes red, threatening pose, lightning, no text, no ui",
+            "skill": "giant club smash, gold rain, cinematic angle, ground cracking, masterpiece, no text, no ui",
+            "victory": "sitting on pile of gold, drinking makgeolli (rice wine), triumphant laugh, no text, no ui",
+            "defeat": "lying back on gold, dizzy, club dropped, confused expression, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, goblin queen girl, arm wrestling challenge, confident smirk, close face, muscle definition, no text, no ui",
+            "gallery_lv2": "dating sim event, goblin queen girl, drunken celebration, red face, leaning on viewer, laughing, open personality, no text, no ui",
+            "gallery_lv3": "dating sim event, goblin queen girl, treasure room, rolling in gold, pulling viewer down, playful and seductive, glowing eyes, no text, no ui"
         },
         lore: {
             "title": "장난기 많은 씨름왕",
@@ -2225,17 +2269,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 산신 호랑이",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 산신 호랑이, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 산신 호랑이, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 산신 호랑이, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, blue archive style, nikke style, full body, mountain tiger queen girl, sansin style, tiger ears, tiger tail, traditional korean pipe, fur cloak, glamorous body, huge breasts, extremely thick thighs, wide hips, misty mountain background, masterpiece, best quality",
+            "idle": "sitting on rock, smoking pipe, relaxed pose, authoritative gaze, no text, no ui",
+            "joy": "gentle smile, pipe smoke forming heart, nodding, satisfied, no text, no ui",
+            "sad": "looking at moon, pipe down, lonely expression, mountain coldness, no text, no ui",
+            "angry": "standing up, eyes glowing yellow, tiger aura, growling expression, scary, no text, no ui",
+            "skill": "summoning tiger spirit, mountain echo, cinematic angle, powerful roar, masterpiece, no text, no ui",
+            "victory": "crossing arms, looking down at defeated, smug smile, wind blowing, no text, no ui",
+            "defeat": "fur cloak torn, sitting on ground, looking annoyed, scratch on cheek, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, mountain tiger queen girl, offering pipe (indirect kiss), misty forest, mysterious smile, no text, no ui",
+            "gallery_lv2": "dating sim event, mountain tiger queen girl, relaxing under pine tree, legs crossed, exposing thigh, looking at viewer deeply, no text, no ui",
+            "gallery_lv3": "dating sim event, mountain tiger queen girl, moonlight bath, waterfall, wet fur/hair, intense gaze, beckoning viewer, dangerous allure, no text, no ui"
         },
         lore: {
             "title": "산의 주인",
@@ -2294,13 +2338,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 그림자 닌자",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 그림자 닌자, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, kunoichi shadow girl, ninja outfit (revealing), mesh, scarf, holding kunai, glamorous body, huge breasts, extremely thick thighs, wide hips, night rooftop background, moon, masterpiece, best quality",
+            "idle": "standing pose, adjusting scarf, vigilant look, crouching slighty, no text, no ui",
+            "joy": "pulling down mask, smiling, eye smile, holding up victory sign, happy, no text, no ui",
+            "sad": "hiding in shadows, looking injured, mask up, gloomy eyes, no text, no ui",
+            "angry": "drawing katana, eyes sharp, killing intent, dynamic pose, wind, no text, no ui",
+            "skill": "shadow clone jutsu, multiple silhouettes, cinematic angle, dark speed lines, masterpiece, no text, no ui",
+            "victory": "standing on spire, scarf flowing long, back to viewer, looking over shoulder, cool, no text, no ui",
+            "defeat": "bound by ropes (failed mission), kneeling, mask off, looking away, blushing/shamed, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, kunoichi shadow girl, removing mask, shy face, evening training, sweat, no text, no ui"
         },
         lore: {
             "title": "어둠 속의 암살자",
@@ -2359,13 +2405,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 구름 위의 학 신선",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 구름 위의 학 신선, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, crane sage girl, white feathers, taoist robe (revealing), glasses, holding a scroll, elegant, glamorous body, huge breasts, extremely thick thighs, wide hips, cloud peak background, masterpiece, best quality",
+            "idle": "standing pose, reading scroll, adjusting glasses, intelligent look, no text, no ui",
+            "joy": "smiling gently, closing book, feathers fluttering, warm atmosphere, no text, no ui",
+            "sad": "looking at withered flower, serious expression, rain, grey clouds, no text, no ui",
+            "angry": "casting spell, scroll glowing, wind aura, stern teacher expression, no text, no ui",
+            "skill": "summoning giant crane spirit, bright white light, cinematic angle, masterpiece, no text, no ui",
+            "victory": "adjusting glasses, writing in scroll (recording victory), smirk, intellectual, no text, no ui",
+            "defeat": "glasses broken, robes messy, scattered scrolls, dizzy, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, crane sage girl, teaching viewer calligraphy, leaning over, cleavage view, serious but close, no text, no ui"
         },
         lore: {
             "title": "장수의 상징",
@@ -2424,13 +2472,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 연꽃 아씨",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 연꽃 아씨, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, lotus flower girl, pink dress, petal decorations, water lily pad, pure but alluring, glamorous body, huge breasts, extremely thick thighs, wide hips, pond background, masterpiece, best quality",
+            "idle": "sitting on lotus leaf, feet in water, serene expression, holding a lotus flower, no text, no ui",
+            "joy": "splashing water, laughing, bright smile, sunlight, happy, no text, no ui",
+            "sad": "petals wilting, crying, rain on pond, gloomy, no text, no ui",
+            "angry": "vines rising, thorns, angry pout, water surging, aggressive, no text, no ui",
+            "skill": "blooming lotus explosion, pink energy, cinematic angle, healing light, masterpiece, no text, no ui",
+            "victory": "twirling, dress fluttering, petals falling, happy pose, no text, no ui",
+            "defeat": "falling into water, dress soaking wet, looking confused, floating petals, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, lotus flower girl, boat ride, lotus field, looking at viewer, shy smile, romantic, no text, no ui"
         },
         lore: {
             "title": "진흙 속의 고결함",
@@ -2489,13 +2539,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 장자의 나비",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 장자의 나비, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, butterfly dream girl, Zhuangzi style, colorful butterfly wings, translucent silk dress, dreamy eyes, glamorous body, huge breasts, extremely thick thighs, wide hips, fantasy dreamscape background, masterpiece, best quality",
+            "idle": "floating, sleepy expression, butterfly landing on finger, soft glow, no text, no ui",
+            "joy": "yawning cute, smiling, chasing butterflies, happy, dreamy, no text, no ui",
+            "sad": "curled up, wings wrapping body, dark blue colors, sad dream, no text, no ui",
+            "angry": "nightmare aura, dark purple wings, eyes glowing, distortion effect, scary, no text, no ui",
+            "skill": "illusion scales, sleep powder, cinematic angle, kaleidoscope effect, masterpiece, no text, no ui",
+            "victory": "sleeping in mid-air, peaceful smile, battle over, floating, no text, no ui",
+            "defeat": "falling down, wings torn, waking up from dream, confused, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, butterfly dream girl, afternoon nap, sleeping on viewer's lap, peaceful face, garden, no text, no ui"
         },
         lore: {
             "title": "호접지몽",
@@ -2554,13 +2606,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 꽃의 요정",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 꽃의 요정, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, flower fairy girl, floral dress, blooming flowers hair ornament, nature magic, glamorous body, huge breasts, extremely thick thighs, wide hips, flower garden background, masterpiece, best quality",
+            "idle": "standing pose, smelling a flower, gentle smile, pollen floating, no text, no ui",
+            "joy": "dancing, flower petals swirling, bright laugh, eyes closed happy, no text, no ui",
+            "sad": "wilted flower in hand, looking down, grey colors, crying, no text, no ui",
+            "angry": "thorns growing, angry expression, nature's wrath, green aura, no text, no ui",
+            "skill": "super bloom, vine lash, cinematic angle, petal storm, masterpiece, no text, no ui",
+            "victory": "making a flower crown, sitting on grass, happy, peace sign, no text, no ui",
+            "defeat": "sitting on knees, dirty dress, petals on ground, crying, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, flower fairy girl, planting seeds together, dirt on cheek, happy smile, sunny day, no text, no ui"
         },
         lore: {
             "title": "사계절의 축복",
@@ -2619,13 +2673,15 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, oriental fantasy, ink painting style, mystical mist, jade details, Light, 먹물 요정",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 먹물 요정, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, ink spirit girl, black ink body (slime-like but humanoid), calligraphy brush, artistic, glamorous body, huge breasts, extremely thick thighs, wide hips, white paper background, masterpiece, best quality",
+            "idle": "floating, dripping ink, holding giant brush, mischievous smile, no text, no ui",
+            "joy": "painting in air, graffiti, laughing, ink splashes, happy, no text, no ui",
+            "sad": "puddle form, melting, sad face, grey ink, gloomy, no text, no ui",
+            "angry": "spiking ink, sharp shapes, red eyes, messy splashes, aggressive, no text, no ui",
+            "skill": "giant calligraphy stroke, ink tsunami, cinematic angle, black and white contrast, masterpiece, no text, no ui",
+            "victory": "posing on finished painting, proud, ink on face, victory sign, no text, no ui",
+            "defeat": "splattered on ground, flat, drying up, dizzy eyes, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, ink spirit girl, drawing on viewer's face, prank succeed, giggling, close up, cute, no text, no ui"
         },
         lore: {
             "title": "검은 흔적의 장난",
@@ -2674,15 +2730,26 @@ var SHANGRILA_CREATURES = [
         image: "images/creatures/shangrila/creature_fox_nine_new.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_fox_nine_new.png",
-            "joy": "images/creatures/shangrila/creature_fox_nine_new.png", // Fallback
-            "sad": "images/creatures/shangrila/creature_fox_nine_new.png", // Fallback
-            "angry": "images/creatures/shangrila/creature_fox_nine_new.png", // Fallback
-            "skill": "images/creatures/shangrila/creature_fox_nine_new.png",
-            "gallery": {}
+            "joy": "images/creatures/shangrila/creature_fox_nine_new_joy.png",
+            "sad": "images/creatures/shangrila/creature_fox_nine_new_sad.png",
+            "angry": "images/creatures/shangrila/creature_fox_nine_new_angry.png",
+            "skill": "images/creatures/shangrila/creature_fox_nine_new_skill.png",
+            "victory": "images/creatures/shangrila/creature_fox_nine_new_victory.png",
+            "defeat": "images/creatures/shangrila/creature_fox_nine_new_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/shangrila/creature_fox_nine_new_gallery_lv1.png"
+            }
         },
         prompts: {
-            "base": "anime style, 신생 구미호",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, newborn nine tailed fox girl, kumiho, one tail splitting into nine, clumsy, cute, glamorous body, huge breasts, extremely thick thighs, wide hips, forest clearing background, masterpiece, best quality",
+            "idle": "standing pose, trying to balance, tail heavy, confused cuteness, no text, no ui",
+            "joy": "successfully using magic, tails wagging, happy smile, sparkles, no text, no ui",
+            "sad": "tripped over tail, sitting on ground, tearing up, rubbing knee, no text, no ui",
+            "angry": "puffing cheeks, trying to look scary, small fox fire, cute angry, no text, no ui",
+            "skill": "uncontrollable fox fire burst, surprised face, cinematic angle, magic overflow, masterpiece, no text, no ui",
+            "victory": "standing proud, hands on hips, tails spread, confident smile, no text, no ui",
+            "defeat": "tangled in tails, dizzy eyes, lying down, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, newborn nine tailed fox girl, grooming tails, asking for help, blushing, looking over shoulder, no text, no ui"
         },
         lore: {
             "title": "잠재된 요력",
@@ -2731,15 +2798,26 @@ var SHANGRILA_CREATURES = [
         image: "images/creatures/shangrila/creature_jade_rabbit.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_jade_rabbit.png",
-            "joy": "images/creatures/shangrila/creature_jade_rabbit.png", // Fallback
-            "sad": "images/creatures/shangrila/creature_jade_rabbit.png", // Fallback
-            "angry": "images/creatures/shangrila/creature_jade_rabbit.png", // Fallback
-            "skill": "images/creatures/shangrila/creature_jade_rabbit.png",
-            "gallery": {}
+            "joy": "images/creatures/shangrila/creature_jade_rabbit_joy.png",
+            "sad": "images/creatures/shangrila/creature_jade_rabbit_sad.png",
+            "angry": "images/creatures/shangrila/creature_jade_rabbit_angry.png",
+            "skill": "images/creatures/shangrila/creature_jade_rabbit_skill.png",
+            "victory": "images/creatures/shangrila/creature_jade_rabbit_victory.png",
+            "defeat": "images/creatures/shangrila/creature_jade_rabbit_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/shangrila/creature_jade_rabbit_gallery_lv1.png"
+            }
         },
         prompts: {
-            "base": "anime style, 옥토끼",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, jade rabbit girl, translucent green hair, jade jewelry, moon rabbit outfit, glamorous body, huge breasts, extremely thick thighs, wide hips, moon palace background, masterpiece, best quality",
+            "idle": "standing pose, holding jade cup, elegant, looking at moon, no text, no ui",
+            "joy": "laughing softly, covering mouth, jade sparkling, happy, no text, no ui",
+            "sad": "looking at broken jade, sad expression, tears like pearls, gloomy, no text, no ui",
+            "angry": "jade glowing green, angry gaze, stamping foot, magic aura, no text, no ui",
+            "skill": "jade elixir shower, healing light, cinematic angle, green glow, masterpiece, no text, no ui",
+            "victory": "holding cup high, toast, elegant smile, victory, no text, no ui",
+            "defeat": "slumped on ground, cup spilled, exhausted, dress messy, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, jade rabbit girl, serving tea (elixir), kneeling politely, offering cup, serene smile, no text, no ui"
         },
         lore: {
             "title": "달의 주민",
@@ -2788,15 +2866,26 @@ var SHANGRILA_CREATURES = [
         image: "images/creatures/shangrila/creature_yin_yang_fish.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_yin_yang_fish.png",
-            "joy": "images/creatures/shangrila/creature_yin_yang_fish.png", // Fallback
-            "sad": "images/creatures/shangrila/creature_yin_yang_fish.png", // Fallback
-            "angry": "images/creatures/shangrila/creature_yin_yang_fish.png", // Fallback
-            "skill": "images/creatures/shangrila/creature_yin_yang_fish.png",
-            "gallery": {}
+            "joy": "images/creatures/shangrila/creature_yin_yang_fish_joy.png",
+            "sad": "images/creatures/shangrila/creature_yin_yang_fish_sad.png",
+            "angry": "images/creatures/shangrila/creature_yin_yang_fish_angry.png",
+            "skill": "images/creatures/shangrila/creature_yin_yang_fish_skill.png",
+            "victory": "images/creatures/shangrila/creature_yin_yang_fish_victory.png",
+            "defeat": "images/creatures/shangrila/creature_yin_yang_fish_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/shangrila/creature_yin_yang_fish_gallery_lv1.png"
+            }
         },
         prompts: {
-            "base": "anime style, 음양어",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, yin yang fish girl, black and white dress (taoist style), fish tail, twin buns (one black one white), floating water, glamorous body, huge breasts, extremely thick thighs, wide hips, ink wash painting background, masterpiece, best quality",
+            "idle": "standing pose, floating, hands together in prayer, eyes closed peacefully, no text, no ui",
+            "joy": "spinning around, creating taijitu symbol with water, happy smile, eyes open, no text, no ui",
+            "sad": "sitting on water surface, ripples, looking down, black and white colors separating, sad, no text, no ui",
+            "angry": "water spinning violently, eyes glowing (one black one white), force palms, aggressive, no text, no ui",
+            "skill": "dual fish dragon ascent, black and white energy beam, cinematic angle, harmony of opposites, masterpiece, no text, no ui",
+            "victory": "meditating in mid-air, peaceful smile, balance restored, glowing aura, no text, no ui",
+            "defeat": "lying on side, dress soaked, water calm, exhausted, looking at sky, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, yin yang fish girl, meditating under waterfall, wet clothes, opening one eye, looking at viewer, serene but alluring, no text, no ui"
         },
         lore: {
             "title": "흐르는 조화",
@@ -2845,15 +2934,26 @@ var SHANGRILA_CREATURES = [
         image: "images/creatures/shangrila/creature_cloud_spirit.png",
         sprites: {
             "idle": "images/creatures/shangrila/creature_cloud_spirit.png",
-            "joy": "images/creatures/shangrila/creature_cloud_spirit.png",
-            "sad": "images/creatures/shangrila/creature_cloud_spirit.png",
-            "angry": "images/creatures/shangrila/creature_cloud_spirit.png",
-            "skill": "images/creatures/shangrila/creature_cloud_spirit.png",
-            "gallery": {}
+            "joy": "images/creatures/shangrila/creature_cloud_spirit_joy.png",
+            "sad": "images/creatures/shangrila/creature_cloud_spirit_sad.png",
+            "angry": "images/creatures/shangrila/creature_cloud_spirit_angry.png",
+            "skill": "images/creatures/shangrila/creature_cloud_spirit_skill.png",
+            "victory": "images/creatures/shangrila/creature_cloud_spirit_victory.png",
+            "defeat": "images/creatures/shangrila/creature_cloud_spirit_defeat.png",
+            "gallery": {
+                "lv1": "images/creatures/shangrila/creature_cloud_spirit_gallery_lv1.png"
+            }
         },
         prompts: {
-            "base": "anime style, 운무 정령",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, cloud spirit girl, white fluffy dress, cloud hair, floating, translucent fabric, glamorous body, huge breasts, extremely thick thighs, wide hips, high mountain sky background, masterpiece, best quality",
+            "idle": "standing pose, floating comfortably, hugging a small cloud, sleepy face, no text, no ui",
+            "joy": "bouncing on clouds, giggling, bright sun behind, rainbow, happy, no text, no ui",
+            "sad": "turning grey (rain cloud), raining on self, pouting, hiding face in hands, no text, no ui",
+            "angry": "thunderstorm form, hair turning dark, lightning sparks, shouting, angry wind, no text, no ui",
+            "skill": "sea of clouds, fog descent, cinematic angle, mysterious atmosphere, masterpiece, no text, no ui",
+            "victory": "lying on cloud bed, stretching, relaxed smile, blue sky, no text, no ui",
+            "defeat": "dispersing, turning into mist, faint outline, sad eyes, defeated, no text, no ui",
+            "gallery_lv1": "dating sim event, cloud spirit girl, floating cafe high in sky, serving cotton candy, sweet smile, wind blowing dress, no text, no ui"
         },
         lore: {
             "title": "산봉우리의 안개",

@@ -20,13 +20,15 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 켄타우로스 정찰병",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 켄타우로스 정찰병, energetic, detailed, looking at viewer"
+            "base": "anime, blue archive style, nikke style, full body, centaur girl, horse body lower half, human upper half, athletic body, green archer outfit, nature background, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing tall, holding bow, confident",
+            "joy": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, laughing, waving hand, flowers",
+            "sad": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, crying, looking down",
+            "angry": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, drawing bow, shouting, battle aura",
+            "skill": "anime, full body, wide angle, centaur girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, firing magic arrow, wind effects",
+            "victory": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, rearing up on hind legs, cheerful",
+            "defeat": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, kneeling, exhausted, armor broken",
+            "gallery_lv1": "anime, blue archive style, nikke style, full body, centaur girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, resting in forest, brushing tail, looking at viewer"
         },
         lore: {
             "title": "숲의 수호자",
@@ -159,17 +161,14 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 크로노스의 그림자",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 크로노스의 그림자, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 크로노스의 그림자, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 크로노스의 그림자, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, kronos shade, dark ethereal form, time energy, scythe, glowing eyes, clockwork background, shiny texture, soft lighting, bloom, masterpiece, best quality, consistent with freya style, floating pose",
+            "idle": "anime, full body, wide angle, kronos shade, dark ethereal form, shiny texture, soft lighting, bloom, masterpiece, best quality, consistent with freya style, observing",
+            "joy": "anime, full body, wide angle, kronos shade, sinister smile, glowing eyes, shiny texture, bloom, masterpiece, best quality, consistent with freya style, plotting",
+            "sad": "anime, full body, wide angle, kronos shade, fading form, dim light, shiny texture, masterpiece, best quality, consistent with freya style, weakening",
+            "angry": "anime, full body, wide angle, kronos shade, raging energy, swinging scythe, shiny texture, bloom, masterpiece, best quality, consistent with freya style, attack stance",
+            "skill": "anime, full body, wide angle, kronos shade, time distortion effect, dynamic angle, shiny texture, bloom, masterpiece, best quality, consistent with freya style, casting spell",
+            "victory": "anime, full body, wide angle, kronos shade, absorbing time, glowing aura, shiny texture, bloom, masterpiece, best quality, consistent with freya style, dominant pose",
+            "defeat": "anime, full body, wide angle, kronos shade, dissipating smoke, broken clockwork, shiny texture, masterpiece, best quality, consistent with freya style, vanishing"
         },
         lore: {
             "title": "시간의 지배자",
@@ -231,17 +230,14 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 심해의 군주 포세이돈",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 심해의 군주 포세이돈, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 심해의 군주 포세이돈, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 심해의 군주 포세이돈, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, poseidon girl, ocean goddess, trident, blue scale armor bikini, water aura, sea background, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, commanding pose",
+            "idle": "anime, full body, wide angle, poseidon girl, holding trident, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing",
+            "joy": "anime, full body, wide angle, poseidon girl, laughing, creating waves, shiny skin, bloom, masterpiece, best quality, consistent with freya style, happy",
+            "sad": "anime, full body, wide angle, poseidon girl, calm sea, looking down, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, melancholic",
+            "angry": "anime, full body, wide angle, poseidon girl, storm raging, glowing blue eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, wrath",
+            "skill": "anime, full body, wide angle, poseidon girl, summoning tsunami, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, unleashing power",
+            "victory": "anime, full body, wide angle, poseidon girl, riding wave, raising trident, shiny skin, bloom, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, poseidon girl, floating in water, exhausted, shiny skin, sweat, masterpiece, best quality, consistent with freya style, defeated"
         },
         lore: {
             "title": "바다의 제왕",
@@ -303,17 +299,14 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 지옥의 지배자 하데스",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 지옥의 지배자 하데스, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 지옥의 지배자 하데스, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 지옥의 지배자 하데스, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, hades girl, underworld goddess, dark gothic dress, skull accessories, purple flame aura, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, elegant pose",
+            "idle": "anime, full body, wide angle, hades girl, holding bident, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing",
+            "joy": "anime, full body, wide angle, hades girl, faint smile, blue flames dancing, shiny skin, bloom, masterpiece, best quality, consistent with freya style, pleased",
+            "sad": "anime, full body, wide angle, hades girl, lonely expression, shadows gathering, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, sorrowful",
+            "angry": "anime, full body, wide angle, hades girl, cold stare, darkness fighting, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, intimidating",
+            "skill": "anime, full body, wide angle, hades girl, summoning souls, dynamic angle, purple magic, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, casting skill",
+            "victory": "anime, full body, wide angle, hades girl, sitting on throne, crossing legs, shiny skin, bloom, masterpiece, best quality, consistent with freya style, regal victory",
+            "defeat": "anime, full body, wide angle, hades girl, dress torn, kneeling, exhausted, shiny skin, sweat, masterpiece, best quality, consistent with freya style, defeated"
         },
         lore: {
             "title": "명계의 왕",
@@ -375,17 +368,14 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 불멸의 영웅 헤라클레스",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 불멸의 영웅 헤라클레스, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 불멸의 영웅 헤라클레스, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 불멸의 영웅 헤라클레스, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, hercules girl, muscular warrior goddess, lion skin cape, holding club, strong physique, shiny skin, sweat, alluring curves, abs, masterpiece, best quality, consistent with freya style, heroic pose",
+            "idle": "anime, full body, wide angle, hercules girl, resting club on shoulder, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, confident stand",
+            "joy": "anime, full body, wide angle, hercules girl, big laugh, flexing biceps, shiny skin, bloom, masterpiece, best quality, consistent with freya style, cheerful",
+            "sad": "anime, full body, wide angle, hercules girl, looking at hands, regretful expression, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, somber",
+            "angry": "anime, full body, wide angle, hercules girl, furious roar, glowing muscles, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, battle rage",
+            "skill": "anime, full body, wide angle, hercules girl, smashing ground, dynamic impact, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, powerful strike",
+            "victory": "anime, full body, wide angle, hercules girl, lifting heavy rock, showing off, shiny skin, bloom, masterpiece, best quality, consistent with freya style, triumphant",
+            "defeat": "anime, full body, wide angle, hercules girl, collapsed, breathing heavily, shiny skin, sweat, masterpiece, best quality, consistent with freya style, exhausted"
         },
         lore: {
             "title": "신이 된 영웅",
@@ -447,17 +437,14 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 거신 아틀라스",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 거신 아틀라스, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 거신 아틀라스, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 거신 아틀라스, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, titan atlas girl, holding celestial sphere, strong muscles, ancient titan armor, shiny skin, sweat, alluring curves, abs, masterpiece, best quality, consistent with freya style, bearing weight pose",
+            "idle": "anime, full body, wide angle, titan atlas girl, holding sphere on shoulder, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing",
+            "joy": "anime, full body, wide angle, titan atlas girl, lightened burden, smiling, shiny skin, bloom, masterpiece, best quality, consistent with freya style, relieved",
+            "sad": "anime, full body, wide angle, titan atlas girl, crushed by weight, pained expression, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, suffering",
+            "angry": "anime, full body, wide angle, titan atlas girl, straining muscles, glowing veins, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, enduring",
+            "skill": "anime, full body, wide angle, titan atlas girl, throwing sphere, earth shaking, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, titan strength",
+            "victory": "anime, full body, wide angle, titan atlas girl, sitting on sphere, wiping sweat, shiny skin, bloom, masterpiece, best quality, consistent with freya style, victorious rest",
+            "defeat": "anime, full body, wide angle, titan atlas girl, falling under weight, kneeling, glossy skin, sweat, masterpiece, best quality, consistent with freya style, overwhelmed"
         },
         lore: {
             "title": "천공의 지지자",
@@ -519,14 +506,14 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 미노타우로스 왕",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "base": "anime, full body, wide angle, minotaur king girl, bull horns, labyrinth armor, giant axe, strong fur, shiny skin, sweat, alluring curves, abs, masterpiece, best quality, consistent with freya style, intimidating pose",
+            "idle": "anime, full body, wide angle, minotaur king girl, snorting, holding axe, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, guarding",
+            "joy": "anime, full body, wide angle, minotaur king girl, hearty laugh, flexing muscles, shiny skin, bloom, masterpiece, best quality, consistent with freya style, energetic",
+            "sad": "anime, full body, wide angle, minotaur king girl, lost expression, sitting down, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, confused",
+            "angry": "anime, full body, wide angle, minotaur king girl, red eyes, charging stance, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, furious",
+            "skill": "anime, full body, wide angle, minotaur king girl, labyrinth shift, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, maze master",
+            "victory": "anime, full body, wide angle, minotaur king girl, raising axe, triumphant roar, shiny skin, bloom, masterpiece, best quality, consistent with freya style, victorious",
+            "defeat": "anime, full body, wide angle, minotaur king girl, kneeling, horns broken, shiny skin, sweat, masterpiece, best quality, consistent with freya style, defeated",
             "gallery_lv1": "dating sim event, 미노타우로스 왕, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
             "gallery_lv2": "dating sim event, 미노타우로스 왕, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
             "gallery_lv3": "dating sim event, 미노타우로스 왕, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
@@ -591,14 +578,14 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 지옥파수꾼 케르베로스",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "base": "anime, full body, wide angle, cerberus hell girl, three-headed dog motif, demonic armor, chains, hellfire, glowing red eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, guarding pose",
+            "idle": "anime, full body, wide angle, cerberus hell girl, holding chains, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, vigilant",
+            "joy": "anime, full body, wide angle, cerberus hell girl, tail wagging, happy expressions, shiny skin, bloom, masterpiece, best quality, consistent with freya style, playful",
+            "sad": "anime, full body, wide angle, cerberus hell girl, whining, ears down, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, lonely",
+            "angry": "anime, full body, wide angle, cerberus hell girl, three heads snarling, hellfire breath, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, savage",
+            "skill": "anime, full body, wide angle, cerberus hell girl, hellfire explosion, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, gatekeeper power",
+            "victory": "anime, full body, wide angle, cerberus hell girl, howling victory, stepping on enemy, shiny skin, bloom, masterpiece, best quality, consistent with freya style, dominant",
+            "defeat": "anime, full body, wide angle, cerberus hell girl, lying down, whimpering, shiny skin, sweat, masterpiece, best quality, consistent with freya style, defeated",
             "gallery_lv1": "dating sim event, 지옥파수꾼 케르베로스, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
             "gallery_lv2": "dating sim event, 지옥파수꾼 케르베로스, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
             "gallery_lv3": "dating sim event, 지옥파수꾼 케르베로스, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
@@ -663,14 +650,14 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 레르나의 히드라",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "base": "anime, full body, wide angle, hydra venom girl, many snake heads, poison aura, swamp background, scale armor, glowing green eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, threatening pose",
+            "idle": "anime, full body, wide angle, hydra venom girl, snakes hissing, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, waiting",
+            "joy": "anime, full body, wide angle, hydra venom girl, sinister laugh, snakes dancing, shiny skin, bloom, masterpiece, best quality, consistent with freya style, cruel joy",
+            "sad": "anime, full body, wide angle, hydra venom girl, heads drooping, poison dripping, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, toxicity",
+            "angry": "anime, full body, wide angle, hydra venom girl, many heads attacking, poison breath, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, rampage",
+            "skill": "anime, full body, wide angle, hydra venom girl, regenerating heads, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, immortal",
+            "victory": "anime, full body, wide angle, hydra venom girl, surrounded by defeated foes, snakes hissing, shiny skin, bloom, masterpiece, best quality, consistent with freya style, survivor",
+            "defeat": "anime, full body, wide angle, hydra venom girl, all heads cut off, collapsing, shiny skin, sweat, masterpiece, best quality, consistent with freya style, slain",
             "gallery_lv1": "dating sim event, 레르나의 히드라, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
             "gallery_lv2": "dating sim event, 레르나의 히드라, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
             "gallery_lv3": "dating sim event, 레르나의 히드라, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
@@ -735,14 +722,14 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 네메아의 사자",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
+            "base": "anime, full body, wide angle, lion nemean girl, golden fur armor, impenetrable skin, feral claws, wild mane hair, glowing yellow eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, pouncing pose",
+            "idle": "anime, full body, wide angle, lion nemean girl, sharpening claws, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, stalking",
+            "joy": "anime, full body, wide angle, lion nemean girl, roaring laughter, shiny skin, bloom, masterpiece, best quality, consistent with freya style, triumphant",
+            "sad": "anime, full body, wide angle, lion nemean girl, licking wounds, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, hurt pride",
+            "angry": "anime, full body, wide angle, lion nemean girl, savage roar, baring fangs, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, beast mode",
+            "skill": "anime, full body, wide angle, lion nemean girl, golden aura burst, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, invincible",
+            "victory": "anime, full body, wide angle, lion nemean girl, standing over prey, roaring, shiny skin, bloom, masterpiece, best quality, consistent with freya style, apex predator",
+            "defeat": "anime, full body, wide angle, lion nemean girl, unconscious, golden fur matted, shiny skin, sweat, masterpiece, best quality, consistent with freya style, subdued",
             "gallery_lv1": "dating sim event, 네메아의 사자, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
             "gallery_lv2": "dating sim event, 네메아의 사자, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
             "gallery_lv3": "dating sim event, 네메아의 사자, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
@@ -807,17 +794,17 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 저주받은 미모 메두사",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "victory": "winning pose, cheering, victory sign, energetic, confident smile, battlefield background",
-            "defeat": "defeated pose, kneeling, clothes torn, exhausted, injured, dirt on face, sad expression",
-            "gallery_lv1": "dating sim event, 저주받은 미모 메두사, shy look, cafe or park background, soft lighting, slight blush, holding hands context",
-            "gallery_lv2": "dating sim event, 저주받은 미모 메두사, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes",
-            "gallery_lv3": "dating sim event, 저주받은 미모 메두사, seducing pose, bed or hot spring background, wet skin or messy clothes, intense eye contact, masterpiece, extremely detailed, heart eyes"
+            "base": "anime, full body, wide angle, medusa cursed girl, snake hair, stone gaze, greek robe, scales on skin, glowing green eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, petrifying glance",
+            "idle": "anime, full body, wide angle, medusa cursed girl, snakes moving, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing",
+            "joy": "anime, full body, wide angle, medusa cursed girl, shy smile, hiding face, shiny skin, bloom, masterpiece, best quality, consistent with freya style, happy",
+            "sad": "anime, full body, wide angle, medusa cursed girl, crying stones, snakes drooping, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, cursed fate",
+            "angry": "anime, full body, wide angle, medusa cursed girl, hissing snakes, glowing eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, monster",
+            "skill": "anime, full body, wide angle, medusa cursed girl, stone beam, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, petrification",
+            "victory": "anime, full body, wide angle, medusa cursed girl, surrounded by statues, confident smile, shiny skin, bloom, masterpiece, best quality, consistent with freya style, deadly beauty",
+            "defeat": "anime, full body, wide angle, medusa cursed girl, kneeling, covering eyes, shiny skin, sweat, masterpiece, best quality, consistent with freya style, tragedy",
+            "gallery_lv1": "anime, full body, wide angle, medusa cursed girl, shy look, cafe or park background, soft lighting, slight blush, holding hands context, shiny skin, consistent with freya style",
+            "gallery_lv2": "anime, full body, wide angle, medusa cursed girl, intimate moment, bedroom or private room, close up, blushing hard, romantic atmosphere, looking into eyes, shiny skin, alluring curves, consistent with freya style",
+            "gallery_lv3": "anime, full body, wide angle, medusa cursed girl, seducing pose, bed or hot spring background, wet skin, intense eye contact, masterpiece, extremely detailed, heart eyes, alluring curves, consistent with freya style"
         },
         lore: {
             "title": "석화의 시선",
@@ -877,13 +864,15 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 화염 마법사",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 화염 마법사, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, mage flame girl, fire magic, elegant robes, staff, floating fireorbs, glowing eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, casting pose",
+            "idle": "anime, full body, wide angle, mage flame girl, reading tome, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, studying",
+            "joy": "anime, full body, wide angle, mage flame girl, creating fireworks, smiling, shiny skin, bloom, masterpiece, best quality, consistent with freya style, curious",
+            "sad": "anime, full body, wide angle, mage flame girl, flame dying out, sad expression, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, cold",
+            "angry": "anime, full body, wide angle, mage flame girl, inferno aura, shouting spell, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, burning rage",
+            "skill": "anime, full body, wide angle, mage flame girl, meteor strike, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, grand magic",
+            "victory": "anime, full body, wide angle, mage flame girl, flames dancing around, confident smile, shiny skin, bloom, masterpiece, best quality, consistent with freya style, magical victory",
+            "defeat": "anime, full body, wide angle, mage flame girl, staff broken, robe singed, shiny skin, sweat, masterpiece, best quality, consistent with freya style, out of mana",
+            "gallery_lv1": "anime, full body, wide angle, mage flame girl, cute pose, energetic, detailed, looking at viewer, shiny skin, bloom, consistent with freya style"
         },
         lore: {
             "title": "신성한 불꽃",
@@ -942,13 +931,15 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 축제의 신 디오니소스",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 축제의 신 디오니소스, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, dionysus girl, wine goddess, grape vines, leopard skin cloak, holding wine goblet, drunk blush, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, tipsy pose",
+            "idle": "anime, full body, wide angle, dionysus girl, swaying, holding wine, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, relaxed",
+            "joy": "anime, full body, wide angle, dionysus girl, very happy laugh, spilling wine, shiny skin, bloom, masterpiece, best quality, consistent with freya style, festive",
+            "sad": "anime, full body, wide angle, dionysus girl, empty goblet, dizzy, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, hangover",
+            "angry": "anime, full body, wide angle, dionysus girl, madness aura, glowing purple eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, insane rage",
+            "skill": "anime, full body, wide angle, dionysus girl, wine flood, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, party time",
+            "victory": "anime, full body, wide angle, dionysus girl, toasting, surrounded by grapes, shiny skin, bloom, masterpiece, best quality, consistent with freya style, cheers",
+            "defeat": "anime, full body, wide angle, dionysus girl, passed out, wine spilled, shiny skin, sweat, masterpiece, best quality, consistent with freya style, sleeping",
+            "gallery_lv1": "anime, full body, wide angle, dionysus girl, cute pose, energetic, detailed, looking at viewer, shiny skin, bloom, consistent with freya style"
         },
         lore: {
             "title": "광기의 신",
@@ -1008,13 +999,15 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 폭풍우의 하피 퀸",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 폭풍우의 하피 퀸, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, harpy queen girl, bird wings arms, sharp talons, wind aura, storm background, feathers, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, flying pose",
+            "idle": "anime, full body, wide angle, harpy queen girl, hovering, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, watching",
+            "joy": "anime, full body, wide angle, harpy queen girl, screeching laugh, flapping wings, shiny skin, bloom, masterpiece, best quality, consistent with freya style, greedy",
+            "sad": "anime, full body, wide angle, harpy queen girl, ruffled feathers, looking down, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, disappointed",
+            "angry": "anime, full body, wide angle, harpy queen girl, diving attack, glowing eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, predatory",
+            "skill": "anime, full body, wide angle, harpy queen girl, tornado creation, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, storm bringer",
+            "victory": "anime, full body, wide angle, harpy queen girl, holding loot, flying high, shiny skin, bloom, masterpiece, best quality, consistent with freya style, snatching success",
+            "defeat": "anime, full body, wide angle, harpy queen girl, crashed on ground, feathers scattered, shiny skin, sweat, masterpiece, best quality, consistent with freya style, grounded",
+            "gallery_lv1": "anime, full body, wide angle, harpy queen girl, cute pose, energetic, detailed, looking at viewer, shiny skin, bloom, consistent with freya style"
         },
         lore: {
             "title": "폭풍의 약탈자",
@@ -1073,13 +1066,15 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 유혹의 사이렌",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 유혹의 사이렌, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, siren singer girl, bird wings, beautiful singer, musical notes aura, ocean rock background, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, singing pose",
+            "idle": "anime, full body, wide angle, siren singer girl, humming, mic stand, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, performing",
+            "joy": "anime, full body, wide angle, siren singer girl, blowing kiss, winking, shiny skin, bloom, masterpiece, best quality, consistent with freya style, charming",
+            "sad": "anime, full body, wide angle, siren singer girl, silence, holding throat, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, muted",
+            "angry": "anime, full body, wide angle, siren singer girl, screaming song, soundwaves, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, discordant",
+            "skill": "anime, full body, wide angle, siren singer girl, hypnotic melody, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, climax",
+            "victory": "anime, full body, wide angle, siren singer girl, bowing to audience, flowers raining, shiny skin, bloom, masterpiece, best quality, consistent with freya style, diva",
+            "defeat": "anime, full body, wide angle, siren singer girl, kneeling, coughing, shiny skin, sweat, masterpiece, best quality, consistent with freya style, silenced",
+            "gallery_lv1": "anime, full body, wide angle, siren singer girl, cute pose, energetic, detailed, looking at viewer, shiny skin, bloom, consistent with freya style"
         },
         lore: {
             "title": "치명적인 유혹",
@@ -1138,13 +1133,15 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 고르곤 자매 에우리알레",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 고르곤 자매 에우리알레, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, gorgon sister euryale, snake hair, golden wings, brass claws, gorgon scales, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, flying pose",
+            "idle": "anime, full body, wide angle, gorgon sister euryale, hovering, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, watching",
+            "joy": "anime, full body, wide angle, gorgon sister euryale, cruel smile, wings spread, shiny skin, bloom, masterpiece, best quality, consistent with freya style, excited",
+            "sad": "anime, full body, wide angle, gorgon sister euryale, wings folded, looking away, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, bored",
+            "angry": "anime, full body, wide angle, gorgon sister euryale, shrieking, claws out, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, attacking",
+            "skill": "anime, full body, wide angle, gorgon sister euryale, sonic scream, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, banshee wail",
+            "victory": "anime, full body, wide angle, gorgon sister euryale, preening wings, smug look, shiny skin, bloom, masterpiece, best quality, consistent with freya style, arrogant",
+            "defeat": "anime, full body, wide angle, gorgon sister euryale, on ground, wings broken, shiny skin, sweat, masterpiece, best quality, consistent with freya style, fallen",
+            "gallery_lv1": "anime, full body, wide angle, gorgon sister euryale, cute pose, energetic, detailed, looking at viewer, shiny skin, bloom, consistent with freya style"
         },
         lore: {
             "title": "멀리 나는 자",
@@ -1203,13 +1200,15 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 고르곤 자매 스테노",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 고르곤 자매 스테노, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, gorgon sister stheno, snake hair, red eyes, blood hungry, sharp fangs, aggressive divine aura, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hunting pose",
+            "idle": "anime, full body, wide angle, gorgon sister stheno, licking lips, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hungry",
+            "joy": "anime, full body, wide angle, gorgon sister stheno, manic laughter, crazy eyes, shiny skin, bloom, masterpiece, best quality, consistent with freya style, bloodlust",
+            "sad": "anime, full body, wide angle, gorgon sister stheno, pouting, no prey, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, dissatisfied",
+            "angry": "anime, full body, wide angle, gorgon sister stheno, berserk mode, claws glowing, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, killing intent",
+            "skill": "anime, full body, wide angle, gorgon sister stheno, blood claw slash, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, execute",
+            "victory": "anime, full body, wide angle, gorgon sister stheno, licking blood (ketchup), satisfied smile, shiny skin, bloom, masterpiece, best quality, consistent with freya style, feast",
+            "defeat": "anime, full body, wide angle, gorgon sister stheno, collapsed, angry tears, shiny skin, sweat, masterpiece, best quality, consistent with freya style, denied",
+            "gallery_lv1": "anime, full body, wide angle, gorgon sister stheno, cute pose, energetic, detailed, looking at viewer, shiny skin, bloom, consistent with freya style"
         },
         lore: {
             "title": "힘 있는 자",
@@ -1268,13 +1267,15 @@ var OLYMPUS_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, greek mythology, marble, gold ornaments, bright sunlight, divine, Light, 악보의 뮤즈",
-            "idle": "standing pose, confident, neutral expression",
-            "joy": "smiling, blushing, happy eyes, hand waving, flowers in background",
-            "sad": "sad expression, looking down, tears, injured, dark atmosphere",
-            "angry": "angry, shouting, glowing eyes, battle stance, attacking effect",
-            "skill": "extreme dynamic angle, close up, unleashing ultimate skill, cinematic lighting, masterpiece",
-            "gallery_lv1": "cute pose, 악보의 뮤즈, energetic, detailed, looking at viewer"
+            "base": "anime, full body, wide angle, muse lyra girl, playing lyre, flowing robes, musical magic, gentle expression, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, elegant playing",
+            "idle": "anime, full body, wide angle, muse lyra girl, strumming lyre, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, composing",
+            "joy": "anime, full body, wide angle, muse lyra girl, beautiful smile, melody floating, shiny skin, bloom, masterpiece, best quality, consistent with freya style, inspired",
+            "sad": "anime, full body, wide angle, muse lyra girl, broken string, sad song, shiny skin, soft lighting, masterpiece, best quality, consistent with freya style, melancholy",
+            "angry": "anime, full body, wide angle, muse lyra girl, dissonant chord, shockwave, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, sonic blast",
+            "skill": "anime, full body, wide angle, muse lyra girl, grand symphony, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, performance",
+            "victory": "anime, full body, wide angle, muse lyra girl, curtsy, applause sound, shiny skin, bloom, masterpiece, best quality, consistent with freya style, encore",
+            "defeat": "anime, full body, wide angle, muse lyra girl, dropping lyre, kneeling, shiny skin, sweat, masterpiece, best quality, consistent with freya style, silence",
+            "gallery_lv1": "anime, full body, wide angle, muse lyra girl, cute pose, energetic, detailed, looking at viewer, shiny skin, bloom, consistent with freya style"
         },
         lore: {
             "title": "예술의 여신",

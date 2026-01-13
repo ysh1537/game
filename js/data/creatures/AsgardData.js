@@ -165,11 +165,17 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_valkyrie.png",
         sprites: {
             idle: "images/creatures/asgard/creature_valkyrie.png",
-            joy: "images/creatures/asgard/creature_valkyrie.png",
-            sad: "images/creatures/asgard/creature_valkyrie.png",
-            angry: "images/creatures/asgard/creature_valkyrie.png",
-            skill: "images/creatures/asgard/creature_valkyrie.png",
-            gallery: "images/creatures/asgard/creature_valkyrie.png"
+            joy: "images/creatures/asgard/creature_valkyrie_joy.png",
+            sad: "images/creatures/asgard/creature_valkyrie_sad.png",
+            angry: "images/creatures/asgard/creature_valkyrie_angry.png",
+            skill: "images/creatures/asgard/creature_valkyrie_skill.png",
+            victory: "images/creatures/asgard/creature_valkyrie_victory.png",
+            defeat: "images/creatures/asgard/creature_valkyrie_defeat.png",
+            gallery: {
+                "lv1": "images/creatures/asgard/creature_valkyrie_gallery_lv1.png",
+                "lv2": "images/creatures/asgard/creature_valkyrie_gallery_lv2.png",
+                "lv3": "images/creatures/asgard/creature_valkyrie_gallery_lv3.png"
+            }
         },
         prompts: {
             base: "anime, full body, wide angle, valkyrie brunhilde, goddess of war, long silver hair, winged headpiece, silver and white armor, holding spear and flag, soft lighting, bloom, shiny skin, sweat, alluring body curves, massive breasts, thick thighs, heroic but seductive pose, masterpiece, best quality, consistent with freya style",
@@ -432,16 +438,20 @@ var ASGARD_CREATURES = [
         baseStr: 10, baseInt: 10,
         image: "images/creatures/asgard/creature_freya.png",
         sprites: {
-            "idle": "images/creatures/asgard/creature_freya.png",
-            "joy": "images/creatures/asgard/creature_freya_joy.png", // Fallback
-            "sad": "images/creatures/asgard/creature_freya_sad.png", // Fallback
-            "angry": "images/creatures/asgard/creature_freya_angry.png", // Fallback
+            "idle": "images/creatures/asgard/creature_freya_idle.png",
+            "joy": "images/creatures/asgard/creature_freya_joy.png",
+            "sad": "images/creatures/asgard/creature_freya_sad.png",
+            "angry": "images/creatures/asgard/creature_freya_angry.png",
             "skill": "images/creatures/asgard/creature_freya_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 여신 프레이야",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, freya goddess, long pink hair, white dress with gold armor, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, freya goddess, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing elegantly, warm smile",
+            "joy": "anime, blue archive style, nikke style, full body, freya goddess, shiny skin, bloom, masterpiece, best quality, consistent with freya style, laughing, flowers overlapping, radiant",
+            "sad": "anime, blue archive style, nikke style, full body, freya goddess, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, shedding golden tears, sorrowful",
+            "angry": "anime, blue archive style, nikke style, full body, freya goddess, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, commanding aura, battle stance, glowing eyes",
+            "skill": "anime, full body, wide angle, freya goddess, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, blessing magic, golden light effects"
         },
         lore: {
             title: "사랑과 전쟁의 여신",
@@ -546,15 +556,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_heimdall_horn_spirit.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_heimdall_horn_spirit.png",
-            "joy": "images/creatures/asgard/creature_heimdall_horn_spirit.png", // Fallback
-            "sad": "images/creatures/asgard/creature_heimdall_horn_spirit.png", // Fallback
-            "angry": "images/creatures/asgard/creature_heimdall_horn_spirit.png", // Fallback
-            "skill": "images/creatures/asgard/creature_heimdall_horn_spirit.png",
+            "joy": "images/creatures/asgard/creature_heimdall_horn_spirit_joy.png",
+            "sad": "images/creatures/asgard/creature_heimdall_horn_spirit_sad.png",
+            "angry": "images/creatures/asgard/creature_heimdall_horn_spirit_angry.png",
+            "skill": "images/creatures/asgard/creature_heimdall_horn_spirit_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 헤임달의 뿔 정령",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, horn spirit girl, blond hair, glowing aura, holding gjallarhorn, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, horn spirit girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, listening intently, floating",
+            "joy": "anime, blue archive style, nikke style, full body, horn spirit girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, cheerful smile, blowing horn lightly",
+            "sad": "anime, blue archive style, nikke style, full body, horn spirit girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, weeping, horn dropped",
+            "angry": "anime, blue archive style, nikke style, full body, horn spirit girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, shouting warning, soundwaves",
+            "skill": "anime, full body, wide angle, horn spirit girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, blowing giant horn, sonic boom"
         },
         lore: {
             title: "걀라르호른의 정령",
@@ -603,15 +617,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_mimir_spirit.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_mimir_spirit.png",
-            "joy": "images/creatures/asgard/creature_mimir_spirit.png", // Fallback
-            "sad": "images/creatures/asgard/creature_mimir_spirit.png", // Fallback
-            "angry": "images/creatures/asgard/creature_mimir_spirit.png", // Fallback
-            "skill": "images/creatures/asgard/creature_mimir_spirit.png",
+            "joy": "images/creatures/asgard/creature_mimir_spirit_joy.png",
+            "sad": "images/creatures/asgard/creature_mimir_spirit_sad.png",
+            "angry": "images/creatures/asgard/creature_mimir_spirit_angry.png",
+            "skill": "images/creatures/asgard/creature_mimir_spirit_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 미미르의 지혜 정령",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, water spirit girl, blue translucent skin, knowledgeable look, holding scroll, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, water spirit girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, reading ancient text, floating in water",
+            "joy": "anime, blue archive style, nikke style, full body, water spirit girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, enlightened smile, glowing rune",
+            "sad": "anime, blue archive style, nikke style, full body, water spirit girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, troubled expression, scroll closed",
+            "angry": "anime, blue archive style, nikke style, full body, water spirit girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, strict teacher look, pointing finger",
+            "skill": "anime, full body, wide angle, water spirit girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, unleashing knowledge, magic circle"
         },
         lore: {
             title: "지혜의 샘 정령",
@@ -660,15 +678,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_muninn_crow.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_muninn_crow.png",
-            "joy": "images/creatures/asgard/creature_muninn_crow.png", // Fallback
-            "sad": "images/creatures/asgard/creature_muninn_crow.png", // Fallback
-            "angry": "images/creatures/asgard/creature_muninn_crow.png", // Fallback
-            "skill": "images/creatures/asgard/creature_muninn_crow.png",
+            "joy": "images/creatures/asgard/creature_muninn_crow_joy.png",
+            "sad": "images/creatures/asgard/creature_muninn_crow_sad.png",
+            "angry": "images/creatures/asgard/creature_muninn_crow_angry.png",
+            "skill": "images/creatures/asgard/creature_muninn_crow_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 까마귀 무닌",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, crow girl, black feathers, gothic lolita, memory orb, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, crow girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, sitting on branch, observing",
+            "joy": "anime, blue archive style, nikke style, full body, crow girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, faint smile, holding shiny object",
+            "sad": "anime, blue archive style, nikke style, full body, crow girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, looking away, rainy mood",
+            "angry": "anime, blue archive style, nikke style, full body, crow girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, glare, feathers ruffling",
+            "skill": "anime, full body, wide angle, crow girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, memory flash, psychic wave"
         },
         lore: {
             title: "기억의 까마귀",
@@ -717,15 +739,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_ratatoskr_squirrel.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_ratatoskr_squirrel.png",
-            "joy": "images/creatures/asgard/creature_ratatoskr_squirrel.png", // Fallback
-            "sad": "images/creatures/asgard/creature_ratatoskr_squirrel.png", // Fallback
-            "angry": "images/creatures/asgard/creature_ratatoskr_squirrel.png", // Fallback
-            "skill": "images/creatures/asgard/creature_ratatoskr_squirrel.png",
+            "joy": "images/creatures/asgard/creature_ratatoskr_squirrel_joy.png",
+            "sad": "images/creatures/asgard/creature_ratatoskr_squirrel_sad.png",
+            "angry": "images/creatures/asgard/creature_ratatoskr_squirrel_angry.png",
+            "skill": "images/creatures/asgard/creature_ratatoskr_squirrel_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 다람쥐 라타토스크",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, squirrel girl, bushy tail, messenger bag, climbing tree, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, squirrel girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, eating acorn, looking around",
+            "joy": "anime, blue archive style, nikke style, full body, squirrel girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, laughing, jumping high",
+            "sad": "anime, blue archive style, nikke style, full body, squirrel girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, ears drooping, dropping acorn",
+            "angry": "anime, blue archive style, nikke style, full body, squirrel girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, puffing cheeks, throwing nuts",
+            "skill": "anime, full body, wide angle, squirrel girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, speed dash, creating rumors"
         },
         lore: {
             title: "세계수의 메신저",
@@ -774,15 +800,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_shieldmaiden_iron.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_shieldmaiden_iron.png",
-            "joy": "images/creatures/asgard/creature_shieldmaiden_iron.png", // Fallback
-            "sad": "images/creatures/asgard/creature_shieldmaiden_iron.png", // Fallback
-            "angry": "images/creatures/asgard/creature_shieldmaiden_iron.png", // Fallback
-            "skill": "images/creatures/asgard/creature_shieldmaiden_iron.png",
+            "joy": "images/creatures/asgard/creature_shieldmaiden_iron_joy.png",
+            "sad": "images/creatures/asgard/creature_shieldmaiden_iron_sad.png",
+            "angry": "images/creatures/asgard/creature_shieldmaiden_iron_angry.png",
+            "skill": "images/creatures/asgard/creature_shieldmaiden_iron_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 강철의 방패처녀",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, shield maiden, heavy iron armor, tower shield, blonde braid, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, shield maiden, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, defensive stance, holding ground",
+            "joy": "anime, blue archive style, nikke style, full body, shield maiden, shiny skin, bloom, masterpiece, best quality, consistent with freya style, proud smile, raising shield",
+            "sad": "anime, blue archive style, nikke style, full body, shield maiden, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, exhausted, leaning on shield",
+            "angry": "anime, blue archive style, nikke style, full body, shield maiden, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, shield bash preparation, war cry",
+            "skill": "anime, full body, wide angle, shield maiden, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, iron wall defense, magical barrier"
         },
         lore: {
             title: "강철의 방패 처녀",
@@ -831,15 +861,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_sleipnir_foal.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_sleipnir_foal.png",
-            "joy": "images/creatures/asgard/creature_sleipnir_foal.png", // Fallback
-            "sad": "images/creatures/asgard/creature_sleipnir_foal.png", // Fallback
-            "angry": "images/creatures/asgard/creature_sleipnir_foal.png", // Fallback
-            "skill": "images/creatures/asgard/creature_sleipnir_foal.png",
+            "joy": "images/creatures/asgard/creature_sleipnir_foal_joy.png",
+            "sad": "images/creatures/asgard/creature_sleipnir_foal_sad.png",
+            "angry": "images/creatures/asgard/creature_sleipnir_foal_angry.png",
+            "skill": "images/creatures/asgard/creature_sleipnir_foal_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime, full body, wide angle, sleek eight-legged magical foal, silver mane, glowing blue eyes, mystical runes on fur, soft lighting, bloom, shiny texture, masterpiece, best quality, consistent with freya style, standing in magical meadow",
-            "idle": "anime, full body, wide angle, sleek eight-legged magical foal, silver mane, glowing blue eyes, soft lighting, bloom, shiny texture, masterpiece, best quality, consistent with freya style, playful pose"
+            "base": "anime, blue archive style, nikke style, full body, sleek eight-legged magical foal, silver mane, glowing blue eyes, mystical runes on fur, soft lighting, bloom, shiny skin, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, sleek eight-legged magical foal, shiny skin, bloom, masterpiece, best quality, consistent with freya style, playful pose, trotting",
+            "joy": "anime, blue archive style, nikke style, full body, sleek eight-legged magical foal, shiny skin, masterpiece, best quality, consistent with freya style, neighing happily, jumping",
+            "sad": "anime, blue archive style, nikke style, full body, sleek eight-legged magical foal, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, drooping head, ears back",
+            "angry": "anime, blue archive style, nikke style, full body, sleek eight-legged magical foal, shiny skin, sweat, masterpiece, best quality, consistent with freya style, stomping eight hooves, snorting",
+            "skill": "anime, full body, wide angle, sleek eight-legged magical foal, dynamic angle, shiny skin, masterpiece, best quality, consistent with freya style, running on air, leaving light trail"
         },
         lore: {
             title: "팔다리 망아지",
@@ -887,15 +921,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_ulfhednar_wolf.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_ulfhednar_wolf.png",
-            "joy": "images/creatures/asgard/creature_ulfhednar_wolf.png", // Fallback
-            "sad": "images/creatures/asgard/creature_ulfhednar_wolf.png", // Fallback
-            "angry": "images/creatures/asgard/creature_ulfhednar_wolf.png", // Fallback
-            "skill": "images/creatures/asgard/creature_ulfhednar_wolf.png",
+            "joy": "images/creatures/asgard/creature_ulfhednar_wolf_joy.png",
+            "sad": "images/creatures/asgard/creature_ulfhednar_wolf_sad.png",
+            "angry": "images/creatures/asgard/creature_ulfhednar_wolf_angry.png",
+            "skill": "images/creatures/asgard/creature_ulfhednar_wolf_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime, full body, wide angle, wolf girl warrior, berserker, wearing wolf pelt hood, wild grey hair, glowing red eyes, torn leather armor, exposed midriff, shiny skin, sweat, muscular thighs, alluring curves, masterpiece, best quality, consistent with freya style, ferocious stance",
-            "idle": "anime, full body, wide angle, wolf girl warrior, berserker, wearing wolf pelt hood, wild grey hair, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, breathing heavily, ready to attack"
+            "base": "anime, blue archive style, nikke style, full body, wolf girl warrior, berserker, wearing wolf pelt hood, wild grey hair, glowing red eyes, torn leather armor, exposed midriff, shiny skin, sweat, muscular thighs, alluring curves, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, wolf girl warrior, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, breathing heavily, ready to attack",
+            "joy": "anime, blue archive style, nikke style, full body, wolf girl warrior, shiny skin, bloom, masterpiece, best quality, consistent with freya style, savage grin, howling victory",
+            "sad": "anime, blue archive style, nikke style, full body, wolf girl warrior, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, whimpering, licking wounds",
+            "angry": "anime, blue archive style, nikke style, full body, wolf girl warrior, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, berserk rage, drooling, claws out",
+            "skill": "anime, full body, wide angle, wolf girl warrior, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, pouncing attack, bloodlust aura"
         },
         lore: {
             title: "늑대 가죽 전사",
@@ -943,15 +981,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_valkyrie_leader_gunnr.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_valkyrie_leader_gunnr.png",
-            "joy": "images/creatures/asgard/creature_valkyrie_leader_gunnr.png", // Fallback
-            "sad": "images/creatures/asgard/creature_valkyrie_leader_gunnr.png", // Fallback
-            "angry": "images/creatures/asgard/creature_valkyrie_leader_gunnr.png", // Fallback
-            "skill": "images/creatures/asgard/creature_valkyrie_leader_gunnr.png",
+            "joy": "images/creatures/asgard/creature_valkyrie_leader_gunnr_joy.png",
+            "sad": "images/creatures/asgard/creature_valkyrie_leader_gunnr_sad.png",
+            "angry": "images/creatures/asgard/creature_valkyrie_leader_gunnr_angry.png",
+            "skill": "images/creatures/asgard/creature_valkyrie_leader_gunnr_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime, full body, wide angle, valkyrie commander gunnr, mature woman, golden heavy armor, red cape, holding commanding sword, stern beautiful face, shiny skin, soft lighting, bloom, massive breasts, thick thighs, alluring curves, masterpiece, best quality, consistent with freya style, commanding pose",
-            "idle": "anime, full body, wide angle, valkyrie commander gunnr, mature woman, golden heavy armor, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, crossing arms, observing battlefield"
+            "base": "anime, blue archive style, nikke style, full body, valkyrie commander gunnr, mature woman, golden heavy armor, red cape, holding commanding sword, stern beautiful face, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, valkyrie commander gunnr, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, crossing arms, observing battlefield",
+            "joy": "anime, blue archive style, nikke style, full body, valkyrie commander gunnr, shiny skin, bloom, masterpiece, best quality, consistent with freya style, satisfied nod, slight smile",
+            "sad": "anime, blue archive style, nikke style, full body, valkyrie commander gunnr, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, looking down holding helmet, rain",
+            "angry": "anime, blue archive style, nikke style, full body, valkyrie commander gunnr, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, pointing sword, furious gaze",
+            "skill": "anime, full body, wide angle, valkyrie commander gunnr, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, raising banner, rallying troops"
         },
         lore: {
             title: "전투의 지휘자 군르",
@@ -999,28 +1041,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_valkyrie_recruit.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_valkyrie_recruit.png",
-            "joy": "images/creatures/asgard/creature_valkyrie_recruit.png", // Fallback
-            "sad": "images/creatures/asgard/creature_valkyrie_recruit.png", // Fallback
-            "angry": "images/creatures/asgard/creature_valkyrie_recruit.png", // Fallback
-            "skill": "images/creatures/asgard/creature_valkyrie_recruit.png",
+            "joy": "images/creatures/asgard/creature_valkyrie_recruit_joy.png",
+            "sad": "images/creatures/asgard/creature_valkyrie_recruit_sad.png",
+            "angry": "images/creatures/asgard/creature_valkyrie_recruit_angry.png",
+            "skill": "images/creatures/asgard/creature_valkyrie_recruit_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime, full body, wide angle, valkyrie recruit, young girl, light silver armor, short skirt, holding practice spear, nervous expression, cute face, shiny skin, soft lighting, bloom, alluring curves, masterpiece, best quality, consistent with freya style, saluting clumsy",
-            "idle": "anime, full body, wide angle, valkyrie recruit, young girl, light silver armor, shiny skin, alluring curves, masterpiece, best quality, consistent with freya style, checking equipment nervously"
-        },
-        image: "images/creatures/asgard/creature_valkyrie_recruit.png",
-        sprites: {
-            "idle": "images/creatures/asgard/creature_valkyrie_recruit.png",
-            "joy": "images/creatures/asgard/creature_valkyrie_recruit.png", // Fallback
-            "sad": "images/creatures/asgard/creature_valkyrie_recruit.png", // Fallback
-            "angry": "images/creatures/asgard/creature_valkyrie_recruit.png", // Fallback
-            "skill": "images/creatures/asgard/creature_valkyrie_recruit.png",
-            "gallery": {}
-        },
-        prompts: {
-            "base": "anime style, 발키리 신병",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, valkyrie recruit, young girl, light silver armor, short skirt, holding practice spear, nervous expression, cute face, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, valkyrie recruit, shiny skin, alluring curves, masterpiece, best quality, consistent with freya style, checking equipment nervously, saluting clumsy",
+            "joy": "anime, blue archive style, nikke style, full body, valkyrie recruit, shiny skin, bloom, masterpiece, best quality, consistent with freya style, jumping with joy, praised",
+            "sad": "anime, blue archive style, nikke style, full body, valkyrie recruit, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, crying, dropped spear",
+            "angry": "anime, blue archive style, nikke style, full body, valkyrie recruit, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, trying to look tough, pouting",
+            "skill": "anime, full body, wide angle, valkyrie recruit, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, reckless charge, tripping"
         },
         lore: {
             title: "수습 발키리",
@@ -1057,8 +1090,7 @@ var ASGARD_CREATURES = [
             touch_legs: "다리에 쥐가 났어요...",
             touch_special: "언젠간 저도 멋진 영웅을 인도할 거예요!"
         }
-    }
-    ,
+    },
     {
         id: "wolf_pup_asgard",
         name: "아스가르드 늑대개",
@@ -1069,15 +1101,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_wolf_pup_asgard.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_wolf_pup_asgard.png",
-            "joy": "images/creatures/asgard/creature_wolf_pup_asgard.png", // Fallback
-            "sad": "images/creatures/asgard/creature_wolf_pup_asgard.png", // Fallback
-            "angry": "images/creatures/asgard/creature_wolf_pup_asgard.png", // Fallback
-            "skill": "images/creatures/asgard/creature_wolf_pup_asgard.png",
+            "joy": "images/creatures/asgard/creature_wolf_pup_asgard_joy.png",
+            "sad": "images/creatures/asgard/creature_wolf_pup_asgard_sad.png",
+            "angry": "images/creatures/asgard/creature_wolf_pup_asgard_angry.png",
+            "skill": "images/creatures/asgard/creature_wolf_pup_asgard_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 아스가르드 늑대개",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, wolf pup, cute animal, grey fur, big eyes, shiny fur, soft bloom, masterpiece, best quality, consistent with freya style, curious pose",
+            "idle": "anime, blue archive style, nikke style, full body, wolf pup, shiny fur, masterpiece, best quality, consistent with freya style, sitting, wagging tail",
+            "joy": "anime, blue archive style, nikke style, full body, wolf pup, shiny fur, bloom, masterpiece, best quality, consistent with freya style, barking happily, jumping",
+            "sad": "anime, blue archive style, nikke style, full body, wolf pup, shiny fur, dark atmosphere, masterpiece, best quality, consistent with freya style, whining, ears down",
+            "angry": "anime, blue archive style, nikke style, full body, wolf pup, shiny fur, masterpiece, best quality, consistent with freya style, growling, tiny teeth showing",
+            "skill": "anime, full body, wide angle, wolf pup, dynamic angle, shiny fur, masterpiece, best quality, consistent with freya style, bite attack, brave charge"
         },
         lore: {
             title: "아스가르드 새끼 늑대",
@@ -1126,15 +1162,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_yggdrasil_guardian.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_yggdrasil_guardian.png",
-            "joy": "images/creatures/asgard/creature_yggdrasil_guardian.png", // Fallback
-            "sad": "images/creatures/asgard/creature_yggdrasil_guardian.png", // Fallback
-            "angry": "images/creatures/asgard/creature_yggdrasil_guardian.png", // Fallback
-            "skill": "images/creatures/asgard/creature_yggdrasil_guardian.png",
+            "joy": "images/creatures/asgard/creature_yggdrasil_guardian_joy.png",
+            "sad": "images/creatures/asgard/creature_yggdrasil_guardian_sad.png",
+            "angry": "images/creatures/asgard/creature_yggdrasil_guardian_angry.png",
+            "skill": "images/creatures/asgard/creature_yggdrasil_guardian_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 이그드라실 수호자",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, wood spirit girl, dryad, body made of bark and leaves, glowing green runes, branches for hair, holding wooden staff, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style, in ancient forest",
+            "idle": "anime, blue archive style, nikke style, full body, wood spirit girl, shiny skin, bloom, alluring curves, masterpiece, best quality, consistent with freya style, peaceful pose, birds landing on shoulder",
+            "joy": "anime, blue archive style, nikke style, full body, wood spirit girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, flowers blooming hair, smiling gently",
+            "sad": "anime, blue archive style, nikke style, full body, wood spirit girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, leaves withering, weeping sap",
+            "angry": "anime, blue archive style, nikke style, full body, wood spirit girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, thorns growing, eyes glowing angry green",
+            "skill": "anime, full body, wide angle, wood spirit girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, summoning giant roots, nature magic"
         },
         lore: {
             title: "세계수의 수호자",
@@ -1183,15 +1223,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_bifrost_wisp.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_bifrost_wisp.png",
-            "joy": "images/creatures/asgard/creature_bifrost_wisp.png", // Fallback
-            "sad": "images/creatures/asgard/creature_bifrost_wisp.png", // Fallback
-            "angry": "images/creatures/asgard/creature_bifrost_wisp.png", // Fallback
-            "skill": "images/creatures/asgard/creature_bifrost_wisp.png",
+            "joy": "images/creatures/asgard/creature_bifrost_wisp_joy.png",
+            "sad": "images/creatures/asgard/creature_bifrost_wisp_sad.png",
+            "angry": "images/creatures/asgard/creature_bifrost_wisp_angry.png",
+            "skill": "images/creatures/asgard/creature_bifrost_wisp_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 비프로스트 위습",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, rainbow elemental fairy, glowing prismatic body, abstract light form, cute face, floating, shiny particles, soft bloom, masterpiece, best quality, consistent with freya style, on rainbow bridge",
+            "idle": "anime, blue archive style, nikke style, full body, rainbow elemental fairy, shiny particles, bloom, masterpiece, best quality, consistent with freya style, floating playfully, color changing",
+            "joy": "anime, blue archive style, nikke style, full body, rainbow elemental fairy, shiny particles, heavy bloom, masterpiece, best quality, consistent with freya style, spinning happily, bright light",
+            "sad": "anime, blue archive style, nikke style, full body, rainbow elemental fairy, shiny particles, dim light, masterpiece, best quality, consistent with freya style, fading color, drooping",
+            "angry": "anime, blue archive style, nikke style, full body, rainbow elemental fairy, shiny particles, intense flare, masterpiece, best quality, consistent with freya style, spiking light, red hue",
+            "skill": "anime, full body, wide angle, rainbow elemental fairy, dynamic angle, shiny particles, masterpiece, best quality, consistent with freya style, teleportation flash, bridge opening"
         },
         lore: {
             title: "무지개 다리의 조각",
@@ -1240,15 +1284,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_creature_dwarf.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_creature_dwarf.png",
-            "joy": "images/creatures/asgard/creature_creature_dwarf.png", // Fallback
-            "sad": "images/creatures/asgard/creature_creature_dwarf.png", // Fallback
-            "angry": "images/creatures/asgard/creature_creature_dwarf.png", // Fallback
-            "skill": "images/creatures/asgard/creature_creature_dwarf.png",
+            "joy": "images/creatures/asgard/creature_creature_dwarf_joy.png",
+            "sad": "images/creatures/asgard/creature_creature_dwarf_sad.png",
+            "angry": "images/creatures/asgard/creature_creature_dwarf_angry.png",
+            "skill": "images/creatures/asgard/creature_creature_dwarf_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 드워프 대장장이",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, dwarf smith girl, short sturdy stature, braided beard style hair, welding goggles, leather apron, holding hammer, shiny skin, sweat, oil stains, muscular arms, alluring curves, masterpiece, best quality, consistent with freya style, forge background",
+            "idle": "anime, blue archive style, nikke style, full body, dwarf smith girl, shiny skin, sweat, allure, masterpiece, best quality, consistent with freya style, wiping sweat, checking hammer",
+            "joy": "anime, blue archive style, nikke style, full body, dwarf smith girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, holding up masterpiece, laughing hearty",
+            "sad": "anime, blue archive style, nikke style, full body, dwarf smith girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, broken tool, disappointed",
+            "angry": "anime, blue archive style, nikke style, full body, dwarf smith girl, shiny skin, sweat, allure, masterpiece, best quality, consistent with freya style, raising hammer threateningly, shouting",
+            "skill": "anime, full body, wide angle, dwarf smith girl, dynamic angle, shiny skin, sweat, allure, masterpiece, best quality, consistent with freya style, striking anvil, sparks flying"
         },
         lore: {
             title: "니다벨리르의 장인",
@@ -1297,15 +1345,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_creature_eagle_iron.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_creature_eagle_iron.png",
-            "joy": "images/creatures/asgard/creature_creature_eagle_iron.png", // Fallback
-            "sad": "images/creatures/asgard/creature_creature_eagle_iron.png", // Fallback
-            "angry": "images/creatures/asgard/creature_creature_eagle_iron.png", // Fallback
-            "skill": "images/creatures/asgard/creature_creature_eagle_iron.png",
+            "joy": "images/creatures/asgard/creature_creature_eagle_iron_joy.png",
+            "sad": "images/creatures/asgard/creature_creature_eagle_iron_sad.png",
+            "angry": "images/creatures/asgard/creature_creature_eagle_iron_angry.png",
+            "skill": "images/creatures/asgard/creature_creature_eagle_iron_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 강철 독수리",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, mecha eagle girl, harpy, metal feathers, steel wings, pilot headset, sharp gaze, shiny skin, sweat, mechanical parts, alluring curves, masterpiece, best quality, consistent with freya style, high altitude background",
+            "idle": "anime, blue archive style, nikke style, full body, mecha eagle girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hovering, preening metal feathers",
+            "joy": "anime, blue archive style, nikke style, full body, mecha eagle girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, spreading wings proud, smile",
+            "sad": "anime, blue archive style, nikke style, full body, mecha eagle girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, grounded, wings folded tight",
+            "angry": "anime, blue archive style, nikke style, full body, mecha eagle girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, screeching, talons out",
+            "skill": "anime, full body, wide angle, mecha eagle girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, diving attack, sonic boom wind"
         },
         lore: {
             title: "흐레스벨그의 후예",
@@ -1354,15 +1406,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_einherjar_ghost.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_einherjar_ghost.png",
-            "joy": "images/creatures/asgard/creature_einherjar_ghost.png", // Fallback
-            "sad": "images/creatures/asgard/creature_einherjar_ghost.png", // Fallback
-            "angry": "images/creatures/asgard/creature_einherjar_ghost.png", // Fallback
-            "skill": "images/creatures/asgard/creature_einherjar_ghost.png",
+            "joy": "images/creatures/asgard/creature_einherjar_ghost_joy.png",
+            "sad": "images/creatures/asgard/creature_einherjar_ghost_sad.png",
+            "angry": "images/creatures/asgard/creature_einherjar_ghost_angry.png",
+            "skill": "images/creatures/asgard/creature_einherjar_ghost_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 에인헤랴르 영혼",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, ghost warrior girl, translucent blue spectral body, viking armor, holding spectral axe, floating, eerie glow, shiny ectoplasm, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style, valhalla background",
+            "idle": "anime, blue archive style, nikke style, full body, ghost warrior girl, shiny spectral skin, alluring curves, masterpiece, best quality, consistent with freya style, drinking spectral mead, laughing",
+            "joy": "anime, blue archive style, nikke style, full body, ghost warrior girl, shiny spectral skin, bloom, masterpiece, best quality, consistent with freya style, cheering, raising axe",
+            "sad": "anime, blue archive style, nikke style, full body, ghost warrior girl, shiny spectral skin, dark atmosphere, masterpiece, best quality, consistent with freya style, fading away, looking at hands",
+            "angry": "anime, blue archive style, nikke style, full body, ghost warrior girl, shiny spectral skin, intense glow, alluring curves, masterpiece, best quality, consistent with freya style, battle cry, berserk ghost",
+            "skill": "anime, full body, wide angle, ghost warrior girl, dynamic angle, shiny spectral skin, allure, masterpiece, best quality, consistent with freya style, spectral charge, passing through walls"
         },
         lore: {
             title: "발할라의 영혼",
@@ -1411,15 +1467,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_elk_golden.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_elk_golden.png",
-            "joy": "images/creatures/asgard/creature_elk_golden.png", // Fallback
-            "sad": "images/creatures/asgard/creature_elk_golden.png", // Fallback
-            "angry": "images/creatures/asgard/creature_elk_golden.png", // Fallback
-            "skill": "images/creatures/asgard/creature_elk_golden.png",
+            "joy": "images/creatures/asgard/creature_elk_golden_joy.png",
+            "sad": "images/creatures/asgard/creature_elk_golden_sad.png",
+            "angry": "images/creatures/asgard/creature_elk_golden_angry.png",
+            "skill": "images/creatures/asgard/creature_elk_golden_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 황금 엘크",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, elk girl, deer antlers huge golden, golden fur accents, elegant robe, mystical water flowing from antlers, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style, standing on yggdrasil roof",
+            "idle": "anime, blue archive style, nikke style, full body, elk girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, noble stance, looking down arrogantly",
+            "joy": "anime, blue archive style, nikke style, full body, elk girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, gentle smile, glowing antlers",
+            "sad": "anime, blue archive style, nikke style, full body, elk girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, shedding crystal tears, dim antlers",
+            "angry": "anime, blue archive style, nikke style, full body, elk girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, stomping foot, antlers sparking energy",
+            "skill": "anime, full body, wide angle, elk girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, river torrent summoning, purification light"
         },
         lore: {
             title: "에이크쉬르니르",
@@ -1468,15 +1528,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_fire_giant_scout.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_fire_giant_scout.png",
-            "joy": "images/creatures/asgard/creature_fire_giant_scout.png", // Fallback
-            "sad": "images/creatures/asgard/creature_fire_giant_scout.png", // Fallback
-            "angry": "images/creatures/asgard/creature_fire_giant_scout.png", // Fallback
-            "skill": "images/creatures/asgard/creature_fire_giant_scout.png",
+            "joy": "images/creatures/asgard/creature_fire_giant_scout_joy.png",
+            "sad": "images/creatures/asgard/creature_fire_giant_scout_sad.png",
+            "angry": "images/creatures/asgard/creature_fire_giant_scout_angry.png",
+            "skill": "images/creatures/asgard/creature_fire_giant_scout_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 불의 거인 정찰병",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, fire giant girl, lava skin texture, cracked skin manifesting magma, burning hair, obsidian armor, holding torch, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style, muspelheim background",
+            "idle": "anime, blue archive style, nikke style, full body, fire giant girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, checking flames, impatient",
+            "joy": "anime, blue archive style, nikke style, full body, fire giant girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, laughing maniacally, playing with fire",
+            "sad": "anime, blue archive style, nikke style, full body, fire giant girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, dim flames, smoke only",
+            "angry": "anime, blue archive style, nikke style, full body, fire giant girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, erupting flames, furious shouting",
+            "skill": "anime, full body, wide angle, fire giant girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, inferno explosion, magma wave"
         },
         lore: {
             title: "무스펠헤임의 불꽃",
@@ -1525,15 +1589,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_frost_giant_warrior.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_frost_giant_warrior.png",
-            "joy": "images/creatures/asgard/creature_frost_giant_warrior.png", // Fallback
-            "sad": "images/creatures/asgard/creature_frost_giant_warrior.png", // Fallback
-            "angry": "images/creatures/asgard/creature_frost_giant_warrior.png", // Fallback
-            "skill": "images/creatures/asgard/creature_frost_giant_warrior.png",
+            "joy": "images/creatures/asgard/creature_frost_giant_warrior_joy.png",
+            "sad": "images/creatures/asgard/creature_frost_giant_warrior_sad.png",
+            "angry": "images/creatures/asgard/creature_frost_giant_warrior_angry.png",
+            "skill": "images/creatures/asgard/creature_frost_giant_warrior_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 서리 거인 전사",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, ice giant girl, pale blue skin, ice crystals on body, fur bikini armor, holding ice club, cold expression, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style, jotunheim background",
+            "idle": "anime, blue archive style, nikke style, full body, ice giant girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, shivering cold aura, menacing stare",
+            "joy": "anime, blue archive style, nikke style, full body, ice giant girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, cold smirk, crushing ice",
+            "sad": "anime, blue archive style, nikke style, full body, ice giant girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, melting slightly, lonely look",
+            "angry": "anime, blue archive style, nikke style, full body, ice giant girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, blizzard aura, swinging club",
+            "skill": "anime, full body, wide angle, ice giant girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, glacier smash, freezing breath"
         },
         lore: {
             title: "요툰헤임의 한기",
@@ -1618,15 +1686,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_goat_lightning.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_goat_lightning.png",
-            "joy": "images/creatures/asgard/creature_goat_lightning.png",
-            "sad": "images/creatures/asgard/creature_goat_lightning.png",
-            "angry": "images/creatures/asgard/creature_goat_lightning.png",
-            "skill": "images/creatures/asgard/creature_goat_lightning.png",
+            "joy": "images/creatures/asgard/creature_goat_lightning_joy.png",
+            "sad": "images/creatures/asgard/creature_goat_lightning_sad.png",
+            "angry": "images/creatures/asgard/creature_goat_lightning_angry.png",
+            "skill": "images/creatures/asgard/creature_goat_lightning_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 천둥 염소",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, lightning goat girl, tanngrisnir descendant, ram horns with sparks, fluffy white fur, tribal accessories, holding lightning rod, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style, stormy sky background",
+            "idle": "anime, blue archive style, nikke style, full body, lightning goat girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, chewing on grass, sparking horns",
+            "joy": "anime, blue archive style, nikke style, full body, lightning goat girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, bleating happily, jumping",
+            "sad": "anime, blue archive style, nikke style, full body, lightning goat girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, ears drooping, static fading",
+            "angry": "anime, blue archive style, nikke style, full body, lightning goat girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, charging posture, lightning eyes",
+            "skill": "anime, full body, wide angle, lightning goat girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, thunder crash, electric shock"
         },
         lore: {
             title: "탕그리스니르의 후손",
@@ -1652,15 +1724,19 @@ var ASGARD_CREATURES = [
         image: "images/creatures/asgard/creature_ice_spirit_small.png",
         sprites: {
             "idle": "images/creatures/asgard/creature_ice_spirit_small.png",
-            "joy": "images/creatures/asgard/creature_ice_spirit_small.png",
-            "sad": "images/creatures/asgard/creature_ice_spirit_small.png",
-            "angry": "images/creatures/asgard/creature_ice_spirit_small.png",
-            "skill": "images/creatures/asgard/creature_ice_spirit_small.png",
+            "joy": "images/creatures/asgard/creature_ice_spirit_small_joy.png",
+            "sad": "images/creatures/asgard/creature_ice_spirit_small_sad.png",
+            "angry": "images/creatures/asgard/creature_ice_spirit_small_angry.png",
+            "skill": "images/creatures/asgard/creature_ice_spirit_small_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, 작은 얼음 정령",
-            "idle": "standing"
+            "base": "anime, blue archive style, nikke style, full body, small ice fairy, snowflake wings, pale blue skin, white dress, floating ice crystals, shiny skin, soft bloom, cute, masterpiece, best quality, consistent with freya style, winter forest background",
+            "idle": "anime, blue archive style, nikke style, full body, small ice fairy, shiny skin, bloom, cute, masterpiece, best quality, consistent with freya style, floating, making snowballs",
+            "joy": "anime, blue archive style, nikke style, full body, small ice fairy, shiny skin, bloom, cute, masterpiece, best quality, consistent with freya style, giggling, scattering snow",
+            "sad": "anime, blue archive style, nikke style, full body, small ice fairy, shiny skin, dark atmosphere, cute, masterpiece, best quality, consistent with freya style, melting slightly, shivering",
+            "angry": "anime, blue archive style, nikke style, full body, small ice fairy, shiny skin, intense glow, cute, masterpiece, best quality, consistent with freya style, freezing glare, ice spikes",
+            "skill": "anime, full body, wide angle, small ice fairy, dynamic angle, shiny skin, cute, masterpiece, best quality, consistent with freya style, blizzard summon, freezing wind"
         },
         lore: {
             title: "작은 서리 요정",
@@ -1683,21 +1759,24 @@ var ASGARD_CREATURES = [
         world: "ASGARD",
         elements: ["Ice", "Beast"],
         baseStr: 35, baseInt: 15,
-        image: "images/creatures/wild/creature_wolf_dire.png",
+        image: "images/creatures/asgard/creature_fenrir_kin.png",
         sprites: {
-            "idle": "images/creatures/wild/creature_wolf_dire.png",
-            "joy": "images/creatures/wild/creature_wolf_dire_joy.png",
-            "sad": "images/creatures/wild/creature_wolf_dire_sad.png",
-            "angry": "images/creatures/wild/creature_wolf_dire_angry.png",
-            "skill": "images/creatures/wild/creature_wolf_dire_skill.png",
-            "victory": "images/creatures/wild/creature_wolf_dire_victory.png",
-            "defeat": "images/creatures/wild/creature_wolf_dire_defeat.png",
-            "gallery": { "lv1": "images/creatures/wild/creature_wolf_dire_gallery_lv1.png" }
+            "idle": "images/creatures/asgard/creature_fenrir_kin.png",
+            "joy": "images/creatures/asgard/creature_fenrir_kin_joy.png",
+            "sad": "images/creatures/asgard/creature_fenrir_kin_sad.png",
+            "angry": "images/creatures/asgard/creature_fenrir_kin_angry.png",
+            "skill": "images/creatures/asgard/creature_fenrir_kin_skill.png",
+            "victory": "images/creatures/asgard/creature_fenrir_kin_victory.png",
+            "defeat": "images/creatures/asgard/creature_fenrir_kin_defeat.png",
+            "gallery": { "lv1": "images/creatures/asgard/creature_fenrir_kin_gallery_lv1.png" }
         },
         prompts: {
-            "base": "anime style, cell shaded, 2d game art, full body, fenrir kin, huge wolf, snowy north, glowing eyes, fierce",
-            "idle": "standing pose, confident, growling",
-            "gallery_lv1": "resting in snow, loyal look"
+            "base": "anime, blue archive style, nikke style, full body, fenrir kin girl, werewolf girl, grey wolf ears and tail, sharp claws, fur collar, leather armor, wild look, glowing yellow eyes, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, snowy tundra background",
+            "idle": "anime, blue archive style, nikke style, full body, fenrir kin girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, crouching, sniffing air",
+            "joy": "anime, blue archive style, nikke style, full body, fenrir kin girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, howling happy, tail wagging blur",
+            "sad": "anime, blue archive style, nikke style, full body, fenrir kin girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, ears flattened, whining",
+            "angry": "anime, blue archive style, nikke style, full body, fenrir kin girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, teeth baring, claws out, berserk",
+            "skill": "anime, full body, wide angle, fenrir kin girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, savage pounce, bite attack"
         },
         lore: {
             "title": "종말의 전조",
@@ -1720,18 +1799,22 @@ var ASGARD_CREATURES = [
         world: WORLDS.ASGARD,
         elements: ["Ice"],
         baseStr: 20, baseInt: 35,
-        image: "images/creatures/wild/creature_snow_spirit.png",
+        image: "images/creatures/asgard/creature_ice_nymph.png",
         sprites: {
-            "idle": "images/creatures/wild/creature_snow_spirit.png",
-            "joy": "images/creatures/wild/creature_snow_spirit.png",
-            "sad": "images/creatures/wild/creature_snow_spirit.png",
-            "angry": "images/creatures/wild/creature_snow_spirit.png",
-            "skill": "images/creatures/wild/creature_snow_spirit.png",
+            "idle": "images/creatures/asgard/creature_ice_nymph.png",
+            "joy": "images/creatures/asgard/creature_ice_nymph_joy.png",
+            "sad": "images/creatures/asgard/creature_ice_nymph_sad.png",
+            "angry": "images/creatures/asgard/creature_ice_nymph_angry.png",
+            "skill": "images/creatures/asgard/creature_ice_nymph_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, ice nymph, asgard spirit, cold beauty, frost magic",
-            "idle": "floating, graceful"
+            "base": "anime, blue archive style, nikke style, full body, ice nymph, asgard spirit, pale skin, white translucent dress, ice crown, floating snowflakes, cold beauty, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style, frozen lake background",
+            "idle": "anime, blue archive style, nikke style, full body, ice nymph, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, floating, graceful dance",
+            "joy": "anime, blue archive style, nikke style, full body, ice nymph, shiny skin, bloom, masterpiece, best quality, consistent with freya style, elegant smile, creating ice sculpture",
+            "sad": "anime, blue archive style, nikke style, full body, ice nymph, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, freezing tears, looking away",
+            "angry": "anime, blue archive style, nikke style, full body, ice nymph, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, cold glare, summoning blizzard",
+            "skill": "anime, full body, wide angle, ice nymph, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, absolute zero freeze, ice storm"
         },
         lore: {
             "title": "니플헤임의 무희",
@@ -1776,22 +1859,26 @@ var ASGARD_CREATURES = [
         world: WORLDS.ASGARD,
         elements: ["Earth"],
         baseStr: 40, baseInt: 10,
-        image: "images/creatures/wild/creature_golem_mud.png",
+        image: "images/creatures/asgard/creature_mud_troll.png",
         sprites: {
-            "idle": "images/creatures/wild/creature_golem_mud.png",
-            "joy": "images/creatures/wild/creature_golem_mud_joy.png",
-            "sad": "images/creatures/wild/creature_golem_mud_sad.png",
-            "angry": "images/creatures/wild/creature_golem_mud_angry.png",
-            "skill": "images/creatures/wild/creature_golem_mud_skill.png",
-            "victory": "images/creatures/wild/creature_golem_mud_victory.png",
-            "defeat": "images/creatures/wild/creature_golem_mud_defeat.png",
+            "idle": "images/creatures/asgard/creature_mud_troll.png",
+            "joy": "images/creatures/asgard/creature_mud_troll_joy.png",
+            "sad": "images/creatures/asgard/creature_mud_troll_sad.png",
+            "angry": "images/creatures/asgard/creature_mud_troll_angry.png",
+            "skill": "images/creatures/asgard/creature_mud_troll_skill.png",
+            "victory": "images/creatures/asgard/creature_mud_troll_victory.png",
+            "defeat": "images/creatures/asgard/creature_mud_troll_defeat.png",
             "gallery": {
-                "lv1": "images/creatures/wild/creature_golem_mud_gallery_lv1.png"
+                "lv1": "images/creatures/asgard/creature_mud_troll_gallery_lv1.png"
             }
         },
         prompts: {
-            "base": "anime style, mud troll, grotesque monster, swamp creature, strong",
-            "idle": "standing, dumb look"
+            "base": "anime, blue archive style, nikke style, full body, mud troll girl, swamp monster, covered in mud, vines for clothes, messy hair, strong physique, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, swamp background",
+            "idle": "anime, blue archive style, nikke style, full body, mud troll girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, standing clumsily, scratching head",
+            "joy": "anime, blue archive style, nikke style, full body, mud troll girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, stupid happy grin, playing with mud",
+            "sad": "anime, blue archive style, nikke style, full body, mud troll girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, sitting in puddle, pouting",
+            "angry": "anime, blue archive style, nikke style, full body, mud troll girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, roaring, throwing mud",
+            "skill": "anime, full body, wide angle, mud troll girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, mud landslide, brute force smash"
         },
         lore: {
             "title": "습지의 괴물",
@@ -1836,18 +1923,22 @@ var ASGARD_CREATURES = [
         world: WORLDS.ASGARD,
         elements: ["Earth"],
         baseStr: 45, baseInt: 15,
-        image: "images/creatures/wild/creature_creature_giant_hill.png",
+        image: "images/creatures/asgard/creature_jotunn_hill.png",
         sprites: {
-            "idle": "images/creatures/wild/creature_creature_giant_hill.png",
-            "joy": "images/creatures/wild/creature_creature_giant_hill.png",
-            "sad": "images/creatures/wild/creature_creature_giant_hill.png",
-            "angry": "images/creatures/wild/creature_creature_giant_hill.png",
-            "skill": "images/creatures/wild/creature_creature_giant_hill.png",
+            "idle": "images/creatures/asgard/creature_jotunn_hill.png",
+            "joy": "images/creatures/asgard/creature_jotunn_hill_joy.png",
+            "sad": "images/creatures/asgard/creature_jotunn_hill_sad.png",
+            "angry": "images/creatures/asgard/creature_jotunn_hill_angry.png",
+            "skill": "images/creatures/asgard/creature_jotunn_hill_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, hill giant, jotunn, rocky skin, massive, sleeping mountain",
-            "idle": "sleeping, camouflaged"
+            "base": "anime, blue archive style, nikke style, full body, hill giant girl, rocky skin texture, moss growing on shoulders, massive size, stone armor, sleeping face, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, mountain range background",
+            "idle": "anime, blue archive style, nikke style, full body, hill giant girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, sleeping standing up, yawning",
+            "joy": "anime, blue archive style, nikke style, full body, hill giant girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, slow laugh, causing tremor",
+            "sad": "anime, blue archive style, nikke style, full body, hill giant girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, curling up like a boulder, quiet",
+            "angry": "anime, blue archive style, nikke style, full body, hill giant girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, stomping ground, earthquake",
+            "skill": "anime, full body, wide angle, hill giant girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, rock throw, mountain crush"
         },
         lore: {
             "title": "잠자는 대지",
@@ -1892,18 +1983,22 @@ var ASGARD_CREATURES = [
         world: WORLDS.ASGARD,
         elements: ["Dark"],
         baseStr: 15, baseInt: 15,
-        image: "images/creatures/wild/creature_creature_bat_small.png",
+        image: "images/creatures/asgard/creature_deep_cave_bat.png",
         sprites: {
-            "idle": "images/creatures/wild/creature_creature_bat_small.png",
-            "joy": "images/creatures/wild/creature_creature_bat_small.png",
-            "sad": "images/creatures/wild/creature_creature_bat_small.png",
-            "angry": "images/creatures/wild/creature_creature_bat_small.png",
-            "skill": "images/creatures/wild/creature_creature_bat_small.png",
+            "idle": "images/creatures/asgard/creature_deep_cave_bat.png",
+            "joy": "images/creatures/asgard/creature_deep_cave_bat_joy.png",
+            "sad": "images/creatures/asgard/creature_deep_cave_bat_sad.png",
+            "angry": "images/creatures/asgard/creature_deep_cave_bat_angry.png",
+            "skill": "images/creatures/asgard/creature_deep_cave_bat_skill.png",
             "gallery": {}
         },
         prompts: {
-            "base": "anime style, dark bat, hell cave, glowing red eyes, ominous",
-            "idle": "hanging upside down"
+            "base": "anime, blue archive style, nikke style, full body, bat girl, vampire attributes, large bat wings, gothic dress, red eyes, fangs, hanging upside down, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style, dark cave background",
+            "idle": "anime, blue archive style, nikke style, full body, bat girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hanging, wrapping wings",
+            "joy": "anime, blue archive style, nikke style, full body, bat girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, screeching happily, fluttering",
+            "sad": "anime, blue archive style, nikke style, full body, bat girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, hiding face in wings, shivering",
+            "angry": "anime, blue archive style, nikke style, full body, bat girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hissing, eyes glowing red",
+            "skill": "anime, full body, wide angle, bat girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, sonic scream, swarm summon"
         },
         lore: {
             "title": "헬하임의 감시자",
@@ -1948,22 +2043,26 @@ var ASGARD_CREATURES = [
         world: WORLDS.ASGARD,
         elements: ["Earth"],
         baseStr: 12, baseInt: 25,
-        image: "images/creatures/wild/creature_rat_brown.png",
+        image: "images/creatures/asgard/creature_bilskirnir_rat.png",
         sprites: {
-            "idle": "images/creatures/wild/creature_rat_brown.png",
-            "joy": "images/creatures/wild/creature_rat_brown_joy.png",
-            "sad": "images/creatures/wild/creature_rat_brown_sad.png",
-            "angry": "images/creatures/wild/creature_rat_brown_angry.png",
-            "skill": "images/creatures/wild/creature_rat_brown_skill.png",
-            "victory": "images/creatures/wild/creature_rat_brown_victory.png",
-            "defeat": "images/creatures/wild/creature_rat_brown_defeat.png",
+            "idle": "images/creatures/asgard/creature_bilskirnir_rat.png",
+            "joy": "images/creatures/asgard/creature_bilskirnir_rat_joy.png",
+            "sad": "images/creatures/asgard/creature_bilskirnir_rat_sad.png",
+            "angry": "images/creatures/asgard/creature_bilskirnir_rat_angry.png",
+            "skill": "images/creatures/asgard/creature_bilskirnir_rat_skill.png",
+            "victory": "images/creatures/asgard/creature_bilskirnir_rat_victory.png",
+            "defeat": "images/creatures/asgard/creature_bilskirnir_rat_defeat.png",
             "gallery": {
-                "lv1": "images/creatures/wild/creature_rat_brown_gallery_lv1.png"
+                "lv1": "images/creatures/asgard/creature_bilskirnir_rat_gallery_lv1.png"
             }
         },
         prompts: {
-            "base": "anime style, fat rat, stealing food, asgard kitchen, sneaky, cute",
-            "idle": "chewing cheese"
+            "base": "anime, blue archive style, nikke style, full body, rat girl, brown hair, mouse ears, oversized thief outfit, holding cheese, kitchen background, cute, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style",
+            "idle": "anime, blue archive style, nikke style, full body, rat girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, nibbling on food, looking around nervously",
+            "joy": "anime, blue archive style, nikke style, full body, rat girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, stuffing cheeks, happy squeak",
+            "sad": "anime, blue archive style, nikke style, full body, rat girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, empty hands, crying",
+            "angry": "anime, blue archive style, nikke style, full body, rat girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hissing, guarding hoard",
+            "skill": "anime, full body, wide angle, rat girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, zip dash, sonic steal"
         },
         lore: {
             "title": "신들의 도둑",
@@ -2008,22 +2107,26 @@ var ASGARD_CREATURES = [
         world: WORLDS.ASGARD,
         elements: ["Earth"],
         baseStr: 15, baseInt: 30,
-        image: "images/creatures/wild/creature_pebble_new.png",
+        image: "images/creatures/asgard/creature_rune_stone_living.png",
         sprites: {
-            "idle": "images/creatures/wild/creature_pebble_new.png",
-            "joy": "images/creatures/wild/creature_pebble_new_joy.png",
-            "sad": "images/creatures/wild/creature_pebble_new_sad.png",
-            "angry": "images/creatures/wild/creature_pebble_new_angry.png",
-            "skill": "images/creatures/wild/creature_pebble_new_skill.png",
-            "victory": "images/creatures/wild/creature_pebble_new_victory.png",
-            "defeat": "images/creatures/wild/creature_pebble_new_defeat.png",
+            "idle": "images/creatures/asgard/creature_rune_stone_living.png",
+            "joy": "images/creatures/asgard/creature_rune_stone_living_joy.png",
+            "sad": "images/creatures/asgard/creature_rune_stone_living_sad.png",
+            "angry": "images/creatures/asgard/creature_rune_stone_living_angry.png",
+            "skill": "images/creatures/asgard/creature_rune_stone_living_skill.png",
+            "victory": "images/creatures/asgard/creature_rune_stone_living_victory.png",
+            "defeat": "images/creatures/asgard/creature_rune_stone_living_defeat.png",
             "gallery": {
-                "lv1": "images/creatures/wild/creature_pebble_new_gallery_lv1.png"
+                "lv1": "images/creatures/asgard/creature_rune_stone_living_gallery_lv1.png"
             }
         },
         prompts: {
-            "base": "anime style, rune stone, glowing symbols, magic rock, floating",
-            "idle": "floating, spinning"
+            "base": "anime, blue archive style, nikke style, full body, rune stone girl, golem girl, made of inscribed stones, glowing rune patterns, magical energy, floating rocks, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style, mystic ruins background",
+            "idle": "anime, blue archive style, nikke style, full body, rune stone girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, hovering, rearranging stones",
+            "joy": "anime, blue archive style, nikke style, full body, rune stone girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, pulsating bright light, happy spinning",
+            "sad": "anime, blue archive style, nikke style, full body, rune stone girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, dim light, stones falling",
+            "angry": "anime, blue archive style, nikke style, full body, rune stone girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, red glow, stones shaking",
+            "skill": "anime, full body, wide angle, rune stone girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, rune bombardment, magic beam"
         },
         lore: {
             "title": "오딘의 실패작",
@@ -2068,22 +2171,26 @@ var ASGARD_CREATURES = [
         world: WORLDS.ASGARD,
         elements: ["Earth"],
         baseStr: 30, baseInt: 20,
-        image: "images/creatures/wild/creature_fossil_stone.png",
+        image: "images/creatures/asgard/creature_ancient_fossil.png",
         sprites: {
-            "idle": "images/creatures/wild/creature_fossil_stone.png",
-            "joy": "images/creatures/wild/creature_fossil_stone_joy.png",
-            "sad": "images/creatures/wild/creature_fossil_stone_sad.png",
-            "angry": "images/creatures/wild/creature_fossil_stone_angry.png",
-            "skill": "images/creatures/wild/creature_fossil_stone_skill.png",
-            "victory": "images/creatures/wild/creature_fossil_stone_victory.png",
-            "defeat": "images/creatures/wild/creature_fossil_stone_defeat.png",
+            "idle": "images/creatures/asgard/creature_ancient_fossil.png",
+            "joy": "images/creatures/asgard/creature_ancient_fossil_joy.png",
+            "sad": "images/creatures/asgard/creature_ancient_fossil_sad.png",
+            "angry": "images/creatures/asgard/creature_ancient_fossil_angry.png",
+            "skill": "images/creatures/asgard/creature_ancient_fossil_skill.png",
+            "victory": "images/creatures/asgard/creature_ancient_fossil_victory.png",
+            "defeat": "images/creatures/asgard/creature_ancient_fossil_defeat.png",
             "gallery": {
-                "lv1": "images/creatures/wild/creature_fossil_stone_gallery_lv1.png"
+                "lv1": "images/creatures/asgard/creature_ancient_fossil_gallery_lv1.png"
             }
         },
         prompts: {
-            "base": "anime style, fossil monster, ancient bone, skeleton dinosaur, magic animation",
-            "idle": "roaring silently"
+            "base": "anime, blue archive style, nikke style, full body, fossil monster girl, skeleton armor, dinosaur bone aesthetic, ancient warrior spirit, pale skin, eerie glow, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style, archaeological site background",
+            "idle": "anime, blue archive style, nikke style, full body, fossil monster girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, cracking neck, dusty",
+            "joy": "anime, blue archive style, nikke style, full body, fossil monster girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, toothy grin, bone rattle",
+            "sad": "anime, blue archive style, nikke style, full body, fossil monster girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, falling apart, crumbling",
+            "angry": "anime, blue archive style, nikke style, full body, fossil monster girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, skeletal scream, bone spikes",
+            "skill": "anime, full body, wide angle, fossil monster girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, ancient roar, fossilize beam"
         },
         lore: {
             "title": "이미르의 파편",
@@ -2128,22 +2235,26 @@ var ASGARD_CREATURES = [
         world: WORLDS.ASGARD,
         elements: ["Ice", "Dark"],
         baseStr: 30, baseInt: 30,
-        image: "images/creatures/wild/creature_mist_crawler.png",
+        image: "images/creatures/asgard/creature_mist_beast.png",
         sprites: {
-            "idle": "images/creatures/wild/creature_mist_crawler.png",
-            "joy": "images/creatures/wild/creature_mist_crawler_joy.png",
-            "sad": "images/creatures/wild/creature_mist_crawler_sad.png",
-            "angry": "images/creatures/wild/creature_mist_crawler_angry.png",
-            "skill": "images/creatures/wild/creature_mist_crawler_skill.png",
-            "victory": "images/creatures/wild/creature_mist_crawler_victory.png",
-            "defeat": "images/creatures/wild/creature_mist_crawler_defeat.png",
+            "idle": "images/creatures/asgard/creature_mist_beast.png",
+            "joy": "images/creatures/asgard/creature_mist_beast_joy.png",
+            "sad": "images/creatures/asgard/creature_mist_beast_sad.png",
+            "angry": "images/creatures/asgard/creature_mist_beast_angry.png",
+            "skill": "images/creatures/asgard/creature_mist_beast_skill.png",
+            "victory": "images/creatures/asgard/creature_mist_beast_victory.png",
+            "defeat": "images/creatures/asgard/creature_mist_beast_defeat.png",
             "gallery": {
-                "lv1": "images/creatures/wild/creature_mist_crawler_gallery_lv1.png"
+                "lv1": "images/creatures/asgard/creature_mist_beast_gallery_lv1.png"
             }
         },
         prompts: {
-            "base": "anime style, mist monster, fog creature, mysterious, glowing eyes in fog",
-            "idle": "fading in and out"
+            "base": "anime, blue archive style, nikke style, full body, mist beast girl, fog spirit, translucent body, phantom limbs, glowing white eyes, ethereal form, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style, thick fog background",
+            "idle": "anime, blue archive style, nikke style, full body, mist beast girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, drifting, fading legs",
+            "joy": "anime, blue archive style, nikke style, full body, mist beast girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, twirling mist, soft glow",
+            "sad": "anime, blue archive style, nikke style, full body, mist beast girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, losing form, evaporated tears",
+            "angry": "anime, blue archive style, nikke style, full body, mist beast girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, storm cloud darkness, sharp claws",
+            "skill": "anime, full body, wide angle, mist beast girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, fog suffocation, phantom strike"
         },
         lore: {
             "title": "니플헤임의 망령",
@@ -2188,22 +2299,26 @@ var ASGARD_CREATURES = [
         world: WORLDS.ASGARD,
         elements: ["Dark", "Fire"],
         baseStr: 10, baseInt: 40,
-        image: "images/creatures/wild/creature_willOWisp_green.png",
+        image: "images/creatures/asgard/creature_swamp_light.png",
         sprites: {
-            "idle": "images/creatures/wild/creature_willOWisp_green.png",
-            "joy": "images/creatures/wild/creature_willOWisp_green.png",
-            "sad": "images/creatures/wild/creature_willOWisp_green.png",
-            "angry": "images/creatures/wild/creature_willOWisp_green.png",
-            "skill": "images/creatures/wild/creature_willOWisp_green.png",
-            "victory": "images/creatures/wild/creature_willOWisp_green.png",
-            "defeat": "images/creatures/wild/creature_willOWisp_green.png",
+            "idle": "images/creatures/asgard/creature_swamp_light.png",
+            "joy": "images/creatures/asgard/creature_swamp_light_joy.png",
+            "sad": "images/creatures/asgard/creature_swamp_light_sad.png",
+            "angry": "images/creatures/asgard/creature_swamp_light_angry.png",
+            "skill": "images/creatures/asgard/creature_swamp_light_skill.png",
+            "victory": "images/creatures/asgard/creature_swamp_light_victory.png",
+            "defeat": "images/creatures/asgard/creature_swamp_light_defeat.png",
             "gallery": {
-                "lv1": "images/creatures/wild/creature_willOWisp_green_gallery_lv1.png"
+                "lv1": "images/creatures/asgard/creature_swamp_light_gallery_lv1.png"
             }
         },
         prompts: {
-            "base": "anime style, will o wisp, green fire, ghost spirit, swamp background",
-            "idle": "flickering"
+            "base": "anime, blue archive style, nikke style, full body, will o wisp girl, swamp spirit, green flame hair, floating lantern, alluring ghostly figure, shiny skin, sweat, soft bloom, alluring curves, masterpiece, best quality, consistent with freya style, dark swamp background",
+            "idle": "anime, blue archive style, nikke style, full body, will o wisp girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, bobbing up and down, beckoning finger",
+            "joy": "anime, blue archive style, nikke style, full body, will o wisp girl, shiny skin, bloom, masterpiece, best quality, consistent with freya style, bright flare, dazzling smile",
+            "sad": "anime, blue archive style, nikke style, full body, will o wisp girl, shiny skin, dark atmosphere, masterpiece, best quality, consistent with freya style, dimming light, flickering out",
+            "angry": "anime, blue archive style, nikke style, full body, will o wisp girl, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, wildfire rage, intense heat",
+            "skill": "anime, full body, wide angle, will o wisp girl, dynamic angle, shiny skin, sweat, alluring curves, masterpiece, best quality, consistent with freya style, soul lure, swamp gas explosion"
         },
         lore: {
             "title": "죽음의 유혹",
