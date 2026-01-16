@@ -1,0 +1,15 @@
+﻿D:\test\multiverse-creature-lab-clean\images\creatures\abyss\creature_cthulhu_joy (1).png
+D:\test\multiverse-creature-lab-clean\images\creatures\abyss\creature_cthulhu_skill (1).png
+D:\test\multiverse-creature-lab-clean\images\creatures\abyss\creature_shub_joy (1).png
+D:\test\multiverse-creature-lab-clean\images\creatures\abyss\creature_shub_skill (1).png
+D:\test\multiverse-creature-lab-clean\images\creatures\abyss\creature_void_emperor_joy (1).png
+D:\test\multiverse-creature-lab-clean\images\creatures\abyss\creature_void_emperor_skill (1).png
+D:\test\multiverse-creature-lab-clean\images\creatures\shangrila\creature_bonsai_spirit_1767578481154.png
+D:\test\multiverse-creature-lab-clean\images\creatures\shangrila\creature_crane_sage_1767578461311.png
+D:\test\multiverse-creature-lab-clean\images\creatures\shangrila\creature_dragon_ancient_joy (1).png
+D:\test\multiverse-creature-lab-clean\images\creatures\shangrila\creature_dragon_ancient_skill (1).png
+D:\test\multiverse-creature-lab-clean\images\creatures\shangrila\creature_heavenly_maiden_small_1767578527404.png
+D:\test\multiverse-creature-lab-clean\images\creatures\shangrila\creature_lucky_cat_kuro_1767578510298.png
+D:\test\multiverse-creature-lab-clean\images\creatures\shangrila\creature_statue_lion_dog_1767578544463.png
+D:\test\multiverse-creature-lab-clean\images\creatures\wild\creature_griffin_gold_1767579100989.png
+D:\test\multiverse-creature-lab-clean\images\icons\icon_skill_fire_1766992699091.png

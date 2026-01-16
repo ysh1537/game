@@ -150,7 +150,7 @@ export default class Game {
         if (overlay) overlay.style.display = 'none';
 
         // 2. Play Lobby BGM
-        this.audioManager.playBGM('bgm_lobby.mp3'); // Corrected from soundManager to audioManager
+        this.audioManager.playBGM('lobby'); // Corrected from soundManager to audioManager
 
         // 3. Show Lobby View
         this.uiManager.showView('lobby');

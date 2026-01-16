@@ -19,24 +19,24 @@ export default class AudioManager {
 
         // BGM 트랙 정의 (파일이 준비되면 경로 수정)
         this.bgmTracks = {
-            'lobby': 'audio/bgm/lobby.mp3',
-            'battle': 'audio/bgm/battle.mp3',
-            'boss': 'audio/bgm/boss.mp3',
-            'victory': 'audio/bgm/victory.mp3',
-            'defeat': 'audio/bgm/defeat.mp3'
+            'lobby': 'assets/sounds/bgm/lobby_theme.mp3',
+            'battle': 'assets/sounds/bgm/battle_epic.mp3',
+            'boss': 'assets/sounds/bgm/boss.mp3',
+            'victory': 'assets/sounds/bgm/victory.mp3',
+            'defeat': 'assets/sounds/bgm/defeat.mp3'
         };
 
         // 효과음 정의
         this.sfxTracks = {
-            'click': 'audio/sfx/click.mp3',
-            'summon': 'audio/sfx/summon.mp3',
-            'skill': 'audio/sfx/skill.mp3',
-            'hit': 'audio/sfx/hit.mp3',
-            'critical': 'audio/sfx/critical.mp3',
-            'levelup': 'audio/sfx/levelup.mp3',
-            'evolve': 'audio/sfx/evolve.mp3',
-            'gold': 'audio/sfx/gold.mp3',
-            'error': 'audio/sfx/error.mp3'
+            'click': 'assets/sounds/sfx/click.mp3',
+            'summon': 'assets/sounds/sfx/summon.mp3',
+            'skill': 'assets/sounds/sfx/skill.mp3',
+            'hit': 'assets/sounds/sfx/hit.mp3',
+            'critical': 'assets/sounds/sfx/critical.mp3',
+            'levelup': 'assets/sounds/sfx/levelup.mp3',
+            'evolve': 'assets/sounds/sfx/evolve.mp3',
+            'gold': 'assets/sounds/sfx/gold.mp3',
+            'error': 'assets/sounds/sfx/error.mp3'
         };
 
         // 오디오 컨텍스트 초기화 (사용자 인터랙션 후)

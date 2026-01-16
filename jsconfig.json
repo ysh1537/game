@@ -21,6 +21,9 @@
         "temp_review",
         "ysh1537-pages",
         "**/*.test.js",
-        "**/*.spec.js"
+        "**/*.spec.js",
+        ".agent",
+        ".gemini",
+        "**/*.json"
     ]
 }

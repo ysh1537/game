@@ -20,12 +20,12 @@
 * 가장 완벽한 **Base 이미지**를 먼저 확보한다. (기존 이미지가 훌륭하다면 그대로 채택)
 * 만약 새로 생성해야 한다면, 만족할 때까지 `v1, v2, v3...` 반복하여 **최상의 퀄리티**를 뽑아낸다.
 
-### Step 2. 스타일 복제 (Style Cloning)
+### Step 2. 스타일 복제 (Style Cloning & Variation)
 
-* **Img2Img (Image-to-Image)** 기법 필수 적용.
-* **Reference Input**: 확정된 Base 이미지.
-* **Prompt**: `consistent with original image style`, `masterpiece`, `best quality` 태그 필수 포함.
-* **Goal**: 화풍, 색감, 조명, 선화 두께가 Base와 **구분이 가지 않을 정도**로 일치해야 함.
+* **Img2Img (Image-to-Image) 필수 적용**:
+  * **Reference Input**: 확정된 Base 이미지를 반드시 입력으로 사용한다. (얼굴/체형 고정)
+  * **Variation Logic**: 스타일은 유지하되, **프롬프트를 통해 자세(Pose), 표정(Expression), 배경(Background)은 확실하게 변화**를 주어야 한다. (Base 이미지와 똑같은 구도가 나오면 실패)
+  * **Prompt**: `consistent with original image style` + `[Specific Pose/Scenario Tag]`
 
 ### Step 3. 갤러리 연출 (Gallery Direction)
 

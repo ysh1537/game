@@ -1581,17 +1581,17 @@ var SHANGRILA_CREATURES = [
             }
         },
         prompts: {
-            "base": "anime, blue archive style, nikke style, full body, wukong girl, monkey king style, golden fillet on head, tiger skin skirt, holding ruyi jingu bang (golden staff), glamorous body, huge breasts, extremely thick thighs, wide hips, cloud standing pose, mountain peak background, masterpiece, best quality",
-            "idle": "spinning staff, chewing on straw, confident smirk, standing on one leg, no text, no ui",
-            "joy": "laughing, eating a peach, jumping on cloud, happy expression, energetic, no text, no ui",
-            "sad": "sitting on rock, staff on ground, looking bored or sad, tail drooping, no text, no ui",
-            "angry": "eyes glowing gold, baring teeth, hair turning spiky, battle aura, aggressive, no text, no ui",
-            "skill": "giant staff smash, multiplication technique (clones), cinematic angle, shockwave, masterpiece, no text, no ui",
-            "victory": "sitting on top of staff, looking at horizon, thumb on nose, triumphant, no text, no ui",
-            "defeat": "trapped under rock (partial), clothes torn, dizzy eyes, staff broken, defeated, no text, no ui",
-            "gallery_lv1": "dating sim event, wukong girl, sharing a peach, wink, sitting on a cloud bench, close up, playful smile, no text, no ui",
-            "gallery_lv2": "dating sim event, wukong girl, arm wrestling with viewer, sweating, tank top, intense focus, cleavage view, blushing, no text, no ui",
-            "gallery_lv3": "dating sim event, wukong girl, waterfall meditation (training), wet clothes clinging, eyes opening, looking at viewer with love, steam, no text, no ui"
+            "base": "anime, best quality, nikke style, fantasy illustration, full body, wukong girl, (face and body of freya:1.5), (queen of monkeys), (elaborate golden battle armor), (high-cut red and gold silk outfit), (luxurious tiger fur cape around shoulders), (intricate jewelry), (holding ornate ruyi jingu bang), shiny oily skin, sweaty, heavy blush, soft bloom lighting, voluminous brown hair, ponytail, huge breasts, wide hips, thick thighs, standing pose, shangrila mountain clouds background, majestic, alluring, charismatic",
+            "idle": "standing confidently, spinning ruyi jingu bang, looking at viewer, arrogant smirk, chewing gum, no text, no ui",
+            "joy": "laughing out loud, holding a golden peach, bright happy expression, energetic pose, no text, no ui",
+            "sad": "sitting on a cloud, looking bored, yawning, resting chin on hand, staff lying on ground, drooping ears, no text, no ui",
+            "angry": "combat stance, glowing golden eyes, hair floating, fierce expression, baring teeth, battle aura, no text, no ui",
+            "skill": "cinematic dynamic angle, summoning holographic clones, golden energy shockwave, striking with staff, masterpiece, no text, no ui",
+            "victory": "sitting on top of clouds, triumphant pose, winking, thumb up, no text, no ui",
+            "defeat": "(armor broken), (torn clothes:1.3), kneeling on ground, dust and scratches, dizzy eyes, defeated expression, staff broken, no text, no ui",
+            "gallery_lv1": "sky garden date, sitting on cloud bench, feeding viewer a grape, sweet smile, casual atmosphere, close up, no text, no ui",
+            "gallery_lv2": "intimacy, leaning close to viewer, asking to brush fur, blushing, cleavage focus, shy but happy, no text, no ui",
+            "gallery_lv3": "hot spring bath, steam, wet hair, naked shoulders, looking at viewer with heart eyes, sweaty skin, heavy blush, romantic atmosphere, wet clothes clinging, no text, no ui"
         },
         lore: {
             "title": "돌원숭이의 왕",

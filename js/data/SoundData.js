@@ -14,35 +14,35 @@ export const SOUND_CONFIG = {
 export const SOUNDS = {
     // 배경음악 (Loop 필수)
     BGM: {
-        LOBBY: "assets/sounds/bgm/lobby_theme.wav",
-        SUMMON: "assets/sounds/bgm/summon_mystic.wav",
-        LAB: "assets/sounds/bgm/lab_tech.wav",
-        BATTLE: "assets/sounds/bgm/battle_epic.wav"
+        LOBBY: "assets/sounds/bgm/lobby_theme.mp3",
+        SUMMON: "assets/sounds/bgm/summon_mystic.mp3",
+        LAB: "assets/sounds/bgm/lab_tech.mp3",
+        BATTLE: "assets/sounds/bgm/battle_epic.mp3"
     },
 
     // 효과음 (UI)
     UI: {
-        CLICK: "assets/sounds/sfx/ui_click.wav",
-        HOVER: "assets/sounds/sfx/ui_hover.wav",
-        CONFIRM: "assets/sounds/sfx/ui_confirm.wav",
-        ERROR: "assets/sounds/sfx/ui_error.wav",
-        POPUP_OPEN: "assets/sounds/sfx/ui_popup_open.wav",
-        REWARD: "assets/sounds/sfx/ui_reward.wav"
+        CLICK: "assets/sounds/sfx/ui_click.mp3",
+        HOVER: "assets/sounds/sfx/ui_hover.mp3",
+        CONFIRM: "assets/sounds/sfx/ui_confirm.mp3",
+        ERROR: "assets/sounds/sfx/ui_error.mp3",
+        POPUP_OPEN: "assets/sounds/sfx/ui_popup_open.mp3",
+        REWARD: "assets/sounds/sfx/ui_reward.mp3"
     },
 
     // 효과음 (인게임)
     FX: {
-        SUMMON_START: "assets/sounds/sfx/fx_summon_start.wav",
-        SUMMON_REVEAL: "assets/sounds/sfx/fx_summon_reveal.wav",
-        SUMMON_SSR: "assets/sounds/sfx/fx_summon_ssr_flash.wav",
-        LEVEL_UP: "assets/sounds/sfx/fx_levelup.wav",
-        UPGRADE_SUCCESS: "assets/sounds/sfx/fx_upgrade_success.wav"
+        SUMMON_START: "assets/sounds/sfx/fx_summon_start.mp3",
+        SUMMON_REVEAL: "assets/sounds/sfx/fx_summon_reveal.mp3",
+        SUMMON_SSR: "assets/sounds/sfx/fx_summon_ssr_flash.mp3",
+        LEVEL_UP: "assets/sounds/sfx/fx_levelup.mp3",
+        UPGRADE_SUCCESS: "assets/sounds/sfx/fx_upgrade_success.mp3"
     },
 
     // 보이스 (내레이션/캐릭터)
     VOICE: {
-        WELCOME: "assets/sounds/voice/welcome_operator.wav",
-        SUMMON_GREETING: "assets/sounds/voice/summon_greeting.wav",
-        LEVEL_MAX: "assets/sounds/voice/level_max.wav"
+        WELCOME: "assets/sounds/voice/welcome_operator.mp3",
+        SUMMON_GREETING: "assets/sounds/voice/summon_greeting.mp3",
+        LEVEL_MAX: "assets/sounds/voice/level_max.mp3"
     }
 };
