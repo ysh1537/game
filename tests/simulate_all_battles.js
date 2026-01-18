@@ -1,5 +1,5 @@
 import EventEmitter from 'events';
-import { WORLDS } from './js/data/WorldData.js'; // Adjust path if needed. Wait, BattleManager imports from CreatureData.js?
+import { WORLDS } from '../js/data/WorldData.js';
 // Checking BattleManager imports: `import { WORLDS } from '../data/CreatureData.js';`
 // But WORLDS is usually in WorldData.js. Let's trust BattleManager imports work if files exist.
 
@@ -8,22 +8,22 @@ global.window = {};
 global.alert = (msg) => { }; // Mock alert
 
 // Import Classes using dynamic import to handle relative paths correctly from this script's location
-// Script is at D:\test\game\simulate_all_battles.js
-// So './js/managers/BattleManager.js' is correct.
+// Script is at D:\test\game\tests\simulate_all_battles.js
+// So '../js/managers/BattleManager.js' is correct.
 
 // However, BattleManager imports `../utils/EventEmitter.js`. 
 // We should check if `utils/EventEmitter.js` works in Node. 
 // If it uses standard ES6 export default class, it should work.
 
-import BattleManager from './js/managers/BattleManager.js';
-import CreatureManager from './js/managers/CreatureManager.js';
-import ResourceManager from './js/managers/ResourceManager.js';
+import BattleManager from '../js/managers/BattleManager.js';
+import CreatureManager from '../js/managers/CreatureManager.js';
+import ResourceManager from '../js/managers/ResourceManager.js';
 // Import Data
-import { OLYMPUS_CREATURES } from './js/data/creatures/OlympusData.js';
-import { ASGARD_CREATURES } from './js/data/creatures/AsgardData.js';
-import { ABYSS_CREATURES } from './js/data/creatures/AbyssData.js';
-import { SHANGRILA_CREATURES } from './js/data/creatures/ShangriLaData.js';
-import { WILD_CREATURES } from './js/data/creatures/WildData.js';
+import { OLYMPUS_CREATURES } from '../js/data/creatures/OlympusData.js';
+import { ASGARD_CREATURES } from '../js/data/creatures/AsgardData.js';
+import { ABYSS_CREATURES } from '../js/data/creatures/AbyssData.js';
+import { SHANGRILA_CREATURES } from '../js/data/creatures/ShangriLaData.js';
+import { WILD_CREATURES } from '../js/data/creatures/WildData.js';
 
 const ALL_CREATURES = [
     ...OLYMPUS_CREATURES,
