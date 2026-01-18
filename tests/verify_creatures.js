@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const dataDir = path.join(__dirname, 'js', 'data', 'creatures');
+const dataDir = path.join(__dirname, '..', 'js', 'data', 'creatures');
 const files = ['OlympusData.js', 'AsgardData.js', 'ShangriLaData.js', 'AbyssData.js', 'WildData.js'];
 
 const allIds = new Map();

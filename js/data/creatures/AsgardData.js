@@ -432,7 +432,7 @@ var ASGARD_CREATURES = [
     }
     ,
     {
-        id: "freya",
+        id: "freya_sr",
         name: "여신 프레이야",
         rarity: RANKS.SR,
         world: WORLDS.ASGARD,

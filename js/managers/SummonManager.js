@@ -67,57 +67,59 @@ class SummonManager {
 
     /**
      * Random Number Generation for Rarity
+     * @param {string} currency - 'gold' or 'gems'
      */
-    rollRarity() {
-        const rand = Math.random();
+    rollRarity(currency = 'gems') {
+        // Gold = NORMAL_TABLE, Gems = PREMIUM_TABLE
+        const table = (currency === 'gold') ? this.NORMAL_TABLE : this.PREMIUM_TABLE;
+
+        const rand = Math.random() * 100; // 0-100 for percentage
         let cumulative = 0;
 
-        // Check UR
-        cumulative += this.RATES.UR;
-        if (rand < cumulative) return "UR";
+        for (const entry of table) {
+            cumulative += entry.weight;
+            if (rand < cumulative) {
+                return entry.rarity;
+            }
+        }
 
-        // Check SSR
-        cumulative += this.RATES.SSR;
-        if (rand < cumulative) return "SSR";
-
-        // Check SR
-        cumulative += this.RATES.SR;
-        if (rand < cumulative) return "SR";
-
-        // Check Rare
-        cumulative += this.RATES.RARE;
-        if (rand < cumulative) return "Rare"; // Note case sensitivity in data files!
-
-        return "Normal";
+        // Fallback
+        return 'Normal';
     }
 
     /**
      * Pick actual creature object from loaded data
      */
     pickRandomCreature(targetRarity) {
-        // Aggregate all creatures
-        // Note: Assuming global variables exist from <script> tags
-        const pool = [
-            ...(window.ASGARD_CREATURES || []),
-            ...(window.OLYMPUS_CREATURES || []),
-            ...(window.SHANGRILA_CREATURES || []),
-            ...(window.WILD_CREATURES || []),
-            ...(window.ABYSS_CREATURES || [])
-        ];
+        // Use CreatureManager's data via window.game
+        let pool = [];
+
+        if (window.game && window.game.creatureManager && typeof window.game.creatureManager.getAllCreatureDefs === 'function') {
+            pool = window.game.creatureManager.getAllCreatureDefs();
+        }
+
+        // Fallback: Try global arrays (legacy support)
+        if (pool.length === 0) {
+            pool = [
+                ...(window.ASGARD_CREATURES || []),
+                ...(window.OLYMPUS_CREATURES || []),
+                ...(window.SHANGRILA_CREATURES || []),
+                ...(window.WILD_CREATURES || []),
+                ...(window.ABYSS_CREATURES || [])
+            ];
+        }
+
+        if (pool.length === 0) {
+            console.error('[SummonManager] No creature data available!');
+            return null;
+        }
 
         // Filter by Rarity
-        // Handle case sensitivity: "Unique" vs "UNIQUE" vs "Normal"
-        // Data files use strict strings: "UR", "SSR", "Normal", "Rare", "Unique", "Special", "SR"
-        // My rollRarity returns "Rare" etc.
-
-        const candidates = pool.filter(c => {
-            // Normalize for comparison if needed, but data seems Capitalized
-            return c.rarity === targetRarity;
-        });
+        const candidates = pool.filter(c => c && c.rarity === targetRarity);
 
         if (candidates.length === 0) {
-            console.warn(`No creatures found for rarity ${targetRarity}, fallback to Normal`);
-            return pool.find(c => c.rarity === "Normal") || pool[0];
+            console.warn(`[SummonManager] No creatures found for rarity ${targetRarity}, fallback to Normal`);
+            return pool.find(c => c && c.rarity === 'Normal') || pool[0];
         }
 
         // Pick random
