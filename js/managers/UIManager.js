@@ -150,6 +150,128 @@ export default class UIManager {
                 }
             }, 5000);
         }
+
+        // [NEW] 리워드 광고 버튼 이벤트
+        this._initAdButtons();
+
+        // [NEW] 배틀 패스 바로가기 버튼
+        const btnGoPass = document.getElementById('btn-go-pass');
+        if (btnGoPass) {
+            btnGoPass.addEventListener('click', () => this.switchTab('pass'));
+        }
+
+        // [NEW] 헤더 길드 버튼
+        const btnGoGuild = document.getElementById('btn-go-guild');
+        if (btnGoGuild) {
+            btnGoGuild.addEventListener('click', () => this.switchTab('guild'));
+        }
+    }
+
+    /**
+     * @description 리워드 광고 버튼 초기화
+     */
+    _initAdButtons() {
+        const btnGem = document.getElementById('btn-ad-gem');
+        const btnGold = document.getElementById('btn-ad-gold');
+        const btnEnergy = document.getElementById('btn-ad-energy');
+
+        const handleAdClick = async (rewardType) => {
+            if (!this.game.adManager) return;
+
+            const canWatch = this.game.adManager.canWatchAd();
+            if (!canWatch.available) {
+                this.showToast(canWatch.reason);
+                return;
+            }
+
+            this.showToast('🎬 광고 로딩 중...');
+            const success = await this.game.adManager.watchRewardAd(rewardType);
+
+            if (success) {
+                this._updateAdUI();
+            }
+        };
+
+        if (btnGem) btnGem.addEventListener('click', () => handleAdClick('gem'));
+        if (btnGold) btnGold.addEventListener('click', () => handleAdClick('gold'));
+        if (btnEnergy) btnEnergy.addEventListener('click', () => handleAdClick('energy'));
+
+        // AdManager 이벤트 연결
+        if (this.game.adManager) {
+            this.game.adManager.on('ad:completed', (data) => {
+                this.showToast(`🎉 ${this.game.adManager.rewards[data.rewardType].label} 획득!`);
+            });
+            this.game.adManager.on('ad:failed', (data) => {
+                this.showToast(`❌ ${data.reason}`);
+            });
+        }
+    }
+
+    /**
+     * @description 광고 UI 업데이트
+     */
+    _updateAdUI() {
+        if (!this.game.adManager) return;
+
+        const countEl = document.getElementById('ad-count');
+        const cooldownEl = document.getElementById('ad-cooldown');
+        const cooldownTimeEl = document.getElementById('ad-cooldown-time');
+
+        if (countEl) {
+            countEl.textContent = this.game.adManager.getRemainingAds();
+        }
+
+        const cooldown = this.game.adManager.getCooldownRemaining();
+        if (cooldownEl && cooldownTimeEl) {
+            if (cooldown > 0) {
+                cooldownEl.style.display = 'block';
+                cooldownTimeEl.textContent = cooldown;
+
+                // 쿨다운 타이머
+                const timer = setInterval(() => {
+                    const remaining = this.game.adManager.getCooldownRemaining();
+                    if (remaining <= 0) {
+                        cooldownEl.style.display = 'none';
+                        clearInterval(timer);
+                    } else {
+                        cooldownTimeEl.textContent = remaining;
+                    }
+                }, 1000);
+            } else {
+                cooldownEl.style.display = 'none';
+            }
+        }
+    }
+
+    /**
+     * @description 토스트 알림 표시
+     * @param {string} message
+     */
+    showToast(message) {
+        // 기존 토스트 제거
+        const existingToast = document.querySelector('.toast-notification');
+        if (existingToast) existingToast.remove();
+
+        const toast = document.createElement('div');
+        toast.className = 'toast-notification';
+        toast.textContent = message;
+        toast.style.cssText = `
+            position: fixed; bottom: 100px; left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: white; padding: 12px 24px;
+            border-radius: 8px; z-index: 99999;
+            font-size: 0.95rem;
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: toastFadeIn 0.3s ease-out;
+        `;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.animation = 'toastFadeOut 0.3s ease-in forwards';
+            setTimeout(() => toast.remove(), 300);
+        }, 2500);
     }
 
     /**
@@ -161,7 +283,7 @@ export default class UIManager {
         const contentIds = [
             'content-home', 'content-summon', 'content-expedition',
             'content-research', 'content-mission', 'content-shop',
-            'content-team', 'content-battle', 'content-prestige'
+            'content-team', 'content-battle', 'content-prestige', 'content-pass', 'content-guild'
         ];
         contentIds.forEach(id => {
             const el = document.getElementById(id);
@@ -210,13 +332,211 @@ export default class UIManager {
 
         // 전역 이벤트 발생 (각 View에서 인지하여 렌더링하도록 함)
         this.game.events.emit('ui:tabSwitched', tabId);
+
+        // [NEW] 배틀 패스 탭 진입시 렌더링
+        if (tabId === 'pass') {
+            this._renderBattlePass();
+        }
+
+        // [NEW] 길드 탭 진입시 렌더링
+        if (tabId === 'guild') {
+            this._renderGuild();
+        }
     }
 
     /**
-     * @description 로그 시스템에 메시지를 추가합니다.
-     * @param {string} msg 
-     * @param {string} type 
+     * @description 길드 UI 렌더링
      */
+    _renderGuild() {
+        const gm = this.game.guildManager;
+        if (!gm) return;
+
+        const noGuildEl = document.getElementById('guild-no-guild');
+        const guildInfoEl = document.getElementById('guild-info');
+
+        if (!gm.guild) {
+            // 길드 미가입
+            if (noGuildEl) noGuildEl.style.display = 'block';
+            if (guildInfoEl) guildInfoEl.style.display = 'none';
+
+            // 길드 생성 버튼
+            const createBtn = document.getElementById('btn-create-guild');
+            if (createBtn) {
+                createBtn.onclick = () => {
+                    const nameInput = document.getElementById('guild-name-input');
+                    const name = nameInput?.value.trim() || '이름없는 길드';
+                    const result = gm.createGuild(name);
+                    if (result.success) {
+                        this.showToast('🏰 길드 생성 완료!');
+                        this._renderGuild();
+                    } else {
+                        this.showToast(`❌ ${result.reason}`);
+                    }
+                };
+            }
+        } else {
+            // 길드 가입 상태
+            if (noGuildEl) noGuildEl.style.display = 'none';
+            if (guildInfoEl) guildInfoEl.style.display = 'block';
+
+            const g = gm.guild;
+
+            // 기본 정보
+            const nameEl = document.getElementById('guild-name');
+            const levelEl = document.getElementById('guild-level');
+            const expEl = document.getElementById('guild-exp');
+            const expBarEl = document.getElementById('guild-exp-bar');
+
+            if (nameEl) nameEl.textContent = g.name;
+            if (levelEl) levelEl.textContent = g.level;
+            if (expEl) expEl.textContent = `${g.exp} / ${g.maxExp}`;
+            if (expBarEl) expBarEl.style.width = `${(g.exp / g.maxExp) * 100}%`;
+
+            // 버프
+            const atkEl = document.getElementById('guild-buff-atk');
+            const goldEl = document.getElementById('guild-buff-gold');
+            if (atkEl) atkEl.textContent = `+${(g.buffs.atk * 100).toFixed(0)}%`;
+            if (goldEl) goldEl.textContent = `+${(g.buffs.gold * 100).toFixed(0)}%`;
+
+            // 내 기부
+            const myDonationEl = document.getElementById('guild-my-donation');
+            const me = g.members.find(m => m.role === 'Master');
+            if (myDonationEl && me) myDonationEl.textContent = `내 기부: ${me.donation.toLocaleString()} 골드`;
+
+            // 기부 버튼
+            document.querySelectorAll('.guild-donate-btn').forEach(btn => {
+                btn.onclick = () => {
+                    const amount = parseInt(btn.dataset.amount);
+                    const result = gm.donate(amount);
+                    if (result.success) {
+                        this.showToast(`💰 ${amount.toLocaleString()} 기부 완료!`);
+                        this._renderGuild();
+                    } else {
+                        this.showToast(`❌ ${result.reason || '기부 실패'}`);
+                    }
+                };
+            });
+
+            // 멤버 목록
+            const membersEl = document.getElementById('guild-members');
+            if (membersEl) {
+                membersEl.innerHTML = g.members.map(m => `
+                    <div style="display:flex; justify-content:space-between; align-items:center; padding:10px; background:rgba(255,255,255,0.05); border-radius:8px;">
+                        <div>
+                            <span style="color:${m.role === 'Master' ? '#FFD700' : '#fff'};">${m.role === 'Master' ? '👑 ' : ''}${m.name}</span>
+                        </div>
+                        <div style="color:#aaa; font-size:0.85em;">기부: ${m.donation.toLocaleString()}</div>
+                    </div>
+                `).join('');
+            }
+
+            // 탈퇴 버튼
+            const leaveBtn = document.getElementById('btn-leave-guild');
+            if (leaveBtn) {
+                leaveBtn.onclick = () => {
+                    if (confirm('정말 길드를 탈퇴하시겠습니까?')) {
+                        gm.leaveGuild();
+                        this.showToast('🚪 길드를 탈퇴했습니다.');
+                        this._renderGuild();
+                    }
+                };
+            }
+        }
+    }
+
+    /**
+     * @description 배틀 패스 UI 렌더링
+     */
+    _renderBattlePass() {
+        const pm = this.game.passManager;
+        if (!pm) return;
+
+        // 레벨 및 경험치 업데이트
+        const levelEl = document.getElementById('pass-level');
+        const expEl = document.getElementById('pass-exp');
+        const expBarEl = document.getElementById('pass-exp-bar');
+        const upgradeSection = document.getElementById('pass-upgrade-section');
+        const rewardsList = document.getElementById('pass-rewards-list');
+
+        if (levelEl) levelEl.textContent = pm.level;
+        if (expEl) expEl.textContent = `${pm.exp} / ${pm.expPerLevel}`;
+        if (expBarEl) expBarEl.style.width = `${(pm.exp / pm.expPerLevel) * 100}%`;
+
+        // 프리미엄 구매 버튼
+        if (upgradeSection) {
+            if (pm.isPremium) {
+                upgradeSection.innerHTML = `<div style="color:#E040FB; font-size:1.1em;">👑 프리미엄 활성화됨!</div>`;
+            }
+        }
+
+        // 프리미엄 구매 버튼 이벤트
+        const buyBtn = document.getElementById('btn-buy-pass');
+        if (buyBtn && !pm.isPremium) {
+            buyBtn.onclick = () => {
+                if (this.game.resourceManager.spendGem(500)) {
+                    pm.upgradeToPremium();
+                    this.showToast('👑 프리미엄 패스 구매 완료!');
+                    this._renderBattlePass();
+                } else {
+                    this.showToast('💎 젬이 부족합니다.');
+                }
+            };
+        }
+
+        // 보상 목록 렌더링
+        if (rewardsList) {
+            rewardsList.innerHTML = pm.rewards.slice(0, 20).map(r => {
+                const freeClaimed = pm.claimed.free.includes(r.level);
+                const premiumClaimed = pm.claimed.premium.includes(r.level);
+                const canClaimFree = r.level <= pm.level && !freeClaimed;
+                const canClaimPremium = r.level <= pm.level && pm.isPremium && !premiumClaimed;
+
+                return `
+                <div style="display:flex; align-items:center; gap:10px; padding:10px; background:rgba(255,255,255,0.05); border-radius:8px; ${r.level <= pm.level ? 'border-left:3px solid #FFD700;' : ''}">
+                    <div style="min-width:40px; font-weight:bold; color:${r.level <= pm.level ? '#FFD700' : '#666'};">Lv.${r.level}</div>
+                    <div style="flex:1; display:flex; gap:5px;">
+                        <button class="cyber-btn small pass-claim-btn" data-level="${r.level}" data-type="free" 
+                            style="flex:1; padding:8px; ${freeClaimed ? 'opacity:0.5;' : canClaimFree ? 'background:#4CAF50;' : ''}" 
+                            ${!canClaimFree ? 'disabled' : ''}>
+                            ${this._getRewardIcon(r.free)} ${r.free.amount} ${freeClaimed ? '✓' : ''}
+                        </button>
+                        <button class="cyber-btn small pass-claim-btn" data-level="${r.level}" data-type="premium" 
+                            style="flex:1; padding:8px; background:${premiumClaimed ? 'rgba(156,39,176,0.3)' : canClaimPremium ? '#9C27B0' : 'rgba(156,39,176,0.2)'}; ${!pm.isPremium ? 'opacity:0.4;' : ''}" 
+                            ${!canClaimPremium ? 'disabled' : ''}>
+                            👑 ${this._getRewardIcon(r.premium)} ${r.premium.amount} ${premiumClaimed ? '✓' : ''}
+                        </button>
+                    </div>
+                </div>`;
+            }).join('');
+
+            // 보상 수령 버튼 이벤트
+            rewardsList.querySelectorAll('.pass-claim-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const level = parseInt(btn.dataset.level);
+                    const type = btn.dataset.type;
+                    if (pm.claimReward(level, type)) {
+                        this.showToast(`Lv.${level} ${type === 'premium' ? '프리미엄' : '무료'} 보상 획득!`);
+                        this._renderBattlePass();
+                    }
+                });
+            });
+        }
+    }
+
+    _getRewardIcon(reward) {
+        switch (reward.type) {
+            case 'gold': return '💰';
+            case 'gem': return '💎';
+            case 'summon_ticket': return '🎫';
+            default: return '📦';
+        }
+    }
+
+    /**
+         * @description 로그 시스템에 메시지를 추가합니다.
+         * @param {string} msg 
+         * @param {string} type 
+         */
     addLog(message, type = 'info') {
         if (!this.ui.logContent) return;
 

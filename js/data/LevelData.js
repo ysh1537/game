@@ -28,8 +28,10 @@ export const LEVEL_REQ_EXP = [
 
 // 레벨별 필요 EXP 가져오기 (안전장치 포함)
 export function getRequiredExp(level) {
-    if (level >= 30) return Infinity; // 만렙
-    return LEVEL_REQ_EXP[level] || 999999;
+    if (level >= 100) return Infinity; // 만렙
+    if (level <= 30) return LEVEL_REQ_EXP[level] || 999999;
+    // [Balance] 31~100 레벨: 지수 공식 적용 (10만 * 1.12^(level-30))
+    return Math.floor(100000 * Math.pow(1.12, level - 30));
 }
 
 // [NEW] 레벨업/훈련 비용 계산 (경제 밸런싱)

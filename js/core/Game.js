@@ -29,6 +29,7 @@ import DateManager from '../managers/DateManager.js';
 import { AIManager } from '../managers/AIManager.js'; // [Mod] Import AI Manager
 import AffinityManager from '../managers/AffinityManager.js'; // [NEW]
 import OutpostManager from '../managers/OutpostManager.js'; // [NEW]
+import AdManager from '../managers/AdManager.js'; // [NEW] 리워드 광고
 
 import SaveManager from '../utils/SaveManager.js';
 import BattleScene from '../scenes/BattleScene.js';
@@ -61,6 +62,7 @@ export default class Game {
         this.dateManager = new DateManager(this);
         this.affinityManager = new AffinityManager(this); // [NEW]
         this.outpostManager = new OutpostManager(this); // [NEW]
+        this.adManager = new AdManager(this, this.events); // [NEW] 리워드 광고
 
         this.facilityManager = new FacilityManager(this.events, this.resourceManager);
 
@@ -285,7 +287,8 @@ export default class Game {
             stages: this.stageManager.getSerializableState(),
             prestige: this.prestigeManager.getSerializableState(),
             ranking: this.rankingManager.getSerializableState(),
-            pass: this.passManager.getSerializableState() // [Phase 5]
+            pass: this.passManager.getSerializableState(), // [Phase 5]
+            ad: this.adManager ? this.adManager.getSerializableState() : null // [NEW]
         };
     }
 
@@ -311,6 +314,7 @@ export default class Game {
         if (data.guild) this.guildManager.loadFromState(data.guild);
         if (data.ranking) this.rankingManager.loadFromState(data.ranking);
         if (data.pass) this.passManager.loadFromState(data.pass); // [Phase 5]
+        if (data.ad && this.adManager) this.adManager.loadFromState(data.ad); // [NEW] 광고
 
         // 2. 오프라인 보상 계산 [NEW]
         if (data.saveTime) {

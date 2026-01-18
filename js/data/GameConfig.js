@@ -25,8 +25,8 @@ export const GameConfig = {
 
     // Resources
     RESOURCES: {
-        STARTING_GOLD: 50000,      // [Balance] Adjusted from 1,000,000
-        STARTING_GEMS: 100,        // [Balance] Adjusted for 1 gem = 1 pull economy
+        STARTING_GOLD: 100000,     // [Balance] Increased for new player experience
+        STARTING_GEMS: 150,        // [Balance] Adjusted for 1 gem = 1 pull economy
         OFFLINE_GOLD_PER_SEC: 1,   // Passive Income Base
         OFFLINE_CAP_HOURS: 8       // Max offline time accumulation
     },

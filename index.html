@@ -199,6 +199,8 @@
                 </div>
             </div>
             <div style="display:flex; gap:10px; align-items:center;">
+                <button id="btn-go-guild" class="cyber-btn small" title="길드"
+                    style="background:linear-gradient(135deg, #00BCD4, #0097A7);">🏰</button>
                 <button id="btn-toggle-sound" class="cyber-btn small" title="음소거">🔊</button>
                 <button id="btn-open-system" class="cyber-btn small" title="시스템 설정">⚙️</button>
                 <button id="btn-header-logout" class="cyber-btn small" title="로그아웃"
@@ -316,7 +318,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> <!-- content-home 종료 -->
 
                     <!-- [Feature Views] -->
 
@@ -563,6 +565,19 @@
                                 <h2>미션 센터 (MISSION)</h2>
                             </div>
                             <div style="padding: 15px; overflow-y:auto; height:calc(100% - 60px);">
+                                <!-- 배틀 패스 바로가기 -->
+                                <div
+                                    style="background:linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,140,0,0.1)); padding:15px; border-radius:12px; margin-bottom:20px; border:1px solid rgba(255,215,0,0.3); display:flex; justify-content:space-between; align-items:center;">
+                                    <div>
+                                        <div style="font-size:1.1em; font-weight:bold; color:var(--accent-gold);">🎫 시즌
+                                            패스</div>
+                                        <div style="font-size:0.85em; color:#aaa;">전투/미션으로 경험치를 획득하세요!</div>
+                                    </div>
+                                    <button id="btn-go-pass" class="cyber-btn"
+                                        style="background:linear-gradient(135deg, #FFD700, #FF8C00);">
+                                        보상 확인 →
+                                    </button>
+                                </div>
                                 <h3 style="border-bottom: 1px solid #444; padding-bottom: 8px;">일일 미션</h3>
                                 <div id="daily-quest-list" style="margin-bottom: 25px;"></div>
                                 <h3 style="border-bottom: 1px solid #444; padding-bottom: 8px;">업적</h3>
@@ -578,9 +593,36 @@
                                 <h2>보급소 (SHOP)</h2>
                             </div>
                             <div style="padding:15px; overflow-y:auto; height:calc(100% - 60px);">
-                                <div id="ad-banner"
-                                    style="height:80px; background:linear-gradient(45deg, #ff00cc, #333399); margin-bottom:20px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-weight:bold; color:white;">
-                                    ✨ 광고 보상: 50 젬</div>
+                                <!-- 리워드 광고 섹션 -->
+                                <div id="reward-ad-section"
+                                    style="background:linear-gradient(135deg, rgba(255,0,204,0.2), rgba(51,51,153,0.3)); padding:20px; margin-bottom:20px; border-radius:12px; border:1px solid rgba(255,0,204,0.3);">
+                                    <div
+                                        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+                                        <h3 style="margin:0; color:#ff00cc;">🎬 리워드 광고</h3>
+                                        <div id="ad-remaining" style="font-size:0.85em; color:#aaa;">남은 횟수: <span
+                                                id="ad-count">10</span>/10</div>
+                                    </div>
+                                    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                        <button id="btn-ad-gem" class="cyber-btn"
+                                            style="flex:1; min-width:100px; padding:15px; background:linear-gradient(135deg, #9b59b6, #8e44ad);">
+                                            <div style="font-size:1.2em;">💎</div>
+                                            <div style="font-size:0.9em;">10 젬</div>
+                                        </button>
+                                        <button id="btn-ad-gold" class="cyber-btn"
+                                            style="flex:1; min-width:100px; padding:15px; background:linear-gradient(135deg, #f39c12, #d35400);">
+                                            <div style="font-size:1.2em;">💰</div>
+                                            <div style="font-size:0.9em;">500 골드</div>
+                                        </button>
+                                        <button id="btn-ad-energy" class="cyber-btn"
+                                            style="flex:1; min-width:100px; padding:15px; background:linear-gradient(135deg, #3498db, #2980b9);">
+                                            <div style="font-size:1.2em;">⚡</div>
+                                            <div style="font-size:0.9em;">50 에너지</div>
+                                        </button>
+                                    </div>
+                                    <div id="ad-cooldown"
+                                        style="margin-top:10px; font-size:0.8em; color:#888; text-align:center; display:none;">
+                                        쿨다운: <span id="ad-cooldown-time">0</span>초</div>
+                                </div>
                                 <div id="shop-list"
                                     style="display:grid; grid-template-columns:repeat(auto-fill, minmax(140px, 1fr)); gap:15px;">
                                 </div>
@@ -611,6 +653,156 @@
                                     차원 도약 실행</button>
                                 <div class="prestige-upgrades-grid"
                                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Battle Pass View -->
+                    <div id="content-pass" class="feature-view tab-content">
+                        <div class="glass-panel full-height">
+                            <div class="panel-header">
+                                <h2 style="color:var(--accent-gold);">🎫 시즌 패스 (BATTLE PASS)</h2>
+                            </div>
+                            <div style="padding: 15px; overflow-y:auto; height:calc(100% - 60px);">
+                                <!-- 시즌 정보 -->
+                                <div
+                                    style="background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,140,0,0.1)); padding:15px; border-radius:12px; margin-bottom:15px; border:1px solid rgba(255,215,0,0.3);">
+                                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                                        <div>
+                                            <div style="font-size:0.85em; color:#aaa;">시즌 1</div>
+                                            <div style="font-size:1.5em; font-weight:bold; color:var(--accent-gold);">
+                                                Lv. <span id="pass-level">1</span> / 50</div>
+                                        </div>
+                                        <div style="text-align:right;">
+                                            <div style="font-size:0.85em; color:#aaa;">경험치</div>
+                                            <div id="pass-exp" style="color:#fff;">0 / 100</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="background:rgba(0,0,0,0.3); height:8px; border-radius:4px; margin-top:10px; overflow:hidden;">
+                                        <div id="pass-exp-bar"
+                                            style="height:100%; width:0%; background:linear-gradient(90deg, #FFD700, #FF8C00); transition:width 0.3s;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 프리미엄 구매 버튼 -->
+                                <div id="pass-upgrade-section"
+                                    style="background:linear-gradient(135deg, rgba(156,39,176,0.2), rgba(103,58,183,0.2)); padding:15px; border-radius:12px; margin-bottom:15px; border:1px solid rgba(156,39,176,0.4); text-align:center;">
+                                    <div style="font-size:1.1em; font-weight:bold; color:#E040FB; margin-bottom:10px;">
+                                        👑 프리미엄 패스</div>
+                                    <div style="font-size:0.85em; color:#aaa; margin-bottom:15px;">프리미엄 보상 + 추가 경험치 획득!
+                                    </div>
+                                    <button id="btn-buy-pass" class="cyber-btn"
+                                        style="background:linear-gradient(135deg, #9C27B0, #673AB7); padding:12px 30px;">
+                                        💎 500 젬으로 구매
+                                    </button>
+                                </div>
+
+                                <!-- 보상 목록 -->
+                                <h3 style="margin-bottom:10px; color:#fff;">📦 보상 목록</h3>
+                                <div id="pass-rewards-list" style="display:flex; flex-direction:column; gap:8px;">
+                                    <!-- 동적으로 생성됨 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10. Guild View -->
+                    <div id="content-guild" class="feature-view tab-content">
+                        <div class="glass-panel full-height">
+                            <div class="panel-header">
+                                <h2 style="color:var(--accent-cyan);">🏰 길드 (GUILD)</h2>
+                            </div>
+                            <div style="padding: 15px; overflow-y:auto; height:calc(100% - 60px);">
+                                <!-- 길드 미가입 상태 -->
+                                <div id="guild-no-guild" style="text-align:center; padding:40px;">
+                                    <div style="font-size:3em; margin-bottom:20px;">🏰</div>
+                                    <div style="font-size:1.2em; margin-bottom:10px;">아직 길드가 없습니다</div>
+                                    <div style="color:#aaa; margin-bottom:30px;">길드를 만들어 함께 성장하세요!</div>
+                                    <div
+                                        style="display:flex; flex-direction:column; gap:10px; max-width:300px; margin:0 auto;">
+                                        <input type="text" id="guild-name-input" class="cyber-input"
+                                            placeholder="길드 이름 입력" style="padding:12px; text-align:center;">
+                                        <button id="btn-create-guild" class="cyber-btn"
+                                            style="background:linear-gradient(135deg, #00BCD4, #0097A7); padding:15px;">
+                                            💰 10,000 골드로 길드 생성
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- 길드 가입 상태 -->
+                                <div id="guild-info" style="display:none;">
+                                    <!-- 길드 정보 헤더 -->
+                                    <div
+                                        style="background:linear-gradient(135deg, rgba(0,188,212,0.15), rgba(0,151,167,0.1)); padding:20px; border-radius:12px; margin-bottom:20px; border:1px solid rgba(0,188,212,0.3);">
+                                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                                            <div>
+                                                <div style="font-size:0.85em; color:#aaa;">길드명</div>
+                                                <div id="guild-name"
+                                                    style="font-size:1.5em; font-weight:bold; color:var(--accent-cyan);">
+                                                    -</div>
+                                            </div>
+                                            <div style="text-align:right;">
+                                                <div style="font-size:0.85em; color:#aaa;">레벨</div>
+                                                <div style="font-size:1.3em; color:#FFD700;">Lv. <span
+                                                        id="guild-level">1</span></div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            style="background:rgba(0,0,0,0.3); height:8px; border-radius:4px; margin-top:15px; overflow:hidden;">
+                                            <div id="guild-exp-bar"
+                                                style="height:100%; width:0%; background:linear-gradient(90deg, #00BCD4, #26C6DA); transition:width 0.3s;">
+                                            </div>
+                                        </div>
+                                        <div id="guild-exp"
+                                            style="font-size:0.85em; color:#aaa; text-align:right; margin-top:5px;">0 /
+                                            1000</div>
+                                    </div>
+
+                                    <!-- 버프 정보 -->
+                                    <div style="display:flex; gap:10px; margin-bottom:20px;">
+                                        <div
+                                            style="flex:1; background:rgba(255,255,255,0.05); padding:15px; border-radius:8px; text-align:center;">
+                                            <div style="font-size:0.85em; color:#aaa;">공격력 보너스</div>
+                                            <div id="guild-buff-atk" style="font-size:1.3em; color:#E57373;">+0%</div>
+                                        </div>
+                                        <div
+                                            style="flex:1; background:rgba(255,255,255,0.05); padding:15px; border-radius:8px; text-align:center;">
+                                            <div style="font-size:0.85em; color:#aaa;">골드 보너스</div>
+                                            <div id="guild-buff-gold" style="font-size:1.3em; color:#FFD700;">+0%</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 기부 섹션 -->
+                                    <div
+                                        style="background:rgba(255,255,255,0.05); padding:20px; border-radius:12px; margin-bottom:20px;">
+                                        <h3 style="margin:0 0 15px 0; color:#fff;">💰 길드 기부</h3>
+                                        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                                            <button class="cyber-btn guild-donate-btn" data-amount="1000"
+                                                style="flex:1; min-width:80px;">1,000</button>
+                                            <button class="cyber-btn guild-donate-btn" data-amount="5000"
+                                                style="flex:1; min-width:80px;">5,000</button>
+                                            <button class="cyber-btn guild-donate-btn" data-amount="10000"
+                                                style="flex:1; min-width:80px;">10,000</button>
+                                        </div>
+                                        <div id="guild-my-donation"
+                                            style="font-size:0.85em; color:#aaa; text-align:center; margin-top:10px;">내
+                                            기부: 0 골드</div>
+                                    </div>
+
+                                    <!-- 멤버 목록 -->
+                                    <h3 style="margin-bottom:10px; color:#fff;">👥 멤버 목록</h3>
+                                    <div id="guild-members" style="display:flex; flex-direction:column; gap:8px;">
+                                        <!-- 동적으로 생성됨 -->
+                                    </div>
+
+                                    <!-- 길드 탈퇴 -->
+                                    <button id="btn-leave-guild" class="cyber-btn"
+                                        style="width:100%; margin-top:20px; background:linear-gradient(135deg, #e74c3c, #c0392b);">
+                                        🚪 길드 탈퇴
+                                    </button>
                                 </div>
                             </div>
                         </div>

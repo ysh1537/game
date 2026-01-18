@@ -79,8 +79,8 @@ export function getStage(stageId) {
     const isBoss = effectiveId % 10 === 0;
     const biome = getBiome(stageId); // Pass raw stageId to helper or handle logic there
 
-    // 3. Scaling Logic
-    const cycleMult = Math.pow(5, cycle - 1);
+    // 3. Scaling Logic (Balanced)
+    const cycleMult = Math.pow(2.5, cycle - 1); // [Balance] Reduced from 5x to 2.5x per cycle
     const stageMult = Math.pow(1.06, effectiveId);
 
     const hpMult = stageMult * cycleMult;
